@@ -1,0 +1,19 @@
+services:
+  defame:
+    image: tudamailab/defame
+    build: .
+    ports:
+      - "3002"
+    stdin_open: true
+    tty: true
+    volumes:
+      - ./config:/defame/config
+      - ./out:/defame/out
+      - ./in:/defame/in
+      - ./scripts:/defame/scripts
+      - ./defame:/defame/defame
+  firecrawl:
+    image: tudamailab/firecrawl
+    build: ./third_party/firecrawl
+    ports:
+      - "3002:3002"

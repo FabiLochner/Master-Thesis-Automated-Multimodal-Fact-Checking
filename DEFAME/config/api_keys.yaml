@@ -1,0 +1,13 @@
+huggingface_user_access_token: ''
+
+openai_api_key: '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'
+
+# anthropic_api_key: ''
+
+deepseek_api_key: ''
+
+serper_api_key: '769b4fd771891a8864820c0fd1a8fc352daca7a6'  # for Google Search
+
+# x_bearer_token: ''
+# x_api_key: ''  # same as "consumer key"
+# x_api_key_secret: ''  # same as "consumer secret"
