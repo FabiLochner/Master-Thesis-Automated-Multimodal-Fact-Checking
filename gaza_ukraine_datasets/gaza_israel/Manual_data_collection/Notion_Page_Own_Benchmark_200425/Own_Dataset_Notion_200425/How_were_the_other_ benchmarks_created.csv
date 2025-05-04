@@ -1,0 +1,5 @@
+﻿Name,Modalities,Claims,API used?,Open Question,To-Do
+AVERITEC,Text,,,,
+VERITE,"Image, Text",1.001 text-image pairs,,How did authors get the URLs of images on Reuters Fact Check Articles?,
+CLAIMREVIEW2024+,"Image, Text","160 text-only claims
+140 multimodal claims with image",The Google FactCheck Claim Search API,How were the images collected? Legal/ethical implications?,Write authors regarding image collection
