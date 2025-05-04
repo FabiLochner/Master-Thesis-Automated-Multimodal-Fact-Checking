@@ -101,6 +101,52 @@ class OpenAIAPI:
         return completion.choices[0].message.content
 
 
+
+### Creating OpenAIAPI class for Gemini Models (Gemini API Documentation OpenAI Compatability)
+class GeminiOpenAIAPI:
+    """ API wrapper for Gemini models using OpenAI compatability layer."""
+
+    def __init__(self, model: str):
+        self.model = model
+        if not api_keys["google_api_key"]:
+            raise ValueError("No Google API key provided. Add it to config/api_keys.yaml")
+        
+        # Initialize the OpenAI client with Gemini's compatibility endpoint
+        self.client = OpenAI(
+            api_key=api_keys["google_api_key"],
+            base_url="https://generativelanguage.googleapis.com/v1beta/openai/" ## see: https://ai.google.dev/gemini-api/docs/openai
+        )
+
+    
+    def __call__(self, prompt: Prompt, system_prompt: str, **kwargs):
+        """Make an API call to Gemini using the OpenAI compatibility interface."""
+        
+        # Adapt this to Gemini models' video and audio capabilities later
+        if prompt.has_videos():
+            raise ValueError(f"{self.model} does not support videos.")
+        
+        if prompt.has_audios():
+            raise ValueError(f"{self.model} does not support audios.")
+        
+        #Using the same content formatting as gpt (see GeminiAPI Documentation: OpenAI Compatability)
+        content = format_for_gpt(prompt)
+
+        messages = []
+        if system_prompt:
+            messages.append({"role": "system", "content": system_prompt})
+        messages.append({"role": "user", "content": content})
+
+        completion = self.client.chat.completions.create(
+            model=self.model,
+            messages=messages,
+            **kwargs
+        )
+        return completion.choices[0].message.content
+
+
+
+
+
 class DeepSeekAPI:
     def __init__(self, model: str):
         self.model = model
@@ -125,29 +171,63 @@ class DeepSeekAPI:
                 content=system_prompt,
                 role="system",
             ))
-        for block in prompt.to_interleaved():
-            if isinstance(block, str):
-                message = dict(
-                    content=block,
-                    role="user",
-                )
-            else:
-                messages = ...
-                raise NotImplementedError
-            messages.append(message)
+        # for block in prompt.to_interleaved():
+        #     if isinstance(block, str):
+        #         message = dict(
+        #             content=block,
+        #             role="user",
+        #         )
+        #     else:
+        #         messages = ...
+        #         raise NotImplementedError
+        #     messages.append(message)
+
+         # Process the prompt with interleaved text and images
+        if prompt.has_images():
+            # Use the format_for_deepseek function to handle prompt formatting
+            formatted_content = format_for_deepseek(prompt)
+            
+            # Add the formatted content with images to messages
+            messages.append({
+                "role": "user",
+                "content": formatted_content
+            })
+        else:
+            # Handle text-only prompt
+            messages.append({
+                "role": "user",
+                "content": str(prompt)
+            })
+
+
+
         headers = {"Authorization": f"Bearer {self.key}", "Content-Type": "application/json"}
         body = dict(
             model=self.model,
             messages=messages,
             **kwargs,
         )
-        response = requests.post(url, body, headers=headers)
+        response = requests.post(url, json = body, headers=headers)
 
         if response.status_code != 200:
             raise RuntimeError("Requesting the DeepSeek API failed: " + response.text)
+        
 
-        completion = response.json()["object"]
-        return completion
+        ### Option 1: DEFAME code:
+        # completion = response.json()["object"]
+        # return completion
+
+        ## Option 2: DeepSeek API Documentation Code & class OpenAIAPI code (above):
+        response_json = response.json()
+        try:
+            # Try OpenAI-compatible format first
+            return response_json["choices"][0]["message"]["content"]
+        except (KeyError, IndexError):
+            # Fall back to the original implementation
+            if "object" in response_json:
+                return response_json["object"]
+            else:
+                raise ValueError("Unexpected response format from DeepSeek API")
 
 
 class Model(ABC):
@@ -341,6 +421,54 @@ class GPTModel(Model):
         return 85 + 170 * n_tiles
 
 
+
+### Adding GeminiModel
+
+class GeminiModel(Model):
+    open_source = False
+    encoding = tiktoken.get_encoding("cl100k_base") #using same tokenizer as class GPTModel for token counting -> consistency
+    accepts_images = True
+    accepts_videos = True #supported by Gemini 2.0 models
+    accepts_audio = True #supported by Gemini 2.0 models
+
+    def load(self, model_name: str) -> Pipeline | OpenAIAPI:
+        return GeminiOpenAIAPI(model=model_name) #use class GeminiOpenAIAPI instead of class OpenAIAPI
+
+    def _generate(self, prompt: Prompt, temperature: float, top_p: float, top_k: int,
+                  system_prompt: Prompt = None) -> str:
+        try:
+            return self.api(
+                prompt,
+                temperature=temperature,
+                top_p=top_p,
+                system_prompt=system_prompt,
+            )
+        # except openai.RateLimitError as e:
+        #     logger.critical(f"OpenAI rate limit hit!")
+        #     logger.critical(repr(e))
+        #     quit()
+        except Exception as e:
+            logger.warning("Error while calling the Gemini LLM! Continuing with empty response.\n" + str(e))
+            logger.warning("Prompt used:\n" + str(prompt))
+        return ""
+    
+    # to do: Replace with Gemini-specific token counting (same as class GPTModel now)
+    def count_tokens(self, prompt: Prompt | str) -> int:
+        n_text_tokens = len(self.encoding.encode(str(prompt)))
+        n_image_tokens = 0
+        if isinstance(prompt, Prompt) and prompt.has_images():
+            for image in prompt.images:
+                n_image_tokens += self.count_image_tokens(image)
+        return n_text_tokens + n_image_tokens
+
+    def count_image_tokens(self, image: Image):
+        """See the formula here: https://openai.com/api/pricing/"""
+        n_tiles = np.ceil(image.width / 512) * np.ceil(image.height / 512)
+        return 85 + 170 * n_tiles
+
+
+
+
 class DeepSeekModel(Model):
     open_source = True
     encoding = tiktoken.get_encoding("cl100k_base")
@@ -362,6 +490,21 @@ class DeepSeekModel(Model):
             logger.warning("Error while calling the LLM! Continuing with empty response.\n" + str(e))
             logger.warning("Prompt used:\n" + str(prompt))
         return ""
+    
+    # copied from class GPTModels (count_tokens; count_image_tokens) -> might need adjustment for DeepSeek
+    def count_tokens(self, prompt: Prompt | str) -> int:
+        n_text_tokens = len(self.encoding.encode(str(prompt)))
+        n_image_tokens = 0
+        if isinstance(prompt, Prompt) and prompt.has_images():
+            for image in prompt.images:
+                n_image_tokens += self.count_image_tokens(image)
+        return n_text_tokens + n_image_tokens
+
+    def count_image_tokens(self, image: Image):
+        """See the formula here: https://openai.com/api/pricing/"""
+        n_tiles = np.ceil(image.width / 512) * np.ceil(image.height / 512)
+        return 85 + 170 * n_tiles
+
 
 
 class HuggingFaceModel(Model, ABC):
@@ -695,7 +838,8 @@ def make_model(name: str, **kwargs) -> Model:
         case "deepseek":
             return DeepSeekModel(specifier, **kwargs)
         case "google":
-            raise NotImplementedError("Google models not integrated yet.")
+            return GeminiModel(specifier, **kwargs)
+            #raise NotImplementedError("Google models not integrated yet.")
         case "anthropic":
             raise NotImplementedError("Anthropic models not integrated yet.")
         case _:
@@ -748,3 +892,38 @@ def format_for_gpt(prompt: Prompt):
             })
 
     return content_formatted
+
+
+#### Adding a function to format deepseek content (similar logic as format_for_gpt)
+def format_for_deepseek(prompt: Prompt):
+    """ Format a prompt with interleaved text and images for DeepSeek API."""
+    formatted_content = []
+
+    for block in prompt.to_interleaved():
+        if isinstance(block, str):
+            # Add text blocks
+            formatted_content.append({
+                "type": "text",
+                "text": block
+            })
+        elif isinstance(block, Image):
+            # Add image blocks
+            image_encoded = block.get_base64_encoded()
+            # Add reference if exists 
+            if block.reference:
+                formatted_content.append({
+                    "type": "text",
+                    "text": block.reference
+                })
+
+            # Add the actual image
+            formatted_content.append({
+            "type": "image_url",
+            "image_url": {
+                "url": f"data:image/jpeg;base64,{image_encoded}"
+            }
+        
+        })
+        
+    return formatted_content
+

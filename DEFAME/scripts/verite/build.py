@@ -7,7 +7,7 @@ from tqdm import tqdm
 from defame.common.modeling import Model
 from config.globals import data_root_dir
 
-llm = Model("gpt_4o")
+llm = Model("gpt_4o_mini")
 verite_path = data_root_dir + "VERITE/VERITE.csv"
 df = pd.read_csv(verite_path)
 

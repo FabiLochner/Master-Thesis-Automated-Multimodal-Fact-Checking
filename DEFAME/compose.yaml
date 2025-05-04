@@ -12,6 +12,7 @@ services:
       - ./in:/defame/in
       - ./scripts:/defame/scripts
       - ./defame:/defame/defame
+      - ./data:/defame/data
   firecrawl:
     image: tudamailab/firecrawl
     build: ./third_party/firecrawl

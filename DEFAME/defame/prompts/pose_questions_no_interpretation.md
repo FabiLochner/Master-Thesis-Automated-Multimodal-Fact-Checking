@@ -7,6 +7,7 @@ IMPORTANT: Follow these rules:
 * State every single question in a way that it can be understood independently and without additional context. Therefore, be explicit and do not use pronouns or generic terms in place of names or objects.
 * Enclose each single question with backticks like `this`.
 
+
 # Examples
 Claim: "New Zealand’s new Food Bill bans gardening"
 Good Question: "Did New Zealand's government pass a food bill that restricted gardening activities for its citizen?"

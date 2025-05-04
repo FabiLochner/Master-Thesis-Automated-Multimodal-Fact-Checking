@@ -534,13 +534,17 @@ def fact_check(llm: str, llm_kwargs: dict,
     # Run fact-checks as long as there is work to do
     while True:
         try:
-            content = input_queue.get(timeout=10)
+            content = input_queue.get(timeout=10) #my adjustment: increased from 10 to 30 (avoid RateLimitErrors)
             if content is None:
                 break
         except Empty:
             break
 
         try:
+
+            # my addition: Adding a 5 second delay before each API call to reduce the call rate
+            #time.sleep(15)
+
             if is_averitec and 'averitec_kb' in searcher.search_apis:
                 # Restrict the KB to the current claim's resources
                 kb.current_claim_id = content.id_number

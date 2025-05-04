@@ -6,13 +6,13 @@ fact_checker_kwargs:
   decontextualize: false
   filter_check_worthy: false
   interpret: false
-  max_iterations: 3
-  max_result_len: 64000
+  max_iterations: 3 # reduced from 3 to 1
+  max_result_len: 64000 #reduced from 64.000 to 16.000 characters; how much text is kept from each search result
   procedure_variant: summary/dynamic
-llm: gpt_4o_mini
+llm: gemini-2.0-flash-lite #deepseek-chat, see available_models
 llm_kwargs:
   temperature: 0.01
-n_samples: 5
+n_samples: 300
 random_sampling: true
 sample_ids: null
 allowed_actions:
@@ -22,10 +22,10 @@ allowed_actions:
 - geolocate
 tools_config:
   searcher:
-    limit_per_search: 3
+    limit_per_search: 3 # reduced from 3 to 1 to potentially reduce token usage per minutes; reducing from top 3 to top 2 url results per search
     search_engine_config:
       google:
       google_vision:
   geolocator:
-n_workers: 8
+n_workers: 2
 print_log_level: info

@@ -8,9 +8,10 @@ from defame.tools.search.remote_search_api import scrape
 FACT_CHECK_API_URL = "https://factchecktools.googleapis.com/v1alpha1/claims:search"
 
 # Replace this with your actual API key
-API_KEY = api_keys["google_api_key"] 
+#API_KEY = api_keys["google_api_key"] 
+API_KEY = api_keys["google_fact_check_tools_api_key"]
 
-def fetch_recent_claims(query=None, max_age_days=None, page_token=None):
+def fetch_recent_claims(query=None, max_age_days=None, page_token=None, language_code=None):
     """
     Fetch claims from Google Fact Check API based on a query or maxAgeDays.
     """
@@ -23,6 +24,8 @@ def fetch_recent_claims(query=None, max_age_days=None, page_token=None):
         params["maxAgeDays"] = max_age_days
     if page_token:
         params["pageToken"] = page_token
+    if language_code:
+        params["languageCode"] = language_code #adding language code filter
 
     response = requests.get(FACT_CHECK_API_URL, params=params)
     if response.status_code == 200:
@@ -31,7 +34,7 @@ def fetch_recent_claims(query=None, max_age_days=None, page_token=None):
         print(f"Error: {response.status_code}, {response.text}")
         return None
 
-def scrape_claims_after_date(after_date, query=None):
+def scrape_claims_after_date(after_date, query=None, language_code=None):
     """
     Scrape claims made after a specific date.
     """
@@ -40,7 +43,7 @@ def scrape_claims_after_date(after_date, query=None):
     next_page_token = None
 
     while True:
-        data = fetch_recent_claims(query=query, max_age_days=days_since, page_token=next_page_token)
+        data = fetch_recent_claims(query=query, max_age_days=days_since, page_token=next_page_token, language_code=language_code)
         if not data or "claims" not in data:
             break
 
@@ -83,17 +86,18 @@ def save_claims_to_json(claims, query, after_date, filename="claims.json"):
 
 def main():
     # Define the query and after date
-    after_date = "2023-01-01T00:00:00Z"
-    query = "climate change"  # Replace with your search keyword or set to None
+    after_date = "2024-07-01T00:00:00Z"
+    query = "Russia"  # ukraine, russia, putin, israel, israel defence force, hamas, taiwan, gaza
+    language_code = "en" #adding language code
 
     print(f"Fetching claims after {after_date}...")
-    claims = scrape_claims_after_date(after_date, query=query)
+    claims = scrape_claims_after_date(after_date, query=query, language_code=language_code)
 
     # Identify claims with images
-    claims_with_metadata = identify_claims_with_images(claims)
+    #claims_with_metadata = identify_claims_with_images(claims)
 
     # Save to JSON file
-    save_claims_to_json(claims_with_metadata, query, after_date, filename="claims_with_images.json")
+    save_claims_to_json(claims, query, after_date, filename="claims.json")
 
     print(f"Found {len(claims)} claims. Saved with metadata to 'claims_with_images.json'.")
 

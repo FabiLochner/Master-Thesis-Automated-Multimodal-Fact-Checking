@@ -8,7 +8,7 @@ warnings.filterwarnings("ignore")
 if __name__ == '__main__':  # evaluation uses multiprocessing
     set_start_method("spawn")
     evaluate(
-        llm="gpt_4o",
+        llm="gpt_4o_mini",
         tools_config=dict(
             searcher=dict(
                 search_engine_config=dict(
@@ -40,4 +40,7 @@ if __name__ == '__main__':  # evaluation uses multiprocessing
         random_sampling=False,
         print_log_level="info",
         n_workers=1,
+        #continue_experiment_dir = "out/verite/verite/summary/dynamic/gpt_4o_mini/2025-03-21_20-42_default"
     )
+
+
