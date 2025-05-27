@@ -1,0 +1,338 @@
+{
+    "summary": {
+        "total_claims_above_threshold": 37,
+        "total_components": 13,
+        "duplicate_components": 13,
+        "singleton_components": 0,
+        "claims_to_remove": 24,
+        "removal_percentage": 64.86486486486487
+    },
+    "components": [
+        {
+            "component_id": 4,
+            "size": 10,
+            "nodes": [
+                101,
+                102,
+                103,
+                83,
+                85,
+                86,
+                87,
+                88,
+                89,
+                91
+            ],
+            "claims": [
+                {
+                    "index": 101,
+                    "text": "Photo shows the Israeli team's protest during the Paris Olympic Games, where they were prohibited from wearing their 'Bring Them Home' pins.",
+                    "label": "false"
+                },
+                {
+                    "index": 102,
+                    "text": "Photo shows the Israeli Olympic team making the ‘Bring them home now’ formation in the Paris 2024 Olympics.",
+                    "label": "false"
+                },
+                {
+                    "index": 103,
+                    "text": "The image shows the Israeli swimming team protesting at the 2024 Paris Olympics.",
+                    "label": "misleading"
+                },
+                {
+                    "index": 83,
+                    "text": "The photo shows Israel's swimming team making a formation of 'bring them home now!' at 2024 Paris Olympics.",
+                    "label": "false"
+                },
+                {
+                    "index": 85,
+                    "text": "Picture of Israeli team during 2024 Paris Olympics opening ceremony with 'Team Genocide' Banner",
+                    "label": "edited picture"
+                },
+                {
+                    "index": 86,
+                    "text": "Israeli Team's 'Bring Them Home Now' Formation at Paris 2024 Olympics",
+                    "label": "false"
+                },
+                {
+                    "index": 87,
+                    "text": "This image show female Israeli artistic swimmers forming a human \"Bring Them Home Now\" formation at the Paris 2024 Olympics.",
+                    "label": "misleading"
+                },
+                {
+                    "index": 88,
+                    "text": "Image shows Israel's swim team at Olympics spelling, 'Bring them home now'",
+                    "label": "false"
+                },
+                {
+                    "index": 89,
+                    "text": "In the Paris Olympics, Israeli swimmers were prohibited from wearing “Bring Them Home” pins. So they used their bodies to create the slogan in the pool.",
+                    "label": "false"
+                },
+                {
+                    "index": 91,
+                    "text": "The Israeli Olympic team is NOT allowed to wear their #BringThemHome pins at the #PARIS2024Games. But that sure didn't stop Israels swimmers from forming words and symbols like these during practice.",
+                    "label": "misleading"
+                }
+            ]
+        },
+        {
+            "component_id": 7,
+            "size": 3,
+            "nodes": [
+                92,
+                93,
+                95
+            ],
+            "claims": [
+                {
+                    "index": 92,
+                    "text": "Image depicts a recent attack in Tel Aviv amid the Israel-Yemen escalation",
+                    "label": "misleading"
+                },
+                {
+                    "index": 93,
+                    "text": "A photo shows the aftermath of a Houthi attack on Tel Aviv, Israel.",
+                    "label": "misleading"
+                },
+                {
+                    "index": 95,
+                    "text": "A photo shows Israelis fleeing the airport after the Houthis attack.",
+                    "label": "misleading"
+                }
+            ]
+        },
+        {
+            "component_id": 10,
+            "size": 3,
+            "nodes": [
+                2,
+                3,
+                4
+            ],
+            "claims": [
+                {
+                    "index": 2,
+                    "text": "President Trump had to stop $50 million in American dollars from going to Gaza to fund condoms.",
+                    "label": "no evidence"
+                },
+                {
+                    "index": 3,
+                    "text": "Did The US Spend $50 Million On Condoms For Gaza Aid? A Fact Check",
+                    "label": "false"
+                },
+                {
+                    "index": 4,
+                    "text": "The U.S. government spent or planned to spend $50 million exclusively on condoms in Gaza.",
+                    "label": "no receipts"
+                }
+            ]
+        },
+        {
+            "component_id": 12,
+            "size": 3,
+            "nodes": [
+                48,
+                57,
+                42
+            ],
+            "claims": [
+                {
+                    "index": 48,
+                    "text": "Israel Defense Forces chief of staff killed in Hezbollah drone attack",
+                    "label": "false"
+                },
+                {
+                    "index": 57,
+                    "text": "Israel’s defense minister was killed in Iranian missile attack",
+                    "label": "false"
+                },
+                {
+                    "index": 42,
+                    "text": "Israeli Air Force Commander Tomer Bar was killed in a Hezbollah drone strike in Tel Aviv",
+                    "label": "false"
+                }
+            ]
+        },
+        {
+            "component_id": 1,
+            "size": 2,
+            "nodes": [
+                97,
+                14
+            ],
+            "claims": [
+                {
+                    "index": 97,
+                    "text": "This photo shows a man from Gaza holding the hand of his son killed in an Israeli bombing.",
+                    "label": "false"
+                },
+                {
+                    "index": 14,
+                    "text": "This photo shows a man from Gaza holding the hand of his son killed in an Israeli bombing.",
+                    "label": "false"
+                }
+            ]
+        },
+        {
+            "component_id": 2,
+            "size": 2,
+            "nodes": [
+                1,
+                22
+            ],
+            "claims": [
+                {
+                    "index": 1,
+                    "text": "Baby Sham did not lose her arm in an Israeli airstrike on the Shejaeya neighborhood, east of Gaza City.",
+                    "label": "fake"
+                },
+                {
+                    "index": 22,
+                    "text": "Baby Sham did not lose her arm in an Israeli airstrike on the Shejaeya neighborhood, east of Gaza City.",
+                    "label": "fake"
+                }
+            ]
+        },
+        {
+            "component_id": 3,
+            "size": 2,
+            "nodes": [
+                8,
+                44
+            ],
+            "claims": [
+                {
+                    "index": 8,
+                    "text": "Donald Trump's election led Hamas to call \"for 'Immediate' End to War.\"",
+                    "label": "distorts the facts"
+                },
+                {
+                    "index": 44,
+                    "text": "Donald Trump's election led Hamas to call \"for 'Immediate' End to War.\"",
+                    "label": "distorts the facts"
+                }
+            ]
+        },
+        {
+            "component_id": 5,
+            "size": 2,
+            "nodes": [
+                80,
+                78
+            ],
+            "claims": [
+                {
+                    "index": 80,
+                    "text": "Egyptian karate players raised the Palestinian flag after defeating Israel in the ongoing Paris Olympics.",
+                    "label": "false"
+                },
+                {
+                    "index": 78,
+                    "text": "An image shows Egyptian black belts raising the Palestinian flag after defeating Israel at the Paris Olympics.",
+                    "label": "misleading"
+                }
+            ]
+        },
+        {
+            "component_id": 6,
+            "size": 2,
+            "nodes": [
+                37,
+                38
+            ],
+            "claims": [
+                {
+                    "index": 37,
+                    "text": "Israeli PM Netanyahu is suffering from prostate cancer",
+                    "label": "false"
+                },
+                {
+                    "index": 38,
+                    "text": "claims Israeli PM Benjamin Netanyahu has purportedly been diagnosed with Grade 3 prostate cancer",
+                    "label": "false"
+                }
+            ]
+        },
+        {
+            "component_id": 8,
+            "size": 2,
+            "nodes": [
+                74,
+                82
+            ],
+            "claims": [
+                {
+                    "index": 74,
+                    "text": "U.S. aircraft carrier in the Red Sea to support Israel amidst tensions with Hezbollah",
+                    "label": "misleading"
+                },
+                {
+                    "index": 82,
+                    "text": "The image shows U.S. aircraft carrier arriving in the Red Sea to defend Israel.",
+                    "label": "false"
+                }
+            ]
+        },
+        {
+            "component_id": 9,
+            "size": 2,
+            "nodes": [
+                36,
+                5
+            ],
+            "claims": [
+                {
+                    "index": 36,
+                    "text": "Taylor Swift called LA wildfires ‘God’s punishment’ for US aid to Israel",
+                    "label": "altered"
+                },
+                {
+                    "index": 5,
+                    "text": "Did Taylor Swift Say LA Fires Are Payback For Gaza Bombings? A Fact Check",
+                    "label": "false"
+                }
+            ]
+        },
+        {
+            "component_id": 11,
+            "size": 2,
+            "nodes": [
+                51,
+                53
+            ],
+            "claims": [
+                {
+                    "index": 51,
+                    "text": "Fact check: ICJ did not declare Israel an illegal state",
+                    "label": "false"
+                },
+                {
+                    "index": 53,
+                    "text": "ICJ declared Israel as an unlawful state.",
+                    "label": "false"
+                }
+            ]
+        },
+        {
+            "component_id": 13,
+            "size": 2,
+            "nodes": [
+                73,
+                75
+            ],
+            "claims": [
+                {
+                    "index": 73,
+                    "text": "A post shared on Facebook claims to show a poll from Israeli news outlet Channel 12, suggesting that most Israelis support soldiers sexually assaulting \"handcuffed terrorists.\"",
+                    "label": "false"
+                },
+                {
+                    "index": 75,
+                    "text": "Israel's Channel 12 asked a question in an Israeli public opinion poll: Do you agree with the claim that a soldier is allowed to rape a prisoner with his hands tied?",
+                    "label": "fake"
+                }
+            ]
+        }
+    ]
+}

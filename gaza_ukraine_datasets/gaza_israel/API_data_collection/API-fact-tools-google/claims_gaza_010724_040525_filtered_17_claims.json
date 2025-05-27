@@ -1,0 +1,322 @@
+{
+    "query": "Gaza",
+    "after_date": "2024-07-01T00:00:00Z",
+    "language_code": "en",
+    "claims": [
+        {
+            "text": "Photo shows a Turkey-made bomb that was dropped on Gaza.",
+            "claimant": "x.com",
+            "claimDate": "2025-04-18T14:37:44Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "site": "misbar.com"
+                    },
+                    "url": "https://www.misbar.com/en/factcheck/2025/04/18/image-does-not-show-debris-turkish-made-bomb-dropped-gaza",
+                    "title": "Image Does Not Show Debris of Turkish-Made Bomb Dropped on Gaza",
+                    "reviewDate": "2025-04-18T14:37:44Z",
+                    "textualRating": "misleading",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 3
+        },
+        {
+            "text": "Baby Sham did not lose her arm in an Israeli airstrike on the Shejaeya neighborhood, east of Gaza City.",
+            "claimant": "x.com",
+            "claimDate": "2025-04-13T05:39:22Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "site": "misbar.com"
+                    },
+                    "url": "https://www.misbar.com/en/factcheck/2025/04/13/contrary-trolls-baby-sham-lost-her-arm-and-died-israeli-airstrike",
+                    "title": "Contrary to Trolls, Baby Sham Lost Her Arm and Died in Israeli Airstrike",
+                    "reviewDate": "2025-04-13T05:39:22Z",
+                    "textualRating": "fake",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 5
+        },
+        {
+            "text": "President Trump had to stop $50 million in American dollars from going to Gaza to fund condoms.",
+            "claimDate": "2025-01-28T00:00:00Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "FactCheck.org",
+                        "site": "factcheck.org"
+                    },
+                    "url": "https://www.factcheck.org/2025/01/trump-administration-makes-unsupported-claim-about-50-million-for-condoms-to-gaza/",
+                    "title": "Trump Administration Makes Unsupported Claim About $50 Million for Condoms to Gaza",
+                    "reviewDate": "2025-01-30T00:00:00Z",
+                    "textualRating": "No evidence",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 19
+        },
+        {
+            "text": "Did The US Spend $50 Million On Condoms For Gaza Aid? A Fact Check",
+            "claimDate": "2025-01-30T09:28:26Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "NDTV",
+                        "site": "ndtv.com"
+                    },
+                    "url": "https://www.ndtv.com/world-news/fact-check-white-house-claims-50m-spent-on-condoms-for-gaza-7594187",
+                    "title": "Did The US Spend $50 Million On Condoms For Gaza Aid? A Fact Check",
+                    "reviewDate": "2025-01-30T09:28:26Z",
+                    "textualRating": "False",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 20
+        },
+        {
+            "text": "The U.S. government spent or planned to spend $50 million exclusively on condoms in Gaza.",
+            "claimant": "x.com",
+            "claimDate": "2025-01-30T00:19:00Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "Lead Stories",
+                        "site": "leadstories.com"
+                    },
+                    "url": "https://leadstories.com/hoax-alert/2025/01/fact-check-no-proof-us-allocated-50-million-for-condoms-in-gaza.html",
+                    "title": "Fact Check: NO Proof US Allocated $50 Million Solely For Condoms In Gaza",
+                    "reviewDate": "2025-01-30T00:19:00Z",
+                    "textualRating": "No Receipts",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 21
+        },
+        {
+            "text": "Did Taylor Swift Say LA Fires Are Payback For Gaza Bombings? A Fact Check",
+            "claimDate": "2025-01-15T10:57:34Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "NDTV",
+                        "site": "ndtv.com"
+                    },
+                    "url": "https://www.ndtv.com/world-news/did-taylor-swift-say-la-fires-are-payback-for-gaza-bombings-a-fact-check-7479334",
+                    "title": "Did Taylor Swift Say LA Fires Are Payback For Gaza Bombings? A Fact Check",
+                    "reviewDate": "2025-01-15T10:57:34Z",
+                    "textualRating": "False",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 29
+        },
+        {
+            "text": "picture of a dog holding an infant in his mouth is from Gaza",
+            "claimant": "Social media posts",
+            "claimDate": "2024-12-30T00:00:00Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "NewsMobile",
+                        "site": "newsmobile.in"
+                    },
+                    "url": "https://www.newsmobile.in/nm-fact-checker/fact-check-this-picture-of-dog-holding-a-childs-body-is-from-bangladesh-not-gaza/",
+                    "title": "Fact Check: This Picture Of Dog Holding A Child’s Body Is From Bangladesh, NOT Gaza",
+                    "reviewDate": "2024-12-31T00:00:00Z",
+                    "textualRating": "False",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 32
+        },
+        {
+            "text": "This is Gaza, completely destroyed. It looks like hell on earth.",
+            "claimant": "x.com",
+            "claimDate": "2024-12-30T10:26:01Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "site": "misbar.com"
+                    },
+                    "url": "https://www.misbar.com/en/factcheck/2024/12/30/this-footage-does-not-show-and-aerial-footage-of-gaza-but-zamalka-in-syria",
+                    "title": "This Footage Does Not Show Aerial Footage of Gaza But Zamalka ...",
+                    "reviewDate": "2024-12-30T10:26:01Z",
+                    "textualRating": "misleading",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 36
+        },
+        {
+            "text": "Donald Trump's election led Hamas to call \"for 'Immediate' End to War.\"",
+            "claimant": "Social media posts",
+            "claimDate": "2024-11-06T00:00:00Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "FactCheck.org",
+                        "site": "factcheck.org"
+                    },
+                    "url": "https://www.factcheck.org/2024/11/viral-claim-falsely-suggests-trump-ended-violence-in-gaza/",
+                    "title": "Viral Claim Falsely Suggests Trump Ended Violence in Gaza",
+                    "textualRating": "Distorts the Facts",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 46
+        },
+        {
+            "text": "A viral tweet claims that Hamas fighters successfully ambushed an Israeli tank unit near Jabalia camp in northern Gaza, destroying multiple vehicles and injuring or killing their crews.",
+            "claimant": "https://x.com/jacksonhinklle",
+            "claimDate": "2024-10-25T00:00:00Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "CheckYourFact",
+                        "site": "checkyourfact.com"
+                    },
+                    "url": "https://checkyourfact.com/2024/11/01/fact-check-does-viral-tweet-show-recent-hamas-attack-on-israeli-tank-unit/",
+                    "title": "FACT CHECK: Does Viral Tweet Show Recent Hamas Attack on Israeli Tank Unit?",
+                    "reviewDate": "2024-11-01T13:23:41Z",
+                    "textualRating": "False",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 47
+        },
+        {
+            "text": "The photo of a dead man surrounded by dogs is from Gaza and killed by Israel.",
+            "claimant": "Social Media User",
+            "claimDate": "2024-10-22T00:00:00Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "FACTLY",
+                        "site": "factly.in"
+                    },
+                    "url": "https://factly.in/old-photo-from-yemen-is-being-falsely-shared-as-the-death-of-a-man-in-gaza-following-an-israeli-attack/",
+                    "title": "Old photo from Yemen is being falsely shared as the death of a man in Gaza following an Israeli attack",
+                    "reviewDate": "2024-10-24T00:00:00Z",
+                    "textualRating": "FALSE",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 53
+        },
+        {
+            "text": "Image shows a journalist's body in Gaza",
+            "claimant": "Social Media",
+            "claimDate": "2024-10-14T00:00:00Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "NewsMobile",
+                        "site": "newsmobile.in"
+                    },
+                    "url": "https://www.newsmobile.in/nm-fact-checker/fact-check-this-image-claiming-to-show-journalist-from-gaza-is-ai-generated/",
+                    "title": "Fact Check: Viral Image Claiming To Show Body Of A Journalist From Gaza Is Not Real But AI-generated",
+                    "reviewDate": "2024-10-16T00:00:00Z",
+                    "textualRating": "Misleading",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 55
+        },
+        {
+            "text": "Former President Donald Trump claimed on Monday that he has visited Gaza in the past.",
+            "claimant": "Viral Post",
+            "claimDate": "2024-10-07T00:00:00Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "CheckYourFact",
+                        "site": "checkyourfact.com"
+                    },
+                    "url": "https://checkyourfact.com/2024/10/09/fact-check-fact-checking-donald-trumps-claim-that-he-has-visited-gaza/",
+                    "title": "FACT CHECK: Fact-Checking Donald Trump’s Claim That He Has Visited Gaza",
+                    "reviewDate": "2024-10-09T14:45:31Z",
+                    "textualRating": "False",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 57
+        },
+        {
+            "text": "Social media posts claiming to show recent Israeli attack on Lebanon.",
+            "claimant": "X",
+            "claimDate": "2024-10-21T00:00:00Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "Logically Facts",
+                        "site": "logicallyfacts.com"
+                    },
+                    "url": "https://www.logicallyfacts.com/en/fact-check/old-photos-gaza-linked-to-israeli-attack-in-lebanon",
+                    "title": "Old photos from Gaza falsely linked to Israeli attack on Lebanon",
+                    "reviewDate": "2024-10-22T00:00:00Z",
+                    "textualRating": "Misleading",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 59
+        },
+        {
+            "text": "This photo shows a man from Gaza holding the hand of his son killed in an Israeli bombing.",
+            "claimant": "X, Facebook",
+            "claimDate": "2024-07-14T00:00:00Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "Logically Facts",
+                        "site": "logicallyfacts.com"
+                    },
+                    "url": "https://www.logicallyfacts.com/en/fact-check/false-no-photo-doesn-t-show-gaza-man-holding-hand-of-son-killed-in-israeli-bombing",
+                    "title": "No, photo doesn’t show Gaza man holding hand of son killed in Israeli bombing",
+                    "reviewDate": "2024-07-16T00:00:00Z",
+                    "textualRating": "False",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 88
+        },
+        {
+            "text": "Mercava Pride Zionist Industry Laundry clothesline in Gaza.",
+            "claimant": "Twitter.com",
+            "claimDate": "2024-07-15T21:02:14Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "site": "misbar.com"
+                    },
+                    "url": "https://www.misbar.com/en/factcheck/2024/07/15/photo-of-a-woman-from-south-lebanon-shared-in-relation-to-gaza",
+                    "title": "Photo of A Woman From South Lebanon Shared in Relation To Gaza",
+                    "reviewDate": "2024-07-15T21:02:14Z",
+                    "textualRating": "misleading",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 89
+        },
+        {
+            "text": "“Shocking. EU leaders responded more swiftly and strongly to assassination attempt at Trump than they responded at all to the mass killings of Palestinians in Gaza.”",
+            "claimant": "Chein Weihua",
+            "claimDate": "2024-07-16T19:57:53Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "VOA",
+                        "site": "voanews.com"
+                    },
+                    "url": "https://www.voanews.com/a/fact-check-in-china-and-iran-state-media-used-trump-assassination-attempt-to-accuse-west-of-neglecting-gaza-crisis/7700762.html",
+                    "title": "In China and Iran, state media used Trump assassination attempt to ...",
+                    "reviewDate": "2024-07-16T19:57:53Z",
+                    "textualRating": "Misleading",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 95
+        }
+    ]
+}
