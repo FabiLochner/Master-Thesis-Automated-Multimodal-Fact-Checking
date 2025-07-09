@@ -1,0 +1,3286 @@
+{
+    "query": "Ukraine, Russia",
+    "after_date": "2024-07-01T00:00:00Z",
+    "language_code": "en",
+    "claims": [
+        {
+            "text": "BBC News chyron naming Valerii Zaluzhnyi as 'Ukraine's next president.'",
+            "claimant": "X, Facebook",
+            "claimDate": "2025-04-01T00:00:00Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "Logically Facts",
+                        "site": "logicallyfacts.com"
+                    },
+                    "url": "https://www.logicallyfacts.com/en/fact-check/bbc-news-did-not-say-zaluzhny-the-next-president-of-ukraine-is-fake",
+                    "title": "No, this isn't a real BBC News broadcast about Valerii Zaluzhny",
+                    "reviewDate": "2025-04-22T00:00:00Z",
+                    "textualRating": "Fake",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 0,
+            "query": "Ukraine"
+        },
+        {
+            "text": "Netanyahu recently announced plans to resettle Palestinians in Gaza to Ukraine and Syria.",
+            "claimant": "x.com",
+            "claimDate": "2025-04-14T15:07:02Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "site": "misbar.com"
+                    },
+                    "url": "https://www.misbar.com/en/factcheck/2025/04/14/netanyahu-did-not-announce-plans-relocate-gazans-ukraine-and-syria",
+                    "title": "Netanyahu Did Not Announce Plans to Relocate Gazans to Ukraine and Syria",
+                    "reviewDate": "2025-04-14T15:07:02Z",
+                    "textualRating": "misleading",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 1,
+            "query": "Ukraine"
+        },
+        {
+            "text": "A Captured Ukrainian soldier did not know that he was carrying a consent form for an organ transplant, servicemen of the North military group told RIA Novosti",
+            "claimant": "Viral social media posts",
+            "claimDate": "2025-03-29T00:00:00Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "Greece Fact Check",
+                        "site": "factchecker.gr"
+                    },
+                    "url": "https://www.factchecker.gr/2025/04/10/fact-check-did-ukrainian-soldiers-sign-organ-harvesting-consent-forms-disguised-as-medical-papers/",
+                    "title": "Fact-check: Did Ukrainian Soldiers Sign Organ Harvesting Consent Forms Disguised as Medical Papers?",
+                    "reviewDate": "2025-04-10T00:00:00Z",
+                    "textualRating": "DISINFORMATION",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 2,
+            "query": "Ukraine"
+        },
+        {
+            "text": "A post shared on Facebook claims to show a Charlie Hebdo magazine cover of Ukrainian President Volodoymr Zelenskyy.",
+            "claimant": "Viral Image",
+            "claimDate": "2025-03-22T00:00:00Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "CheckYourFact",
+                        "site": "checkyourfact.com"
+                    },
+                    "url": "https://checkyourfact.com/2025/03/28/fact-check-charlie-hebdo-magazine-cover-zelenskyy-fake/",
+                    "title": "FACT CHECK: Charlie Hebdo Magazine Cover Of Zelenskyy Is Fake",
+                    "reviewDate": "2025-03-28T15:19:01Z",
+                    "textualRating": "False",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 3,
+            "query": "Ukraine"
+        },
+        {
+            "text": "Mark Rubio threatens to 'cut off Ukraine's Starlink access.'",
+            "claimant": "X, Facebook",
+            "claimDate": "2025-03-06T00:00:00Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "Logically Facts",
+                        "site": "logicallyfacts.com"
+                    },
+                    "url": "https://www.logicallyfacts.com/en/fact-check/video-showing-mark-rubio-threatening-ukraine-cutting-off-starlink-access-is-edited",
+                    "title": "No, Rubio didn't threaten to cut off Ukraine's Starlink access",
+                    "reviewDate": "2025-03-21T00:00:00Z",
+                    "textualRating": "Fake",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 4,
+            "query": "Ukraine"
+        },
+        {
+            "text": "A post shared on Facebook claims that European leaders took off their suit jackets in support of Ukraine.",
+            "claimant": "Viral Image",
+            "claimDate": "2025-03-16T00:00:00Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "Check Your Fact",
+                        "site": "checkyourfact.com"
+                    },
+                    "url": "https://checkyourfact.com/2025/03/20/fact-check-european-leaders-suit-jackets-support-ukraine/elias@checkyourfact.com",
+                    "title": "FACT CHECK: No, European Leaders Didn’t Take Off Suit Jackets In Support Of Ukraine",
+                    "reviewDate": "2025-03-20T19:46:10Z",
+                    "textualRating": "False",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 5,
+            "query": "Ukraine"
+        },
+        {
+            "text": "A post shared on X claims a British outlet reported 70,000 Ukrainian troops died in Kursk.",
+            "claimant": "Viral Image",
+            "claimDate": "2025-03-15T00:00:00Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "Check Your Fact",
+                        "site": "checkyourfact.com"
+                    },
+                    "url": "http://checkyourfact.com/2025/03/19/fact-check-outlet-report-ukrainian-troops-died-kursk/",
+                    "title": "FACT CHECK: No, Outlet Did Not Report 70,000 Ukrainian Troops Died In Kursk",
+                    "reviewDate": "2025-03-19T13:09:32Z",
+                    "textualRating": "False",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 6,
+            "query": "Ukraine"
+        },
+        {
+            "text": "This image shows an authentic headline by Hull Daily Mail that reads, \"70,000 Ukrainian soldiers in the Kursk region died in vain,\" from March 13, 2025.",
+            "claimant": "Social media users",
+            "claimDate": "2025-03-15T00:00:00Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "Logically Facts",
+                        "site": "logicallyfacts.com"
+                    },
+                    "url": "https://www.logicallyfacts.com/en/fact-check/uk-hull-daily-mail-headline-about-ukrainian-casualties-in-kursk-is-fake",
+                    "title": "Fake Hull Daily Mail headline about Ukrainian casualties",
+                    "reviewDate": "2025-03-18T00:00:00Z",
+                    "textualRating": "Fake",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 7,
+            "query": "Ukraine"
+        },
+        {
+            "text": "U.S. Defense Secretary Pete Hegseth and a journalist had an exchange about the impending peace talks between Ukraine and Russia.",
+            "claimant": "Facebook user Christopher Robbins",
+            "claimDate": "2025-02-21T00:00:00Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "VERA Files",
+                        "site": "verafiles.org"
+                    },
+                    "url": "https://verafiles.org/articles/fact-check-exchange-between-us-defense-official-and-journalist-on-ukraine-russia-fake",
+                    "title": "FACT CHECK: Exchange between U.S. defense official and journalist on Ukraine-Russia FAKE",
+                    "reviewDate": "2025-03-11T00:00:00Z",
+                    "textualRating": "Fake",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 8,
+            "query": "Ukraine"
+        },
+        {
+            "text": "Image shows a transcript of the White House meeting between US president Donald Trump, vice-president JD Vance and Ukrainian president Volodymyr Zelenskyy.",
+            "claimant": "Viral social media post",
+            "claimDate": "2025-03-08T00:00:00Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "Newschecker",
+                        "site": "newschecker.in"
+                    },
+                    "url": "https://newschecker.in/fact-check/fact-check/fake-transcript-of-fiery-trump-zelenskyy-exchange-in-oval-office-goes-viral",
+                    "title": "Fact Check: Fake Transcript Of Fiery Trump-Zelenskyy Exchange In Oval Office Goes Viral",
+                    "reviewDate": "2025-03-08T00:00:00Z",
+                    "textualRating": "False",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 9,
+            "query": "Ukraine"
+        },
+        {
+            "text": "The Ukrainian parliament is preparing to pass a new bill making 14yo eligible for mobilisation.",
+            "claimant": "Viral social media post",
+            "claimDate": "2025-03-04T00:00:00Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "Greece Fact Check",
+                        "site": "factchecker.gr"
+                    },
+                    "url": "https://www.factchecker.gr/2025/03/08/the-ukrainian-parliament-is-not-preparing-to-pass-a-new-bill-making-14-year-olds-eligible-for-mobilization-or-registration/",
+                    "title": "The Ukrainian parliament is NOT preparing to pass a new bill making 14-year-olds eligible for mobilization or registration",
+                    "reviewDate": "2025-03-08T00:00:00Z",
+                    "textualRating": "FALSE",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 10,
+            "query": "Ukraine"
+        },
+        {
+            "text": "purports to show a Ukrainian flag being raised on the Statue of Liberty",
+            "claimant": "Video",
+            "claimDate": "2025-03-03T00:00:00Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "CheckYourFact",
+                        "site": "checkyourfact.com"
+                    },
+                    "url": "https://checkyourfact.com/2025/03/06/fact-check-ukrainian-flag-raised-statue-liberty/",
+                    "title": "FACT CHECK: No, The Ukrainian Flag Was Not Raised On The Statue Of Liberty",
+                    "reviewDate": "2025-03-06T14:15:16Z",
+                    "textualRating": "False",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 11,
+            "query": "Ukraine"
+        },
+        {
+            "text": "Ukrainian President Volodymyr Zelenskyy signing bombs, claiming he was signing Israeli bombs intended for use against Palestinians in Gaza.",
+            "claimant": "x.com",
+            "claimDate": "2025-03-05T13:43:12Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "site": "misbar.com"
+                    },
+                    "url": "https://www.misbar.com/en/factcheck/2025/03/05/image-does-not-show-zelenskyy-signing-bombs-gaza",
+                    "title": "This Image Does Not Show Zelenskyy Signing Bombs for Gaza",
+                    "reviewDate": "2025-03-05T13:43:12Z",
+                    "textualRating": "misleading",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 12,
+            "query": "Ukraine"
+        },
+        {
+            "text": "Europe's aid to Ukraine \"was in the form of a loan. They get their money back and we didn't.\"",
+            "claimant": "Donald Trump",
+            "claimDate": "2025-02-28T00:00:00Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "FactCheck.org",
+                        "site": "factcheck.org"
+                    },
+                    "url": "https://www.factcheck.org/2025/03/trump-exaggerates-on-u-s-and-european-aid-to-ukraine-loans/",
+                    "title": "Trump Exaggerates on U.S. and European Aid to Ukraine, Loans",
+                    "textualRating": "Exaggerates",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 13,
+            "query": "Ukraine"
+        },
+        {
+            "text": "Ukrainian President Volodymyr Zelenskyy wore a suit in a meeting with Karl Schwab World Economic Forum executive chairman",
+            "claimant": "x.com",
+            "claimDate": "2025-03-03T18:58:00Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "Lead Stories",
+                        "site": "leadstories.com"
+                    },
+                    "url": "https://leadstories.com/hoax-alert/2025/03/fact-check-zelenskyy-did-not-wear-suit-meeting-klaus-schwab-in-2025.html",
+                    "title": "Fact Check: Zelenskyy Did NOT Wear Suit In Meeting With Klaus Schwab After February 2025 White House Visit",
+                    "reviewDate": "2025-03-03T18:58:00Z",
+                    "textualRating": "Taken In 2020",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 14,
+            "query": "Ukraine"
+        },
+        {
+            "text": "\"The Ukrainian Maidan ... for most Georgians has become a symbol of the destruction of a nation.\"",
+            "claimant": "Shalva Papuashvili",
+            "claimDate": "2025-02-28T21:23:52Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "VOA",
+                        "site": "voanews.com"
+                    },
+                    "url": "https://www.voanews.com/a/georgian-speaker-misleads-on-georgians-support-for-ukraine/7992987.html",
+                    "title": "Georgian speaker misleads on Georgians’ support for Ukraine",
+                    "reviewDate": "2025-02-28T21:23:52Z",
+                    "textualRating": "Misleading",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 15,
+            "query": "Ukraine"
+        },
+        {
+            "text": "Zelenskyy blocked access to Truth Social in Ukraine",
+            "claimant": "social media",
+            "claimDate": "2025-02-20T00:00:00Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "USA Today",
+                        "site": "usatoday.com"
+                    },
+                    "url": "https://www.usatoday.com/story/news/factcheck/2025/02/27/truth-social-ukraine-fact-check/80698137007/",
+                    "title": "Truth Social never became available in Ukraine | Fact check",
+                    "reviewDate": "2025-02-27T20:26:10Z",
+                    "textualRating": "False",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 16,
+            "query": "Ukraine"
+        },
+        {
+            "text": "“It is important to emphasize that Russia possesses significantly — I want to stress this — significantly larger resources of this kind than Ukraine. Our historical territories that have become part of the Russian Federation again also hold certain reserves. We are ready to work there with international partners, including Americans.”",
+            "claimant": "Vladimir Putin",
+            "claimDate": "2025-02-27T18:43:34Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "VOA",
+                        "site": "voanews.com"
+                    },
+                    "url": "https://www.voanews.com/a/putin-baselessly-offers-ukraine-rare-earth-minerals-as-russian-commodity/7990437.html",
+                    "title": "Putin baselessly offers Ukraine’s rare earth minerals as Russian commodity",
+                    "reviewDate": "2025-02-27T18:43:34Z",
+                    "textualRating": "False",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 17,
+            "query": "Ukraine"
+        },
+        {
+            "text": "The United States forced Russia to invade Ukraine",
+            "claimant": "Fidias Panayiotou, Jeffrey Sachs",
+            "claimDate": "2025-02-26T00:00:00Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "Greece Fact Check",
+                        "site": "factchecker.gr"
+                    },
+                    "url": "https://www.factchecker.gr/2025/02/27/is-it-true-that-the-u-s-forced-russia-to-invade-ukraine-according-to-pheidias-panayiotou/",
+                    "title": "Is it true that the U.S. forced Russia to invade Ukraine, according to Pheidias Panayiotou?",
+                    "reviewDate": "2025-02-27T00:00:00Z",
+                    "textualRating": "MISLEADING",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 18,
+            "query": "Ukraine"
+        },
+        {
+            "text": "Donald Trump Jr. stated that he did not understand why anyone would choose Ukraine as an ally over Russia on his Triggered podcast.",
+            "claimant": "x.com",
+            "claimDate": "2025-02-27T00:42:10Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "Lead Stories",
+                        "site": "leadstories.com"
+                    },
+                    "url": "https://leadstories.com/hoax-alert/2025/02/fact-check-don-jr-did-not-say-on-his-podcast-that-us-should-have-been-sending-weapons-to-russia.html",
+                    "title": "Fact Check: Donald Trump Jr. Did NOT Say On His Podcast That US 'Should Have Been Sending Weapons To Russia' -- Audio Is Likely AI Generated",
+                    "reviewDate": "2025-02-27T00:42:10Z",
+                    "textualRating": "Not His Words",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 19,
+            "query": "Ukraine"
+        },
+        {
+            "text": "\"Zelenskyy said he would quickly make peace with Russia, but instead, he started a war.\"",
+            "claimant": "Andrei Kelin",
+            "claimDate": "2025-02-25T20:29:54Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "VOA",
+                        "site": "voanews.com"
+                    },
+                    "url": "https://www.voanews.com/a/russia-uk-ambassador-falsely-claims-zelenskyy-started-russia-ukraine-war/7987874.html",
+                    "title": "Russia’s UK ambassador falsely claims Zelenskyy started Russia-Ukraine war",
+                    "reviewDate": "2025-02-25T20:29:54Z",
+                    "textualRating": "False",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 20,
+            "query": "Ukraine"
+        },
+        {
+            "text": "German Foreign Minister Baerbock threatens US with severing ties amid Trump's comments on Zelensky and Ukraine.",
+            "claimant": "x.com",
+            "claimDate": "2025-02-23T07:17:53Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "site": "misbar.com"
+                    },
+                    "url": "https://www.misbar.com/en/factcheck/2025/02/23/germany-has-not-threatened-cut-ties-us-after-talks-russia",
+                    "title": "Germany Has Not Threatened To Cut Ties With the U.S. After Talks With Russia",
+                    "reviewDate": "2025-02-23T07:17:53Z",
+                    "textualRating": "fake",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 21,
+            "query": "Ukraine"
+        },
+        {
+            "text": "This is how ethnic minorities are treated in Ukraine. Legacy Media will never show you this daily occurrence because it doesn’t suit their narrative.",
+            "claimant": "BGatesIsaPyscho",
+            "claimDate": "2025-02-20T00:00:00Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "Youturn | fact check",
+                        "site": "en.youturn.in"
+                    },
+                    "url": "https://en.youturn.in/factcheck/Old-video-of-Ukrainians-being-tied-up-stripped-and-beaten.html",
+                    "title": "Youturn | fact check",
+                    "reviewDate": "2025-02-22T00:00:00Z",
+                    "textualRating": "misleading",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 22,
+            "query": "Ukraine"
+        },
+        {
+            "text": "Did Ukraine \"Psychological Warfare\" unit get $140M off USAID?",
+            "claimant": "@amuse",
+            "claimDate": "2025-02-21T21:16:32Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "Newsweek",
+                        "site": "newsweek.com"
+                    },
+                    "url": "https://www.newsweek.com/fact-check-did-ukraine-psychological-warfare-unit-140-million-usaid-2034584",
+                    "title": "Fact Check: Did Ukraine \"Psychological Warfare\" unit get $140M from USAID?",
+                    "reviewDate": "2025-02-21T21:16:32Z",
+                    "textualRating": "False",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 23,
+            "query": "Ukraine"
+        },
+        {
+            "text": "Donald Trump just said that Ukraine started the war.",
+            "claimant": "x.com",
+            "claimDate": "2025-02-20T18:11:00Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "Lead Stories",
+                        "site": "leadstories.com"
+                    },
+                    "url": "https://leadstories.com/hoax-alert/2025/02/fact-check-donald-trump-did-say-ukraine-started-war.html",
+                    "title": "Fact Check: Donald Trump DID Say Ukraine Started War",
+                    "reviewDate": "2025-02-20T18:11:00Z",
+                    "textualRating": "He Did",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 24,
+            "query": "Ukraine"
+        },
+        {
+            "text": "The U.S. has given Ukraine “$350 billion” for the war with Russia gave “$200 billion more than Europe.”",
+            "claimant": "Donald Trump",
+            "claimDate": "2025-02-18T00:00:00Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "FactCheck.org",
+                        "site": "factcheck.org"
+                    },
+                    "url": "https://www.factcheck.org/2025/02/trumps-false-and-misleading-ukraine-claims/",
+                    "title": "Trump's False and Misleading Ukraine Claims",
+                    "reviewDate": "2025-02-20T00:00:00Z",
+                    "textualRating": "False",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 25,
+            "query": "Ukraine"
+        },
+        {
+            "text": "A post shared on Facebook claims Ukrainian President Volodomyr Zelenskyy bought deceased genocidal Nazi dictator Adolf Hitler's home, the Eagle's Nest.",
+            "claimant": "Viral Post",
+            "claimDate": "2025-02-06T00:00:00Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "CheckYourFact",
+                        "site": "checkyourfact.com"
+                    },
+                    "url": "https://checkyourfact.com/2025/02/20/fact-check-zelenskyy-buy-eagles-nest-home/",
+                    "title": "FACT CHECK: No, Zelenskyy Didn’t Buy Hitler’s Eagle’s Nest Home",
+                    "reviewDate": "2025-02-20T15:12:51Z",
+                    "textualRating": "False",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 26,
+            "query": "Ukraine"
+        },
+        {
+            "text": "German Chancellor Olaf Scholz declared a state of emergency in Germany due to Trump's peace plan for Ukraine.",
+            "claimant": "x.com",
+            "claimDate": "2025-02-20T07:31:22Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "site": "misbar.com"
+                    },
+                    "url": "https://www.misbar.com/en/factcheck/2025/02/20/germany%E2%80%99s-olaf-scholz-has-not-declared-state-emergency-over-trump%E2%80%99s-ukraine-plan",
+                    "title": "Germany’s Olaf Scholz Has Not Declared a State of Emergency Over Trump’s Ukraine Plan",
+                    "reviewDate": "2025-02-20T07:31:22Z",
+                    "textualRating": "misleading",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 27,
+            "query": "Ukraine"
+        },
+        {
+            "text": "Trump says USA spent $350 billion in Ukraine",
+            "claimant": "Donald Trump",
+            "claimDate": "2025-02-19T23:09:57Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "Newsweek",
+                        "site": "newsweek.com"
+                    },
+                    "url": "https://www.newsweek.com/fact-check-trump-says-usa-spent-350-billion-ukraine-2033333",
+                    "title": "Fact Check: Did the US give $350B to Ukraine, as Trump claims?",
+                    "reviewDate": "2025-02-19T23:09:57Z",
+                    "textualRating": "False",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 28,
+            "query": "Ukraine"
+        },
+        {
+            "text": "Zelenskyy offered in a February 1 interview evidence of misappropriation of US aid for Ukraine, corruption and abuse of power",
+            "claimant": "tiktok.com",
+            "claimDate": "2025-02-17T08:08:56Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "Lead Stories",
+                        "site": "czech.leadstories.com"
+                    },
+                    "url": "https://czech.leadstories.com/hoax-alert/2025/02/fact-check-zelenskyy-statements-february2025-do-not-prove-embezzling-us-aid-worth-100-billion.html",
+                    "title": "Fact Check: Zelenskyy's Statements In February 2025 Interview Do NOT Prove He Embezzled US Aid For Ukraine Worth $100 Billion",
+                    "reviewDate": "2025-02-17T08:08:56Z",
+                    "textualRating": "Not Received",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 29,
+            "query": "Ukraine"
+        },
+        {
+            "text": "President Trump: I have reached an agreement with Putin to end the war in Ukraine.",
+            "claimant": "x.com",
+            "claimDate": "2025-02-16T08:12:52Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "site": "misbar.com"
+                    },
+                    "url": "https://www.misbar.com/en/factcheck/2025/02/16/trump-and-putin-have-not-reached-agreement-end-russia-ukraine-war",
+                    "title": "Trump and Putin Have Not Reached an Agreement to End Russia-Ukraine War",
+                    "reviewDate": "2025-02-16T08:12:52Z",
+                    "textualRating": "misleading",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 30,
+            "query": "Ukraine"
+        },
+        {
+            "text": "Trump says Russia has lost 1.5 million troops In Ukraine war",
+            "claimant": "Donald Trump",
+            "claimDate": "2025-02-14T17:57:33Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "Newsweek",
+                        "site": "newsweek.com"
+                    },
+                    "url": "https://www.newsweek.com/fact-check-trump-russia-ukraine-war-losses-troops-2030104",
+                    "title": "Fact Check: Trump Says Russia Has Lost 1.5 Million Troops In Ukraine War",
+                    "reviewDate": "2025-02-14T17:57:33Z",
+                    "textualRating": "False",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 31,
+            "query": "Ukraine"
+        },
+        {
+            "text": "Ukraine is selling half of the armaments it receives from the United States",
+            "claimant": "Tucker Carlson",
+            "claimDate": "2025-02-12T19:03:29Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "Newsweek",
+                        "site": "newsweek.com"
+                    },
+                    "url": "https://www.newsweek.com/fact-check-tucker-carlson-ukraine-weapons-black-market-cartels-2030011",
+                    "title": "Fact Check: Are Ukrainian Weapons Being Sold on Black Market?",
+                    "reviewDate": "2025-02-12T19:03:29Z",
+                    "textualRating": "False",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 32,
+            "query": "Ukraine"
+        },
+        {
+            "text": "\"Ukraine remains the only source of security threats to the ZNPP as it routinely targets the nuclear facility and its critical infrastructure, as well as the satellite city of Energodar…\"",
+            "claimant": "Dmitry Polyansky",
+            "claimDate": "2025-02-13T01:54:32Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "VOA",
+                        "site": "voanews.com"
+                    },
+                    "url": "https://www.voanews.com/a/russia-pins-nuclear-threat-on-ukraine-after-militarizing-atomic-power-station-/7973210.html",
+                    "title": "Russia pins nuclear threat on Ukraine after militarizing atomic power station",
+                    "reviewDate": "2025-02-13T01:54:32Z",
+                    "textualRating": "FALSE",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 33,
+            "query": "Ukraine"
+        },
+        {
+            "text": "A post shared on X claims E! News reported that United States Agency Aid and Development (USAID) paid millions for celebrities to visit Ukraine.",
+            "claimant": "Viral Post",
+            "claimDate": "2025-02-05T00:00:00Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "CheckYourFact",
+                        "site": "checkyourfact.com"
+                    },
+                    "url": "https://checkyourfact.com/2025/02/12/fact-check-e-news-usaid-celebrities-millions-ukraine/",
+                    "title": "FACT CHECK: No, E! News Did Not Report USAID Paid Celebrities Millions To Visit Ukraine",
+                    "reviewDate": "2025-02-12T13:58:27Z",
+                    "textualRating": "False",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 34,
+            "query": "Ukraine"
+        },
+        {
+            "text": "Ukraine Selling American Weapons to Cartels",
+            "claimant": "Tucker Carlson",
+            "claimDate": "2025-02-10T00:00:00Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "Greece Fact Check",
+                        "site": "factchecker.gr"
+                    },
+                    "url": "https://www.factchecker.gr/2025/02/11/russian-propaganda-by-tucker-carlson-on-ukraine-selling-weapons-to-drug-cartels/",
+                    "title": "Russian Propaganda by Tucker Carlson on Ukraine Selling Weapons to Drug Cartels",
+                    "reviewDate": "2025-02-11T00:00:00Z",
+                    "textualRating": "FALSE",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 35,
+            "query": "Ukraine"
+        },
+        {
+            "text": "Ben Stiller received $4 million from USAID for his photographs with Ukrainian President Volodymyr Zelensky.",
+            "claimant": "x.com",
+            "claimDate": "2025-02-06T19:11:35Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "site": "misbar.com"
+                    },
+                    "url": "https://www.misbar.com/en/factcheck/2025/02/06/ben-stiller-denies-usaid-funding-claims-ukraine-trip",
+                    "title": "Ben Stiller Denies USAID Funding Claims for Ukraine Trip",
+                    "reviewDate": "2025-02-06T19:11:35Z",
+                    "textualRating": "fake",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 36,
+            "query": "Ukraine"
+        },
+        {
+            "text": "claims Trump purportedly criticized British PM Keir Starmer over a 100-year deal between the U.K. and Ukraine",
+            "claimant": "Video",
+            "claimDate": "2025-01-21T00:00:00Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "CheckYourFact",
+                        "site": "checkyourfact.com"
+                    },
+                    "url": "https://checkyourfact.com/2025/02/05/fact-check-trump-criticize-starmer-deal-uk-ukraine/",
+                    "title": "FACT CHECK: No, Donald Trump Did Not Criticize Keir Starmer Over A 100-Year Deal Between The UK And Ukraine",
+                    "reviewDate": "2025-02-05T16:49:10Z",
+                    "textualRating": "False",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 37,
+            "query": "Ukraine"
+        },
+        {
+            "text": "“The president of Ukraine, even under conditions of martial law, has no right to extend his powers. ... If we start negotiations now, they will be illegitimate.”",
+            "claimant": "Vladimir Putin",
+            "claimDate": "2025-02-04T19:15:56Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "VOA",
+                        "site": "voanews.com"
+                    },
+                    "url": "https://www.voanews.com/a/amid-trump-s-call-for-peace-in-ukraine-putin-falsely-frames-talks-with-zelenskyy-as-illegitimate-/7962743.html",
+                    "title": "Amid Trump’s call for peace in Ukraine, Putin falsely frames talks with Zelenskyy as ‘illegitimate’",
+                    "reviewDate": "2025-02-04T19:15:56Z",
+                    "textualRating": "False",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 38,
+            "query": "Ukraine"
+        },
+        {
+            "text": "Zelenskyy \"went to Pennsylvania and campaigned for the opposition in October.\"",
+            "claimant": "JD Vance",
+            "claimDate": "2025-02-28T00:00:00Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "PolitiFact",
+                        "site": "politifact.com"
+                    },
+                    "url": "https://www.politifact.com/article/2025/feb/28/trump-vance-and-zelenskyys-tense-oval-office-meeti/",
+                    "title": "Trump, Vance and Zelenskyy's tense Oval Office meeting about ...",
+                    "reviewDate": "2025-02-28T00:00:00Z",
+                    "textualRating": "This is misleading.",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 39,
+            "query": "Ukraine"
+        },
+        {
+            "text": "“On top of this, Zelenskyy admits that half of the money we sent him is ‘MISSING.’”",
+            "claimant": "Donald Trump",
+            "claimDate": "2025-02-19T00:00:00Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "The Washington Post",
+                        "site": "washingtonpost.com"
+                    },
+                    "url": "https://www.washingtonpost.com/politics/2025/02/20/trump-ukraine-fact-checker/",
+                    "title": "Trump’s flurry of false claims about Ukraine",
+                    "reviewDate": "2025-02-20T00:00:00Z",
+                    "textualRating": "1",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 40,
+            "query": "Ukraine"
+        },
+        {
+            "text": "Zelensky is “down at 4 percent approval rating.”",
+            "claimant": "Donald Trump",
+            "claimDate": "2025-02-18T00:00:00Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "The Washington Post",
+                        "site": "washingtonpost.com"
+                    },
+                    "url": "https://www.washingtonpost.com/politics/2025/02/20/trump-ukraine-fact-checker/",
+                    "title": "Trump’s flurry of false claims about Ukraine",
+                    "reviewDate": "2025-02-20T00:00:00Z",
+                    "textualRating": "1",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 41,
+            "query": "Ukraine"
+        },
+        {
+            "text": "Donald Trump alleged Volodymyr Zelensky has low approval ratings",
+            "claimant": "Donald Trump",
+            "claimDate": "2025-02-19T21:12:38Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "Newsweek",
+                        "site": "newsweek.com"
+                    },
+                    "url": "https://www.newsweek.com/fact-check-does-zelensky-have-four-percent-approval-rating-2033424",
+                    "title": "Fact Check: Does Zelensky Have a 4% Approval Rating?",
+                    "reviewDate": "2025-02-19T21:12:38Z",
+                    "textualRating": "False",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 42,
+            "query": "Ukraine"
+        },
+        {
+            "text": "\"Volodymyr Zelenskyy, once again, called for the occupation of Ukraine by Western troops.”",
+            "claimant": "RIA Novosti",
+            "claimDate": "2025-01-24T18:30:45Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "VOA",
+                        "site": "voanews.com"
+                    },
+                    "url": "https://www.voanews.com/a/zelenskyy-called-for-western-occupation-of-ukraine/7949176.html",
+                    "title": "False: Zelenskyy called for Western occupation of Ukraine",
+                    "reviewDate": "2025-01-24T18:30:45Z",
+                    "textualRating": "False",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 43,
+            "query": "Ukraine"
+        },
+        {
+            "text": "The US has massively halted arms shipments to Ukraine. The United States has withdrawn all applications for the transit of goods in the interests of Ukraine through Rzeszow, Constanta and Varna.",
+            "claimant": "Viral social media post",
+            "claimDate": "2025-01-22T00:00:00Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "Greece Fact Check",
+                        "site": "factchecker.gr"
+                    },
+                    "url": "https://www.factchecker.gr/2025/01/23/the-us-has-not-halted-arms-shipments-to-ukraine-as-of-january-21-2025/",
+                    "title": "The US has NOT halted arms shipments to Ukraine as of January 21, 2025",
+                    "reviewDate": "2025-01-23T00:00:00Z",
+                    "textualRating": "FALSE",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 44,
+            "query": "Ukraine"
+        },
+        {
+            "text": "\"00,000,000 The amount of aid flowing in from Ukraine, Israel, Europe, Mexico and Canada to help\" battle wildfires in California.",
+            "claimant": "300guns",
+            "claimDate": "2025-01-12T00:00:00Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "FactCheck.org",
+                        "site": "factcheck.org"
+                    },
+                    "url": "https://www.factcheck.org/2025/01/canada-and-mexico-are-helping-to-fight-california-fires-contrary-to-meme/",
+                    "title": "Canada and Mexico Are Helping to Fight California Fires, Contrary to Meme",
+                    "reviewDate": "2025-01-17T00:00:00Z",
+                    "textualRating": "False",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 45,
+            "query": "Ukraine"
+        },
+        {
+            "text": "A post shared on X claims eight mansions belonging to Ukrainian military officials burned down in Los Angeles, California.",
+            "claimant": "Viral Video",
+            "claimDate": "2025-01-11T00:00:00Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "CheckYourFact",
+                        "site": "checkyourfact.com"
+                    },
+                    "url": "https://checkyourfact.com/2025/01/16/fact-check-no-eight-mansions-belonging-to-ukrainian-military-officials-did-not-burn-down-in-la/",
+                    "title": "FACT CHECK: No, Eight Mansions Belonging To Ukrainian Military Officials Did Not Burn Down In LA",
+                    "reviewDate": "2025-01-16T16:18:40Z",
+                    "textualRating": "False",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 46,
+            "query": "Ukraine"
+        },
+        {
+            "text": "U.S. uses forced labor by involving inmates in fighting Los Angeles fires, while sanctioning China for using forced labor in Xinjiang.",
+            "claimant": "Maria Zakharova",
+            "claimDate": "2025-01-16T13:15:08Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "VOA",
+                        "site": "voanews.com"
+                    },
+                    "url": "https://www.voanews.com/a/russia-exploits-wildfires-in-los-angeles-to-push-anti-u-s-anti-ukraine-propaganda/7938909.html",
+                    "title": "Russia exploits wildfires in Los Angeles to push anti-US, anti-Ukraine propaganda",
+                    "reviewDate": "2025-01-16T13:15:08Z",
+                    "textualRating": "False",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 47,
+            "query": "Ukraine"
+        },
+        {
+            "text": "A post shared on Threads claims to show Ukraine releasing a list of politicians, such as President Joe Biden, taking bribes.",
+            "claimant": "Viral Image",
+            "claimDate": "2024-12-19T00:00:00Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "CheckYourFact",
+                        "site": "checkyourfact.com"
+                    },
+                    "url": "https://checkyourfact.com/2025/01/09/fact-check-ukraine-list-politicians-bribes/",
+                    "title": "FACT CHECK: No, Ukraine Didn’t Release List Of Politicians Taking Bribes",
+                    "reviewDate": "2025-01-09T14:37:08Z",
+                    "textualRating": "False",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 48,
+            "query": "Ukraine"
+        },
+        {
+            "text": "Ukrainians published a photo from 2022 to depict the... North Korean \"prisoner.\"",
+            "claimant": "Viral social media post",
+            "claimDate": "2024-12-23T00:00:00Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "Greece Fact Check",
+                        "site": "factchecker.gr"
+                    },
+                    "url": "https://www.factchecker.gr/2024/12/29/ukrainians-did-not-publish-a-2022-photo-to-depict-a-north-korean-prisoner/",
+                    "title": "Ukrainians DID NOT publish a 2022 photo to depict their first North Korean prisoner",
+                    "reviewDate": "2024-12-29T00:00:00Z",
+                    "textualRating": "FALSE",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 49,
+            "query": "Ukraine"
+        },
+        {
+            "text": "\"It was Igor Kirillov who exposed the American biological laboratories in Ukraine that developed biological agents for selectively targeting people belonging to specific ethnic groups, including Slavs.\"",
+            "claimant": "Maria Zakharova",
+            "claimDate": "2024-12-20T22:26:51Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "VOA",
+                        "site": "voanews.com"
+                    },
+                    "url": "https://www.voanews.com/a/moscow-leverages-killing-of-russian-general-to-spread-conspiracy-theories-/7909064.html",
+                    "title": "Moscow leverages killing of Russian general to spread conspiracy theories",
+                    "reviewDate": "2024-12-20T22:26:51Z",
+                    "textualRating": "False",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 50,
+            "query": "Ukraine"
+        },
+        {
+            "text": "European Parliament applauding decision to allow Ukraine to use US missiles",
+            "claimant": "social media",
+            "claimDate": "2024-11-22T00:00:00Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "USA Today",
+                        "site": "usatoday.com"
+                    },
+                    "url": "https://www.usatoday.com/story/news/factcheck/2024/12/03/parliament-applaud-ukraines-us-missiles-fact-check/76710640007/",
+                    "title": "Parliament didn't applaud Ukraine's use of US missiles | Fact check",
+                    "reviewDate": "2024-12-03T22:31:00Z",
+                    "textualRating": "False",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 51,
+            "query": "Ukraine"
+        },
+        {
+            "text": "Canadian Lieutenant Colonel Kent Miller was killed by a Russian strike in Ukraine.",
+            "claimant": "Pravda Network",
+            "claimDate": "2024-12-28T00:00:00Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "Greece Fact Check",
+                        "site": "factchecker.gr"
+                    },
+                    "url": "https://www.factchecker.gr/2024/12/02/russian-disinformation-campaign-on-the-alleged-death-of-a-canadian-lieutenant-colonel-in-ukraine/",
+                    "title": "Russian Disinformation Campaign on the Alleged Death of a ...",
+                    "reviewDate": "2024-12-02T00:00:00Z",
+                    "textualRating": "DISINFORMATION CAMPAIGN",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 52,
+            "query": "Ukraine"
+        },
+        {
+            "text": "A post shared on Facebook claims billionaire Elon Musk posted a \"last dollar\" for Ukrainian President Volodymyr Zelenskyy.",
+            "claimant": "Viral Image",
+            "claimDate": "2024-11-08T00:00:00Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "CheckYourFact",
+                        "site": "checkyourfact.com"
+                    },
+                    "url": "https://checkyourfact.com/2024/11/13/fact-check-elon-musk-didnt-post-last-dollar-for-zelenskyy/",
+                    "title": "FACT CHECK: Elon Musk Didn’t Post ‘Last Dollar’ For Zelenskyy",
+                    "reviewDate": "2024-11-13T16:41:03Z",
+                    "textualRating": "False",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 53,
+            "query": "Ukraine"
+        },
+        {
+            "text": "“[W]e have always recognized the borders of Ukraine within the framework of our agreements after the collapse of the Soviet Union. … But later, as is known, the Ukrainian leadership amended the Basic Law and announced its desire to join the North Atlantic Treaty Organization, and we did not agree to this.”",
+            "claimant": "Vladimir Putin",
+            "claimDate": "2024-11-13T01:17:05Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "VOA",
+                        "site": "voanews.com"
+                    },
+                    "url": "https://www.voanews.com/a/putin-justifies-war-in-ukraine-by-accusing-kyiv-of-violating-a-treaty-moscow-violated-repeatedly/7861987.html",
+                    "title": "Putin justifies war in Ukraine by accusing Kyiv of violating a treaty Moscow violated repeatedly",
+                    "reviewDate": "2024-11-13T01:17:05Z",
+                    "textualRating": "False",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 54,
+            "query": "Ukraine"
+        },
+        {
+            "text": "\"[T]here are no means of countering such weapons [hypersonic ballistic missile Oreshnik] today. … It is impossible.\"",
+            "claimant": "Vladimir Putin",
+            "claimDate": "2024-11-26T21:40:50Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "VOA",
+                        "site": "voanews.com"
+                    },
+                    "url": "https://www.voanews.com/a/putin-claims-new-oreshnik-missile-is-unstoppable-sparking-doubts-/7877958.html",
+                    "title": "Putin claims new Oreshnik missile is unstoppable, sparking doubts",
+                    "reviewDate": "2024-11-26T21:40:50Z",
+                    "textualRating": "Likely False",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 55,
+            "query": "Ukraine"
+        },
+        {
+            "text": "This picture shows Ukraine’s President Volodymyr Zelenskyy refusing to shake hands with the UN Secretary-General António Guterres.",
+            "claimant": "Social media users",
+            "claimDate": "2024-10-28T00:00:00Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "India Today",
+                        "site": "indiatoday.in"
+                    },
+                    "url": "https://www.indiatoday.in/fact-check/story/fact-check-ukraine-president-volodomyr-zelenskyy-refuse-shake-hands-un-secretary-general-antonio-guterres-2624400-2024-10-28",
+                    "title": "Fact Check: Did Zelenskyy refuse to shake hands with UN Secretary-General?",
+                    "textualRating": "False",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 56,
+            "query": "Ukraine"
+        },
+        {
+            "text": "“This [North Korean troop deployment to Russia's war in Ukraine] seems yet another information canard.”",
+            "claimant": "Dmitry Peskov",
+            "claimDate": "2024-10-17T17:24:08Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "VOA",
+                        "site": "voanews.com"
+                    },
+                    "url": "https://www.voanews.com/a/kremlin-denies-falsely-north-korean-military-joining-russia-war-in-ukraine/7826328.html",
+                    "title": "Kremlin denies, falsely, North Korean military joining Russia's war in Ukraine",
+                    "reviewDate": "2024-10-17T17:24:08Z",
+                    "textualRating": "Likely false",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 57,
+            "query": "Ukraine"
+        },
+        {
+            "text": "“[Ukrainians] are ruthlessly pushed by their own authorities to the war to be slaughtered there.”",
+            "claimant": "Sergey Lavrov",
+            "claimDate": "2024-10-11T19:43:28Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "VOA",
+                        "site": "voanews.com"
+                    },
+                    "url": "https://www.voanews.com/a/kremlin-s-diplomacy-boss-falsely-claims-kyiv-forces-ukrainians-to-fight-russia-/7819402.html",
+                    "title": "Kremlin's diplomacy boss falsely claims Kyiv forces Ukrainians to fight Russia",
+                    "reviewDate": "2024-10-11T19:43:28Z",
+                    "textualRating": "False",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 58,
+            "query": "Ukraine"
+        },
+        {
+            "text": "“We can send BILLIONS to Ukraine but Americans who have lost everything only get $750 dollars?!”",
+            "claimant": "Instagram post",
+            "claimDate": "2024-10-03T00:00:00Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "FactCheck.org",
+                        "site": "factcheck.org"
+                    },
+                    "url": "https://www.factcheck.org/2024/10/posts-misrepresent-federal-response-funding-for-hurricane-helene-victims/",
+                    "title": "Posts Misrepresent Federal Response, Funding for Hurricane Helene Victims",
+                    "textualRating": "Misleading",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 59,
+            "query": "Ukraine"
+        },
+        {
+            "text": "\"$200 billion more to Ukraine. $2,500 per month to illegal aliens. $750 to Americans who lost everything in Hurricane Helene.\"",
+            "claimant": "@DonaldTNews",
+            "claimDate": "2024-10-03T00:00:00Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "DW",
+                        "site": "dw.com"
+                    },
+                    "url": "https://www.dw.com/en/fact-check-viral-claims-in-the-wake-of-the-hurricane-helene-disaster/a-70433338",
+                    "title": "Fact check: Viral claims on the Hurricane Helene disaster – DW – 10/08/2024",
+                    "reviewDate": "2024-10-08T00:00:00Z",
+                    "textualRating": "Misleading",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 60,
+            "query": "Ukraine"
+        },
+        {
+            "text": "\"Having analyzed the social media of the detained Ryan Routh, who attempted to assassinate Donald Trump, journalists came to the conclusion that representatives of the Kiev regime most likely involved him in recruiting foreigners, including from Afghanistan, to replenish the brigades of the Armed Forces of Ukraine.\"",
+            "claimant": "Maria Zakharova",
+            "claimDate": "2024-09-27T19:58:04Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "VOA",
+                        "site": "voanews.com"
+                    },
+                    "url": "https://www.voanews.com/a/russian-pushes-baseless-ukraine-ties-narrative-in-trump-assassination-attempt/7802212.html",
+                    "title": "Russia pushes baseless 'Ukraine ties' narrative in Trump ...",
+                    "reviewDate": "2024-09-27T19:58:04Z",
+                    "textualRating": "Unsubstantiated",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 61,
+            "query": "Ukraine"
+        },
+        {
+            "text": "Kinzhal missiles destroyed at least six Ukrainian F-16s",
+            "claimant": "Viral social media post",
+            "claimDate": "2024-09-26T00:00:00Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "Greece Fact Check",
+                        "site": "factchecker.gr"
+                    },
+                    "url": "https://www.factchecker.gr/2024/09/27/no-proof-about-the-destruction-of-ukrainian-f-16s-by-russian-kinzhal-hypersonic-missiles/",
+                    "title": "No proof for the destruction of Ukrainian F-16s by Russian Kinzhal ...",
+                    "reviewDate": "2024-09-27T00:00:00Z",
+                    "textualRating": "Disinformation",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 62,
+            "query": "Ukraine"
+        },
+        {
+            "text": "The most brutal Ukrainian units operating in the Kursk direction [in the Kursk region of Russia] are made up of mercenaries ... The mercenaries are the ones who are the most brutal towards civilians.",
+            "claimant": "TASS",
+            "claimDate": "2024-09-19T22:50:45Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "VOA",
+                        "site": "voanews.com"
+                    },
+                    "url": "https://www.voanews.com/a/russian-state-media-baselessly-accuse-ukraine-of-cruelty-to-civilians-in-kursk-region-/7791103.html",
+                    "title": "Russian state media baselessly accuse Ukraine of cruelty to civilians in Kursk region",
+                    "reviewDate": "2024-09-19T22:50:45Z",
+                    "textualRating": "unsubstantiated",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 63,
+            "query": "Ukraine"
+        },
+        {
+            "text": "A nuclear explosion occurred at an ammo depot in Tver, which was attacked by Ukrainians",
+            "claimant": "Aussie Cossack",
+            "claimDate": "2024-09-18T00:00:00Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "Greece Fact Check",
+                        "site": "factchecker.gr"
+                    },
+                    "url": "https://www.factchecker.gr/2024/09/24/there-were-no-nuclear-explosions-at-the-russian-ammo-depot-destroyed-by-ukrainians/",
+                    "title": "There were no nuclear explosions at the Russian ammo depot destroyed by Ukrainians",
+                    "reviewDate": "2024-09-24T00:00:00Z",
+                    "textualRating": "FAKE",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 64,
+            "query": "Ukraine"
+        },
+        {
+            "text": "“Iran has NOT delivered ballistic missiles to Russia. Period.”",
+            "claimant": "Abbas Araghchi",
+            "claimDate": "2024-09-13T14:06:46Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "VOA",
+                        "site": "voanews.com"
+                    },
+                    "url": "https://www.voanews.com/a/iran-denies-delivering-ballistic-missiles-aid-to-moscow-s-ukraine-war-effort/7783007.html",
+                    "title": "Iran denies delivering ballistic missiles, aid to Moscow's Ukraine war ...",
+                    "reviewDate": "2024-09-13T14:06:46Z",
+                    "textualRating": "False",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 65,
+            "query": "Ukraine"
+        },
+        {
+            "text": "“[I]f someone raises questions about why such closeness [between Mongolia and Russia] — well, probably, these are the people who once again began to slip Nazi overtones into their actions, not only their thoughts, which is reflected in support for the Kyiv regime.”",
+            "claimant": "Sergey Lavrov",
+            "claimDate": "2024-09-05T18:26:45Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "VOA",
+                        "site": "voanews.com"
+                    },
+                    "url": "https://www.voanews.com/a/moscow-trades-on-putin-s-mongolia-visit-to-undercut-icc-warrant-rehash-ukraine-nazi-claims/7772911.html",
+                    "title": "Moscow trades on Putin’s Mongolia visit to undercut ICC warrant, rehash Ukraine Nazi claims",
+                    "reviewDate": "2024-09-05T18:26:45Z",
+                    "textualRating": "False",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 66,
+            "query": "Ukraine"
+        },
+        {
+            "text": "A picture of the August issue of a British outlet, The Independent, has an ominous headline about a new mpox virus spreading in Ukraine.",
+            "claimant": "Viral social media post",
+            "claimDate": "2024-08-31T00:00:00Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "site": "gwaramedia.com"
+                    },
+                    "url": "https://gwaramedia.com/en/debunking-russian-fakes-no-the-independent-didn-t-write-about-ukraine-becoming-center-of-monkeypox-virus/",
+                    "title": "Debunking Russian fakes. No, The Independent didn't write about Ukraine becoming center of monkeypox virus",
+                    "reviewDate": "2024-08-31T00:00:00Z",
+                    "textualRating": "Fake",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 67,
+            "query": "Ukraine"
+        },
+        {
+            "text": "The Galaktika (shopping mall) is on fire. A huge number of people burned alive. Children. Women are screaming, hysterical, because their children are there. We saved as many people as we could, pulled them out. ...Vladimir Vladimirovich (Putin), …Ukraine needs to be taken over and everyone needs to be cleaned out.”",
+            "claimant": "Andrej Lysenko",
+            "claimDate": "2024-08-21T01:09:25Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "VOA",
+                        "site": "voanews.com"
+                    },
+                    "url": "https://www.voanews.com/a/a-huge-number-of-people-did-not-burn-alive-in-the-donetsk-shopping-mall/7750723.html",
+                    "title": "A ‘huge number of people’ did not burn alive in the Donetsk shopping mall",
+                    "reviewDate": "2024-08-21T01:09:25Z",
+                    "textualRating": "False",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 68,
+            "query": "Ukraine"
+        },
+        {
+            "text": "“[W]hat kind of negotiations can we have with those [Ukraine] who indiscriminately attack civilians and civilian infrastructure, or pose threats to nuclear power facilities?”",
+            "claimant": "Vladimir Putin",
+            "claimDate": "2024-08-16T19:20:07Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "VOA",
+                        "site": "voanews.com"
+                    },
+                    "url": "https://www.voanews.com/a/putin-distorts-ukraine-s-conduct-in-kursk-region-to-discredit-kyiv-/7745767.html",
+                    "title": "Putin distorts Ukraine’s conduct in Kursk region to discredit Kyiv",
+                    "reviewDate": "2024-08-16T19:20:07Z",
+                    "textualRating": "Unsubstantiated",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 69,
+            "query": "Ukraine"
+        },
+        {
+            "text": "Ukraine's President Zelenskyy bought Sting’s wine estate in Tuscany in June 2024.",
+            "claimant": "Social media users",
+            "claimDate": "2024-08-05T00:00:00Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "Logically Facts",
+                        "site": "logicallyfacts.com"
+                    },
+                    "url": "https://www.logicallyfacts.com/en/fact-check/false-no-ukraine-s-president-zelenskyy-did-not-buy-sting-s-wine-estate-in-italy",
+                    "title": "No, Ukraine's President Zelenskyy did not buy Sting's wine estate in Italy",
+                    "reviewDate": "2024-08-14T00:00:00Z",
+                    "textualRating": "False",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 70,
+            "query": "Ukraine"
+        },
+        {
+            "text": "“The Ukrainian actions are an evident terrorist action. No one hides the fact that American weapons have become a murder weapon of ordinary Russians. Attacks on schools, hospitals, ambulances and residential buildings in Russia cannot be recognized as a right of self-defense.”",
+            "claimant": "Anatoly Antonov",
+            "claimDate": "2024-08-12T22:36:11Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "VOA",
+                        "site": "voanews.com"
+                    },
+                    "url": "https://www.voanews.com/a/kremlin-calls-ukraine-s-self-defense-terrorism-as-russian-strikes-keep-targeting-ukrainian-civilians-/7739818.html",
+                    "title": "Kremlin calls Ukraine's self-defense 'terrorism,' as Russian strikes keep targeting Ukrainian civilians",
+                    "reviewDate": "2024-08-12T22:36:11Z",
+                    "textualRating": "False",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 71,
+            "query": "Ukraine"
+        },
+        {
+            "text": "Kamala Harris Remarks On Ukraine Being A Country In Europe When Explaining Conflict",
+            "claimant": "x.com",
+            "claimDate": "2024-07-23T01:29:00Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "Lead Stories",
+                        "site": "leadstories.com"
+                    },
+                    "url": "https://leadstories.com/hoax-alert/2024/07/fact-check-context-of-kamala-harris-remarks-on-ukraine-being-a-country-in-europe-when-explaining-conflict-asked-to-use-laymans-terms.html",
+                    "title": "Fact Check: Kamala Harris Said 'Ukraine Is A Country In Europe' In Explaining Geopolitics In Layman's Terms As Asked To By Podcaster",
+                    "reviewDate": "2024-07-23T01:29:00Z",
+                    "textualRating": "Layman's Terms",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 72,
+            "query": "Ukraine"
+        },
+        {
+            "text": "“[I]n 2021, V.A. Zelensky, in one of his interviews, ordered those who feel connected to the Russian culture to get out [of Ukraine] to Russia for the sake of the future of their children and grandchildren.”",
+            "claimant": "Sergey Lavrov",
+            "claimDate": "2024-07-19T15:02:27Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "VOA",
+                        "site": "voanews.com"
+                    },
+                    "url": "https://www.voanews.com/a/did-zelenskyy-order-ethnic-russians-to-move-from-ukraine-to-russia-/7704901.html",
+                    "title": "Did Zelenskyy order ethnic Russians to move from Ukraine to Russia?",
+                    "reviewDate": "2024-07-19T15:02:27Z",
+                    "textualRating": "False",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 73,
+            "query": "Ukraine"
+        },
+        {
+            "text": "\"Yet, more than two years into the Ukraine-Russia conflict, peace still appears distant, serving as an example that the coalition [NATO] is not promoting peace but rather threatening it.\"",
+            "claimant": "Xinhua News Agency",
+            "claimDate": "2024-07-12T15:00:00Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "VOA",
+                        "site": "voanews.com"
+                    },
+                    "url": "https://www.voanews.com/a/fact-check-china-depicts-nato-as-peace-threatening-alliance-while-holding-military-drills-on-member-s-border/7695546.html",
+                    "title": "China depicts NATO as peace-threatening alliance while holding military drills on member's border",
+                    "reviewDate": "2024-07-12T15:00:00Z",
+                    "textualRating": "False",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 74,
+            "query": "Ukraine"
+        },
+        {
+            "text": "Poland is not entering the war in Ukraine",
+            "claimant": "Inoke Momonakaya",
+            "claimDate": "2024-07-08T00:00:00Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "Logically Facts",
+                        "site": "logicallyfacts.com"
+                    },
+                    "url": "https://www.logicallyfacts.com/en/fact-check/false-poland-is-not-entering-the-war-in-ukraine",
+                    "title": "Poland is not entering the war in Ukraine",
+                    "reviewDate": "2024-07-11T00:00:00Z",
+                    "textualRating": "False",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 75,
+            "query": "Ukraine"
+        },
+        {
+            "text": "Ukraine is responsible for a missile strike that hit the Okhmatdyt children’s hospital in Kyiv on Monday.",
+            "claimant": "social media users",
+            "claimDate": "2024-07-08T21:04:57Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "AP News",
+                        "site": "apnews.com"
+                    },
+                    "url": "https://apnews.com/article/fact-check-kyiv-ukraine-hospital-russia-missile-669912151885",
+                    "title": "Posts falsely blame Ukraine for a missile strike on Kyiv children’s hospital",
+                    "textualRating": "False",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 76,
+            "query": "Ukraine"
+        },
+        {
+            "text": "Social media users have posted an image of Ukrainian President Volodymyr Zelenskyy and his wife, Olena Zelenska, posing in front of a table covered in stacks of cash.",
+            "claimant": "X",
+            "claimDate": "2024-07-02T00:00:00Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "Logically Facts",
+                        "site": "logicallyfacts.com"
+                    },
+                    "url": "https://www.logicallyfacts.com/en/fact-check/fake-viral-image-of-zelenskyy-and-wife-posing-with-bundles-of-cash-is-fake",
+                    "title": "Viral image of Zelenskyy and wife posing with bundles of cash is fake",
+                    "reviewDate": "2024-07-04T00:00:00Z",
+                    "textualRating": "Fake",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 77,
+            "query": "Ukraine"
+        },
+        {
+            "text": "Volodymyr Zelenskyy's wife bought a nearly $5M Bugatti",
+            "claimant": "social media",
+            "claimDate": "2024-07-01T00:00:00Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "USA Today",
+                        "site": "usatoday.com"
+                    },
+                    "url": "https://www.usatoday.com/story/news/factcheck/2024/07/05/zelenskyys-wife-buy-bugatti-fact-check/74291954007/",
+                    "title": "No, Zelenskyy's wife didn't buy €4 million luxury car | Fact check",
+                    "reviewDate": "2024-07-05T18:30:54Z",
+                    "textualRating": "False",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 78,
+            "query": "Ukraine"
+        },
+        {
+            "text": "Russian President Vladimir Putin has died in an explosion in one of his limousines.",
+            "claimant": "Kaalam PH",
+            "claimDate": "2025-04-17T06:49:48Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "Rappler",
+                        "site": "rappler.com"
+                    },
+                    "url": "https://www.rappler.com/newsbreak/fact-check/vladimir-putin-alive-not-dead-moscow-limousine-explosion/",
+                    "title": "FACT CHECK: Putin is alive, not killed in Moscow limo explosion",
+                    "reviewDate": "2025-04-17T06:49:48Z",
+                    "textualRating": "False",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 79,
+            "query": "Russia"
+        },
+        {
+            "text": "Russian President Vladimir Putin had sent a letter saying he will help former president Rodrigo Duterte be released from the ICC detention in The Hague, Netherlands.",
+            "claimant": "YouTube channel PINAS NEWS HEADLINES",
+            "claimDate": "2025-04-06T00:00:00Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "VERA Files",
+                        "site": "verafiles.org"
+                    },
+                    "url": "https://verafiles.org/articles/fact-check-putin-not-helping-duterte-get-released-from-icc-detention",
+                    "title": "FACT CHECK: Putin NOT helping Duterte get released from ICC detention",
+                    "reviewDate": "2025-04-14T00:00:00Z",
+                    "textualRating": "False",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 80,
+            "query": "Russia"
+        },
+        {
+            "text": "Russian President Putin Ice Skating With A Child",
+            "claimant": "Social Media",
+            "claimDate": "2025-03-31T00:00:00Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "NewsMobile",
+                        "site": "newsmobile.in"
+                    },
+                    "url": "https://www.newsmobile.in/nm-fact-checker/fact-check-image-of-russian-president-putin-ice-skating-with-a-child-is-ai-generated/",
+                    "title": "Fact Check: Image Of President Putin With An Ice-skating Child Is AI-generated",
+                    "reviewDate": "2025-03-31T00:00:00Z",
+                    "textualRating": "Fake/AI-generated",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 81,
+            "query": "Russia"
+        },
+        {
+            "text": "Photo of the US drone shot down by Russian missiles in the hands of the Houthis.",
+            "claimant": "www.facebook.com",
+            "claimDate": "2025-03-22T21:12:56Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "site": "misbar.com"
+                    },
+                    "url": "https://www.misbar.com/en/factcheck/2025/03/23/old-photo-misrepresented-recent-us-mq-9-drone-wreckage-yemen",
+                    "title": "Old Photo Misrepresented as Recent U.S. MQ-9 Drone Wreckage in Yemen",
+                    "reviewDate": "2025-03-22T21:12:56Z",
+                    "textualRating": "misleading",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 82,
+            "query": "Russia"
+        },
+        {
+            "text": "A post shared on X claims Director of National Intelligence (DNI) Tulsi Gabbard said that President Donald Trump and Russian President Vladimir Putin were good friends.",
+            "claimant": "Viral Post",
+            "claimDate": "2025-03-17T00:00:00Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "CheckYourFact",
+                        "site": "checkyourfact.com"
+                    },
+                    "url": "https://checkyourfact.com/2025/03/19/fact-check-tulsi-trump-putin-good-friends/",
+                    "title": "FACT CHECK: Did Tulsi Gabbard Say Trump And Putin Were Good Friends?",
+                    "reviewDate": "2025-03-19T15:40:53Z",
+                    "textualRating": "False",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 83,
+            "query": "Russia"
+        },
+        {
+            "text": "\"We never had the relations with China which were that good, that confidential, that long-term build and that would be enjoying support of the peoples of both countries.\"",
+            "claimant": "Sergey Lavrov",
+            "claimDate": "2025-03-15T00:53:12Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "VOA",
+                        "site": "voanews.com"
+                    },
+                    "url": "https://www.voanews.com/a/russian-foreign-minister-exaggerates-russia-china-relations-ignores-nuances/8011464.html",
+                    "title": "Russian foreign minister exaggerates Russia-China relations, ignores nuances",
+                    "reviewDate": "2025-03-15T00:53:12Z",
+                    "textualRating": "Misleading",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 84,
+            "query": "Russia"
+        },
+        {
+            "text": "“Europe also has no weapons — the warehouses are empty.”",
+            "claimant": "Dmitry Kiselyov",
+            "claimDate": "2025-03-05T16:23:56Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "VOA",
+                        "site": "voanews.com"
+                    },
+                    "url": "https://www.voanews.com/a/russia-s-kiselyov-misleads-on-european-military-capacities/7998746.html",
+                    "title": "Russia’s Kiselyov misleads on European military capacities",
+                    "reviewDate": "2025-03-05T16:23:56Z",
+                    "textualRating": "Misleading",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 85,
+            "query": "Russia"
+        },
+        {
+            "text": "\"The Central African Republic significantly succeeded in combating illegal armed groups with Moscow's support.\"",
+            "claimant": "Sputnik Africa",
+            "claimDate": "2025-03-04T23:43:58Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "VOA",
+                        "site": "voanews.com"
+                    },
+                    "url": "https://www.voanews.com/a/false-with-russia-s-support-car-significantly-succeeded-in-combating-militants-/7997777.html",
+                    "title": "False: With Russia's support, CAR significantly succeeded in combating militants",
+                    "reviewDate": "2025-03-04T23:43:58Z",
+                    "textualRating": "FALSE",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 86,
+            "query": "Russia"
+        },
+        {
+            "text": "President Putin Enjoying a Grand Meal With Russian Army",
+            "claimant": "Social Media",
+            "claimDate": "2025-03-04T00:00:00Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "NewsMobile",
+                        "site": "newsmobile.in"
+                    },
+                    "url": "https://www.newsmobile.in/nm-fact-checker/fact-check-image-of-president-putin-enjoying-a-grand-meal-with-russian-army-is-ai-generated/",
+                    "title": "Fact Check: Image Of President Putin Enjoying A Grand Meal With Russian Army Is AI-generated",
+                    "reviewDate": "2025-03-04T00:00:00Z",
+                    "textualRating": "Fake/AI-Generated",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 87,
+            "query": "Russia"
+        },
+        {
+            "text": "French President Emmanuel Macron called Russian President Vladimir Putin a “butcher” during his press conference with Donald Trump on Monday, Feb. 24, 2025.",
+            "claimant": "x.com",
+            "claimDate": "2025-02-27T17:06:56Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "site": "misbar.com"
+                    },
+                    "url": "https://www.misbar.com/en/factcheck/2025/02/27/macron-did-not-call-putin-butcher-his-press-conference-trump",
+                    "title": "Macron Did Not Call Putin a Butcher in His Press Conference With Trump",
+                    "reviewDate": "2025-02-27T17:06:56Z",
+                    "textualRating": "misleading",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 88,
+            "query": "Russia"
+        },
+        {
+            "text": "The U.S. has given Ukraine “$350 billion” for the war with Russia gave “$200 billion more than Europe.”",
+            "claimant": "Donald Trump",
+            "claimDate": "2025-02-18T00:00:00Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "FactCheck.org",
+                        "site": "factcheck.org"
+                    },
+                    "url": "https://www.factcheck.org/2025/02/trumps-false-and-misleading-ukraine-claims/",
+                    "title": "Trump's False and Misleading Ukraine Claims",
+                    "reviewDate": "2025-02-20T00:00:00Z",
+                    "textualRating": "False",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 89,
+            "query": "Russia"
+        },
+        {
+            "text": "“These associations [BRICS and SCO] include our natural allies and partners, whom we partnered with to eradicate modern practices of neocolonialism.”",
+            "claimant": "Sergey Lavrov",
+            "claimDate": "2025-02-19T19:11:57Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "VOA",
+                        "site": "voanews.com"
+                    },
+                    "url": "https://www.voanews.com/a/lavrov-falsely-presents-russia-as-fighter-against-neocolonialism/7980837.html",
+                    "title": "Lavrov falsely presents Russia as fighter against neocolonialism",
+                    "reviewDate": "2025-02-19T19:11:57Z",
+                    "textualRating": "Misleading",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 90,
+            "query": "Russia"
+        },
+        {
+            "text": "Did JD Vance say US \"military action\" available against Russia?",
+            "claimant": "Donald Trump press huddle",
+            "claimDate": "2025-02-18T13:15:37Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "Newsweek",
+                        "site": "newsweek.com"
+                    },
+                    "url": "https://www.newsweek.com/fact-check-did-jd-vance-say-us-military-action-available-against-russia-2032348",
+                    "title": "Fact Check: Did JD Vance Say US 'Military Action' Available Against Russia?",
+                    "reviewDate": "2025-02-18T13:15:37Z",
+                    "textualRating": "True",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 91,
+            "query": "Russia"
+        },
+        {
+            "text": "Zelenskyy said The Risk That Russia Will Occupy Europe Is 100%",
+            "claimant": "x.com",
+            "claimDate": "2025-02-17T08:49:04Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "Lead Stories",
+                        "site": "leadstories.com"
+                    },
+                    "url": "https://leadstories.com/hoax-alert/2025/02/fact-check-zelenskyy-risk-russia-occupy-europe-100-percent.html",
+                    "title": "Fact Check: Edited Clip Shows Zelenskyy Saying 'The Risk That Russia Will Occupy Europe Is 100%' -- Context Was About U.S. Leaving NATO",
+                    "reviewDate": "2025-02-17T08:49:04Z",
+                    "textualRating": "Context Cut",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 92,
+            "query": "Russia"
+        },
+        {
+            "text": "A beautiful newly built neighborhood in Moscow, Russia.",
+            "claimant": "Samuel YGS",
+            "claimDate": "2025-02-10T00:00:00Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "Fact Crescendo Cambodia",
+                        "site": "cambodia.factcrescendo.com"
+                    },
+                    "url": "https://cambodia.factcrescendo.com/english/ai-generated-image-falsely-claimed-as-photo-of-suloszowa-village/",
+                    "title": "AI-Generated Image Falsely Claimed as Photo of Sułoszowa Village",
+                    "reviewDate": "2025-02-15T00:00:00Z",
+                    "textualRating": "False",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 93,
+            "query": "Russia"
+        },
+        {
+            "text": "China and Japan plan to invade the Russian Federation",
+            "claimant": "Saliksik TV",
+            "claimDate": "2025-02-10T08:47:10Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "Rappler",
+                        "site": "rappler.com"
+                    },
+                    "url": "https://www.rappler.com/newsbreak/fact-check/no-russia-invasion-china-japan-february-2025/",
+                    "title": "FACT CHECK: No invasion of Russia by China and Japan",
+                    "reviewDate": "2025-02-10T08:47:10Z",
+                    "textualRating": "False",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 94,
+            "query": "Russia"
+        },
+        {
+            "text": "“In the heat of candor, the leader of the Bandera regime admitted that he and his comrades had embezzled $100 billion.”",
+            "claimant": "Dmitry Medvedev",
+            "claimDate": "2025-02-07T19:55:10Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "VOA",
+                        "site": "voanews.com"
+                    },
+                    "url": "https://www.voanews.com/a/false-russian-allegations-that-ukraine-stole-100-billion-of-us-funds/7967072.html",
+                    "title": "False: Russian allegations that Ukraine ‘stole’ $100 billion of US funds",
+                    "reviewDate": "2025-02-07T19:55:10Z",
+                    "textualRating": "False",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 95,
+            "query": "Russia"
+        },
+        {
+            "text": "\"Trump threatened our president rather rudely, it must be said, pressuring to start the negotiations and reminding of Gadhafi’s fate.\"",
+            "claimant": "Andrey Isayev",
+            "claimDate": "2025-01-30T03:52:40Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "VOA",
+                        "site": "voanews.com"
+                    },
+                    "url": "https://www.voanews.com/a/trump-s-make-peace-or-die-message-to-putin-is-deepfake-yet-it-fooled-russians-/7956477.html",
+                    "title": "Trump’s ‘make peace or die’ message to Putin is deepfake. Yet it fooled Russians",
+                    "reviewDate": "2025-01-30T03:52:40Z",
+                    "textualRating": "False",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 96,
+            "query": "Russia"
+        },
+        {
+            "text": "\"Ukraine was gradually turning into a testing ground for experiments of any quality with biolabs, obviously with organ trading.\"",
+            "claimant": "Maria Zakharova",
+            "claimDate": "2025-01-28T23:10:29Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "VOA",
+                        "site": "voanews.com"
+                    },
+                    "url": "https://www.voanews.com/a/russia-weds-biolab-organ-harvesting-conspiracies-to-discredit-us-ukraine/7953695.html",
+                    "title": "Russia weds biolab, organ harvesting conspiracies to discredit US, Ukraine",
+                    "reviewDate": "2025-01-28T23:10:29Z",
+                    "textualRating": "FALSE",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 97,
+            "query": "Russia"
+        },
+        {
+            "text": "Ongoing construction of one of the world’s strongest roads in Vladivostok, Russia.",
+            "claimant": "Samuel YGS",
+            "claimDate": "2025-01-17T00:00:00Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "Fact Crescendo Cambodia",
+                        "site": "cambodia.factcrescendo.com"
+                    },
+                    "url": "https://cambodia.factcrescendo.com/english/chinas-huajiang-bridge-falsely-claimed-as-russian-road-construction/",
+                    "title": "China’s Huajiang Bridge Falsely Claimed as Russian Road Construction",
+                    "reviewDate": "2025-01-25T00:00:00Z",
+                    "textualRating": "False",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 98,
+            "query": "Russia"
+        },
+        {
+            "text": "U.S. law allows for Dr. Anthony Fauci to be extradited to Russia.",
+            "claimant": "x.com",
+            "claimDate": "2025-01-24T00:44:00Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "Lead Stories",
+                        "site": "leadstories.com"
+                    },
+                    "url": "https://leadstories.com/hoax-alert/2025/01/fact-check-us-law-does-not-allow-anthony-fauci-extradition-to-russia.html",
+                    "title": "Fact Check: US Law Does NOT Allow For Anthony Fauci To Be Extradited To Russia",
+                    "reviewDate": "2025-01-24T00:44:00Z",
+                    "textualRating": "No Treaty",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 99,
+            "query": "Russia"
+        },
+        {
+            "text": "Why didn't Kangana Team show the erotic stories of Indra Gandhi in her propaganda movie? After all she used to amuse Russians in her early 20s",
+            "claimant": "Facebook,Twitter,Social Media",
+            "claimDate": "2025-01-22T10:51:39Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "The Quint",
+                        "site": "thequint.com"
+                    },
+                    "url": "https://www.thequint.com/news/webqoof/ai-generated-images-of-indira-gandhi-shared-as-her-unseen-images-fact-check",
+                    "title": "Fact-Check: AI-Generated Images of Indira Gandhi Viral as Real on Social Media",
+                    "reviewDate": "2025-01-22T10:51:39Z",
+                    "textualRating": "False",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 100,
+            "query": "Russia"
+        },
+        {
+            "text": "Has Russia offered assistance to California wildfire disaster?",
+            "claimant": "Jackson Hinkle",
+            "claimDate": "2025-01-21T20:16:12Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "Newsweek",
+                        "site": "newsweek.com"
+                    },
+                    "url": "https://www.newsweek.com/fact-check-has-russia-offered-assistance-california-wildfire-disaster-2014213",
+                    "title": "Fact Check: Has Russia Offered Assistance to California Wildfire Disaster?",
+                    "reviewDate": "2025-01-21T20:16:12Z",
+                    "textualRating": "Unverified",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 101,
+            "query": "Russia"
+        },
+        {
+            "text": "John Thune blocked Adam Schiff's assignments over Russia investigation",
+            "claimant": "Social media",
+            "claimDate": "2025-01-11T00:00:00Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "USA Today",
+                        "site": "usatoday.com"
+                    },
+                    "url": "https://www.usatoday.com/story/news/factcheck/2025/01/16/adam-schiff-senate-committees-fact-check/77718124007/",
+                    "title": "No, Adam Schiff wasn’t blocked from Senate committees | Fact check",
+                    "reviewDate": "2025-01-16T16:11:16Z",
+                    "textualRating": "False",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 102,
+            "query": "Russia"
+        },
+        {
+            "text": "Witness the grandeur of the Yenisei River Bridge in Krasnoyarsk, Russia! This stunning steel-concrete arch bridge spans the mighty Yenisei River, featuring six lanes in both directions. One of the largest bridges in the world, it’s an engineering marvel you have to see!",
+            "claimant": "Unbox Factory",
+            "claimDate": "2025-01-08T00:00:00Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "Fact Crescendo Cambodia",
+                        "site": "cambodia.factcrescendo.com"
+                    },
+                    "url": "https://cambodia.factcrescendo.com/english/chinas-dafagu-bridge-falsely-claimed-as-russian-structure/",
+                    "title": "China’s Dafagu Bridge Falsely Claimed as Russian Structure",
+                    "reviewDate": "2025-01-15T00:00:00Z",
+                    "textualRating": "False",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 103,
+            "query": "Russia"
+        },
+        {
+            "text": "\"We emerged victorious from two world wars. ... We have preserved our people. ... \"",
+            "claimant": "Patriarch Kirill",
+            "claimDate": "2025-01-13T23:12:32Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "VOA",
+                        "site": "voanews.com"
+                    },
+                    "url": "https://www.voanews.com/a/patriarch-of-russian-orthodoxy-preaches-biblical-battle-between-west-russia-lies-about-wwi-/7935566.html",
+                    "title": "Patriarch of Russian Orthodoxy preaches ‘biblical battle’ between West, Russia, lies about WWI",
+                    "reviewDate": "2025-01-13T23:12:32Z",
+                    "textualRating": "False",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 104,
+            "query": "Russia"
+        },
+        {
+            "text": "\"The activities of this laboratory are financed by the US Agency for International Development and the French Merieux Foundation. This circumstance once again confirms the irresponsible approach of Western countries when working with dangerous infections in the territory of third countries, when biological facilities are created without the proper infrastructure and samples of pathogens of dangerous diseases are accumulated without control.\"",
+            "claimant": "Rospotrebnadzor",
+            "claimDate": "2025-02-03T21:12:42Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "VOA",
+                        "site": "voanews.com"
+                    },
+                    "url": "https://www.voanews.com/a/russia-consumer-watchdog-falsely-accuses-us-of-gathering-dangerous-pathogens-in-drc/7961559.html",
+                    "title": "Russia consumer watchdog falsely accuses US of mishandling ...",
+                    "reviewDate": "2025-02-03T21:12:42Z",
+                    "textualRating": "False",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 105,
+            "query": "Russia"
+        },
+        {
+            "text": "An image shared on X claims to show the Russian passport of deposed Syrian dictator Bashar al-Assad.",
+            "claimant": "Viral Image",
+            "claimDate": "2024-12-19T00:00:00Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "CheckYourFact",
+                        "site": "checkyourfact.com"
+                    },
+                    "url": "https://checkyourfact.com/2025/01/08/fact-check-assad-passport-fake/",
+                    "title": "FACT CHECK: Assad Passport Image Is Fake | Check Your Fact",
+                    "reviewDate": "2025-01-08T14:01:22Z",
+                    "textualRating": "False",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 106,
+            "query": "Russia"
+        },
+        {
+            "text": "Volodymyr Zelenskyy has been captured by Russian forces",
+            "claimant": "TikTok users",
+            "claimDate": "2024-12-30T00:00:00Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "Logically Facts",
+                        "site": "logicallyfacts.com"
+                    },
+                    "url": "https://www.logicallyfacts.com/en/fact-check/false-volodymyr-zelenskyy-ukraine-captured-russian-forces",
+                    "title": "No, Volodymyr Zelenskyy has not been captured by Russian forces",
+                    "reviewDate": "2025-01-06T00:00:00Z",
+                    "textualRating": "False",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 107,
+            "query": "Russia"
+        },
+        {
+            "text": "Fact Check: Not Jaipur! This blazing tanker rolling across the street is from Russia",
+            "claimant": "Indian Express Lighthouse Journalism",
+            "claimDate": "2024-12-26T07:02:07Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "Lighthouse Journalism",
+                        "site": "lighthousejournalism.com"
+                    },
+                    "url": "https://www.lighthousejournalism.com/viral/fact-check-not-jaipur-this-blazing-tanker-rolling-across-the-street-is-from-russia-3538/",
+                    "title": "Fact Check: Not Jaipur! This blazing tanker rolling across the street is from Russia | lighthousejournalism",
+                    "textualRating": "False",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 108,
+            "query": "Russia"
+        },
+        {
+            "text": "\"Let me stress once again, so that no one accuses us of nuclear saber-rattling: this is a policy of nuclear deterrence.\"",
+            "claimant": "Vladimir Putin",
+            "claimDate": "2024-12-20T16:53:12Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "VOA",
+                        "site": "voanews.com"
+                    },
+                    "url": "https://www.voanews.com/a/putin-claims-russia-is-not-engaged-in-nuclear-saber-rattling-voa-counts-135-nuclear-threats-in-3-years-/7908649.html",
+                    "title": "Putin claims Russia is not engaged in nuclear saber-rattling; VOA ...",
+                    "reviewDate": "2024-12-20T16:53:12Z",
+                    "textualRating": "Misleading",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 109,
+            "query": "Russia"
+        },
+        {
+            "text": "''Let us emphasize right away that Sudan is not experiencing nor can experience a severe famine. Upon examining the FRC [Famine Reiew Committee] report we couldn't but think that the issue of hunger in Sudan is being politicized and exploited to exert pressure on the Sudanese government. We have an impression that someone is desperate for famine to eventually begin in Sudan.\"",
+            "claimant": "Dmitry Polyanskiy",
+            "claimDate": "2025-01-11T01:32:58Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "VOA",
+                        "site": "voanews.com"
+                    },
+                    "url": "https://www.voanews.com/a/russia-claims-there-is-no-famine-in-sudan-as-millions-suffer-from-acute-food-shortages/7933082.html",
+                    "title": "Russia claims there is no famine in Sudan as millions suffer from ...",
+                    "reviewDate": "2025-01-11T01:32:58Z",
+                    "textualRating": "Misleading",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 110,
+            "query": "Russia"
+        },
+        {
+            "text": "\"[T]he figures announced with regard to losses on both sides, it is obvious that they were presented in the Ukrainian interpretation … Ukraine’s losses are multiple times higher than those of Russia.”",
+            "claimant": "Dmitry Peskov",
+            "claimDate": "2024-12-12T20:01:02Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "VOA",
+                        "site": "voanews.com"
+                    },
+                    "url": "https://www.voanews.com/a/kremlin-falsely-claims-trump-report-of-600-000-russian-casualties-in-ukraine-came-from-kyiv/7899293.html",
+                    "title": "Kremlin falsely claims Trump’s report of 600,000 Russian casualties in Ukraine came from Kyiv",
+                    "reviewDate": "2024-12-12T20:01:02Z",
+                    "textualRating": "False",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 111,
+            "query": "Russia"
+        },
+        {
+            "text": "Photo of Bashar al-Assad and his wife, Asma al-Assad in Moscow, Russia after rebels toppled his Government in Syria.",
+            "claimant": "Social Media User",
+            "claimDate": "2024-12-06T00:00:00Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "FACTLY",
+                        "site": "factly.in"
+                    },
+                    "url": "https://factly.in/2023-photo-misrepresented-as-bashar-al-assads-first-visuals-in-moscow-after-fleeing-to-russia/",
+                    "title": "2023 Photo Misrepresented as Bashar al-Assad's First Visuals in ...",
+                    "reviewDate": "2024-12-10T00:00:00Z",
+                    "textualRating": "MISLEADING",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 112,
+            "query": "Russia"
+        },
+        {
+            "text": "“It is considered that Russian veto means a very appreciated support for Sudan and a very strong and a very supportive stance for the Sudanese government and a people at a time when a number of countries and organizations are vying against Sudan to blatantly interfere in its internal affairs.”",
+            "claimant": "Mohammed Elghazali",
+            "claimDate": "2024-12-05T23:38:53Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "VOA",
+                        "site": "voanews.com"
+                    },
+                    "url": "https://www.voanews.com/a/sudan-s-ambassador-to-russia-praises-moscow-for-vetoing-un-resolution-that-would-have-halted-violent-war-in-sudan-/7888999.html",
+                    "title": "Sudan's ambassador to Russia praises Moscow for vetoing UN ...",
+                    "reviewDate": "2024-12-05T23:38:53Z",
+                    "textualRating": "False",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 113,
+            "query": "Russia"
+        },
+        {
+            "text": "\"Preliminary: after a collision with birds, due to an emergency situation on board the aircraft [Baku-Grozny flight of Azerbaijan Airlines], its commander decided to go to an alternate airfield — Aktau was chosen.\"",
+            "claimant": "Russia’s Federal Air Transport Agency (Rosaviation)",
+            "claimDate": "2024-12-27T16:34:07Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "VOA",
+                        "site": "voanews.com"
+                    },
+                    "url": "https://www.voanews.com/a/russia-blames-birds-for-azerbaijan-airlines-crash-evidence-points-to-russian-missile/7916011.html",
+                    "title": "Russia blames birds for Azerbaijan Airlines crash; evidence points ...",
+                    "reviewDate": "2024-12-27T16:34:07Z",
+                    "textualRating": "False",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 114,
+            "query": "Russia"
+        },
+        {
+            "text": "\"[W]e need to continue to further expand military and military-technical cooperation with allies and partners who are ready and willing to work with us, which includes most countries around the world.\"",
+            "claimant": "Vladimir Putin",
+            "claimDate": "2024-12-26T20:54:14Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "VOA",
+                        "site": "voanews.com"
+                    },
+                    "url": "https://www.voanews.com/a/putin-falsely-boasts-of-having-military-alliances-with-most-countries-around-the-world-/7915028.html",
+                    "title": "Putin falsely boasts of having military alliances with 'most countries ...",
+                    "reviewDate": "2024-12-26T20:54:14Z",
+                    "textualRating": "FALSE",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 115,
+            "query": "Russia"
+        },
+        {
+            "text": "Russian President Vladimir Putin has declared war on the United States.",
+            "claimant": "Kaalam PH",
+            "claimDate": "2024-12-02T03:41:46Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "Rappler",
+                        "site": "rappler.com"
+                    },
+                    "url": "https://www.rappler.com/newsbreak/fact-check/russia-did-not-declare-war-united-states/",
+                    "title": "FACT CHECK: Russia did not declare war on US",
+                    "reviewDate": "2024-12-02T03:41:46Z",
+                    "textualRating": "False",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 116,
+            "query": "Russia"
+        },
+        {
+            "text": "Picture of cover of The Economist magazine featuring US President-elect Donald Trump and Russian President Vladimir Putin against an apocalyptic backdrop with the word 'Apocalypse'",
+            "claimant": "Social Media",
+            "claimDate": "2024-11-19T00:00:00Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "NewsMobile",
+                        "site": "newsmobile.in"
+                    },
+                    "url": "https://www.newsmobile.in/nm-fact-checker/fact-check-apocalypse-cover-of-the-economist-featuring-trump-and-putin-is-false/",
+                    "title": "Fact Check: ‘Apocalypse’ Cover Of The Economist Featuring Trump And Putin Is False",
+                    "reviewDate": "2024-11-29T00:00:00Z",
+                    "textualRating": "False",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 117,
+            "query": "Russia"
+        },
+        {
+            "text": "NATO plans to conduct preemptive missile strikes against Russia, according to Admiral Rob Bauer, Chair of the NATO Military Committee.",
+            "claimant": "Viral social media posts",
+            "claimDate": "2024-11-25T00:00:00Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "Greece Fact Check",
+                        "site": "factchecker.gr"
+                    },
+                    "url": "https://www.factchecker.gr/2024/11/27/nato-official-did-not-refer-to-preemptive-missile-strikes-against-russia/",
+                    "title": "NATO official did NOT refer to preemptive missile strikes against ...",
+                    "reviewDate": "2024-11-27T00:00:00Z",
+                    "textualRating": "Missing Context",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 118,
+            "query": "Russia"
+        },
+        {
+            "text": "Russia has banned the export of enriched Uranium to India along with USA, Germany and France",
+            "claimant": "Social Media User",
+            "claimDate": "2024-11-17T00:00:00Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "FACTLY",
+                        "site": "factly.in"
+                    },
+                    "url": "https://factly.in/russia-restricted-enriched-uranium-exports-to-the-united-states-only-not-india/",
+                    "title": "Russia restricted enriched uranium exports to the United States only, not India",
+                    "reviewDate": "2024-11-18T00:00:00Z",
+                    "textualRating": "FALSE",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 119,
+            "query": "Russia"
+        },
+        {
+            "text": "\"Is it a coincidence that the Congo has become an experimental laboratory where populations have become guinea pigs to allow the World Health Organization, the #BillGates foundation, American European pharmaceutical firms and American biolabs to test viruses and other dirty things?\"",
+            "claimant": "Egountchi Behanzin",
+            "claimDate": "2024-12-13T01:31:13Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "VOA",
+                        "site": "voanews.com"
+                    },
+                    "url": "https://www.voanews.com/a/pro-russia-activist-falsely-accuses-us-of-new-disease-outbreak-in-congo/7899815.html",
+                    "title": "Pro-Russia activist falsely accuses US of new disease outbreak in ...",
+                    "reviewDate": "2024-12-13T01:31:13Z",
+                    "textualRating": "False",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 120,
+            "query": "Russia"
+        },
+        {
+            "text": "“In the history of our relations with the African continent, there has never been any shadow – never; we have never exploited African peoples, nor been engaged in anything inhumane on the African continent.”",
+            "claimant": "Vladimir Putin",
+            "claimDate": "2024-11-14T22:44:00Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "VOA",
+                        "site": "voanews.com"
+                    },
+                    "url": "https://www.voanews.com/a/putin-attempts-whitewashing-russian-atrocities-in-africa-/7864339.html",
+                    "title": "Putin attempts whitewashing Russian atrocities in Africa",
+                    "reviewDate": "2024-11-14T22:44:00Z",
+                    "textualRating": "False",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 121,
+            "query": "Russia"
+        },
+        {
+            "text": "\"These [Moldovan presidential] elections were neither democratic nor fair. They were full of electoral manipulations.\"",
+            "claimant": "Dmitry Peskov",
+            "claimDate": "2024-11-07T17:30:58Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "VOA",
+                        "site": "voanews.com"
+                    },
+                    "url": "https://www.voanews.com/a/facing-interference-accusations-russia-falsely-declares-moldovan-elections-undemocratic-/7855382.html",
+                    "title": "Facing interference accusations, Russia falsely declares Moldovan ...",
+                    "reviewDate": "2024-11-07T17:30:58Z",
+                    "textualRating": "Misleading",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 122,
+            "query": "Russia"
+        },
+        {
+            "text": "\"American newspapers, the bigwigs of the media business, refuse to support any candidate in the U.S. elections one after another. This time they cannot support anyone, because both have the stamp 'Russian.'\"",
+            "claimant": "Maria Zakharova",
+            "claimDate": "2024-11-01T20:30:12Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "VOA",
+                        "site": "voanews.com"
+                    },
+                    "url": "https://www.voanews.com/a/moscow-claims-falsely-that-us-media-are-refusing-to-endorse-presidential-candidates-due-to-russian-stamp-/7848128.html",
+                    "title": "Moscow claims, falsely, that US media are refusing to endorse ...",
+                    "reviewDate": "2024-11-01T20:30:12Z",
+                    "textualRating": "False",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 123,
+            "query": "Russia"
+        },
+        {
+            "text": "Russian President Vladimir Putin unveiled the new BRICS currency, which will replace the US Dollar.",
+            "claimant": "Facebook,Twitter,Social Media",
+            "claimDate": "2024-10-30T09:36:34Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "The Quint",
+                        "site": "thequint.com"
+                    },
+                    "url": "https://www.thequint.com/news/webqoof/misleading-claim-about-new-brics-currency-note-countries-reject-us-dollar-fact-check",
+                    "title": "Fact-Check: US Dollar Replaced By New Currency at BRICS Summit? A Fact-Check",
+                    "reviewDate": "2024-10-30T09:36:34Z",
+                    "textualRating": "False",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 124,
+            "query": "Russia"
+        },
+        {
+            "text": "South Korea is sending troops to Ukraine in response to North Korea's troops supporting Russia",
+            "claimant": "x.com",
+            "claimDate": "2024-10-31T01:51:00Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "Lead Stories",
+                        "site": "leadstories.com"
+                    },
+                    "url": "https://leadstories.com/hoax-alert/2024/10/fact-check-south-korea-did-not-announce-it-will-send-troops-to-ukraine-to-fight-north-korean-troops.html",
+                    "title": "Fact Check: South Korea Did NOT Announce It Will Send Its Troops To Ukraine 'To Fight' North Korean Soldiers Supporting Russia, As Of October 30, 2024",
+                    "reviewDate": "2024-10-31T01:51:00Z",
+                    "textualRating": "Unconfirmed",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 125,
+            "query": "Russia"
+        },
+        {
+            "text": "PM Modi and Chinese President Did Not Shake Hands At BRICS Summit In Russia",
+            "claimant": "Facebook user SK Kapoor",
+            "claimDate": "2024-10-29T10:51:04Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "site": "vishvasnews.com"
+                    },
+                    "url": "https://www.vishvasnews.com/english/politics/fact-check-pm-modi-and-chinese-president-did-shake-hands-at-brics-summit-in-russia-misleading-post-viral/",
+                    "title": "Fact Check: PM Modi and Chinese President Did Shake Hands At BRICS Summit In Russia; Misleading Post Viral - Vishvas News",
+                    "reviewDate": "2024-10-29T10:51:04Z",
+                    "textualRating": "False",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 126,
+            "query": "Russia"
+        },
+        {
+            "text": "\"…it was not Russia's actions that precipitated the escalation in Ukraine, but rather the 2014 coup d’etat, supported primarily by the United States. It was even publicly disclosed how much financial support the then U.S. administration allocated toward preparing and orchestrating this coup.”",
+            "claimant": "Vladimir Putin",
+            "claimDate": "2024-10-29T16:16:39Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "VOA",
+                        "site": "voanews.com"
+                    },
+                    "url": "https://www.voanews.com/a/putin-claims-falsely-us-not-russia-escalated-situation-in-ukraine/7843445.html",
+                    "title": "Putin claims, falsely, US, not Russia, escalated situation in Ukraine",
+                    "reviewDate": "2024-10-29T16:16:39Z",
+                    "textualRating": "FALSE",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 127,
+            "query": "Russia"
+        },
+        {
+            "text": "A post on X claims that the IMF has declared Russia the fourth-largest economy in the world.",
+            "claimant": "https://x.com/CaptCoronado",
+            "claimDate": "2024-10-23T00:00:00Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "CheckYourFact",
+                        "site": "checkyourfact.com"
+                    },
+                    "url": "https://checkyourfact.com/2024/10/28/fact-check-did-russia-become-the-fourth-largest-economy-in-the-world/",
+                    "title": "FACT CHECK: Did Russia Become The Fourth Largest Economy in the World?",
+                    "reviewDate": "2024-10-28T12:48:22Z",
+                    "textualRating": "False",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 128,
+            "query": "Russia"
+        },
+        {
+            "text": "\"…Ukrainian troops have caused serious damage to … the [building] of the Mariupol Republican Academic Order of the Badge of Honor Russian Drama Theater.\"",
+            "claimant": "Russian federal government",
+            "claimDate": "2024-10-24T14:35:40Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "VOA",
+                        "site": "voanews.com"
+                    },
+                    "url": "https://www.voanews.com/a/moscow-blames-ukraine-for-damage-to-mariupol-theater-russia-bombed/7837242.html",
+                    "title": "Moscow blames Ukraine for damage to Mariupol theater Russia bombed",
+                    "reviewDate": "2024-10-24T14:35:40Z",
+                    "textualRating": "False",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 129,
+            "query": "Russia"
+        },
+        {
+            "text": "Did Pete Hegseth call Putin a 'war criminal'?",
+            "claimant": "Adam Lowisz",
+            "claimDate": "2024-11-13T17:20:16Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "Newsweek",
+                        "site": "newsweek.com"
+                    },
+                    "url": "https://www.newsweek.com/pete-hegseth-vladimir-putin-war-criminal-1985251",
+                    "title": "Fact Check: Did Pete Hegseth Call Putin a 'War Criminal?'",
+                    "reviewDate": "2024-11-13T17:20:16Z",
+                    "textualRating": "Needs Context",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 130,
+            "query": "Russia"
+        },
+        {
+            "text": "“The creation, at Berlin’s initiative, of a regional NATO maritime command headquarters at the German navy base in Rostock, East Germany … constitutes gross violation of the spirit and letter of the Two Plus Four Agreement, Article 5, paragraph 3 of which mandates Germany to prevent the stationing and deployment of foreign armed forces on the territory of the former East Germany.”",
+            "claimant": "Russian Foreign Ministry",
+            "claimDate": "2024-10-29T13:57:18Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "VOA",
+                        "site": "voanews.com"
+                    },
+                    "url": "https://www.voanews.com/a/russia-protests-berlin-s-installation-of-military-base-in-germany/7843261.html",
+                    "title": "Russia protests Berlin's installation of military base in Germany",
+                    "reviewDate": "2024-10-29T13:57:18Z",
+                    "textualRating": "Misleading",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 131,
+            "query": "Russia"
+        },
+        {
+            "text": "The Russian Embassy in South Africa claimed in a Sept. 26 X post to show a downed Ukrainian F-16.",
+            "claimant": "Russian Embassy in South Africa",
+            "claimDate": "2024-09-27T00:00:00Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "CheckYourFact",
+                        "site": "checkyourfact.com"
+                    },
+                    "url": "https://checkyourfact.com/2024/10/01/fact-check-russian-embassy-image-f-16/",
+                    "title": "FACT CHECK: Russian Embassy Shares Old Image Of F-16",
+                    "reviewDate": "2024-10-01T17:32:13Z",
+                    "textualRating": "False",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 132,
+            "query": "Russia"
+        },
+        {
+            "text": "Posts shared on X claims that a North Atlantic Treaty Organization (NATO) strike, possibly nuclear, hit a Russian ammunition depot.",
+            "claimant": "Viral Post",
+            "claimDate": "2024-09-18T00:00:00Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "Check Your Fact",
+                        "site": "checkyourfact.com"
+                    },
+                    "url": "https://checkyourfact.com/2024/09/19/fact-check-small-nuclear-strike-russia/",
+                    "title": "FACT CHECK: Did A Small Nuclear Strike Hit Russia?",
+                    "reviewDate": "2024-09-19T17:55:06Z",
+                    "textualRating": "False",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 133,
+            "query": "Russia"
+        },
+        {
+            "text": "We are watching this closely, but we have never interfered in this in any way, and we are not interfering now.",
+            "claimant": "Dmitry Peskov",
+            "claimDate": "2024-09-18T23:55:31Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "VOA",
+                        "site": "voanews.com"
+                    },
+                    "url": "https://www.voanews.com/a/russia-capitalizes-on-trump-assassination-attempt-to-sow-division-deny-election-meddling-/7789694.html",
+                    "title": "Russia capitalizes on Trump assassination attempt to sow division ...",
+                    "reviewDate": "2024-09-18T23:55:31Z",
+                    "textualRating": "False",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 134,
+            "query": "Russia"
+        },
+        {
+            "text": "“Hurricane Milton flooded Disney World in Florida. People are walking knee-deep in water.”",
+            "claimant": "RIA Novosti",
+            "claimDate": "2024-10-11T19:45:56Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "VOA",
+                        "site": "voanews.com"
+                    },
+                    "url": "https://www.voanews.com/a/russian-state-media-uses-ai-generated-images-of-florida-s-disney-world-flooded-by-milton/7819396.html",
+                    "title": "Russian state media uses AI-generated images of Florida's Disney ...",
+                    "reviewDate": "2024-10-11T19:45:56Z",
+                    "textualRating": "False",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 135,
+            "query": "Russia"
+        },
+        {
+            "text": "“The Washington Post writes, citing an anonymous top Ukrainian official that the number of [Ukrainians] ready to make territorial concessions to resolve the conflict is growing. The number of people dissatisfied with the actions of Western allies is also growing.”",
+            "claimant": "Argumenty i Fakty [AiF]",
+            "claimDate": "2024-10-09T19:58:06Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "VOA",
+                        "site": "voanews.com"
+                    },
+                    "url": "https://www.voanews.com/a/russian-tabloid-distorts-washington-post-report-on-ukraine-to-fit-kremlin-propaganda-narratives/7816605.html",
+                    "title": "Russian tabloid distorts Washington Post report on Ukraine to fit ...",
+                    "reviewDate": "2024-10-09T19:58:06Z",
+                    "textualRating": "Misleading",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 136,
+            "query": "Russia"
+        },
+        {
+            "text": "Image shows attack on Tel Aviv in Israeli",
+            "claimant": "X",
+            "claimDate": "2024-10-08T00:00:00Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "Logically Facts",
+                        "site": "logicallyfacts.com"
+                    },
+                    "url": "https://www.logicallyfacts.com/en/fact-check/old-image-from-russia-moscow-misrepresented-as-attack-in-tel-aviv-israel",
+                    "title": "Old image from Russia passed off as attack on Israel's Tel Aviv",
+                    "reviewDate": "2024-10-09T00:00:00Z",
+                    "textualRating": "False",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 137,
+            "query": "Russia"
+        },
+        {
+            "text": "Image shows power outage caused by Western sanctions on Russia",
+            "claimant": "Social Media",
+            "claimDate": "2024-08-22T00:00:00Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "NewsMobile",
+                        "site": "newsmobile.in"
+                    },
+                    "url": "https://www.newsmobile.in/nm-fact-checker/fact-check-2014-image-of-darkened-kremlin-misattributed-to-western-sanctions-heres-the-truth/",
+                    "title": "Fact Check: 2014 Image Of Kremlin During Earth Hour Event Linked To Recent Power Outage With False Claim",
+                    "reviewDate": "2024-09-06T00:00:00Z",
+                    "textualRating": "False",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 138,
+            "query": "Russia"
+        },
+        {
+            "text": "“Israeli” media: Hezbollah drone reaches oil refineries in the north of occupied Palestine",
+            "claimant": "ahdonaeng",
+            "claimDate": "2024-09-23T00:00:00Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "YouTurn",
+                        "site": "en.youturn.in"
+                    },
+                    "url": "https://en.youturn.in/factcheck/The-video-showingexplosion-in-oil-refinery-is-from-Russia-Ukraine-war.html",
+                    "title": "Russia-Ukraine drone attack is falsely shared as from the re...",
+                    "reviewDate": "2024-09-25T00:00:00Z",
+                    "textualRating": "false",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 139,
+            "query": "Russia"
+        },
+        {
+            "text": "Did MSG Sphere in Las Vegas congratulated Russia on Russian Flag Day? Our fact-checking department has analyzed this \"news.\"",
+            "claimant": "Viral social media post",
+            "claimDate": "2024-08-31T00:00:00Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "site": "gwaramedia.com"
+                    },
+                    "url": "https://gwaramedia.com/en/debunking-russian-fakes-no-las-vegas-msg-sphere-screen-didn-t-display-russian-flag/",
+                    "title": "Debunking Russian fakes. No, Las Vegas' MSG Sphere didn't display Russian flag",
+                    "reviewDate": "2024-08-31T00:00:00Z",
+                    "textualRating": "Fake",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 140,
+            "query": "Russia"
+        },
+        {
+            "text": "How schoolchildren in Moldova will be brainwashed starting September 1: The Ministry of Education has scribbled down a manual on instilling hatred towards Russia in children.",
+            "claimant": "Komsomolskaya Pravda in Moldova, Russian propaganda tabloid",
+            "claimDate": "2024-08-29T15:01:45Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "VOA",
+                        "site": "voanews.com"
+                    },
+                    "url": "https://www.voanews.com/a/russian-news-outlets-spin-accusations-of-russophobia-against-moldova/7763924.html",
+                    "title": "Russian news outlets spin accusations of Russophobia against Moldova",
+                    "reviewDate": "2024-08-29T15:01:45Z",
+                    "textualRating": "Misleading",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 141,
+            "query": "Russia"
+        },
+        {
+            "text": "“By refusing to accept Russian passports lacking biometrical chips, Czech authorities have added to their list of discriminatory measures against Russia & once again demonstrated their Russophobic approaches. In this case, ordinary Russians became their main target.”",
+            "claimant": "Maria Zakharova",
+            "claimDate": "2024-08-26T14:19:06Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "VOA",
+                        "site": "voanews.com"
+                    },
+                    "url": "https://www.voanews.com/a/security-not-russophobia-spurred-czech-republic-s-biometric-passport-requirement-for-russian-citizens/7757255.html",
+                    "title": "Security, not ‘Russophobia’ spurred Czech Republic’s biometric passport requirement for Russian citizens",
+                    "reviewDate": "2024-08-26T14:19:06Z",
+                    "textualRating": "Misleading",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 142,
+            "query": "Russia"
+        },
+        {
+            "text": "American mercenaries exposed invading Russia's Kursk region These low-brainers provided evidence for their crimes before they were cremated.",
+            "claimant": "x.com",
+            "claimDate": "2024-08-26T22:51:13Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "site": "misbar.com"
+                    },
+                    "url": "https://www.misbar.com/en/factcheck/2024/08/26/an-old-image-of-ukrainians-circulated-as-american-mercenaries-invading-russiarsquos-kursk-along-with-ukraine",
+                    "title": "An Old Image of Ukrainians Circulated As American Mercenaries Invading Russia’s Kursk Along With Ukraine",
+                    "reviewDate": "2024-08-26T22:51:13Z",
+                    "textualRating": "misleading",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 143,
+            "query": "Russia"
+        },
+        {
+            "text": "President Joe Biden \"sent comrade [Vice President] Kamala [Harris] to see [Russian President Vladimir] Putin in Russia three days before the attack\" on Ukraine.",
+            "claimant": "Donald Trump",
+            "claimDate": "2024-08-22T00:00:00Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "FactCheck.org",
+                        "site": "factcheck.org"
+                    },
+                    "url": "https://www.factcheck.org/2024/08/trumps-false-claim-that-harris-met-with-putin/",
+                    "title": "Trump's False Claim That Harris Met with Putin",
+                    "textualRating": "False",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 144,
+            "query": "Russia"
+        },
+        {
+            "text": "Image shows 'American mercenaries' in Kursk region of Russia",
+            "claimant": "Social media",
+            "claimDate": "2024-08-13T00:00:00Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "USA Today",
+                        "site": "usatoday.com"
+                    },
+                    "url": "https://www.usatoday.com/story/news/factcheck/2024/08/22/u-s-mercenaries-kursk-russia-ukraine-fact-check/74891709007/",
+                    "title": "No, image doesn't show U.S. mercenaries in Kursk region | Fact check",
+                    "reviewDate": "2024-08-22T13:54:26Z",
+                    "textualRating": "False",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 145,
+            "query": "Russia"
+        },
+        {
+            "text": "Biden ordered U.S. forces to prepare for possible nuclear confrontations with Russia, China, and North Korea.",
+            "claimant": "x.com",
+            "claimDate": "2024-08-22T07:05:25Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "site": "misbar.com"
+                    },
+                    "url": "https://www.misbar.com/en/factcheck/2024/08/22/joe-biden-updates-nuclear-strategy-no-imminent-nuclear-war-orders-issued",
+                    "title": "Joe Biden Updates Nuclear Strategy, No Imminent Nuclear War Orders Issued",
+                    "reviewDate": "2024-08-22T07:05:25Z",
+                    "textualRating": "excitement",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 146,
+            "query": "Russia"
+        },
+        {
+            "text": "POLAND The Army is preparing for war with Russia because We live in times of war, says Prime Minister.",
+            "claimant": "x.com",
+            "claimDate": "2024-08-20T11:35:04Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "site": "misbar.com"
+                    },
+                    "url": "https://www.misbar.com/en/factcheck/2024/08/20/poland-marks-historic-victory-over-the-red-army-not-preparing-for-war-with-russia",
+                    "title": "Poland Marks Historic Victory Over the Red Army, Not Preparing for War With Russia",
+                    "reviewDate": "2024-08-20T11:35:04Z",
+                    "textualRating": "misleading",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 147,
+            "query": "Russia"
+        },
+        {
+            "text": "The Philippine National Volleyball Federation (PNVF) is currently processing the naturalization of Russian outside hitter and Capital1 Solar Spikers import Marina Tushova.",
+            "claimant": "Volleyball Counts",
+            "claimDate": "2024-08-19T07:30:00Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "Rappler",
+                        "site": "rappler.com"
+                    },
+                    "url": "https://www.rappler.com/newsbreak/fact-check/no-plans-from-philippine-volleyball-federation-naturalize-marina-tushova/",
+                    "title": "FACT CHECK: No plans from PH volleyball federation to naturalize Marina Tushova",
+                    "reviewDate": "2024-08-19T07:30:00Z",
+                    "textualRating": "False",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 148,
+            "query": "Russia"
+        },
+        {
+            "text": "Image shows the ongoing Ukraine’s offensive in Russia's Kursk region",
+            "claimant": "Social Media",
+            "claimDate": "2024-08-11T00:00:00Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "NewsMobile",
+                        "site": "newsmobile.in"
+                    },
+                    "url": "https://www.newsmobile.in/nm-fact-checker/fact-check-old-image-of-destroyed-ukrainian-tanks-falsely-shared-as-recent/",
+                    "title": "Fact Check: Old Image Of Destroyed Ukrainian Tanks Falsely Shared As Recent",
+                    "reviewDate": "2024-08-19T00:00:00Z",
+                    "textualRating": "Misleading",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 149,
+            "query": "Russia"
+        },
+        {
+            "text": "Russian Ministry of Defense: The total losses of the Ukrainian Armed Forces in the Kursk region were recorded as 1,350 soldiers, 29 tanks and 23 armored personnel carriers",
+            "claimant": "x.com",
+            "claimDate": "2024-08-13T14:18:38Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "site": "misbar.com"
+                    },
+                    "url": "https://www.misbar.com/en/factcheck/2024/08/13/outdated-photo-of-destroyed-ukrainian-tanks-resurfaces-amid-ukraines-kursk-offensive",
+                    "title": "Outdated Photo of Destroyed Ukrainian Tanks Resurfaces Amid Ukraine's Kursk Offensive",
+                    "reviewDate": "2024-08-13T14:18:38Z",
+                    "textualRating": "misleading",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 150,
+            "query": "Russia"
+        },
+        {
+            "text": "U.S. sanctions against the media group Rossiya Segodnya, RIA Novosti, RT and Sputnik are a clear example of a ‘witch hunt,’ pressure on freedom of speech and vulgar censorship.",
+            "claimant": "Leonid Slutsky",
+            "claimDate": "2024-09-05T20:06:22Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "VOA",
+                        "site": "voanews.com"
+                    },
+                    "url": "https://www.voanews.com/a/top-kremlin-official-falsely-characterizes-reason-for-us-sanctions-on-russia-state-media/7772972.html",
+                    "title": "Top Kremlin official falsely characterizes reason for US sanctions on ...",
+                    "reviewDate": "2024-09-05T20:06:22Z",
+                    "textualRating": "FALSE",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 151,
+            "query": "Russia"
+        },
+        {
+            "text": "\"We understand very well that this [the arrest of Telegram founder Pavel Durov] is a big blow to freedom of speech. ... What they are trying to achieve -- of course, Paris did it on certain advice from the United States -- they want the keys to this messenger.\"",
+            "claimant": "Andrei Kelin",
+            "claimDate": "2024-09-04T01:39:55Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "VOA",
+                        "site": "voanews.com"
+                    },
+                    "url": "https://www.voanews.com/a/russia-claims-arrest-of-telegram-founder-a-blow-to-press-freedom-that-us-is-behind-it-/7770654.html",
+                    "title": "Russia claims arrest of Telegram founder a blow to press freedom ...",
+                    "reviewDate": "2024-09-04T01:39:55Z",
+                    "textualRating": "Unsubstantiated",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 152,
+            "query": "Russia"
+        },
+        {
+            "text": "“The journalist is seen sitting in a restaurant with his ‘source,’ as the pair discuss in Russian how to hand over secret data on the country’s defense industry in a way that won’t allow the authorities to track the leak.”",
+            "claimant": "RT, Russian state broadcaster",
+            "claimDate": "2024-08-07T19:01:59Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "VOA",
+                        "site": "voanews.com"
+                    },
+                    "url": "https://www.voanews.com/a/russia-arrest-footage-of-gershkovich-shows-normal-journalistic-activities-not-espionage/7733645.html",
+                    "title": "Russia’s arrest footage of Gershkovich shows normal journalistic activities, not espionage",
+                    "reviewDate": "2024-08-07T19:01:59Z",
+                    "textualRating": "Misleading",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 153,
+            "query": "Russia"
+        },
+        {
+            "text": "“Apparently, this is confirmation that Western forces have taken over coordination over the militants.”",
+            "claimant": "Aleksandr Ivanov",
+            "claimDate": "2024-07-31T17:51:43Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "VOA",
+                        "site": "voanews.com"
+                    },
+                    "url": "https://www.voanews.com/a/russia-s-wagner-implicates-west-ukraine-in-mali-clashes-/7724747.html",
+                    "title": "Russia’s Wagner implicates West, Ukraine in Mali clashes",
+                    "reviewDate": "2024-07-31T17:51:43Z",
+                    "textualRating": "Unsubstantiated",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 154,
+            "query": "Russia"
+        },
+        {
+            "text": "“We have more liquid gold — gasoline, oil — under our feet than any other country. More than Saudi Arabia. More than Russia. More than any other country.”",
+            "claimant": "Donald Trump",
+            "claimDate": "2024-07-31T00:00:00Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "PolitiFact",
+                        "site": "politifact.com"
+                    },
+                    "url": "https://www.politifact.com/article/2024/jul/31/live-trump-fact-check-nabj-convention/",
+                    "title": "Live: Fact-checking Donald Trump at the National Association of Black Journalists convention",
+                    "reviewDate": "2024-07-31T23:06:31Z",
+                    "textualRating": "False",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 155,
+            "query": "Russia"
+        },
+        {
+            "text": "Russian Olenya base was hit by a Ukrainian drone, not by NATO",
+            "claimant": "US Civil Defence News",
+            "claimDate": "2024-07-27T00:00:00Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "Logically Facts",
+                        "site": "logicallyfacts.com"
+                    },
+                    "url": "https://www.logicallyfacts.com/en/fact-check/false-russian-olenya-base-was-hit-by-a-ukrainian-drone-not-by-nato",
+                    "title": "Russian Olenya base was hit by a Ukrainian drone, not by NATO",
+                    "reviewDate": "2024-07-31T00:00:00Z",
+                    "textualRating": "False",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 156,
+            "query": "Russia"
+        },
+        {
+            "text": "“Russia does not interfere in the internal political life of other states.”",
+            "claimant": "Nikolai Patrushev",
+            "claimDate": "2024-07-29T22:23:16Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "VOA",
+                        "site": "voanews.com"
+                    },
+                    "url": "https://www.voanews.com/a/russia-s-top-spymaster-falsely-claims-kremlin-does-not-interfere-in-other-countries-affairs-/7717698.html",
+                    "title": "Russia’s top spymaster falsely claims Kremlin does not interfere in other countries’ affairs",
+                    "reviewDate": "2024-07-29T22:23:16Z",
+                    "textualRating": "False",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 157,
+            "query": "Russia"
+        },
+        {
+            "text": "\"At the approach of the Russian fighter jets, the American strategic bombers conducted a U-turn from the state border of the Russian Federation.\"",
+            "claimant": "Russian Defense Ministry",
+            "claimDate": "2024-07-25T20:31:52Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "VOA",
+                        "site": "voanews.com"
+                    },
+                    "url": "https://www.voanews.com/a/russian-defense-ministry-falsifies-encounter-with-us-b-52s-over-barents-sea-/7713098.html",
+                    "title": "Russian Defense Ministry falsifies encounter with US B-52s over Barents Sea",
+                    "reviewDate": "2024-07-25T20:31:52Z",
+                    "textualRating": "False",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 158,
+            "query": "Russia"
+        },
+        {
+            "text": "“Russia has become the fourth world economy and the largest European economy. … [T]he USA have lost their leading position and dropped to second place.”",
+            "claimant": "Vyacheslav Volodin",
+            "claimDate": "2024-07-25T00:17:30Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "VOA",
+                        "site": "voanews.com"
+                    },
+                    "url": "https://www.voanews.com/a/in-algeria-putin-s-ally-misleads-about-size-of-russian-economy-downplays-sanctions-/7712028.html",
+                    "title": "In Algeria, Putin’s ally misleads about size of Russian economy, downplays sanctions",
+                    "reviewDate": "2024-07-25T00:17:30Z",
+                    "textualRating": "Misleading",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 159,
+            "query": "Russia"
+        },
+        {
+            "text": "“The woman who shielded Trump from the bullets turned out to be a Russian karateist.”",
+            "claimant": "Vzglyad",
+            "claimDate": "2024-07-17T13:15:35Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "VOA",
+                        "site": "voanews.com"
+                    },
+                    "url": "https://www.voanews.com/a/was-secret-service-agent-who-saved-trump-a-russian-karate-champ-/7701680.html",
+                    "title": "Was Secret Service agent who saved Trump a Russian karate champ?",
+                    "reviewDate": "2024-07-17T13:15:35Z",
+                    "textualRating": "Unsubstantiated",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 160,
+            "query": "Russia"
+        },
+        {
+            "text": "“U.S. Justice Department announced it has detected and destroyed a ‘bot farm’ allegedly publishing online content in the interests of the Russian government. … The West and Western media often voice accusations against RF. No evidence whatsoever is presented in such instances and moving forward such leaks never get confirmed.”",
+            "claimant": "RIA Novosti",
+            "claimDate": "2024-07-16T19:04:29Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "VOA",
+                        "site": "voanews.com"
+                    },
+                    "url": "https://www.voanews.com/a/russia-falsely-denies-ties-with-ai-operated-disinformation-bot-farm-on-x/7700665.html",
+                    "title": "Russia falsely denies ties with AI-operated disinformation bot farm on X",
+                    "reviewDate": "2024-07-16T19:04:29Z",
+                    "textualRating": "False",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 161,
+            "query": "Russia"
+        },
+        {
+            "text": "Russian President Vladimir Putin received Chinese president Xi Jinping at the Moscow airport but did not do the same for Prime Minister Narendra Modi.",
+            "claimant": "X users",
+            "claimDate": "2024-07-09T12:25:02Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "NewsMeter",
+                        "site": "newsmeter.in"
+                    },
+                    "url": "https://newsmeter.in/fact-check/putin-did-not-receive-both-xi-jinping-and-pm-modi-at-moscow-airport-claim-is-false-732175",
+                    "title": "Fact Check: Putin did not receive both Xi Jinping and PM Modi at Moscow airport; claim is false",
+                    "reviewDate": "2024-07-09T12:25:02Z",
+                    "textualRating": "False",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 162,
+            "query": "Russia"
+        },
+        {
+            "text": "... “Washington uses outside actors to hide the objectives of research. These are contracting and intermediary organizations (Metabiota, Quicksilver, EkoHealth Alliance, more than 20 companies) and businesses of the so-called Big Pharma. Russia has documents confirming the rapid expansion of the U.S. biological warfare presence in Africa.”",
+            "claimant": "Lieutenant General Igor Kirillov",
+            "claimDate": "2024-07-05T22:22:20Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "VOA",
+                        "site": "voanews.com"
+                    },
+                    "url": "https://www.voanews.com/a/fact-check-russian-military-targets-african-countries-with-u-s-bioweapons-fake-/7687026.html",
+                    "title": "Russian military targets African countries with ‘US bioweapons’ fake",
+                    "reviewDate": "2024-07-05T22:22:20Z",
+                    "textualRating": "False",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 163,
+            "query": "Russia"
+        },
+        {
+            "text": "\"Washington could have tackled the problem long ago, if it really wanted to. Instead, it seem that our United States colleagues prefer to use illegal arms shipments, on which US arms dealers make money, as leverage to influence the situation.”",
+            "claimant": "Vasily Nebenzya",
+            "claimDate": "2024-07-09T21:31:02Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "VOA",
+                        "site": "voanews.com"
+                    },
+                    "url": "https://www.voanews.com/a/fact-check-russia-s-accusations-of-us-leveraging-haiti-gang-problem-are-baseless/7691504.html",
+                    "title": "Russia's accusations of US leveraging Haiti gang problem are ...",
+                    "reviewDate": "2024-07-09T21:31:02Z",
+                    "textualRating": "Unsubstantiated",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 164,
+            "query": "Russia"
+        }
+    ]
+}

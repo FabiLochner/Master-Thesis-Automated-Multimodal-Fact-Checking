@@ -1,0 +1,916 @@
+{
+    "summary": {
+        "total_claims_above_threshold": 92,
+        "total_components": 44,
+        "duplicate_components": 44,
+        "singleton_components": 0,
+        "claims_to_remove": 48,
+        "removal_percentage": 52.17391304347826
+    },
+    "components": [
+        {
+            "component_id": 16,
+            "size": 3,
+            "nodes": [
+                193,
+                188,
+                94
+            ],
+            "claims": [
+                {
+                    "index": 193,
+                    "text": "Picture shows American mercenary invading Kursk, Russia in August 2024",
+                    "label": "old photo"
+                },
+                {
+                    "index": 188,
+                    "text": "Image shows 'American mercenaries' in Kursk region of Russia",
+                    "label": "false"
+                },
+                {
+                    "index": 94,
+                    "text": "Image shows 'American mercenaries' in Kursk region of Russia",
+                    "label": "false"
+                }
+            ]
+        },
+        {
+            "component_id": 26,
+            "size": 3,
+            "nodes": [
+                26,
+                46,
+                119
+            ],
+            "claims": [
+                {
+                    "index": 26,
+                    "text": "The U.S. has given Ukraine “$350 billion” for the war with Russia gave “$200 billion more than Europe.”",
+                    "label": "false"
+                },
+                {
+                    "index": 46,
+                    "text": "“Zelenskyy talked the United States of America into spending $350 Billion Dollars, to go into a War that couldn’t be won. … The United States has spent $200 Billion Dollars more than Europe.”",
+                    "label": "1"
+                },
+                {
+                    "index": 119,
+                    "text": "The U.S. has given Ukraine “$350 billion” for the war with Russia gave “$200 billion more than Europe.”",
+                    "label": "false"
+                }
+            ]
+        },
+        {
+            "component_id": 40,
+            "size": 3,
+            "nodes": [
+                51,
+                53,
+                54
+            ],
+            "claims": [
+                {
+                    "index": 51,
+                    "text": "A post shared on X claims eight mansions belonging to Ukrainian military officials burned down in Los Angeles, California.",
+                    "label": "false"
+                },
+                {
+                    "index": 53,
+                    "text": "The Ukrainian government said eight mansions owned by military officials were destroyed in LA wildfires",
+                    "label": "no reports"
+                },
+                {
+                    "index": 54,
+                    "text": "8 mansions of high-ranking Ukrainian military burned down in Los Angeles.",
+                    "label": "false"
+                }
+            ]
+        },
+        {
+            "component_id": 42,
+            "size": 3,
+            "nodes": [
+                101,
+                102,
+                103
+            ],
+            "claims": [
+                {
+                    "index": 101,
+                    "text": "“Zelenskyy's wife bought one of the most expensive supercars in the world, media learned.”",
+                    "label": "false"
+                },
+                {
+                    "index": 102,
+                    "text": "Volodymyr Zelenskyy's wife bought a nearly $5M Bugatti",
+                    "label": "false"
+                },
+                {
+                    "index": 103,
+                    "text": "Did Zelensky's Wife Spend Millions on New Bugatti Supercar?",
+                    "label": "false"
+                }
+            ]
+        },
+        {
+            "component_id": 1,
+            "size": 2,
+            "nodes": [
+                146,
+                60
+            ],
+            "claims": [
+                {
+                    "index": 146,
+                    "text": "\"[T]he figures announced with regard to losses on both sides, it is obvious that they were presented in the Ukrainian interpretation … Ukraine’s losses are multiple times higher than those of Russia.”",
+                    "label": "false"
+                },
+                {
+                    "index": 60,
+                    "text": "\"[T]he figures announced with regard to losses on both sides, it is obvious that they were presented in the Ukrainian interpretation … Ukraine’s losses are multiple times higher than those of Russia.”",
+                    "label": "false"
+                }
+            ]
+        },
+        {
+            "component_id": 2,
+            "size": 2,
+            "nodes": [
+                160,
+                66
+            ],
+            "claims": [
+                {
+                    "index": 160,
+                    "text": "South Korea is sending troops to Ukraine in response to North Korea's troops supporting Russia",
+                    "label": "unconfirmed"
+                },
+                {
+                    "index": 66,
+                    "text": "South Korea is sending troops to Ukraine in response to North Korea's troops supporting Russia",
+                    "label": "unconfirmed"
+                }
+            ]
+        },
+        {
+            "component_id": 3,
+            "size": 2,
+            "nodes": [
+                200,
+                93
+            ],
+            "claims": [
+                {
+                    "index": 200,
+                    "text": "“Apparently, this is confirmation that Western forces have taken over coordination over the militants.”",
+                    "label": "unsubstantiated"
+                },
+                {
+                    "index": 93,
+                    "text": "“Apparently, this is confirmation that Western forces have taken over coordination over the militants.”",
+                    "label": "unsubstantiated"
+                }
+            ]
+        },
+        {
+            "component_id": 4,
+            "size": 2,
+            "nodes": [
+                52,
+                142
+            ],
+            "claims": [
+                {
+                    "index": 52,
+                    "text": "U.S. uses forced labor by involving inmates in fighting Los Angeles fires, while sanctioning China for using forced labor in Xinjiang.",
+                    "label": "false"
+                },
+                {
+                    "index": 142,
+                    "text": "U.S. uses forced labor by involving inmates in fighting Los Angeles fires, while sanctioning China for using forced labor in Xinjiang.",
+                    "label": "false"
+                }
+            ]
+        },
+        {
+            "component_id": 5,
+            "size": 2,
+            "nodes": [
+                80,
+                173
+            ],
+            "claims": [
+                {
+                    "index": 80,
+                    "text": "The most brutal Ukrainian units operating in the Kursk direction [in the Kursk region of Russia] are made up of mercenaries ... The mercenaries are the ones who are the most brutal towards civilians.",
+                    "label": "unsubstantiated"
+                },
+                {
+                    "index": 173,
+                    "text": "The most brutal Ukrainian units operating in the Kursk direction [in the Kursk region of Russia] are made up of mercenaries ... The mercenaries are the ones who are the most brutal towards civilians.",
+                    "label": "unsubstantiated"
+                }
+            ]
+        },
+        {
+            "component_id": 6,
+            "size": 2,
+            "nodes": [
+                99,
+                214
+            ],
+            "claims": [
+                {
+                    "index": 99,
+                    "text": "Ukraine is responsible for a missile strike that hit the Okhmatdyt children’s hospital in Kyiv on Monday.",
+                    "label": "false"
+                },
+                {
+                    "index": 214,
+                    "text": "Ukraine is responsible for a missile strike that hit the Okhmatdyt children’s hospital in Kyiv on Monday.",
+                    "label": "false"
+                }
+            ]
+        },
+        {
+            "component_id": 7,
+            "size": 2,
+            "nodes": [
+                19,
+                116
+            ],
+            "claims": [
+                {
+                    "index": 19,
+                    "text": "The United States forced Russia to invade Ukraine",
+                    "label": "misleading"
+                },
+                {
+                    "index": 116,
+                    "text": "The United States forced Russia to invade Ukraine",
+                    "label": "misleading"
+                }
+            ]
+        },
+        {
+            "component_id": 8,
+            "size": 2,
+            "nodes": [
+                20,
+                117
+            ],
+            "claims": [
+                {
+                    "index": 20,
+                    "text": "Donald Trump Jr. stated that he did not understand why anyone would choose Ukraine as an ally over Russia on his Triggered podcast.",
+                    "label": "not his words"
+                },
+                {
+                    "index": 117,
+                    "text": "Donald Trump Jr. stated that he did not understand why anyone would choose Ukraine as an ally over Russia on his Triggered podcast.",
+                    "label": "not his words"
+                }
+            ]
+        },
+        {
+            "component_id": 9,
+            "size": 2,
+            "nodes": [
+                64,
+                167
+            ],
+            "claims": [
+                {
+                    "index": 64,
+                    "text": "“[W]e have always recognized the borders of Ukraine within the framework of our agreements after the collapse of the Soviet Union. … But later, as is known, the Ukrainian leadership amended the Basic Law and announced its desire to join the North Atlantic Treaty Organization, and we did not agree to this.”",
+                    "label": "false"
+                },
+                {
+                    "index": 167,
+                    "text": "“[W]e have always recognized the borders of Ukraine within the framework of our agreements after the collapse of the Soviet Union. … But later, as is known, the Ukrainian leadership amended the Basic Law and announced its desire to join the North Atlantic Treaty Organization, and we did not agree to this.”",
+                    "label": "false"
+                }
+            ]
+        },
+        {
+            "component_id": 10,
+            "size": 2,
+            "nodes": [
+                162,
+                67
+            ],
+            "claims": [
+                {
+                    "index": 162,
+                    "text": "\"…it was not Russia's actions that precipitated the escalation in Ukraine, but rather the 2014 coup d’etat, supported primarily by the United States. It was even publicly disclosed how much financial support the then U.S. administration allocated toward preparing and orchestrating this coup.”",
+                    "label": "false"
+                },
+                {
+                    "index": 67,
+                    "text": "\"…it was not Russia's actions that precipitated the escalation in Ukraine, but rather the 2014 coup d’etat, supported primarily by the United States. It was even publicly disclosed how much financial support the then U.S. administration allocated toward preparing and orchestrating this coup.”",
+                    "label": "false"
+                }
+            ]
+        },
+        {
+            "component_id": 11,
+            "size": 2,
+            "nodes": [
+                187,
+                85
+            ],
+            "claims": [
+                {
+                    "index": 187,
+                    "text": "President Joe Biden \"sent comrade [Vice President] Kamala [Harris] to see [Russian President Vladimir] Putin in Russia three days before the attack\" on Ukraine.",
+                    "label": "false"
+                },
+                {
+                    "index": 85,
+                    "text": "President Joe Biden \"sent comrade [Vice President] Kamala [Harris] to see [Russian President Vladimir] Putin in Russia three days before the attack\" on Ukraine.",
+                    "label": "false"
+                }
+            ]
+        },
+        {
+            "component_id": 12,
+            "size": 2,
+            "nodes": [
+                91,
+                195
+            ],
+            "claims": [
+                {
+                    "index": 91,
+                    "text": "“The Ukrainian actions are an evident terrorist action. No one hides the fact that American weapons have become a murder weapon of ordinary Russians. Attacks on schools, hospitals, ambulances and residential buildings in Russia cannot be recognized as a right of self-defense.”",
+                    "label": "false"
+                },
+                {
+                    "index": 195,
+                    "text": "“The Ukrainian actions are an evident terrorist action. No one hides the fact that American weapons have become a murder weapon of ordinary Russians. Attacks on schools, hospitals, ambulances and residential buildings in Russia cannot be recognized as a right of self-defense.”",
+                    "label": "false"
+                }
+            ]
+        },
+        {
+            "component_id": 13,
+            "size": 2,
+            "nodes": [
+                18,
+                114
+            ],
+            "claims": [
+                {
+                    "index": 18,
+                    "text": "“It is important to emphasize that Russia possesses significantly — I want to stress this — significantly larger resources of this kind than Ukraine. Our historical territories that have become part of the Russian Federation again also hold certain reserves. We are ready to work there with international partners, including Americans.”",
+                    "label": "false"
+                },
+                {
+                    "index": 114,
+                    "text": "“It is important to emphasize that Russia possesses significantly — I want to stress this — significantly larger resources of this kind than Ukraine. Our historical territories that have become part of the Russian Federation again also hold certain reserves. We are ready to work there with international partners, including Americans.”",
+                    "label": "false"
+                }
+            ]
+        },
+        {
+            "component_id": 14,
+            "size": 2,
+            "nodes": [
+                192,
+                87
+            ],
+            "claims": [
+                {
+                    "index": 192,
+                    "text": "Image shows the ongoing Ukraine’s offensive in Russia's Kursk region",
+                    "label": "misleading"
+                },
+                {
+                    "index": 87,
+                    "text": "Image shows the ongoing Ukraine’s offensive in Russia's Kursk region",
+                    "label": "misleading"
+                }
+            ]
+        },
+        {
+            "component_id": 15,
+            "size": 2,
+            "nodes": [
+                202,
+                92
+            ],
+            "claims": [
+                {
+                    "index": 202,
+                    "text": "Russian Olenya base was hit by a Ukrainian drone, not by NATO",
+                    "label": "false"
+                },
+                {
+                    "index": 92,
+                    "text": "Russian Olenya base was hit by a Ukrainian drone, not by NATO",
+                    "label": "false"
+                }
+            ]
+        },
+        {
+            "component_id": 17,
+            "size": 2,
+            "nodes": [
+                97,
+                209
+            ],
+            "claims": [
+                {
+                    "index": 97,
+                    "text": "\"Yet, more than two years into the Ukraine-Russia conflict, peace still appears distant, serving as an example that the coalition [NATO] is not promoting peace but rather threatening it.\"",
+                    "label": "false"
+                },
+                {
+                    "index": 209,
+                    "text": "\"Yet, more than two years into the Ukraine-Russia conflict, peace still appears distant, serving as an example that the coalition [NATO] is not promoting peace but rather threatening it.\"",
+                    "label": "false"
+                }
+            ]
+        },
+        {
+            "component_id": 18,
+            "size": 2,
+            "nodes": [
+                59,
+                143
+            ],
+            "claims": [
+                {
+                    "index": 59,
+                    "text": "\"It was Igor Kirillov who exposed the American biological laboratories in Ukraine that developed biological agents for selectively targeting people belonging to specific ethnic groups, including Slavs.\"",
+                    "label": "false"
+                },
+                {
+                    "index": 143,
+                    "text": "\"It was Igor Kirillov who exposed the American biological laboratories in Ukraine that developed biological agents for selectively targeting people belonging to specific ethnic groups, including Slavs.\"",
+                    "label": "false"
+                }
+            ]
+        },
+        {
+            "component_id": 19,
+            "size": 2,
+            "nodes": [
+                72,
+                168
+            ],
+            "claims": [
+                {
+                    "index": 72,
+                    "text": "“This [North Korean troop deployment to Russia's war in Ukraine] seems yet another information canard.”",
+                    "label": "likely false"
+                },
+                {
+                    "index": 168,
+                    "text": "“This [North Korean troop deployment to Russia's war in Ukraine] seems yet another information canard.”",
+                    "label": "likely false"
+                }
+            ]
+        },
+        {
+            "component_id": 20,
+            "size": 2,
+            "nodes": [
+                82,
+                179
+            ],
+            "claims": [
+                {
+                    "index": 82,
+                    "text": "“Iran has NOT delivered ballistic missiles to Russia. Period.”",
+                    "label": "false"
+                },
+                {
+                    "index": 179,
+                    "text": "“Iran has NOT delivered ballistic missiles to Russia. Period.”",
+                    "label": "false"
+                }
+            ]
+        },
+        {
+            "component_id": 21,
+            "size": 2,
+            "nodes": [
+                32,
+                124
+            ],
+            "claims": [
+                {
+                    "index": 32,
+                    "text": "Trump says Russia has lost 1.5 million troops In Ukraine war",
+                    "label": "false"
+                },
+                {
+                    "index": 124,
+                    "text": "Trump says Russia has lost 1.5 million troops In Ukraine war",
+                    "label": "false"
+                }
+            ]
+        },
+        {
+            "component_id": 22,
+            "size": 2,
+            "nodes": [
+                130,
+                43
+            ],
+            "claims": [
+                {
+                    "index": 130,
+                    "text": "\"Ukraine was gradually turning into a testing ground for experiments of any quality with biolabs, obviously with organ trading.\"",
+                    "label": "false"
+                },
+                {
+                    "index": 43,
+                    "text": "\"Ukraine was gradually turning into a testing ground for experiments of any quality with biolabs, obviously with organ trading.\"",
+                    "label": "false"
+                }
+            ]
+        },
+        {
+            "component_id": 23,
+            "size": 2,
+            "nodes": [
+                166,
+                71
+            ],
+            "claims": [
+                {
+                    "index": 166,
+                    "text": "Did Pete Hegseth call Putin a 'war criminal'?",
+                    "label": "needs context"
+                },
+                {
+                    "index": 71,
+                    "text": "Did Pete Hegseth call Putin a 'war criminal'?",
+                    "label": "needs context"
+                }
+            ]
+        },
+        {
+            "component_id": 24,
+            "size": 2,
+            "nodes": [
+                83,
+                181
+            ],
+            "claims": [
+                {
+                    "index": 83,
+                    "text": "“[I]f someone raises questions about why such closeness [between Mongolia and Russia] — well, probably, these are the people who once again began to slip Nazi overtones into their actions, not only their thoughts, which is reflected in support for the Kyiv regime.”",
+                    "label": "false"
+                },
+                {
+                    "index": 181,
+                    "text": "“[I]f someone raises questions about why such closeness [between Mongolia and Russia] — well, probably, these are the people who once again began to slip Nazi overtones into their actions, not only their thoughts, which is reflected in support for the Kyiv regime.”",
+                    "label": "false"
+                }
+            ]
+        },
+        {
+            "component_id": 25,
+            "size": 2,
+            "nodes": [
+                21,
+                118
+            ],
+            "claims": [
+                {
+                    "index": 21,
+                    "text": "\"Zelenskyy said he would quickly make peace with Russia, but instead, he started a war.\"",
+                    "label": "false"
+                },
+                {
+                    "index": 118,
+                    "text": "\"Zelenskyy said he would quickly make peace with Russia, but instead, he started a war.\"",
+                    "label": "false"
+                }
+            ]
+        },
+        {
+            "component_id": 27,
+            "size": 2,
+            "nodes": [
+                164,
+                69
+            ],
+            "claims": [
+                {
+                    "index": 164,
+                    "text": "https://x.com/ricwe123/status/1858389133401461184",
+                    "label": "false"
+                },
+                {
+                    "index": 69,
+                    "text": "https://x.com/ricwe123/status/1858389133401461184",
+                    "label": "false"
+                }
+            ]
+        },
+        {
+            "component_id": 28,
+            "size": 2,
+            "nodes": [
+                177,
+                74
+            ],
+            "claims": [
+                {
+                    "index": 177,
+                    "text": "“The Washington Post writes, citing an anonymous top Ukrainian official that the number of [Ukrainians] ready to make territorial concessions to resolve the conflict is growing. The number of people dissatisfied with the actions of Western allies is also growing.”",
+                    "label": "misleading"
+                },
+                {
+                    "index": 74,
+                    "text": "“The Washington Post writes, citing an anonymous top Ukrainian official that the number of [Ukrainians] ready to make territorial concessions to resolve the conflict is growing. The number of people dissatisfied with the actions of Western allies is also growing.”",
+                    "label": "misleading"
+                }
+            ]
+        },
+        {
+            "component_id": 29,
+            "size": 2,
+            "nodes": [
+                194,
+                90
+            ],
+            "claims": [
+                {
+                    "index": 194,
+                    "text": "Russian Ministry of Defense: The total losses of the Ukrainian Armed Forces in the Kursk region were recorded as 1,350 soldiers, 29 tanks and 23 armored personnel carriers",
+                    "label": "misleading"
+                },
+                {
+                    "index": 90,
+                    "text": "Russian Ministry of Defense: The total losses of the Ukrainian Armed Forces in the Kursk region were recorded as 1,350 soldiers, 29 tanks and 23 armored personnel carriers",
+                    "label": "misleading"
+                }
+            ]
+        },
+        {
+            "component_id": 30,
+            "size": 2,
+            "nodes": [
+                128,
+                37
+            ],
+            "claims": [
+                {
+                    "index": 128,
+                    "text": "“In the heat of candor, the leader of the Bandera regime admitted that he and his comrades had embezzled $100 billion.”",
+                    "label": "false"
+                },
+                {
+                    "index": 37,
+                    "text": "“In the heat of candor, the leader of the Bandera regime admitted that he and his comrades had embezzled $100 billion.”",
+                    "label": "false"
+                }
+            ]
+        },
+        {
+            "component_id": 31,
+            "size": 2,
+            "nodes": [
+                73,
+                169
+            ],
+            "claims": [
+                {
+                    "index": 73,
+                    "text": "“[Ukrainians] are ruthlessly pushed by their own authorities to the war to be slaughtered there.”",
+                    "label": "false"
+                },
+                {
+                    "index": 169,
+                    "text": "“[Ukrainians] are ruthlessly pushed by their own authorities to the war to be slaughtered there.”",
+                    "label": "false"
+                }
+            ]
+        },
+        {
+            "component_id": 32,
+            "size": 2,
+            "nodes": [
+                34,
+                125
+            ],
+            "claims": [
+                {
+                    "index": 34,
+                    "text": "\"Ukraine remains the only source of security threats to the ZNPP as it routinely targets the nuclear facility and its critical infrastructure, as well as the satellite city of Energodar…\"",
+                    "label": "false"
+                },
+                {
+                    "index": 125,
+                    "text": "\"Ukraine remains the only source of security threats to the ZNPP as it routinely targets the nuclear facility and its critical infrastructure, as well as the satellite city of Energodar…\"",
+                    "label": "false"
+                }
+            ]
+        },
+        {
+            "component_id": 33,
+            "size": 2,
+            "nodes": [
+                172,
+                77
+            ],
+            "claims": [
+                {
+                    "index": 172,
+                    "text": "The Russian Embassy in South Africa claimed in a Sept. 26 X post to show a downed Ukrainian F-16.",
+                    "label": "false"
+                },
+                {
+                    "index": 77,
+                    "text": "The Russian Embassy in South Africa claimed in a Sept. 26 X post to show a downed Ukrainian F-16.",
+                    "label": "false"
+                }
+            ]
+        },
+        {
+            "component_id": 34,
+            "size": 2,
+            "nodes": [
+                165,
+                70
+            ],
+            "claims": [
+                {
+                    "index": 165,
+                    "text": "\"…Ukrainian troops have caused serious damage to … the [building] of the Mariupol Republican Academic Order of the Badge of Honor Russian Drama Theater.\"",
+                    "label": "false"
+                },
+                {
+                    "index": 70,
+                    "text": "\"…Ukrainian troops have caused serious damage to … the [building] of the Mariupol Republican Academic Order of the Badge of Honor Russian Drama Theater.\"",
+                    "label": "false"
+                }
+            ]
+        },
+        {
+            "component_id": 35,
+            "size": 2,
+            "nodes": [
+                9,
+                110
+            ],
+            "claims": [
+                {
+                    "index": 9,
+                    "text": "U.S. Defense Secretary Pete Hegseth and a journalist had an exchange about the impending peace talks between Ukraine and Russia.",
+                    "label": "fake"
+                },
+                {
+                    "index": 110,
+                    "text": "U.S. Defense Secretary Pete Hegseth and a journalist had an exchange about the impending peace talks between Ukraine and Russia.",
+                    "label": "fake"
+                }
+            ]
+        },
+        {
+            "component_id": 36,
+            "size": 2,
+            "nodes": [
+                96,
+                206
+            ],
+            "claims": [
+                {
+                    "index": 96,
+                    "text": "“[I]n 2021, V.A. Zelensky, in one of his interviews, ordered those who feel connected to the Russian culture to get out [of Ukraine] to Russia for the sake of the future of their children and grandchildren.”",
+                    "label": "false"
+                },
+                {
+                    "index": 206,
+                    "text": "“[I]n 2021, V.A. Zelensky, in one of his interviews, ordered those who feel connected to the Russian culture to get out [of Ukraine] to Russia for the sake of the future of their children and grandchildren.”",
+                    "label": "false"
+                }
+            ]
+        },
+        {
+            "component_id": 37,
+            "size": 2,
+            "nodes": [
+                129,
+                126
+            ],
+            "claims": [
+                {
+                    "index": 129,
+                    "text": "\"Trump threatened our president rather rudely, it must be said, pressuring to start the negotiations and reminding of Gadhafi’s fate.\"",
+                    "label": "false"
+                },
+                {
+                    "index": 126,
+                    "text": "“Trump threatened our president rather rudely, it must be said, pressuring to start the negotiations and reminding of Qaddafi’s fate.”",
+                    "label": "false"
+                }
+            ]
+        },
+        {
+            "component_id": 38,
+            "size": 2,
+            "nodes": [
+                201,
+                170
+            ],
+            "claims": [
+                {
+                    "index": 201,
+                    "text": "“We have more liquid gold — gasoline, oil — under our feet than any other country. More than Saudi Arabia. More than Russia. More than any other country.”",
+                    "label": "false"
+                },
+                {
+                    "index": 170,
+                    "text": "“We have more liquid gold, oil and gas under our feet than any nation in the world, including Saudi Arabia and Russia.”",
+                    "label": "false"
+                }
+            ]
+        },
+        {
+            "component_id": 39,
+            "size": 2,
+            "nodes": [
+                210,
+                212
+            ],
+            "claims": [
+                {
+                    "index": 210,
+                    "text": "Russian President Vladimir Putin received Chinese president Xi Jinping at the Moscow airport but did not do the same for Prime Minister Narendra Modi.",
+                    "label": "false"
+                },
+                {
+                    "index": 212,
+                    "text": "Russian president Vladimir Putin did not come to the airport to receive PM Modi, whereas Putin had received Chinese president Xi Jinping.",
+                    "label": "false"
+                }
+            ]
+        },
+        {
+            "component_id": 41,
+            "size": 2,
+            "nodes": [
+                35,
+                39
+            ],
+            "claims": [
+                {
+                    "index": 35,
+                    "text": "A post shared on X claims E! News reported that United States Agency Aid and Development (USAID) paid millions for celebrities to visit Ukraine.",
+                    "label": "false"
+                },
+                {
+                    "index": 39,
+                    "text": "E! News reported USAID paid celebrities to visit Ukraine",
+                    "label": "fake story"
+                }
+            ]
+        },
+        {
+            "component_id": 43,
+            "size": 2,
+            "nodes": [
+                1,
+                2
+            ],
+            "claims": [
+                {
+                    "index": 1,
+                    "text": "Trump & Netanyahu are Planning on Resettling Gazans in Ukraine or Syria",
+                    "label": "false"
+                },
+                {
+                    "index": 2,
+                    "text": "Netanyahu recently announced plans to resettle Palestinians in Gaza to Ukraine and Syria.",
+                    "label": "misleading"
+                }
+            ]
+        },
+        {
+            "component_id": 44,
+            "size": 2,
+            "nodes": [
+                56,
+                55
+            ],
+            "claims": [
+                {
+                    "index": 56,
+                    "text": "Did California Donate Firefighting Equipment to Ukraine?",
+                    "label": "true"
+                },
+                {
+                    "index": 55,
+                    "text": "Los Angeles firefighting equipment donation to Ukraine is responsible for not putting out the fires in California.",
+                    "label": "false"
+                }
+            ]
+        }
+    ]
+}

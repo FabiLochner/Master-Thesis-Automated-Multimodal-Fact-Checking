@@ -1,0 +1,1597 @@
+{
+    "query": "Gaza, Israel",
+    "after_date": "2024-07-01T00:00:00Z",
+    "language_code": "en",
+    "claims": [
+        {
+            "text": "Photo shows a Turkey-made bomb that was dropped on Gaza.",
+            "claimant": "x.com",
+            "claimDate": "2025-04-18T14:37:44Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "site": "misbar.com"
+                    },
+                    "url": "https://www.misbar.com/en/factcheck/2025/04/18/image-does-not-show-debris-turkish-made-bomb-dropped-gaza",
+                    "title": "Image Does Not Show Debris of Turkish-Made Bomb Dropped on Gaza",
+                    "reviewDate": "2025-04-18T14:37:44Z",
+                    "textualRating": "misleading",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 0
+        },
+        {
+            "text": "Baby Sham did not lose her arm in an Israeli airstrike on the Shejaeya neighborhood, east of Gaza City.",
+            "claimant": "x.com",
+            "claimDate": "2025-04-13T05:39:22Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "site": "misbar.com"
+                    },
+                    "url": "https://www.misbar.com/en/factcheck/2025/04/13/contrary-trolls-baby-sham-lost-her-arm-and-died-israeli-airstrike",
+                    "title": "Contrary to Trolls, Baby Sham Lost Her Arm and Died in Israeli Airstrike",
+                    "reviewDate": "2025-04-13T05:39:22Z",
+                    "textualRating": "fake",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 1
+        },
+        {
+            "text": "President Trump had to stop $50 million in American dollars from going to Gaza to fund condoms.",
+            "claimDate": "2025-01-28T00:00:00Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "FactCheck.org",
+                        "site": "factcheck.org"
+                    },
+                    "url": "https://www.factcheck.org/2025/01/trump-administration-makes-unsupported-claim-about-50-million-for-condoms-to-gaza/",
+                    "title": "Trump Administration Makes Unsupported Claim About $50 Million for Condoms to Gaza",
+                    "reviewDate": "2025-01-30T00:00:00Z",
+                    "textualRating": "No evidence",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 2
+        },
+        {
+            "text": "Did Taylor Swift Say LA Fires Are Payback For Gaza Bombings? A Fact Check",
+            "claimDate": "2025-01-15T10:57:34Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "NDTV",
+                        "site": "ndtv.com"
+                    },
+                    "url": "https://www.ndtv.com/world-news/did-taylor-swift-say-la-fires-are-payback-for-gaza-bombings-a-fact-check-7479334",
+                    "title": "Did Taylor Swift Say LA Fires Are Payback For Gaza Bombings? A Fact Check",
+                    "reviewDate": "2025-01-15T10:57:34Z",
+                    "textualRating": "False",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 3
+        },
+        {
+            "text": "picture of a dog holding an infant in his mouth is from Gaza",
+            "claimant": "Social media posts",
+            "claimDate": "2024-12-30T00:00:00Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "NewsMobile",
+                        "site": "newsmobile.in"
+                    },
+                    "url": "https://www.newsmobile.in/nm-fact-checker/fact-check-this-picture-of-dog-holding-a-childs-body-is-from-bangladesh-not-gaza/",
+                    "title": "Fact Check: This Picture Of Dog Holding A Child’s Body Is From Bangladesh, NOT Gaza",
+                    "reviewDate": "2024-12-31T00:00:00Z",
+                    "textualRating": "False",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 4
+        },
+        {
+            "text": "This is Gaza, completely destroyed. It looks like hell on earth.",
+            "claimant": "x.com",
+            "claimDate": "2024-12-30T10:26:01Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "site": "misbar.com"
+                    },
+                    "url": "https://www.misbar.com/en/factcheck/2024/12/30/this-footage-does-not-show-and-aerial-footage-of-gaza-but-zamalka-in-syria",
+                    "title": "This Footage Does Not Show Aerial Footage of Gaza But Zamalka ...",
+                    "reviewDate": "2024-12-30T10:26:01Z",
+                    "textualRating": "misleading",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 5
+        },
+        {
+            "text": "Donald Trump's election led Hamas to call \"for 'Immediate' End to War.\"",
+            "claimant": "Social media posts",
+            "claimDate": "2024-11-06T00:00:00Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "FactCheck.org",
+                        "site": "factcheck.org"
+                    },
+                    "url": "https://www.factcheck.org/2024/11/viral-claim-falsely-suggests-trump-ended-violence-in-gaza/",
+                    "title": "Viral Claim Falsely Suggests Trump Ended Violence in Gaza",
+                    "textualRating": "Distorts the Facts",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 6
+        },
+        {
+            "text": "A viral tweet claims that Hamas fighters successfully ambushed an Israeli tank unit near Jabalia camp in northern Gaza, destroying multiple vehicles and injuring or killing their crews.",
+            "claimant": "https://x.com/jacksonhinklle",
+            "claimDate": "2024-10-25T00:00:00Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "CheckYourFact",
+                        "site": "checkyourfact.com"
+                    },
+                    "url": "https://checkyourfact.com/2024/11/01/fact-check-does-viral-tweet-show-recent-hamas-attack-on-israeli-tank-unit/",
+                    "title": "FACT CHECK: Does Viral Tweet Show Recent Hamas Attack on Israeli Tank Unit?",
+                    "reviewDate": "2024-11-01T13:23:41Z",
+                    "textualRating": "False",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 7
+        },
+        {
+            "text": "The photo of a dead man surrounded by dogs is from Gaza and killed by Israel.",
+            "claimant": "Social Media User",
+            "claimDate": "2024-10-22T00:00:00Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "FACTLY",
+                        "site": "factly.in"
+                    },
+                    "url": "https://factly.in/old-photo-from-yemen-is-being-falsely-shared-as-the-death-of-a-man-in-gaza-following-an-israeli-attack/",
+                    "title": "Old photo from Yemen is being falsely shared as the death of a man in Gaza following an Israeli attack",
+                    "reviewDate": "2024-10-24T00:00:00Z",
+                    "textualRating": "FALSE",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 8
+        },
+        {
+            "text": "Image shows a journalist's body in Gaza",
+            "claimant": "Social Media",
+            "claimDate": "2024-10-14T00:00:00Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "NewsMobile",
+                        "site": "newsmobile.in"
+                    },
+                    "url": "https://www.newsmobile.in/nm-fact-checker/fact-check-this-image-claiming-to-show-journalist-from-gaza-is-ai-generated/",
+                    "title": "Fact Check: Viral Image Claiming To Show Body Of A Journalist From Gaza Is Not Real But AI-generated",
+                    "reviewDate": "2024-10-16T00:00:00Z",
+                    "textualRating": "Misleading",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 9
+        },
+        {
+            "text": "Former President Donald Trump claimed on Monday that he has visited Gaza in the past.",
+            "claimant": "Viral Post",
+            "claimDate": "2024-10-07T00:00:00Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "CheckYourFact",
+                        "site": "checkyourfact.com"
+                    },
+                    "url": "https://checkyourfact.com/2024/10/09/fact-check-fact-checking-donald-trumps-claim-that-he-has-visited-gaza/",
+                    "title": "FACT CHECK: Fact-Checking Donald Trump’s Claim That He Has Visited Gaza",
+                    "reviewDate": "2024-10-09T14:45:31Z",
+                    "textualRating": "False",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 10
+        },
+        {
+            "text": "Social media posts claiming to show recent Israeli attack on Lebanon.",
+            "claimant": "X",
+            "claimDate": "2024-10-21T00:00:00Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "Logically Facts",
+                        "site": "logicallyfacts.com"
+                    },
+                    "url": "https://www.logicallyfacts.com/en/fact-check/old-photos-gaza-linked-to-israeli-attack-in-lebanon",
+                    "title": "Old photos from Gaza falsely linked to Israeli attack on Lebanon",
+                    "reviewDate": "2024-10-22T00:00:00Z",
+                    "textualRating": "Misleading",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 11
+        },
+        {
+            "text": "Mercava Pride Zionist Industry Laundry clothesline in Gaza.",
+            "claimant": "Twitter.com",
+            "claimDate": "2024-07-15T21:02:14Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "site": "misbar.com"
+                    },
+                    "url": "https://www.misbar.com/en/factcheck/2024/07/15/photo-of-a-woman-from-south-lebanon-shared-in-relation-to-gaza",
+                    "title": "Photo of A Woman From South Lebanon Shared in Relation To Gaza",
+                    "reviewDate": "2024-07-15T21:02:14Z",
+                    "textualRating": "misleading",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 12
+        },
+        {
+            "text": "“Shocking. EU leaders responded more swiftly and strongly to assassination attempt at Trump than they responded at all to the mass killings of Palestinians in Gaza.”",
+            "claimant": "Chein Weihua",
+            "claimDate": "2024-07-16T19:57:53Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "VOA",
+                        "site": "voanews.com"
+                    },
+                    "url": "https://www.voanews.com/a/fact-check-in-china-and-iran-state-media-used-trump-assassination-attempt-to-accuse-west-of-neglecting-gaza-crisis/7700762.html",
+                    "title": "In China and Iran, state media used Trump assassination attempt to ...",
+                    "reviewDate": "2024-07-16T19:57:53Z",
+                    "textualRating": "Misleading",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 13
+        },
+        {
+            "text": "No, Israeli Embassy did not issue note verbale to MEA alleging sexual assault by senior Indian Army official; details inside",
+            "claimant": "PTI Fact Check",
+            "claimDate": "2025-04-30T15:04:01Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "PTI",
+                        "site": "ptinews.com"
+                    },
+                    "url": "https://www.ptinews.com/fact-detail/pti-fact-check-no-israeli-embassy-did-not-issue-note-verbale-to-mea-alleging-sexual-assault-by-senior-indian-army-official-details-inside/2512610",
+                    "title": "PTI Fact Check: No, Israeli Embassy did not issue note verbale to MEA alleging sexual assault by senior Indian Army official; details inside",
+                    "textualRating": "False",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 14
+        },
+        {
+            "text": "Breaking News: Fires broke out in several places across Israel due to the extreme heat that befell us.",
+            "claimant": "x.com",
+            "claimDate": "2025-04-26T15:11:42Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "site": "misbar.com"
+                    },
+                    "url": "https://www.misbar.com/en/factcheck/2025/04/26/old-photo-wildfires-israel-resurfaces-amid-recent-fires",
+                    "title": "Old Photo of Wildfires in Israel Resurfaces Amid Recent Fires",
+                    "reviewDate": "2025-04-26T15:11:42Z",
+                    "textualRating": "misleading",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 15
+        },
+        {
+            "text": "Thousands gathered at Sohrawardi Park in Kolkata, India, to show solidarity with the Palestinian people amid the ongoing Israeli assault on Gaza.",
+            "claimant": "x.com",
+            "claimDate": "2025-04-15T07:19:56Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "site": "misbar.com"
+                    },
+                    "url": "https://www.misbar.com/en/factcheck/2025/04/15/photos-show-recent-pro-palestine-protests-bangladesh-not-india",
+                    "title": "Photos Show Recent Pro-Palestine Protests in Bangladesh, Not India",
+                    "reviewDate": "2025-04-15T07:19:56Z",
+                    "textualRating": "misleading",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 16
+        },
+        {
+            "text": "Turkish President Recep Tayyip Erdoğan meeting with Jewish rabbis after the Israeli airstrikes in Syria.",
+            "claimant": "x.com",
+            "claimDate": "2025-04-13T08:58:57Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "site": "misbar.com"
+                    },
+                    "url": "https://www.misbar.com/en/factcheck/2025/04/13/erdogan%E2%80%99s-meeting-jewish-leaders-not-linked-recent-events",
+                    "title": "Erdogan’s Meeting With Jewish Leaders Not Linked To Recent Events",
+                    "reviewDate": "2025-04-13T08:58:57Z",
+                    "textualRating": "misleading",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 17
+        },
+        {
+            "text": "Two children were found two months later under the rubble of their home. No God bless Israel and its supporters.",
+            "claimant": "x.com",
+            "claimDate": "2025-04-14T05:34:56Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "site": "misbar.com"
+                    },
+                    "url": "https://www.misbar.com/en/factcheck/2025/04/14/photo-mummified-children-bolivia-falsely-circulated-dead-children-gaza",
+                    "title": "Photo of Mummified Children in Bolivia Falsely Circulated as Dead Children in Gaza",
+                    "reviewDate": "2025-04-14T05:34:56Z",
+                    "textualRating": "misleading",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 18
+        },
+        {
+            "text": "The rapper Eminem announced in April 2025 that he would hold a concert in Israel in June.",
+            "claimant": "x.com",
+            "claimDate": "2025-04-10T12:27:29Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "Lead Stories",
+                        "site": "leadstories.com"
+                    },
+                    "url": "https://leadstories.com/hoax-alert/2025/04/fact-check-eminem-israel-june-2025.html",
+                    "title": "Fact Check: Eminem Did NOT Announce a Concert in Israel for June 2025",
+                    "reviewDate": "2025-04-10T12:27:29Z",
+                    "textualRating": "Fake Poster",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 19
+        },
+        {
+            "text": "Breaking: Iran's IRGC Quds Force commander Gen. Esmail Qaani is confirmed safe in Israel.",
+            "claimant": "x.com",
+            "claimDate": "2025-04-03T00:11:14Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "site": "misbar.com"
+                    },
+                    "url": "https://www.misbar.com/en/factcheck/2025/04/03/iranian-general-esmail-qaani-did-not-flee-israel",
+                    "title": "Iranian General Esmail Qaani Did Not Flee to Israel",
+                    "reviewDate": "2025-04-03T00:11:14Z",
+                    "textualRating": "fake",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 20
+        },
+        {
+            "text": "At least four Palestinians were killed in a heavy Israeli bombardment on Deir al-Balah in the southern Gaza Strip.",
+            "claimant": "x.com",
+            "claimDate": "2025-03-19T13:06:59Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "site": "misbar.com"
+                    },
+                    "url": "https://www.misbar.com/en/factcheck/2025/03/19/outdated-photo-shows-aftermath-israeli-airstrike-lebanon-not-gaza",
+                    "title": "Outdated Photo Shows Aftermath of Israeli Airstrike on Lebanon, Not Gaza",
+                    "reviewDate": "2025-03-19T13:06:59Z",
+                    "textualRating": "misleading",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 21
+        },
+        {
+            "text": "Only mentions of Israel were marked by the CIA for redaction in JFK files",
+            "claimant": "x.com",
+            "claimDate": "2025-03-19T17:24:41Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "Lead Stories",
+                        "site": "leadstories.com"
+                    },
+                    "url": "https://leadstories.com/hoax-alert/2025/03/fact-check-mentions-of-israel-were-not-the-only-thing-cia-requested-to-be-redacted-in-jfk-files.html",
+                    "title": "Fact Check: Mentions of Israel Were NOT 'The Only Thing' CIA Has Requested To Be Redacted In JFK Files",
+                    "reviewDate": "2025-03-19T17:24:41Z",
+                    "textualRating": "More Items",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 22
+        },
+        {
+            "text": "Ukrainian President Volodymyr Zelenskyy signing bombs, claiming he was signing Israeli bombs intended for use against Palestinians in Gaza.",
+            "claimant": "x.com",
+            "claimDate": "2025-03-05T13:43:12Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "site": "misbar.com"
+                    },
+                    "url": "https://www.misbar.com/en/factcheck/2025/03/05/image-does-not-show-zelenskyy-signing-bombs-gaza",
+                    "title": "This Image Does Not Show Zelenskyy Signing Bombs for Gaza",
+                    "reviewDate": "2025-03-05T13:43:12Z",
+                    "textualRating": "misleading",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 23
+        },
+        {
+            "text": "A statement attributed to Turkey's President Erdogan, allegedly warning Israel",
+            "claimant": "x.com",
+            "claimDate": "2025-03-04T12:40:20Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "site": "misbar.com"
+                    },
+                    "url": "https://www.misbar.com/en/factcheck/2025/03/04/erdogan-did-not-urge-us-control-israel-over-syria-conflict",
+                    "title": "Erdogan Did Not Urge U.S. To Control Israel Over Syria Conflict",
+                    "reviewDate": "2025-03-04T12:40:20Z",
+                    "textualRating": "fake",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 24
+        },
+        {
+            "text": "NOW: Israel is violently bombing the surroundings of Southern Damascus, destroying its last remaining army depots.",
+            "claimant": "www.jpost.com",
+            "claimDate": "2025-03-01T11:41:50Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "site": "misbar.com"
+                    },
+                    "url": "https://www.misbar.com/en/factcheck/2025/03/01/image-2021-israeli-airstrike-gaza-shared-recent-israeli-bombing-syria",
+                    "title": "Image of 2021 Israeli Airstrike on Gaza Shared as Recent Israeli Bombing in Syria",
+                    "reviewDate": "2025-03-01T11:41:50Z",
+                    "textualRating": "misleading",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 25
+        },
+        {
+            "text": "Israeli occupation forces enter the town of Tasil in the countryside of Daraa on foot. While in the Muhajireen area in Homs, Al-Jolani elements arrest dozens of young men.",
+            "claimant": "x.com",
+            "claimDate": "2025-02-27T11:57:46Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "site": "misbar.com"
+                    },
+                    "url": "https://www.misbar.com/en/factcheck/2025/02/27/photo-not-related-israeli-forces%E2%80%99-recent-incursion-southern-syria",
+                    "title": "This Photo Is Not Related To Israeli Forces’ Recent Incursion Into Southern Syria",
+                    "reviewDate": "2025-02-27T11:57:46Z",
+                    "textualRating": "misleading",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 26
+        },
+        {
+            "text": "Hamas returned the hostages bodies to Israel in locked coffins with keys that do not open them.",
+            "claimant": "x.com",
+            "claimDate": "2025-02-22T13:04:57Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "site": "misbar.com"
+                    },
+                    "url": "https://www.misbar.com/en/factcheck/2025/02/22/hamas-did-not-hand-over-coffins-incorrect-keys",
+                    "title": "Hamas Did Not Hand Over Coffins with Incorrect Keys",
+                    "reviewDate": "2025-02-22T13:04:57Z",
+                    "textualRating": "misleading",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 27
+        },
+        {
+            "text": "Israeli channel was hacked by an Egyptian hacker.",
+            "claimant": "x.com",
+            "claimDate": "2025-02-10T13:03:56Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "site": "misbar.com"
+                    },
+                    "url": "https://www.misbar.com/en/factcheck/2025/02/10/israel%E2%80%99s-channel-14-was-not-hacked-egyptian-hacker",
+                    "title": "Israel’s Channel 14 Was Not Hacked by an Egyptian Hacker",
+                    "reviewDate": "2025-02-10T13:03:56Z",
+                    "textualRating": "fake",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 28
+        },
+        {
+            "text": "NewsNation and the New York Post reported that the Iron Dome intercepted 90% of ballistic missiles fired at Israel.",
+            "claimant": "NewsNation",
+            "claimDate": "2025-01-28T00:00:00Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "CheckYourFact",
+                        "site": "checkyourfact.com"
+                    },
+                    "url": "https://checkyourfact.com/2025/02/06/fact-check-iron-dome-intercept-ballistic-missiles/",
+                    "title": "FACT CHECK: Does The Iron Dome Intercept 90% Of Ballistic Missiles?",
+                    "reviewDate": "2025-02-06T18:16:13Z",
+                    "textualRating": "Unsubstantiated",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 29
+        },
+        {
+            "text": "A dangerous photo of Israeli Prime Minister Benjamin Netanyahu with US President Trump and Elon Musk!",
+            "claimant": "x.com",
+            "claimDate": "2025-02-05T12:29:04Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "site": "misbar.com"
+                    },
+                    "url": "https://www.misbar.com/en/factcheck/2025/02/05/image-of-israeli-pm-netanyahu-with-trump-and-musk-is-ai-generated",
+                    "title": "Image of Israeli PM Netanyahu With Trump and Musk Is AI-Generated",
+                    "reviewDate": "2025-02-05T12:29:04Z",
+                    "textualRating": "fake",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 30
+        },
+        {
+            "text": "A vegetable stand in #Gaza with a Merkava tank, the pride of the Israeli army, as its decor.",
+            "claimant": "x.com",
+            "claimDate": "2025-01-27T15:59:58Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "site": "misbar.com"
+                    },
+                    "url": "https://www.misbar.com/en/factcheck/2025/01/27/photo-of-vegetables-shelved-on-a-tank-is-from-syria-not-gaza",
+                    "title": "Photo of Vegetables Shelved on a Tank Is from Syria, Not Gaza",
+                    "reviewDate": "2025-01-27T15:59:58Z",
+                    "textualRating": "misleading",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 31
+        },
+        {
+            "text": "Israeli PM Netanyahu is suffering from prostate cancer",
+            "claimant": "Social media user",
+            "claimDate": "2025-01-08T18:30:00Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "THIP Media",
+                        "site": "thip.media"
+                    },
+                    "url": "https://www.thip.media/health-news-fact-check/is-israeli-pm-netanyahu-suffering-from-prostate-cancer/97476/",
+                    "title": "Fact Check: Is Israeli PM Netanyahu suffering from prostate cancer?",
+                    "reviewDate": "2025-01-09T05:49:56Z",
+                    "textualRating": "False",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 32
+        },
+        {
+            "text": "Image shows headline calling 'glorification' of CEO shooter ‘anti-Israeli’",
+            "claimant": "social media",
+            "claimDate": "2024-12-13T00:00:00Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "USA Today",
+                        "site": "usatoday.com"
+                    },
+                    "url": "https://www.usatoday.com/story/news/factcheck/2024/12/13/new-york-times-headline-luigi-mangione-anti-israeli-fact-check/76965562007/",
+                    "title": "New York Times didn't publish 'anti-Israeli' headline about Luigi ...",
+                    "reviewDate": "2024-12-13T23:25:47Z",
+                    "textualRating": "Altered",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 33
+        },
+        {
+            "text": "Were Israeli Tanks Spotted Outside Damascus? A Fact Check",
+            "claimDate": "2024-12-11T11:57:09Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "NDTV",
+                        "site": "ndtv.com"
+                    },
+                    "url": "https://www.ndtv.com/world-news/were-israeli-tanks-spotted-outside-damascus-a-fact-check-7224391",
+                    "title": "Were Israeli Tanks Spotted Outside Damascus? A Fact Check",
+                    "reviewDate": "2024-12-11T11:57:09Z",
+                    "textualRating": "False",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 34
+        },
+        {
+            "text": "The image shows the Israeli army reaching Damascus in Syria.",
+            "claimant": "Social Media Users",
+            "claimDate": "2024-12-11T05:16:17Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "NewsMeter",
+                        "site": "newsmeter.in"
+                    },
+                    "url": "https://newsmeter.in/fact-check/israeli-tanks-spotted-outside-damascus-no-image-is-from-gaza-in-2023-740432",
+                    "title": "Fact Check: Israeli tanks spotted outside Damascus? No, image is ...",
+                    "reviewDate": "2024-12-11T05:16:17Z",
+                    "textualRating": "False",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 35
+        },
+        {
+            "text": "Israeli Air Force Commander Tomer Bar was killed in a Hezbollah drone strike in Tel Aviv",
+            "claimant": "X, Facebook, Social media users",
+            "claimDate": "2024-11-27T00:00:00Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "Logically Facts",
+                        "site": "logicallyfacts.com"
+                    },
+                    "url": "https://www.logicallyfacts.com/en/fact-check/israels-air-force-chief-major-general-tomer-bar-is-not-dead",
+                    "title": "Israel's Air Force Chief Major General Tomer Bar is not dead",
+                    "reviewDate": "2024-12-03T00:00:00Z",
+                    "textualRating": "False",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 36
+        },
+        {
+            "text": "Photo Mohammad Mahroof, a Hamas militant from Gaza, accused of killing Israeli children in 2023. In 2024, Israel caught and disarmed him and left him alive.",
+            "claimant": "Social Media User",
+            "claimDate": "2024-11-10T00:00:00Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "FACTLY",
+                        "site": "factly.in"
+                    },
+                    "url": "https://factly.in/an-image-of-15-year-old-diaa-al-adini-injured-in-an-august-2024-israeli-strike-is-being-falsely-shared-as-a-hamas-militant/",
+                    "title": "Photo of 15-year-old Diaa Al-Adini, injured in an August 2024 Israeli ...",
+                    "reviewDate": "2024-11-11T00:00:00Z",
+                    "textualRating": "FALSE",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 37
+        },
+        {
+            "text": "Image Shows Israel Attack On Iran",
+            "claimant": "Social Media",
+            "claimDate": "2024-10-26T00:00:00Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "NewsMobile",
+                        "site": "newsmobile.in"
+                    },
+                    "url": "https://www.newsmobile.in/nm-fact-checker/fact-check-2021-image-goes-viral-falsely-claiming-its-the-recent-israel-attack-on-iran/",
+                    "title": "Fact Check: 2021 Image Goes Viral Falsely Claiming It’s The Recent Israel Attack On Iran",
+                    "reviewDate": "2024-10-30T00:00:00Z",
+                    "textualRating": "Misleading",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 38
+        },
+        {
+            "text": "A drone strikes dining israeli soldiers/",
+            "claimant": "x.com",
+            "claimDate": "2024-10-29T21:09:08Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "site": "misbar.com"
+                    },
+                    "url": "https://www.misbar.com/en/factcheck/2024/10/29/old-scenes-recirculate-allegedly-showing-a-drone-strike-on-israeli-soldiers-dining-at-a-military-base",
+                    "title": "Old Scenes Recirculate, Allegedly Showing a Drone Strike on Israeli Soldiers Dining at a Military Base",
+                    "reviewDate": "2024-10-29T21:09:08Z",
+                    "textualRating": "misleading",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 39
+        },
+        {
+            "text": "Netanyahu’s son Yair was killed in a drone attack that targeted the Israeli PM’s home in Caesarea, Israel.",
+            "claimant": "Social Media Users",
+            "claimDate": "2024-10-21T12:08:42Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "NewsMeter",
+                        "site": "newsmeter.in"
+                    },
+                    "url": "https://newsmeter.in/fact-check/no-yair-netanyahu-was-not-assassinated-in-drone-attack-on-israeli-pms-home-737767",
+                    "title": "Fact Check: No, Yair Netanyahu was not assassinated in drone attack on Israeli PM’s home",
+                    "reviewDate": "2024-10-21T12:08:42Z",
+                    "textualRating": "False",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 40
+        },
+        {
+            "text": "Israel Defense Forces chief of staff killed in Hezbollah drone attack",
+            "claimant": "Social media",
+            "claimDate": "2024-10-13T00:00:00Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "USA Today",
+                        "site": "usatoday.com"
+                    },
+                    "url": "https://www.usatoday.com/story/news/factcheck/2024/10/18/idf-chief-herzi-halevi-hezbollah-drones-fact-check/75733070007/",
+                    "title": "IDF chief Herzi Halevi not killed by Hezbollah drones | Fact check",
+                    "reviewDate": "2024-10-18T21:31:41Z",
+                    "textualRating": "False",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 41
+        },
+        {
+            "text": "Trump post urged retaliation against Israel if he's assassinated",
+            "claimant": "Social media",
+            "claimDate": "2024-10-13T00:00:00Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "USA Today",
+                        "site": "usatoday.com"
+                    },
+                    "url": "https://www.usatoday.com/story/news/factcheck/2024/10/17/trump-post-assassination-iran-israel-fact-check/75700686007/",
+                    "title": "Trump post edited to target Israel instead of Iran | Fact check",
+                    "reviewDate": "2024-10-17T21:19:47Z",
+                    "textualRating": "False",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 42
+        },
+        {
+            "text": "BREAKING: The UK has announced sanctions against several Iranian senior military figures and organisations following Iran's multiple rocket attack on Israel on 1 October.",
+            "claimant": "x.com",
+            "claimDate": "2024-10-15T13:06:19Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "site": "misbar.com"
+                    },
+                    "url": "https://www.misbar.com/en/factcheck/2024/10/15/this-image-shows-tents-engulfed-in-flames-after-an-israeli-airstrike-not-the-aftermath-of-an-iranian-attack-on-israel",
+                    "title": "This Image Shows Tents Engulfed in Flames After an Israeli Airstrike, Not the Aftermath of an Iranian Attack on Israel",
+                    "reviewDate": "2024-10-15T13:06:19Z",
+                    "textualRating": "misleading",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 43
+        },
+        {
+            "text": "Fact check: ICJ did not declare Israel an illegal state",
+            "claimant": "Indian Express Lighthouse Journalism",
+            "claimDate": "2024-10-10T07:44:48Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "Lighthouse Journalism",
+                        "site": "lighthousejournalism.com"
+                    },
+                    "url": "https://www.lighthousejournalism.com/world/fact-check-icj-did-not-declare-israel-an-illegal-state-3078/",
+                    "title": "Fact check: ICJ did not declare Israel an illegal state ...",
+                    "textualRating": "False",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 44
+        },
+        {
+            "text": "Israel has targeted *FRENCH* Multinational Company TotalEnergies gas station in Beirut. This comes after Emmanuel Macron BANNED military aid to Israel.",
+            "claimant": "Viral social media post",
+            "claimDate": "2024-10-06T00:00:00Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "Greece Fact Check",
+                        "site": "factchecker.gr"
+                    },
+                    "url": "https://www.factchecker.gr/2024/10/10/did-israeli-warplanes-deliberately-bomb-the-french-totalenergies-facilities-in-beirut/",
+                    "title": "Has Israel deliberately targeted French multinational company ...",
+                    "reviewDate": "2024-10-10T00:00:00Z",
+                    "textualRating": "DISINFORMATION",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 45
+        },
+        {
+            "text": "Mel Gibson shared a social media post stating Israel will end soon",
+            "claimant": "X, Facebook, Social media users",
+            "claimDate": "2024-10-07T00:00:00Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "Logically Facts",
+                        "site": "logicallyfacts.com"
+                    },
+                    "url": "https://www.logicallyfacts.com/en/fact-check/fake-quote-about-israel-attributed-to-actor-mel-gibson",
+                    "title": "Fake quote about Israel attributed to Mel Gibson",
+                    "reviewDate": "2024-10-09T00:00:00Z",
+                    "textualRating": "Fake",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 46
+        },
+        {
+            "text": "A post made on X claims that Israel experienced an earthquake on October 5th.",
+            "claimant": "viral post",
+            "claimDate": "2024-10-05T00:00:00Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "Check Your Fact",
+                        "site": "checkyourfact.com"
+                    },
+                    "url": "https://checkyourfact.com/2024/10/08/fact-check-did-israel-just-have-an-earthquake/",
+                    "title": "FACT CHECK: Did Israel Just Have An Earthquake?",
+                    "reviewDate": "2024-10-08T17:05:49Z",
+                    "textualRating": "False",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 47
+        },
+        {
+            "text": "போரில் உயிர் நீத்த இஸ்ரேல் நாட்டு இராணுவ வீரர்கள் உடல் அடக்கம் செய்யப்பட்டது. \"வினை விதைத்தால் அதை அறுவடை செய்தே ஆகவேண்டும்\"",
+            "claimant": "MyNa_Writes_",
+            "claimDate": "2024-10-04T00:00:00Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "YouTurn",
+                        "site": "youturn.in"
+                    },
+                    "url": "https://youturn.in/factcheck/israel-military-soldier-death-falsely-linked-with-hezbolla.html",
+                    "title": "Youturn | fact check",
+                    "reviewDate": "2024-10-08T00:00:00Z",
+                    "textualRating": "false",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 48
+        },
+        {
+            "text": "Israel’s defense minister was killed in Iranian missile attack",
+            "claimant": "Social media",
+            "claimDate": "2024-10-02T00:00:00Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "USA Today",
+                        "site": "usatoday.com"
+                    },
+                    "url": "https://www.usatoday.com/story/news/factcheck/2024/10/07/yoav-gallant-wasnt-killed-iran-attack-fact-check/75524076007/",
+                    "title": "No, Israeli defense minister was not killed in attack | Fact check",
+                    "reviewDate": "2024-10-07T17:08:13Z",
+                    "textualRating": "False",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 49
+        },
+        {
+            "text": "Netanyahu lifted off out of Israel abandoning his people to Irans ballistic missiles.",
+            "claimant": "x.com",
+            "claimDate": "2024-10-06T09:16:13Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "site": "misbar.com"
+                    },
+                    "url": "https://www.misbar.com/en/factcheck/2024/10/06/netanyahu-did-not-flee-to-poland-amid-irans-attack",
+                    "title": "Netanyahu Did Not Flee to Poland Amid Iran's Attack",
+                    "reviewDate": "2024-10-06T09:16:13Z",
+                    "textualRating": "fake",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 50
+        },
+        {
+            "text": "“The Zionist regime’s move to attack Yemen and the country’s civilian and service infrastructure is a blatant and repeated violation of the United Nations Charter.”",
+            "claimant": "Nasser Kanani",
+            "claimDate": "2024-10-03T07:55:31Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "VOA",
+                        "site": "voanews.com"
+                    },
+                    "url": "https://www.voanews.com/a/iran-propagates-israel-s-response-to-houthi-attacks-as-war-crimes-/7808750.html",
+                    "title": "Iran propagates Israel’s response to Houthi attacks as ‘war crimes’",
+                    "reviewDate": "2024-10-03T07:55:31Z",
+                    "textualRating": "Misleading",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 51
+        },
+        {
+            "text": "Fact Check: Did Hezbollah chief Nasrallah break down after Israel's airstrikes on Lebanon? Know truth",
+            "claimant": "Social Media Users",
+            "claimDate": "2024-09-28T00:00:00Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "India TV News",
+                        "site": "indiatvnews.com"
+                    },
+                    "url": "https://www.indiatvnews.com/fact-check/fact-check-did-hezbollah-chief-nasrallah-break-down-after-israel-airstrikes-on-lebanon-know-truth-misleading-claim-latest-updates-2024-09-28-954429",
+                    "title": "Fact Check: Did Hezbollah chief Nasrallah break down after Israel's ...",
+                    "textualRating": "Misleading",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 52
+        },
+        {
+            "text": "Despite strict military censorship in Israel A photo of the Ramat David base that was attacked by Hezbollah at dawn today was leaked - unconfirmed. Israel does not acknowledge that anything happened at this air base. This base is the largest Israeli air base in the north and center of the country. ETReport",
+            "claimant": "x.com",
+            "claimDate": "2024-09-26T19:43:07Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "site": "misbar.com"
+                    },
+                    "url": "https://www.misbar.com/en/factcheck/2024/09/26/this-photo-of-ramat-david-is-ai-generated",
+                    "title": "This Photo Of Ramat David Is AI-Generated",
+                    "reviewDate": "2024-09-26T19:43:07Z",
+                    "textualRating": "fake",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 53
+        },
+        {
+            "text": "“Israeli” media: Hezbollah drone reaches oil refineries in the north of occupied Palestine",
+            "claimant": "ahdonaeng",
+            "claimDate": "2024-09-23T00:00:00Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "YouTurn",
+                        "site": "en.youturn.in"
+                    },
+                    "url": "https://en.youturn.in/factcheck/The-video-showingexplosion-in-oil-refinery-is-from-Russia-Ukraine-war.html",
+                    "title": "Russia-Ukraine drone attack is falsely shared as from the re...",
+                    "reviewDate": "2024-09-25T00:00:00Z",
+                    "textualRating": "false",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 54
+        },
+        {
+            "text": "BREAKING: 22 dead and 74 injured among Israels Unit 8200 in Hezbollahs 25 August retaliation, European security sources tell Al-Mayadeen. Iron dome failed by Hezbollah missiles.",
+            "claimant": "x.com",
+            "claimDate": "2024-09-17T16:00:37Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "site": "misbar.com"
+                    },
+                    "url": "https://www.misbar.com/en/factcheck/2024/09/17/photo-of-israeli-coffins-is-from-a-staged-funeral-representing-hostages-killed-in-gaza",
+                    "title": "Photo of Israeli Coffins Is From a Staged Funeral Representing ...",
+                    "reviewDate": "2024-09-17T16:00:37Z",
+                    "textualRating": "misleading",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 55
+        },
+        {
+            "text": "According to local sources, a spy for the Israelis was executed by firing squad in Al-Nuseirat camp in central Gaza Strip.",
+            "claimant": "x.com",
+            "claimDate": "2024-09-16T14:53:54Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "site": "misbar.com"
+                    },
+                    "url": "https://www.misbar.com/en/factcheck/2024/09/16/old-photo-shows-execution-of-individual-accused-of-collaborating-with-israel-in-tulkarm-not-gazarsquos-al-nuseirat",
+                    "title": "Old Photo Shows Execution of Individual Accused of Collaborating with Israel in Tulkarm, Not Gaza’s Al-Nuseirat",
+                    "reviewDate": "2024-09-16T14:53:54Z",
+                    "textualRating": "misleading",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 56
+        },
+        {
+            "text": "Israel is the only country outside the US with a 9/11 memorial",
+            "claimant": "social media",
+            "claimDate": "2024-09-11T00:00:00Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "USA Today",
+                        "site": "usatoday.com"
+                    },
+                    "url": "https://www.usatoday.com/story/news/factcheck/2024/09/13/us-israel-other-countries-with-911-memorials-fact-check/75209435007/",
+                    "title": "More than a dozen countries have 9/11 memorials | Fact check",
+                    "reviewDate": "2024-09-13T21:28:48Z",
+                    "textualRating": "False",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 57
+        },
+        {
+            "text": "Kamala Harris \"wouldn't even meet with (Israeli Prime Minister Benjamin) Netanyahu when he went to Congress to make a very important speech. She refused to be there 'cause she was at a sorority party of hers.\"",
+            "claimant": "Donald Trump",
+            "claimDate": "2024-09-10T00:00:00Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "PolitiFact",
+                        "site": "politifact.com"
+                    },
+                    "url": "https://www.politifact.com/article/2024/sep/11/2024-presidential-debate-fact-check-harris-trump/",
+                    "title": "Fact-checking Harris and Trump’s first presidential debate",
+                    "reviewDate": "2024-09-11T14:37:20Z",
+                    "textualRating": "Half True",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 58
+        },
+        {
+            "text": "Image shows a huge protest against Israel in Kochi, Kerala.",
+            "claimant": "Facebook,Twitter,Social Media",
+            "claimDate": "2024-09-05T07:17:02Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "The Quint",
+                        "site": "thequint.com"
+                    },
+                    "url": "https://www.thequint.com/news/webqoof/old-image-from-kochi-shared-as-massive-protest-against-israel-fact-check",
+                    "title": "Fact-Check: Does This Image Show A Massive Protest Against Israel in Kerala? No, Claim is False!",
+                    "reviewDate": "2024-09-05T07:17:02Z",
+                    "textualRating": "False",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 59
+        },
+        {
+            "text": "Israeli Finance Minister Smotrich, who previously threatened to invade Lebanon, was found today taking shelter in Israeli bomb shelter.",
+            "claimant": "x.com",
+            "claimDate": "2024-08-26T08:18:31Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "site": "misbar.com"
+                    },
+                    "url": "https://www.misbar.com/en/factcheck/2024/08/26/this-image-does-not-show-bezalel-smotrich-taking-shelter-following-the-recent-hezbollah-attack",
+                    "title": "This Image Does Not Show Bezalel Smotrich Taking Shelter Following the Recent Hezbollah Attack",
+                    "reviewDate": "2024-08-26T08:18:31Z",
+                    "textualRating": "misleading",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 60
+        },
+        {
+            "text": "FC Barcelona stands with Jewish terrorists and murder of civilians.",
+            "claimant": "x.com",
+            "claimDate": "2024-09-19T11:08:13Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "site": "misbar.com"
+                    },
+                    "url": "https://www.misbar.com/en/factcheck/2024/09/19/photo-of-barcelona-president-with-israeli-representatives-predates-gaza-war",
+                    "title": "Photo of Barcelona President with Israeli Representatives Predates ...",
+                    "reviewDate": "2024-09-19T11:08:13Z",
+                    "textualRating": "misleading",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 61
+        },
+        {
+            "text": "Social media users sharing a photo of Israeli PM Benjamin Netanyahu's house claiming that the photo was taken by Hezbollah",
+            "claimant": "X",
+            "claimDate": "2024-08-18T00:00:00Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "Logically Facts",
+                        "site": "logicallyfacts.com"
+                    },
+                    "url": "https://www.logicallyfacts.com/en/fact-check/false-no-this-photo-of-netanyahu-s-home-was-not-taken-by-a-hezbollah-drone",
+                    "title": "No, this photo of Netanyahu's home was not taken by a Hezbollah drone",
+                    "reviewDate": "2024-08-21T00:00:00Z",
+                    "textualRating": "False",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 62
+        },
+        {
+            "text": "Photo Shows Five Dancing Israelis On The Day Of The September 11 2001 US Attacks",
+            "claimant": "x.com",
+            "claimDate": "2024-08-21T21:13:00Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "Lead Stories",
+                        "site": "leadstories.com"
+                    },
+                    "url": "https://leadstories.com/hoax-alert/2024/08/fact-check-fake-photo-shows-five-dancing-israelis-on-september-11-2001-world-trade-center-attacks.html",
+                    "title": "Fact Check: FAKE Photo Shows 'Five Dancing Israelis' On September 11, 2001, World Trade Center Attacks",
+                    "reviewDate": "2024-08-21T21:13:00Z",
+                    "textualRating": "AI Generated",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 63
+        },
+        {
+            "text": "Netanyahu's home in Caesarea, Israel, was captured by a drone belonging to Lebanese Hezbollah.",
+            "claimant": "x.com",
+            "claimDate": "2024-08-20T09:39:20Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "site": "misbar.com"
+                    },
+                    "url": "https://www.misbar.com/en/factcheck/2024/08/20/this-photo-does-not-depict-netanyahursquos-home-captured-by-hezbollah-drone",
+                    "title": "This Photo Does Not Depict Netanyahu’s Home Captured by Hezbollah Drone",
+                    "reviewDate": "2024-08-20T09:39:20Z",
+                    "textualRating": "misleading",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 64
+        },
+        {
+            "text": "U.S. aircraft carrier in the Red Sea to support Israel amidst tensions with Hezbollah",
+            "claimant": "Social Media",
+            "claimDate": "2024-08-06T00:00:00Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "NewsMobile",
+                        "site": "newsmobile.in"
+                    },
+                    "url": "https://www.newsmobile.in/nm-fact-checker/fact-check-image-of-aircraft-carrier-falsely-claim-to-show-us-support-for-israel-in-red-sea/",
+                    "title": "Fact Check: Image of Aircraft Carrier Falsely Claim To Show US’ Support For Israel In Red Sea",
+                    "reviewDate": "2024-08-12T00:00:00Z",
+                    "textualRating": "Misleading",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 65
+        },
+        {
+            "text": "Israel's Channel 12 asked a question in an Israeli public opinion poll: Do you agree with the claim that a soldier is allowed to rape a prisoner with his hands tied?",
+            "claimant": "x.com",
+            "claimDate": "2024-08-08T13:08:31Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "site": "misbar.com"
+                    },
+                    "url": "https://www.misbar.com/en/factcheck/2024/08/08/israeli-channel-12-news-did-not-conduct-a-poll-on-allowing-soldiers-to-rape-prisoners",
+                    "title": "Israeli Channel 12 News Did Not Conduct a Poll on Allowing Soldiers to Rape Prisoners",
+                    "reviewDate": "2024-08-08T13:08:31Z",
+                    "textualRating": "fake",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 66
+        },
+        {
+            "text": "A photo shared on Facebook claims to show a damaged building where Hamas Chief Ismail Haniyeh was assassinated by an Israeli strike.",
+            "claimant": "viral photo",
+            "claimDate": "2024-07-31T00:00:00Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "CheckYourFact",
+                        "site": "checkyourfact.com"
+                    },
+                    "url": "https://checkyourfact.com/2024/08/07/fact-check-no-photo-does-not-show-building-where-hamas-chief-was-assassinated/",
+                    "title": "FACT CHECK: No, Photo Does Not Show Building Where Hamas Chief Was Assassinated",
+                    "reviewDate": "2024-08-07T14:37:14Z",
+                    "textualRating": "False",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 67
+        },
+        {
+            "text": "U.S. warships are en route to the Lebanon coast to support Israel Defense Forces (IDF)",
+            "claimant": "Mounir Tadros",
+            "claimDate": "2024-08-02T00:00:00Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "Logically Facts",
+                        "site": "logicallyfacts.com"
+                    },
+                    "url": "https://www.logicallyfacts.com/en/fact-check/false-unrelated-image-shared-as-u-s-warships-heading-to-lebanon-to-support-idf",
+                    "title": "Unrelated image shared as U.S. warships heading to Lebanon to 'support IDF'",
+                    "reviewDate": "2024-08-07T00:00:00Z",
+                    "textualRating": "False",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 68
+        },
+        {
+            "text": "Lebanese Hezbollah captures and publishes a photo of the Israeli Prime Minister inside his office with a message: Do not test our capabilities. We intend to keep you in a state of anxiety!",
+            "claimant": "x.com",
+            "claimDate": "2024-08-06T08:40:14Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "site": "misbar.com"
+                    },
+                    "url": "https://www.misbar.com/en/factcheck/2024/08/06/hezbollah-did-not-capture-an-image-of-netanyahu-inside-his-office",
+                    "title": "Hezbollah Did Not Capture an Image of Netanyahu Inside His Office",
+                    "reviewDate": "2024-08-06T08:40:14Z",
+                    "textualRating": "fake",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 69
+        },
+        {
+            "text": "Egyptian karate players raised the Palestinian flag after defeating Israel in the ongoing Paris Olympics.",
+            "claimant": "Social media users",
+            "claimDate": "2024-08-05T00:00:00Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "India Today",
+                        "site": "indiatoday.in"
+                    },
+                    "url": "https://www.indiatoday.in/fact-check/story/fact-check-old-karate-contest-photo-shared-egyptians-raising-palestinian-flag-paris-olympics-2577123-2024-08-05",
+                    "title": "Fact Check: Old Karate contest photo shared as Palestine flag raised at Paris Olympics",
+                    "textualRating": "False",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 70
+        },
+        {
+            "text": "Esmail Qaani, the commander of the Iranian Revolutionary Guards, disguised in women’s clothing in fear of Israeli bombing.",
+            "claimant": "Facebook and X users",
+            "claimDate": "2024-08-03T00:00:00Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "Logically Facts",
+                        "site": "logicallyfacts.com"
+                    },
+                    "url": "https://www.logicallyfacts.com/en/fact-check/fake-viral-image-of-iranian-brigadier-general-esmail-qaani-in-a-burqa-is-edited",
+                    "title": "Viral image of Iranian Brigadier General Esmail Qaani in a burqa is edited",
+                    "reviewDate": "2024-08-05T00:00:00Z",
+                    "textualRating": "Fake",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 71
+        },
+        {
+            "text": "Israeli intelligence tracked Hamas leader Ismail Haniyeh through WhatsApp.",
+            "claimant": "x.com",
+            "claimDate": "2024-08-04T11:44:45Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "site": "misbar.com"
+                    },
+                    "url": "https://www.misbar.com/en/factcheck/2024/08/04/no-evidence-israel-tracked-ismail-haniyeh-via-whatsapp-spyware-to-drone-strike-him",
+                    "title": "No Evidence Israel Tracked Ismail Haniyeh via WhatsApp Spyware to Drone Strike Him",
+                    "reviewDate": "2024-08-04T11:44:45Z",
+                    "textualRating": "fake",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 72
+        },
+        {
+            "text": "Picture of Israeli team during 2024 Paris Olympics opening ceremony with 'Team Genocide' Banner",
+            "claimant": "Social Media",
+            "claimDate": "2024-08-01T00:00:00Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "NewsMobile",
+                        "site": "newsmobile.in"
+                    },
+                    "url": "https://www.newsmobile.in/nm-fact-checker/fact-check-edited-picture-of-israeli-contingent-from-2024-olympics-opening-ceremony-shared/",
+                    "title": "Fact Check: Edited Picture Of Israeli Contingent From 2024 Olympics Opening Ceremony Shared",
+                    "reviewDate": "2024-08-02T00:00:00Z",
+                    "textualRating": "Edited Picture",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 73
+        },
+        {
+            "text": "Algerian athlete withdrew from Olympics before match against Israeli opponent",
+            "claimant": "Social media",
+            "claimDate": "2024-07-28T00:00:00Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "USA Today",
+                        "site": "usatoday.com"
+                    },
+                    "url": "https://www.usatoday.com/story/news/factcheck/2024/07/30/algerian-disqualified-from-olympic-match-israel-fact-check/74589378007/",
+                    "title": "Algerian disqualified from Olympic match, didn't withdraw | Fact check",
+                    "reviewDate": "2024-07-30T16:25:24Z",
+                    "textualRating": "False",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 74
+        },
+        {
+            "text": "The Israeli Olympic team is NOT allowed to wear their #BringThemHome pins at the #PARIS2024Games. But that sure didn't stop Israels swimmers from forming words and symbols like these during practice.",
+            "claimant": "x.com",
+            "claimDate": "2024-07-29T11:54:20Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "site": "misbar.com"
+                    },
+                    "url": "https://www.misbar.com/en/factcheck/2024/07/29/outdated-photo-of-israelrsquos-artistic-swimming-team-resurfaces-related-to-the-2024-olympics",
+                    "title": "Outdated Photo of Israel’s Artistic Swimming Team Resurfaces Related to the 2024 Olympics",
+                    "reviewDate": "2024-07-29T11:54:20Z",
+                    "textualRating": "misleading",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 75
+        },
+        {
+            "text": "A photo shows the aftermath of a Houthi attack on Tel Aviv, Israel.",
+            "claimant": "Twitter.com",
+            "claimDate": "2024-07-24T18:36:30Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "site": "misbar.com"
+                    },
+                    "url": "https://www.misbar.com/en/factcheck/2024/07/24/old-photo-of-gaza-rocket-strike-on-israel-resurfaces-amid-yemen-israel-escalation",
+                    "title": "Old Photo of Gaza Rocket Strike on Israel Resurfaces Amid Yemen-Israel Escalation",
+                    "reviewDate": "2024-07-24T18:36:30Z",
+                    "textualRating": "misleading",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 76
+        },
+        {
+            "text": "PALESTINIAN CHILD STUCK UNDER THE RUBBLE AFTER ISRAELI AIRSTRIKE",
+            "claimant": "Twitter.com",
+            "claimDate": "2024-07-23T16:26:57Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "site": "misbar.com"
+                    },
+                    "url": "https://www.misbar.com/en/factcheck/2024/07/23/this-image-of-a-child-under-the-rubble-is-not-from-gaza",
+                    "title": "This Image of a Child Under the Rubble Is Not from Gaza",
+                    "reviewDate": "2024-07-23T16:26:57Z",
+                    "textualRating": "misleading",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 77
+        },
+        {
+            "text": "A photo shows Israelis fleeing the airport after the Houthis attack.",
+            "claimant": "Twitter.com",
+            "claimDate": "2024-07-23T15:23:43Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "site": "misbar.com"
+                    },
+                    "url": "https://www.misbar.com/en/factcheck/2024/07/23/old-photo-of-crowded-ben-gurion-airport-resurfaces-after-houthis-drone-attack-on-israel",
+                    "title": "Old Photo of Crowded Ben Gurion Airport Resurfaces After Houthis' Drone Attack on Israel",
+                    "reviewDate": "2024-07-23T15:23:43Z",
+                    "textualRating": "misleading",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 78
+        },
+        {
+            "text": "This photo was taken in Gaza. She was holding her sister's oxygen mask inside the ambulance. She had already passed away, yet her hand remained on the mask firmly. Look what did Israel America Taxpayer with them.",
+            "claimant": "Twitter.com",
+            "claimDate": "2024-07-20T18:55:05Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "site": "misbar.com"
+                    },
+                    "url": "https://www.misbar.com/en/factcheck/2024/07/20/2018-photo-of-suffocated-girls-from-syria-resurfaces-in-relation-to-gaza-war",
+                    "title": "2018 Photo of Suffocated Girls from Syria Resurfaces in Relation to Gaza War",
+                    "reviewDate": "2024-07-20T18:55:05Z",
+                    "textualRating": "misleading",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 79
+        },
+        {
+            "text": "This photo shows a man from Gaza holding the hand of his son killed in an Israeli bombing.",
+            "claimant": "X, Facebook",
+            "claimDate": "2024-07-14T00:00:00Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "Logically Facts",
+                        "site": "logicallyfacts.com"
+                    },
+                    "url": "https://www.logicallyfacts.com/en/fact-check/false-no-photo-doesn-t-show-gaza-man-holding-hand-of-son-killed-in-israeli-bombing",
+                    "title": "No, photo doesn’t show Gaza man holding hand of son killed in Israeli bombing",
+                    "reviewDate": "2024-07-16T00:00:00Z",
+                    "textualRating": "False",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 80
+        },
+        {
+            "text": "Mayar Hamida (9 years old) and Bilal Hamida (6 years old) were killed by Israel along with their mother and grandmother at Al-Jaoni UN school in Al-Nuseirat refugee camp today.",
+            "claimant": "Twitter.com",
+            "claimDate": "2024-07-15T20:00:54Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "site": "misbar.com"
+                    },
+                    "url": "https://www.misbar.com/en/factcheck/2024/07/15/israel-tragically-killed-the-hamida-siblings-in-october-2023-not-recently",
+                    "title": "Israel Tragically Killed the Hamida Siblings in October 2023, Not Recently",
+                    "reviewDate": "2024-07-15T20:00:54Z",
+                    "textualRating": "misleading",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 81
+        },
+        {
+            "text": "US reinstituted draft for Israel-Hamas war",
+            "claimant": "Social media",
+            "claimDate": "2024-07-09T00:00:00Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "USA Today",
+                        "site": "usatoday.com"
+                    },
+                    "url": "https://www.usatoday.com/story/news/factcheck/2024/07/12/us-draft-israel-hamas-war-fact-check/74359207007/",
+                    "title": "False claim Americans drafted for Israel-Hamas war | Fact check",
+                    "reviewDate": "2024-07-12T21:24:27Z",
+                    "textualRating": "False",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 82
+        },
+        {
+            "text": "The image shows Dwayne Johnson wearing Israeli flag in support of Israel.",
+            "claimant": "Facebook and TikTok",
+            "claimDate": "2024-07-20T00:00:00Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "Logically Facts",
+                        "site": "logicallyfacts.com"
+                    },
+                    "url": "https://www.logicallyfacts.com/en/fact-check/fake-ai-image-of-dwayne-johnson-shared-to-claim-that-he-voiced-support-for-israel",
+                    "title": "AI image of Dwayne Johnson shared to claim that he voiced support for Israel",
+                    "reviewDate": "2024-07-11T00:00:00Z",
+                    "textualRating": "Fake",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 83
+        },
+        {
+            "text": "The image shows the Israeli swimming team protesting at the 2024 Paris Olympics.",
+            "claimant": "Social Media Users",
+            "claimDate": "2024-07-29T10:59:07Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "NewsMeter",
+                        "site": "newsmeter.in"
+                    },
+                    "url": "https://newsmeter.in/fact-check/old-image-of-israeli-swimming-team-falsely-linked-to-2024-paris-olympics-733248",
+                    "title": "Fact Check: Old image of Israeli swimming team falsely linked to ...",
+                    "reviewDate": "2024-07-29T10:59:07Z",
+                    "textualRating": "Misleading",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 84
+        },
+        {
+            "text": "A photo shows an elderly Palestinian woman being attacked by an Israeli Army dog.",
+            "claimant": "Facebook, X and Threads",
+            "claimDate": "2024-07-04T12:11:47Z",
+            "claimReview": [
+                {
+                    "publisher": {
+                        "name": "NewsMeter",
+                        "site": "newsmeter.in"
+                    },
+                    "url": "https://newsmeter.in/fact-check/ai-photo-of-israeli-army-dog-attacking-elderly-palestinian-woman-shared-as-real-731936",
+                    "title": "Fact Check: AI photo of Israeli Army dog attacking elderly Palestinian woman shared as real",
+                    "reviewDate": "2024-07-04T12:11:47Z",
+                    "textualRating": "Misleading",
+                    "languageCode": "en"
+                }
+            ],
+            "index": 85
+        }
+    ]
+}
