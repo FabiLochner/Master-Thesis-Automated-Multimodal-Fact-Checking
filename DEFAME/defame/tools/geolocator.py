@@ -85,7 +85,11 @@ class Geolocator(Tool):
         :param choices: A list of location choices. If None, uses a default list of countries.
         :return: A GeoLocationResult object containing location predictions and their probabilities.
         """
-        if choices is None:
+
+        # The list of countries below contains all countries that have been part of the training data of the geolocal/StreetCLIP model.
+        # See Appendix B.1 of the paper: https://arxiv.org/pdf/2302.00275
+
+        if choices is None: ## TODO : Decision -> Adding other relevant countries for my datasets? (e.g., Lebanon, Yemen, Iraq)
             choices = ['Albania', 'Andorra', 'Argentina', 'Australia', 'Austria', 'Bangladesh', 'Belgium', 'Bermuda',
                        'Bhutan', 'Bolivia', 'Botswana', 'Brazil', 'Bulgaria', 'Cambodia', 'Canada', 'Chile', 'China',
                        'Colombia', 'Croatia', 'Czech Republic', 'Denmark', 'Dominican Republic', 'Ecuador', 'Estonia',
@@ -98,7 +102,7 @@ class Geolocator(Tool):
                        'Slovenia', 'South Africa', 'South Korea', 'Spain', 'Sri Lanka', 'Swaziland', 'Sweden',
                        'Switzerland', 'Taiwan', 'Thailand', 'Tunisia', 'Turkey', 'Uganda', 'Ukraine',
                        'United Arab Emirates',
-                       'United Kingdom', 'United States', 'Uruguay']
+                       'United Kingdom', 'United States', 'Uruguay'] 
 
         inputs = self.processor(text=choices, images=image, return_tensors="pt", padding=True).to(self.device)
         with torch.no_grad():

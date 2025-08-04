@@ -6,7 +6,7 @@ from pathlib import Path
 # Directories
 working_dir = Path.cwd() # working_dir should be DEFAME
 data_root_dir = Path("data/")  # Where the datasets are stored
-result_base_dir = working_dir / "out/verite"  # Where outputs are to be saved
+result_base_dir = working_dir / "out/gaza_israel"  # Where outputs are to be saved; adjusted this to my respective dataset that I'm testing
 temp_dir = result_base_dir / "temp/" # Where caches etc. are saved
 
 embedding_model = "Alibaba-NLP/gte-base-en-v1.5"  # used for semantic search in FEVER and Averitec knowledge bases
@@ -19,7 +19,7 @@ google_service_account_key_path = Path("config/google_service_account_key.json")
 
 firecrawl_url = "http://firecrawl:3002"  # applies to Firecrawl running in a 'firecrawl' Docker Container
 
-random_seed = 50 # used for sub-sampling in partial dataset testing, #changed from 42 to 50
+random_seed = 42 # used for sub-sampling in partial dataset testing, #first test of gaza-israel dataset: small sample (e.g., n = 20); random_seed = 42
 
 
 def keys_configured() -> bool:

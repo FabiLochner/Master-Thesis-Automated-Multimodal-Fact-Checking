@@ -29,8 +29,8 @@ class SerperAPI(RemoteSearchAPI):
     name = "google"
 
     def __init__(self,
-                 gl: str = 'de', #changed to German for testing
-                 hl: str = 'de', #changed to German for testing
+                 gl: str = 'us', #changed to USA for testing (DEFAME default: 'de')
+                 hl: str = 'us', #changed to USA for testing (DEFAME default: 'de')
                  tbs: Optional[str] = None,
                  search_type: Literal['news', 'search', 'places', 'images'] = 'search',
                  **kwargs):

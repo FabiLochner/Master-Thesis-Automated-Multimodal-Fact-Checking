@@ -12,14 +12,14 @@ from defame.tools import WebSearch, ImageSearch, ReverseSearch, Geolocate
 # )
 
 fact_checker = FactChecker(llm="gemini-2.0-flash-lite",
-                           available_actions=[WebSearch, ImageSearch, ReverseSearch, Geolocate])
-                           #extra_plan_rules= "Prioritize using image-based verification methods like image_search and reverse_search.")
+                           available_actions=[WebSearch, ImageSearch, ReverseSearch, Geolocate],
+                           extra_plan_rules= "Prioritize using image-based verification methods like image_search and reverse_search.")
 #claim = ["The International Court of Justice (ICJ) ruled that Israel is an illegal state in July 2024."]
 
 #claim = ["In November 2024, rock band U2 and singer Bob Geldof announced a multi-stadium tour to aid the Israeli army."]
 
-claim = ["The image", Image("in/example/ukraine_70000_soldiers.webp"),
-         "shows an authentic UK newspaper front page about 70.000 dead ukraine soldiers."]
+claim = ["This image", Image("in/example/myanmar-earthquake.jpeg"),
+         "shows the devastation of the 7.9-magnitude earthquake in Myanmar on March 28, 2025."]
 
 
 
@@ -34,5 +34,5 @@ claim = ["The image", Image("in/example/ukraine_70000_soldiers.webp"),
 #claim =  ["The United Nations said in early 2024 there was no famine in Gaza."]
 #claim = ["The U.S. government spent $50 million on condoms for Gaza, which Hamas is now using to manufacture bombs."]
 report, _ = fact_checker.verify_claim(claim)
-report.save_to("out/fact-check")
+report.save_to("out/fact-check-myanmar-earthquake-2")
 

@@ -40,6 +40,16 @@ fact_checking_urls = [
     "thequint.com/news/webqoof",
     "factcheck.kz",
     "data.gesis.org/claimskg/claim_review",
+
+    ## adding fact-checking websites from my datasets (that are not yet added)
+    "misbar.com",
+    "logicallyfacts.com",
+    "newsmeter.in/fact-check",
+    "usatoday.com/story/news/factcheck",
+    "newschecker.in/fact-check",
+    "newsweek.com/fact-check",
+    "rappler.com/newsbreak/fact-check"
+
 ]
 
 # These sites don't allow bot access/scraping. Must use a

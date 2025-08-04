@@ -7,6 +7,10 @@ from .dgm4.benchmark import DGM4
 from .mocheg.benchmark import MOCHEG
 from .claimreview2024.benchmark import ClaimReview2024
 
+## importing my two datasets
+from .gaza_israel.benchmark import gaza_israel
+from .ukraine_russia.benchmark import ukraine_russia
+
 BENCHMARK_REGISTRY = {
     AVeriTeC,
     FEVER,
@@ -15,6 +19,8 @@ BENCHMARK_REGISTRY = {
     DGM4,
     MOCHEG,
     ClaimReview2024,
+    gaza_israel, #added my dataset
+    ukraine_russia #added my dataset
 }
 
 

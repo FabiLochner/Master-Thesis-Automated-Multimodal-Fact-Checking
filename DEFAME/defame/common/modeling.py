@@ -24,7 +24,7 @@ from defame.utils.parsing import is_guardrail_hit, GUARDRAIL_WARNING, format_for
 # from llava.constants import IMAGE_TOKEN_INDEX, DEFAULT_IMAGE_TOKEN, DEFAULT_IM_START_TOKEN, DEFAULT_IM_END_TOKEN, IGNORE_INDEX
 # from llava.conversation import conv_templates, SeparatorStyle
 
-# Each model should use the following system prompt
+# Each model should use the following system prompt (Comment by me: Leave the system prompt as it is)
 DEFAULT_SYSTEM_PROMPT = """You are a professional fact-checker. Your mission is to verify a given Claim. Make 
 sure to always follow the user's instructions and keep the output to the minimum, i.e., be brief and do not justify
 your output. If provided, the Record documents the fact-check you performed so far."""
@@ -121,7 +121,7 @@ class GeminiOpenAIAPI:
     def __call__(self, prompt: Prompt, system_prompt: str, **kwargs):
         """Make an API call to Gemini using the OpenAI compatibility interface."""
         
-        # Adapt this to Gemini models' video and audio capabilities later
+        # Adapt this to Gemini models' video and audio capabilities later -> Since the datasets do not have audio or video, this code will not be updated.
         if prompt.has_videos():
             raise ValueError(f"{self.model} does not support videos.")
         
@@ -242,7 +242,9 @@ class Model(ABC):
     accepts_videos: bool
     accepts_audio: bool
 
-    def __init__(self,
+## report the LLM (hyper-)parameters below in the thesis? -> keep them at the same values as original DEFAME for now
+
+    def __init__(self,  
                  specifier: str,
                  temperature: float = 0.01,
                  top_p: float = 0.9,
@@ -443,10 +445,10 @@ class GeminiModel(Model):
                 top_p=top_p,
                 system_prompt=system_prompt,
             )
-        # except openai.RateLimitError as e:
-        #     logger.critical(f"OpenAI rate limit hit!")
-        #     logger.critical(repr(e))
-        #     quit()
+        except openai.RateLimitError as e:
+            logger.critical(f"OpenAI rate limit hit!")
+            logger.critical(repr(e))
+            quit()
         except Exception as e:
             logger.warning("Error while calling the Gemini LLM! Continuing with empty response.\n" + str(e))
             logger.warning("Prompt used:\n" + str(prompt))

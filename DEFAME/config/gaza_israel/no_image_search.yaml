@@ -1,0 +1,35 @@
+#### Use the same configuration files and settings in the yaml files both for the gaza_israel and ukraine_russia
+#### dataset as used for the VERITE dataset ("verite"). 
+### Only where necessary, the values are adjusted to my datasets, e.g., the benchmark_name, the llm used. 
+### For a better overview, the adjusted values of the parameters are commented.
+
+benchmark_name: gaza_israel # adjusted to my dataset
+benchmark_kwargs:
+  variant: dev # set this to test for the final evaluations
+fact_checker_kwargs:
+  decompose: false
+  decontextualize: false
+  filter_check_worthy: false
+  interpret: false
+  max_iterations: 3
+  max_result_len: 64000
+  procedure_variant: summary/dynamic
+llm: gemini-2.0-flash-lite # adjusted to the LLM I use
+llm_kwargs:
+  temperature: 0.01
+n_samples:
+random_sampling: false
+sample_ids: null
+allowed_actions:
+- web_search
+- reverse_search
+- geolocate
+tools_config:
+  searcher:
+    limit_per_search: 3
+    search_engine_config:
+      google:
+      google_vision:
+  geolocator:
+n_workers: 8
+print_log_level: info
