@@ -26,11 +26,26 @@ DEFAME/var/
 DEFAME/wheels/
 DEFAME/share/python-wheels/
 
-# DEFAME specific files
-DEFAME/out/
+# DEFAME specific folder and files
+
+## General folders in the out folder that should be ignored
+DEFAME/out/temp
+DEFAME/out/verite #verite evaluation is not relevant for my thesis (just tried this out before evaluating my dataasets)
+DEFAME/out/crawl_error_log.txt 
+
+## Files that should be ignored within the out/gaza_israel
+
+DEFAME/out/gaza_israel/gaza_israel/summary/dynamic/gemini-2.0-flash-lite/2025-07-18_13-24 default # the first run with a subsample of only n = 20 
+DEFAME/out/gaza_israel/gaza_israel/summary/dynamic/gemini-2.0-flash-lite/2025-07-18_21-07 default # 1st proper evaluation with full dataset (n = 100) did not work 
+DEFAME/out/gaza_israel/temp
+DEFAME/out/gaza_israel/crawl_error_log.txt
+
+## Other DEFAME files
 DEFAME/Dockerfile_42
 DEFAME/config/google_service_account_key.json
 DEFAME/.idea/
+
+
 
 # gaza_ukraine_datasets specific files 
 gaza_ukraine_datasets/gaza_ukraine_descriptive_statistics.ipynb
