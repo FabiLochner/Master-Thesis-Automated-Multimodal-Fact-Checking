@@ -1,0 +1,36 @@
+# Safe global patterns (affect whole repo but won't hurt Jupyter notebooks)
+**/__pycache__/
+*.py[cod]
+*$py.class
+**/.DS_Store
+
+# Python packaging files (safe globally - these are always generated files)
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+.Python
+
+# Make these DEFAME-specific to avoid affecting my_datasets (added a DEFAME/ to the original .gitignore file of cloned DEFAME repo)
+DEFAME/build/
+DEFAME/develop-eggs/
+DEFAME/dist/
+DEFAME/downloads/
+DEFAME/eggs/
+DEFAME/.eggs/
+DEFAME/lib/
+DEFAME/lib64/
+DEFAME/parts/
+DEFAME/sdist/
+DEFAME/var/
+DEFAME/wheels/
+DEFAME/share/python-wheels/
+
+# DEFAME specific files
+DEFAME/out/
+DEFAME/Dockerfile_42
+DEFAME/config/google_service_account_key.json
+DEFAME/.idea/
+
+# gaza_ukraine_datasets specific files 
+gaza_ukraine_datasets/gaza_ukraine_descriptive_statistics.ipynb
