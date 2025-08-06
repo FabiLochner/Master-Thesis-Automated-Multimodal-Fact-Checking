@@ -13,7 +13,24 @@ class AllActionsSummary(DynamicSummary):
             logger.log("Not enough information yet. Continuing fact-check...")
             n_iterations += 1
             actions, reasoning = self.planner.plan_next_actions(doc, all_actions=True)
-            text = f'"{doc.claim.text.split(">", 1)[1].strip()}"' ## adjust this line of code, so it also works for claims without images (i.e, which do not have <image> in claim)
+
+            """ 
+            Adjust the text claim handling to my datasets: both contain text-only claims and claims with images.
+            The default DEFAME implementation assumed that all claims have images: 
+            
+            text = f'"{doc.claim.text.split(">", 1)[1].strip()}"'
+            
+            Thus, it raised errors for the text-only claims in my datasets.
+            
+            """
+
+            ## Handle both text-only claims and claims with images
+
+            if ">" in doc.claim.text: ## Claims with images
+                text = f'"{doc.claim.text.split(">", 1)[1].strip()}"'  ## Remove the '<image: >' from claim for Web/Image Search
+            else: ## Text-only claims
+                text = f'"{doc.claim.text.strip()}"' ## Only remove whitespaces
+            
             actions.append(WebSearch(text))
             actions.append(ImageSearch(text))
             if len(reasoning) > 32:  # Only keep substantial reasoning
