@@ -1,0 +1,69 @@
+Extracting claims from Content: <image:65> This is an authentic image of an elderly Palestinian women being attacked by an Israeli army dog in June 2024.
+'Claim: "<image:65> This is an authentic image of an elderly Palestinian women being attacked by an Israeli army dog in June 2024."'
+Verifying Claim: "<image:65> This is an authentic image of an elderly Palestinian women being attacked by an Israeli army dog in June 2024."
+Not enough information yet. Continuing fact-check...
+Searching google_vision with query: ImageQuery(limit=3, start_date=None, end_date=None, search_type='reverse', text='', image=<defame.common.medium.Image object at 0x7ffed01cbd00>)
+Skipping unsupported website: https://x.com/TehranTimes79/status/1806320371005554979
+Skipping unsupported website: https://www.facebook.com/photo.php?fbid=986618046202775&id=100045637661158&set=a.265358058328781
+Got 5 new web source(s):
+	1. https://www.moroccoworldnews.com/2024/06/18005/israeli-police-dog-attack-on-elderly-palestinian-woman-sparks-outrage/
+	2. https://www.ynetnews.com/article/ryura55lr
+	3. https://www.alestiklal.net/en/article/how-does-israeli-occupation-employ-dogs-to-humiliate-and-oppress-palestinians
+	4. https://www.cyberpeace.org/resources/category/factcheck-2?5fd2036e_page=4&ce8afa10_page=2
+	5. https://www.sbs.com.au/language/english/en/article/these-viral-images-of-the-hamas-israel-war-arent-real-does-it-matter/rtvpcvujy
+Useful result: From [Source](https://www.moroccoworldnews.com/2024/06/18005/israeli-police-dog-attack-on-elderly-palestinian-woman-sparks-outrage/): Found exact image on website with title: Israeli Police Dog Attack on Elderly Palestinian Woman Sparks ...
+Content: The article from Morocco World News, published on June 26, 2024, discusses a video showing an Israeli police dog attacking an elderly Palestinian woman. The woman, Dawlat Al Tanani, was allegedly attacked during a raid in the Jabalia refugee camp. The article includes the image <image:65> and states that the video has sparked social media outrage. The article also mentions that the woman suffered severe injuries.
+
+Useful result: From [Source](https://www.ynetnews.com/article/ryura55lr): Found exact image on website with title: Hamas abducts IDF dog, Al Jazeera posts photos of it attacking old ...
+Content: The article from Ynetnews discusses an image of an elderly Palestinian woman being attacked by a dog. <image:65> The IDF refuted accusations that one of its canines attacked an old woman in Gaza. The IDF stated that the dog was abducted by Hamas and the attack occurred while the dog was in their custody. The article includes images of the dog and the woman, as well as images of the dog's body after it was booby-trapped. <image:2740>, <image:2741>. The article was published on June 27, 2024.
+
+Useful result: From [Source](https://www.alestiklal.net/en/article/how-does-israeli-occupation-employ-dogs-to-humiliate-and-oppress-palestinians): Found exact image on website with title: How Does Israeli Occupation Employ Dogs to Humiliate and ...
+Content: The article discusses the use of dogs by the Israeli occupation forces against Palestinians. It includes the image in the claim <image:65> and states that the image is related to the use of dogs as a tool for abuse. The article mentions specific incidents, including attacks on an elderly woman and a man with Down syndrome. It also mentions the Oketz unit and their role in military operations, including the use of dogs in Gaza since October 2023. The article was published 10 months ago by Nuha Yousef. <image:2742>
+
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Israeli army dog attack Palestinian woman')
+Skipping unsupported website: https://www.youtube.com/watch?v=reF-iLVWWhs
+Skipping unsupported website: https://x.com/AJEnglish/status/1805908864870539535?lang=en
+Skipping unsupported website: https://www.facebook.com/aljazeera/videos/video-israeli-military-dog-attacks-elderly-palestinian-woman/488867136825326/
+Skipping unsupported website: https://www.instagram.com/reel/C8sZ5PySPUH/?hl=en
+Got 2 new web source(s):
+	1. https://www.alhaq.org/monitoring-documentation/6941.html
+	2. January 06, 2025 https://www.middleeasteye.net/news/israeli-army-dog-mauled-palestinian-pregnant-woman-then-she-lost-baby
+Useful result: From [Source](https://www.alhaq.org/monitoring-documentation/6941.html): 
+Content: The search result from Al-Haq, dated December 28, 2011, describes an incident where an Israeli soldier unleashed an army dog on a 47-year-old Palestinian woman named Amira Rahman ‘Awad during a raid on her sons’ house in Ithna, Hebron. <image:2790> The article includes a photo of a dog attacking a woman.
+
+Useful result: From [Source](https://www.middleeasteye.net/news/israeli-army-dog-mauled-palestinian-pregnant-woman-then-she-lost-baby): 
+Content: The Middle East Eye published an article on January 6, 2025, about an Israeli combat dog attack on a pregnant Palestinian woman, Tahrir Husni al-Arian, in Khan Younis, Gaza Strip. The attack, which occurred in late October 2023, caused severe injuries and complications, leading to the loss of her newborn baby. The article mentions that the Israeli military has been deploying combat dogs with cameras to search buildings. <image:65> is not mentioned in the article.
+
+Not enough information yet. Continuing fact-check...
+INFO: Dropping action 'reverse_search' as it was already performed.
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='dog attacking woman digital art')
+Got 3 new web source(s):
+	1. https://www.shutterstock.com/search/dog-bite-woman?image_type=vector
+	2. https://fineartamerica.com/art/paintings/dog+attack
+	3. https://www.cyberpeace.org/resources/blogs/factcheck---debunking-the-ai-generated-image-of-an-alleged-israeli-army-dog-attack
+Useful result: From [Source](https://www.shutterstock.com/search/dog-bite-woman?image_type=vector): 
+Content: The search result from Shutterstock contains a vector image of a dog biting a woman <image:2791>.
+
+Useful result: From [Source](https://fineartamerica.com/art/paintings/dog+attack): 
+Content: The search result from Fine Art America contains an image of a painting titled "Attack of the 50 ft. Woman and 20 ft. Long Basset Hound". <image:2792>
+
+Useful result: From [Source](https://www.cyberpeace.org/resources/blogs/factcheck---debunking-the-ai-generated-image-of-an-alleged-israeli-army-dog-attack): 
+Content: The image <image:2793> is discussed in a fact-check article. The article debunks the image as AI-generated.
+
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='image dog attacking woman IN VISUAL ART')
+Skipping unsupported website: https://www.reddit.com/r/sfx/comments/q9aqaw/ive_just_posted_but_i_forgot_to_add_this_this_is/
+Got 2 new web source(s):
+	1. https://www.gettyimages.com/photos/dog-attack-victim
+	2. https://www.istockphoto.com/photos/dog-attack
+Useful result: From [Source](https://www.gettyimages.com/photos/dog-attack-victim): 
+Content: The Getty Images website provides stock photos and illustrations related to "dog attack victim". The search results include images of dogs attacking people <image:2794>, <image:2795>, <image:2797>, <image:2798>, <image:2799>, as well as images of dogs with victims of attacks. The website also contains images of dogs in various contexts, including search and rescue, and with Israeli Defense Forces. The website also contains images of dogs in various contexts, including search and rescue, and with Israeli Defense Forces. The website also contains images of dogs in various contexts, including search and rescue, and with Israeli Defense Forces.
+
+Useful result: From [Source](https://www.istockphoto.com/photos/dog-attack): 
+Content: The search result from iStockphoto.com provides various stock photos and images related to "dog attack". The images include dogs with bared teeth <image:2820>, <image:2821>, <image:2822>, <image:2825>, <image:2831>, <image:2833>, <image:2835>, <image:2827>, <image:2828>, and <image:2830>. Some images show dogs biting or attacking people <image:2824>, <image:2832>, and <image:2834>.
+
+The claim '<image:65> This is an authentic image of an elderly Palestinian women being attacked by an Israeli army dog in June 2024.' is misleading.
+Justification: The claim is misleading. The image in question, <image:65>, is likely AI-generated or digitally altered, as indicated by the "IN VISUAL ART" watermark and a fact-check article that debunks the image as AI-generated. The claim misrepresents the image as an authentic depiction of an attack.
+
+So, the overall veracity is: misleading
+Fact-check took 3:28 min.
+Worker 1 is done and terminates gracefully.

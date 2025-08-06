@@ -1,0 +1,34 @@
+Extracting claims from Content: <image:59> This image shows a palestinian child stuck under the rubble in Gaza after an Israeli airstrike in July 2024.
+'Claim: "<image:59> This image shows a palestinian child stuck under the rubble in Gaza after an Israeli airstrike in July 2024."'
+Verifying Claim: "<image:59> This image shows a palestinian child stuck under the rubble in Gaza after an Israeli airstrike in July 2024."
+Not enough information yet. Continuing fact-check...
+Searching google_vision with query: ImageQuery(limit=3, start_date=None, end_date=None, search_type='reverse', text='', image=<defame.common.medium.Image object at 0x7ffe2c2d9720>)
+Failed to scrape https://www.linkedin.com/posts/stevenbartlett-123_today-im-pledging-100000-this-year-to-activity-7031178508424949760-XDB8
+Error 403: Forbidden.
+Skipping that URL.
+Failed to scrape https://bg.linkedin.com/in/nikoleta-bakardzhieva-915a31a5
+Error 403: Forbidden.
+Skipping that URL.
+Failed to scrape https://uk.linkedin.com/in/natalie-jordan-3a093650
+Error 403: Forbidden.
+Skipping that URL.
+Got 5 new web source(s):
+	1. https://english.enabbaladi.net/archives/2023/03/shams-journey-from-under-the-rubble-to-abu-dhabis-burjeel-hospital/
+	2. https://uaetimes.ae/shams-journey-from-under-the-rubble-to-abu-dhabis-burjeel-hospital/
+	3. https://english.elpais.com/international/2023-07-20/the-manual-of-repression-shared-by-modern-tyrants.html
+	4. https://elpais.com/planeta-futuro/2023-07-20/el-manual-de-represion-que-comparten-los-tiranos-modernos.html
+	5. https://www.eczagundem.com/a-dan-z-ye-saglik/hastalik-rehberi/crush-sendromu-ezilme-sendromu/
+Useful result: From [Source](https://english.enabbaladi.net/archives/2023/03/shams-journey-from-under-the-rubble-to-abu-dhabis-burjeel-hospital/): Found exact image on website with title: Sham's journey from under the rubble to Abu Dhabi's Burjeel Hospital
+Content: The image is of a Syrian child named Sham, who was rescued from the rubble in Armanaz, Idlib countryside, on February 7, 2023, after an earthquake. The article is from Enab Baladi, an independent Syrian media organization. The article was published on March 14, 2023. <image:59>
+
+Useful result: From [Source](https://uaetimes.ae/shams-journey-from-under-the-rubble-to-abu-dhabis-burjeel-hospital/): Found exact image on website with title: Sham's journey from under the rubble to Abu Dhabi's Burjeel Hospital
+Content: The image is of a child named Sham, who was rescued from the rubble in Armanaz, Syria, after an earthquake on February 6, 2023. The child was later transferred to Abu Dhabi's Burjeel Hospital. The article was published on March 14, 2023. <image:59>
+
+Useful result: From [Source](https://english.elpais.com/international/2023-07-20/the-manual-of-repression-shared-by-modern-tyrants.html): Found exact image on website with title: The 'manual of repression' shared by modern tyrants | International
+Content: The article from El País, published on July 20, 2023, discusses how modern tyrants share tactics of repression. The article includes an image <image:2369> of Abdulrahman Almawwas speaking at the Oslo Freedom Forum, with a background screen showing a girl, Sham Sheikh, who was trapped in the rubble of her home. The article mentions that Sham Sheikh's image was used by Asma al-Assad, the wife of Syrian President Bashar al-Assad, to try to whitewash their image.
+
+The claim '<image:59> This image shows a palestinian child stuck under the rubble in Gaza after an Israeli airstrike in July 2024.' is misleading.
+Justification: The image depicts a Syrian child rescued from the rubble in Syria after an earthquake in February 2023, not a Palestinian child in Gaza after an Israeli airstrike in July 2024. The image was used by Asma al-Assad to try to whitewash their image. The image appears in articles from Enab Baladi, UAE Times, and El País.
+
+So, the overall veracity is: misleading
+Fact-check took 2:52 min.

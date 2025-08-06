@@ -1,0 +1,25 @@
+Extracting claims from Content: It is illegal to do a DNA test in Israel.
+'Claim: "It is illegal to do a DNA test in Israel."'
+Verifying Claim: "It is illegal to do a DNA test in Israel."
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='DNA testing legality Israel')
+Skipping unsupported website: https://pmc.ncbi.nlm.nih.gov/articles/PMC5034383/
+Skipping unsupported website: https://www.gov.il/en/service/paternity-test-family-ties
+Got 3 new web source(s):
+	1. https://ideas.repec.org/p/hrv/hksfac/29408321.html
+	2. September 16, 2024 https://www.yahoo.com/news/fact-check-no-dna-tests-230000258.html
+	3. https://pravoisrael.us/dna/
+Useful result: From [Source](https://ideas.repec.org/p/hrv/hksfac/29408321.html): 
+Content: The search result from Harvard Kennedy School of Government discusses DNA testing and the Israeli Law of Return. The Israeli State may use genetic tests to determine whether potential immigrants are Jewish. The article discusses the historical and legal context of secular and religious definitions of Jewishness and rights to immigration in the State of Israel.
+
+Useful result: From [Source](https://www.yahoo.com/news/fact-check-no-dna-tests-230000258.html): 
+Content: The search result from Yahoo News, published in August 2024, states that the claim "It is illegal to do a DNA test in Israel" is false. <image:1601>, <image:1602> While DNA testing is not outright illegal, there are significant legal restrictions. The sale of home DNA testing kits is prohibited, and tests related to familial ties require a court order. The Ministry of Health has concerns about the reliability and interpretation of DNA testing kits. Some companies ship DNA testing kits to Israel.
+
+Useful result: From [Source](https://pravoisrael.us/dna/): 
+Content: DNA tests are not illegal in Israel, but they are only legally valid if conducted by an order issued by an Israeli court and carried out in accordance with the prescribed legal procedure. The test must be conducted in licensed laboratories in Israel. <image:1607>, <image:1608>, <image:1609>, <image:1610>, <image:1611>.
+
+The claim 'It is illegal to do a DNA test in Israel.' is false.
+Justification: The claim that it is illegal to do a DNA test in Israel is false. According to a [Yahoo News article](https://www.yahoo.com/news/fact-check-no-dna-tests-230000258.html), the claim is false. However, the sale of home DNA testing kits is prohibited, and tests related to familial ties require a court order.
+
+So, the overall veracity is: false
+Fact-check took 0:47 min.
