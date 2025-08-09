@@ -1,0 +1,69 @@
+Extracting claims from Content: <image:35> This image shows an Israeli attack on Lebanon on October 21, 2024.
+'Claim: "<image:35> This image shows an Israeli attack on Lebanon on October 21, 2024."'
+Verifying Claim: "<image:35> This image shows an Israeli attack on Lebanon on October 21, 2024."
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Israeli attack Lebanon October 21 2024')
+Got 3 new web source(s):
+	1. October 21, 2024 https://www.cnn.com/world/live-news/israel-iran-lebanon-gaza-war-10-21-24-intl-hnk
+	2. https://en.wikipedia.org/wiki/2024_Israeli_invasion_of_Lebanon
+	3. October 21, 2024 https://www.theguardian.com/world/2024/oct/21/israeli-airstrikes-on-lebanon-hit-branches-of-hezbollah-linked-bank-al-qard-al-hassan
+Useful result: From [Source](https://www.cnn.com/world/live-news/israel-iran-lebanon-gaza-war-10-21-24-intl-hnk): 
+Content: The CNN article, updated on October 22, 2024, reports on the ongoing conflict between Israel and Hezbollah, including attacks in Lebanon. It mentions an Israeli strike near Rafik Hariri University Hospital in Beirut on October 21, 2024, which resulted in casualties. <image:35> is not in the article. The article also discusses the US's role in the conflict, including Secretary of State Antony Blinken's trip to the Middle East and concerns over a leak of classified US intelligence.
+
+Useful result: From [Source](https://en.wikipedia.org/wiki/2024_Israeli_invasion_of_Lebanon): 
+Content: The Wikipedia article discusses the 2024 Israeli invasion of Lebanon, which began on October 1, 2024, and was part of the ongoing Israel–Hezbollah conflict. The article mentions the date of the conflict, the location (Southern Lebanon), and the result (Israeli victory). It also details the belligerents (Israel and Hezbollah), allies, commanders, and units involved. The article also provides a timeline of events, including airstrikes, clashes, and attacks on various locations, including the destruction of a UNIFIL observation tower, attacks on LAF soldiers, and rocket attacks. The article also mentions the casualties and losses on both sides. <image:35> is not mentioned in the article.
+
+Useful result: From [Source](https://www.theguardian.com/world/2024/oct/21/israeli-airstrikes-on-lebanon-hit-branches-of-hezbollah-linked-bank-al-qard-al-hassan): 
+Content: The Guardian published an article on October 21, 2024, reporting on Israeli airstrikes on Lebanon that hit branches of the Hezbollah-linked bank Al-Qard Al-Hassan. <image:1786>. The article mentions that the strikes targeted buildings in Beirut's southern suburbs, south Lebanon, and the Bekaa valley. The article also includes a map showing Israeli strikes in Beirut between 19 and 21 October. <image:1795>
+
+Searching google_vision with query: ImageQuery(limit=3, start_date=None, end_date=None, search_type='reverse', text='', image=<defame.common.medium.Image object at 0x7ffed04d4fd0>)
+Got 6 new web source(s):
+	1. https://www.ynetnews.com/article/hknhoabzkg
+	2. https://www.bbc.com/pidgin/articles/cp9x0d1z8xro
+	3. https://www.amnesty.ie/author/srowe/page/5/
+	4. https://www.gettyimages.in/photos/gaza-city
+	5. https://www.gettyimages.com/photos/gaza-city
+	6. https://www.gettyimages.com.au/photos/gaza-city
+Useful result: From [Source](https://www.ynetnews.com/article/hknhoabzkg): Found exact image on website with title: Gaza explosions rattle central Israel; scientist explains why - Ynetnews
+Content: The search result from Ynetnews.com contains the exact image <image:35> and is titled "Gaza explosions rattle central Israel; scientist explains why". The article discusses explosions heard in central Israel, which the police attributed to explosions originating in Gaza. The article also mentions that the image was taken by MAHMUD HAMS.
+
+Useful result: From [Source](https://www.bbc.com/pidgin/articles/cp9x0d1z8xro): Found exact image on website with title: 'Wia you fit hide wen death dey come from di sky?' - life for Gaza - BBC
+Content: The BBC Pidgin website published an article on October 10, 2023, titled "Wia you fit hide wen death dey come from di sky?' - life for Gaza - BBC". The article contains an image <image:1815> that matches the image in the claim. The article discusses the impact of Israeli airstrikes on Gaza.
+
+Useful result: From [Source](https://www.amnesty.ie/author/srowe/page/5/): Found exact image on website with title: srowe, Author at Amnesty International Ireland - Page 5 of 20
+Content: The search result is from Amnesty International Ireland and contains an image of a fireball erupting from an Israeli airstrike in Gaza City on October 9, 2023. <image:1842>. The website also contains other images related to the conflict in Gaza and Israel, with the most recent articles published on October 27, 2023. The image in the claim is not present in the search result.
+
+Not enough information yet. Continuing fact-check...
+INFO: Dropping action 'reverse_search' as it was already performed.
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Israeli attack Lebanon October 21 2024')
+Got 3 new web source(s):
+	1. https://www.aljazeera.com/news/2024/10/21/us-says-it-is-seeking-lasting-end-to-war-in-lebanon-as-soon-as-possible
+	2. https://www.understandingwar.org/backgrounder/iran-update-october-21-2024
+	3. https://www.lemonde.fr/en/international/article/2024/10/21/israel-bombs-lebanese-company-suspected-of-financing-hezbollah_6729986_4.html
+Useful result: From [Source](https://www.aljazeera.com/news/2024/10/21/us-says-it-is-seeking-lasting-end-to-war-in-lebanon-as-soon-as-possible): 
+Content: Al Jazeera published an article about the conflict between Israel and Lebanon on October 21, 2024, including an image of an explosion. <image:1948>
+
+Useful result: From [Source](https://www.understandingwar.org/backgrounder/iran-update-october-21-2024): 
+Content: The Institute for the Study of War (ISW) published a map showing attacks into Northern Israel from Lebanon as of October 21, 2024, including rocket attacks and drone interceptions. <image:1949>
+
+Useful result: From [Source](https://www.lemonde.fr/en/international/article/2024/10/21/israel-bombs-lebanese-company-suspected-of-financing-hezbollah_6729986_4.html): 
+Content: Le Monde published an article on October 21, 2024, about Israeli bombings in Lebanon. The article includes an image of the attacks. <image:1950>
+
+Not enough information yet. Continuing fact-check...
+INFO: Dropping action 'reverse_search' as it was already performed.
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Getty Images MAHMOD HAMS explosion')
+Got 3 new web source(s):
+	1. https://www.gettyimages.com/detail/news-photo/picture-shows-israeli-air-strikes-in-the-gaza-strip-news-photo/1232810997
+	2. https://fortune.com/well/2023/10/09/israel-hamas-war-gaza-health-conditions-deteriorate/
+	3. https://www.inew.org/the-use-of-heavy-explosive-weapons-in-israel-and-palestine-must-stop/
+Useful result: From [Source](https://www.gettyimages.com/detail/news-photo/picture-shows-israeli-air-strikes-in-the-gaza-strip-news-photo/1232810997): 
+Content: The Getty Images website contains an image of an explosion in the Gaza Strip, credited to MAHMOD HAMS. <image:1951>
+
+Useful result: From [Source](https://fortune.com/well/2023/10/09/israel-hamas-war-gaza-health-conditions-deteriorate/): 
+Content: The search result from Fortune.com contains an image of an explosion. <image:1952>
+
+The claim '<image:35> This image shows an Israeli attack on Lebanon on October 21, 2024.' is misleading.
+Justification: The claim is misleading. While there were Israeli attacks on Lebanon on October 21, 2024, the image provided in the claim, credited to MAHMOD HAMS, depicts an explosion in the Gaza Strip, not Lebanon, as confirmed by a Getty Images search ([https://www.gettyimages.com/detail/news-photo/picture-shows-israeli-air-strikes-in-the-gaza-strip-news-photo/1232810997](https://www.gettyimages.com/detail/news-photo/picture-shows-israeli-air-strikes-in-the-gaza-strip-news-photo/1232810997)).
+
+So, the overall veracity is: misleading
+Fact-check took 8:36 min.

@@ -1,0 +1,38 @@
+Extracting claims from Content: <image:43> This image shows a vegetable stand in Gaza in January 2025 with a Merkava tank, the pride of the Israeli army, as its decor.
+'Claim: "<image:43> This image shows a vegetable stand in Gaza in January 2025 with a Merkava tank, the pride of the Israeli army, as its decor."'
+Verifying Claim: "<image:43> This image shows a vegetable stand in Gaza in January 2025 with a Merkava tank, the pride of the Israeli army, as its decor."
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='vegetable stand Gaza Merkava tank')
+Skipping fact-checking website: https://www.misbar.com/en/factcheck/2025/01/27/photo-of-vegetables-shelved-on-a-tank-is-from-syria-not-gaza
+Skipping unsupported website: https://x.com/SilentlySirs/status/1883633452177817673
+Skipping unsupported website: https://www.reddit.com/r/TankPorn/comments/1725jdt/hamas_militants_inspecting_and_posing_with_a/
+Skipping unsupported website: https://www.instagram.com/majazzproject/reel/DMAsHj_Njb2/
+Got 3 new web source(s):
+	1. https://www.aol.com/fact-check-image-claims-show-141025316.html
+	2. https://en.wikipedia.org/wiki/Merkava
+	3. October 15, 2023 https://www.forbes.com/sites/davidaxe/2023/10/15/hamas-distributed-a-handy-guide-to-destroying-israeli-tanks/
+Useful result: From [Source](https://www.aol.com/fact-check-image-claims-show-141025316.html): 
+Content: The image shows a Syrian T-55 tank, not an Israeli Merkava tank, modified into a fruit stand. The photo was taken in Syria, not Gaza. The article was published on February 3, 2025. <image:2075>, <image:2076>
+
+Useful result: From [Source](https://en.wikipedia.org/wiki/Merkava): 
+Content: The Merkava tank is a main battle tank used by the Israel Defense Forces. It has been used in several wars, including the Gaza War. <image:43> shows a Merkava Mk 4M Windbreaker, equipped with the Trophy active protection system.
+
+Useful result: From [Source](https://www.forbes.com/sites/davidaxe/2023/10/15/hamas-distributed-a-handy-guide-to-destroying-israeli-tanks/): 
+Content: The Forbes article, published on October 15, 2023, discusses a flyer distributed by Hamas on how to destroy Israeli Merkava tanks. The article mentions that Hamas militants damaged a Merkava with a PG-7T rocket and that Hamas captured a Merkava.
+
+Searching google_vision with query: ImageQuery(limit=3, start_date=None, end_date=None, search_type='reverse', text='', image=<defame.common.medium.Image object at 0x7ffed025b640>)
+Skipping unsupported website: https://x.com/Levant_24_/status/1868310828837220354
+Skipping unsupported website: https://www.facebook.com/groups/937043363063982/posts/8293546604080251/
+Skipping unsupported website: https://www.reddit.com/r/warthundermemes/comments/1i7rjti/new_urban_camo_better_than_those_stupid_bushes/
+Skipping unsupported website: https://twitter.com/DailyTurkic/status/1868308688978804788
+Skipping unsupported website: https://www.instagram.com/p/Cp_b1oTNyJP/
+Got 1 new web source(s):
+	1. https://en.haberler.com/in-syria-an-abandoned-tank-has-become-a-fruit-and-2027395/
+Useful result: From [Source](https://en.haberler.com/in-syria-an-abandoned-tank-has-become-a-fruit-and-2027395/): Found exact image on website with title: In Syria, an abandoned tank has become a fruit and vegetable stand.
+Content: The search result is from a Turkish news website and shows an image of a tank used as a fruit and vegetable stand in Syria. The article is dated December 15, 2024. <image:2101> The article mentions the Syrian regime's collapse and the "Operation Dawn of Freedom" in December 2024.
+
+The claim '<image:43> This image shows a vegetable stand in Gaza in January 2025 with a Merkava tank, the pride of the Israeli army, as its decor.' is misleading.
+Justification: The image shows a Syrian T-55 tank used as a vegetable stand in Syria, not an Israeli Merkava tank in Gaza, as claimed. The photo was taken before January 2025, as evidenced by a Turkish news article from December 15, 2024, which can be found [here](https://en.haberler.com/in-syria-an-abandoned-tank-has-become-a-fruit-and-2027395/).
+
+So, the overall veracity is: misleading
+Fact-check took 1:08 min.

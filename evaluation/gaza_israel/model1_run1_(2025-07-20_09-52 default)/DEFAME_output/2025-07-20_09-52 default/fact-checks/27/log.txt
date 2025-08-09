@@ -1,0 +1,56 @@
+Extracting claims from Content: <image:20> This image shows the 'French' Left who is rioting against Le Pen's victory in the first round of the French parliamentary elections in 2024.
+'Claim: "<image:20> This image shows the 'French' Left who is rioting against Le Pen's victory in the first round of the French parliamentary elections in 2024."'
+Verifying Claim: "<image:20> This image shows the 'French' Left who is rioting against Le Pen's victory in the first round of the French parliamentary elections in 2024."
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='protest swastika palestine france')
+Skipping fact-checking website: https://www.reuters.com/fact-check/photo-shows-paris-protesters-2014-not-after-2024-election-2024-07-05/
+Got 3 new web source(s):
+	1. March 22, 2025 https://www.france24.com/en/europe/20250322-tens-of-thousands-in-france-join-protests-against-racism-and-far-right
+	2. November 25, 2023 https://www.voanews.com/a/tens-of-thousands-march-in-europe-call-for-permanent-cease-fire-in-gaza-/7370219.html
+	3. April 27, 2024 https://www.channel4.com/news/israel-gaza-war-continues-to-fuel-protests-and-division-in-us-france-and-uk
+Useful result: From [Source](https://www.france24.com/en/europe/20250322-tens-of-thousands-in-france-join-protests-against-racism-and-far-right): 
+Content: The FRANCE 24 article, published on March 22, 2025, reports on protests in France against racism and the far right. <image:0> The protests occurred in multiple cities, including Paris, and involved tens of thousands of people. Some protesters carried Palestinian flags. The article mentions the growing strength of reactionary political forces in France and the United States.
+
+Useful result: From [Source](https://www.voanews.com/a/tens-of-thousands-march-in-europe-call-for-permanent-cease-fire-in-gaza-/7370219.html): 
+Content: The Voice of America (VOA) published an article on November 25, 2023, about pro-Palestinian marches in Europe. The article mentions a pro-Palestinian march in London on November 25, 2023, where a man was arrested for carrying a placard with Nazi symbols. The article also mentions pro-Palestinian protests in Paris, Strasbourg, Lyon, Marseille, and Vienna. <image:1042>, <image:1043>.
+
+Useful result: From [Source](https://www.channel4.com/news/israel-gaza-war-continues-to-fuel-protests-and-division-in-us-france-and-uk): 
+Content: Channel 4 News reports on pro-Palestine marches in London, mentioning the arrest of a man for holding a placard with a swastika. <image:1045>
+
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='protest palestine france')
+Failed to download or open image: HTTPSConnectionPool(host='cdnuploads.aa.com.tr', port=443): Read timed out. (read timeout=10)
+Got 3 new web source(s):
+	1. https://www.aljazeera.com/news/2021/5/13/france-asks-police-to-ban-pro-palestinian-protest-in-paris
+	2. https://www.reuters.com/world/europe/french-court-upholds-government-instruction-ban-all-pro-palestine-protests-2023-10-18/
+	3. https://www.aa.com.tr/en/europe/thousands-gather-in-paris-in-1st-pro-palestinian-rally-allowed-by-french-police/3029786
+Useful result: From [Source](https://www.aljazeera.com/news/2021/5/13/france-asks-police-to-ban-pro-palestinian-protest-in-paris): 
+Content: Al Jazeera published an article about a pro-Palestinian protest in Paris. <image:1046> shows the Eiffel Tower in the background.
+
+Useful result: From [Source](https://www.reuters.com/world/europe/french-court-upholds-government-instruction-ban-all-pro-palestine-protests-2023-10-18/): 
+Content: Reuters published an article on October 18, 2023, about a French court upholding a government instruction to ban all pro-Palestine protests. The article includes an image of a pro-Palestine protest in France. <image:1047>
+
+Most likely location: Palestine
+Top 10 locations: Palestine, France, Germany, Tunisia, Belgium, Sweden, Israel, Jordan, Hungary, Italy
+Searching google_vision with query: ImageQuery(limit=3, start_date=None, end_date=None, search_type='reverse', text='', image=<defame.common.medium.Image object at 0x7ffeb84474f0>)
+Skipping fact-checking website: https://www.reuters.com/fact-check/photo-shows-paris-protesters-2014-not-after-2024-election-2024-07-05/
+Skipping unsupported website: https://twitter.com/search?q=%23TF1&src=typed_query&f=media
+Got 5 new web source(s):
+	1. https://www.ajc.org/news/the-durban-diaries-with-an-introduction-by-ajcs-simone-rodan-benzaquen
+	2. https://www.vanityfair.com/news/2015/07/anti-semitism-france-hostage-hyper-cacher-kosher-market
+	3. https://www.nytimes.com/2014/08/02/world/europe/anger-in-europe-over-the-israeli-gaza-conflict-reverberates-as-anti-semitism.html
+	4. https://combatantisemitism.org/campaigns/indian-pluralism-foundation-to-host-webinar-on-interfaith-efforts-to-tackle-rising-antisemitism-in-west/
+	5. https://www.jpost.com/tags/adam-milstein
+Useful result: From [Source](https://www.ajc.org/news/the-durban-diaries-with-an-introduction-by-ajcs-simone-rodan-benzaquen): Found exact image on website with title: The Durban Diaries with an Introduction by AJC's Simone Rodan ...
+Content: The search result is from the American Jewish Committee (AJC) and discusses the Durban Diaries, an account of the 2001 World Conference against Racism in Durban, South Africa. The conference was marked by antisemitism and attacks against Israel. The article includes excerpts from the diary of Joëlle Fiss, who attended the conference as president of the European Union of Jewish Students. The article also mentions the 20th anniversary of the conference and its impact on the globalization of extremism and antisemitism. The article includes a photo of anti-Israel and antisemitic protestors. <image:1>
+
+Useful result: From [Source](https://www.vanityfair.com/news/2015/07/anti-semitism-france-hostage-hyper-cacher-kosher-market): Found exact image on website with title: Anti-Semitism in France: How Fast Is the Tide Rising? | Vanity Fair
+Content: The Vanity Fair article "Anti-Semitism in France: How Fast Is the Tide Rising?" discusses rising anti-Semitism in France, including a 2014 pro-Palestinian demonstration in Paris where a swastika was painted on a statue. <image:20> The article also mentions the 2014 attacks on a synagogue and a kosher grocery store. The author is Eve Batey. The article was published in July 2015.
+
+Useful result: From [Source](https://www.nytimes.com/2014/08/02/world/europe/anger-in-europe-over-the-israeli-gaza-conflict-reverberates-as-anti-semitism.html): Found exact image on website with title: Anti-Semitism Rises in Europe Amid Israel-Gaza Conflict
+Content: The New York Times published an article titled "Anti-Semitism Rises in Europe Amid Israel-Gaza Conflict". The article discusses a rise in anti-Semitic incidents across Europe, including Germany and France, following the start of the Gaza conflict. The article mentions that more Jews have begun leaving France in recent months due to anti-Semitism. The article was published on August 2, 2014. <image:20>
+
+The claim '<image:20> This image shows the 'French' Left who is rioting against Le Pen's victory in the first round of the French parliamentary elections in 2024.' is misleading.
+Justification: The image depicts a 2014 pro-Palestinian demonstration in Paris, as confirmed by a reverse image search, which contradicts the claim that it shows a 2024 protest against Le Pen's victory. The presence of a swastika in the image is also noted in multiple sources, including the New York Times and Vanity Fair ([https://www.nytimes.com/2014/08/02/world/europe/anger-in-europe-over-the-israeli-gaza-conflict-reverberates-as-anti-semitism.html](https://www.nytimes.com/2014/08/02/world/europe/anger-in-europe-over-the-israeli-gaza-conflict-reverberates-as-anti-semitism.html), [https://www.vanityfair.com/news/2015/07/anti-semitism-france-hostage-hyper-cacher-kosher-market](https://www.vanityfair.com/news/2015/07/anti-semitism-france-hostage-hyper-cacher-kosher-market)).
+
+So, the overall veracity is: misleading
+Fact-check took 1:39 min.

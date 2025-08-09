@@ -1,0 +1,26 @@
+Extracting claims from Content: <image:33> This image shows Gaza, completely destroyed, in December 2024.
+'Claim: "<image:33> This image shows Gaza, completely destroyed, in December 2024."'
+Verifying Claim: "<image:33> This image shows Gaza, completely destroyed, in December 2024."
+Not enough information yet. Continuing fact-check...
+Searching google_vision with query: ImageQuery(limit=3, start_date=None, end_date=None, search_type='reverse', text='', image=<defame.common.medium.Image object at 0x7ffed04d6860>)
+Skipping fact-checking website: https://www.misbar.com/en/factcheck/2024/12/30/this-footage-does-not-show-and-aerial-footage-of-gaza-but-zamalka-in-syria
+Got 0 new web source(s):
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Gaza destroyed buildings December 2024')
+Got 3 new web source(s):
+	1. January 16, 2025 https://www.al-monitor.com/originals/2025/01/gazas-destruction-numbers
+	2. March 01, 2025 https://news.un.org/en/story/2025/03/1160661
+	3. https://unitar.org/about/news-stories/press/35-buildings-affected-gaza-strip
+Useful result: From [Source](https://www.al-monitor.com/originals/2025/01/gazas-destruction-numbers): 
+Content: The Al-Monitor article, published on January 16, 2025, discusses the destruction in Gaza. By December 1, 2024, nearly 69% of buildings were destroyed or damaged. <image:33> is not included in the article. The article includes images of destruction in Gaza.
+
+Useful result: From [Source](https://news.un.org/en/story/2025/03/1160661): 
+Content: The UN News published an article on March 1, 2025, discussing the destruction in Gaza after 16 months of conflict. <image:33> is similar to the images in the article. The article mentions that UNDP started removing rubble from Gaza in December 2024. The article also includes a UN damage and needs assessment report from February 2025, which states that over 60% of homes and 65% of roads have been destroyed. <image:i>, <image:j>, <image:k>.
+
+Useful result: From [Source](https://unitar.org/about/news-stories/press/35-buildings-affected-gaza-strip): 
+Content: The United Nations Satellite Centre (UNOSAT) released an updated assessment of the damage inflicted on buildings in the Gaza Strip. The analysis, based on satellite imagery collected on February 29, 2024, reveals that 35% of all buildings in the Gaza Strip have been damaged, representing 88,868 structures. <image:0>. The governorates of Khan Yunis and Gaza have experienced the most significant rise in damage. The article was published on March 20, 2024.
+
+The claim '<image:33> This image shows Gaza, completely destroyed, in December 2024.' is misleading.
+Justification: The image depicts significant destruction in Gaza, which aligns with the evidence of widespread damage by December 2024, as reported by [Al-Monitor](https://www.al-monitor.com/originals/2025/01/gazas-destruction-numbers) and the [UN News](https://news.un.org/en/story/2025/03/1160661). However, the claim that Gaza was "completely destroyed" is an overstatement, as the evidence indicates that nearly 69% of buildings were destroyed or damaged, not 100%.
+
+So, the overall veracity is: misleading
+Fact-check took 0:23 min.

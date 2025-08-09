@@ -1,0 +1,52 @@
+Extracting claims from Content: <image:49> This image shows coffins of dead Israeli soldiers in September, 2024.
+'Claim: "<image:49> This image shows coffins of dead Israeli soldiers in September, 2024."'
+Verifying Claim: "<image:49> This image shows coffins of dead Israeli soldiers in September, 2024."
+Not enough information yet. Continuing fact-check...
+Searching google_vision with query: ImageQuery(limit=3, start_date=None, end_date=None, search_type='reverse', text='', image=<defame.common.medium.Image object at 0x7ffe2c280400>)
+Skipping unsupported website: https://www.instagram.com/reel/DApvVsFNoGK/
+Skipping unsupported website: https://www.tiktok.com/@ahmer717
+Skipping unsupported website: https://www.facebook.com/hanyalaryfy/
+Skipping unsupported website: https://www.reddit.com/r/TheDeprogram/comments/1lvpup5/israeli_reservist_who_was_formerly_stationed_in/?tl=th
+Skipping unsupported website: https://x.com/Maj_Marwat/status/1944328926550954314
+Got 1 new web source(s):
+	1. https://donya-e-eqtesad.com/tags/%D8%A7%D8%B3%D8%B1%D8%A7%D8%A6%DB%8C%D9%84/?page=3
+Useful result: From [Source](https://donya-e-eqtesad.com/tags/%D8%A7%D8%B3%D8%B1%D8%A7%D8%A6%DB%8C%D9%84/?page=3): Found exact image on website with title: اسرائیل | صفحه 3 - دنیای اقتصاد
+Content: The search result from Donya-e-Eqtesad.com contains an image of coffins draped with the Israeli flag. <image:49> The website's content is in Persian and discusses various topics related to Israel, including:
+*   A news report about a request from Israel to the United States for a military operation against Yemen.
+*   A report about the European Union and Israel reaching an agreement on Gaza.
+*   A report about the political divide in Israel.
+*   A report about a new crime by Israel in Gaza.
+*   A report about an attack on a street in Tehran.
+*   A report about a new military plan of the United States in Israel.
+*   A report about a missile attack from Yemen to Israel.
+*   A report about the Iranian ambassador saying that Israel was defeated in the war against Iran.
+*   A report about a meeting between the United States, Israel, and Qatar in the White House.
+*   A report about the UN Secretary-General saying that Israel must end its presence in the occupied Palestinian territories.
+*   A report about the French saying that the Iranian nuclear program was delayed due to attacks by the United States and Israel.
+*   A report about attacks on airports in Iran.
+*   A report about a meeting between an Israeli official and the leader of Tahrir al-Sham in Abu Dhabi.
+*   A report about a meeting between Trump and Netanyahu.
+*   A report about an attack on an Israeli ship.
+*   A report about the former Israeli prime minister admitting defeat in the war against Iran.
+*   A report about the Israeli army announcing an upcoming operation in Yemen.
+
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Israel coffins protest')
+Skipping unsupported website: https://www.youtube.com/watch?v=CWjnxXLk3tw
+Got 3 new web source(s):
+	1. September 05, 2024 https://www.timesofisrael.com/liveblog_entry/carrying-fake-coffins-protesters-march-in-tel-aviv-to-demand-hostage-deal/
+	2. February 20, 2025 https://www.bbc.com/news/articles/c93npgqlzvpo
+	3. September 05, 2024 https://www.euronews.com/2024/09/05/protesters-march-in-tel-aviv-with-makeshift-coffins-to-demand-release-of-gaza-hostages
+Useful result: From [Source](https://www.timesofisrael.com/liveblog_entry/carrying-fake-coffins-protesters-march-in-tel-aviv-to-demand-hostage-deal/): 
+Content: The Times of Israel published an article on September 5, 2024, about a protest in Tel Aviv. <image:49> shows mock coffins used by protesters demanding a deal to free hostages in Gaza. The article mentions 27 mock coffins representing 27 hostages killed in captivity in Gaza.
+
+Useful result: From [Source](https://www.bbc.com/news/articles/c93npgqlzvpo): 
+Content: The BBC News article, published on February 20, 2025, discusses the return of the bodies of Israeli hostages, including Oded Lifschitz, Shiri Bibas, and her two sons, Ariel and Kfir. <image:2228> shows Israelis mourning the return of the bodies. The article mentions that the hostages were seized on October 7, 2023. <image:2227> shows a Red Cross vehicle.
+
+Useful result: From [Source](https://www.euronews.com/2024/09/05/protesters-march-in-tel-aviv-with-makeshift-coffins-to-demand-release-of-gaza-hostages): 
+Content: The Euronews article, published on September 5, 2024, reports on a protest in Tel Aviv where demonstrators carried makeshift coffins draped with Israeli flags to symbolize hostages held by Hamas in Gaza. <image:49> The protesters are angry with the Israeli government.
+
+The claim '<image:49> This image shows coffins of dead Israeli soldiers in September, 2024.' is misleading.
+Justification: The image shows mock coffins used in a protest in Tel Aviv on September 5, 2024, as reported by [The Times of Israel](https://www.timesofisrael.com/liveblog_entry/carrying-fake-coffins-protesters-march-in-tel-aviv-to-demand-hostage-deal/) and [Euronews](https://www.euronews.com/2024/09/05/protesters-march-in-tel-aviv-with-makeshift-coffins-to-demand-release-of-gaza-hostages), to symbolize hostages held in Gaza, not dead Israeli soldiers.
+
+So, the overall veracity is: misleading
+Fact-check took 1:11 min.

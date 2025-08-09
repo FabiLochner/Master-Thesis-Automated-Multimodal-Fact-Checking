@@ -1,0 +1,56 @@
+Configuration summary:
+Available actions: web_search, geolocate, image_search, reverse_search
+llm: gemini-2.0-flash-lite
+benchmark_name: gaza_israel
+tools_config:
+    searcher:
+        limit_per_search: 3
+        search_engine_config:
+            google: null
+            google_vision: null
+    geolocator: null
+experiment_name: default
+fact_checker_kwargs:
+    decompose: false
+    decontextualize: false
+    filter_check_worthy: false
+    interpret: false
+    max_iterations: 3
+    max_result_len: 64000
+    procedure_variant: summary/dynamic
+llm_kwargs:
+    temperature: 0.01
+benchmark_kwargs:
+    variant: dev
+allowed_actions:
+- web_search
+- image_search
+- reverse_search
+- geolocate
+n_samples: null
+sample_ids: null
+random_sampling: false
+print_log_level: info
+continue_experiment_dir: null
+n_workers: 2
+
+Started Worker 0 with PID 59.
+Started Worker 1 with PID 60.
+Worker 0 has died unexpectedly. Exit code: -9
+Worker 0 has died unexpectedly. Exit code: -9
+Worker 0 has died unexpectedly. Exit code: -9
+Worker 0 has died unexpectedly. Exit code: -9
+Worker 0 has died unexpectedly. Exit code: -9
+Worker 0 has died unexpectedly. Exit code: -9
+Worker 0 has died unexpectedly. Exit code: -9
+Worker 0 has died unexpectedly. Exit code: -9
+Worker 0 has died unexpectedly. Exit code: -9
+Worker 0 has died unexpectedly. Exit code: -9
+Worker 0 has died unexpectedly. Exit code: -9
+Worker 0 has died unexpectedly. Exit code: -9
+Worker 0 has died unexpectedly. Exit code: -9
+Worker 0 has died unexpectedly. Exit code: -9
+Worker 0 has died unexpectedly. Exit code: -9
+Worker 0 has died unexpectedly. Exit code: -9
+All workers are terminated.
+All outputs saved in /defame/out/gaza_israel/gaza_israel/summary/dynamic/gemini-2.0-flash-lite/2025-07-20_09-52 default.
