@@ -1,0 +1,38 @@
+Extracting claims from Content: <image:13> This image shows a Fox News broadcast from Easter 2025 where you can see the Patriarch Kirill in the center and Kyiv labeled as a Russian city in the top right corner of the image.
+'Claim: "<image:13> This image shows a Fox News broadcast from Easter 2025 where you can see the Patriarch Kirill in the center and Kyiv labeled as a Russian city in the top right corner of the image."'
+Verifying Claim: "<image:13> This image shows a Fox News broadcast from Easter 2025 where you can see the Patriarch Kirill in the center and Kyiv labeled as a Russian city in the top right corner of the image."
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Fox News Easter broadcast Patriarch Kirill')
+Skipping unsupported website: https://www.facebook.com/UATVEN/posts/%EF%B8%8F-fox-news-airs-easter-service-with-putin-and-kirill-calls-kyiv-a-russian-cityfo/1262371152560708/
+Got 3 new web source(s):
+	1. https://www.foxnews.com/world/reporters-notebook-ukrainian-spiritual-leader-says-russian-orthodox-church-extension-kremlin
+	2. https://unn.ua/en/news/fox-news-showed-the-patriarch-of-the-russian-orthodox-church-kirill-at-night-and-labeled-kyiv-as-russia
+	3. https://united24media.com/latest-news/fox-news-labels-kyiv-as-russia-during-easter-service-broadcast-7731
+Useful result: From [Source](https://www.foxnews.com/world/reporters-notebook-ukrainian-spiritual-leader-says-russian-orthodox-church-extension-kremlin): 
+Content: The search result from Fox News shows Patriarch Kirill. <image:2011>
+
+Useful result: From [Source](https://unn.ua/en/news/fox-news-showed-the-patriarch-of-the-russian-orthodox-church-kirill-at-night-and-labeled-kyiv-as-russia): 
+Content: The search result is a screenshot from Fox News. The broadcast shows the Patriarch Kirill and labels Kyiv as a Russian city. <image:2012>
+
+Useful result: From [Source](https://united24media.com/latest-news/fox-news-labels-kyiv-as-russia-during-easter-service-broadcast-7731): 
+Content: The image shows a Fox News broadcast of an Easter service. The broadcast labels Kyiv as a Russian city. <image:2013>
+
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Fox News Easter broadcast Kyiv Moscow')
+Got 3 new web source(s):
+	1. April 21, 2025 https://www.yahoo.com/news/fact-check-fox-livestream-news-233600386.html
+	2. April 20, 2025 https://www.aa.com.tr/en/russia-ukraine-war/ukraine-seeks-apology-from-fox-news-for-labeling-kyiv-russian-city-/3543703
+	3. April 20, 2025 https://www.newsweek.com/fox-channel-ukraine-kyiv-russia-labeling-orthodox-easter-2061891
+Useful result: From [Source](https://www.yahoo.com/news/fact-check-fox-livestream-news-233600386.html): 
+Content: The search result from Yahoo News states that a Fox News broadcast mislabeled Kyiv as a Russian city during an Easter broadcast on April 20, 2025. <image:2014>. The mistake occurred on LiveNOW from Fox. The Ukrainian Ministry of Foreign Affairs called for an apology and investigation. LiveNOW from Fox issued an apology. The claim is rated as "Mostly True".
+
+Useful result: From [Source](https://www.aa.com.tr/en/russia-ukraine-war/ukraine-seeks-apology-from-fox-news-for-labeling-kyiv-russian-city-/3543703): 
+Content: The Anadolu Agency reports that Ukraine requested an apology and investigation from Fox News for labeling Kyiv a "Russian city" during an Easter broadcast. The broadcast showed footage of Easter services, including one in Moscow attended by Vladimir Putin, and another in Kyiv, which was initially labeled "Kyiv, Ukraine" but later changed to "Kyiv, Russia" for about 20 minutes before being corrected. The article is dated April 20, 2025. <image:13>
+
+Useful result: From [Source](https://www.newsweek.com/fox-channel-ukraine-kyiv-russia-labeling-orthodox-easter-2061891): 
+Content: Newsweek reports that a Fox TV station was accused of labeling Kyiv as Russian territory during an Easter broadcast. The error reportedly remained on screen for 20 minutes. The Kyiv Independent shared screenshots of the broadcast. A Fox spokesperson said that "Live Now made an unintentional mistake Saturday evening during extensive live coverage of Easter services from around the world" and apologized for the mistake. The article was written by Ellie Cook and published on April 20, 2025.
+
+The claim '<image:13> This image shows a Fox News broadcast from Easter 2025 where you can see the Patriarch Kirill in the center and Kyiv labeled as a Russian city in the top right corner of the image.' is true.
+Justification: The claim is accurate. The image is from a Fox News broadcast that showed Patriarch Kirill and mislabeled Kyiv as a Russian city during an Easter service, as confirmed by multiple sources ([Source](https://www.foxnews.com/world/reporters-notebook-ukrainian-spiritual-leader-says-russian-orthodox-church-extension-kremlin), [Source](https://unn.ua/en/news/fox-news-showed-the-patriarch-of-the-russian-orthodox-church-kirill-at-night-and-labeled-kyiv-as-russia), [Source](https://united24media.com/latest-news/fox-news-labels-kyiv-as-russia-during-easter-service-broadcast-7731)). The error was later corrected, and Fox News apologized.
+
+So, the overall veracity is: true
+Fact-check took 1:39 min.
