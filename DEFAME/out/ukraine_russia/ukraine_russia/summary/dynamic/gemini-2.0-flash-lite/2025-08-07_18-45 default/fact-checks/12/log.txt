@@ -1,0 +1,58 @@
+Extracting claims from Content: <image:9> This is an authentic image of world leaders taking off their suits to symbolically support Ukraine at the London summit on Ukraine on March 2, 2025.
+'Claim: "<image:9> This is an authentic image of world leaders taking off their suits to symbolically support Ukraine at the London summit on Ukraine on March 2, 2025."'
+Verifying Claim: "<image:9> This is an authentic image of world leaders taking off their suits to symbolically support Ukraine at the London summit on Ukraine on March 2, 2025."
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='European leaders take off suits Ukraine')
+Skipping fact-checking website: https://www.reuters.com/fact-check/photo-world-leaders-removing-suit-jackets-ukraine-is-altered-2025-03-25/
+Got 3 new web source(s):
+	1. https://www.latimes.com/world-nation/story/2025-07-10/european-leaders-announce-new-equity-fund-for-ukraine-and-urge-investment-even-as-war-accelerates
+	2. https://www.nytimes.com/2025/03/02/world/europe/starmer-zelensky-meeting-europe-ukraine-trump.html
+	3. https://www.pbs.org/newshour/world/ukraine-and-european-allies-urge-putin-to-commit-to-30-day-ceasefire-or-face-new-sanctions
+Useful result: From [Source](https://www.latimes.com/world-nation/story/2025-07-10/european-leaders-announce-new-equity-fund-for-ukraine-and-urge-investment-even-as-war-accelerates): 
+Content: The Los Angeles Times published an image of European leaders with Volodymyr Zelenskyy. <image:1757>
+
+Useful result: From [Source](https://www.nytimes.com/2025/03/02/world/europe/starmer-zelensky-meeting-europe-ukraine-trump.html): 
+Content: The New York Times published an article about the London summit on Ukraine on March 2, 2025. The article includes a photograph of a meeting between Zelensky, Starmer, and Macron. <image:1758>
+
+Useful result: From [Source](https://www.pbs.org/newshour/world/ukraine-and-european-allies-urge-putin-to-commit-to-30-day-ceasefire-or-face-new-sanctions): 
+Content: PBS NewsHour published an article about Ukraine and European allies urging Putin to commit to a 30-day ceasefire. The article includes a photograph of Zelenskyy and Macron. <image:1759>
+
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='London summit on Ukraine March 2 2023')
+Got 3 new web source(s):
+	1. https://en.wikipedia.org/wiki/2025_London_Summit_on_Ukraine
+	2. March 03, 2025 https://www.lemonde.fr/en/international/article/2025/03/03/at-london-summit-starmer-defends-french-british-peace-plan-for-ukraine_6738743_4.html
+	3. March 02, 2025 https://www.reuters.com/world/europe/russian-lawmaker-says-ukraine-can-only-count-improved-moscow-washington-ties-2025-03-02/
+Useful result: From [Source](https://en.wikipedia.org/wiki/2025_London_Summit_on_Ukraine): 
+Content: The 2025 London Summit on Ukraine, officially titled the Securing Our Future London Summit, was held on March 2, 2025, in London, hosted by British Prime Minister Keir Starmer. The summit aimed to create a "coalition of the willing" to present a peace plan for the Russian invasion of Ukraine. Participants included leaders from 16 states, the EU, and NATO. The summit resulted in a four-point plan and commitments, including £1.6 billion in UK export finances for air defense missiles manufactured in Belfast and a £2.2 billion loan for military aid to Ukraine backed by frozen Russian assets. The summit followed a meeting between Ukrainian President Volodymyr Zelenskyy and U.S. President Donald Trump. <image:9>
+
+Useful result: From [Source](https://www.lemonde.fr/en/international/article/2025/03/03/at-london-summit-starmer-defends-french-british-peace-plan-for-ukraine_6738743_4.html): 
+Content: The article from Le Monde discusses a summit in London on March 2, 2025, attended by several European leaders, including Volodymyr Zelensky, Keir Starmer, and Emmanuel Macron. <image:1760> The summit focused on a peace plan for Ukraine.
+
+Useful result: From [Source](https://www.reuters.com/world/europe/russian-lawmaker-says-ukraine-can-only-count-improved-moscow-washington-ties-2025-03-02/): 
+Content: Reuters reports on a summit of European leaders in London on March 2, 2025. The article mentions that Russian parliamentarians dismissed the summit, stating it produced no plan to settle the war in Ukraine. <image:1761>
+
+Not enough information yet. Continuing fact-check...
+Searching google_vision with query: ImageQuery(limit=3, start_date=None, end_date=None, search_type='reverse', text='', image=<defame.common.medium.Image object at 0x7ffed978fd30>)
+Skipping fact-checking website: https://www.reuters.com/fact-check/photo-world-leaders-removing-suit-jackets-ukraine-is-altered-2025-03-25/
+Skipping unsupported website: https://x.com/Denise_Ilitch/status/1901467714142507297
+Skipping unsupported website: https://twitter.com/AngelaBolster
+Skipping fact-checking website: https://leadstories.com/ireland/
+Got 0 new web source(s):
+Not enough information yet. Continuing fact-check...
+INFO: Dropping action 'reverse_search' as it was already performed.
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='London summit on Ukraine March 2 2025 leaders suits')
+Skipping unsupported website: https://www.gov.uk/government/news/chairs-statement-leaders-meeting-on-ukraine-london-2-march-2025
+Got 2 new web source(s):
+	1. March 02, 2025 https://www.pm.gc.ca/en/news/news-releases/2025/03/02/standing-united-in-support-of-ukraine
+	2. March 02, 2025 https://www.theguardian.com/world/2025/mar/02/keir-starmer-peace-talks-ukraine-key-takeaways-london-summit
+Useful result: From [Source](https://www.pm.gc.ca/en/news/news-releases/2025/03/02/standing-united-in-support-of-ukraine): 
+Content: The Prime Minister of Canada, Justin Trudeau, participated in the Securing our Future Summit in London, United Kingdom, on March 2, 2025. The summit, hosted by the Prime Minister of the United Kingdom, Sir Keir Starmer, brought together Euro-Atlantic and NATO leaders to support Ukraine. The summit resulted in new sanctions against individuals and entities. The article does not mention leaders taking off their suits.
+
+Useful result: From [Source](https://www.theguardian.com/world/2025/mar/02/keir-starmer-peace-talks-ukraine-key-takeaways-london-summit): 
+Content: The Guardian published an article about the London summit on Ukraine on March 2, 2025, hosted by Keir Starmer. The article mentions the attendance of Volodymyr Zelenskyy, Emmanuel Macron, and other leaders. <image:1762> The article does not mention leaders taking off their suits. The article was published more than 5 months ago.
+
+The claim '<image:9> This is an authentic image of world leaders taking off their suits to symbolically support Ukraine at the London summit on Ukraine on March 2, 2025.' is not enough information.
+Justification: The claim that European leaders took off their suits to support Ukraine at the London summit on March 2, 2025, cannot be verified. While the summit did occur and was attended by several leaders, including Zelenskyy, Starmer, and Macron, the provided evidence, including image and web searches, does not mention or depict leaders removing their suits.
+
+So, the overall veracity is: not enough information
+Fact-check took 1:37 min.
