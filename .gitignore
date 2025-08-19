@@ -35,14 +35,30 @@ DEFAME/out/crawl_error_log.txt
 
 ## Files that should be ignored within the out/gaza_israel
 
+# General folders
+DEFAME/out/gaza_israel/temp
+DEFAME/out/gaza_israel/crawl_error_log.txt
+
+# Specific evaluations
 DEFAME/out/gaza_israel/gaza_israel/summary/dynamic/gemini-2.0-flash-lite/2025-07-18_13-24\ default/
 DEFAME/out/gaza_israel/gaza_israel/summary/dynamic/gemini-2.0-flash-lite/2025-07-18_21-07\ default/ 
 
 
 #DEFAME/out/gaza_israel/gaza_israel/summary/dynamic/gemini-2.0-flash-lite/2025-07-18_13-24 default 
 #DEFAME/out/gaza_israel/gaza_israel/summary/dynamic/gemini-2.0-flash-lite/2025-07-18_21-07 default # 1st proper evaluation with full dataset (n = 100) did not work 
-DEFAME/out/gaza_israel/temp
-DEFAME/out/gaza_israel/crawl_error_log.txt
+
+
+
+## Files that should be ignored within the out/ukraine_russia
+
+# General folders
+DEFAME/out/ukraine_russia/temp
+DEFAME/out/ukraine_russia/crawl_error_log.txt
+
+# Specific evaluations
+DEFAME/out/ukraine_russia/ukraine_russia/summary/dynamic/gemini-2.0-flash-lite/2025-08-06_17-23\ default/
+
+
 
 ## Other DEFAME files
 DEFAME/Dockerfile_42
