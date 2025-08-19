@@ -23,38 +23,43 @@ from defame.tools import WebSearch, ImageSearch, ReverseSearch
 
 
 
-### create the class for the gaza-israel dataset
+### create the class for the ukraine-russia dataset
 
 class ukraine_russia(Benchmark):
+    """ 
+    Ukraine-Russia dataset with aggregated binary labels (True/False).
+
+    The original 4 labels ("True", "False", "Misleading", "NEI") have been aggregated into 2 labels:
+
+    - Original "True" -> "True"
+    - Original "False", "Misleading", "NEI" -> "False"
+
+    This creates a binary classification task.
+    """    
     shorthand = "ukraine_russia"
 
     is_multimodal = True
 
+    ## Update class mapping to binary classification task
     class_mapping = { #Use the spelling of the labels in my datasets for mapping here (Starts with capital letter)
         "True": Label.TRUE,
-        "False": Label.FALSE,
-        "Misleading": Label.MISLEADING,
-        "NEI": Label.NEI
+        "False": Label.FALSE, #The aggregated "False" label contains the original "False", "Misleading" and "NEI" sub-labels.
 
     }
 
 
     ## Test these first label definitions for now. Might need some adjustments.
 
-    ## TODO: maybe adding FEW-SHOT EXAMPLES in the class label definitions HERE???? or in the label.py file within the "common" folder?
-
-
+    ## Update the class definitions to binary classification task and reflect the newly aggregated "False" label
     class_definitions = {
         Label.TRUE:
             "The claim is factually accurate when it is confirmed by evidence from multiple and reliable sources.",
         Label.FALSE:
-            "The claim is demonstrably false when it is disproven by evidence from multiple and reliable sources.",
-        Label.MISLEADING:
-            "The claim or image is taken out of context, i.e. the claim or image is misrepresented in a wrong context or the necessary context is omitted. "
-            "For example, an old claim or an old image is mispresented in a new context in a misleading way. If the claim refers to an image, it misrepresents the origin, content and/or meaning of the image."
-            "If the claim is a text-only claim, i.e. it does not refer to an image, it misrepresents the origin, content, and/or meaning of a statement.",
-        Label.NEI:
-            "The claim is marked as NEI when there is not enough evidence to verify the claim or if the evidence is conflicting or self-contradictory. "
+            "The claim is not factually accurate. This aggregated label encompasses three sub-labels/categories: "
+            "(1) FALSE - The claim is demonstrably false when it is disproven by evidence from multiple and reliable sources, "
+            "(2) MISLEADING - The claim or image is taken out of context, i.e. the claim or image is misrepresented in a wrong context or the necessary context is omitted. For example, an old claim or an old image is mispresented in a new context in a misleading way. If the claim refers to an image, it misrepresents the origin, content and/or meaning of the image. If the claim is a text-only claim, i.e. it does not refer to an image, it misrepresents the origin, content, and/or meaning of a statement."
+            "(3) Not Enough Information (NEI) - There is not enough evidence to verify the claim or the evidence is conflicting or self-contradictory.",
+
     
     }
 
@@ -83,7 +88,7 @@ class ukraine_russia(Benchmark):
     # Use the code from the benchmark.py file of the 'verite' folder as a base to load the dataset and adjust the code where it is necessary
     def __init__(self, variant="dev"): #TODO: adjust this to 'test' for the final evaluations 
         super().__init__(f"ukraine_russia ({variant})", variant)
-        self.file_path = data_root_dir / "ukraine_russia/ukraine_russia_dataset_combined_010724_300425_final.csv"
+        self.file_path = data_root_dir / "ukraine_russia/ukraine_russia_dataset_combined_010724_300425_final_binary.csv" #update the path for the dataset with aggregated binary labels
         if not self.file_path.exists():
             raise ValueError(f"Unable to locate ukraine_russia dataset at {data_root_dir.as_posix()}. "
                              f"See README.md for setup instructions.")
@@ -114,7 +119,7 @@ class ukraine_russia(Benchmark):
             entry = {
                 "id": i,
                 "content": Content(content=claim_text, id_number=i),
-                "label": self.class_mapping[row["Label"]], 
+                "label": self.class_mapping[row["Label_Binary"]], # adjust it to the aggregated binary label column
                 "justification": row.get("Context/Label_Explanation", "") # the label explanations/justifications of the fact-checking websites is stored in this column
 
             }
