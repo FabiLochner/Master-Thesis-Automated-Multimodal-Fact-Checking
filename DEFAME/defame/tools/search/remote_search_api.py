@@ -48,7 +48,10 @@ fact_checking_urls = [
     "usatoday.com/story/news/factcheck",
     "newschecker.in/fact-check",
     "newsweek.com/fact-check",
-    "rappler.com/newsbreak/fact-check"
+    "rappler.com/newsbreak/fact-check",
+
+    ## adding yahoo news fact checks, since it was used in first evaluations of both datasets (model1_run1) and contained two Snopes fact-checks from my datasets
+    "yahoo.com/news/fact-check"
 
 ]
 
