@@ -99,7 +99,10 @@ class gaza_israel(Benchmark):
 
     
     def load_data(self) -> list[dict]:
-        df = pd.read_csv(self.file_path)
+        # Use the `dtype` parameter to force pandas to read 'Label_Binary' as a string.
+        # This prevents pandas from automatically converting "True"/"False" strings into booleans,
+        # which would cause a KeyError in the self.class_mapping lookup later.
+        df = pd.read_csv(self.file_path, dtype = {"Label_Binary": str})
         data = []
         for i, row in df.iterrows():
             # Handle multimodal claims: Check that the row has an image (should not be NaN or empty)
