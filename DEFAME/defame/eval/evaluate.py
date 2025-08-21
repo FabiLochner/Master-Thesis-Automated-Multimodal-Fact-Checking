@@ -17,7 +17,7 @@ import yaml
 # from rouge_score import rouge_scorer
 # from datasets import load_metric
 from nltk.tokenize.treebank import TreebankWordDetokenizer
-from sklearn.metrics import precision_score, recall_score, f1_score
+from sklearn.metrics import precision_score, recall_score, f1_score, matthews_corrcoef, balanced_accuracy_score, fbeta_score, confusion_matrix # added metrics for evaluating my dataset: MCC, Balanced Accuracy, F-beta score (F0.5-score), Confusion Matrix to compute True Negative Rate/Specificity
 from tqdm import tqdm
 
 from defame.common import Label, logger, Report
@@ -383,6 +383,30 @@ def finalize_evaluation(stats: dict,
                 yaml.dump(scores, f, sort_keys=False)
 
 
+## Add function to compute True Negative Rate (TNR)/Specificty 
+def compute_tnr(y_true, y_pred):
+
+    """
+    This function computes the True Negative Rate (TNR)/Specificity using the confusion matrix.
+    TNR = TN / (TN + FP)
+
+    The function is written for binary classifications only.
+    
+    """             
+
+    try:
+        labels = np.unique(np.append(y_true, y_pred))
+        cm = confusion_matrix(y_true, y_pred, labels=labels)
+        tn = cm[0,0]
+        fp = cm[0,1]
+        tnr = tn / (tn + fp) if (tn+fp) > 0 else 0.0
+        return float(tnr)
+    
+    except Exception as e:
+        print(f"Error computing True Negative Rate (TNR): {str(e)}")
+        return 0.0
+
+
 def compute_metrics(predicted_labels: np.ndarray,
                     ground_truth_labels: Optional[np.ndarray] = None,
                     predicted_justifications: Optional[Sequence[str]] = None,
@@ -405,7 +429,14 @@ def compute_metrics(predicted_labels: np.ndarray,
         recall = recall_score(ground_truth_labels, predicted_labels, labels=labels, average=None)
         f1_scores = f1_score(ground_truth_labels, predicted_labels, labels=labels, average=None)
 
+
+        ## Add new evaluation metrics that will be used on a dataset-level (and keep the already implemented macro-averaged f1-score)
+        mcc = matthews_corrcoef(ground_truth_labels, predicted_labels)
+        balanced_acc = balanced_accuracy_score(ground_truth_labels, predicted_labels)
         macro_f1 = f1_score(ground_truth_labels, predicted_labels, labels=labels, average='macro')
+        macro_f05 = fbeta_score(ground_truth_labels, predicted_labels, beta = 0.5, labels=labels, average = "macro")
+        tnr = compute_tnr(ground_truth_labels, predicted_labels)
+
 
         for label, p, r, f1 in zip(labels, precision, recall, f1_scores):
             metrics.update({
@@ -414,7 +445,14 @@ def compute_metrics(predicted_labels: np.ndarray,
                 f"{label}_F1_Score": float(round(f1, 3)),
             })
 
-        metric_summary.update({f"Macro-Averaged F1-Score:": float(round(macro_f1, 2))})
+        # Update metric summary with added evaluation metrics
+        metric_summary.update({
+            "Matthew Correlation Coefficient:": float(round(mcc, 2)),
+            "Balanced Accuracy": float(round(balanced_acc, 2)),
+            "Macro-Averaged F1-Score:": float(round(macro_f1, 2)),
+            "Macro-Averaged F0.5-Score": float(round(macro_f05, 2)),
+            "True Negative Rate/Specificity": float(round(tnr, 2))
+            })
 
     except Exception as e:
         print(f"There was an error computing classification metrics: {str(e)}")
@@ -457,12 +495,12 @@ def compute_metrics(predicted_labels: np.ndarray,
         correct_predictions = np.asarray(np.array(predicted_labels) == np.array(ground_truth_labels))
         n_correct_predictions = np.sum(correct_predictions)
         n_wrong_predictions = n_samples - n_correct_predictions - n_refused
-        accuracy = n_correct_predictions / (n_samples - n_refused)
+        # accuracy = n_correct_predictions / (n_samples - n_refused) ## Comment out accuracy score (will not be reported anymore)
 
         metric_summary.update({
             "Correct": int(n_correct_predictions),
             "Wrong": int(n_wrong_predictions),
-            "Accuracy": accuracy,
+           # "Accuracy": accuracy,
         })
 
     return metric_summary
@@ -479,9 +517,10 @@ def save_stats(stats: dict, target_dir: Path):
     stats_human_readable = stats.copy()
     stats_human_readable["Total run duration"] = sec2hhmmss(stats["Total run duration"])
     stats_human_readable["Time per claim"] = sec2mmss(stats["Time per claim"])
-    acc = stats["Predictions"].get("Accuracy")
-    if acc is not None:
-        stats_human_readable["Predictions"]["Accuracy"] = f"{acc * 100:.1f} %"
+    """ Comment out Accuracy Score (will not be used as evaluation metrics anymore)"""
+    #acc = stats["Predictions"].get("Accuracy")
+    #if acc is not None:
+     #   stats_human_readable["Predictions"]["Accuracy"] = f"{acc * 100:.1f} %"
     model = stats_human_readable["Model"].copy()
     model["Input tokens"] = num2text(model["Input tokens"])
     model["Output tokens"] = num2text(model["Output tokens"])
