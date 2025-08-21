@@ -394,17 +394,17 @@ def compute_tnr(y_true, y_pred):
     
     """             
 
+    labels = np.unique(np.append(y_true, y_pred))
+    cm = confusion_matrix(y_true, y_pred, labels=labels)
+    tn = cm[0,0]
+    # Handle the case of no available false positives
     try:
-        labels = np.unique(np.append(y_true, y_pred))
-        cm = confusion_matrix(y_true, y_pred, labels=labels)
-        tn = cm[0,0]
         fp = cm[0,1]
-        tnr = tn / (tn + fp) if (tn+fp) > 0 else 0.0
-        return float(tnr)
+    except IndexError:
+        fp = 0 # no false positives available in confusion matrix
+    denom = tn + fp
+    return float(tn / denom) if denom > 0 else np.nan
     
-    except Exception as e:
-        print(f"Error computing True Negative Rate (TNR): {str(e)}")
-        return 0.0
 
 
 def compute_metrics(predicted_labels: np.ndarray,
@@ -451,7 +451,7 @@ def compute_metrics(predicted_labels: np.ndarray,
             "Balanced Accuracy": float(round(balanced_acc, 2)),
             "Macro-Averaged F1-Score:": float(round(macro_f1, 2)),
             "Macro-Averaged F0.5-Score": float(round(macro_f05, 2)),
-            "True Negative Rate/Specificity": float(round(tnr, 2))
+            "True Negative Rate/Specificity": "N/A" if np.isnan(tnr) else float(round(tnr, 2))
             })
 
     except Exception as e:
