@@ -27,6 +27,8 @@ from defame.eval.averitec.benchmark import AVeriTeC
 from defame.eval.averitec.compute_score import compute_averitec_score
 from defame.eval.benchmark import Benchmark
 from defame.eval.mocheg.benchmark import MOCHEG
+from defame.eval.gaza_israel.benchmark import gaza_israel #import class gaza_israel benchmark
+from defame.eval.ukraine_russia.benchmark import ukraine_russia #import class ukraine_russia benchmark
 from defame.fact_checker import FactChecker
 from defame.tools import initialize_tools, Searcher
 from defame.tools.search.knowledge_base import KnowledgeBase
@@ -325,6 +327,9 @@ def finalize_evaluation(stats: dict,
     experiment_dir = Path(experiment_dir)
     is_averitec = isinstance(benchmark, AVeriTeC)
     is_mocheg = isinstance(benchmark, MOCHEG)
+    # Add my two datasets here
+    is_gaza_israel = isinstance(benchmark, gaza_israel)
+    is_ukraine_russia = isinstance(benchmark, ukraine_russia)
     is_test = benchmark.variant == "test"
     try:
         instance_stats = pd.read_csv(experiment_dir / logger.instance_stats_filename)
@@ -360,6 +365,14 @@ def finalize_evaluation(stats: dict,
                                    ground_truth_justifications=ground_truth_justifications,
                                    is_mocheg=is_mocheg)
     stats["Predictions"] = metric_stats
+
+    # Add the compute metrics per claim type here and also save them in stats
+    if is_gaza_israel or is_ukraine_russia:
+        metric_claim_types_stats = compute_metrics_claim_type_level(benchmark, predicted_labels, ground_truth_labels)
+        stats["Claim_Type_Metrics"] = metric_claim_types_stats
+    else:
+        print(f"Note: Claim Type metrics computation not supported for benchmark type: {type(benchmark).__name__}")
+
     save_stats(stats, target_dir=experiment_dir)
 
     logger.info(f"All outputs saved in {experiment_dir.as_posix()}.")
@@ -426,6 +439,141 @@ def compute_tnr(y_true, y_pred):
     denom = tn + fp
     return float(tn / denom) if denom > 0 else np.nan
     
+
+
+def compute_metrics_claim_type_level(benchmark: Benchmark, predicted_labels: np.ndarray, ground_truth_labels: Optional[np.ndarray] = None):
+    
+
+    is_gaza_israel = isinstance(benchmark, gaza_israel)
+    is_ukraine_russia = isinstance(benchmark, ukraine_russia)
+
+    # Ukraine-russia dataset has only 3 claim types. Gaza-israel dataset has all 4 claim types
+
+    if is_ukraine_russia:
+        claim_types = [
+            ("Claims_Text_Only", "claim_text_only"),
+            ("Claims_Normal_Images", "claim_normal_image"), 
+            ("Claims_Altered_Images", "claim_altered_image")
+        ]
+
+    elif is_gaza_israel:
+        claim_types = [
+            ("Claims_Text_Only", "claim_text_only"),
+            ("Claims_Normal_Images", "claim_normal_image"),
+            ("Claims_AI_Images", "claim_ai_image"),
+            ("Claims_Altered_Images", "claim_altered_image")
+        ]
+
+    else:
+        # For other benchmarks, return empty metrics (not implemented)
+        print(f"Warning: Claim type metrics not implemented for benchmark type: {type(benchmark).__name__}")
+        return {"Claim_Type_Metrics": {}}
+
+    # Initialize metrics dictionary with only the relevant claim types
+    metrics_claim_types = {}
+    for claim_type, _ in claim_types:
+        metrics_claim_types[claim_type] = {}
+
+
+    # 1) Get all instances of each benchmark
+    all_instances = benchmark.data
+    # claims_text_only_mask = [instance.get("claim_text_only", False) for instance in all_instances]
+    # claims_normal_image_mask = [instance.get("claim_normal_image", False) for instance in all_instances]
+    # claims_ai_image_mask = [instance.get("claim_ai_image", False) for instance in all_instances]
+    # claims_altered_image_mask = [instance.get("claim_altered_image", False) for instance in all_instances]
+
+    # 2) Compute metrics for the different claim types
+        # For text-only claims and normal images: 
+            # Both datasets have both ground truth labels ("True", "False"). Hence, more metrics can be computed.
+        # For claims with ai & altered images:
+            # Both datasets have only 1 ground truth label ("False"). Hence, less metrics can be computed.
+
+    # Process each claim type
+    for claim_type, claim_key in claim_types:
+        # Create mask for this claim type
+        mask = [instance.get(claim_key, False) for instance in all_instances]
+
+        if not any(mask):
+            print(f"Warning: No claims found for claim type: {claim_type}") 
+            continue
+
+        # Filter labels and predictions for each claim type
+        gt_subset = ground_truth_labels[mask] if ground_truth_labels is not None else None
+        pred_subset = predicted_labels[mask]
+
+        n_samples_subset = len(pred_subset)
+        n_refused_subset = np.count_nonzero(np.array(pred_subset) == "REFUSED_TO_ANSWER")
+
+        try:
+            ## Text-Only Claims and Normal_Images
+            if claim_type in ["Claims_Text_Only", "Claims_Normal_Images"]:
+                labels_subset = np.unique(np.append(gt_subset, pred_subset))
+
+                # 1) Overall metrics per claim type
+                balanced_acc = balanced_accuracy_score(gt_subset, pred_subset)
+                mcc = matthews_corrcoef(gt_subset, pred_subset)
+                tnr = compute_tnr(gt_subset, pred_subset)
+
+                # 2) Metrics per label
+                precision = precision_score(gt_subset, pred_subset, labels = labels_subset, average = None)
+                recall = recall_score(gt_subset, pred_subset, labels=labels_subset, average=None)
+                f1_scores = f1_score(gt_subset, pred_subset, labels=labels_subset, average=None)
+                f05_scores = fbeta_score(gt_subset, pred_subset, labels=labels_subset, average=None)
+
+                # 3) Absolute number of correct and wrong predictions
+                correct_predictions = np.asarray(np.array(pred_subset) == np.array(gt_subset))
+                n_correct = np.sum(correct_predictions)
+                n_wrong = n_samples_subset - n_correct - n_refused_subset
+
+
+                metrics_claim_types[claim_type].update({
+                    "Balanced_Accuracy": float(round(balanced_acc, 2)),
+                    "Matthews_Correlation_Coefficient": float(round(mcc, 2)),
+                    "True_Negative_Rate/Specificity": "N/A" if np.isnan(tnr) else float(round(tnr, 2))
+                })
+
+                for label, p, r, f1, f05 in zip(labels_subset, precision, recall, f1_scores, f05_scores):
+                    metrics_claim_types[claim_type].update({
+                        f"{label}_Precision": float(round(p, 2)),
+                        f"{label}_Recall": float(round(r, 2)),
+                        f"{label}_F1_Score": float(round(f1, 2)),
+                        f"{label}_F0.5_Score": float(round(f05, 2))
+                    })
+
+                metrics_claim_types[claim_type].update({
+                    "Correct_Predictions": int(n_correct),
+                    "Wrong_Predictions": int(n_wrong),
+                })
+
+            ## AI-Images & Altered Images
+            else:
+                # 1) Overall metrics per claim type
+                balanced_acc = balanced_accuracy_score(gt_subset, pred_subset)
+                tnr = compute_tnr(gt_subset, pred_subset)
+
+                # 2) Absolute number of correct and wrong predictions
+                correct_predictions = np.asarray(np.array(pred_subset) == np.array(gt_subset))
+                n_correct = np.sum(correct_predictions)
+                n_wrong = n_samples_subset - n_correct - n_refused_subset
+
+                metrics_claim_types[claim_type] = {
+                    "Balanced_Accuracy": float(round(balanced_acc, 2)),
+                    "True_Negative_Rate/Specificity": "N/A" if np.isnan(tnr) else float(round(tnr, 2)),
+                    "Correct_Predictions": int(n_correct),
+                    "Wrong_Predictions": int(n_wrong)
+                }
+
+
+        except Exception as e:
+            print(f"Error computing metrics for {claim_type}: {str(e)}")
+        
+
+    return {"Claim_Type_Metrics": metrics_claim_types}
+
+
+
+        
+
 
 
 def compute_metrics(predicted_labels: np.ndarray,
