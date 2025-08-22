@@ -440,7 +440,7 @@ def compute_tnr(y_true, y_pred):
     return float(tn / denom) if denom > 0 else np.nan
     
 
-
+# Add function to compute metrics on claim type level for my datasets
 def compute_metrics_claim_type_level(benchmark: Benchmark, predicted_labels: np.ndarray, ground_truth_labels: Optional[np.ndarray] = None):
     
 
@@ -572,6 +572,54 @@ def compute_metrics_claim_type_level(benchmark: Benchmark, predicted_labels: np.
 
 
 
+# Add a function to compute metrics on a dataset level for my datasets. Make a distinct function, instead of adding it to existing def compute_metrics to keep the code clean and understanable
+
+def compute_metrics_dataset_level(predicted_labels: np.ndarray, ground_truth_labels: Optional[np.ndarray] = None):
+
+    n_samples = len(predicted_labels)
+    n_refused = np.count_nonzero(np.array(predicted_labels) == "REFUSED_TO_ANSWER")
+
+    metrics = dict()
+    metric_summary = {
+        "Total": n_samples,
+        "Refused": int(n_refused),
+    }
+
+    if ground_truth_labels is None:
+        return metric_summary
+    
+    
+    try:
+        # 1) Compute metrics for dataset-level evaluation
+        labels = np.unique(np.append(ground_truth_labels, predicted_labels))
+        balanced_acc = balanced_accuracy_score(ground_truth_labels, predicted_labels)
+        mcc = matthews_corrcoef(ground_truth_labels, predicted_labels)
+        tnr = compute_tnr(ground_truth_labels, predicted_labels)
+        macro_f1 = f1_score(ground_truth_labels, predicted_labels, labels=labels, average='macro')
+        macro_f05 = fbeta_score(ground_truth_labels, predicted_labels, beta = 0.5, labels=labels, average = "macro")
+
+        # 2) Absolute number of correct and wrong predictions
+        correct_predictions = np.asarray(np.array(predicted_labels) == np.array(ground_truth_labels))
+        n_correct_predictions = np.sum(correct_predictions)
+        n_wrong_predictions = n_samples - n_correct_predictions - n_refused
+
+        # Update metric summary with dataset-level metrics and number of correct/wrong predictions
+        metric_summary.update({
+            "Balanced_Accuracy": float(round(balanced_acc, 2)),
+            "Matthew_Correlation_Coefficient": float(round(mcc, 2)),
+            "True_Negative_Rate_Specificity": "N/A" if np.isnan(tnr) else float(round(tnr, 2)),
+            "Macro_Averaged_F1_Score": float(round(macro_f1, 2)),
+            "Macro_Averaged_F0.5_Score": float(round(macro_f05, 2)),
+            "Correct_Predictions": int(n_correct_predictions),
+            "Wrong_Predictions": int(n_wrong_predictions)
+        })
+
+    except Exception as e:
+        print(f"There was an error computing dataset-level metrics: {str(e)}")
+
+    return metric_summary
+
+
         
 
 
@@ -598,13 +646,7 @@ def compute_metrics(predicted_labels: np.ndarray,
         recall = recall_score(ground_truth_labels, predicted_labels, labels=labels, average=None)
         f1_scores = f1_score(ground_truth_labels, predicted_labels, labels=labels, average=None)
 
-
-        ## Add new evaluation metrics that will be used on a dataset-level (and keep the already implemented macro-averaged f1-score)
-        mcc = matthews_corrcoef(ground_truth_labels, predicted_labels)
-        balanced_acc = balanced_accuracy_score(ground_truth_labels, predicted_labels)
         macro_f1 = f1_score(ground_truth_labels, predicted_labels, labels=labels, average='macro')
-        macro_f05 = fbeta_score(ground_truth_labels, predicted_labels, beta = 0.5, labels=labels, average = "macro")
-        tnr = compute_tnr(ground_truth_labels, predicted_labels)
 
 
         for label, p, r, f1 in zip(labels, precision, recall, f1_scores):
@@ -614,14 +656,7 @@ def compute_metrics(predicted_labels: np.ndarray,
                 f"{label}_F1_Score": float(round(f1, 3)),
             })
 
-        # Update metric summary with added evaluation metrics
-        metric_summary.update({
-            "Matthew Correlation Coefficient": float(round(mcc, 2)),
-            "Balanced Accuracy": float(round(balanced_acc, 2)),
-            "Macro-Averaged F1-Score": float(round(macro_f1, 2)),
-            "Macro-Averaged F0.5-Score": float(round(macro_f05, 2)),
-            "True Negative Rate/Specificity": "N/A" if np.isnan(tnr) else float(round(tnr, 2))
-            })
+        metric_summary[f"Macro-Averaged F1-Score"] = float(round(macro_f1, 2))
 
     except Exception as e:
         print(f"There was an error computing classification metrics: {str(e)}")
@@ -664,12 +699,12 @@ def compute_metrics(predicted_labels: np.ndarray,
         correct_predictions = np.asarray(np.array(predicted_labels) == np.array(ground_truth_labels))
         n_correct_predictions = np.sum(correct_predictions)
         n_wrong_predictions = n_samples - n_correct_predictions - n_refused
-        # accuracy = n_correct_predictions / (n_samples - n_refused) ## Comment out accuracy score (will not be reported anymore)
+        accuracy = n_correct_predictions / (n_samples - n_refused) ## Comment out accuracy score (will not be reported anymore)
 
         metric_summary.update({
             "Correct": int(n_correct_predictions),
             "Wrong": int(n_wrong_predictions),
-           # "Accuracy": accuracy,
+            "Accuracy": accuracy,
         })
 
     return metric_summary
