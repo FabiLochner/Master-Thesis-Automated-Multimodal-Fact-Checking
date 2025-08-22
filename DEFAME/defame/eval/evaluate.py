@@ -365,13 +365,30 @@ def finalize_evaluation(stats: dict,
     logger.info(f"All outputs saved in {experiment_dir.as_posix()}.")
 
     if not is_test:
-        benchmark_classes = benchmark.get_classes()
+
+        # Making the plotting of the confusion matrix more robust to handle possible capitalization issues between label values in loaded datasets (gaza-israel, ukraine-russia)
+        # and the class mapping and definitions in the respective benchmark.py files for both datasets (gaza-israel, ukraine-russia), see: Practical /defame/eval/gaza_israel/benchmark.py and /defame/eval/ukraine_russia/benchmark.py 
+
+        # Step 1: Define the canonical source of truth for the labels.
+        # This gets the Enum objects, e.g., [<Label.TRUE: 'TRUE'>, <Label.FALSE: 'FALSE'>]
+        canonical_enums = benchmark.get_classes()
+        # Convert them to a list of uppercase strings, e.g., ['TRUE', 'FALSE']
+        # This list will have a consistent order every time.
+        canonical_labels_upper = [label.name for label in canonical_enums] 
+
+        # Step 2: Normalize the raw data from the CSV to match the canonical format.
+        # This converts the arrays to string type (to be safe) and then to uppercase.
+        # It handles any capitalization in the CSV ('True', 'true', 'TRUE' all become 'TRUE').
+        predicted_labels_upper = np.char.upper(predicted_labels.astype(str))
+        ground_truth_labels_upper = np.char.upper(ground_truth_labels.astype(str))
+
+        
         # if is_averitec:
         #    benchmark_classes.remove(Label.CHERRY_PICKING)
 
-        plot_confusion_matrix(predicted_labels,
-                              ground_truth_labels,
-                              benchmark_classes,
+        plot_confusion_matrix(predicted_labels_upper, #adjusted to the upper-cased predicted labels
+                              ground_truth_labels_upper, #adjusted to the upper-cased ground truth labels
+                              canonical_labels_upper, # adjusted to the upper-cased benchmark classes/labels
                               benchmark_name=benchmark.name,
                               save_dir=experiment_dir)
 
@@ -381,6 +398,10 @@ def finalize_evaluation(stats: dict,
             scores_path = experiment_dir / "averitec_scores.yaml"
             with open(scores_path, "w") as f:
                 yaml.dump(scores, f, sort_keys=False)
+
+
+
+
 
 
 ## Add function to compute True Negative Rate (TNR)/Specificty 
@@ -447,9 +468,9 @@ def compute_metrics(predicted_labels: np.ndarray,
 
         # Update metric summary with added evaluation metrics
         metric_summary.update({
-            "Matthew Correlation Coefficient:": float(round(mcc, 2)),
+            "Matthew Correlation Coefficient": float(round(mcc, 2)),
             "Balanced Accuracy": float(round(balanced_acc, 2)),
-            "Macro-Averaged F1-Score:": float(round(macro_f1, 2)),
+            "Macro-Averaged F1-Score": float(round(macro_f1, 2)),
             "Macro-Averaged F0.5-Score": float(round(macro_f05, 2)),
             "True Negative Rate/Specificity": "N/A" if np.isnan(tnr) else float(round(tnr, 2))
             })
