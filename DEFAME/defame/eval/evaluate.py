@@ -358,20 +358,30 @@ def finalize_evaluation(stats: dict,
     predicted_justifications = df["justification"].apply(remove_urls_and_brackets)
     ground_truth_justifications = df["gt_justification"].apply(remove_urls_and_brackets)
 
-    # Compute metrics and save them along with the other stats
-    metric_stats = compute_metrics(predicted_labels,
+    # Compute the metrics based on the given benchmark. 
+    ## 1) For my two dataset, a two-level evaluation approach is used (dataset-level and claim-type level)
+    ## 2) For other datasets, the original code with the def compute_metrics is used
+
+    if is_gaza_israel or is_ukraine_russia:
+        # Compute dataset-level metrics
+        metrics_dataset_stats = compute_metrics_dataset_level(predicted_labels, ground_truth_labels)
+        # Compute claim-type-level metrics
+        metrics_claim_types_stats = compute_metrics_claim_type_level(benchmark, predicted_labels, ground_truth_labels)
+        # Combine the stats into a single dictionary
+        stats["Predictions"] = {
+            "Dataset_Metrics": metrics_dataset_stats,
+            "Claim_Type_Metrics": metrics_claim_types_stats
+        }
+
+    else:
+        # Use original def compute_metrics for other benchmarks/datasets
+        metric_stats = compute_metrics(predicted_labels,
                                    ground_truth_labels,
                                    predicted_justifications=predicted_justifications,
                                    ground_truth_justifications=ground_truth_justifications,
                                    is_mocheg=is_mocheg)
-    stats["Predictions"] = metric_stats
+        stats["Predictions"] = metric_stats
 
-    # Add the compute metrics per claim type here and also save them in stats
-    if is_gaza_israel or is_ukraine_russia:
-        metric_claim_types_stats = compute_metrics_claim_type_level(benchmark, predicted_labels, ground_truth_labels)
-        stats["Claim_Type_Metrics"] = metric_claim_types_stats
-    else:
-        print(f"Note: Claim Type metrics computation not supported for benchmark type: {type(benchmark).__name__}")
 
     save_stats(stats, target_dir=experiment_dir)
 
