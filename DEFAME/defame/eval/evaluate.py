@@ -537,10 +537,10 @@ def compute_metrics_claim_type_level(benchmark: Benchmark, predicted_labels: np.
                 tnr = compute_tnr(gt_subset, pred_subset)
 
                 # 2) Metrics per label
-                precision = precision_score(gt_subset, pred_subset, labels = labels_subset, average = None)
-                recall = recall_score(gt_subset, pred_subset, labels=labels_subset, average=None)
-                f1_scores = f1_score(gt_subset, pred_subset, labels=labels_subset, average=None)
-                f05_scores = fbeta_score(gt_subset, pred_subset, labels=labels_subset, average=None)
+                precision = precision_score(gt_subset, pred_subset, labels = labels_subset, average = None, zero_division=0)
+                recall = recall_score(gt_subset, pred_subset, labels=labels_subset, average=None, zero_division=0)
+                f1_scores = f1_score(gt_subset, pred_subset, labels=labels_subset, average=None, zero_division=0)
+                f05_scores = fbeta_score(gt_subset, pred_subset, beta = 0.5, labels=labels_subset, average=None, zero_division=0)
 
                 # 3) Absolute number of correct and wrong predictions
                 correct_predictions = np.asarray(np.array(pred_subset) == np.array(gt_subset))
