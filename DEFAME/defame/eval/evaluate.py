@@ -486,7 +486,7 @@ def compute_metrics_claim_type_level(benchmark: Benchmark, predicted_labels: np.
 
 
     # 1) Get all instances of each benchmark
-    all_instances = benchmark.data
+    #all_instances = benchmark.data
     # claims_text_only_mask = [instance.get("claim_text_only", False) for instance in all_instances]
     # claims_normal_image_mask = [instance.get("claim_normal_image", False) for instance in all_instances]
     # claims_ai_image_mask = [instance.get("claim_ai_image", False) for instance in all_instances]
@@ -498,10 +498,22 @@ def compute_metrics_claim_type_level(benchmark: Benchmark, predicted_labels: np.
         # For claims with ai & altered images:
             # Both datasets have only 1 ground truth label ("False"). Hence, less metrics can be computed.
 
+    # Make the function robust when a sample of a dataset is used for evaluation. We should not get IndexErrors.
+    # Get the evaluated instances instead of all instances (as used before). We can get this information from the predictions file
+    try:
+        # Read the predictions to get which samples were evaluated
+        df = pd.read_csv(Path(logger.target_dir) / logger.predictions_filename)
+        evaluated_sample_indices = df["sample_index"].to_numpy()
+        # Get only the instances that wer evaluated
+        evaluated_instances = [benchmark.get_by_id(idx) for idx in evaluated_sample_indices]
+
+    except Exception as e:
+        print(f"Warning: Could not read predictions file to determine evaluated instances: {str(e)}")
+
     # Process each claim type
     for claim_type, claim_key in claim_types:
-        # Create mask for this claim type
-        mask = [instance.get(claim_key, False) for instance in all_instances]
+        # Create mask for this claim type using evaluated instances only
+        mask = [instance.get(claim_key, False) for instance in evaluated_instances]
 
         if not any(mask):
             print(f"Warning: No claims found for claim type: {claim_type}") 
