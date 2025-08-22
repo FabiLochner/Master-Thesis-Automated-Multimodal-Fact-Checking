@@ -118,12 +118,24 @@ class ukraine_russia(Benchmark):
                 claim_text = row['Claim']
 
             assert isinstance(i, int)
+
+            # Extract claim types from dataset. The CSV is expected to store the columns as boolean values.
+            text_only_flag = row.get("Text_Only_Claim", False) == True
+            normal_image_flag = row.get("Normal_Image", False) == True
+            ai_image_flag = row.get("AI_Generated_Image", False) == True
+            altered_image_flag = row.get("Altered_Image", False) == True
+
             entry = {
                 "id": i,
                 "content": Content(content=claim_text, id_number=i),
                 "label": self.class_mapping[row["Label_Binary"]], # adjust it to the aggregated binary label column
-                "justification": row.get("Context/Label_Explanation", "") # the label explanations/justifications of the fact-checking websites is stored in this column
+                "justification": row.get("Context/Label_Explanation", ""), # the label explanations/justifications of the fact-checking websites is stored in this column
 
+                # Add claim type keys for evaluation 
+                "claim_text_only": text_only_flag,
+                "claim_normal_image": normal_image_flag,
+                "claim_ai_image": ai_image_flag,
+                "claim_altered_image": altered_image_flag,
             }
             data.append(entry)
 
