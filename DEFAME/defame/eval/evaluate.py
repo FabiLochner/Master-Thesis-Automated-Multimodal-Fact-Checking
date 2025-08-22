@@ -374,7 +374,7 @@ def finalize_evaluation(stats: dict,
         canonical_enums = benchmark.get_classes()
         # Convert them to a list of uppercase strings, e.g., ['TRUE', 'FALSE']
         # This list will have a consistent order every time.
-        canonical_labels_upper = [label.name for label in canonical_enums] 
+        #canonical_labels_upper = [label.name for label in canonical_enums] 
 
         # Step 2: Normalize the raw data from the CSV to match the canonical format.
         # This converts the arrays to string type (to be safe) and then to uppercase.
@@ -388,7 +388,7 @@ def finalize_evaluation(stats: dict,
 
         plot_confusion_matrix(predicted_labels_upper, #adjusted to the upper-cased predicted labels
                               ground_truth_labels_upper, #adjusted to the upper-cased ground truth labels
-                              canonical_labels_upper, # adjusted to the upper-cased benchmark classes/labels
+                              canonical_enums, # use the benchmark enum objects 
                               benchmark_name=benchmark.name,
                               save_dir=experiment_dir)
 
