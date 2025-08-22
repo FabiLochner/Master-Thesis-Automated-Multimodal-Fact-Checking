@@ -55,11 +55,10 @@ class ukraine_russia(Benchmark):
         Label.TRUE:
             "The claim is factually accurate when it is confirmed by evidence from multiple and reliable sources.",
         Label.FALSE:
-            "The claim is not factually accurate. This aggregated label encompasses three sub-labels/categories: "
-            "(1) FALSE - The claim is demonstrably false when it is disproven by evidence from multiple and reliable sources, "
-            "(2) MISLEADING - The claim or image is taken out of context, i.e. the claim or image is misrepresented in a wrong context or the necessary context is omitted. For example, an old claim or an old image is mispresented in a new context in a misleading way. If the claim refers to an image, it misrepresents the origin, content and/or meaning of the image. If the claim is a text-only claim, i.e. it does not refer to an image, it misrepresents the origin, content, and/or meaning of a statement."
-            "(3) Not Enough Information (NEI) - There is not enough evidence to verify the claim or the evidence is conflicting or self-contradictory.",
-
+            "The claim is not factually accurate. This is the case if one of the following three conditions is met:"
+            "(1) The claim is demonstrably false when it is disproven by evidence from multiple and reliable sources,"
+            "(2) The claim or image is taken out of context, i.e. the origin, content and/or meaning of a statement or an image is misrepresented. For example, an old claim or an old image is mispresented in a new context in a misleading way,"
+            "(3) There is not enough evidence to verify the claim or the evidence is conflicting or self-contradictory.",
     
     }
 
