@@ -19,7 +19,7 @@ google_service_account_key_path = Path("config/google_service_account_key.json")
 
 firecrawl_url = "http://firecrawl:3002"  # applies to Firecrawl running in a 'firecrawl' Docker Container
 
-random_seed = 22 # used for sub-sampling in partial dataset testing, #first test of gaza-israel dataset: small sample (e.g., n = 20); changed random_seed from 42 to 22
+random_seed = 42 # used for sub-sampling in partial dataset testing, #first test of gaza-israel dataset: small sample (e.g., n = 20); random_seed = 42
 
 
 def keys_configured() -> bool:

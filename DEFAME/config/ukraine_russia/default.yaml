@@ -19,8 +19,8 @@ fact_checker_kwargs:
 llm: gemini-2.0-flash-lite # adjusted to the LLM I use
 llm_kwargs:
   temperature: 0.01
-n_samples:  5
-random_sampling: false
+n_samples:  35
+random_sampling: true
 sample_ids: null
 allowed_actions:
 - web_search
@@ -34,5 +34,5 @@ tools_config:
       google:
       google_vision:
   geolocator:
-n_workers: 2 #reduced from 8 to 1 to avoid memory errors in Docker
+n_workers: 4 #reduced from 8 to 1 to avoid memory errors in Docker
 print_log_level: info
