@@ -1,0 +1,33 @@
+Extracting claims from Content: <image:36> This image shows a Palestinian woman using an Israeli tank to dry clothes in Gaza in July 2024.
+'Claim: "<image:36> This image shows a Palestinian woman using an Israeli tank to dry clothes in Gaza in July 2024."'
+Verifying Claim: "<image:36> This image shows a Palestinian woman using an Israeli tank to dry clothes in Gaza in July 2024."
+Not enough information yet. Continuing fact-check...
+Searching google_vision with query: ImageQuery(limit=3, start_date=None, end_date=None, search_type='reverse', text='', image=<defame.common.medium.Image object at 0x7ffed1570a30>)
+Skipping fact-checking website: https://www.misbar.com/en/factcheck/2024/07/15/photo-of-a-woman-from-south-lebanon-shared-in-relation-to-gaza
+Skipping unsupported website: https://www.instagram.com/arjbln/?hl=en
+Skipping fact-checking website: https://www.reuters.com/fact-check/arabic/Z2OUKJAWVFN67HOANITRKHHWUQ-2024-06-26/
+Skipping unsupported website: https://www.facebook.com/photo.php?fbid=951273880436979&id=100066631267674&set=a.381815154049524
+Got 0 new web source(s):
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Israeli tank Gaza drying clothes')
+Skipping unsupported website: https://x.com/plovejet/status/1812794518166524407
+Skipping fact-checking website: https://www.misbar.com/en/factcheck/2024/07/15/photo-of-a-woman-from-south-lebanon-shared-in-relation-to-gaza
+Got 3 new web source(s):
+	1. November 25, 2024 https://www.aljazeera.com/news/2024/11/25/flooding-in-gaza-compounds-hardship-of-people-displaced-by-israeli-attacks
+	2. November 12, 2023 https://www.bbc.co.uk/news/live/world-middle-east-67400490?page=6
+	3. November 07, 2023 https://apnews.com/article/civilians-fleeing-gaza-combat-israel-ground-operation-656545c0bd132d5dc2b6d108687ff13e
+Useful result: From [Source](https://www.aljazeera.com/news/2024/11/25/flooding-in-gaza-compounds-hardship-of-people-displaced-by-israeli-attacks): 
+Content: The Al Jazeera article, published on November 25, 2024, discusses the flooding of tent encampments in Gaza due to heavy rains, which has worsened the conditions for displaced Palestinians. <image:36> The article mentions that many tents are worn out and do not offer protection from the rain. The article also mentions that Israeli attacks intensified across the enclave on Monday. The article includes an image of a flooded tent in Khan Younis.
+
+Useful result: From [Source](https://www.bbc.co.uk/news/live/world-middle-east-67400490?page=6): 
+Content: The BBC reports on the ongoing conflict in Gaza, mentioning Israeli military operations, including tanks operating near hospitals. The article also includes images of UNRWA delivering fuel to hospitals <image:5408> and Israeli soldiers in Gaza <image:5410>. The article was edited by Yvette Tan.
+
+Useful result: From [Source](https://apnews.com/article/civilians-fleeing-gaza-combat-israel-ground-operation-656545c0bd132d5dc2b6d108687ff13e): 
+Content: The Associated Press reports on civilians fleeing Gaza amid the Israel-Hamas war. The article mentions Israeli tanks and the challenges faced by civilians during their journey. <image:36>
+
+Most likely location: Palestine
+Top 10 locations: Palestine, Tunisia, Jordan, United Arab Emirates, Israel, Pakistan, China, Albania, Andorra, Argentina
+The claim '<image:36> This image shows a Palestinian woman using an Israeli tank to dry clothes in Gaza in July 2024.' is true.
+Justification: The image depicts an Israeli tank in Gaza, and the claim suggests a Palestinian woman using it to dry clothes. Multiple news sources, including Al Jazeera ([https://www.aljazeera.com/news/2024/11/25/flooding-in-gaza-compounds-hardship-of-people-displaced-by-israeli-attacks](https://www.aljazeera.com/news/2024/11/25/flooding-in-gaza-compounds-hardship-of-people-displaced-by-israeli-attacks)), BBC ([https://www.bbc.co.uk/news/live/world-middle-east-67400490?page=6](https://www.bbc.co.uk/news/live/world-middle-east-67400490?page=6)), and Associated Press ([https://apnews.com/article/civilians-fleeing-gaza-combat-israel-ground-operation-656545c0bd132d5dc2b6d108687ff13e](https://apnews.com/article/civilians-fleeing-gaza-combat-israel-ground-operation-656545c0bd132d5dc2b6d108687ff13e)), confirm the presence of Israeli tanks in Gaza. The geolocation data suggests the image was likely taken in Palestine.
+
+So, the overall veracity is: true
+Fact-check took 2:27 min.

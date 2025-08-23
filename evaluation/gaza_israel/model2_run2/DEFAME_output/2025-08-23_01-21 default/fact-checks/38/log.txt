@@ -1,0 +1,69 @@
+Extracting claims from Content: <image:26> This image shows the assassination of Hamas leader Ismail Haniyeh on July 31st, 2024. This is how a precision strike looks like: a single missile through the window, and only Haniyeh and his bodyguard are dead. Nobody else in the building is even injured.
+'Claim: "<image:26> This image shows the assassination of Hamas leader Ismail Haniyeh on July 31st, 2024. This is how a precision strike looks like: a single missile through the window, and only Haniyeh and his bodyguard are dead. Nobody else in the building is even injured."'
+Verifying Claim: "<image:26> This image shows the assassination of Hamas leader Ismail Haniyeh on July 31st, 2024. This is how a precision strike looks like: a single missile through the window, and only Haniyeh and his bodyguard are dead. Nobody else in the building is even injured."
+Not enough information yet. Continuing fact-check...
+Searching google_vision with query: ImageQuery(limit=3, start_date=None, end_date=None, search_type='reverse', text='', image=<defame.common.medium.Image object at 0x7ffed17f3df0>)
+Skipping unsupported website: https://www.youtube.com/watch?v=qnY2GEiXrPQ
+Skipping fact-checking website: https://www.reuters.com/fact-check/photo-damaged-building-predates-killing-hamas-chief-ismail-haniyeh-2024-08-06/
+Skipping unsupported website: https://twitter.com/natiqmalikzada/status/1554344742065999874
+Failed to scrape https://english.iswnews.com/24517/ayman-al-zawahiri-the-leader-of-al-qaeda-was-killed-what-will-be-the-possible-consequences-of-this-assassination/
+Error 500: Server error.
+Skipping that URL.
+Got 5 new web source(s):
+	1. https://nypost.com/2022/08/01/biden-to-speak-after-us-takes-out-al-qaeda-target-in-afghanistan/
+	2. https://www.news18.com/news/world/al-zawahiri-liked-sitting-outside-on-his-balcony-the-cia-watched-for-months-before-killing-him-5671915.html
+	3. https://www.kyleorton.com/p/ayman-al-zawahiri-life-in-jihad
+	4. https://www.dailymail.co.uk/news/article-11071327/How-CIA-spied-Ayman-al-Zawahiri-months-pounding-terror-chief-Hellfire-missiles.html
+	5. https://antiguanewsroom.com/us-takes-out-al-qaeda-leader-ayman-al-zawahiri-in-afghanistan/
+Useful result: From [Source](https://nypost.com/2022/08/01/biden-to-speak-after-us-takes-out-al-qaeda-target-in-afghanistan/): Found exact image on website with title: US takes out al Qaeda leader Ayman al-Zawahiri in Afghanistan
+Content: The New York Post reports that the image <image:26> shows the residence of al Qaeda leader Ayman al-Zawahiri after a US drone strike in Kabul, Afghanistan. The strike, which killed al-Zawahiri, occurred on July 30, 2022. The article includes a map of the strike location <image:5075>, and images of al-Zawahiri <image:5078>, <image:5077>, the drone <image:5081>, and the missile used <image:5080>.
+
+Useful result: From [Source](https://www.news18.com/news/world/al-zawahiri-liked-sitting-outside-on-his-balcony-the-cia-watched-for-months-before-killing-him-5671915.html): Found exact image on website with title: Al-Zawahiri Liked Sitting Outside on His Balcony. The CIA Watched ...
+Content: The search result from News18.com discusses the killing of al-Qaeda leader Ayman al-Zawahiri in Kabul on July 31, 2022, by a US drone strike. <image:26> is an image of the building where the strike occurred. The article states that the CIA monitored al-Zawahiri for months, noting his habit of sitting on his balcony. The strike was confirmed by US President Joe Biden. The article was published on August 2, 2022.
+
+Useful result: From [Source](https://www.kyleorton.com/p/ayman-al-zawahiri-life-in-jihad): Found exact image on website with title: Ayman al-Zawahiri's Life in Jihad and Al-Qaeda After His Death
+Content: The article, published on July 31, 2023, by Kyle Orton, discusses the life of Ayman al-Zawahiri and the current state of Al-Qaeda. It mentions that al-Zawahiri was killed in an airstrike in Kabul, Afghanistan, on July 31, 2022. <image:26> The article also mentions that the house where al-Zawahiri was killed was in the Sherpur area of Kabul. The article also mentions that the Haqqani Network, a group within the Taliban, is closely tied to the ISI, which means Pakistan's military-intelligence establishment knew where Al-Qaeda's leader was and tried to shield him from America.
+
+Not enough information yet. Continuing fact-check...
+INFO: Dropping action 'reverse_search' as it was already performed.
+Got 3 new web source(s):
+	1. https://en.wikipedia.org/wiki/Assassination_of_Ismail_Haniyeh
+	2. August 01, 2024 https://www.csis.org/analysis/ismail-haniyehs-assassination-escalation-or-ramp
+	3. August 01, 2024 https://www.cnn.com/world/live-news/hamas-political-leader-haniyeh-killed-iran-07-31-24
+Useful result: From [Source](https://en.wikipedia.org/wiki/Assassination_of_Ismail_Haniyeh): 
+Content: The Wikipedia article discusses the assassination of Ismail Haniyeh, the political leader of Hamas, in Tehran, Iran, on July 31, 2024. The attack, attributed to Israel, resulted in Haniyeh's death along with his personal bodyguard. The article mentions differing reports on the method of the attack, including a missile strike or a remotely detonated explosive device. The article also includes reactions from various parties, including Hamas, Iran, and Israel. <image:26> is not present in the article.
+
+Useful result: From [Source](https://www.csis.org/analysis/ismail-haniyehs-assassination-escalation-or-ramp): 
+Content: The Center for Strategic and International Studies (CSIS) published an article on August 1, 2024, discussing the assassination of Ismail Haniyeh, the head of Hamas’s political wing, in Tehran on July 31, 2024. <image:4045>. The article mentions that the assassination was carried out by an explosion and that Iranian supreme leader Ayatollah Ali Khamenei vowed to avenge Haniyeh's death. The article also discusses the potential implications of the assassination, including the risk of broader war and the impact on peace talks.
+
+Useful result: From [Source](https://www.cnn.com/world/live-news/hamas-political-leader-haniyeh-killed-iran-07-31-24): 
+Content: The CNN article, updated August 1, 2024, reports that Hamas political leader Ismail Haniyeh was killed in an Israeli strike in Tehran on July 31, 2024. <image:26> The article mentions that Israel has neither confirmed nor denied being behind the assassination. The article also mentions that Iran's Supreme Leader Ayatollah Ali Khamenei has ordered Iran to "strike Israel directly" following the killing of Haniyeh. The article also includes information about Haniyeh's movements since October 7, 2023, including multiple trips to Tehran.
+
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Hamas leader killed July 31 2024')
+Got 2 new web source(s):
+	1. July 31, 2024 https://www.npr.org/2024/07/31/nx-s1-5058383/hamas-says-top-leader-killed-in-iran
+	2. July 31, 2024 https://www.reuters.com/world/middle-east/what-we-know-so-far-about-assassination-hamas-leader-2024-07-31/
+Useful result: From [Source](https://www.npr.org/2024/07/31/nx-s1-5058383/hamas-says-top-leader-killed-in-iran): 
+Content: NPR reports that Hamas accused Israel of killing its top political leader Ismail Haniyeh in an airstrike in Iran on July 31, 2024. The article was originally published on July 31, 2024, and updated on August 1, 2024. <image:5324>, <image:5325>, <image:5335>.
+
+Useful result: From [Source](https://www.reuters.com/world/middle-east/what-we-know-so-far-about-assassination-hamas-leader-2024-07-31/): 
+Content: Reuters reports that Hamas leader Ismail Haniyeh was assassinated early on Wednesday morning in Iran on July 31, 2024. <image:5340> The article mentions that the assassination was widely assumed to have been carried out by Israel.
+
+Not enough information yet. Continuing fact-check...
+INFO: Dropping action 'reverse_search' as it was already performed.
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Ismail Haniyeh assassination Iran July 31 2024 building')
+Got 3 new web source(s):
+	1. https://www.nytimes.com/2024/08/01/world/middleeast/how-hamas-leader-haniyeh-killed-iran-bomb.html
+	2. https://www.cnn.com/2024/07/30/middleeast/hamas-political-leader-ismail-haniyeh-killed-intl-hnk
+	3. https://www.lemonde.fr/en/international/article/2024/08/01/iran-and-allies-weigh-retaliation-after-strikes-in-tehran-and-beirut_6706847_4.html
+Useful result: From [Source](https://www.nytimes.com/2024/08/01/world/middleeast/how-hamas-leader-haniyeh-killed-iran-bomb.html): 
+Content: The New York Times published an article on August 1, 2024, about the assassination of Ismail Haniyeh in Iran. The article includes an image of a building. <image:5342>
+
+Useful result: From [Source](https://www.cnn.com/2024/07/30/middleeast/hamas-political-leader-ismail-haniyeh-killed-intl-hnk): 
+Content: CNN reports that Hamas leader Ismail Haniyeh was killed in an airstrike in Iran on July 31, 2024. <image:5343>
+
+The claim '<image:26> This image shows the assassination of Hamas leader Ismail Haniyeh on July 31st, 2024. This is how a precision strike looks like: a single missile through the window, and only Haniyeh and his bodyguard are dead. Nobody else in the building is even injured.' is false.
+Justification: The claim that the image depicts the assassination of Ismail Haniyeh on July 31, 2024, is not supported by the evidence. While news sources such as [NPR](https://www.npr.org/2024/07/31/nx-s1-5058383/hamas-says-top-leader-killed-in-iran) and [Reuters](https://www.reuters.com/world/middle-east/what-we-know-so-far-about-assassination-hamas-leader-2024-07-31/) confirm the assassination on that date, image searches reveal different buildings associated with the event, indicating the image in the claim is not related to the assassination.
+
+So, the overall veracity is: false
+Fact-check took 6:03 min.

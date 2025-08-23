@@ -1,0 +1,32 @@
+Extracting claims from Content: <image:55> This image shows U.S. warships being en route to the Lebanon coast in August 2024 to support the Israel Defence Forces (IDF).
+'Claim: "<image:55> This image shows U.S. warships being en route to the Lebanon coast in August 2024 to support the Israel Defence Forces (IDF)."'
+Verifying Claim: "<image:55> This image shows U.S. warships being en route to the Lebanon coast in August 2024 to support the Israel Defence Forces (IDF)."
+Not enough information yet. Continuing fact-check...
+Got 2 new web source(s):
+	1. https://www.dvidshub.net/news/474750/uss-mount-whitney-lcc-20-arrives-kiel-germany-marking-its-final-stop-after-completing-baltops-24
+	2. https://www.jbsa.mil/News/News/Article/3828763/us-officials-agree-natos-worth-is-unquestionable/
+Useful result: From [Source](https://www.dvidshub.net/news/474750/uss-mount-whitney-lcc-20-arrives-kiel-germany-marking-its-final-stop-after-completing-baltops-24): Found exact image on website with title: USS Mount Whitney (LCC 20) arrives in Kiel, Germany, marking its ...
+Content: The image is of the USS Mount Whitney (LCC 20) arriving in Kiel, Germany, on June 19, 2024, after completing BALTOPS 24. The exercise took place in the Baltic Sea on June 8, 2024. <image:55> is the same image as one of the images in the search result.
+
+Useful result: From [Source](https://www.jbsa.mil/News/News/Article/3828763/us-officials-agree-natos-worth-is-unquestionable/): Found exact image on website with title: U.S. officials agree NATO's worth is unquestionable
+Content: The search result is from a U.S. government website and contains an image of multiple military ships at sea. <image:k> The image is from June 8, 2024, and is related to the Baltic Operations 2024 exercise. The article discusses NATO and its importance.
+
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='US warships Lebanon coast August 2024')
+Got 3 new web source(s):
+	1. August 03, 2024 https://www.npr.org/2024/08/03/nx-s1-5061738/the-u-s-is-sending-more-warships-to-the-middle-east-as-israel-steps-up-attacks
+	2. August 02, 2024 https://news.usni.org/2024/08/02/carrier-uss-abraham-lincoln-heads-to-middle-east-as-iran-threatens-strikes-against-israel
+	3. August 26, 2024 https://www.militarytimes.com/news/pentagon-congress/2024/08/26/two-us-aircraft-carriers-to-stay-in-middle-east-after-hezbollah-attack/
+Useful result: From [Source](https://www.npr.org/2024/08/03/nx-s1-5061738/the-u-s-is-sending-more-warships-to-the-middle-east-as-israel-steps-up-attacks): 
+Content: NPR reported on August 3, 2024, that the U.S. is sending more warships to the Middle East as Israel steps up attacks. <image:5671> The report mentions that Israel expects an attack from Iran and its allies.
+
+Useful result: From [Source](https://news.usni.org/2024/08/02/carrier-uss-abraham-lincoln-heads-to-middle-east-as-iran-threatens-strikes-against-israel): 
+Content: The USNI News article, published on August 2, 2024, reports that the USS Abraham Lincoln is heading to the Middle East. The move is in response to threats from Iran. The article mentions that a three-ship Wasp Amphibious Ready Group is in the Eastern Mediterranean and could be used for a non-combatant evacuation from Lebanon. <image:5678> shows the USS Abraham Lincoln.
+
+Useful result: From [Source](https://www.militarytimes.com/news/pentagon-congress/2024/08/26/two-us-aircraft-carriers-to-stay-in-middle-east-after-hezbollah-attack/): 
+Content: The Military Times published an article on August 26, 2024, stating that two U.S. aircraft carriers will remain in the Middle East after a Hezbollah attack. The article mentions the aircraft carrier Theodore Roosevelt and the Abraham Lincoln. The U.S. is boosting its military presence in the region to avert a larger conflict between Israel and Iran. <image:5698>
+
+The claim '<image:55> This image shows U.S. warships being en route to the Lebanon coast in August 2024 to support the Israel Defence Forces (IDF).' is false.
+Justification: The image in the claim is not related to U.S. warships en route to the Lebanon coast in August 2024. Reverse image search reveals the image is associated with the Baltic Operations 2024 exercise. While the U.S. did deploy warships to the Middle East in August 2024, as reported by [NPR](https://www.npr.org/2024/08/03/nx-s1-5061738/the-u-s-is-sending-more-warships-to-the-middle-east-as-israel-steps-up-attacks), the image does not depict this.
+
+So, the overall veracity is: false
+Fact-check took 1:13 min.

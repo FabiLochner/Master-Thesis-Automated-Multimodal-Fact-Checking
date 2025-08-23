@@ -1,0 +1,69 @@
+Extracting claims from Content: <image:60> This image shows Israelis fleeing the airport after the Houthis attack on July 19, 2024.
+'Claim: "<image:60> This image shows Israelis fleeing the airport after the Houthis attack on July 19, 2024."'
+Verifying Claim: "<image:60> This image shows Israelis fleeing the airport after the Houthis attack on July 19, 2024."
+Not enough information yet. Continuing fact-check...
+Got 3 new web source(s):
+	1. https://www.gettyimages.com/photos/israel-airport
+	2. https://www.businessinsider.com/israel-flight-cancelations-ben-gurion-airport-2023-10
+	3. https://www.gettyimages.dk/photos/israel-airport
+Useful result: From [Source](https://www.gettyimages.com/photos/israel-airport): Found exact image on website with title: 17785 Israel Airport Stock Photos & High-Res Pictures - Getty Images
+Content: The search result from Getty Images contains numerous stock photos and images related to Israel's Ben Gurion Airport. The images show various scenes, including passengers waiting, flight cancellations, and security measures. Some images are dated from October 2023 and June 2025. <image:2413>, <image:2415>, <image:2417>, <image:2418>, <image:2419>, <image:2421>, <image:2425>, <image:2428>, <image:2431>, <image:2432>, <image:2434>, <image:2436>, <image:2440>, <image:2441>, <image:2443>, <image:2445>, <image:2447>, <image:2448>, <image:2450>, <image:2451>.
+
+Useful result: From [Source](https://www.businessinsider.com/israel-flight-cancelations-ben-gurion-airport-2023-10): Found exact image on website with title: Travelers Face Canceled Flights, Chaos at Israel's Ben Gurion Airport
+Content: The image <image:60> appears in a Business Insider article from October 10, 2023, about the chaos at Ben Gurion Airport in Israel due to the war with Gaza. The article mentions flight cancellations and long lines at the airport. <image:2452> shows people waiting in line at the airport.
+
+Useful result: From [Source](https://www.gettyimages.dk/photos/israel-airport): Found exact image on website with title: 6975 Israel Airport Stock Photos & High-Res Pictures - Getty Images
+Content: The search result from Getty Images contains stock photos and images of Ben Gurion Airport in Israel. The images show people waiting in the airport, flight cancellations, and security measures. Some images are related to attacks by Palestinian factions, Houthi missile strikes, and the closure of airspace. <image:2454>, <image:2455>, <image:2456>, <image:2457>, <image:2458>, <image:2459>, <image:2460>, <image:2461>, <image:2462>, <image:2463>, <image:2464>, <image:2465>, <image:2466>, <image:2467>, <image:2468>, <image:2469>, <image:2470>, <image:2471>, <image:2472>, <image:2473>, <image:2474>, <image:2475>. Some images are dated from 2022, 2023, and 2024, and 2025.
+
+Not enough information yet. Continuing fact-check...
+INFO: Dropping action 'reverse_search' as it was already performed.
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Houthis attack Israel airport July 19 2024')
+Got 3 new web source(s):
+	1. July 19, 2024 https://www.theguardian.com/world/article/2024/jul/19/yemen-houthis-claim-deadly-drone-attack-on-tel-aviv-israel
+	2. https://en.wikipedia.org/wiki/20_July_2024_Israeli_attack_on_Yemen
+	3. July 19, 2024 https://www.aljazeera.com/news/2024/7/19/drone-attack-on-israels-tel-aviv-leaves-one-dead-at-least-10-injured
+Useful result: From [Source](https://www.theguardian.com/world/article/2024/jul/19/yemen-houthis-claim-deadly-drone-attack-on-tel-aviv-israel): 
+Content: The Guardian published an article on July 19, 2024, reporting a Houthi drone attack on Tel Aviv, Israel, which resulted in one death and at least 10 injuries. The article mentions that the drone, identified as Iranian-made, bypassed Israel's air defenses. The Houthis claimed responsibility for the attack. <image:5749> shows broken glass on the pavements. <image:5751> shows the aftermath of the attack.
+
+Useful result: From [Source](https://en.wikipedia.org/wiki/20_July_2024_Israeli_attack_on_Yemen): 
+Content: The search result from Wikipedia discusses the 2024 Houthi drone attack on Israel on July 19, 2024, which targeted Tel Aviv. It also mentions the 20 July 2024 Israeli attack on Yemen, specifically targeting Al Hudaydah, Yemen. The Israeli attack resulted in casualties, including deaths and injuries. The article also mentions the Red Sea crisis and the Middle Eastern crisis.
+
+Useful result: From [Source](https://www.aljazeera.com/news/2024/7/19/drone-attack-on-israels-tel-aviv-leaves-one-dead-at-least-10-injured): 
+Content: Al Jazeera reported on July 19, 2024, that the Houthis claimed responsibility for a drone attack on Tel Aviv, Israel, which killed one person and injured at least 10. <image:i>. The attack has created a new wave of anxiety in Israel.
+
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Israel airport crowded July 2024')
+Got 3 new web source(s):
+	1. July 04, 2024 https://www.haaretz.com/israel-news/2024-07-04/ty-article/.premium/ben-gurion-airport-expects-summer-surge-in-passengers-still-below-pre-war-levels/00000190-7d33-d835-a9fb-ffbb2c030000
+	2. August 04, 2024 https://www.timesofisrael.com/amid-war-fears-at-ben-gurion-airport-its-business-as-usual-just-less-of-it/
+	3. https://airfasttrack.com/is-there-any-tourism-in-israel-now-july-2025/
+Useful result: From [Source](https://www.haaretz.com/israel-news/2024-07-04/ty-article/.premium/ben-gurion-airport-expects-summer-surge-in-passengers-still-below-pre-war-levels/00000190-7d33-d835-a9fb-ffbb2c030000): 
+Content: The article from Haaretz, published on July 4, 2024, discusses the expected increase in passengers at Ben-Gurion International Airport during the summer. It mentions that the passenger volume is still expected to be lower than in previous summers. <image:60>
+
+Useful result: From [Source](https://www.timesofisrael.com/amid-war-fears-at-ben-gurion-airport-its-business-as-usual-just-less-of-it/): 
+Content: The Times of Israel published an article on August 4, 2024, discussing the situation at Ben Gurion Airport. The article mentions that more than 18 airlines have canceled or suspended flights to and from Ben Gurion Airport. The article includes images of the arrivals and departures halls at Ben Gurion Airport on August 4, 2024. <image:5788>, <image:5789>, <image:5790>, <image:5791>.
+
+Useful result: From [Source](https://airfasttrack.com/is-there-any-tourism-in-israel-now-july-2025/): 
+Content: The article, dated July 2025, discusses the recovery of tourism in Israel after months of conflict. It mentions that Ben Gurion Airport is operating with its typical crowds and queues.
+
+Not enough information yet. Continuing fact-check...
+INFO: Dropping action 'reverse_search' as it was already performed.
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Israel airport crowded July 19 2024')
+Skipping fact-checking website: https://www.usatoday.com/story/news/factcheck/2024/04/15/israel-mass-exodus-airport-2022/73328772007/
+Got 3 new web source(s):
+	1. https://www.euronews.com/travel/2024/07/19/microsoft-outage-flight-delays-and-cancellations-arrive-at-the-airport-early-say-airlines
+	2. https://www.timesofisrael.com/travel-chaos-as-ben-gurion-airport-briefly-shut-foreign-airlines-nix-flights/
+	3. https://www.cnn.com/2024/07/19/travel/the-airlines-impacted-by-the-global-tech-outage
+Useful result: From [Source](https://www.euronews.com/travel/2024/07/19/microsoft-outage-flight-delays-and-cancellations-arrive-at-the-airport-early-say-airlines): 
+Content: Euronews published an article on July 19, 2024, about flight delays and cancellations. The article includes an image of a crowded airport. <image:5802>
+
+Useful result: From [Source](https://www.timesofisrael.com/travel-chaos-as-ben-gurion-airport-briefly-shut-foreign-airlines-nix-flights/): 
+Content: The Times of Israel published an article discussing travel chaos at Ben Gurion Airport. The article includes an image of a crowded airport. <image:5803>
+
+Useful result: From [Source](https://www.cnn.com/2024/07/19/travel/the-airlines-impacted-by-the-global-tech-outage): 
+Content: The CNN article includes an image of a crowded airport. <image:5804>
+
+The claim '<image:60> This image shows Israelis fleeing the airport after the Houthis attack on July 19, 2024.' is false.
+Justification: The claim is not supported by the evidence. While the image depicts a crowded airport, and there were reports of a Houthi attack and increased passenger volume at Ben Gurion Airport in July 2024, there is no evidence to confirm that the image specifically shows Israelis fleeing the airport after the attack.
+
+So, the overall veracity is: false
+Fact-check took 2:08 min.

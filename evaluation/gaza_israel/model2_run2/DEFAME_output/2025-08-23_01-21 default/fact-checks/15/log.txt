@@ -1,0 +1,41 @@
+Extracting claims from Content: <image:13> This image shows a traffic sign in Montreal in July 2024 which displays a 'Free Palestine. Escalate now' message and was authorized by Montreal's Mayor Valérie Plante.
+'Claim: "<image:13> This image shows a traffic sign in Montreal in July 2024 which displays a 'Free Palestine. Escalate now' message and was authorized by Montreal's Mayor Valérie Plante."'
+Verifying Claim: "<image:13> This image shows a traffic sign in Montreal in July 2024 which displays a 'Free Palestine. Escalate now' message and was authorized by Montreal's Mayor Valérie Plante."
+Not enough information yet. Continuing fact-check...
+Most likely location: Palestine
+Top 10 locations: Palestine, Canada, Germany, Austria, Israel, Poland, Slovenia, South Korea, Albania, Andorra
+Got 2 new web source(s):
+	1. https://www.cbc.ca/news/canada/montreal/montreal-traffic-signs-pro-palestinian-slogans-1.7274809
+	2. https://www.theglobeandmail.com/canada/article-montreal-traffic-signs-apparently-hacked-to-display-pro-palestinian/
+Useful result: From [Source](https://www.cbc.ca/news/canada/montreal/montreal-traffic-signs-pro-palestinian-slogans-1.7274809): Found exact image on website with title: Montreal electronic traffic signs altered to display pro-Palestinian ...
+Content: The CBC News article, published on July 25, 2024, reports that electronic traffic signs in Montreal were altered to display pro-Palestinian slogans, including "free Palestine" and "escalate now." <image:13> The City of Montreal called the incident an act of vandalism. A group called Clash Mtl claimed responsibility. The signs belong to a private contractor hired by the city. The original messages were restored. The author is Joe Bongiorno.
+
+Useful result: From [Source](https://www.theglobeandmail.com/canada/article-montreal-traffic-signs-apparently-hacked-to-display-pro-palestinian/): Found exact image on website with title: Montreal electronic traffic signs hacked to display pro-Palestinian ...
+Content: The Globe and Mail published an article on July 24, 2024, reporting that electronic traffic signs in Montreal were hacked to display pro-Palestinian slogans, including "Free Palestine" and "Escalate now." <image:761> The City of Montreal called the incident an act of vandalism. A group called Clash Mtl claimed responsibility.
+
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Free Palestine sign Montreal')
+Got 2 new web source(s):
+	1. September 05, 2024 https://www.readthemaple.com/city-of-montreal-illegally-seized-pro-palestine-signs-activists-allege/
+	2. July 25, 2024 https://montrealgazette.com/news/local-news/montreal-traffic-signs-apparently-hacked-to-display-pro-palestinian-political-slogans
+Useful result: From [Source](https://www.readthemaple.com/city-of-montreal-illegally-seized-pro-palestine-signs-activists-allege/): 
+Content: The article from The Maple, published on September 5, 2024, discusses the City of Montreal's removal of pro-Palestine signs ahead of a federal by-election. The signs were put up by LaSalle-Émard-Verdun pour la Palestine (LEV4P), a registered third-party campaign group. The article mentions that this is not the first time the City of Montreal has removed pro-Palestine signs. The article also mentions that Jeremy Levi, the mayor of the Montreal suburb of Hampstead, called on Montreal Mayor Valerie Plante to "take a stand and restore order in our city" regarding the signs. <image:13>
+
+Useful result: From [Source](https://montrealgazette.com/news/local-news/montreal-traffic-signs-apparently-hacked-to-display-pro-palestinian-political-slogans): 
+Content: The Montreal Gazette reports that electronic message boards at two construction sites in Montreal displayed pro-Palestinian slogans, including "free Palestine" and "escalate now," on July 24, 2024. <image:13> The signs were apparently hacked. The City of Montreal called the incident an act of vandalism. The article mentions that a group called Clash Mtl claimed responsibility for the hack.
+
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Valérie Plante Free Palestine')
+Skipping unsupported website: https://www.facebook.com/MTL.ValeriePlante/posts/la-guerre-a-d%C3%A9j%C3%A0-fait-trop-de-ravages-appelons-%C3%A0-un-cessez-le-feu-imm%C3%A9diat-et-du/1101294548024251/
+Got 2 new web source(s):
+	1. July 31, 2024 https://www.thesuburban.com/news/city_news/plante-served-over-pro-palestinian-electronic-signs/article_e0143fdc-d532-5ecf-9a66-095ad0ee8ab9.html
+	2. November 25, 2024 https://montreal.citynews.ca/2024/11/25/plante-trudeau-condemn-violence-protest-montreal/
+Useful result: From [Source](https://www.thesuburban.com/news/city_news/plante-served-over-pro-palestinian-electronic-signs/article_e0143fdc-d532-5ecf-9a66-095ad0ee8ab9.html): 
+Content: The Suburban published an article about Mayor Valérie Plante being served by bailiff regarding electronic signs used by pro-Palestinian activists. The signs displayed messages such as "Free Palestine" and were criticized for conveying anti-Israel messages. The article includes an image of a sign that says "INTIFADA NOW" <image:4933>. The article mentions that police are investigating the incident and that a group called Clash MTL claimed credit. The article was written by Joel Goldenberg.
+
+Useful result: From [Source](https://montreal.citynews.ca/2024/11/25/plante-trudeau-condemn-violence-protest-montreal/): 
+Content: The article from CityNews Montreal, published on November 25, 2024, reports that Montreal Mayor Valérie Plante condemned the violence at a pro-Palestinian and anti-NATO protest in Montreal. The mayor stated that the violence "does not have its place here in Montreal." The article also mentions that Prime Minister Justin Trudeau condemned the violence.
+
+The claim '<image:13> This image shows a traffic sign in Montreal in July 2024 which displays a 'Free Palestine. Escalate now' message and was authorized by Montreal's Mayor Valérie Plante.' is false.
+Justification: The image depicts a hacked traffic sign in Montreal displaying a pro-Palestinian message, which was not authorized by Mayor Valérie Plante, but was instead the result of vandalism, as reported by the [CBC News](https://www.cbc.ca/news/canada/montreal/montreal-traffic-signs-pro-palestinian-slogans-1.7274809) and the [Globe and Mail](https://www.theglobeandmail.com/canada/article-montreal-traffic-signs-apparently-hacked-to-display-pro-palestinian/).
+
+So, the overall veracity is: false
+Fact-check took 2:05 min.

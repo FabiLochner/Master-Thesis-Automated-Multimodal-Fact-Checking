@@ -1,0 +1,30 @@
+Extracting claims from Content: Turkey's President urged the U.S. in March 2025 to control its ally Israel over its intervention in southern Syria in February 2025.
+'Claim: "Turkey's President urged the U.S. in March 2025 to control its ally Israel over its intervention in southern Syria in February 2025."'
+Verifying Claim: "Turkey's President urged the U.S. in March 2025 to control its ally Israel over its intervention in southern Syria in February 2025."
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Turkey President US Israel Syria intervention March 2025')
+Got 3 new web source(s):
+	1. July 23, 2025 https://www.pbs.org/newshour/world/syria-asks-turkey-for-defense-support-after-weeks-of-sectarian-violence
+	2. August 13, 2025 https://www.aljazeera.com/news/2025/8/13/turkiye-slams-israel-kurdish-led-sdf-for-destabilising-syria
+	3. August 13, 2025 https://www.timesofisrael.com/turkey-and-syria-accuse-israel-of-fostering-chaos-in-syria/
+Useful result: From [Source](https://www.pbs.org/newshour/world/syria-asks-turkey-for-defense-support-after-weeks-of-sectarian-violence): 
+Content: PBS News published on July 23, 2025, reports that Syria requested Turkey's support to strengthen its defense capabilities following sectarian violence and Israeli intervention. <image:5493> The article mentions that tensions escalated in southern Syria, leading to clashes and Israeli airstrikes. The article also states that Turkey backs the integration of Kurds in the Syrian army.
+
+Useful result: From [Source](https://www.aljazeera.com/news/2025/8/13/turkiye-slams-israel-kurdish-led-sdf-for-destabilising-syria): 
+Content: Al Jazeera published on August 13, 2025, an article stating that Turkey's Foreign Minister accused Israel and the SDF of undermining Syria's recovery efforts. <image:1>. The article mentions that Israel has been regularly bombarding Syria and staging ground excursions into Syria.
+
+Useful result: From [Source](https://www.timesofisrael.com/turkey-and-syria-accuse-israel-of-fostering-chaos-in-syria/): 
+Content: The Times of Israel published an article on August 13, 2025, stating that Turkey's foreign minister warned Israel not to stir up chaos in Syria. The article mentions that in March, there was bloodshed in Latakia and violence in Sweida. It also mentions that Israel carried out airstrikes in Syria in July 2025, including near a strategic air base in Hama in April 2025. <image:5496>
+
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Turkey President Israel Syria intervention March 2025 US')
+Got 1 new web source(s):
+	1. July 15, 2025 https://www.cnn.com/2025/07/15/middleeast/israel-strikes-syria-sectarian-clashes-druze-intl
+Useful result: From [Source](https://www.cnn.com/2025/07/15/middleeast/israel-strikes-syria-sectarian-clashes-druze-intl): 
+Content: CNN reported on July 19, 2025, that Israel intervened in southern Syria due to clashes between the Druze minority group and Bedouin tribes. <image:1>. The article mentions Israeli airstrikes and a ceasefire. The article also mentions that the Syrian government declared a ceasefire and sent in troops. The article does not mention the Turkish President.
+
+The claim 'Turkey's President urged the U.S. in March 2025 to control its ally Israel over its intervention in southern Syria in February 2025.' is false.
+Justification: The claim is not supported by the evidence. While reports from sources like PBS News and The Times of Israel ([https://www.timesofisrael.com/turkey-and-syria-accuse-israel-of-fostering-chaos-in-syria/](https://www.timesofisrael.com/turkey-and-syria-accuse-israel-of-fostering-chaos-in-syria/)) detail Israeli intervention in Syria and Turkey's Foreign Minister's warnings to Israel, there is no mention of the Turkish President urging the U.S. to control Israel.
+
+So, the overall veracity is: false
+Fact-check took 0:59 min.
