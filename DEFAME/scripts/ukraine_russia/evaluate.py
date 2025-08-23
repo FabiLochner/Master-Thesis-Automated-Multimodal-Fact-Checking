@@ -13,7 +13,7 @@ warnings.filterwarnings("ignore")
 if __name__ == '__main__':  # evaluation uses multiprocessing
     set_start_method("spawn")
     evaluate(
-        llm="gemini-2.0-flash-lite", #change to the LLM I use (see default.yaml file)
+        llm="gemini-2.0-flash-lite-001", #changed to the LLM I use (stable version of the model: https://ai.google.dev/gemini-api/docs/models#gemini-2.0-flash-lite)
         tools_config=dict(
             searcher=dict(
                 search_engine_config=dict(
