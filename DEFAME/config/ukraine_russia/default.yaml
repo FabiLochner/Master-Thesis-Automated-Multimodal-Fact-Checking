@@ -19,7 +19,7 @@ fact_checker_kwargs:
 llm: gemini-2.0-flash-lite # adjusted to the LLM I use
 llm_kwargs:
   temperature: 0.01
-n_samples:  15
+n_samples:  35
 random_sampling: true
 sample_ids: null
 allowed_actions:
