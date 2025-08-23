@@ -1,0 +1,55 @@
+Extracting claims from Content: <image:48> This is an authentic image of Israeli Air Force's Ramat David airbase that was attacked by Hezbollah on September, 22, 2024.
+'Claim: "<image:48> This is an authentic image of Israeli Air Force's Ramat David airbase that was attacked by Hezbollah on September, 22, 2024."'
+Verifying Claim: "<image:48> This is an authentic image of Israeli Air Force's Ramat David airbase that was attacked by Hezbollah on September, 22, 2024."
+Not enough information yet. Continuing fact-check...
+Got 3 new web source(s):
+	1. https://www.france24.com/en/tv-shows/truth-or-fake/20240918-motorola-wrongly-accused-of-manufacturing-hezbollah-pagers
+	2. https://www.dw.com/en/fact-check-no-these-images-dont-show-hezbollah-strikes-on-israel/a-70312934
+	3. https://www.tv2.no/nyheter/utenriks/bilder-fra-kjonnsskifteoperasjon-delt-som-bevis-pa-israelsk-suksess/17063362/
+Useful result: From [Source](https://www.france24.com/en/tv-shows/truth-or-fake/20240918-motorola-wrongly-accused-of-manufacturing-hezbollah-pagers): Found exact image on website with title: Motorola wrongly accused of manufacturing Hezbollah pagers
+Content: The search result from France 24, published on September 18, 2024, discusses a claim about Motorola and Hezbollah. The article includes the image <image:48> and mentions the claim is related to the "Israeli Motorola massacre".
+
+Useful result: From [Source](https://www.dw.com/en/fact-check-no-these-images-dont-show-hezbollah-strikes-on-israel/a-70312934): Found exact image on website with title: Fact check: Images don't show Hezbollah strikes on Israel - DW
+Content: The search result from DW.COM, published on September 25, 2024, fact-checks an image that claims to show a Hezbollah attack on the Ramat David airbase. The article states that the image is fake and likely AI-generated, citing blurry text and visual distortions as evidence. <image:48>
+
+Useful result: From [Source](https://www.tv2.no/nyheter/utenriks/bilder-fra-kjonnsskifteoperasjon-delt-som-bevis-pa-israelsk-suksess/17063362/): Found exact image on website with title: Bilder fra kjønnsskifteoperasjon delt som «bevis» på israelsk suksess
+Content: The article from TV2.no discusses manipulated images and videos related to the conflict in the Middle East. The article mentions a viral image of a burning plane, which was shared on social media as evidence of damage to the Ramat David airbase after an attack by Hezbollah on September 22, 2024. <image:48> However, the article states that the image is AI-generated and contains several suspicious elements. The article was published on October 7, 2024, and updated on October 23, 2024.
+
+Not enough information yet. Continuing fact-check...
+INFO: Dropping action 'reverse_search' as it was already performed.
+Got 3 new web source(s):
+	1. September 21, 2024 https://www.aljazeera.com/news/2024/9/21/hezbollah-claims-rocket-attack-deep-inside-northern-israel
+	2. September 22, 2024 https://www.politico.eu/article/hezbollah-launches-revenge-rocket-attack-against-israeli-base/
+	3. September 22, 2024 https://www.jpost.com/israel-news/article-821267
+Useful result: From [Source](https://www.aljazeera.com/news/2024/9/21/hezbollah-claims-rocket-attack-deep-inside-northern-israel): 
+Content: Al Jazeera published an article on September 21, 2024, reporting that Hezbollah claimed to have launched rockets at Israel’s Ramat David Airbase, east of Haifa, on September 22, 2024. <image:49> The article includes images of damage in Kiryat Bialik in the Haifa district following a Hezbollah attack.
+
+Useful result: From [Source](https://www.politico.eu/article/hezbollah-launches-revenge-rocket-attack-against-israeli-base/): 
+Content: Politico.eu reports that Hezbollah launched rockets at the Ramat David airbase in northern Israel on Sunday. The attack was in response to Israeli attacks on Lebanon. The article mentions that the attack occurred on September 22, 2024.
+
+Useful result: From [Source](https://www.jpost.com/israel-news/article-821267): 
+Content: The Jerusalem Post published an article on September 22, 2024, discussing Hezbollah's rocket attacks on the Ramat David airbase. The article mentions the historical significance of the base and previous threats against it. The article includes a photo of the Ramat David Airbase. <image:1>.
+
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Hezbollah attack Ramat David airbase')
+Skipping unsupported website: https://www.youtube.com/watch?v=C8uxToCz1jA
+Got 0 new web source(s):
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Ramat David airbase fire')
+Skipping unsupported website: https://www.youtube.com/watch?v=w23rzPXR3xQ
+Got 3 new web source(s):
+	1. https://defapress.ir/en/news/85030/hezbollah-targeted-ramat-david-airbase-with-several-missiles
+	2. https://www.palestinechronicle.com/gaza-live-blog-beirut-death-toll-rises-strike-in-zaytoun-israels-aggression-on-lebanon-continues-day-351/
+	3. https://parstoday.ir/en/news/west_asia-i230538-huge_blasts_in_ramat_david_airbase_of_israel_five_important_points_about_hezbollah's_broad_attack
+Useful result: From [Source](https://defapress.ir/en/news/85030/hezbollah-targeted-ramat-david-airbase-with-several-missiles): 
+Content: The search result from defapress.ir discusses an attack on Ramat David airbase by Hezbollah. The article includes an image of missiles being launched. <image:5620>
+
+Useful result: From [Source](https://www.palestinechronicle.com/gaza-live-blog-beirut-death-toll-rises-strike-in-zaytoun-israels-aggression-on-lebanon-continues-day-351/): 
+Content: The Palestine Chronicle published an image of a fire. <image:5621>
+
+Useful result: From [Source](https://parstoday.ir/en/news/west_asia-i230538-huge_blasts_in_ramat_david_airbase_of_israel_five_important_points_about_hezbollah's_broad_attack): 
+Content: The search result from Pars Today discusses a Hezbollah attack on Ramat David airbase. The article includes an image of explosions at the airbase <image:5622>.
+
+The claim '<image:48> This is an authentic image of Israeli Air Force's Ramat David airbase that was attacked by Hezbollah on September, 22, 2024.' is false.
+Justification: The claim is false. While the attack on Ramat David airbase by Hezbollah on September 22, 2024, is confirmed by multiple sources ([Al Jazeera](https://www.aljazeera.com/news/2024/9/21/hezbollah-claims-rocket-attack-deep-inside-northern-israel), [Politico.eu](https://www.politico.eu/article/hezbollah-launches-revenge-rocket-attack-against-israeli-base/)), the image provided appears to be a digital artwork or simulation, and its authenticity cannot be verified.
+
+So, the overall veracity is: false
+Fact-check took 0:44 min.

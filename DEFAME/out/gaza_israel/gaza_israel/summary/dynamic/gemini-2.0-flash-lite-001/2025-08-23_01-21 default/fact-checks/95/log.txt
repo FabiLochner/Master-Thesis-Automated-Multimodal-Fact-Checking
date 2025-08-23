@@ -1,0 +1,36 @@
+Extracting claims from Content: <image:62> This image shows a man from Gaza holding the hand of his son killed in an Israeli bombing in July, 2024.
+'Claim: "<image:62> This image shows a man from Gaza holding the hand of his son killed in an Israeli bombing in July, 2024."'
+Verifying Claim: "<image:62> This image shows a man from Gaza holding the hand of his son killed in an Israeli bombing in July, 2024."
+Not enough information yet. Continuing fact-check...
+Got 3 new web source(s):
+	1. https://www.independent.co.uk/news/world/middle-east/turkey-earthquake-father-daughter-hold-hands-b2277655.html
+	2. https://www.sbs.com.au/news/article/the-story-behind-this-turkey-earthquake-photo-that-many-will-never-forget/2ijedstvo
+	3. https://www.cnn.com/2023/02/13/middleeast/turkey-quake-man-daughter-hand-photo-intl
+Useful result: From [Source](https://www.independent.co.uk/news/world/middle-east/turkey-earthquake-father-daughter-hold-hands-b2277655.html): Found exact image on website with title: Heartbreaking photos show father clutching hand of dead daughter ...
+Content: The image shows Mesut Hancer holding the hand of his 15-year-old daughter Irmak, who died in the earthquake in Kahramanmaras, Turkey. <image:2593>, <image:2599>. The earthquake occurred on February 6.
+
+Useful result: From [Source](https://www.sbs.com.au/news/article/the-story-behind-this-turkey-earthquake-photo-that-many-will-never-forget/2ijedstvo): Found exact image on website with title: Turkey earthquake: Story behind photo that 'many will never forget'
+Content: The image shows a man holding the hand of his deceased daughter, Irmak, who died in the Turkey earthquake. <image:62>, <image:2601>. The article was published on February 10, 2023, by SBS News.
+
+Useful result: From [Source](https://www.cnn.com/2023/02/13/middleeast/turkey-quake-man-daughter-hand-photo-intl): Found exact image on website with title: Behind the defining image of the Turkey earthquake | CNN
+Content: The image shows Mesut Hancer holding the hand of his 15-year-old daughter, Irmak, who died in the earthquake in Kahramanmaras, Turkey, on February 7, 2023. <image:62>. The article was published on February 13, 2023, by CNN.
+
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Gaza Israeli bombing July 2024')
+Got 3 new web source(s):
+	1. https://en.wikipedia.org/wiki/13_July_2024_al-Mawasi_attack
+	2. July 13, 2024 https://www.npr.org/2024/07/13/g-s1-10020/hamas-commander-mohammed-deif-targeted-gaza-israeli-airstrike
+	3. July 07, 2024 https://www.cnn.com/2024/07/06/middleeast/israeli-attack-unwra-school-gaza-intl-latam
+Useful result: From [Source](https://en.wikipedia.org/wiki/13_July_2024_al-Mawasi_attack): 
+Content: The Wikipedia article discusses the 13 July 2024 al-Mawasi attack in Gaza, which resulted in at least 90 Palestinian deaths and over 300 injuries. <image:62> The attack was part of the Gaza war and involved Israeli airstrikes. The article mentions that Israel targeted Hamas leaders and that the EU called for an independent investigation, considering the attack a possible war crime. The article also mentions the arrest warrant issued by the International Criminal Court for Mohammed Deif, which was later cancelled.
+
+Useful result: From [Source](https://www.npr.org/2024/07/13/g-s1-10020/hamas-commander-mohammed-deif-targeted-gaza-israeli-airstrike): 
+Content: The NPR article, published on July 13, 2024, reports on Israeli airstrikes in Gaza that killed 90 Palestinians. <image:5798> The article mentions that the strikes targeted the head of the Hamas military wing, Mohammed Deif, but his fate was unclear. The article also mentions that the strikes occurred in Khan Younis and al-Muwasi.
+
+Useful result: From [Source](https://www.cnn.com/2024/07/06/middleeast/israeli-attack-unwra-school-gaza-intl-latam): 
+Content: CNN reports on an Israeli attack on an UNRWA school in Gaza on July 6, 2024, which killed at least 16 Palestinians and injured 50 others. <image:5801> The article also mentions protests in Tel Aviv against the Israeli government. The article was updated on July 7, 2024.
+
+The claim '<image:62> This image shows a man from Gaza holding the hand of his son killed in an Israeli bombing in July, 2024.' is false.
+Justification: The image in the claim depicts Mesut Hancer holding the hand of his deceased daughter, Irmak, who died in the earthquake in Kahramanmaras, Turkey, in February 2023, as confirmed by sources like [The Independent](https://www.independent.co.uk/news/world/middle-east/turkey-earthquake-father-daughter-hold-hands-b2277655.html), [SBS News](https://www.sbs.com.au/news/article/the-story-behind-this-turkey-earthquake-photo-that-many-will-never-forget/2ijedstvo), and [CNN](https://www.cnn.com/2023/02/13/middleeast/turkey-quake-man-daughter-hand-photo-intl). The claim incorrectly associates the image with events in Gaza in July 2024.
+
+So, the overall veracity is: false
+Fact-check took 1:05 min.

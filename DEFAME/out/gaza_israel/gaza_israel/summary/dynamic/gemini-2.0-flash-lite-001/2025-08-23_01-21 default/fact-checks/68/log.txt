@@ -1,0 +1,21 @@
+Extracting claims from Content: <image:41> This image shows Israel bombing the surroundings of Southern Damascus in February 2025, destroying its last remaining army depots.
+'Claim: "<image:41> This image shows Israel bombing the surroundings of Southern Damascus in February 2025, destroying its last remaining army depots."'
+Verifying Claim: "<image:41> This image shows Israel bombing the surroundings of Southern Damascus in February 2025, destroying its last remaining army depots."
+Not enough information yet. Continuing fact-check...
+Searching google_vision with query: ImageQuery(limit=3, start_date=None, end_date=None, search_type='reverse', text='', image=<defame.common.medium.Image object at 0x7ffed1757d90>)
+Skipping unsupported website: https://www.facebook.com/groups/1778538415752409/posts/breaking-israeli-fighter-jets-are-currently-striking-the-imam-hussein-camp-in-ke/4107327136206847/
+Skipping unsupported website: https://www.youtube.com/watch?v=gxQ1qkfLP7c
+Got 2 new web source(s):
+	1. https://daraa24.org/%D8%A7%D9%84%D8%B5%D8%AD%D9%81%D9%8A-%D9%85%D8%AD%D9%85%D8%AF-%D8%A7%D9%84%D8%B9%D9%88%D9%8A%D8%AF-%D9%81%D9%8A-%D9%85%D9%82%D8%A7%D8%A8%D9%84%D8%A9-%D9%85%D8%B9-%D8%AF%D8%B1%D8%B9%D8%A7-24/
+	2. https://www.alghad.tv/%D8%A3%D8%AE%D8%A8%D8%A7%D8%B1-%D8%A7%D9%84%D8%BA%D8%AF/news/%D9%88%D8%B2%D8%A7%D8%B1%D8%A9-%D8%A7%D9%84%D8%AF%D9%81%D8%A7%D8%B9-%D8%A7%D9%84%D8%B3%D9%88%D8%B1%D9%8A%D8%A9-%D8%AA%D9%83%D8%B4%D9%81-%D8%AA%D9%81%D8%A7%D8%B5%D9%8A%D9%84-%D8%A7%D9%84%D8%B9%D8%AF%D9%88%D8%A7%D9%86-%D8%A7%D9%84%D8%AC%D9%88%D9%8A-%D8%A7%D9%84%D8%A5%D8%B3%D8%B1%D8%A7%D8%A6%D9%8A%D9%84%D9%8A-%D8%B9%D9%84%D9%89-%D8%AF%D9%85%D8%B4%D9%82
+Useful result: From [Source](https://daraa24.org/%D8%A7%D9%84%D8%B5%D8%AD%D9%81%D9%8A-%D9%85%D8%AD%D9%85%D8%AF-%D8%A7%D9%84%D8%B9%D9%88%D9%8A%D8%AF-%D9%81%D9%8A-%D9%85%D9%82%D8%A7%D8%A8%D9%84%D8%A9-%D9%85%D8%B9-%D8%AF%D8%B1%D8%B9%D8%A7-24/): Found exact image on website with title: الصحفي محمد العويد في مقابلة مع درعا 24: جزء من وظيفة الإعلام أن يلعب ...
+Content: The search result is an article from Daraa 24, published on January 2025, featuring an interview with journalist Mohammad Al-Owaid. The article discusses the challenges and prospects of Syrian media, particularly in the context of a post-regime era. The article includes an image of Mohammad Al-Owaid. The article also contains links to Daraa 24's social media accounts. The article also contains related articles, including one about an Israeli incursion in the Yarmouk Basin, and another about Iranian drones. <image:41> is not present in the article.
+
+Useful result: From [Source](https://www.alghad.tv/%D8%A3%D8%AE%D8%A8%D8%A7%D8%B1-%D8%A7%D9%84%D8%BA%D8%AF/news/%D9%88%D8%B2%D8%A7%D8%B1%D8%A9-%D8%A7%D9%84%D8%AF%D9%81%D8%A7%D8%B9-%D8%A7%D9%84%D8%B3%D9%88%D8%B1%D9%8A%D8%A9-%D8%AA%D9%83%D8%B4%D9%81-%D8%AA%D9%81%D8%A7%D8%B5%D9%8A%D9%84-%D8%A7%D9%84%D8%B9%D8%AF%D9%88%D8%A7%D9%86-%D8%A7%D9%84%D8%AC%D9%88%D9%8A-%D8%A7%D9%84%D8%A5%D8%B3%D8%B1%D8%A7%D8%A6%D9%8A%D9%84%D9%8A-%D8%B9%D9%84%D9%89-%D8%AF%D9%85%D8%B4%D9%82): Found exact image on website with title: وزارة الدفاع السورية تكشف تفاصيل العدوان الجوي الإسرائيلي على دمشق
+Content: The search result from Alghad.tv reports that the Syrian Ministry of Defense announced details of an Israeli air attack on Damascus on Saturday, December 2, 2023. The article includes an image of an explosion. <image:41>
+
+The claim '<image:41> This image shows Israel bombing the surroundings of Southern Damascus in February 2025, destroying its last remaining army depots.' is false.
+Justification: The image depicts an Israeli air attack on Damascus that occurred in December 2023, as reported by [Alghad.tv](https://www.alghad.tv/%D8%A3%D8%AE%D8%A8%D8%A7%D8%B1-%D8%A7%D9%84%D8%BA%D8%AF/news/%D9%88%D8%B2%D8%A7%D8%B1%D8%A9-%D8%A7%D9%84%D8%AF%D9%81%D8%A7%D8%B9-%D8%A7%D9%84%D8%B3%D9%88%D8%B1%D9%8A%D8%A9-%D8%AA%D9%83%D8%B4%D9%81-%D8%AA%D9%81%D8%A7%D8%B5%D9%8A%D9%84-%D8%A7%D9%84%D8%B9%D8%AF%D9%88%D8%A7%D9%86-%D8%A7%D9%84%D8%AC%D9%88%D9%8A-%D8%A7%D9%84%D8%A5%D8%B3%D8%B1%D8%A7%D8%A6%D9%8A%D9%84%D9%8A-%D8%B9%D9%84%D9%89-%D8%AF%D9%85%D8%B4%D9%82). The claim that the image shows an event in February 2025 is therefore false.
+
+So, the overall veracity is: false
+Fact-check took 0:27 min.

@@ -1,0 +1,24 @@
+Extracting claims from Content: The chief of the Israeli Defense Forces (IDF), Herzi Halevi, was assassinated in a Hezbollah drone attack on an Israeli military base on October 13, 2024.
+'Claim: "The chief of the Israeli Defense Forces (IDF), Herzi Halevi, was assassinated in a Hezbollah drone attack on an Israeli military base on October 13, 2024."'
+Verifying Claim: "The chief of the Israeli Defense Forces (IDF), Herzi Halevi, was assassinated in a Hezbollah drone attack on an Israeli military base on October 13, 2024."
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Herzi Halevi Hezbollah drone attack October 13 2024')
+Skipping fact-checking website: https://factcheck.afp.com/doc.afp.com.36K38U9
+Got 3 new web source(s):
+	1. October 14, 2024 https://www.longwarjournal.org/archives/2024/10/hezbollah-drone-strikes-idf-base-as-israel-uncovers-weapons-in-lebanon.php
+	2. October 14, 2024 https://www.timesofisrael.com/4-soldiers-killed-in-drone-strike-named-as-families-ask-why-there-was-no-warning-siren/
+	3. October 14, 2024 https://www.cnn.com/2024/10/14/middleeast/hezbollah-attack-israel-weaknesses-drones-intl-cmd
+Useful result: From [Source](https://www.longwarjournal.org/archives/2024/10/hezbollah-drone-strikes-idf-base-as-israel-uncovers-weapons-in-lebanon.php): 
+Content: The Long War Journal, published on October 14, 2024, by Seth Frantzman, reports on a Hezbollah drone strike on an IDF base on October 13. The article mentions that IDF Chief of Staff Herzi Halevi visited the site of the attack <image:4916>. The attack targeted a dining hall, resulting in the highest casualty toll from a Hezbollah drone attack since the war began.
+
+Useful result: From [Source](https://www.timesofisrael.com/4-soldiers-killed-in-drone-strike-named-as-families-ask-why-there-was-no-warning-siren/): 
+Content: The Times of Israel reports that on October 13, 2024, a Hezbollah drone attack on a Golani training base near Binyamina killed four soldiers and wounded 58 others. <image:4924>, <image:4925>, <image:4926>. The IDF Chief of Staff Herzi Halevi visited the site on October 14, 2024. <image:4927>.
+
+Useful result: From [Source](https://www.cnn.com/2024/10/14/middleeast/hezbollah-attack-israel-weaknesses-drones-intl-cmd): 
+Content: CNN published an article on October 14, 2024, discussing a Hezbollah drone attack on an Israeli military base. The article mentions that the attack occurred on a Sunday, and the IDF chief of staff, Herzi Halevi, visited the base. <image:1> The article does not mention that Herzi Halevi was assassinated.
+
+The claim 'The chief of the Israeli Defense Forces (IDF), Herzi Halevi, was assassinated in a Hezbollah drone attack on an Israeli military base on October 13, 2024.' is false.
+Justification: The claim is false. While a Hezbollah drone attack did occur on an IDF base on October 13, 2024, resulting in casualties, the IDF Chief of Staff Herzi Halevi visited the site the following day, contradicting the claim that he was assassinated. The provided sources, including [The Long War Journal](https://www.longwarjournal.org/archives/2024/10/hezbollah-drone-strikes-idf-base-as-israel-uncovers-weapons-in-lebanon.php), [The Times of Israel](https://www.timesofisrael.com/4-soldiers-killed-in-drone-strike-named-as-families-ask-why-there-was-no-warning-siren/) and [CNN](https://www.cnn.com/2024/10/14/middleeast/hezbollah-attack-israel-weaknesses-drones-intl-cmd), do not support the assassination claim.
+
+So, the overall veracity is: false
+Fact-check took 0:53 min.
