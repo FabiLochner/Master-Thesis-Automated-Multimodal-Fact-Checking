@@ -1,0 +1,72 @@
+Extracting claims from Content: <image:34> This image shows an Israeli tank unit near Jabalia camp in northern Gaza that was successfully ambushed by Hamas fighters, destroying multiple vehicles and injuring or killing their crews in October 2024.
+'Claim: "<image:34> This image shows an Israeli tank unit near Jabalia camp in northern Gaza that was successfully ambushed by Hamas fighters, destroying multiple vehicles and injuring or killing their crews in October 2024."'
+Verifying Claim: "<image:34> This image shows an Israeli tank unit near Jabalia camp in northern Gaza that was successfully ambushed by Hamas fighters, destroying multiple vehicles and injuring or killing their crews in October 2024."
+Not enough information yet. Continuing fact-check...
+Searching google_vision with query: ImageQuery(limit=3, start_date=None, end_date=None, search_type='reverse', text='', image=<defame.common.medium.Image object at 0x7ffed97e1570>)
+Skipping unsupported website: https://www.facebook.com/groups/1052233045394740/posts/1772531013364936/
+Skipping unsupported website: https://www.youtube.com/watch?v=RpC8SN-X5rg
+Got 3 new web source(s):
+	1. https://9jaflaver.com/israel-declares-state-of-war-after-hamas-militants-launch-surprise-attack-from-gaza-videos/
+	2. https://www.nairaland.com/7868168/israel-declares-war-readiness-hamas
+	3. https://dawahilallah.com/forum/%E0%A6%B8%E0%A6%82%E0%A6%AC%E0%A6%BE%E0%A6%A6/%E0%A6%9C%E0%A6%BF%E0%A6%B9%E0%A6%BE%E0%A6%A6-%E0%A6%B8%E0%A6%82%E0%A6%AC%E0%A6%BE%E0%A6%A6/209455-%E0%A6%AE%E0%A7%81%E0%A6%9C%E0%A6%BE%E0%A6%B9%E0%A6%BF%E0%A6%A6%E0%A7%80%E0%A6%A8-%E0%A6%A8%E0%A6%BF%E0%A6%89%E0%A6%9C-%E0%A7%A7%E0%A7%AF-%E0%A6%B8%E0%A6%AB%E0%A6%B0-%E0%A7%A7%E0%A7%AA%E0%A7%AA%E0%A7%AD-%E0%A6%B9%E0%A6%BF%E0%A6%9C%E0%A6%B0%E0%A7%80-%E0%A7%A7%E0%A7%AA-%E0%A6%86%E0%A6%97%E0%A6%B8%E0%A7%8D%E0%A6%9F-%E0%A7%A8%E0%A7%A6%E0%A7%A8%E0%A7%AB-%E0%A6%88%E0%A6%B8%E0%A6%BE%E0%A7%9F%E0%A7%80%E2%80%8B%E2%80%8B
+Useful result: From [Source](https://9jaflaver.com/israel-declares-state-of-war-after-hamas-militants-launch-surprise-attack-from-gaza-videos/): Found exact image on website with title: Israel declares 'state of war' after Hamas militants launch surprise ...
+Content: The article from 9jaflaver.com, published on October 7, 2023, reports on the surprise attack launched by Hamas militants on Israel. The article includes several images, including one of a destroyed tank <image:34>. The article states that Hamas launched the biggest attack on Israel on October 7, 2023, and that Israel declared a state of war. The article also mentions that the attack marked an unprecedented infiltration by an unknown number of Hamas gunmen into Israel from Gaza.
+
+Useful result: From [Source](https://www.nairaland.com/7868168/israel-declares-war-readiness-hamas): Found exact image on website with title: Israel declares war readiness as Hamas springs surprise multiple ...
+Content: The search result is from Nairaland, a Nigerian forum. It contains a post from October 7, 2023, titled "Israel declares war readiness as Hamas springs surprise multiple attacks." The post includes multiple images and videos, including images of a burning tank. <image:34> is present in the post. The post also contains reports from various news sources about the attacks.
+
+Useful result: From [Source](https://dawahilallah.com/forum/%E0%A6%B8%E0%A6%82%E0%A6%AC%E0%A6%BE%E0%A6%A6/%E0%A6%9C%E0%A6%BF%E0%A6%B9%E0%A6%BE%E0%A6%A6-%E0%A6%B8%E0%A6%82%E0%A6%AC%E0%A6%BE%E0%A6%A6/209455-%E0%A6%AE%E0%A7%81%E0%A6%9C%E0%A6%BE%E0%A6%B9%E0%A6%BF%E0%A6%A6%E0%A7%80%E0%A6%A8-%E0%A6%A8%E0%A6%BF%E0%A6%89%E0%A6%9C-%E0%A7%A7%E0%A7%AF-%E0%A6%B8%E0%A6%AB%E0%A6%B0-%E0%A7%A7%E0%A7%AA%E0%A7%AA%E0%A7%AD-%E0%A6%B9%E0%A6%BF%E0%A6%9C%E0%A6%B0%E0%A7%80-%E0%A7%A7%E0%A7%AA-%E0%A6%86%E0%A6%97%E0%A6%B8%E0%A7%8D%E0%A6%9F-%E0%A7%A8%E0%A7%A6%E0%A7%A8%E0%A7%AB-%E0%A6%88%E0%A6%B8%E0%A6%BE%E0%A7%9F%E0%A7%80%E2%80%8B%E2%80%8B): Found exact image on website with title: মুজাহিদীন নিউজ || ১৯ সফর, ১৪৪৭ হিজরী || ১৪ আগস্ট, ২০২৫ ঈসায়ী
+Content: The search result is from a forum and contains an image <image:4221> of a burning tank. The post is dated August 14, 2025, and discusses an attack by Al-Qassam Brigades on two Israeli Merkava tanks in Khan Yunis, resulting in their destruction. The source also mentions the use of Yassin-105 shells and a side IED in the operation. The source also contains an image <image:34> of a burning tank. The post is dated August 14, 2025, and discusses an attack by Al-Qassam Brigades on two Israeli Merkava tanks in Khan Yunis, resulting in their destruction. The source also mentions the use of Yassin-105 shells and a side IED in the operation. The source also contains an image <image:4234> of a map and images related to an attack by JNIM in Burkina Faso.
+
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Israeli tank Jabalia camp Hamas ambush')
+Skipping unsupported website: https://www.youtube.com/watch?v=vvJBuLUA3ak
+Got 3 new web source(s):
+	1. https://en.wikipedia.org/wiki/Attacks_on_Jabalia_refugee_camp_(2023%E2%80%93present)
+	2. October 08, 2024 https://www.bbc.com/news/articles/c30l9r3medzo
+	3. December 18, 2024 https://www.theguardian.com/global-development/2024/dec/18/jabaliya-refugee-camp-gaza-destruction-idf
+Useful result: From [Source](https://en.wikipedia.org/wiki/Attacks_on_Jabalia_refugee_camp_(2023%E2%80%93present)): 
+Content: The Wikipedia article discusses attacks on the Jabalia refugee camp in the Gaza Strip, including airstrikes and sieges. The attacks began on October 9, 2023, and have continued. The article mentions multiple attacks in October 2023, including one on October 31, which targeted a Hamas leader and an underground tunnel complex. The article also mentions attacks in November and December 2023, as well as in January, February, March, April, and May 2024. The attacks have resulted in numerous deaths and injuries. <image:34> is not mentioned in the search result.
+
+Useful result: From [Source](https://www.bbc.com/news/articles/c30l9r3medzo): 
+Content: The BBC reports on heavy fighting in Jabalia, northern Gaza, where Israeli tanks and troops are conducting a new ground operation. <image:4269> The Israeli military stated they killed 20 "terrorists" there, while Hamas claimed its fighters targeted Israeli forces. The article mentions an Israeli evacuation order from October 6, 2024. The article was published on October 8, 2024, and written by David Gritten from BBC News.
+
+Useful result: From [Source](https://www.theguardian.com/global-development/2024/dec/18/jabaliya-refugee-camp-gaza-destruction-idf): 
+Content: The Guardian published an article on December 18, 2024, discussing the destruction of the Jabaliya refugee camp in Gaza by Israeli forces. The article mentions three offensives, with the third one starting on October 5, 2024, and ongoing. The article includes satellite images and videos showing the destruction. The IDF stated that they target only military objectives.
+
+Not enough information yet. Continuing fact-check...
+INFO: Dropping action 'reverse_search' as it was already performed.
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Israeli tank burning Gaza')
+Got 3 new web source(s):
+	1. https://www.aljazeera.com/news/liveblog/2024/6/20/israel-war-on-gaza-live-israeli-tanks-drones-strike-western-rafah
+	2. https://news.sky.com/video/israel-gunfire-heard-as-tank-burns-after-hamas-attack-12978835
+	3. https://abcnews.go.com/US/idf-investigation-finds-israeli-tank-fire-responsible-death/story?id=121148505
+Useful result: From [Source](https://www.aljazeera.com/news/liveblog/2024/6/20/israel-war-on-gaza-live-israeli-tanks-drones-strike-western-rafah): 
+Content: Al Jazeera published an image of Israeli tanks. <image:4273>
+
+Useful result: From [Source](https://news.sky.com/video/israel-gunfire-heard-as-tank-burns-after-hamas-attack-12978835): 
+Content: Sky News published a video showing a burning tank after a Hamas attack. <image:4274>
+
+Useful result: From [Source](https://abcnews.go.com/US/idf-investigation-finds-israeli-tank-fire-responsible-death/story?id=121148505): 
+Content: The ABC News article includes an image of Israeli tanks. <image:4276>
+
+Not enough information yet. Continuing fact-check...
+INFO: Dropping action 'reverse_search' as it was already performed.
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Hamas attack Israeli tank Jabalia October 2024')
+Got 3 new web source(s):
+	1. October 19, 2024 https://www.aljazeera.com/news/2024/10/19/hospitals-in-northern-gaza-under-israeli-fire-as-jabalia-attack-kills-33
+	2. https://en.wikipedia.org/wiki/Siege_of_North_Gaza
+	3. October 18, 2024 https://www.reuters.com/world/middle-east/israel-sends-more-troops-into-north-gaza-deepens-raid-2024-10-18/
+Useful result: From [Source](https://www.aljazeera.com/news/2024/10/19/hospitals-in-northern-gaza-under-israeli-fire-as-jabalia-attack-kills-33): 
+Content: Al Jazeera reports on the Israeli army operation in the Jabalia refugee camp, with at least 33 people killed on October 18, 2024. The article mentions Israeli strikes on hospitals and fighting with Hamas forces. <image:4273>
+
+Useful result: From [Source](https://en.wikipedia.org/wiki/Siege_of_North_Gaza): 
+Content: The Wikipedia article "Siege of North Gaza" states that the IDF began an operation to dismantle Hamas control in Jabalia on October 5, 2024. On October 10, Hamas organized an ambush which destroyed an IDF mechanized infantry company of 12 vehicles east of the Jabalia camp. On October 22, Hamas said that its fighters detonated an explosive device targeting 12 Israeli soldiers in the Jabalia refugee camp, killing and wounding some of them. The article also mentions that on November 17, Israeli media reported that IDF soldiers preparing an ambush in southern Jabalia were themselves ambushed by Hamas fighters.
+
+Useful result: From [Source](https://www.reuters.com/world/middle-east/israel-sends-more-troops-into-north-gaza-deepens-raid-2024-10-18/): 
+Content: Reuters reports on Israeli strikes in Jabalia on October 18, 2024, where at least 33 people were killed and 85 wounded. Residents reported tanks destroying houses. The Israeli military stated they were targeting militants. The article mentions the Oct. 7 attacks on Israel.
+
+The claim '<image:34> This image shows an Israeli tank unit near Jabalia camp in northern Gaza that was successfully ambushed by Hamas fighters, destroying multiple vehicles and injuring or killing their crews in October 2024.' is false.
+Justification: The claim is partially supported. Evidence confirms fighting between Hamas and Israeli forces in Jabalia in October 2024, including a Hamas ambush on October 10, 2024, that destroyed an IDF mechanized infantry company, as reported by the Wikipedia article "Siege of North Gaza". However, the specific details of the image, such as the exact location and the number of vehicles destroyed, cannot be definitively confirmed.
+
+So, the overall veracity is: false
+Fact-check took 6:26 min.

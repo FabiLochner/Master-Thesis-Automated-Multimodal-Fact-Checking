@@ -1,0 +1,44 @@
+Extracting claims from Content: <image:32> This image shows Palestinian baby Sham Imad Muhareb which did not lose her arm in an Israeli airstrike on the Shejaeya neighborhood, east of Gaza City, in April 2025.
+'Claim: "<image:32> This image shows Palestinian baby Sham Imad Muhareb which did not lose her arm in an Israeli airstrike on the Shejaeya neighborhood, east of Gaza City, in April 2025."'
+Verifying Claim: "<image:32> This image shows Palestinian baby Sham Imad Muhareb which did not lose her arm in an Israeli airstrike on the Shejaeya neighborhood, east of Gaza City, in April 2025."
+Not enough information yet. Continuing fact-check...
+Got 0 new web source(s):
+Not enough information yet. Continuing fact-check...
+INFO: Dropping action 'reverse_search' as it was already performed.
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Sham Imad Muhareb Gaza airstrike')
+Skipping unsupported website: https://www.facebook.com/imamomarsuleiman/posts/sham-imad-muhareb-who-lost-her-arm-yesterday-in-an-airstrike-has-diedevery-image/1235035921312675/
+Skipping unsupported website: https://www.instagram.com/p/DITq4hsgrLx/?hl=en
+Skipping unsupported website: https://x.com/doamuslims/status/1910794420917567809
+Skipping unsupported website: https://www.tiktok.com/@omarsuleimanofficial/photo/7492046917707336990?lang=en
+Got 1 new web source(s):
+	1. https://www.ifj.org/es/sala-de-prensa/noticias/detalle/category/comunicados-de-prensa/article/palestine-at-least-212-journalists-and-media-workers-killed-in-gaza
+Useful result: From [Source](https://www.ifj.org/es/sala-de-prensa/noticias/detalle/category/comunicados-de-prensa/article/palestine-at-least-212-journalists-and-media-workers-killed-in-gaza): 
+Content: The International Federation of Journalists (IFJ) reports on the deaths of numerous journalists and media workers in Gaza due to Israeli airstrikes and gunfire. The report includes the names, media affiliations, and circumstances of their deaths. The IFJ is working with the Palestinian Journalists Syndicate (PJS) to verify information. <image:33XT7U8-highres.jpg>
+
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Shejaeya neighborhood Gaza airstrike')
+Got 3 new web source(s):
+	1. https://www.aa.com.tr/en/middle-east/at-least-53-killed-dozens-injured-in-fresh-israeli-strikes-as-another-baby-dies-of-starvation-in-gaza/3666097
+	2. April 09, 2025 https://www.bbc.com/news/articles/cy5rrnzw0kwo
+	3. https://english.wafa.ps/Pages/Details/145710
+Useful result: From [Source](https://www.aa.com.tr/en/middle-east/at-least-53-killed-dozens-injured-in-fresh-israeli-strikes-as-another-baby-dies-of-starvation-in-gaza/3666097): 
+Content: The Anadolu Agency published an article on August 22, 2025, reporting on Israeli strikes in Gaza. The article mentions that a 5-month-old Palestinian baby died of starvation and malnutrition in the Nasser Medical Complex in Khan Younis. The article also mentions the Shujaiya neighborhood. <image:32>
+
+Useful result: From [Source](https://www.bbc.com/news/articles/cy5rrnzw0kwo): 
+Content: The BBC News published an article on April 9, 2025, reporting on an Israeli air strike on a residential building in the Shejaiya neighborhood of Gaza City, which resulted in the death of at least 29 Palestinians, including children. <image:4195>, <image:4197>. The article mentions the Hamas-run Civil Defence agency and the Israeli military's actions in the area.
+
+Useful result: From [Source](https://english.wafa.ps/Pages/Details/145710): 
+Content: The search result from WAFA, dated July 8, 2024, reports an Israeli airstrike on the al-Shujaiya neighborhood in Gaza City, resulting in four deaths and other injuries. The article also mentions the ongoing Israeli aggression since October 7, 2023, with a death toll of 38,153 Palestinians and 87,828 injuries. <image:k>
+
+Not enough information yet. Continuing fact-check...
+INFO: Dropping action 'reverse_search' as it was already performed.
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Sham Imad Muhareb Palestinian baby')
+Skipping unsupported website: https://www.facebook.com/imamomarsuleiman/posts/sham-imad-muhareb-who-lost-her-arm-yesterday-in-an-airstrike-has-diedevery-image/1235035921312675/
+Skipping unsupported website: https://www.instagram.com/p/DITsy8ei_oH/
+Skipping unsupported website: https://x.com/QudsNen/status/1910677653855613256
+Skipping unsupported website: https://www.tiktok.com/@beritaalhijrah114/photo/7492405800636353799
+Got 0 new web source(s):
+The claim '<image:32> This image shows Palestinian baby Sham Imad Muhareb which did not lose her arm in an Israeli airstrike on the Shejaeya neighborhood, east of Gaza City, in April 2025.' is false.
+Justification: The claim cannot be verified because the search results confirm Israeli airstrikes in the Shejaeya neighborhood of Gaza City, as reported by the [BBC News](https://www.bbc.com/news/articles/cy5rrnzw0kwo), but there is no information about a baby named Sham Imad Muhareb.
+
+So, the overall veracity is: false
+Fact-check took 2:47 min.

@@ -1,0 +1,39 @@
+Extracting claims from Content: <image:17> This is an authentic image of Mike Tyson posing with the Palestinian flag in the ring before his fight against Jake Paul on November, 15, 2024.
+'Claim: "<image:17> This is an authentic image of Mike Tyson posing with the Palestinian flag in the ring before his fight against Jake Paul on November, 15, 2024."'
+Verifying Claim: "<image:17> This is an authentic image of Mike Tyson posing with the Palestinian flag in the ring before his fight against Jake Paul on November, 15, 2024."
+Not enough information yet. Continuing fact-check...
+Got 1 new web source(s):
+	1. https://srilanka.factcrescendo.com/english/ai-generated-image-falsely-shows-mike-tyson-with-palestinian-flag/
+Useful result: From [Source](https://srilanka.factcrescendo.com/english/ai-generated-image-falsely-shows-mike-tyson-with-palestinian-flag/): Found exact image on website with title: Mike Tyson did not pose with the Palestine flag
+Content: The search result from Fact Crescendo, published on July 20, 2025, states that the image of Mike Tyson with the Palestinian flag (<image:17>) is AI-generated and not authentic. The article includes the image <image:983> and a screenshot of a Facebook post from November 16, 2024, with the same image <image:985>. The fact-check team used AI verification tools and found that the photo was not real. The article also mentions that Getty Images does not have any images of Tyson with the Palestinian flag. The result of the fact check is "False".
+
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Mike Tyson Jake Paul fight')
+Skipping unsupported website: https://www.youtube.com/watch?v=Aja2KfuoqGA
+Skipping unsupported website: https://www.reddit.com/r/martialarts/comments/1gxaucu/mike_tyson_vs_jake_paul_staged/
+Got 3 new web source(s):
+	1. https://www.netflix.com/tudum/articles/jake-paul-vs-mike-tyson-live-release-date-news
+	2. https://en.wikipedia.org/wiki/Jake_Paul_vs._Mike_Tyson
+	3. November 16, 2024 https://www.cbssports.com/boxing/news/mike-tyson-vs-jake-paul-fight-results-winners-highlights-undercard-on-netflix-complete-guide/
+Useful result: From [Source](https://www.netflix.com/tudum/articles/jake-paul-vs-mike-tyson-live-release-date-news): 
+Content: The Netflix Tudum article discusses the boxing mega-event between Jake Paul and Mike Tyson. The fight took place at AT&T Stadium in Arlington, Texas. <image:3713>, <image:3722>, <image:3732>.
+
+Useful result: From [Source](https://en.wikipedia.org/wiki/Jake_Paul_vs._Mike_Tyson): 
+Content: The fight between Jake Paul and Mike Tyson took place on November 15, 2024, at the AT&T Stadium in Arlington, Texas. <image:17> The bout was sanctioned as a professional fight.
+
+Useful result: From [Source](https://www.cbssports.com/boxing/news/mike-tyson-vs-jake-paul-fight-results-winners-highlights-undercard-on-netflix-complete-guide/): 
+Content: The CBS Sports article discusses the Mike Tyson vs. Jake Paul fight, which was rescheduled for November. The fight took place at AT&T Stadium in Arlington, Texas. The article provides information on where to watch the fight, the undercard, and other related news.
+
+Got 2 new web source(s):
+	1. December 02, 2024 https://engineering.buffalo.edu/computer-science-engineering/news-and-events/news.host.html/content/shared/engineering/home/articles/media-mentions/2024-media-coverage/fact-check--mike-tyson-did-not-pose-with-palestinian-flag-ahead-.detail.html
+	2. November 16, 2024 https://www.factchecker.gr/2024/11/16/ai-generated-image-of-mike-tyson-with-palestinian-flag/
+Useful result: From [Source](https://engineering.buffalo.edu/computer-science-engineering/news-and-events/news.host.html/content/shared/engineering/home/articles/media-mentions/2024-media-coverage/fact-check--mike-tyson-did-not-pose-with-palestinian-flag-ahead-.detail.html): 
+Content: Reuters published a fact-check article on December 2, 2024, stating that Mike Tyson did not pose with the Palestinian flag before his fight with Jake Paul. The article quoted Siwei Lyu.
+
+Useful result: From [Source](https://www.factchecker.gr/2024/11/16/ai-generated-image-of-mike-tyson-with-palestinian-flag/): 
+Content: The search result from factchecker.gr states that the image of Mike Tyson with the Palestinian flag is not real and was created using an artificial intelligence tool. <image:1006>, <image:1008>. The image displays characteristics indicative of AI software manipulation.
+
+The claim '<image:17> This is an authentic image of Mike Tyson posing with the Palestinian flag in the ring before his fight against Jake Paul on November, 15, 2024.' is false.
+Justification: The claim is false. Multiple fact-checking sources, such as [Fact Crescendo](https://srilanka.factcrescendo.com/english/ai-generated-image-falsely-shows-mike-tyson-with-palestinian-flag/) and [Factchecker.gr](https://www.factchecker.gr/2024/11/16/ai-generated-image-of-mike-tyson-with-palestinian-flag/), confirm that the image of Mike Tyson with the Palestinian flag is AI-generated and not a genuine photograph.
+
+So, the overall veracity is: false
+Fact-check took 1:12 min.

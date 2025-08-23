@@ -1,0 +1,68 @@
+Extracting claims from Content: <image:51> This image shows Israeli Finance Minister Smotrich, who previously threatened to invade Lebanon, taking shelter in an Israeli bomb shelter during Hezbollah's attack on Israel on August 25, 2024.
+'Claim: "<image:51> This image shows Israeli Finance Minister Smotrich, who previously threatened to invade Lebanon, taking shelter in an Israeli bomb shelter during Hezbollah's attack on Israel on August 25, 2024."'
+Verifying Claim: "<image:51> This image shows Israeli Finance Minister Smotrich, who previously threatened to invade Lebanon, taking shelter in an Israeli bomb shelter during Hezbollah's attack on Israel on August 25, 2024."
+Not enough information yet. Continuing fact-check...
+Searching google_vision with query: ImageQuery(limit=3, start_date=None, end_date=None, search_type='reverse', text='', image=<defame.common.medium.Image object at 0x7ffed1582fe0>)
+Got 0 new web source(s):
+Not enough information yet. Continuing fact-check...
+INFO: Dropping action 'reverse_search' as it was already performed.
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Israeli Finance Minister Smotrich Hezbollah attack August 25 2024')
+Got 3 new web source(s):
+	1. August 25, 2024 https://www.reuters.com/world/middle-east/hezbollah-chief-says-sunday-attack-israel-went-planned-further-strikes-possible-2024-08-25/
+	2. September 25, 2024 https://www.jpost.com/israel-hamas-war/article-821655
+	3. August 02, 2024 https://www.aljazeera.com/features/2024/8/2/netanyahu-winning-support-by-assassinating-hamas-and-hezbollah-leaders
+Useful result: From [Source](https://www.reuters.com/world/middle-east/hezbollah-chief-says-sunday-attack-israel-went-planned-further-strikes-possible-2024-08-25/): 
+Content: Reuters published an article on August 25, 2024, reporting on Hezbollah's attack on Israel. The article mentions that Hezbollah leader Sayyed Hassan Nasrallah stated that the group would assess the impact of its rocket and drone attack on Israeli military targets before determining whether to carry out further attacks. The article also mentions that the group intentionally refrained from targeting civilians or public infrastructure. <image:4542>
+
+Useful result: From [Source](https://www.jpost.com/israel-hamas-war/article-821655): 
+Content: The Jerusalem Post published an article on September 25, 2024, discussing Hezbollah's attacks on Israel, including targeting near Tel Aviv with ballistic missiles. <image:1>. The article mentions Hezbollah leader Hassan Nasrallah.
+
+Useful result: From [Source](https://www.aljazeera.com/features/2024/8/2/netanyahu-winning-support-by-assassinating-hamas-and-hezbollah-leaders): 
+Content: The Al Jazeera article, published on August 2, 2024, discusses the assassinations of Hamas and Hezbollah leaders and their potential impact on Israeli Prime Minister Benjamin Netanyahu's political standing. <image:i>. The article mentions Israeli Finance Minister Bezalel Smotrich in a photo with Netanyahu from January 25, 2023.
+
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Smotrich bomb shelter August 25 2024')
+Skipping unsupported website: https://www.congress.gov/crs_external_products/R/PDF/R44245/R44245.145.pdf
+Got 3 new web source(s):
+	1. August 25, 2024 https://kashif.ps/en/index.php/2024/08/25/old-photo-of-israeli-ministers-in-shelter-republished-as-during-hezbollahs-recent-bombing-of-sites-in-israel/
+	2. https://truthout.org/articles/we-have-no-shelter-and-no-escape-as-israel-prepares-to-invade-gaza-city/
+	3. December 19, 2024 https://www.hrw.org/report/2024/12/19/extermination-and-acts-genocide/israel-deliberately-depriving-palestinians-gaza
+Useful result: From [Source](https://kashif.ps/en/index.php/2024/08/25/old-photo-of-israeli-ministers-in-shelter-republished-as-during-hezbollahs-recent-bombing-of-sites-in-israel/): 
+Content: The article from Kashif.ps states that the image <image:51> is old and was taken on October 7, 2023, not August 25, 2024. The image shows Israeli ministers, including Bezalel Smotrich, in a shelter. The article references reports from media outlets and news websites, including Al Mayadeen and Quds News Network, that published the image on October 7, 2023. <image:4557> shows the image with the date October 7, 2023.
+
+Useful result: From [Source](https://truthout.org/articles/we-have-no-shelter-and-no-escape-as-israel-prepares-to-invade-gaza-city/): 
+Content: The article from Truthout discusses the situation in Gaza City, including the destruction of Al-Shifa Hospital in March 2024 and the displacement of residents. It mentions Israeli strikes and ground invasions between 2023 and 2024. The article also mentions an image of a destroyed school building used for shelter <image:1>. The article was published in 2025.
+
+Useful result: From [Source](https://www.hrw.org/report/2024/12/19/extermination-and-acts-genocide/israel-deliberately-depriving-palestinians-gaza): 
+Content: The Human Rights Watch report, published on December 19, 2024, discusses the impact of the conflict on water and sanitation in Gaza. It mentions that as of August 2024, water production levels remained at about 25 percent of pre-October 7 levels. The report also mentions that on August 16, 2024, the Palestinian Ministry of Health confirmed the first case of polio in an unvaccinated 10-month old child in Gaza. The report also mentions that in August 2024, a household survey found that nearly two-thirds of the assessed households reported receiving less than the six liters of water for drinking and cooking. The report also mentions that in August 2024, the Israeli government and Hamas agreed to a three-day pause in hostilities in parts of Gaza to facilitate a public health campaign to vaccinate 640,000 children.
+
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Israeli Finance Minister Smotrich')
+Failed to download or open image: cannot identify image file <_io.BytesIO object at 0x7ffed1606b60>
+Got 3 new web source(s):
+	1. https://en.wikipedia.org/wiki/Bezalel_Smotrich
+	2. https://www.cnn.com/2024/08/06/middleeast/israeli-minister-smotrich-starve-gazans-intl
+	3. https://www.lemonde.fr/en/international/article/2023/11/06/bezalel-smotrich-israel-s-agent-of-chaos_6231784_4.html
+Useful result: From [Source](https://www.cnn.com/2024/08/06/middleeast/israeli-minister-smotrich-starve-gazans-intl): 
+Content: CNN published an article about Israeli Finance Minister Smotrich. <image:4574>
+
+Useful result: From [Source](https://www.lemonde.fr/en/international/article/2023/11/06/bezalel-smotrich-israel-s-agent-of-chaos_6231784_4.html): 
+Content: The article from Le Monde features a photograph of Bezalel Smotrich. <image:4575>
+
+Not enough information yet. Continuing fact-check...
+INFO: Dropping action 'reverse_search' as it was already performed.
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Smotrich in bomb shelter image')
+Skipping unsupported website: https://x.com/Currentreport1/status/1827798099940848035
+Skipping fact-checking website: https://www.misbar.com/en/factcheck/2024/08/26/this-image-does-not-show-bezalel-smotrich-taking-shelter-following-the-recent-hezbollah-attack
+Got 2 new web source(s):
+	1. October 14, 2024 https://www.timesofisrael.com/liveblog_entry/smotrich-slams-ags-procedural-criticism-of-decision-to-place-bomb-shelters-in-illegal-settlements/
+	2. June 22, 2025 https://www.theatlantic.com/international/archive/2025/06/questions-bomb-shelter-jerusalem/683288/
+Useful result: From [Source](https://www.timesofisrael.com/liveblog_entry/smotrich-slams-ags-procedural-criticism-of-decision-to-place-bomb-shelters-in-illegal-settlements/): 
+Content: The Times of Israel reports on Finance Minister Bezalel Smotrich's response to criticism regarding the placement of bomb shelters in illegal West Bank outposts. The article does not mention the date of the events. <image:4602>
+
+Useful result: From [Source](https://www.theatlantic.com/international/archive/2025/06/questions-bomb-shelter-jerusalem/683288/): 
+Content: The Atlantic published an article about bomb shelters in Jerusalem, including a photograph of people in a bomb shelter <image:4606>. The article mentions the rising screech of sirens, running to a bomb shelter, and the targeting of bomb shelters. The article also mentions Israeli attacks on Iran. The article was published in June 2025.
+
+The claim '<image:51> This image shows Israeli Finance Minister Smotrich, who previously threatened to invade Lebanon, taking shelter in an Israeli bomb shelter during Hezbollah's attack on Israel on August 25, 2024.' is false.
+Justification: The claim is unverified. While it is confirmed that Hezbollah attacked Israel on August 25, 2024, and that Bezalel Smotrich is the Israeli Finance Minister, the evidence does not confirm that the image depicts Smotrich in a bomb shelter during the attack.
+
+So, the overall veracity is: false
+Fact-check took 3:13 min.

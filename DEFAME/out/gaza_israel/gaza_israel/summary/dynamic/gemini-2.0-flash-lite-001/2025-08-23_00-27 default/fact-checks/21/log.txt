@@ -1,0 +1,26 @@
+Extracting claims from Content: Trump signed an executive order on January 20, 2025, to halt all funding to UNRWA.
+'Claim: "Trump signed an executive order on January 20, 2025, to halt all funding to UNRWA."'
+Verifying Claim: "Trump signed an executive order on January 20, 2025, to halt all funding to UNRWA."
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Trump executive order UNRWA funding')
+Skipping unsupported website: https://www.whitehouse.gov/presidential-actions/2025/02/withdrawing-the-united-states-from-and-ending-funding-to-certain-united-nations-organizations-and-reviewing-united-states-support-to-all-international-organizations/
+Skipping fact-checking website: https://www.reuters.com/fact-check/us-unrwa-funding-already-halted-2024-not-by-trump-2025-order-2025-01-28/
+Skipping unsupported website: https://mcgovern.house.gov/news/documentsingle.aspx?DocumentID=400135
+Got 3 new web source(s):
+	1. February 04, 2025 https://www.aljazeera.com/news/2025/2/4/trump-to-withdraw-us-from-un-human-rights-council-extend-unrwa-funding-ban
+	2. February 05, 2025 https://www.akingump.com/en/insights/blogs/trump-executive-order-tracker/withdrawing-the-united-states-from-and-ending-funding-to-certain-united-nations-organizations-and-reviewing-united-states-support-to-all-international-organizations
+	3. February 03, 2025 https://www.npr.org/2025/02/03/nx-s1-5285696/trump-un-human-rights-council-withdrawal
+Useful result: From [Source](https://www.aljazeera.com/news/2025/2/4/trump-to-withdraw-us-from-un-human-rights-council-extend-unrwa-funding-ban): 
+Content: Al Jazeera published on February 4, 2025, that Donald Trump is planning to extend a funding ban on UNRWA. <image:0>. The article mentions that Trump is expected to sign an executive order. The US was UNRWA’s biggest donor, but Biden paused funding in January 2024.
+
+Useful result: From [Source](https://www.akingump.com/en/insights/blogs/trump-executive-order-tracker/withdrawing-the-united-states-from-and-ending-funding-to-certain-united-nations-organizations-and-reviewing-united-states-support-to-all-international-organizations): 
+Content: Akin Gump published an article on February 5, 2025, discussing a Trump Executive Order that orders the reevaluation of the United States’ commitment to UNRWA. <image:3709> The executive order directs the Representative to the UN to conduct a review of all international intergovernmental organizations of which the United States is a member.
+
+Useful result: From [Source](https://www.npr.org/2025/02/03/nx-s1-5285696/trump-un-human-rights-council-withdrawal): 
+Content: NPR reports that Trump signed an executive order that cuts future funding to the United Nations Relief and Works Agency, which provides aid to Palestinians. The article was published on February 3, 2025, and updated on February 4, 2025. <image:3720>
+
+The claim 'Trump signed an executive order on January 20, 2025, to halt all funding to UNRWA.' is false.
+Justification: The claim is false. While evidence from sources like [NPR](https://www.npr.org/2025/02/03/nx-s1-5285696/trump-un-human-rights-council-withdrawal) and [Al Jazeera](https://www.aljazeera.com/news/2025/2/4/trump-to-withdraw-us-from-un-human-rights-council-extend-unrwa-funding-ban) indicates that Trump signed an executive order concerning UNRWA funding, the provided evidence does not support the specific date of January 20, 2025, as the date of the order.
+
+So, the overall veracity is: false
+Fact-check took 0:54 min.
