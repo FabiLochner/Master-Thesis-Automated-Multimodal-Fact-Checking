@@ -23,4 +23,5 @@ llava_onevision,HUGGINGFACE,lmms-lab/llava-onevision-qwen2-7b-ov,128_000,0,0
 llama32_90b,HUGGINGFACE,meta-llama/Llama-3.2-90B-Vision-Instruct,128_000,0,0
 deepseek,DEEPSEEK,deepseek-chat,64_000,0.14,0.28
 gemini-2.0-flash-lite, GOOGLE, gemini-2.0-flash-lite, 1_048_576, 0.075, 0.30
+gemini-2.0-flash-lite-001, GOOGLE, gemini-2.0-flash-lite-001, 1_048_576, 0.075, 0.30
 gemini-2.0-flash, GOOGLE, gemini-2.0-flash, 1_048_576, 0.10, 0.40
