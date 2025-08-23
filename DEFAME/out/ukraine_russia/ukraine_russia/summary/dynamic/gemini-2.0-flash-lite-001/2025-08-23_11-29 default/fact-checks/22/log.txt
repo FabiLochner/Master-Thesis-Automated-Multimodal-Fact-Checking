@@ -1,0 +1,39 @@
+Extracting claims from Content: <image:12> This image shows a chemical attack by the Armed Forces of Ukraine during the Kursk offensive in August 2024.
+'Claim: "<image:12> This image shows a chemical attack by the Armed Forces of Ukraine during the Kursk offensive in August 2024."'
+Verifying Claim: "<image:12> This image shows a chemical attack by the Armed Forces of Ukraine during the Kursk offensive in August 2024."
+Not enough information yet. Continuing fact-check...
+Got 0 new web source(s):
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Kursk offensive August 2024 chemical attack')
+Got 3 new web source(s):
+	1. September 17, 2024 https://www.rand.org/pubs/commentary/2024/09/the-kursk-offensive-triumph-or-tragedy-in-the-making.html
+	2. August 12, 2024 https://www.reuters.com/world/europe/ukraine-says-russia-tries-accuse-it-false-war-crimes-kursk-2024-08-12/
+	3. August 10, 2024 https://www.understandingwar.org/backgrounder/russian-offensive-campaign-assessment-august-10-2024
+Useful result: From [Source](https://www.reuters.com/world/europe/ukraine-says-russia-tries-accuse-it-false-war-crimes-kursk-2024-08-12/): 
+Content: Reuters published an article on August 12, 2024, stating that the SBU (Ukraine's State Security Service) said Russia was trying to falsely accuse Kyiv's military of war crimes during the ground incursion into Russia's Kursk region. The article mentions that Alexei Smirnov, acting governor of the Kursk region, claimed that Ukrainian forces used shells containing chemical weapons, but Reuters could not independently verify the claim. <image:4146>
+
+Useful result: From [Source](https://www.understandingwar.org/backgrounder/russian-offensive-campaign-assessment-august-10-2024): 
+Content: The Institute for the Study of War (ISW) published a report on August 10, 2024, discussing the Russian offensive campaign. The report mentions a counterterrorism operation in Belgorod, Bryansk, and Kursk oblasts in response to the Ukrainian incursion into Kursk Oblast. The report also mentions that Russian forces are using conscripts and forces already in Kursk Oblast, nearby forces fighting in northern Kharkiv Oblast, and lateral redeployments across the theater to defend against the Ukrainian incursion. The report also states that Russian forces are using hexachloroethane in Kursk Oblast, which is not banned by the Chemical Weapons Convention. The report also mentions that Russian forces conducted a successful Iskander-M ballistic missile strike against Ukrainian forces in Kursk Oblast.
+
+Not enough information yet. Continuing fact-check...
+INFO: Dropping action 'reverse_search' as it was already performed.
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='chemical explosion road')
+Got 3 new web source(s):
+	1. https://www.wwltv.com/article/news/local/roseland-business-explosion-highway-51-closure-august-2025/289-9e06a798-2b7e-4883-8aea-9c47638f8d5b
+	2. https://www.nola.com/news/evacuation-explosion-roseland-business-highway/article_82e3c857-76a1-4371-ae93-0bd5b421b99e.html
+	3. https://www.wdsu.com/article/louisiana-plant-explosion-drone-video/65874404
+Useful result: From [Source](https://www.wwltv.com/article/news/local/roseland-business-explosion-highway-51-closure-august-2025/289-9e06a798-2b7e-4883-8aea-9c47638f8d5b): 
+Content: The search result from wwltv.com shows an image of a large fire with black smoke. <image:4153> The article is about an explosion at a business in Roseland, August 2025.
+
+Useful result: From [Source](https://www.nola.com/news/evacuation-explosion-roseland-business-highway/article_82e3c857-76a1-4371-ae93-0bd5b421b99e.html): 
+Content: The search result from nola.com shows a photo of a large plume of smoke over a road. <image:4154>
+
+Useful result: From [Source](https://www.wdsu.com/article/louisiana-plant-explosion-drone-video/65874404): 
+Content: The search result from WDSU shows a drone video of a plant explosion in Louisiana. <image:4155>
+
+Most likely location: Palestine
+Top 10 locations: Palestine, Jordan, Ukraine, Israel, Argentina, Kyrgyzstan, Lesotho, Mexico, Pakistan, Russia
+The claim '<image:12> This image shows a chemical attack by the Armed Forces of Ukraine during the Kursk offensive in August 2024.' is false.
+Justification: The claim is not verifiable. While the image search and geolocation provide some context, they do not confirm the claim about a chemical attack by the Armed Forces of Ukraine during the Kursk offensive in August 2024. The Reuters report ([https://www.reuters.com/world/europe/ukraine-says-russia-tries-accuse-it-false-war-crimes-kursk-2024-08-12/](https://www.reuters.com/world/europe/ukraine-says-russia-tries-accuse-it-false-war-crimes-kursk-2024-08-12/)) indicates that the claim of a chemical attack was made by Russia and could not be independently verified.
+
+So, the overall veracity is: false
+Fact-check took 1:44 min.

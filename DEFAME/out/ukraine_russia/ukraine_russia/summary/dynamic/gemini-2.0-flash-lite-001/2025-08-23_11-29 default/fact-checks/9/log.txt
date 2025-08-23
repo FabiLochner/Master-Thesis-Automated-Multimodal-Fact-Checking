@@ -1,0 +1,32 @@
+Extracting claims from Content: <image:7> This image shows Ukrainian President Volodymyr Zelensky arriving in August 2024 in the Sudzha of Kursk region, Russia, which had just been occupied by Ukrainian troops in the Kursk Offensive, and meeting with representatives of the people there.
+'Claim: "<image:7> This image shows Ukrainian President Volodymyr Zelensky arriving in August 2024 in the Sudzha of Kursk region, Russia, which had just been occupied by Ukrainian troops in the Kursk Offensive, and meeting with representatives of the people there."'
+Verifying Claim: "<image:7> This image shows Ukrainian President Volodymyr Zelensky arriving in August 2024 in the Sudzha of Kursk region, Russia, which had just been occupied by Ukrainian troops in the Kursk Offensive, and meeting with representatives of the people there."
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Zelensky Sudzha Kursk Offensive')
+Got 3 new web source(s):
+	1. August 15, 2024 https://www.cnn.com/2024/08/15/europe/kursk-incursion-sudzha-captured-ukraine-intl
+	2. March 17, 2025 https://meduza.io/en/feature/2025/03/17/a-costly-gamble
+	3. March 12, 2025 https://kyivindependent.com/ukrainian-forces-continue-operations-in-kursk-under-heavy-russian-pressure-zelensky-says/
+Useful result: From [Source](https://www.cnn.com/2024/08/15/europe/kursk-incursion-sudzha-captured-ukraine-intl): 
+Content: CNN reports that Ukrainian forces captured the Russian town of Sudzha in the Kursk region on August 15, 2024. The article mentions a cross-border incursion into Russia's Kursk region. The article also mentions that Ukrainian President Volodymyr Zelensky confirmed the capture of Sudzha. <image:k> is not present in the article.
+
+Useful result: From [Source](https://meduza.io/en/feature/2025/03/17/a-costly-gamble): 
+Content: Meduza published an article on March 17, 2025, analyzing Russia’s Kursk counteroffensive and the implications of losing Sudzha for Ukraine. The article discusses the Russian offensive in the Kursk region, including the loss of key defensive positions north of Sudzha and the advance of Russian forces toward the Sudzha border checkpoint. The article also mentions the Ukrainian incursion into the Kursk region and the Russian counteroffensive. <image:1>
+
+Useful result: From [Source](https://kyivindependent.com/ukrainian-forces-continue-operations-in-kursk-under-heavy-russian-pressure-zelensky-says/): 
+Content: The Kyiv Independent published an article on March 12, 2025, discussing the situation in Kursk Oblast, including Sudzha. The article mentions that Ukrainian forces are operating in the region despite Russian pressure. It also references a cross-border incursion into Kursk Oblast in August 2024. The article includes a photo of Zelensky. <image:7>
+
+Got 3 new web source(s):
+	1. https://www.bbc.com/news/live/world-europe-61612803
+	2. https://global.solarpriceza.com/merchant/zelensky-on-the-front-line-02eb5d0-19-29474101-2-21/
+	3. https://telegrafi.com/en/zelensky-on-a-rare-trip-outside-kiev-visited-the-front-line-where-he-met-ukrainian-troops/
+Useful result: From [Source](https://www.bbc.com/news/live/world-europe-61612803): Found exact image on website with title: Ukraine war latest news: Zelensky visits troops in Kharkiv region - BBC
+Content: The BBC reports that Volodymyr Zelensky visited troops on the front line in the Kharkiv region. <image:1645>, <image:1649>. The article does not mention Sudzha or the Kursk Offensive. The image <image:7> is also present in the article. The article was published on May 29, 2022.
+Useful result: From [Source](https://telegrafi.com/en/zelensky-on-a-rare-trip-outside-kiev-visited-the-front-line-where-he-met-ukrainian-troops/): Found exact image on website with title: Zelensky, on a rare trip outside Kiev, visited the front line where he ...
+Content: The article from Telegrafi.com discusses a rare trip of Ukrainian President Volodymyr Zelensky outside of Kyiv, where he visited the front line in the Kharkiv region and met with Ukrainian troops. The article includes an image of Zelensky with soldiers, which is the same as <image:7>. The article was published 3 years ago. <image:1662> is the same as <image:7>.
+
+The claim '<image:7> This image shows Ukrainian President Volodymyr Zelensky arriving in August 2024 in the Sudzha of Kursk region, Russia, which had just been occupied by Ukrainian troops in the Kursk Offensive, and meeting with representatives of the people there.' is false.
+Justification: The claim is not supported by the evidence. While the search results confirm that Ukrainian forces captured Sudzha in the Kursk region in August 2024, and that Zelensky was present in the area, the context of the image is not confirmed. The evidence does not verify that the image depicts Zelensky arriving in Sudzha or meeting with representatives of the people there.
+
+So, the overall veracity is: false
+Fact-check took 0:45 min.

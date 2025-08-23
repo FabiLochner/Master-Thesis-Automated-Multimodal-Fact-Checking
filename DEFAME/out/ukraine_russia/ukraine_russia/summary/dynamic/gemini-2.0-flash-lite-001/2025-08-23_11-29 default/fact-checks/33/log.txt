@@ -1,0 +1,34 @@
+Extracting claims from Content: <image:13> This image shows a Fox News broadcast from Easter 2025 where you can see the Patriarch Kirill in the center and Kyiv labeled as a Russian city in the top right corner of the image.
+'Claim: "<image:13> This image shows a Fox News broadcast from Easter 2025 where you can see the Patriarch Kirill in the center and Kyiv labeled as a Russian city in the top right corner of the image."'
+Verifying Claim: "<image:13> This image shows a Fox News broadcast from Easter 2025 where you can see the Patriarch Kirill in the center and Kyiv labeled as a Russian city in the top right corner of the image."
+Not enough information yet. Continuing fact-check...
+Got 3 new web source(s):
+	1. April 21, 2025 https://www.yahoo.com/news/fact-check-fox-livestream-news-233600386.html
+	2. April 20, 2025 https://www.newsweek.com/fox-channel-ukraine-kyiv-russia-labeling-orthodox-easter-2061891
+	3. April 20, 2025 https://newsukraine.rbc.ua/news/fox-news-broadcast-easter-from-moscow-and-1745135501.html
+Useful result: From [Source](https://www.yahoo.com/news/fact-check-fox-livestream-news-233600386.html): 
+Content: The search result from Yahoo News, which references a Snopes fact check, states that on April 20, 2025, claims circulated that a Fox News broadcast labeled Kyiv as a Russian city during an Easter broadcast. The mistake appeared on LiveNOW from Fox, a news service delivered by Fox Television Stations. The claim is rated as "Mostly True". <image:568>
+
+Useful result: From [Source](https://www.newsweek.com/fox-channel-ukraine-kyiv-russia-labeling-orthodox-easter-2061891): 
+Content: Newsweek reports that a Fox TV station was accused of labeling Kyiv as Russian territory during an Easter broadcast. The Ukrainian Foreign Ministry called for an investigation. The error reportedly remained on screen for 20 minutes. A Fox spokesperson said that "Live Now made an unintentional mistake Saturday evening during extensive live coverage of Easter services from around the world." The article was written by Ellie Cook and published on April 20, 2025.
+
+Useful result: From [Source](https://newsukraine.rbc.ua/news/fox-news-broadcast-easter-from-moscow-and-1745135501.html): 
+Content: The search result from RBC-Ukraine reports that Fox News broadcast an Easter service from Moscow, attended by Vladimir Putin, and also showed a service from Kyiv, which was later labeled as part of Russia. The article includes a photo of Patriarch Kirill <image:591>. The author of the article is Vladyslava Kovalenko.
+
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Patriarch Kirill Easter service')
+Failed to download or open image: HTTPConnectionPool(host='static.kremlin.ru', port=80): Read timed out. (read timeout=10)
+Got 3 new web source(s):
+	1. http://en.kremlin.ru/events/president/news/68267
+	2. https://www.politico.com/news/2022/06/22/patriarch-kirill-putin-russia-ukraine-00041388
+	3. https://www.swissinfo.ch/eng/putin-attends-easter-service-led-by-head-of-russia%27s-orthodox-church/76948788
+Useful result: From [Source](https://www.politico.com/news/2022/06/22/patriarch-kirill-putin-russia-ukraine-00041388): 
+Content: Politico published an image of Patriarch Kirill. <image:4182>
+
+Useful result: From [Source](https://www.swissinfo.ch/eng/putin-attends-easter-service-led-by-head-of-russia%27s-orthodox-church/76948788): 
+Content: The Swissinfo.ch website shows an image of Patriarch Kirill. <image:4183>
+
+The claim '<image:13> This image shows a Fox News broadcast from Easter 2025 where you can see the Patriarch Kirill in the center and Kyiv labeled as a Russian city in the top right corner of the image.' is true.
+Justification: The image is from a Fox News broadcast that mistakenly labeled Kyiv as a Russian city during an Easter broadcast, as reported by [Yahoo News](https://www.yahoo.com/news/fact-check-fox-livestream-news-233600386.html), [Newsweek](https://www.newsweek.com/fox-channel-ukraine-kyiv-russia-labeling-orthodox-easter-2061891), and RBC-Ukraine. The broadcast featured Patriarch Kirill.
+
+So, the overall veracity is: true
+Fact-check took 1:05 min.

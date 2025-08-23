@@ -1,0 +1,23 @@
+Extracting claims from Content: During his visit to the White House in April 2025 Israeli Prime Minister Benjamin Netanyahu announced plans to resettle Palestinians in Gaza to Ukraine and Syria.
+'Claim: "During his visit to the White House in April 2025 Israeli Prime Minister Benjamin Netanyahu announced plans to resettle Palestinians in Gaza to Ukraine and Syria."'
+Verifying Claim: "During his visit to the White House in April 2025 Israeli Prime Minister Benjamin Netanyahu announced plans to resettle Palestinians in Gaza to Ukraine and Syria."
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Benjamin Netanyahu White House April 2025 Gaza resettlement')
+Got 3 new web source(s):
+	1. https://www.timesofisrael.com/trumps-moment-how-the-us-president-can-help-netanyahu-make-the-wise-choice-on-gaza/
+	2. April 09, 2025 https://www.nytimes.com/2025/04/09/world/middleeast/netanyahu-trump-gaza.html
+	3. July 07, 2025 https://www.cbsnews.com/news/trump-netanyahu-meeting-dc-israel-hamas-war-gaza-ceasefire/
+Useful result: From [Source](https://www.timesofisrael.com/trumps-moment-how-the-us-president-can-help-netanyahu-make-the-wise-choice-on-gaza/): 
+Content: The Times of Israel published an article discussing the situation in Gaza. The article mentions a dinner at the White House on July 7, 2025, with Benjamin Netanyahu and Donald Trump. <image:4234>, <image:4240>. The article also mentions that in April, a minister vowed that "not a single grain of wheat" would enter Gaza. The article was published in August 2025.
+
+Useful result: From [Source](https://www.nytimes.com/2025/04/09/world/middleeast/netanyahu-trump-gaza.html): 
+Content: The New York Times reports that during a White House visit, Benjamin Netanyahu did not dismiss the idea of relocating Palestinians from Gaza. The article mentions that Trump discussed which countries might accept Gazans. The Israeli government is reportedly speaking about facilitating "voluntary" migration. <image:k>
+
+Useful result: From [Source](https://www.cbsnews.com/news/trump-netanyahu-meeting-dc-israel-hamas-war-gaza-ceasefire/): 
+Content: CBS News reports on a meeting between President Trump and Israeli Prime Minister Benjamin Netanyahu at the White House in April 2025. <image:4250>, <image:4248>. The article discusses the Israel-Hamas war, ceasefire talks, and the possibility of a deal. The article does not mention any plans to resettle Palestinians in Gaza to Ukraine or Syria.
+
+The claim 'During his visit to the White House in April 2025 Israeli Prime Minister Benjamin Netanyahu announced plans to resettle Palestinians in Gaza to Ukraine and Syria.' is false.
+Justification: The claim that Benjamin Netanyahu announced plans to resettle Palestinians in Gaza to Ukraine and Syria during his April 2025 White House visit is not supported by the evidence. While the visit and discussions about relocating Palestinians were confirmed by sources like The New York Times ([Source](https://www.nytimes.com/2025/04/09/world/middleeast/netanyahu-trump-gaza.html)) and CBS News ([Source](https://www.cbsnews.com/news/trump-netanyahu-meeting-dc-israel-hamas-war-gaza-ceasefire/)), there is no mention of specific resettlement plans to Ukraine or Syria.
+
+So, the overall veracity is: false
+Fact-check took 0:43 min.
