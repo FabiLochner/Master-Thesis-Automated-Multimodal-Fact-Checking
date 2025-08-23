@@ -1,0 +1,38 @@
+Extracting claims from Content: It is illegal to do a DNA test in Israel.
+'Claim: "It is illegal to do a DNA test in Israel."'
+Verifying Claim: "It is illegal to do a DNA test in Israel."
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Israel DNA testing legality')
+Got 3 new web source(s):
+	1. https://ideas.repec.org/p/hrv/hksfac/29408321.html
+	2. https://dash.harvard.edu/entities/publication/73120379-1b48-6bd4-e053-0100007fdf3b
+	3. https://www.nature.com/articles/28247
+Useful result: From [Source](https://ideas.repec.org/p/hrv/hksfac/29408321.html): 
+Content: The search result from Harvard Kennedy School of Government discusses DNA testing and the Israeli Law of Return. The authors are Ian V. McGonigle and Lauren W. Herman. The Israeli State may begin to use genetic tests to determine whether potential immigrants are Jewish or not.
+
+Useful result: From [Source](https://dash.harvard.edu/entities/publication/73120379-1b48-6bd4-e053-0100007fdf3b): 
+Content: The search result from Harvard University discusses the use of genetic tests in Israel to determine if potential immigrants are Jewish. The article, published in 2015, explores the historical and legal context of Jewishness and immigration rights in Israel. The publisher is Oxford University Press.
+
+Useful result: From [Source](https://www.nature.com/articles/28247): 
+Content: A bill proposing stringent restrictions on the use of genetic information was passed by the Israeli parliament's science committee. The article is written by Haim Watzman. The article was published on July 16, 1998, by Springer Nature.
+
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Israel DNA test restrictions')
+Skipping fact-checking website: https://www.yahoo.com/news/fact-check-no-dna-tests-230000258.html
+Skipping unsupported website: https://www.reddit.com/r/Jewish/comments/1kfeups/is_dna_testing_illegal_in_israel/
+Skipping unsupported website: https://pubmed.ncbi.nlm.nih.gov/19453249/
+Skipping unsupported website: https://www.gov.il/en/service/paternity-test-family-ties
+Skipping unsupported website: https://www.instagram.com/reel/DDCjeqyP5ep/
+Got 2 new web source(s):
+	1. February 06, 2024 https://blaerlaw.com/en/judaism-israel-and-dna-or-how-to-obtain-israeli-citizenship-if-documents-are-not-in-order/
+	2. https://pravoisrael.us/dna/
+Useful result: From [Source](https://blaerlaw.com/en/judaism-israel-and-dna-or-how-to-obtain-israeli-citizenship-if-documents-are-not-in-order/): 
+Content: The article from Blaer Law, published on February 6, 2024, discusses the use of DNA testing in relation to obtaining Israeli citizenship. It states that secular Israeli authorities do not recognize DNA tests from platforms like 23andMe or Ancestry. DNA tests can be used to establish relationships for legal processes, including immigration cases. DNA testing in Israel requires permission from the Israeli court. <image:k>
+
+Useful result: From [Source](https://pravoisrael.us/dna/): 
+Content: The website states that DNA tests can be used to confirm Jewish ancestry in Israel. However, the results are only legally valid if the test is conducted pursuant to an order issued by an Israeli court and carried out in accordance with the prescribed legal procedure. DNA testing is conducted exclusively in licensed laboratories in Israel. Tests performed privately or abroad are not recognized by Israeli courts. <image:4114>, <image:4115>, <image:4116>, <image:4117>, <image:4118>.
+
+The claim 'It is illegal to do a DNA test in Israel.' is false.
+Justification: DNA tests are not illegal in Israel, but they are regulated. Legal DNA tests require permission from an Israeli court and must be conducted in licensed Israeli laboratories, as stated by sources like [blaerlaw.com](https://blaerlaw.com/en/judaism-israel-and-dna-or-how-to-obtain-israeli-citizenship-if-documents-are-not-in-order/) and [pravoisrael.us](https://pravoisrael.us/dna/). Tests from platforms like 23andMe or Ancestry are not recognized by secular Israeli authorities.
+
+So, the overall veracity is: false
+Fact-check took 0:58 min.
