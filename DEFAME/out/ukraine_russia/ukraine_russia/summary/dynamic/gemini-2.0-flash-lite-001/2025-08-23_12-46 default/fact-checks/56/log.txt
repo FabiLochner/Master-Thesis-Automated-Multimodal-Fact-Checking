@@ -1,0 +1,38 @@
+Extracting claims from Content: <image:17> This image shows Ben Stiller and Ukrainian President Volodymyr Zelensky at their meeting on June 20, 2022, for which Stiller received $4 million from USAID.
+'Claim: "<image:17> This image shows Ben Stiller and Ukrainian President Volodymyr Zelensky at their meeting on June 20, 2022, for which Stiller received $4 million from USAID."'
+Verifying Claim: "<image:17> This image shows Ben Stiller and Ukrainian President Volodymyr Zelensky at their meeting on June 20, 2022, for which Stiller received $4 million from USAID."
+Not enough information yet. Continuing fact-check...
+Got 3 new web source(s):
+	1. June 20, 2022 https://abcnews.go.com/International/ben-stiller-meets-volodymyr-zelenskyy-ukraine-world-refugee/story?id=85517989
+	2. June 20, 2022 https://nypost.com/2022/06/20/ben-stiller-met-with-zelensky-in-ukraine-on-world-refugee-day/
+	3. June 20, 2022 https://www.bbc.com/news/av/world-61875351
+Useful result: From [Source](https://abcnews.go.com/International/ben-stiller-meets-volodymyr-zelenskyy-ukraine-world-refugee/story?id=85517989): 
+Content: The search result from ABC News, published on June 20, 2022, reports on Ben Stiller's meeting with Ukrainian President Volodymyr Zelenskyy in Kyiv on June 20, 2022, as part of Stiller's visit as a goodwill ambassador for the United Nations High Commissioner for Refugees (UNHCR). <image:2284>, <image:2285>. The article does not mention any USAID funding.
+
+Useful result: From [Source](https://nypost.com/2022/06/20/ben-stiller-met-with-zelensky-in-ukraine-on-world-refugee-day/): 
+Content: The New York Post reports that Ben Stiller met with Ukrainian President Volodymyr Zelensky on June 20, 2022, in Kyiv. <image:2299>, <image:2296>. Stiller, a UNHCR Goodwill Ambassador, was visiting the war-torn country to bring attention to the plight of refugees. <image:2295>.
+
+Useful result: From [Source](https://www.bbc.com/news/av/world-61875351): 
+Content: The BBC reported that Ben Stiller met with Volodymyr Zelensky in Kyiv on June 20, 2022, as part of his role as ambassador for the United Nations refugee agency (UNHCR). <image:17>
+
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Ben Stiller Zelensky USAID funding')
+Skipping unsupported website: https://x.com/BenStiller/status/1887202576845971637?lang=en
+Skipping fact-checking website: https://www.reuters.com/fact-check/e-news-did-not-report-that-usaid-sponsored-celebrity-visits-ukraine-2025-02-11/
+Got 3 new web source(s):
+	1. February 06, 2025 https://www.vanityfair.com/hollywood/story/ben-stiller-denies-elon-musks-retweet-claiming-usaid-funded-the-stars-trip-to-ukraine?srsltid=AfmBOooBmd8sz0yCyDJlhTRv5sE2nx9jNIWo6n-0ayi2r3QTDglGEgTw
+	2. February 07, 2025 https://www.hollywoodreporter.com/news/politics-news/fake-online-usaid-paid-hollywood-stars-debunked-1236129713/
+	3. February 28, 2025 https://gwaramedia.com/en/debunking-fakes-no-enews-didnt-release-video-about-hollywood-stars-receiving-usaid-money-for-visits-to-ukraine/
+Useful result: From [Source](https://www.vanityfair.com/hollywood/story/ben-stiller-denies-elon-musks-retweet-claiming-usaid-funded-the-stars-trip-to-ukraine?srsltid=AfmBOooBmd8sz0yCyDJlhTRv5sE2nx9jNIWo6n-0ayi2r3QTDglGEgTw): 
+Content: Vanity Fair published an article refuting claims that Ben Stiller's trip to Ukraine was funded by USAID. Stiller visited Ukraine in June 2022 as a Goodwill Ambassador. The article mentions a video claiming USAID paid Angelina Jolie, Sean Penn, Jean-Claude Van Damme, Orlando Bloom, and Ben Stiller to visit Ukraine. Stiller denied the claims, stating they are "lies coming from Russian media." <image:17>
+
+Useful result: From [Source](https://www.hollywoodreporter.com/news/politics-news/fake-online-usaid-paid-hollywood-stars-debunked-1236129713/): 
+Content: The Hollywood Reporter published an article on February 7, 2025, debunking a fake video that claimed USAID paid Hollywood stars, including Ben Stiller, to visit Ukraine. The article mentions that the video was part of a Russian disinformation campaign and was retweeted by Elon Musk. Ben Stiller denied the claim.
+
+Useful result: From [Source](https://gwaramedia.com/en/debunking-fakes-no-enews-didnt-release-video-about-hollywood-stars-receiving-usaid-money-for-visits-to-ukraine/): 
+Content: The search result debunks a video claiming that Hollywood stars, including Ben Stiller, received money from USAID for their visits to Ukraine. The UN Refugee agency confirmed that Ben Stiller does not receive compensation for his work with UNHCR and funds his trips on his own. <image:4803> <image:4802> The article mentions that Ben Stiller met with Zelensky in June 2022.
+
+The claim '<image:17> This image shows Ben Stiller and Ukrainian President Volodymyr Zelensky at their meeting on June 20, 2022, for which Stiller received $4 million from USAID.' is false.
+Justification: The image accurately depicts Ben Stiller and Volodymyr Zelenskyy meeting on June 20, 2022. However, the claim that Stiller received $4 million from USAID for this meeting is false. Multiple sources, including [Vanity Fair](https://www.vanityfair.com/hollywood/story/ben-stiller-denies-elon-musks-retweet-claiming-usaid-funded-the-stars-trip-to-ukraine?srsltid=AfmBOooBmd8sz0yCyDJlhTRv5sE2nx9jNIWo6n-0ayi2r3QTDglGEgTw) and [The Hollywood Reporter](https://www.hollywoodreporter.com/news/politics-news/fake-online-usaid-paid-hollywood-stars-debunked-1236129713/), debunk this claim, stating it originated from a false video.
+
+So, the overall veracity is: false
+Fact-check took 1:46 min.

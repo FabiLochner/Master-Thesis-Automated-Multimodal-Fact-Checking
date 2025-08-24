@@ -1,0 +1,22 @@
+Extracting claims from Content: <image:16> This image shows Ukrainian President Volodymyr Zelenskyy signing Israeli bombs intended for use against Palestinians in Gaza.
+'Claim: "<image:16> This image shows Ukrainian President Volodymyr Zelenskyy signing Israeli bombs intended for use against Palestinians in Gaza."'
+Verifying Claim: "<image:16> This image shows Ukrainian President Volodymyr Zelenskyy signing Israeli bombs intended for use against Palestinians in Gaza."
+Not enough information yet. Continuing fact-check...
+Got 3 new web source(s):
+	1. https://www.bbc.com/news/articles/c80rkv0k4j8o
+	2. https://www.bbc.co.uk/news/articles/c80rkv0k4j8o
+	3. https://nypost.com/2024/09/25/opinion/zelenskys-arms-factory-visit-reeks-of-partisan-foreign-election-interference/
+Useful result: From [Source](https://www.bbc.com/news/articles/c80rkv0k4j8o): Found exact image on website with title: Republican anger clouds Zelensky's crunch Biden meeting - BBC
+Content: The BBC News article, published on September 26, 2024, discusses Ukrainian President Volodymyr Zelensky's meeting with US President Joe Biden. The article includes an image of Zelensky signing ammunition at the Scranton Army Ammunition Plant (SCAAP) in Scranton, Pennsylvania, on September 23, 2024. <image:954> The article does not mention Israeli bombs or Gaza.
+
+Useful result: From [Source](https://www.bbc.co.uk/news/articles/c80rkv0k4j8o): Found exact image on website with title: Republican anger clouds Zelensky-Biden 'victory plan' meeting - BBC
+Content: The BBC published an article on September 26, 2024, about Volodymyr Zelensky's meeting with Joe Biden at the White House. The article includes an image of Zelensky signing ammunition at the Scranton Army Ammunition Plant (SCAAP) in Scranton, Pennsylvania, on September 23, 2024. <image:960> The article does not mention Israeli bombs or Gaza.
+
+Useful result: From [Source](https://nypost.com/2024/09/25/opinion/zelenskys-arms-factory-visit-reeks-of-partisan-foreign-election-interference/): Found exact image on website with title: Zelensky's arms-factory visit reeks of partisan foreign-election ...
+Content: The New York Post published an article about Ukrainian President Volodymyr Zelensky's visit to the Scranton Army Ammunition Plant in Pennsylvania. <image:963> The article suggests that Zelensky's visit was a partisan political event, as he was accompanied by Democratic candidates and no GOP candidates were invited. The author questions the propriety of the event and the expenses involved, and criticizes the Biden administration for allowing it to happen. The article also mentions that House Speaker Mike Johnson is calling on Zelensky to fire his US ambassador for allowing this to happen. The article was published on September 25, 2024.
+
+The claim '<image:16> This image shows Ukrainian President Volodymyr Zelenskyy signing Israeli bombs intended for use against Palestinians in Gaza.' is false.
+Justification: The image shows Ukrainian President Volodymyr Zelenskyy signing ammunition at the Scranton Army Ammunition Plant (SCAAP) in Pennsylvania, as reported by the BBC News ([https://www.bbc.com/news/articles/c80rkv0k4j8o](https://www.bbc.com/news/articles/c80rkv0k4j8o)) and ([https://www.bbc.co.uk/news/articles/c80rkv0k4j8o](https://www.bbc.co.uk/news/articles/c80rkv0k4j8o)). The ammunition is not identified as Israeli bombs, nor is there any mention of them being intended for use against Palestinians in Gaza. The New York Post ([https://nypost.com/2024/09/25/opinion/zelenskys-arms-factory-visit-reeks-of-partisan-foreign-election-interference/](https://nypost.com/2024/09/25/opinion/zelenskys-arms-factory-visit-reeks-of-partisan-foreign-election-interference/)) also does not support the claim.
+
+So, the overall veracity is: false
+Fact-check took 0:16 min.
