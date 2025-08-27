@@ -17,7 +17,7 @@ import yaml
 # from rouge_score import rouge_scorer
 # from datasets import load_metric
 from nltk.tokenize.treebank import TreebankWordDetokenizer
-from sklearn.metrics import precision_score, recall_score, f1_score, matthews_corrcoef, balanced_accuracy_score, fbeta_score, confusion_matrix # added metrics for evaluating my dataset: MCC, Balanced Accuracy, F-beta score (F0.5-score), Confusion Matrix to compute True Negative Rate/Specificity
+from sklearn.metrics import precision_score, recall_score, f1_score, matthews_corrcoef, accuracy_score, balanced_accuracy_score, fbeta_score, confusion_matrix # added metrics for evaluating my dataset: MCC, Balanced Accuracy, F-beta score (F0.5-score), Confusion Matrix to compute True Negative Rate/Specificity
 from tqdm import tqdm
 
 from defame.common import Label, logger, Report
@@ -532,6 +532,7 @@ def compute_metrics_claim_type_level(benchmark: Benchmark, predicted_labels: np.
                 labels_subset = np.unique(np.append(gt_subset, pred_subset))
 
                 # 1) Overall metrics per claim type
+                acc = accuracy_score(gt_subset, pred_subset) # added accuracy not as performance metrics, but might be relevant for uncertainty estimation evaluation (is used in expected calibration error)
                 balanced_acc = balanced_accuracy_score(gt_subset, pred_subset)
                 mcc = matthews_corrcoef(gt_subset, pred_subset)
                 tnr = compute_tnr(gt_subset, pred_subset)
@@ -549,6 +550,7 @@ def compute_metrics_claim_type_level(benchmark: Benchmark, predicted_labels: np.
 
 
                 metrics_claim_types[claim_type].update({
+                    "Accuracy": float(round(acc, 2)),
                     "Balanced_Accuracy": float(round(balanced_acc, 2)),
                     "Matthews_Correlation_Coefficient": float(round(mcc, 2)),
                     "True_Negative_Rate/Specificity": "N/A" if np.isnan(tnr) else float(round(tnr, 2))
@@ -570,6 +572,7 @@ def compute_metrics_claim_type_level(benchmark: Benchmark, predicted_labels: np.
             ## AI-Images & Altered Images
             else:
                 # 1) Overall metrics per claim type
+                acc = accuracy_score(gt_subset, pred_subset) # added accuracy not as performance metrics, but might be relevant for uncertainty estimation evaluation (is used in expected calibration error)
                 balanced_acc = balanced_accuracy_score(gt_subset, pred_subset)
                 tnr = compute_tnr(gt_subset, pred_subset)
 
@@ -579,6 +582,7 @@ def compute_metrics_claim_type_level(benchmark: Benchmark, predicted_labels: np.
                 n_wrong = n_samples_subset - n_correct - n_refused_subset
 
                 metrics_claim_types[claim_type] = {
+                    "Accuracy": float(round(acc, 2)),
                     "Balanced_Accuracy": float(round(balanced_acc, 2)),
                     "True_Negative_Rate/Specificity": "N/A" if np.isnan(tnr) else float(round(tnr, 2)),
                     "Correct_Predictions": int(n_correct),
@@ -614,6 +618,7 @@ def compute_metrics_dataset_level(predicted_labels: np.ndarray, ground_truth_lab
     try:
         # 1) Compute metrics for dataset-level evaluation
         labels = np.unique(np.append(ground_truth_labels, predicted_labels))
+        acc = accuracy_score(ground_truth_labels, predicted_labels) # added accuracy not as performance metrics, but might be relevant for uncertainty estimation evaluation (is used in expected calibration error)
         balanced_acc = balanced_accuracy_score(ground_truth_labels, predicted_labels)
         mcc = matthews_corrcoef(ground_truth_labels, predicted_labels)
         tnr = compute_tnr(ground_truth_labels, predicted_labels)
@@ -627,6 +632,7 @@ def compute_metrics_dataset_level(predicted_labels: np.ndarray, ground_truth_lab
 
         # Update metric summary with dataset-level metrics and number of correct/wrong predictions
         metric_summary.update({
+            "Accuracy": float(round(acc, 2)),
             "Balanced_Accuracy": float(round(balanced_acc, 2)),
             "Matthew_Correlation_Coefficient": float(round(mcc, 2)),
             "True_Negative_Rate_Specificity": "N/A" if np.isnan(tnr) else float(round(tnr, 2)),
