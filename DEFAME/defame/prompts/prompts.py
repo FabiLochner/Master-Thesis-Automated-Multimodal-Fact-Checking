@@ -18,7 +18,7 @@ class JudgePrompt(Prompt):
     template_file_path = "defame/prompts/judge.md"
     name = "JudgePrompt"
     retry_instruction = ("(Do not forget to choose one option from Decision Options "
-                         "and enclose it in backticks like `this`)")
+                         "and enclose it in backticks like `this`, and provide probability scores for both options)") # Added probability scores reminder here
 
     def __init__(self, doc: Report,
                  classes: Collection[Label],
@@ -38,10 +38,14 @@ class JudgePrompt(Prompt):
 
     def extract(self, response: str) -> dict | str | None:
         verdict = extract_verdict(response, classes=self.classes)
+        # Add confidence scores here
+        confidence_scores = extract_confidence_scores(response, classes=self.classes)
         if verdict is None:
             return None
         else:
-            return dict(verdict=verdict, response=response)
+            return dict(verdict=verdict, 
+                        confidence_scores = confidence_scores, # Add confidence scores here
+                        response=response)
 
 
 class DecontextualizePrompt(Prompt):
@@ -483,3 +487,60 @@ def extract_queries(response: str) -> list:
 
 def extract_reasoning(answer: str) -> str:
     return remove_code_blocks(answer).strip()
+
+
+## add function to extract labels and its confidence scores (added top-k verbalized confidence to judge.md file)
+def extract_confidence_scores(response: str, classes: Collection[Label]) -> Optional[Dict[str, float]]:
+    """ 
+    Extract confidence scores for each label from the response.
+    
+    Expected format:
+    Confidence:
+    FALSE (70%)
+    TRUE (30%)
+    
+    Returns:
+        Dict mapping label names to confidence scores (0.0 to 1.0), or None if parsing fails
+    
+    """
+    # Create empty dictionary to store confidence/probability scores
+    confidence_scores = {}
+
+    # Define regex pattern to extract labels and confidence score 
+    """
+    See judge.md prompt:
+    FALSE (XX%)
+    TRUE (XX%)
+    """
+    pattern = r'(FALSE|TRUE)\s*\((\d+)%\)'
+    matches = re.findall(pattern, response)
+
+    if not matches:
+        logger.warning(f"Could not extract confidence scores from response")
+        return None
+    
+    # Convert percentage format to float with decimal (0-1 range)
+    for label_str, confidence_str in matches:
+        label_upper = label_str.upper()
+        try:
+            # Convert percentage to decimal (0-1 range)
+            confidence_value = float(confidence_str) / 100.0
+            confidence_scores[label_upper] = confidence_value
+        except ValueError:
+            logger.warning(f"Could not parse confidence value: {confidence_str}")
+            continue
+    
+    # Validate that only confidence scores for valid labels are provided
+    valid_labels = {label.value.upper() for label in classes}
+    for label in confidence_scores:
+        if label not in valid_labels:
+            logger.warning(f"Found confidence for invalid label: {label}")
+
+    # Validate that probabilites sum to 1 (specified in the judge.md prompt)
+    total_confidence = sum(confidence_scores.values())
+    if abs(total_confidence - 1.0) > 0:  
+        logger.warning(f"Confidence scores sum to {total_confidence:.1f}, not 1.0")
+    
+    return confidence_scores if confidence_scores else None
+
+
