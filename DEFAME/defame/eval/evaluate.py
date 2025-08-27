@@ -266,6 +266,7 @@ def process_output(doc: Report, meta: dict, benchmark: Benchmark, is_test: bool)
     claim_id = content.id_number
     instance = benchmark.get_by_id(claim_id)
     prediction = doc.verdict
+    confidence_scores = doc.confidence # add confidence scores
 
     # Special output processing for AVeriTeC
     if isinstance(benchmark, AVeriTeC):
@@ -291,7 +292,9 @@ def process_output(doc: Report, meta: dict, benchmark: Benchmark, is_test: bool)
         target=instance.get("label"),
         justification=doc.justification,
         predicted=prediction,
-        gt_justification=instance.get("justification")
+        gt_justification=instance.get("justification"),
+        confidence_TRUE = confidence_scores.get("TRUE"), # add confidence score for TRUE label
+        confidence_FALSE = confidence_scores.get("FALSE") # add confidence score for FALSE label
     )
     logger.save_next_instance_stats(meta["Statistics"], instance['id'])
 
@@ -344,6 +347,27 @@ def finalize_evaluation(stats: dict,
 
     # Retrieve predictions and ground truth
     df = pd.read_csv(experiment_dir / logger.predictions_filename)
+
+    ## Added code: Change the column order of the predictions.csv file 
+    ## 1) Set desired column order
+    desired_column_order = [
+        'sample_index',
+        'claim',
+        'predicted',
+        'confidence_TRUE',
+        'confidence_FALSE',
+        'target',
+        'correct',
+        'justification',
+        'gt_justification'
+    ]
+
+    ## 2) Create a final list of columns that actually exist in the df (error prevention)
+    final_column_order = [col for col in desired_column_order if col in df.columns]
+
+    ## 3) Reorder the df using the final list
+    df = df[final_column_order]
+
     # Sort by 'sample_index' column
     df = df.sort_values(by="sample_index").reset_index(drop=True)
     df.to_csv(experiment_dir / logger.predictions_filename, index=False)
