@@ -62,6 +62,7 @@ class Report:
     claim: Claim
     record: list  # contains intermediate reasoning and evidence, organized in blocks
     verdict: Label = None
+    confidence: dict | None = None # Add the confidence scores here (implemented in defame/prompts/prompt.py)
     justification: str = None
 
     def __init__(self, claim: Claim):
@@ -108,6 +109,18 @@ class Report:
             doc_str += "\n\n" + "\n\n".join([str(block) for block in self.record])
         if self.verdict:
             doc_str += f"\n\n### Verdict: {self.verdict.name}"
+        # Add New Confidence Part to the Fact-Checking Report
+        if self.confidence:
+            # Sort the scores in descending order as requested by the prompt (see defame/prompts/judge.md)
+            sorted_scores = sorted(self.confidence.items(), key=lambda item: item[1], reverse=True)
+            
+            # Format into the "LABEL (XX%)" string
+            confidence_lines = [f"{label} ({int(score * 100)}%)" for label, score in sorted_scores]
+            confidence_str = "\n".join(confidence_lines)
+            
+            # Add the full confidence block to the pdf report
+            doc_str += (f"### Confidence\n{confidence_str}")
+
         if self.justification:
             doc_str += f"\n\n### Justification\n{self.justification}"
         return doc_str
