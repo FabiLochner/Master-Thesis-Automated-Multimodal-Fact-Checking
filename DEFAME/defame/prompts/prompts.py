@@ -490,7 +490,7 @@ def extract_reasoning(answer: str) -> str:
 
 
 ## add function to extract labels and its confidence scores (added top-k verbalized confidence to judge.md file)
-def extract_confidence_scores(response: str, classes: Collection[Label]) -> Optional[Dict[str, float]]:
+def extract_confidence_scores(response: str, classes: Collection[Label]) -> Optional[dict[str, float]]:
     """ 
     Extract confidence scores for each label from the response.
     
