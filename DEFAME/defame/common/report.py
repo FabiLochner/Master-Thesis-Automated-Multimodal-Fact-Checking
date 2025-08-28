@@ -107,9 +107,8 @@ class Report:
         doc_str = f'## Claim\n{self.claim}'
         if self.record:
             doc_str += "\n\n" + "\n\n".join([str(block) for block in self.record])
-        if self.verdict:
-            doc_str += f"\n\n### Verdict: {self.verdict.name}"
-        # Add New Confidence Part to the Fact-Checking Report
+
+        # Add New Confidence Part to the Fact-Checking Report (Should be before Verdict)
         if self.confidence:
             # Sort the scores in descending order as requested by the prompt (see defame/prompts/judge.md)
             sorted_scores = sorted(self.confidence.items(), key=lambda item: item[1], reverse=True)
@@ -120,6 +119,9 @@ class Report:
             
             # Add the full confidence block to the pdf report
             doc_str += (f"### Confidence\n{confidence_str}")
+
+        if self.verdict:
+            doc_str += f"\n\n### Verdict: {self.verdict.name}"
 
         if self.justification:
             doc_str += f"\n\n### Justification\n{self.justification}"
