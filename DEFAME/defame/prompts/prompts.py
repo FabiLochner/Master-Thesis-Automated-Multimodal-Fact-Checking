@@ -494,10 +494,12 @@ def extract_confidence_scores(response: str, classes: Collection[Label]) -> Opti
     """ 
     Extract confidence scores for each label from the response.
     
-    Expected format:
-    Confidence:
-    FALSE (70%)
-    TRUE (30%)
+    Expected LLM formats:
+    - "FALSE (70%) TRUE(30%)"
+    - "FALSE: 70%, TRUE: 30%"
+    - "70% FALSE, 30% TRUE"
+    - "FALSE(77.7%)TRUE(23.3%)"
+    
     
     Returns:
         Dict mapping label names to confidence scores (0.0 to 1.0), or None if parsing fails
@@ -506,29 +508,48 @@ def extract_confidence_scores(response: str, classes: Collection[Label]) -> Opti
     # Create empty dictionary to store confidence/probability scores
     confidence_scores = {}
 
-    # Define regex pattern to extract labels and confidence score 
-    """
-    See judge.md prompt:
-    FALSE (XX%)
-    TRUE (XX%)
-    """
-    pattern = r'(FALSE|TRUE)\s*\((\d+)%\)'
-    matches = re.findall(pattern, response)
+    # Define multiple regex pattern to extract labels and confidence score from different LLM output formats
 
-    if not matches:
+    patterns = [
+        # Pattern 1: FALSE (70%), TRUE (30%)
+        r'(FALSE|TRUE)\s*\((\d+(?:\.\d+)?)%\)',
+        # Pattern 2: FALSE: 70%, TRUE: 30%
+        r'(FALSE|TRUE):\s*(\d+(?:\.\d+)?)%',
+        # Pattern 3: 70% FALSE, 30% TRUE
+        r'(\d+(?:\.\d+)?)%\s+(FALSE|TRUE)',
+        # Pattern 4: FALSE 70%, TRUE 30%
+        r'(FALSE|TRUE)\s+(\d+(?:\.\d+)?)%'
+    ]
+
+    # Loop through all regex patterns to match output
+    for pattern in patterns:
+        matches = re.findall(pattern, response, re.IGNORECASE) #case insensitive
+        if matches:
+            for match in matches:
+                if len(match) == 2:
+                    # Handle different match group orders
+                    if match[0].upper() in ['FALSE', 'TRUE']:
+                        label_str, confidence_str = match[0], match[1]
+                    else:
+                        confidence_str, label_str = match[0], match[1]
+
+                label_upper = label_str.upper()
+                # Convert percentage format to float with decimal (0-1 range)
+                try:
+                    confidence_value = float(confidence_str) / 100.0
+                    confidence_scores[label_upper] = confidence_value
+                except ValueError:
+                    continue
+
+            # If we found matches with this pattern, break
+            if confidence_scores:
+                break
+    
+             
+    if not confidence_scores:
         logger.warning(f"Could not extract confidence scores from response")
         return None
     
-    # Convert percentage format to float with decimal (0-1 range)
-    for label_str, confidence_str in matches:
-        label_upper = label_str.upper()
-        try:
-            # Convert percentage to decimal (0-1 range)
-            confidence_value = float(confidence_str) / 100.0
-            confidence_scores[label_upper] = confidence_value
-        except ValueError:
-            logger.warning(f"Could not parse confidence value: {confidence_str}")
-            continue
     
     # Validate that only confidence scores for valid labels are provided
     valid_labels = {label.value.upper() for label in classes}
