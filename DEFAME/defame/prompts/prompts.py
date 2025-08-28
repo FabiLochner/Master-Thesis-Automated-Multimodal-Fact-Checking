@@ -39,12 +39,12 @@ class JudgePrompt(Prompt):
     def extract(self, response: str) -> dict | str | None:
         verdict = extract_verdict(response, classes=self.classes)
         # Add confidence scores here
-        confidence_scores = extract_confidence_scores(response, classes=self.classes)
+        confidence = extract_confidence_scores(response, classes=self.classes)
         if verdict is None:
             return None
         else:
             return dict(verdict=verdict, 
-                        confidence_scores = confidence_scores, # Add confidence scores here
+                        confidence = confidence, # Add confidence scores here
                         response=response)
 
 
@@ -491,6 +491,9 @@ def extract_reasoning(answer: str) -> str:
 
 ## add function to extract labels and its confidence scores (added top-k verbalized confidence to judge.md file)
 def extract_confidence_scores(response: str, classes: Collection[Label]) -> Optional[dict[str, float]]:
+    # Add debugging statement
+    #logger.debug(f"DEBUG: Raw response for confidence extraction:\n{response}")
+
     """ 
     Extract confidence scores for each label from the response.
     
@@ -499,6 +502,8 @@ def extract_confidence_scores(response: str, classes: Collection[Label]) -> Opti
     - "FALSE: 70%, TRUE: 30%"
     - "70% FALSE, 30% TRUE"
     - "FALSE(77.7%)TRUE(23.3%)"
+    - `true`: 95%
+    - `false`: 5%
     
     
     Returns:
@@ -518,7 +523,11 @@ def extract_confidence_scores(response: str, classes: Collection[Label]) -> Opti
         # Pattern 3: 70% FALSE, 30% TRUE
         r'(\d+(?:\.\d+)?)%\s+(FALSE|TRUE)',
         # Pattern 4: FALSE 70%, TRUE 30%
-        r'(FALSE|TRUE)\s+(\d+(?:\.\d+)?)%'
+        r'(FALSE|TRUE)\s+(\d+(?:\.\d+)?)%',
+        # Pattern 5: `true`: 95%, `false`: 5% (with backticks)
+        r'`(false|true|not enough information)`:\s*(\d+(?:\.\d+)?)%',
+        # Pattern 6: true: 95%, false: 5% (without backticks)
+        r'(false|true|not enough information):\s*(\d+(?:\.\d+)?)%',
     ]
 
     # Loop through all regex patterns to match output
@@ -528,7 +537,7 @@ def extract_confidence_scores(response: str, classes: Collection[Label]) -> Opti
             for match in matches:
                 if len(match) == 2:
                     # Handle different match group orders
-                    if match[0].upper() in ['FALSE', 'TRUE']:
+                    if match[0].upper() in ['FALSE', 'TRUE', 'NOT ENOUGH INFORMATION']:
                         label_str, confidence_str = match[0], match[1]
                     else:
                         confidence_str, label_str = match[0], match[1]
@@ -548,6 +557,8 @@ def extract_confidence_scores(response: str, classes: Collection[Label]) -> Opti
              
     if not confidence_scores:
         logger.warning(f"Could not extract confidence scores from response")
+        logger.debug(f"Response length: {len(response)} chars")
+        logger.debug(f"Response preview: {response[:200]}...")
         return None
     
     
