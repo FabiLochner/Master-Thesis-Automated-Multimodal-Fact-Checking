@@ -19,7 +19,7 @@ class JudgePrompt(Prompt):
     template_file_path = "defame/prompts/judge.md"
     name = "JudgePrompt"
     retry_instruction = ("(Do not forget to choose one option from Decision Options "
-                         "and enclose it in backticks like `this`, and provide probability scores for the options)") # Added probability scores reminder here
+                         "and enclose it in backticks like `this`)") 
 
     def __init__(self, doc: Report,
                  classes: Collection[Label],
@@ -40,12 +40,12 @@ class JudgePrompt(Prompt):
     def extract(self, response: str) -> dict | str | None:
         verdict = extract_verdict(response, classes=self.classes)
         # Add confidence scores here
-        confidence = extract_confidence_scores_json(response, classes=self.classes)
+       # confidence = extract_confidence_scores_json(response, classes=self.classes)
         if verdict is None:
             return None
         else:
             return dict(verdict=verdict, 
-                        confidence = confidence, # Add confidence scores here
+                      #  confidence = confidence, # Add confidence scores here
                         response=response)
 
 
@@ -653,110 +653,110 @@ def extract_reasoning(answer: str) -> str:
 
 
 
-def extract_confidence_scores_json(response: str, classes: Collection[Label]) -> Optional[dict[str, float]]:
-    """
-    Extract confidence scores from JSON format in the response.
-    This version is robust to markdown code fences and other surrounding text.
-    """
-    # This pattern looks for "CONFIDENCE_SCORES:", then optionally skips over
-    # markdown fences like ```json, and then non-greedily captures everything
-    # from the first '{' to the final '}'
-    json_pattern = r'Confidence_machine_readable:\s*({.*?})'
-    match = re.search(json_pattern, response, re.IGNORECASE | re.DOTALL)
+# def extract_confidence_scores_json(response: str, classes: Collection[Label]) -> Optional[dict[str, float]]:
+#     """
+#     Extract confidence scores from JSON format in the response.
+#     This version is robust to markdown code fences and other surrounding text.
+#     """
+#     # This pattern looks for "CONFIDENCE_SCORES:", then optionally skips over
+#     # markdown fences like ```json, and then non-greedily captures everything
+#     # from the first '{' to the final '}'
+#     json_pattern = r'Confidence_machine_readable:\s*({.*?})'
+#     match = re.search(json_pattern, response, re.IGNORECASE | re.DOTALL)
     
-    if match:
-        try:
-            # The pattern captures the full JSON string including braces
-            json_content = match.group(1)
-            json_content = re.sub(r'([a-zA-Z_]+):', r'"\1":', json_content) # Add quotes to unquoted keys
-            json_content = json_content.replace("'", '"') # Replace single quotes with double quotes
-            parsed = json.loads(json_content)
+#     if match:
+#         try:
+#             # The pattern captures the full JSON string including braces
+#             json_content = match.group(1)
+#             json_content = re.sub(r'([a-zA-Z_]+):', r'"\1":', json_content) # Add quotes to unquoted keys
+#             json_content = json_content.replace("'", '"') # Replace single quotes with double quotes
+#             parsed = json.loads(json_content)
             
-            confidence_scores = {}
-            for key, value in parsed.items():
-                # Normalize the key to be uppercase and use underscores
-                normalized_key = key.strip().upper().replace(" ", "_")
+#             confidence_scores = {}
+#             for key, value in parsed.items():
+#                 # Normalize the key to be uppercase and use underscores
+#                 normalized_key = key.strip().upper().replace(" ", "_")
                 
-                try:
-                    conf_value = float(value)
-                    if 0.0 <= conf_value <= 1.0:
-                        confidence_scores[normalized_key] = conf_value
-                    else:
-                        logger.warning(f"Invalid confidence value {conf_value} for {key}")
-                        # Don't return here, just skip the invalid value
-                except (ValueError, TypeError):
-                    logger.warning(f"Could not convert confidence value '{value}' for key '{key}' to float.")
-                    continue
+#                 try:
+#                     conf_value = float(value)
+#                     if 0.0 <= conf_value <= 1.0:
+#                         confidence_scores[normalized_key] = conf_value
+#                     else:
+#                         logger.warning(f"Invalid confidence value {conf_value} for {key}")
+#                         # Don't return here, just skip the invalid value
+#                 except (ValueError, TypeError):
+#                     logger.warning(f"Could not convert confidence value '{value}' for key '{key}' to float.")
+#                     continue
             
-            if not confidence_scores:
-                logger.warning("JSON was found but contained no valid scores.")
-                return None
+#             if not confidence_scores:
+#                 logger.warning("JSON was found but contained no valid scores.")
+#                 return None
 
-            # Validate sum
-            total = sum(confidence_scores.values())
-            if abs(total - 1.0) > 0.02:  # Allow small rounding errors
-                logger.warning(f"Confidence scores sum to {total:.3f}, not 1.0. Normalizing...")
-                if total > 0:
-                    confidence_scores = {k: v / total for k, v in confidence_scores.items()}
+#             # Validate sum
+#             total = sum(confidence_scores.values())
+#             if abs(total - 1.0) > 0.02:  # Allow small rounding errors
+#                 logger.warning(f"Confidence scores sum to {total:.3f}, not 1.0. Normalizing...")
+#                 if total > 0:
+#                     confidence_scores = {k: v / total for k, v in confidence_scores.items()}
             
-            return confidence_scores
+#             return confidence_scores
             
-        except json.JSONDecodeError as e:
-            logger.warning(f"Found a potential JSON block but parsing failed: {e}. Block: '{match.group(1)}'")
+#         except json.JSONDecodeError as e:
+#             logger.warning(f"Found a potential JSON block but parsing failed: {e}. Block: '{match.group(1)}'")
     
-    # If JSON parsing fails, log a warning and fall back to the regex method
-    logger.warning("Primary JSON extraction failed. Falling back to regex patterns.")
-    return extract_confidence_scores_fallback(response, classes)
+#     # If JSON parsing fails, log a warning and fall back to the regex method
+#     logger.warning("Primary JSON extraction failed. Falling back to regex patterns.")
+#     return extract_confidence_scores_fallback(response, classes)
 
 
-def extract_confidence_scores_fallback(response: str, classes: Collection[Label]) -> Optional[dict[str, float]]:
-    """
-    Fallback to existing regex patterns if JSON parsing fails
-    """
-    confidence_scores = {}
+# def extract_confidence_scores_fallback(response: str, classes: Collection[Label]) -> Optional[dict[str, float]]:
+#     """
+#     Fallback to existing regex patterns if JSON parsing fails
+#     """
+#     confidence_scores = {}
     
-    # Your existing patterns
-    patterns = [
-        r'(FALSE|TRUE|NOT_ENOUGH_INFORMATION|not enough information)\s*:\s*(\d+(?:\.\d+)?)%',
-        r'(FALSE|TRUE|NOT_ENOUGH_INFORMATION|not enough information)\s*\((\d+(?:\.\d+)?)%\)',
-        r'(\d+(?:\.\d+)?)%\s+(FALSE|TRUE|NOT_ENOUGH_INFORMATION|not enough information)',
-        r'`(false|true|not enough information)`:\s*(\d+(?:\.\d+)?)%',
-        r'[•\-\*]\s*(false|true|not enough information):\s*(\d+(?:\.\d+)?)%',
-    ]
+#     # Your existing patterns
+#     patterns = [
+#         r'(FALSE|TRUE|NOT_ENOUGH_INFORMATION|not enough information)\s*:\s*(\d+(?:\.\d+)?)%',
+#         r'(FALSE|TRUE|NOT_ENOUGH_INFORMATION|not enough information)\s*\((\d+(?:\.\d+)?)%\)',
+#         r'(\d+(?:\.\d+)?)%\s+(FALSE|TRUE|NOT_ENOUGH_INFORMATION|not enough information)',
+#         r'`(false|true|not enough information)`:\s*(\d+(?:\.\d+)?)%',
+#         r'[•\-\*]\s*(false|true|not enough information):\s*(\d+(?:\.\d+)?)%',
+#     ]
     
-    for pattern in patterns:
-        matches = re.findall(pattern, response, re.IGNORECASE | re.MULTILINE)
+#     for pattern in patterns:
+#         matches = re.findall(pattern, response, re.IGNORECASE | re.MULTILINE)
         
-        for match in matches:
-            if len(match) == 2:
-                if match[0].upper() in ['FALSE', 'TRUE', 'NOT_ENOUGH_INFORMATION'] or match[0].lower() == 'not enough information':
-                    label_str, confidence_str = match[0], match[1]
-                else:
-                    confidence_str, label_str = match[0], match[1]
+#         for match in matches:
+#             if len(match) == 2:
+#                 if match[0].upper() in ['FALSE', 'TRUE', 'NOT_ENOUGH_INFORMATION'] or match[0].lower() == 'not enough information':
+#                     label_str, confidence_str = match[0], match[1]
+#                 else:
+#                     confidence_str, label_str = match[0], match[1]
                 
-                # Normalize label
-                label_upper = label_str.upper()
-                if label_upper == 'NOT ENOUGH INFORMATION':
-                    label_upper = 'NOT_ENOUGH_INFORMATION'
+#                 # Normalize label
+#                 label_upper = label_str.upper()
+#                 if label_upper == 'NOT ENOUGH INFORMATION':
+#                     label_upper = 'NOT_ENOUGH_INFORMATION'
                 
-                try:
-                    confidence_value = float(confidence_str) / 100.0
-                    confidence_scores[label_upper] = confidence_value
-                except ValueError:
-                    continue
+#                 try:
+#                     confidence_value = float(confidence_str) / 100.0
+#                     confidence_scores[label_upper] = confidence_value
+#                 except ValueError:
+#                     continue
         
-        if len(confidence_scores) >= 2:
-            break
+#         if len(confidence_scores) >= 2:
+#             break
     
-    if not confidence_scores:
-        logger.warning("Could not extract confidence scores from response")
-        return None
+#     if not confidence_scores:
+#         logger.warning("Could not extract confidence scores from response")
+#         return None
     
-    # Validate
-    total_confidence = sum(confidence_scores.values())
-    if abs(total_confidence - 1.0) > 0.02:
-        logger.warning(f"Confidence scores sum to {total_confidence:.3f}, normalizing...")
-        if total_confidence > 0:
-            confidence_scores = {k: v/total_confidence for k, v in confidence_scores.items()}
+#     # Validate
+#     total_confidence = sum(confidence_scores.values())
+#     if abs(total_confidence - 1.0) > 0.02:
+#         logger.warning(f"Confidence scores sum to {total_confidence:.3f}, normalizing...")
+#         if total_confidence > 0:
+#             confidence_scores = {k: v/total_confidence for k, v in confidence_scores.items()}
     
-    return confidence_scores
+#     return confidence_scores
