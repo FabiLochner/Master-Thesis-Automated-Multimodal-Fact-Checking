@@ -97,7 +97,10 @@ DEFAME/out/ukraine_russia/ukraine_russia/summary/dynamic/gemini-2.0-flash-lite-0
 DEFAME/out/ukraine_russia/ukraine_russia/summary/dynamic/gemini-2.0-flash-lite-001/2025-08-29_13-17 default/
 DEFAME/out/ukraine_russia/ukraine_russia/summary/dynamic/gemini-2.0-flash-lite-001/2025-08-29_13-30 default/
 DEFAME/out/ukraine_russia/ukraine_russia/summary/dynamic/gemini-2.0-flash-lite-001/2025-08-29_14-11 default/
+<<<<<<< HEAD
 
+=======
+>>>>>>> dbfd6eb09f8ec93ac529e4a1bc726b4e15c543b7
 
 ## Other DEFAME files
 DEFAME/Dockerfile_42
@@ -116,5 +119,5 @@ Gemini_API/
 # mocheg folder
 mocheg/
 
-## excluded_factchecking_website
+## excluded_factchecking_websites
 excluded_factchecking_websites/
