@@ -266,7 +266,7 @@ def process_output(doc: Report, meta: dict, benchmark: Benchmark, is_test: bool)
     claim_id = content.id_number
     instance = benchmark.get_by_id(claim_id)
     prediction = doc.verdict
-    confidence_scores = doc.confidence or {} # add confidence scores. use empty dictionary if confidence is None (to avoid crashes)
+    #confidence_scores = doc.confidence or {} # add confidence scores. use empty dictionary if confidence is None (to avoid crashes)
 
     # Special output processing for AVeriTeC
     if isinstance(benchmark, AVeriTeC):
@@ -293,8 +293,8 @@ def process_output(doc: Report, meta: dict, benchmark: Benchmark, is_test: bool)
         justification=doc.justification,
         predicted=prediction,
         gt_justification=instance.get("justification"),
-        confidence_TRUE = confidence_scores.get("TRUE") if confidence_scores else np.nan, # add confidence score for TRUE label
-        confidence_FALSE = confidence_scores.get("FALSE") if confidence_scores else np.nan # add confidence score for FALSE label
+       # confidence_TRUE = confidence_scores.get("TRUE") if confidence_scores else np.nan, # add confidence score for TRUE label
+        #confidence_FALSE = confidence_scores.get("FALSE") if confidence_scores else np.nan # add confidence score for FALSE label
     )
     logger.save_next_instance_stats(meta["Statistics"], instance['id'])
 
@@ -354,8 +354,8 @@ def finalize_evaluation(stats: dict,
         'sample_index',
         'claim',
         'predicted',
-        'confidence_TRUE',
-        'confidence_FALSE',
+       # 'confidence_TRUE',
+        #'confidence_FALSE',
         'target',
         'correct',
         'justification',
