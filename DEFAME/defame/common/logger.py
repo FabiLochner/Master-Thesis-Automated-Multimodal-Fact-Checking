@@ -229,9 +229,9 @@ class Logger:
                                     "predicted",
                                     "justification",
                                     "correct",
-                                    "gt_justification",
-                                    "confidence_TRUE",  # add column for confidence score for TRUE label 
-                                    "confidence_FALSE")) # add column for confidence score for FALSE label 
+                                    "gt_justification"))
+                                   # "confidence_TRUE",  # add column for confidence score for TRUE label 
+                                   # "confidence_FALSE")) # add column for confidence score for FALSE label 
 
     def save_next_prediction(self,
                              sample_index: int,
@@ -239,9 +239,9 @@ class Logger:
                              target: Optional[Label],
                              predicted: Label,
                              justification: str,
-                             gt_justification: Optional[str],
-                             confidence_TRUE: Optional[float], # add confidence score for TRUE label 
-                             confidence_FALSE: Optional[float]): # add confidence score for FALSE label 
+                             gt_justification: Optional[str]):
+                             #confidence_TRUE: Optional[float], # add confidence score for TRUE label 
+                             #confidence_FALSE: Optional[float]): # add confidence score for FALSE label 
         assert self.experiment_dir is not None
 
         if not os.path.exists(self.predictions_path):
@@ -256,9 +256,9 @@ class Logger:
                                     predicted.name,
                                     justification,
                                     is_correct,
-                                    gt_justification,
-                                    confidence_TRUE, # add column for confidence score for TRUE label 
-                                    confidence_FALSE)) # add column for confidence score for FALSE label 
+                                    gt_justification))
+                                   # confidence_TRUE, # add column for confidence score for TRUE label 
+                                    #confidence_FALSE)) # add column for confidence score for FALSE label 
 
     def save_next_instance_stats(self, stats: dict, claim_id: int):
         assert self.experiment_dir is not None
