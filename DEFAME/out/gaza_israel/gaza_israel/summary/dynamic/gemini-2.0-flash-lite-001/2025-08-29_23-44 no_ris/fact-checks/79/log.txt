@@ -1,0 +1,61 @@
+Extracting claims from Content: <image:48> This is an authentic image of Israeli Air Force's Ramat David airbase that was attacked by Hezbollah on September, 22, 2024.
+'Claim: "<image:48> This is an authentic image of Israeli Air Force's Ramat David airbase that was attacked by Hezbollah on September, 22, 2024."'
+Verifying Claim: "<image:48> This is an authentic image of Israeli Air Force's Ramat David airbase that was attacked by Hezbollah on September, 22, 2024."
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Israeli Air Force Ramat David airbase attack')
+Unable to reach Serper API: Connection timed out. Retrying after 4.765294791371524 seconds.
+Unable to reach Serper API: Connection timed out. Retrying after 9.530589582743048 seconds.
+Unable to reach Serper API: Connection timed out. Retrying after 19.061179165486095 seconds.
+Unable to reach Serper API: Connection timed out. Retrying after 38.12235833097219 seconds.
+Unable to reach Serper API: Connection timed out. Retrying after 76.24471666194438 seconds.
+Skipping unsupported website: https://www.youtube.com/watch?v=C8uxToCz1jA
+Failed to download or open image: cannot identify image file <_io.BytesIO object at 0x7ffed146ea20>
+Got 3 new web source(s):
+	1. https://www.jpost.com/israel-news/article-821267
+	2. https://www.ynetnews.com/article/s1xls76tc
+	3. https://www.timesofisrael.com/hezbollah-publishes-drone-footage-of-ramat-david-airbase-in-north/
+Useful result: From [Source](https://www.timesofisrael.com/hezbollah-publishes-drone-footage-of-ramat-david-airbase-in-north/): 
+Content: The Times of Israel published drone footage of Ramat David airbase. <image:8926>
+
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Ramat David airbase Hezbollah attack September 22 2024')
+Got 3 new web source(s):
+	1. September 22, 2024 https://www.politico.eu/article/hezbollah-launches-revenge-rocket-attack-against-israeli-base/
+	2. September 21, 2024 https://www.aljazeera.com/news/2024/9/21/hezbollah-claims-rocket-attack-deep-inside-northern-israel
+	3. September 21, 2024 https://www.theguardian.com/world/2024/sep/22/israel-strikes-lebanon-hezbollah-deepest-rocket-attacks-since-start-gaza-war
+Useful result: From [Source](https://www.politico.eu/article/hezbollah-launches-revenge-rocket-attack-against-israeli-base/): 
+Content: Politico.eu reports that Hezbollah launched rockets at the Ramat David airbase in northern Israel on Sunday. The attack was in response to Israeli attacks on Lebanese regions. The article mentions an exchange of fire between Israel and Hezbollah amid escalating tensions in the Middle East. The article was published on September 23, 2024.
+
+Useful result: From [Source](https://www.aljazeera.com/news/2024/9/21/hezbollah-claims-rocket-attack-deep-inside-northern-israel): 
+Content: Al Jazeera reports that Hezbollah launched rockets at Israel’s Ramat David Airbase, east of Haifa, on September 22, 2024, in response to Israeli attacks. <image:1> and <image:2> show the aftermath of the attack. The article also mentions an Israeli strike in the southern suburbs of Beirut on Friday that killed at least 45 people.
+
+Useful result: From [Source](https://www.theguardian.com/world/2024/sep/22/israel-strikes-lebanon-hezbollah-deepest-rocket-attacks-since-start-gaza-war): 
+Content: The Guardian reports on Hezbollah's rocket attacks on the Israeli air force’s Ramat David airbase on September 22, 2024. The article mentions that the attacks were the deepest strikes claimed by Hezbollah since the start of the Gaza war. <image:8927> The article is more than 11 months old.
+
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Ramat David airbase attack aftermath')
+Skipping unsupported website: https://www.youtube.com/watch?v=w23rzPXR3xQ
+Got 1 new web source(s):
+	1. https://www.cnn.com/2024/09/22/middleeast/israel-strikes-hezbollah-weakened-analysis-intl
+Useful result: From [Source](https://www.cnn.com/2024/09/22/middleeast/israel-strikes-hezbollah-weakened-analysis-intl): 
+Content: CNN published an image of the aftermath of the attack. <image:8930>
+
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='burning plane military base')
+Failed to download or open image: cannot identify image file <_io.BytesIO object at 0x7ffed1478130>
+Skipping unsupported website: https://www.reddit.com/r/indiadiscussion/comments/1kiw70b/is_this_a_plane_burning_rawalpindi_airbase_got/
+Skipping unsupported website: https://www.youtube.com/watch?v=O3UrxMwqMWk
+Got 3 new web source(s):
+	1. https://www.osi.af.mil/News/Features/Display/Article/3129659/looking-back-ramstein-air-show-crash/
+	2. https://www.army.mil/article/274765/remembering_the_1994_tragedy_at_pope_air_force_base
+	3. https://theaviationist.com/2024/10/20/f-16-hit-by-weapons-loader-report/
+Useful result: From [Source](https://www.army.mil/article/274765/remembering_the_1994_tragedy_at_pope_air_force_base): 
+Content: The U.S. Army published an article about the 1994 tragedy at Pope Air Force Base, including an image of a burning plane. <image:8933>
+
+Useful result: From [Source](https://theaviationist.com/2024/10/20/f-16-hit-by-weapons-loader-report/): 
+Content: The Aviationist published an image of a burning plane. <image:8934>
+
+The claim '<image:48> This is an authentic image of Israeli Air Force's Ramat David airbase that was attacked by Hezbollah on September, 22, 2024.' is false.
+Justification: The claim that the image depicts the aftermath of the Hezbollah attack on the Ramat David airbase on September 22, 2024, is not supported by the evidence. While the attack did occur, as confirmed by sources like [Al Jazeera](https://www.aljazeera.com/news/2024/9/21/hezbollah-claims-rocket-attack-deep-inside-northern-israel) and [The Guardian](https://www.theguardian.com/world/2024/sep/22/israel-strikes-lebanon-hezbollah-deepest-rocket-attacks-since-start-gaza-war), the image in the claim does not appear in any of the provided sources, including those detailing the attack's aftermath.
+
+So, the overall veracity is: false
+Fact-check took 4:33 min.

@@ -1,0 +1,25 @@
+Extracting claims from Content: <image:33> This image shows Gaza, completely destroyed, in December 2024.
+'Claim: "<image:33> This image shows Gaza, completely destroyed, in December 2024."'
+Verifying Claim: "<image:33> This image shows Gaza, completely destroyed, in December 2024."
+Not enough information yet. Continuing fact-check...
+Most likely location: Jordan
+Top 10 locations: Jordan, Palestine, United Arab Emirates, Pakistan, Tunisia, Israel, Malta, Russia, Turkey, Albania
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='destroyed buildings Gaza')
+Got 3 new web source(s):
+	1. https://www.aljazeera.com/news/2025/8/24/israel-has-destroyed-more-than-1000-buildings-in-gaza-city-civil-defence
+	2. April 22, 2025 https://news.un.org/en/story/2025/04/1162491
+	3. July 18, 2025 https://www.bbc.co.uk/news/resources/idt-33fccfbe-abcc-4af1-bdd2-632b2787cf59
+Useful result: From [Source](https://www.aljazeera.com/news/2025/8/24/israel-has-destroyed-more-than-1000-buildings-in-gaza-city-civil-defence): 
+Content: Al Jazeera published an article on August 24, 2025, stating that Israel has destroyed more than 1,000 buildings in Gaza City. <image:i>. The article mentions ongoing shelling, blocked access routes, and the Civil Defence's inability to respond to rescue and aid operations.
+
+Useful result: From [Source](https://news.un.org/en/story/2025/04/1162491): 
+Content: The UN News published on April 22, 2025, reports that approximately 92% of residential buildings in Gaza have been damaged or destroyed since the start of the conflict. <image:k> shows a bulldozer removing rubble in Gaza City. The article mentions that the destruction of heavy machinery has halted rescue and recovery efforts.
+
+Useful result: From [Source](https://www.bbc.co.uk/news/resources/idt-33fccfbe-abcc-4af1-bdd2-632b2787cf59): 
+Content: The BBC published an article on July 18, 2025, discussing the destruction of buildings in Gaza. The article includes satellite images showing the destruction of buildings in Gaza, including images from May 31, 2025, and July 8, 2025. <image:8737>. The article states that Israel has demolished thousands of buildings across Gaza since March 2025. <image:8720>. The article also mentions the destruction in Rafah. <image:8721>.
+
+The claim '<image:33> This image shows Gaza, completely destroyed, in December 2024.' is false.
+Justification: The claim is false. While the image likely depicts destruction in Gaza, the evidence indicates the destruction occurred in 2025, not December 2024, as stated in the claim. The BBC ([https://www.bbc.co.uk/news/resources/idt-33fccfbe-abcc-4af1-bdd2-632b2787cf59](https://www.bbc.co.uk/news/resources/idt-33fccfbe-abcc-4af1-bdd2-632b2787cf59)) reported on the destruction in Gaza, with satellite images from May and July 2025.
+
+So, the overall veracity is: false
+Fact-check took 1:45 min.

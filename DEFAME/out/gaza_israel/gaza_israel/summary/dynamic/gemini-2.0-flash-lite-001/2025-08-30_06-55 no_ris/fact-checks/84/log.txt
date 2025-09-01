@@ -1,0 +1,38 @@
+Extracting claims from Content: <image:53> This image shows Israeli PM Benjamin Netanyahu's house taken by a Hezbollah drone in August 2024.
+'Claim: "<image:53> This image shows Israeli PM Benjamin Netanyahu's house taken by a Hezbollah drone in August 2024."'
+Verifying Claim: "<image:53> This image shows Israeli PM Benjamin Netanyahu's house taken by a Hezbollah drone in August 2024."
+Not enough information yet. Continuing fact-check...
+Most likely location: Israel
+Top 10 locations: Israel, Mexico, Tunisia, Malta, Palestine, Bermuda, Jordan, United Arab Emirates, Dominican Republic, Pakistan
+Got 3 new web source(s):
+	1. October 19, 2024 https://www.npr.org/2024/10/19/nx-s1-5158375/netanyahu-house-drone-israel
+	2. October 23, 2024 https://www.cnn.com/2024/10/23/middleeast/video-netanyahu-beach-hezbollah-drone-attack-intl-hnk
+	3. October 19, 2024 https://www.theguardian.com/world/2024/oct/19/netanyahus-house-hit-by-drone-as-israel-and-hezbollah-trade-blows-in-lebanon
+Useful result: From [Source](https://www.npr.org/2024/10/19/nx-s1-5158375/netanyahu-house-drone-israel): 
+Content: The NPR article, published on October 19, 2024, reports that a drone targeted Israeli Prime Minister Benjamin Netanyahu's house on Saturday. The article mentions that Hezbollah carried out rocket attacks on Israel, and Israel launched airstrikes on Beirut's suburbs. <image:4619>. The article also mentions that Netanyahu's office said the drone targeted his house in the Mediterranean coastal town of Caesarea.
+
+Useful result: From [Source](https://www.cnn.com/2024/10/23/middleeast/video-netanyahu-beach-hezbollah-drone-attack-intl-hnk): 
+Content: CNN reports that Benjamin Netanyahu's beach house in Caesarea, Israel, was damaged in a drone strike on October 22, 2024, claimed by Hezbollah. <image:53> is not included in the article. The article includes an image of the damage to the house.
+
+Useful result: From [Source](https://www.theguardian.com/world/2024/oct/19/netanyahus-house-hit-by-drone-as-israel-and-hezbollah-trade-blows-in-lebanon): 
+Content: The Guardian published an article on October 19, 2024, reporting that Benjamin Netanyahu's house in Caesarea was hit by a drone on Saturday. The article mentions that the attack caused superficial damage and no casualties. The article includes a photograph of the scene <image:4623>. The article also mentions that Hezbollah has not claimed responsibility for the attack.
+
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Benjamin Netanyahu house aerial view')
+Got 3 new web source(s):
+	1. https://www.haaretz.com/israel-news/security-aviation/2023-01-19/ty-article/.premium/detailed-building-plan-for-netanyahus-seaside-villa-were-available-online/00000185-c4f6-d279-a9b7-ccf770210000
+	2. https://www.siasat.com/hezbollah-drone-flies-over-films-netanyahus-residence-report-3080894/
+	3. https://theaviationist.com/2024/10/19/netanyahus-house-attacked-by-drone/
+Useful result: From [Source](https://www.haaretz.com/israel-news/security-aviation/2023-01-19/ty-article/.premium/detailed-building-plan-for-netanyahus-seaside-villa-were-available-online/00000185-c4f6-d279-a9b7-ccf770210000): 
+Content: Haaretz published an image of Benjamin Netanyahu's house. <image:10644>
+
+Useful result: From [Source](https://www.siasat.com/hezbollah-drone-flies-over-films-netanyahus-residence-report-3080894/): 
+Content: The search result from Siasat.com contains an image of Benjamin Netanyahu's house. <image:10645>
+
+Useful result: From [Source](https://theaviationist.com/2024/10/19/netanyahus-house-attacked-by-drone/): 
+Content: The Aviationist published an article about an alleged drone attack on Benjamin Netanyahu's house. <image:10646>
+
+The claim '<image:53> This image shows Israeli PM Benjamin Netanyahu's house taken by a Hezbollah drone in August 2024.' is false.
+Justification: The image depicts Benjamin Netanyahu's house, as confirmed by multiple sources ([https://www.npr.org/2024/10/19/nx-s1-5158375/netanyahu-house-drone-israel](https://www.npr.org/2024/10/19/nx-s1-5158375/netanyahu-house-drone-israel), [https://www.cnn.com/2024/10/23/middleeast/video-netanyahu-beach-hezbollah-drone-attack-intl-hnk](https://www.cnn.com/2024/10/23/middleeast/video-netanyahu-beach-hezbollah-drone-attack-intl-hnk)). However, the claim that the image was taken by a Hezbollah drone in August 2024 is not supported by the evidence, as the drone attack occurred in October 2024.
+
+So, the overall veracity is: false
+Fact-check took 1:16 min.

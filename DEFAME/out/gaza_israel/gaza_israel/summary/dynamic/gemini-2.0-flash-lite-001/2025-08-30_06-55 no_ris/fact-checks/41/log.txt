@@ -1,0 +1,28 @@
+Extracting claims from Content: In March 2025, U.S. Immigration and Customs Enforcement (ICE) agents arrested and detained Palestinian activist Mahmoud Khalil, a lawful permanent resident of the U.S.
+'Claim: "In March 2025, U.S. Immigration and Customs Enforcement (ICE) agents arrested and detained Palestinian activist Mahmoud Khalil, a lawful permanent resident of the U.S."'
+Verifying Claim: "In March 2025, U.S. Immigration and Customs Enforcement (ICE) agents arrested and detained Palestinian activist Mahmoud Khalil, a lawful permanent resident of the U.S."
+Not enough information yet. Continuing fact-check...
+Got 3 new web source(s):
+	1. https://en.wikipedia.org/wiki/Detention_of_Mahmoud_Khalil
+	2. May 19, 2025 https://www.aclu.org/press-releases/new-footage-confirms-ice-lied-and-had-no-reason-to-detain-mahmoud-khalil
+	3. July 11, 2025 https://www.cnn.com/2025/07/11/world/mahmoud-khalil-ice-detention-amanpour-interview-intl-hnk
+Useful result: From [Source](https://en.wikipedia.org/wiki/Detention_of_Mahmoud_Khalil): 
+Content: The Wikipedia article "Detention of Mahmoud Khalil" discusses the arrest and detention of Mahmoud Khalil by ICE agents on March 8, 2025. The article mentions that Khalil is a Palestinian activist and a lawful permanent resident of the U.S. The article also mentions an online campaign against Khalil before his arrest.
+
+Useful result: From [Source](https://www.aclu.org/press-releases/new-footage-confirms-ice-lied-and-had-no-reason-to-detain-mahmoud-khalil): 
+Content: The ACLU published a press release stating that ICE arrested Mahmoud Khalil in March 2025. The press release also mentions that Khalil's legal team said that ICE arrested Khalil in retaliation for his advocacy for Palestinian rights. The ACLU also published press releases about the case in May and July 2025. <image:1503>
+
+Useful result: From [Source](https://www.cnn.com/2025/07/11/world/mahmoud-khalil-ice-detention-amanpour-interview-intl-hnk): 
+Content: CNN published an article on July 11, 2025, discussing the ICE detention of Palestinian activist Mahmoud Khalil. The article mentions Khalil's arrest in March, his detention in ICE facilities, and his claims against the Trump administration. <image:k>, <image:i>, <image:j>. The article also includes Khalil's statements about the conditions of his detention and the reasons for his arrest.
+
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Mahmoud Khalil Palestinian activist ICE detention')
+Got 1 new web source(s):
+	1. June 23, 2025 https://www.npr.org/2025/06/23/nx-s1-5441691/mahmoud-khalil-interview
+Useful result: From [Source](https://www.npr.org/2025/06/23/nx-s1-5441691/mahmoud-khalil-interview): 
+Content: NPR published an article on June 23, 2025, stating that Mahmoud Khalil, a Columbia graduate student, was released on bail after 104 days in ICE detention. The article mentions that Khalil was arrested in early March and detained in Louisiana. <image:10363>, <image:10361>, <image:10362>. The article also mentions that Khalil is a legal permanent resident.
+
+The claim 'In March 2025, U.S. Immigration and Customs Enforcement (ICE) agents arrested and detained Palestinian activist Mahmoud Khalil, a lawful permanent resident of the U.S.' is true.
+Justification: The claim is supported by multiple sources. The Wikipedia article "Detention of Mahmoud Khalil" ([https://en.wikipedia.org/wiki/Detention_of_Mahmoud_Khalil](https://en.wikipedia.org/wiki/Detention_of_Mahmoud_Khalil)) and an ACLU press release ([https://www.aclu.org/press-releases/new-footage-confirms-ice-lied-and-had-no-reason-to-detain-mahmoud-khalil](https://www.aclu.org/press-releases/new-footage-confirms-ice-lied-and-had-no-reason-to-detain-mahmoud-khalil)) confirm that Mahmoud Khalil was arrested and detained by ICE in March 2025. An NPR article ([https://www.npr.org/2025/06/23/nx-s1-5441691/mahmoud-khalil-interview](https://www.npr.org/2025/06/23/nx-s1-5441691/mahmoud-khalil-interview)) confirms that Khalil is a legal permanent resident.
+
+So, the overall veracity is: true
+Fact-check took 2:53 min.

@@ -1,0 +1,30 @@
+Extracting claims from Content: <image:5> This image shows the U.S. bombarding Yemen on December 22, 2024 in reprisal after Yemen launched an attack on Israel's capital.
+'Claim: "<image:5> This image shows the U.S. bombarding Yemen on December 22, 2024 in reprisal after Yemen launched an attack on Israel's capital."'
+Verifying Claim: "<image:5> This image shows the U.S. bombarding Yemen on December 22, 2024 in reprisal after Yemen launched an attack on Israel's capital."
+Not enough information yet. Continuing fact-check...
+Most likely location: Palestine
+Top 10 locations: Palestine, Israel, United Arab Emirates, Jordan, Albania, Andorra, Argentina, Australia, Austria, Bangladesh
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Anadolu images bombing')
+Skipping unsupported website: https://www.instagram.com/p/DLuJDjQNB50/
+Skipping unsupported website: https://x.com/anadoluimages?lang=en
+Got 3 new web source(s):
+	1. October 15, 2023 https://www.aa.com.tr/en/middle-east/anadolus-images-prove-israel-used-white-phosphorus-in-gaza/3021073
+	2. https://www.anadoluimages.com/Search?collection=4393898
+	3. https://www.gettyimages.com/photos/anadolu-agency
+Useful result: From [Source](https://www.aa.com.tr/en/middle-east/anadolus-images-prove-israel-used-white-phosphorus-in-gaza/3021073): 
+Content: Anadolu's images prove Israel used white phosphorus in Gaza. The images were taken by Anadolu photojournalist on Oct. 9. The article was published on October 15, 2023. <image:5> is not in the search result.
+
+Useful result: From [Source](https://www.gettyimages.com/photos/anadolu-agency): 
+Content: The search result from Getty Images contains images from Anadolu Agency. One image shows the wreckage of a car after a Russian missile attack in Kharkiv, Ukraine, on January 11, 2024. <image:10025> Another image shows smoke rising after Israeli fighter jets pounded Al Katiba region in Gaza City, Gaza on July 14, 2018.
+
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Getty images bombing')
+Got 1 new web source(s):
+	1. https://www.gettyimages.com/photos/bombing
+Useful result: From [Source](https://www.gettyimages.com/photos/bombing): 
+Content: The search result from Getty Images contains images related to explosions and bombings. <image:10087>, <image:10088>, <image:10089>, <image:10090>, <image:10091>, <image:10092>, <image:10093>, <image:10094>, <image:10095>, <image:10096>, <image:10097>, <image:10098>, <image:10099>, <image:10100>, <image:10101>, <image:10102>, <image:10103>, <image:10104>, <image:10105>, <image:10106>, <image:10107>, <image:10108>, <image:10109>.
+
+The claim '<image:5> This image shows the U.S. bombarding Yemen on December 22, 2024 in reprisal after Yemen launched an attack on Israel's capital.' is false.
+Justification: The image, likely taken in Palestine or Israel, was captured by the Anadolu Agency and does not depict the U.S. bombarding Yemen. The search results reveal images of bombings in Gaza and Ukraine, contradicting the claim's context of the U.S. bombing Yemen on December 22, 2024.
+
+So, the overall veracity is: false
+Fact-check took 1:56 min.

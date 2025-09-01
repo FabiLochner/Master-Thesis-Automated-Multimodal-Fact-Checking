@@ -1,0 +1,25 @@
+Extracting claims from Content: <image:59> This image shows a palestinian child stuck under the rubble in Gaza after an Israeli airstrike in July 2024.
+'Claim: "<image:59> This image shows a palestinian child stuck under the rubble in Gaza after an Israeli airstrike in July 2024."'
+Verifying Claim: "<image:59> This image shows a palestinian child stuck under the rubble in Gaza after an Israeli airstrike in July 2024."
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Palestinian child rubble Gaza Israeli airstrike July 2024')
+Got 3 new web source(s):
+	1. July 27, 2024 https://www.cnn.com/2024/07/27/middleeast/israel-gaza-deir-al-balah-school-intl
+	2. August 20, 2024 https://www.bbc.com/news/articles/ce9zxlpz5evo
+	3. September 30, 2024 https://www.hrw.org/report/2024/09/30/they-destroyed-what-was-inside-us/children-disabilities-amid-israels-attacks-gaza
+Useful result: From [Source](https://www.cnn.com/2024/07/27/middleeast/israel-gaza-deir-al-balah-school-intl): 
+Content: The CNN article, published on July 27, 2024, reports on an Israeli airstrike on a school in Deir al-Balah, central Gaza, on July 27, 2024. <image:59> The article states that the strike resulted in at least 30 deaths and over 100 injuries. The article includes images of the aftermath, including images of dead bodies and injured people at Al-Aqsa Martyrs Hospital. The article also mentions a strike on an Al-Qashtat family house in Deir al-Balah. <image:59>
+
+Useful result: From [Source](https://www.bbc.com/news/articles/ce9zxlpz5evo): 
+Content: The BBC published an article on August 20, 2024, reporting on an Israeli strike on a school in Gaza City, which was sheltering displaced people. <image:9902> The article mentions that the strike on Mustafa Hafez school resulted in at least 12 Palestinian deaths. The IDF stated that they targeted a Hamas command and control center inside the school. The UN condemned the "increasing frequency" of Israeli strikes on schools. The article also mentions the recovery of six Israeli hostages' bodies.
+
+Useful result: From [Source](https://www.hrw.org/report/2024/09/30/they-destroyed-what-was-inside-us/children-disabilities-amid-israels-attacks-gaza): 
+Content: The Human Rights Watch report, published on September 30, 2024, discusses the impact of Israeli attacks on Gaza, including the killing of over 16,750 children as of mid-September 2024. The report mentions children missing and potentially trapped under rubble. The report also includes information about children with disabilities and the challenges they face. The report mentions the use of starvation as a method of warfare. The report also includes images of injured children. <image:59> is not included in the report.
+
+Most likely location: Palestine
+Top 10 locations: Palestine, Israel, Jordan, Russia, Canada, Colombia, France, Sweden, Turkey, Ukraine
+The claim '<image:59> This image shows a palestinian child stuck under the rubble in Gaza after an Israeli airstrike in July 2024.' is true.
+Justification: The image likely depicts a Palestinian child in Gaza after an Israeli airstrike, as supported by reports of Israeli attacks in Gaza during July and August 2024, including a [CNN article](https://www.cnn.com/2024/07/27/middleeast/israel-gaza-deir-al-balah-school-intl) and a [BBC article](https://www.bbc.com/news/articles/ce9zxlpz5evo). The geolocation data also supports this. However, the exact date and location of the event in the image cannot be confirmed.
+
+So, the overall veracity is: true
+Fact-check took 0:41 min.

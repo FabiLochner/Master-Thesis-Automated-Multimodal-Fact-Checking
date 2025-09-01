@@ -1,0 +1,49 @@
+Extracting claims from Content: <image:32> This image shows Palestinian baby Sham Imad Muhareb which did not lose her arm in an Israeli airstrike on the Shejaeya neighborhood, east of Gaza City, in April 2025.
+'Claim: "<image:32> This image shows Palestinian baby Sham Imad Muhareb which did not lose her arm in an Israeli airstrike on the Shejaeya neighborhood, east of Gaza City, in April 2025."'
+Verifying Claim: "<image:32> This image shows Palestinian baby Sham Imad Muhareb which did not lose her arm in an Israeli airstrike on the Shejaeya neighborhood, east of Gaza City, in April 2025."
+Not enough information yet. Continuing fact-check...
+Got 0 new web source(s):
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Sham Imad Muhareb baby injury')
+Skipping unsupported website: https://www.instagram.com/imamomarsuleiman/p/DITq4hsgrLx/?api=majong%E3%80%90GB999.bet%E3%80%91.vtfp&hl=ar
+Skipping unsupported website: https://x.com/QudsNen/status/1910677653855613256
+Skipping unsupported website: https://www.facebook.com/imamomarsuleiman/posts/sham-imad-muhareb-who-lost-her-arm-yesterday-in-an-airstrike-has-diedevery-image/1235035921312675/
+Got 0 new web source(s):
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Nahed Hajjaj')
+Skipping unsupported website: https://www.instagram.com/nahed_hajjaj99/?hl=en
+Skipping unsupported website: https://x.com/nahed_hajjaj99?lang=en
+Skipping unsupported website: https://www.facebook.com/photo.php?fbid=1185967893578022&id=100064944663926&set=a.586907590150725
+Skipping unsupported website: https://twitter.com/nahed_hajjaj99/status/1949159244457980172
+Got 2 new web source(s):
+	1. January 22, 2024 https://www.gofundme.com/f/emergency-fundraiser-Nahed-Hajjaj
+	2. https://skwawkbox.org/tag/nahed-hajjaj/feed/
+Useful result: From [Source](https://www.gofundme.com/f/emergency-fundraiser-Nahed-Hajjaj): 
+Content: The search result is a GoFundMe page created by Giada Lubomirski to raise funds for Nahed Hajjaj, a Palestinian journalist from Gaza. The page includes information about Nahed's work as a journalist, his Instagram accounts (@NAHED\_HAJJAJ99 and @NAHED\_HAJJAJ.05), and the urgent need for support due to the ongoing humanitarian crisis in Gaza. The page was updated on May 20, 2025. <image:9616>
+
+Useful result: From [Source](https://skwawkbox.org/tag/nahed-hajjaj/feed/): 
+Content: The search result from SKWAWKBOX, published on June 30, 2025, discusses the ongoing conflict in Gaza, with journalist Nahed Hajjaj reporting on the situation. The article mentions "non-stop massacres" by Israel and includes images of the destruction. <image:9622>, <image:9627>, <image:9628>.
+
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Nahed Hajjaj baby')
+Skipping unsupported website: https://www.instagram.com/reel/DNlS9eVtR4x/
+Skipping unsupported website: https://www.facebook.com/WearThePeaceClothing/posts/the-father-came-home-with-no-milk-and-came-home-to-no-son-day-649follow-nahed_ha/1184454270396051/
+Skipping unsupported website: https://x.com/nahed_hajjaj99/status/1945913809522024858
+Got 0 new web source(s):
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Sham Imad Muhareb injury details')
+Skipping unsupported website: https://www.facebook.com/imamomarsuleiman/posts/sham-imad-muhareb-who-lost-her-arm-yesterday-in-an-airstrike-has-diedevery-image/1235035921312675/
+Skipping unsupported website: https://www.instagram.com/imamomarsuleiman/p/DITq4hsgrLx/?api=majong%E3%80%90GB999.bet%E3%80%91.vtfp&hl=ar
+Skipping unsupported website: https://x.com/QudsNen/status/1910677653855613256
+Got 2 new web source(s):
+	1. https://t.me/s/QudsNen?before=158681
+	2. https://www.ifj.org/media-centre/news/detail/category/press-releases/article/palestine-at-least-219-journalists-and-media-workers-killed-in-gaza
+Useful result: From [Source](https://t.me/s/QudsNen?before=158681): 
+Content: Quds News Network reports that Palestinian infant Sham, daughter of Dr. Imad Muharab, died from injuries sustained in an Israeli bombing of her grandfather's house in the Al-Shujaiya neighborhood of Gaza City, which resulted in the amputation of her right hand.
+
+Got 2 new web source(s):
+	1. https://jordantimes.com/news/local/jaf-evacuates-injured-jordanian-medic-from-gaza-for-treatment
+	2. https://www.ifj.org/war-in-gaza
+The claim '<image:32> This image shows Palestinian baby Sham Imad Muhareb which did not lose her arm in an Israeli airstrike on the Shejaeya neighborhood, east of Gaza City, in April 2025.' is false.
+Justification: The claim is false. Evidence from the Quds News Network ([Source](https://t.me/s/QudsNen?before=158681)) indicates that Sham Imad Muhareb died from injuries sustained in an Israeli bombing and lost her right hand, directly contradicting the claim.
+
+So, the overall veracity is: false
+Fact-check took 7:04 min.

@@ -1,0 +1,39 @@
+Extracting claims from Content: <image:20> This image shows the 'French' Left who is rioting against Le Pen's victory in the first round of the French parliamentary elections in 2024.
+'Claim: "<image:20> This image shows the 'French' Left who is rioting against Le Pen's victory in the first round of the French parliamentary elections in 2024."'
+Verifying Claim: "<image:20> This image shows the 'French' Left who is rioting against Le Pen's victory in the first round of the French parliamentary elections in 2024."
+Not enough information yet. Continuing fact-check...
+Most likely location: Palestine
+Top 10 locations: Palestine, France, Germany, Tunisia, Belgium, Sweden, Israel, Jordan, Hungary, Italy
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='French parliamentary elections 2024 Le Pen')
+Firecrawl failed to respond in time! This can be due to server overload.
+Skipping the URL https://en.wikipedia.org/wiki/2024_French_legislative_election.
+Got 3 new web source(s):
+	1. July 01, 2024 https://www.npr.org/2024/07/01/nx-s1-5025215/france-elections-2024-analysis
+	2. July 07, 2024 https://www.politico.eu/article/france-legislative-election-2024-second-round-front-populaire-jean-luc-melenchon-raphael-glucksmann-shock-victory/
+	3. https://www.economist.com/interactive/france-elections-2024-polls-macron-le-pen
+Useful result: From [Source](https://www.npr.org/2024/07/01/nx-s1-5025215/france-elections-2024-analysis): 
+Content: The NPR article, published on July 1, 2024, discusses the first round of the French legislative elections, where the far-right National Rally party, led by Marine Le Pen, gained a strong lead. <image:9472> The article mentions that the New Popular Front, an alliance of center-left and far-left parties, placed second. The article also notes that the National Rally could potentially gain a majority in the National Assembly in the second round.
+
+Useful result: From [Source](https://www.politico.eu/article/france-legislative-election-2024-second-round-front-populaire-jean-luc-melenchon-raphael-glucksmann-shock-victory/): 
+Content: The article from Politico.eu discusses the 2024 French parliamentary elections. The left-wing alliance won the most seats, dealing a blow to Marine Le Pen's far-right party. The first round of voting was on June 30. <image:20> is not mentioned.
+
+Useful result: From [Source](https://www.economist.com/interactive/france-elections-2024-polls-macron-le-pen): 
+Content: The Economist discusses the 2024 French legislative elections, mentioning the National Rally (RN) led by Marine Le Pen, the New Popular Front (NFP), and Ensemble. The RN did not secure a majority. The article also mentions Jordan Bardella. The Economist is tracking the contest.
+
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='protest Palestine France')
+Failed to download or open image: HTTPSConnectionPool(host='cdnuploads.aa.com.tr', port=443): Read timed out. (read timeout=10)
+Got 3 new web source(s):
+	1. https://www.aljazeera.com/news/2021/5/13/france-asks-police-to-ban-pro-palestinian-protest-in-paris
+	2. https://www.reuters.com/world/europe/french-court-upholds-government-instruction-ban-all-pro-palestine-protests-2023-10-18/
+	3. https://www.aa.com.tr/en/europe/thousands-gather-in-paris-in-1st-pro-palestinian-rally-allowed-by-french-police/3029786
+Useful result: From [Source](https://www.aljazeera.com/news/2021/5/13/france-asks-police-to-ban-pro-palestinian-protest-in-paris): 
+Content: Al Jazeera published an article about a pro-Palestinian protest in Paris. <image:9505> shows the Eiffel Tower in the background.
+
+Useful result: From [Source](https://www.reuters.com/world/europe/french-court-upholds-government-instruction-ban-all-pro-palestine-protests-2023-10-18/): 
+Content: Reuters published an article on October 18, 2023, about a French court upholding a government instruction to ban all pro-Palestine protests. The article includes an image of a pro-Palestine protest in France. <image:9506>
+
+The claim '<image:20> This image shows the 'French' Left who is rioting against Le Pen's victory in the first round of the French parliamentary elections in 2024.' is false.
+Justification: The image likely depicts a pro-Palestine protest in France, as indicated by the presence of Palestinian flags and the geolocation results. While the 2024 French parliamentary elections did take place, with Marine Le Pen's party gaining a lead, the evidence does not support the claim that the image shows a riot against her victory. The image search results show pro-Palestine protests in France, not necessarily a riot against Le Pen's victory. Therefore, the claim is false.
+
+So, the overall veracity is: false
+Fact-check took 13:16 min.

@@ -1,0 +1,42 @@
+Configuration summary:
+Available actions: web_search, geolocate, image_search, reverse_search
+llm: gemini-2.0-flash-lite-001
+benchmark_name: gaza_israel
+tools_config:
+    searcher:
+        limit_per_search: 3
+        search_engine_config:
+            google: null
+            google_vision: null
+    geolocator: null
+experiment_name: no_ris
+fact_checker_kwargs:
+    decompose: false
+    decontextualize: false
+    filter_check_worthy: false
+    interpret: false
+    max_iterations: 3
+    max_result_len: 64000
+    procedure_variant: summary/dynamic
+llm_kwargs:
+    temperature: 0.01
+benchmark_kwargs:
+    variant: dev
+allowed_actions:
+- web_search
+- image_search
+- geolocate
+n_samples: null
+sample_ids: null
+random_sampling: false
+print_log_level: info
+continue_experiment_dir: null
+n_workers: 4
+
+Started Worker 0 with PID 529.
+Started Worker 1 with PID 530.
+Started Worker 2 with PID 531.
+Started Worker 3 with PID 532.
+Worker 3 has been terminated gracefully.
+All workers are terminated.
+All outputs saved in /defame/out/gaza_israel/gaza_israel/summary/dynamic/gemini-2.0-flash-lite-001/2025-08-30_06-55 no_ris.

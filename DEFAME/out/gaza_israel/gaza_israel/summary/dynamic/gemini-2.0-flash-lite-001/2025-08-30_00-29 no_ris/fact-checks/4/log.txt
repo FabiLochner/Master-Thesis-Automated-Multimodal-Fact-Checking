@@ -1,0 +1,42 @@
+Extracting claims from Content: <image:5> This image shows the U.S. bombarding Yemen on December 22, 2024 in reprisal after Yemen launched an attack on Israel's capital.
+'Claim: "<image:5> This image shows the U.S. bombarding Yemen on December 22, 2024 in reprisal after Yemen launched an attack on Israel's capital."'
+Verifying Claim: "<image:5> This image shows the U.S. bombarding Yemen on December 22, 2024 in reprisal after Yemen launched an attack on Israel's capital."
+Not enough information yet. Continuing fact-check...
+Most likely location: Palestine
+Top 10 locations: Palestine, Israel, United Arab Emirates, Jordan, Albania, Andorra, Argentina, Australia, Austria, Bangladesh
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Anadolu images bombing')
+Skipping unsupported website: https://www.instagram.com/p/DLuJDjQNB50/
+Skipping unsupported website: https://x.com/anadoluimages?lang=en
+Got 3 new web source(s):
+	1. October 15, 2023 https://www.aa.com.tr/en/middle-east/anadolus-images-prove-israel-used-white-phosphorus-in-gaza/3021073
+	2. https://www.anadoluimages.com/Search?id=30073549
+	3. https://www.gettyimages.com/photos/anadolu-agency
+Useful result: From [Source](https://www.aa.com.tr/en/middle-east/anadolus-images-prove-israel-used-white-phosphorus-in-gaza/3021073): 
+Content: The search result from Anadolu, published on October 15, 2023, states that images taken by Anadolu photojournalists prove Israel used white phosphorus in Gaza. <image:5> The article mentions that Amnesty International verified the use of white phosphorus artillery rounds by Israeli military units striking Gaza.
+
+Useful result: From [Source](https://www.gettyimages.com/photos/anadolu-agency): 
+Content: The search result from Getty Images contains images from Anadolu Agency. One image shows the wreckage of Anadolu Agency journalists' burnt car after a Russian missile attack on January 11, 2024, in Kharkiv, Ukraine. <image:9151>
+
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Getty images bombing')
+Got 1 new web source(s):
+	1. https://www.gettyimages.com/photos/bombing
+Useful result: From [Source](https://www.gettyimages.com/photos/bombing): 
+Content: The search result from Getty Images contains various images related to "bombing", including explosions, fireballs, and smoke. <image:9212>, <image:9213>. The images are stock photos and illustrations.
+
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='bombing city night')
+Failed to download or open image: cannot identify image file <_io.BytesIO object at 0x7ffed1fcc950>
+Got 3 new web source(s):
+	1. https://www.opendemocracy.net/en/north-africa-west-asia/night-under-bombs-gaza/
+	2. https://www.theguardian.com/world/live/2024/oct/05/middle-east-crisis-live-israel-strikes-beirut-hezbollah-lebanon-updates?filterKeyEvents=false&page=with%3Ablock-6700e04e8f08ca4137e0af87
+	3. https://www.aljazeera.com/news/liveblog/2023/10/9/israel-hamas-war-live-news-israel-orders-complete-siege-of-gaza-strip
+Useful result: From [Source](https://www.theguardian.com/world/live/2024/oct/05/middle-east-crisis-live-israel-strikes-beirut-hezbollah-lebanon-updates?filterKeyEvents=false&page=with%3Ablock-6700e04e8f08ca4137e0af87): 
+Content: The Guardian published an image of a bombing at night. <image:9214>
+
+Useful result: From [Source](https://www.aljazeera.com/news/liveblog/2023/10/9/israel-hamas-war-live-news-israel-orders-complete-siege-of-gaza-strip): 
+Content: Al Jazeera published an image of a bombing. <image:9215>
+
+The claim '<image:5> This image shows the U.S. bombarding Yemen on December 22, 2024 in reprisal after Yemen launched an attack on Israel's capital.' is false.
+Justification: The image in the claim, sourced from Anadolu, likely depicts a bombing in Palestine or Israel, possibly related to the use of white phosphorus by Israel, as indicated by the search results. The claim that the image shows the U.S. bombarding Yemen on December 22, 2024, is not supported by the evidence.
+
+So, the overall veracity is: false
+Fact-check took 1:58 min.
