@@ -1,0 +1,39 @@
+Extracting claims from Content: Gallant, a retired military general and a member of Prime Minister Benjamin Netanyahu’s war cabinet, was killed in the Iranian attack on Israel on October 1, 2024.
+'Claim: "Gallant, a retired military general and a member of Prime Minister Benjamin Netanyahu’s war cabinet, was killed in the Iranian attack on Israel on October 1, 2024."'
+Verifying Claim: "Gallant, a retired military general and a member of Prime Minister Benjamin Netanyahu’s war cabinet, was killed in the Iranian attack on Israel on October 1, 2024."
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Gallant killed Iranian attack October 1 2024')
+Skipping fact-checking website: https://www.reuters.com/fact-check/israels-defence-minister-was-not-killed-iran-attack-contrary-social-media-claims-2024-10-02/
+Skipping fact-checking website: https://www.usatoday.com/story/news/factcheck/2024/10/07/yoav-gallant-wasnt-killed-iran-attack-fact-check/75524076007/
+Got 3 new web source(s):
+	1. November 05, 2024 https://www.npr.org/2024/11/05/nx-s1-5179904/israel-defense-minister-gallant-fired-netanyahu
+	2. October 23, 2024 https://www.timesofisrael.com/gallant-after-we-strike-in-iran-the-world-will-understand-all-our-training/
+	3. https://www.yahoo.com/news/articles/too-complex-not-lethal-enough-005558295.html
+Useful result: From [Source](https://www.npr.org/2024/11/05/nx-s1-5179904/israel-defense-minister-gallant-fired-netanyahu): 
+Content: NPR published an article on November 5, 2024, stating that Benjamin Netanyahu fired Defense Minister Yoav Gallant and replaced him with Israel Katz. The article mentions an Iranian missile attack and that Netanyahu and Gallant have been at odds over the war in Gaza. <image:12647>, <image:12648>, <image:12649>, <image:12650>.
+
+Useful result: From [Source](https://www.timesofisrael.com/gallant-after-we-strike-in-iran-the-world-will-understand-all-our-training/): 
+Content: The Times of Israel published an article on October 23, 2024, stating that Defense Minister Yoav Gallant spoke to Israeli Air Force pilots. The article mentions an Iranian attack on Israel on October 1, 2024, and an expected Israeli response. <image:12651> shows Iranian demonstrators burning representations of the Israeli and US flags on October 8, 2024. <image:12652>
+
+Useful result: From [Source](https://www.yahoo.com/news/articles/too-complex-not-lethal-enough-005558295.html): 
+Content: The search result from Yahoo News includes an interview with Yoav Gallant, former defense minister. The article mentions Gallant's statements about the Mossad's original plan of attack against Iran, which was scrapped. The article also mentions an interview with Gallant on the Israel-Hamas war. <image:12653>, <image:12654>
+
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Benjamin Netanyahu war cabinet members')
+Got 3 new web source(s):
+	1. June 17, 2024 https://www.cnn.com/2024/06/17/middleeast/netanyahu-disbands-israeli-war-cabinet-intl
+	2. June 17, 2024 https://www.bbc.com/news/articles/ce99m0n99z0o
+	3. June 17, 2024 https://www.pbs.org/newshour/world/netanyahu-has-dissolved-israels-war-cabinet-amid-growing-frustrations-with-war-in-gaza
+Useful result: From [Source](https://www.cnn.com/2024/06/17/middleeast/netanyahu-disbands-israeli-war-cabinet-intl): 
+Content: CNN, updated June 17, 2024, reports that Benjamin Netanyahu has dissolved his war cabinet. The war cabinet included Defense Minister Yoav Gallant. <image:k>
+
+Useful result: From [Source](https://www.bbc.com/news/articles/ce99m0n99z0o): 
+Content: The BBC published an article on June 17, 2024, stating that Benjamin Netanyahu dissolved his war cabinet. The article mentions that the security cabinet and the full cabinet will make decisions about the war with Hamas in Gaza. The article also mentions Yoav Gallant, the Defence Minister. <image:12656>, <image:12658>.
+
+Useful result: From [Source](https://www.pbs.org/newshour/world/netanyahu-has-dissolved-israels-war-cabinet-amid-growing-frustrations-with-war-in-gaza): 
+Content: The PBS NewsHour article, published on June 17, 2024, reports that Benjamin Netanyahu dissolved Israel's War Cabinet. The War Cabinet included Defense Minister Yoav Gallant. <image:12659>
+
+The claim 'Gallant, a retired military general and a member of Prime Minister Benjamin Netanyahu’s war cabinet, was killed in the Iranian attack on Israel on October 1, 2024.' is false.
+Justification: The claim is false. Evidence from multiple sources, including NPR ([https://www.npr.org/2024/11/05/nx-s1-5179904/israel-defense-minister-gallant-fired-netanyahu](https://www.npr.org/2024/11/05/nx-s1-5179904/israel-defense-minister-gallant-fired-netanyahu)) and The Times of Israel ([https://www.timesofisrael.com/gallant-after-we-strike-in-iran-the-world-will-understand-all-our-training/](https://www.timesofisrael.com/gallant-after-we-strike-in-iran-the-world-will-understand-all-our-training/)), indicates that Yoav Gallant was alive and active after the date of the alleged attack.
+
+So, the overall veracity is: false
+Fact-check took 1:14 min.

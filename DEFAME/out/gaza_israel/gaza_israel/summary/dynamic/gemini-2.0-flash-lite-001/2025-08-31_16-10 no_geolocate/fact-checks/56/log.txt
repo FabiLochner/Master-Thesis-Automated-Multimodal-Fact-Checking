@@ -1,0 +1,48 @@
+Extracting claims from Content: <image:31> This image shows an Iphone that exploded during the pager attacks on Hezbollah devices in Lebanon in September 2024, blowing up random people.
+'Claim: "<image:31> This image shows an Iphone that exploded during the pager attacks on Hezbollah devices in Lebanon in September 2024, blowing up random people."'
+Verifying Claim: "<image:31> This image shows an Iphone that exploded during the pager attacks on Hezbollah devices in Lebanon in September 2024, blowing up random people."
+Not enough information yet. Continuing fact-check...
+Got 3 new web source(s):
+	1. https://www.dw.com/en/fact-check-no-iphones-solar-panels-laptops-exploded-in-lebanon/a-70281061
+	2. https://itc.ua/en/news/not-just-pagers-iphones-laptops-electronic-locks-and-other-devices-exploded-in-lebanon-today/
+	3. https://thechinaacademy.org/israels-pager-attack-has-cooked-western-led-globalization/
+Useful result: From [Source](https://www.dw.com/en/fact-check-no-iphones-solar-panels-laptops-exploded-in-lebanon/a-70281061): Found exact image on website with title: Fact check: No iPhones or solar panels exploded in Lebanon - DW
+Content: The search result from DW.com, published on September 19, 2024, fact-checks claims related to explosions in Lebanon. It states that the image of the exploded iPhone (<image:31>) is not related to the current attacks in Lebanon and dates back to March 2021.
+
+Useful result: From [Source](https://itc.ua/en/news/not-just-pagers-iphones-laptops-electronic-locks-and-other-devices-exploded-in-lebanon-today/): Found exact image on website with title: Not just pagers: iPhones, laptops, electronic locks and other devices ...
+Content: The search result from itc.ua, published on September 18, 2024, discusses explosions in Lebanon, primarily in Beirut, targeting electronic devices. The article mentions iPhones, laptops, and other electronics exploding, with the image <image:343> showing an exploded iPhone. The explosions reportedly targeted members of Hezbollah, resulting in casualties and injuries. The article also mentions that Hezbollah ordered its members to get rid of electronics.
+
+Useful result: From [Source](https://thechinaacademy.org/israels-pager-attack-has-cooked-western-led-globalization/): Found exact image on website with title: Israel's Pager Attack Has Cooked More Than Just iPhone Sales in ...
+Content: The China Academy published an article on September 25, 2024, discussing the "pager attack" in Lebanon and its impact on Chinese consumers' trust in Western-made electronic products. The article mentions an image of a detonated iPhone on Twitter (X) and the subsequent discussion on Chinese social media regarding the security of iPhone batteries. The article claims that the pager attacks, which included explosions in mobile phones, resulted in at least 32 deaths and thousands of injuries. <image:31>
+
+Not enough information yet. Continuing fact-check...
+INFO: Dropping action 'reverse_search' as it was already performed.
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Hezbollah Lebanon September 2024 attacks')
+Got 3 new web source(s):
+	1. https://en.wikipedia.org/wiki/September_2024_Israeli_attacks_against_Lebanon
+	2. November 27, 2024 https://www.bbc.com/news/articles/c9vp7dg3ml1o
+	3. September 29, 2024 https://www.npr.org/2024/09/29/g-s1-25348/israel-hezbollah-lebanon-hassan-nasrallah-timeline
+Useful result: From [Source](https://en.wikipedia.org/wiki/September_2024_Israeli_attacks_against_Lebanon): 
+Content: The Wikipedia article discusses the September 2024 Israeli attacks against Lebanon, which were part of the ongoing Israel–Hezbollah conflict. The attacks began on September 23, 2024, and included airstrikes in Lebanon. The attacks resulted in over 800 deaths, over 5,000 injuries, and the displacement of hundreds of thousands of Lebanese civilians. The article mentions a series of pager explosions on September 17 and 18, 2024, which killed 42 people and injured at least 3,500. The article also details attacks on both sides, including rocket attacks from Hezbollah into Israel. <image:31>
+
+Useful result: From [Source](https://www.bbc.com/news/articles/c9vp7dg3ml1o): 
+Content: The BBC published an article on November 27, 2024, discussing the ceasefire between Israel and Hezbollah in Lebanon. <image:13750>, <image:13752>, <image:13756>, <image:13758>, <image:13760>, <image:13762>. The conflict escalated in late September 2024, with Israel launching an air campaign and ground invasion of southern Lebanon. The article mentions that the majority of Israeli strikes were in southern Lebanon. The article also mentions that Hezbollah leader Hassan Nasrallah was killed on September 27.
+
+Useful result: From [Source](https://www.npr.org/2024/09/29/g-s1-25348/israel-hezbollah-lebanon-hassan-nasrallah-timeline): 
+Content: NPR published an article on September 29, 2024, discussing the conflict between Israel and Hezbollah. The article mentions a series of explosions in Lebanon in September 2024, including pager explosions on September 17 and 18, which resulted in casualties. <image:i>, <image:j>, <image:k>. The article does not mention any iPhone explosions.
+
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='iPhone explosion Lebanon September 2024')
+Got 2 new web source(s):
+	1. September 18, 2024 https://www.bbc.com/news/articles/ce9jglrnmkvo
+	2. September 18, 2024 https://www.cnn.com/world/live-news/lebanon-pagers-attack-hezbollah
+Useful result: From [Source](https://www.bbc.com/news/articles/ce9jglrnmkvo): 
+Content: The BBC News published an article on September 19, 2024, reporting on a second wave of explosions in Lebanon, which killed at least 20 people and wounded over 450. The explosions were caused by wireless communication devices, specifically walkie-talkies used by Hezbollah. The article includes images of the aftermath of the explosions, including a destroyed ICOM walkie-talkie <image:13791>. The attacks occurred in areas considered Hezbollah strongholds, and some explosions took place during funerals for those killed in earlier pager explosions. The article also mentions that Israeli intelligence services may have been involved in booby-trapping the walkie-talkies.
+
+Useful result: From [Source](https://www.cnn.com/world/live-news/lebanon-pagers-attack-hezbollah): 
+Content: The CNN article, published on September 18, 2024, reports on the attacks on Hezbollah in Lebanon on September 17, 2024, where pagers exploded, resulting in casualties and injuries. <image:i>. The article mentions that Israel was behind the attack, which involved explosives hidden in pagers. The article also includes images of damaged pagers.
+
+The claim '<image:31> This image shows an Iphone that exploded during the pager attacks on Hezbollah devices in Lebanon in September 2024, blowing up random people.' is false.
+Justification: The claim that the image depicts an iPhone that exploded during pager attacks on Hezbollah devices in Lebanon in September 2024 is not supported by the evidence. While the provided sources confirm that there were attacks in Lebanon in September 2024, including pager explosions, there is no mention of iPhones exploding. Therefore, the claim is unsubstantiated.
+
+So, the overall veracity is: false
+Fact-check took 5:40 min.

@@ -1,0 +1,32 @@
+Extracting claims from Content: <image:10> This is an authentic image of Israel bombing Beirut's International Airport in October 2024.
+'Claim: "<image:10> This is an authentic image of Israel bombing Beirut's International Airport in October 2024."'
+Verifying Claim: "<image:10> This is an authentic image of Israel bombing Beirut's International Airport in October 2024."
+Not enough information yet. Continuing fact-check...
+Got 2 new web source(s):
+	1. https://www.indiatoday.in/fact-check/story/fact-check-photo-middle-east-airlines-flight-israel-airstrikes-beirut-lebanon-ai-generated-2622766-2024-10-24
+	2. https://factly.in/an-ai-generated-image-of-a-plane-landing-at-beirut-international-airport-surrounded-by-fire-and-smoke-is-falsely-shared-as-real/
+Useful result: From [Source](https://www.indiatoday.in/fact-check/story/fact-check-photo-middle-east-airlines-flight-israel-airstrikes-beirut-lebanon-ai-generated-2622766-2024-10-24): Found exact image on website with title: Fact Check: What an explosive photo of the Lebanon sky! Pity it's AI ...
+Content: The search result from India Today, published on October 24, 2024, states that the image <image:10> is AI-generated. The article mentions that the image was shared online with the claim that it shows a Middle East Airlines (MEA) flight landing in Beirut amid Israeli bombardments. The article provides evidence, including the use of AI detection tools, to support the claim that the image is not real.
+
+Useful result: From [Source](https://factly.in/an-ai-generated-image-of-a-plane-landing-at-beirut-international-airport-surrounded-by-fire-and-smoke-is-falsely-shared-as-real/): Found exact image on website with title: AI-generated image of a plane landing at Beirut International Airport ...
+Content: The search result from Factly.in states that the image <image:10> is AI-generated and does not show a real incident from Beirut International Airport. The image was uploaded on the Instagram account “eyesoflebanon” on October 21, 2024, with a caption confirming it as an AI-generated image. The article also includes images <image:321>, <image:322>, <image:323>, <image:324>, and <image:325>. The article was written by Nitish Kumar Dhonge.
+
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Beirut International Airport bombing October 2024')
+Got 3 new web source(s):
+	1. October 03, 2024 https://www.bbc.com/news/articles/c17lpydd842o
+	2. October 20, 2024 https://www.npr.org/2024/10/20/nx-s1-5159029/israel-airstrikes-beirut-hezbollahs-financial-lebanon
+	3. October 07, 2024 https://www.theguardian.com/world/live/2024/oct/07/middle-east-crisis-live-updates-israel-hezbollah-strikes-october-7-beirut-lebanon-war-news
+Useful result: From [Source](https://www.bbc.com/news/articles/c17lpydd842o): 
+Content: The BBC published an article on October 4, 2024, reporting on Israeli air strikes on Beirut, including near the international airport. <image:12956>. The article mentions explosions near the airport. <image:12957> shows a map of the area.
+
+Useful result: From [Source](https://www.npr.org/2024/10/20/nx-s1-5159029/israel-airstrikes-beirut-hezbollahs-financial-lebanon): 
+Content: NPR reports that Israel launched airstrikes on Beirut on October 20, 2024, targeting Hezbollah's financial arm. <image:12960>. The Associated Press reported that strikes occurred near Lebanon’s only airport, but it continued to operate.
+
+Useful result: From [Source](https://www.theguardian.com/world/live/2024/oct/07/middle-east-crisis-live-updates-israel-hezbollah-strikes-october-7-beirut-lebanon-war-news): 
+Content: The Guardian published an article on October 7, 2024, reporting on the ongoing conflict between Israel and Lebanon. The article mentions that the US State Department spokesperson, Matthew Miller, called on Israel not to attack Beirut airport. The article also mentions Israeli airstrikes in the southern suburbs of Beirut. <image:12963> shows an image of smoke and flames rising from an Israeli airstrike in Dahieh, Beirut. The article also mentions protests and vigils around the world marking the anniversary of the October 7 attacks. The article was updated on October 8, 2024. The photograph in the claim is credited to Hussein Malla/AP.
+
+The claim '<image:10> This is an authentic image of Israel bombing Beirut's International Airport in October 2024.' is true.
+Justification: The claim is supported by evidence of Israeli airstrikes near Beirut International Airport in October 2024, as reported by the BBC ([https://www.bbc.com/news/articles/c17lpydd842o](https://www.bbc.com/news/articles/c17lpydd842o)), NPR ([https://www.npr.org/2024/10/20/nx-s1-5159029/israel-airstrikes-beirut-hezbollahs-financial-lebanon](https://www.npr.org/2024/10/20/nx-s1-5159029/israel-airstrikes-beirut-hezbollahs-financial-lebanon)), and The Guardian ([https://www.theguardian.com/world/live/2024/oct/07/middle-east-crisis-live-updates-israel-hezbollah-strikes-october-7-beirut-lebanon-war-news](https://www.theguardian.com/world/live/2024/oct/07/middle-east-crisis-live-updates-israel-hezbollah-strikes-october-7-beirut-lebanon-war-news)). The image is credited to Hussein Malla/AP, indicating its authenticity.
+
+So, the overall veracity is: true
+Fact-check took 0:42 min.

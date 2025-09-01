@@ -1,0 +1,36 @@
+Extracting claims from Content: <image:35> This image shows an Israeli attack on Lebanon on October 21, 2024.
+'Claim: "<image:35> This image shows an Israeli attack on Lebanon on October 21, 2024."'
+Verifying Claim: "<image:35> This image shows an Israeli attack on Lebanon on October 21, 2024."
+Not enough information yet. Continuing fact-check...
+Got 3 new web source(s):
+	1. October 21, 2024 https://www.cnn.com/world/live-news/israel-iran-lebanon-gaza-war-10-21-24-intl-hnk
+	2. https://en.wikipedia.org/wiki/2024_Israeli_invasion_of_Lebanon
+	3. October 21, 2024 https://www.theguardian.com/world/2024/oct/21/israeli-airstrikes-on-lebanon-hit-branches-of-hezbollah-linked-bank-al-qard-al-hassan
+Useful result: From [Source](https://www.cnn.com/world/live-news/israel-iran-lebanon-gaza-war-10-21-24-intl-hnk): 
+Content: The CNN article, updated on October 22, 2024, reports on the ongoing conflict between Israel and Hezbollah, including attacks and counterattacks. It mentions an Israeli strike near Rafik Hariri University Hospital in Beirut on Monday, October 21, 2024, which resulted in casualties. <image:1>, <image:2>, <image:3>, <image:4>, <image:5>, <image:6>. The article also discusses the US's involvement, including Secretary of State Antony Blinken's trip to the Middle East and the US's concern over leaked intelligence regarding Israel's plans to attack Iran. The article also mentions that the UN is warning that almost no aid is entering the Jabalya refugee camp.
+
+Useful result: From [Source](https://en.wikipedia.org/wiki/2024_Israeli_invasion_of_Lebanon): 
+Content: The Wikipedia article discusses the 2024 Israeli invasion of Lebanon, which began on October 1, 2024, and was part of the ongoing Israel–Hezbollah conflict. The article mentions the involvement of various military units from both sides, including the Israel Defense Forces and Hezbollah, as well as allies such as the Amal Movement and the Popular Front for the Liberation of Palestine. The conflict resulted in casualties on both sides, including soldiers and civilians, and caused significant displacement. The article also details specific events during the invasion, such as airstrikes, clashes, and attacks on various locations, including hospitals, UNIFIL observation posts, and residential buildings. The article also mentions the 2024 Israel–Lebanon ceasefire agreement.
+
+Useful result: From [Source](https://www.theguardian.com/world/2024/oct/21/israeli-airstrikes-on-lebanon-hit-branches-of-hezbollah-linked-bank-al-qard-al-hassan): 
+Content: The Guardian published an article on October 21, 2024, reporting on Israeli airstrikes on Lebanon that hit branches of the Hezbollah-linked bank Al-Qard Al-Hassan. <image:1786>. The article mentions that the strikes targeted buildings in Beirut's southern suburbs, south Lebanon, and the Bekaa valley. The article also includes a video and a map showing the strikes.
+
+Not enough information yet. Continuing fact-check...
+Got 3 new web source(s):
+	1. https://www.ynetnews.com/article/hknhoabzkg
+	2. https://www.bbc.com/pidgin/articles/cp9x0d1z8xro
+	3. https://www.amnesty.ie/author/srowe/page/5/
+Useful result: From [Source](https://www.ynetnews.com/article/hknhoabzkg): Found exact image on website with title: Gaza explosions rattle central Israel; scientist explains why - Ynetnews
+Content: The search result from Ynetnews.com features the exact image provided in the claim. The article discusses explosions in Gaza and their audibility in central Israel, explaining how atmospheric conditions affect sound travel. The article was published on November 4, 2024, and the image is credited to Mahmud Hams.
+
+Useful result: From [Source](https://www.bbc.com/pidgin/articles/cp9x0d1z8xro): Found exact image on website with title: 'Wia you fit hide wen death dey come from di sky?' - life for Gaza - BBC
+Content: The BBC Pidgin article, published on October 11, 2023, features an image of an explosion in Gaza City after an Israeli airstrike <image:1815>. The article discusses the impact of the conflict on civilians, including the destruction of homes and the challenges faced by hospitals. The image in the claim <image:35> is the same as the image in the BBC article.
+
+Useful result: From [Source](https://www.amnesty.ie/author/srowe/page/5/): Found exact image on website with title: srowe, Author at Amnesty International Ireland - Page 5 of 20
+Content: The search result is from Amnesty International Ireland and contains an image of an explosion in Gaza City on October 9, 2023, which is not the same date as the claim. <image:1842>
+
+The claim '<image:35> This image shows an Israeli attack on Lebanon on October 21, 2024.' is true.
+Justification: The claim is likely accurate. Multiple sources, including [CNN](https://www.cnn.com/world/live-news/israel-iran-lebanon-gaza-war-10-21-24-intl-hnk) and [The Guardian](https://www.theguardian.com/world/2024/oct/21/israeli-airstrikes-on-lebanon-hit-branches-of-hezbollah-linked-bank-al-qard-al-hassan), report on Israeli attacks in Lebanon on October 21, 2024. The image, credited to Mahmud Hams, depicts an explosion, consistent with the reported airstrikes.
+
+So, the overall veracity is: true
+Fact-check took 1:09 min.

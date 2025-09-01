@@ -1,0 +1,36 @@
+Extracting claims from Content: <image:45> This image shows the Israeli army reaching Damascus in Syria in December 2024.
+'Claim: "<image:45> This image shows the Israeli army reaching Damascus in Syria in December 2024."'
+Verifying Claim: "<image:45> This image shows the Israeli army reaching Damascus in Syria in December 2024."
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Israeli tanks Damascus Syria')
+Got 3 new web source(s):
+	1. https://www.timesofisrael.com/liveblog_entry/report-israeli-tanks-reach-point-25km-from-damascus/
+	2. https://www.ndtv.com/world-news/were-israeli-tanks-spotted-outside-damascus-a-fact-check-7224391
+	3. https://www.aljazeera.com/news/2024/12/8/israel-seizes-buffer-zone-in-syrias-golan-heights-after-al-assad-falls
+Useful result: From [Source](https://www.timesofisrael.com/liveblog_entry/report-israeli-tanks-reach-point-25km-from-damascus/): 
+Content: The Times of Israel published an image of an Israeli tank. <image:13287>
+
+Useful result: From [Source](https://www.ndtv.com/world-news/were-israeli-tanks-spotted-outside-damascus-a-fact-check-7224391): 
+Content: NDTV published a fact-check on December 10, 2024, regarding a claim that Israeli tanks were near Damascus. The fact-check determined the claim to be false. <image:13288>
+
+Useful result: From [Source](https://www.aljazeera.com/news/2024/12/8/israel-seizes-buffer-zone-in-syrias-golan-heights-after-al-assad-falls): 
+Content: Al Jazeera published an article on December 8, 2024, about Israel seizing a buffer zone in Syria's Golan Heights. The article includes an image of an Israeli tank. <image:13289>
+
+Got 3 new web source(s):
+	1. https://www.aljazeera.com/news/2025/7/16/israel-bombards-syrias-damascus-as-us-says-steps-agreed-to-end-violence
+	2. https://www.cnn.com/2025/07/16/middleeast/damascus-syria-airstrikes-intl
+	3. https://www.bbc.com/news/articles/cp90l77187zo
+Useful result: From [Source](https://www.aljazeera.com/news/2025/7/16/israel-bombards-syrias-damascus-as-us-says-steps-agreed-to-end-violence): 
+Content: The Al Jazeera article, published on July 16, 2025, reports on Israeli air strikes near Syria’s presidential palace and military headquarters in Damascus. <image:1>. The article mentions that Israel said its bombing campaign is aimed at protecting the Druze minority.
+
+Useful result: From [Source](https://www.cnn.com/2025/07/16/middleeast/damascus-syria-airstrikes-intl): 
+Content: The CNN article, published on July 17, 2025, discusses the withdrawal of Syrian troops from a southern city after clashes with an Arab minority group, which led to Israeli military action. The article mentions Israeli airstrikes on Damascus and the involvement of the US in trying to end the clashes. <image:1>, <image:2>.
+
+Useful result: From [Source](https://www.bbc.com/news/articles/cp90l77187zo): 
+Content: The BBC reports on Israeli strikes hitting Damascus and government forces in southern Syria. The strikes were in response to fighting in Suweida. The article mentions that Israel's Prime Minister Benjamin Netanyahu said it was "working to save our Druze brothers". The article also mentions that the Israeli military struck armoured vehicles and weapons on their way to Suweida. <image:314>, <image:315>, <image:317>. The article was published 1 day ago.
+
+The claim '<image:45> This image shows the Israeli army reaching Damascus in Syria in December 2024.' is false.
+Justification: The claim is false. While there have been reports of Israeli military actions near Damascus, including airstrikes, there is no evidence to support the claim that the Israeli army reached Damascus in December 2024. A fact-check by NDTV ([https://www.ndtv.com/world-news/were-israeli-tanks-spotted-outside-damascus-a-fact-check-7224391](https://www.ndtv.com/world-news/were-israeli-tanks-spotted-outside-damascus-a-fact-check-7224391)) determined a similar claim to be false.
+
+So, the overall veracity is: false
+Fact-check took 0:29 min.

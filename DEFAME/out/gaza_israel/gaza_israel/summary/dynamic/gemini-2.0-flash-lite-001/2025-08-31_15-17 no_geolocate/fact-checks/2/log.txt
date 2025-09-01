@@ -1,0 +1,63 @@
+Extracting claims from Content: <image:3> This is an authentic image of a mother holding the bones of her son in Gaza in March 2025. After more than a year and a half of searching for him under the rubble of their bombed-out house.
+'Claim: "<image:3> This is an authentic image of a mother holding the bones of her son in Gaza in March 2025. After more than a year and a half of searching for him under the rubble of their bombed-out house."'
+Verifying Claim: "<image:3> This is an authentic image of a mother holding the bones of her son in Gaza in March 2025. After more than a year and a half of searching for him under the rubble of their bombed-out house."
+Not enough information yet. Continuing fact-check...
+Got 0 new web source(s):
+Not enough information yet. Continuing fact-check...
+INFO: Dropping action 'reverse_search' as it was already performed.
+Got 3 new web source(s):
+	1. January 23, 2025 https://www.bbc.com/news/articles/c6269pd5y2ko
+	2. April 30, 2024 https://www.aljazeera.com/news/longform/2024/4/30/we-didnt-expect-to-find-bones-inside-one-gaza-familys-nightmare
+	3. April 08, 2025 https://www.euronews.com/my-europe/2025/08/04/how-a-photo-of-a-skeletal-child-sparked-controversy-about-starvation-in-gaza
+Useful result: From [Source](https://www.bbc.com/news/articles/c6269pd5y2ko): 
+Content: The BBC published an article on January 23, 2025, discussing the search for missing people in Gaza. The article mentions that the Palestinian health authorities estimate that 10,000 people are missing. It also includes images of human remains found in the rubble in Rafah <image:10001>, and a resident of Rafah who found a skeleton in his home <image:10004>. The article also mentions a 13-year-old girl, Aya al-Dabeh, who was killed while staying in a school <image:10008>.
+
+Useful result: From [Source](https://www.aljazeera.com/news/longform/2024/4/30/we-didnt-expect-to-find-bones-inside-one-gaza-familys-nightmare): 
+Content: The Al Jazeera article, published on April 30, 2024, discusses the death of Naifa Rizq al-Sawada, a 92-year-old woman with dementia, during an Israeli raid in Gaza in late March. The article details the family's search for her after she went missing and the eventual discovery of her remains. The article includes images of the destruction in Gaza and the family's home. <image:1>, <image:2>, <image:3>, <image:4>, <image:5>, <image:6>, <image:7>, <image:8>, <image:9>, <image:10>, <image:11>, <image:12>, <image:13>.
+
+Useful result: From [Source](https://www.euronews.com/my-europe/2025/08/04/how-a-photo-of-a-skeletal-child-sparked-controversy-about-starvation-in-gaza): 
+Content: The Euronews article, published on August 4, 2025, discusses a photo of an emaciated child in Gaza that sparked controversy regarding starvation in the region. The article mentions that the photo was taken by freelance photographer Ahmeed al-Arini and published by The New York Times. The article also mentions that the boy's mother, Hedaya al-Muta, has spoken to the media about her son's medical history and their lack of access to medicine and food. The article also mentions that the World Health Organisation (WHO) says malnutrition in Gaza has reached "alarming levels" and that there have been at least 74 malnutrition-related deaths in 2025.
+
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Gaza conflict images')
+Got 3 new web source(s):
+	1. January 15, 2025 https://www.aljazeera.com/gallery/2025/1/15/israels-war-on-gaza-15-months-15-pictures
+	2. https://www.gettyimages.com/photos/gaza-war
+	3. October 05, 2024 https://www.cnn.com/2024/10/05/world/gallery/israel-gaza-anniversary
+Useful result: From [Source](https://www.aljazeera.com/gallery/2025/1/15/israels-war-on-gaza-15-months-15-pictures): 
+Content: Al Jazeera published a photo gallery on January 15, 2025, documenting the war in Gaza over 15 months. The article includes images of destruction, wounded Palestinians, and people mourning their relatives. <image:1>, <image:2>, <image:3>, <image:4>, <image:5>, <image:6>, <image:7>, <image:8>.
+
+Useful result: From [Source](https://www.gettyimages.com/photos/gaza-war): 
+Content: The search result from Getty Images contains multiple images related to the Gaza conflict. The images show the aftermath of bombings, including destroyed buildings, smoke, and displaced Palestinians. <image:1>, <image:2>, <image:3>, <image:4>, <image:5>, <image:6>, <image:7>, <image:8>, <image:9>, <image:10>, <image:11>, <image:12>, <image:13>, <image:14>. Some images show aid distribution and people struggling to get food. The images were taken in 2023 and 2025.
+
+Useful result: From [Source](https://www.cnn.com/2024/10/05/world/gallery/israel-gaza-anniversary): 
+Content: The CNN article, published on October 5, 2024, features a photo gallery of images from the Israel-Hamas war. The article includes images of the aftermath of attacks, funerals, and the impact of airstrikes on Gaza. <image:3> is not included in the gallery.
+
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Gaza mother skeleton')
+Skipping fact-checking website: https://factcheck.afp.com/doc.afp.com.37W26WD
+Skipping unsupported website: https://www.reddit.com/r/ArtefactPorn/comments/o2lmhr/the_4000yearold_skeletons_of_a_mother_who_was/
+Got 3 new web source(s):
+	1. https://www.npr.org/2025/08/05/nx-s1-5488798/gaza-baby-starvation-update
+	2. https://abcnews.go.com/International/dozens-sick-injured-children-medically-evacuated-gaza/story?id=111513259
+	3. https://news.sky.com/story/gaza-starving-children-and-adults-dying-the-size-of-a-skeleton-says-world-food-programme-boss-13137414
+Useful result: From [Source](https://www.npr.org/2025/08/05/nx-s1-5488798/gaza-baby-starvation-update): 
+Content: NPR published an image of a mother and a malnourished child in Gaza. <image:12942>
+
+Useful result: From [Source](https://abcnews.go.com/International/dozens-sick-injured-children-medically-evacuated-gaza/story?id=111513259): 
+Content: The ABC News article contains an image of a crying child being comforted by women. <image:12943>
+
+Useful result: From [Source](https://news.sky.com/story/gaza-starving-children-and-adults-dying-the-size-of-a-skeleton-says-world-food-programme-boss-13137414): 
+Content: Sky News published an article about the situation in Gaza, including an image of a child. <image:12944>
+
+Not enough information yet. Continuing fact-check...
+INFO: Dropping action 'reverse_search' as it was already performed.
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='image Gaza mother skeleton origin')
+Got 1 new web source(s):
+	1. August 06, 2025 https://www.france24.com/en/live-news/20250806-grok-is-that-gaza-ai-image-checks-mislocate-news-photographs
+Useful result: From [Source](https://www.france24.com/en/live-news/20250806-grok-is-that-gaza-ai-image-checks-mislocate-news-photographs): 
+Content: The France24 article, published on August 6, 2025, discusses how AI tools misidentified an image of a starving Gazan girl. The image, taken by AFP photojournalist Omar al-Qattaa, shows nine-year-old Mariam Dawwas in the arms of her mother in Gaza City on August 2, 2025. The AI chatbot Grok incorrectly identified the photo as being taken in Yemen in 2018. <image:1>
+
+The claim '<image:3> This is an authentic image of a mother holding the bones of her son in Gaza in March 2025. After more than a year and a half of searching for him under the rubble of their bombed-out house.' is false.
+Justification: The claim is unverified. While the search results confirm the existence of images related to the Gaza conflict, the origin and authenticity of the specific image in the claim remain unclear, and AI tools have been shown to misidentify images ([France24](https://www.france24.com/en/live-news/20250806-grok-is-that-gaza-ai-image-checks-mislocate-news-photographs)).
+
+So, the overall veracity is: false
+Fact-check took 1:48 min.
