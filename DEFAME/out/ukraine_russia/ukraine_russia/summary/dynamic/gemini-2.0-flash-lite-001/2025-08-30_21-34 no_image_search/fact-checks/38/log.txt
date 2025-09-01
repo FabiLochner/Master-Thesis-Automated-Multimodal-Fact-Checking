@@ -1,0 +1,58 @@
+Extracting claims from Content: Ukrainian President Volodymyr Zelenskyy engaged in election interference by campaigning in Pennsylvania for Kamala Harris ahead of the US presidential election in 2024.
+'Claim: "Ukrainian President Volodymyr Zelenskyy engaged in election interference by campaigning in Pennsylvania for Kamala Harris ahead of the US presidential election in 2024."'
+Verifying Claim: "Ukrainian President Volodymyr Zelenskyy engaged in election interference by campaigning in Pennsylvania for Kamala Harris ahead of the US presidential election in 2024."
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Volodymyr Zelenskyy Kamala Harris Pennsylvania 2024 election')
+Skipping fact-checking website: https://www.politifact.com/factchecks/2025/mar/20/facebook-posts/was-zelenskyys-pennsylvania-visit-election-interfe/
+Skipping unsupported website: https://oversight.house.gov/release/comer-probes-biden-harris-administrations-use-of-taxpayer-funded-resources-to-fly-zelensky-to-pennsylvania-to-campaign-for-harris/
+Got 3 new web source(s):
+	1. March 01, 2025 https://www.newsweek.com/volodymyr-zelensky-jd-vance-campaign-kamala-harris-2024-election-2038060
+	2. September 26, 2024 https://www.nbcnews.com/politics/2024-election/zelenskyys-meeting-harris-spat-trump-reveal-growing-partisan-divide-uk-rcna172648
+	3. September 24, 2024 https://www.politico.eu/article/us-election-donald-trump-volodymyr-zelenskyy-kamala-harris/
+Useful result: From [Source](https://www.newsweek.com/volodymyr-zelensky-jd-vance-campaign-kamala-harris-2024-election-2038060): 
+Content: Newsweek reports that during a meeting, JD Vance accused Volodymyr Zelenskyy of campaigning for Kamala Harris in the 2024 presidential race. The article mentions Zelenskyy's visit to a munitions plant in Scranton, Pennsylvania, in September 2024. Republican Senator Eric Schmitt criticized Zelenskyy for campaigning for Democrats in Pennsylvania. <image:9064>, <image:9063>. The article was written by Andrew Stanton.
+
+Useful result: From [Source](https://www.nbcnews.com/politics/2024-election/zelenskyys-meeting-harris-spat-trump-reveal-growing-partisan-divide-uk-rcna172648): 
+Content: NBC News published an article on September 26, 2024, discussing the growing partisan divide over Ukraine. The article mentions that Zelenskyy visited a munitions factory in Scranton, Pennsylvania, which some Republicans viewed as a signal of his preference in the upcoming election. The article also notes that Trump has grown increasingly critical of Zelenskyy, accusing him of having a favorite in the coming election. The article is authored by Alex Seitz-Wald and Katherine Doyle.
+
+Useful result: From [Source](https://www.politico.eu/article/us-election-donald-trump-volodymyr-zelenskyy-kamala-harris/): 
+Content: Politico reports that Donald Trump said Volodymyr Zelenskyy wanted Kamala Harris to win the 2024 U.S. presidential election. Zelenskyy visited a munitions factory in Scranton, Pennsylvania, a critical swing state. Trump said he would call Zelenskyy and Putin to make a deal if he wins the election. The article mentions that Biden beat Trump in Pennsylvania in 2020. The article also mentions that Zelenskyy is slated to meet with Trump. The article was published by Politico.
+
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Volodymyr Zelenskyy Scranton Pennsylvania munitions factory 2024')
+Skipping unsupported website: https://dced.pa.gov/newsroom/governor-shapiro-welcomes-ukrainian-president-zelenskyy-to-scranton-army-ammunition-plant-signs-sister-state-agreement-with-zaporizhzhia-ukraine-to-strengthen-ties/
+Skipping unsupported website: https://m.youtube.com/watch?v=LMEGzBzgn84
+Skipping unsupported website: https://x.com/ZelenskyyUa/status/1838100426631053786?lang=en
+Got 3 new web source(s):
+	1. September 23, 2024 https://www.army.mil/article/279911/ukrainian_president_zelenskyy_tours_scranton_army_ammunition_plant
+	2. September 23, 2024 https://whyy.org/articles/ukraine-president-volodymyr-zelenskyy-visits-scranton-pennsylvania-ammunition-factory/
+	3. September 22, 2024 https://www.voanews.com/a/ukraine-zelenskyy-visits-pennsylvania-ammunition-factory-to-thank-workers/7794139.html
+Useful result: From [Source](https://www.army.mil/article/279911/ukrainian_president_zelenskyy_tours_scranton_army_ammunition_plant): 
+Content: The U.S. Army website published an article on September 23, 2024, about Ukrainian President Volodymyr Zelenskyy's tour of the Scranton Army Ammunition Plant. <image:9091>, <image:9092>, <image:9093>. The plant manufactures large-caliber metal projectiles. The visit included a tour and a group photo with employees.
+
+Useful result: From [Source](https://whyy.org/articles/ukraine-president-volodymyr-zelenskyy-visits-scranton-pennsylvania-ammunition-factory/): 
+Content: WHYY reports that Volodymyr Zelenskyy visited a Pennsylvania ammunition factory to thank workers. The visit occurred under tight security, with a heavy police presence. The article mentions that Zelenskyy was seeking to shore up support for Ukraine. <image:9102> The article was published on September 16, 2024.
+
+Useful result: From [Source](https://www.voanews.com/a/ukraine-zelenskyy-visits-pennsylvania-ammunition-factory-to-thank-workers/7794139.html): 
+Content: The Voice of America reports that Volodymyr Zelenskyy visited the Scranton Army Ammunition Plant in Scranton, Pennsylvania, on September 22, 2024, to thank workers. <image:9107>, <image:9108>, <image:9110>. The visit was part of a week-long trip to the United States.
+
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Volodymyr Zelenskyy election interference accusations')
+Skipping unsupported website: https://perry.house.gov/news/documentsingle.aspx?DocumentID=403007
+Got 3 new web source(s):
+	1. September 25, 2024 https://www.theguardian.com/us-news/2024/sep/25/trump-zelenskyy-ukraine-feud-republicans-election-interference
+	2. September 26, 2024 https://visitukraine.today/blog/4825/the-us-accused-zelenskyy-of-interfering-in-the-election-what-caused-it-and-what-it-could-lead-to?srsltid=AfmBOoq3gkmEZ6UL7MBwtGAQa22Hfl9cPXxPZ5MOi-WwHxZgVVAFc9Md
+	3. January 16, 2025 https://notesfrompoland.com/2025/01/16/polish-opposition-accuse-zelensky-of-interfering-in-presidential-election-in-favour-of-government-candidate/
+Useful result: From [Source](https://www.theguardian.com/us-news/2024/sep/25/trump-zelenskyy-ukraine-feud-republicans-election-interference): 
+Content: The Guardian reports that Mike Johnson, the US House speaker, demanded that Ukraine fire its ambassador to Washington over a visit to a munitions factory in Scranton, Pennsylvania, where Zelenskyy thanked workers. Johnson accused Zelenskyy of election interference, claiming the visit was a "partisan campaign event designed to help Democrats". <image:9117> The article also mentions that Zelenskyy criticized Trump and JD Vance. The article is more than 10 months old.
+
+Useful result: From [Source](https://visitukraine.today/blog/4825/the-us-accused-zelenskyy-of-interfering-in-the-election-what-caused-it-and-what-it-could-lead-to?srsltid=AfmBOoq3gkmEZ6UL7MBwtGAQa22Hfl9cPXxPZ5MOi-WwHxZgVVAFc9Md): 
+Content: The article from visitukraine.today discusses accusations of election interference against Volodymyr Zelenskyy. It mentions his visit to a munitions plant in Scranton, Pennsylvania, which sparked criticism from Republicans. House Oversight Committee Chairman James Comer announced an investigation into the visit to determine if it was intended to interfere in the US election. House Speaker Mike Johnson called on Zelenskyy to fire Ukraine's ambassador to the US, Oksana Markarova, claiming she organized the visit and did not invite Republicans. Donald Trump also accused Zelenskyy of "dirty tricks." <image:9119>
+
+Useful result: From [Source](https://notesfrompoland.com/2025/01/16/polish-opposition-accuse-zelensky-of-interfering-in-presidential-election-in-favour-of-government-candidate/): 
+Content: The search result from Notes from Poland, published on January 16, 2025, discusses accusations of Ukrainian President Volodymyr Zelenskyy interfering in the Polish presidential election in favor of the government candidate. <image:1>, <image:2>, <image:3>. Polish opposition figures criticized Zelenskyy for apparent criticism of a presidential candidate and for presenting an award to the main ruling party's candidate during his visit to Warsaw. They accused him of "brazen interference" in the campaign for the May presidential election.
+
+The claim 'Ukrainian President Volodymyr Zelenskyy engaged in election interference by campaigning in Pennsylvania for Kamala Harris ahead of the US presidential election in 2024.' is false.
+Justification: The claim is **false**. While Volodymyr Zelenskyy visited a munitions factory in Scranton, Pennsylvania, which was perceived by some as a form of election interference, there is no direct evidence that he campaigned for Kamala Harris. The accusations are based on the perception of the visit and criticisms from Republicans, not on explicit campaigning.
+
+So, the overall veracity is: false
+Fact-check took 2:10 min.

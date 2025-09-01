@@ -1,0 +1,929 @@
+Extracting claims from Content: Ukrainian President Volodymyr Zelenskyy started the 2022 war in Ukraine with Russia.
+'Claim: "Ukrainian President Volodymyr Zelenskyy started the 2022 war in Ukraine with Russia."'
+Verifying Claim: "Ukrainian President Volodymyr Zelenskyy started the 2022 war in Ukraine with Russia."
+Not enough information yet. Continuing fact-check...
+Got 3 new web source(s):
+	1. https://en.wikipedia.org/wiki/Volodymyr_Zelenskyy
+	2. https://news.sky.com/story/ukraine-war-latest-russia-rape-putin-zelenskyy-12541713
+	3. February 20, 2025 https://www.aljazeera.com/news/2025/2/20/fact-check-did-ukraine-start-its-war-with-russia-as-trump-claims
+Error while calling the Gemini LLM! Continuing with empty response.
+Error code: 400 - [{'error': {'code': 400, 'message': 'The input token count (34137) exceeds the maximum number of tokens allowed (32767).', 'status': 'INVALID_ARGUMENT'}}]
+Prompt used:
+# Instructions
+In order to find evidence that helps your fact-check, you just ran a web search which yielded a Search Result. **Your task right now is to summarize the Search Result.** What to include:
+* information that might be useful for the fact-check (see Record)
+* relevant images (refer to images by inserting their reference <image:k>)
+* if available: the release date as well as the author or the publisher (e.g. the media company) of the search result.
+
+Do NOT include:
+* advertisements
+* any other information not related to the Record or the Claim
+
+Additional rules:
+* Do not add any additional information besides the information in the Search Result.
+* If the Search Result doesn't contain any relevant information for the fact-checking work, simply print one word in capital letters: "NONE".
+* Keep your writing style like in the Examples 1, 2 and 3 provided to you.
+* Try to filter out relevant information even if the search result is in a different language.
+
+# Example 1
+The search result from America Today provides several photographs of the Notre-Dame Cathedral fire on April 15, 2019. <image:i>, <image:j>, <image:k>. None of the images show the Eiffel Tower in the background. 
+
+# Example 2
+NONE
+
+# Example 3
+The Guardian discusses a report blaming the Syrian government for a toxic gas attack and condemning their use of chemical weapons. The Guardian mentions the Chemical Weapons Convention and the responsibilities of Syria under the convention. According to The Guardian, The White House condemned the Assad regime for defying the norm against chemical weapons use.
+
+# Record
+## Claim
+Claim: "Ukrainian President Volodymyr Zelenskyy started the 2022 war in Ukraine with Russia."
+
+## Actions
+```
+web_search("Volodymyr Zelenskyy Russia war 2022")
+web_search("causes of 2022 Russia Ukraine war")
+```
+
+# Search Result
+From [Source](https://en.wikipedia.org/wiki/Volodymyr_Zelenskyy): 
+Content: "He is expected to remain president for the duration of the Russo-Ukrainian War.[\[26\]](#cite_note-29)
+ Due to this extension of his term, Zelenskyy is the [second-longest serving president](/wiki/List_of_Ukrainian_presidents_by_length_of_tenure "List of Ukrainian presidents by length of tenure")
+ in Ukrainian history, after only Kuchma.
+
+Early life
+----------
+
+Volodymyr Oleksandrovych Zelenskyy was born to [Jewish](/wiki/History_of_the_Jews_in_Ukraine "History of the Jews in Ukraine")
+ parents on 25 January 1978 in [Kryvyi Rih](/wiki/Kryvyi_Rih "Kryvyi Rih")
+, then in the [Ukrainian Soviet Socialist Republic](/wiki/Ukrainian_Soviet_Socialist_Republic "Ukrainian Soviet Socialist Republic")
+.[\[27\]](#cite_note-LIGAZelenskybio-30)
+[\[28\]](#cite_note-31)
+[\[29\]](#cite_note-nyt1-32)
+ His father, [Oleksandr Zelenskyy](/wiki/Oleksandr_Zelenskyy "Oleksandr Zelenskyy")
+, is a professor and computer scientist and the head of the Department of Cybernetics and Computing Hardware at the [Kryvyi Rih State University of Economics and Technology](/wiki/Kryvyi_Rih_State_University_of_Economics_and_Technology "Kryvyi Rih State University of Economics and Technology")
+; his mother, Rymma Zelenska, is a retired engineer.[\[30\]](#cite_note-33)
+[\[31\]](#cite_note-34)
+[\[32\]](#cite_note-gordon-35)
+ His grandfather, [Semyon Zelenskyy](/w/index.php?title=Semyon_Zelenskyy&action=edit&redlink=1 "Semyon Zelenskyy (page does not exist)")
+ \[[uk](https://uk.wikipedia.org/wiki/%D0%97%D0%B5%D0%BB%D0%B5%D0%BD%D1%81%D1%8C%D0%BA%D0%B8%D0%B9_%D0%A1%D0%B5%D0%BC%D0%B5%D0%BD_%D0%86%D0%B2%D0%B0%D0%BD%D0%BE%D0%B2%D0%B8%D1%87 "uk:Зеленський Семен Іванович")\
+\], served as an infantryman, reaching the rank of [colonel](/wiki/Colonel "Colonel")
+ in the [Red Army](/wiki/Red_Army "Red Army")
+ (in the [57th Guards Motor Rifle Division](/wiki/57th_Guards_Motor_Rifle_Division "57th Guards Motor Rifle Division")
+) during [World War II](/wiki/World_War_II "World War II")
+;[\[33\]](#cite_note-DetroitJewishNews_20220228-36)
+[\[34\]](#cite_note-37)
+ Semyon's father and three brothers were killed in [the Holocaust](/wiki/The_Holocaust "The Holocaust")
+.[\[35\]](#cite_note-18Things-38)
+[\[36\]](#cite_note-39)
+[\[37\]](#cite_note-40)
+[\[38\]](#cite_note-afrhometown-41)
+ In March 2022, Zelenskyy said that his great-grandparents had been killed after German troops burned their home to the ground during a [massacre](/wiki/World_War_II_casualties_of_the_Soviet_Union "World War II casualties of the Soviet Union")
+.[\[39\]](#cite_note-42)
+ His grandmother survived World War II after leaving Kryvyi Rih in an evacuation of Jews to [Almaty](/wiki/Almaty "Almaty")
+, [Kazakhstan](/wiki/Kazakh_Soviet_Socialist_Republic "Kazakh Soviet Socialist Republic")
+, and returned to Ukraine after the war.[\[40\]](#cite_note-timesofisrael-43)
+
+Before starting elementary school, Zelenskyy lived for four years in the Mongolian city of [Erdenet](/wiki/Erdenet "Erdenet")
+, where his father worked[\[27\]](#cite_note-LIGAZelenskybio-30)
+ as a mining engineer from the mid-1970s to help build a copper mine, applying his abilities in computer science to mining.[\[41\]](#cite_note-44)
+ Zelenskyy grew up speaking Russian.[\[42\]](#cite_note-45)
+[\[33\]](#cite_note-DetroitJewishNews_20220228-36)
+ At the age of 16 he took the [Test of English as a Foreign Language](/wiki/Test_of_English_as_a_Foreign_Language "Test of English as a Foreign Language")
+ and received an education grant to study in Israel, but his father did not allow him to go.[\[43\]](#cite_note-46)
+ He later earned a law degree from the [Kryvyi Rih Institute of Economics](/wiki/Kryvyi_Rih_Institute_of_Economics "Kryvyi Rih Institute of Economics")
+, then a department of [Kyiv National Economic University](/wiki/Kyiv_National_Economic_University "Kyiv National Economic University")
+ and now part of [Kryvyi Rih National University](/wiki/Kryvyi_Rih_National_University "Kryvyi Rih National University")
+, but never worked in the legal field.[\[27\]](#cite_note-LIGAZelenskybio-30)
+[\[44\]](#cite_note-0396374-zelenskiy-47)
+
+Entertainment career
+--------------------
+
+At age 17, Zelenskyy joined his local team competing in the [KVN](/wiki/KVN "KVN")
+ comedy competition.[\[45\]](#cite_note-48)
+ He was soon invited to join the united Ukrainian team "Zaporizhzhia-Kryvyi Rih-Transit," which performed in the KVN's Major League and eventually won in 1997.[\[27\]](#cite_note-LIGAZelenskybio-30)
+[\[46\]](#cite_note-kvart-49)
+[\[47\]](#cite_note-50)
+ That same year, he created and headed the Kvartal 95 team, which later transformed into the comedy outfit Kvartal 95. But the answer depends only on you, the citizens of the Russian Federation.
+
+The speech was widely described as "emotional" and "astonishing."[\[196\]](#cite_note-200)
+[\[197\]](#cite_note-201)
+
+### Russian invasion of Ukraine (2022–present)
+
+Main article: [Russian invasion of Ukraine](/wiki/Russian_invasion_of_Ukraine "Russian invasion of Ukraine")
+
+[![](//upload.wikimedia.org/wikipedia/commons/thumb/0/03/%D0%97%D0%B0%D1%8F%D0%B2%D0%BA%D0%B0_%D0%A3%D0%BA%D1%80%D0%B0%D1%97%D0%BD%D0%B8_%D0%BD%D0%B0_%D1%87%D0%BB%D0%B5%D0%BD%D1%81%D1%82%D0%B2%D0%BE_%D1%83_%D0%84%D0%B2%D1%80%D0%BE%D0%BF%D0%B5%D0%B9%D1%81%D1%8C%D0%BA%D0%BE%D0%BC%D1%83_%D0%A1%D0%BE%D1%8E%D0%B7%D1%96%2C_1.jpg/250px-%D0%97%D0%B0%D1%8F%D0%B2%D0%BA%D0%B0_%D0%A3%D0%BA%D1%80%D0%B0%D1%97%D0%BD%D0%B8_%D0%BD%D0%B0_%D1%87%D0%BB%D0%B5%D0%BD%D1%81%D1%82%D0%B2%D0%BE_%D1%83_%D0%84%D0%B2%D1%80%D0%BE%D0%BF%D0%B5%D0%B9%D1%81%D1%8C%D0%BA%D0%BE%D0%BC%D1%83_%D0%A1%D0%BE%D1%8E%D0%B7%D1%96%2C_1.jpg)](/wiki/File:%D0%97%D0%B0%D1%8F%D0%B2%D0%BA%D0%B0_%D0%A3%D0%BA%D1%80%D0%B0%D1%97%D0%BD%D0%B8_%D0%BD%D0%B0_%D1%87%D0%BB%D0%B5%D0%BD%D1%81%D1%82%D0%B2%D0%BE_%D1%83_%D0%84%D0%B2%D1%80%D0%BE%D0%BF%D0%B5%D0%B9%D1%81%D1%8C%D0%BA%D0%BE%D0%BC%D1%83_%D0%A1%D0%BE%D1%8E%D0%B7%D1%96,_1.jpg)
+
+[Verkhovna Rada](/wiki/Verkhovna_Rada "Verkhovna Rada")
+ chairman [Ruslan Stefanchuk](/wiki/Ruslan_Stefanchuk "Ruslan Stefanchuk")
+, Ukrainian President Volodymyr Zelenskyy and Ukrainian Prime Minister [Denys Shmyhal](/wiki/Denys_Shmyhal "Denys Shmyhal")
+ after signing of the application for membership in the European Union during the war on 28 February 2022
+
+[![](//upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Volodymyr_Zelenskyy_paid_a_visit_to_the_wounded_defenders_of_Ukraine_undergoing_treatment_at_a_military_hospital_%2851937554922%29.jpg/250px-Volodymyr_Zelenskyy_paid_a_visit_to_the_wounded_defenders_of_Ukraine_undergoing_treatment_at_a_military_hospital_%2851937554922%29.jpg)](/wiki/File:Volodymyr_Zelenskyy_paid_a_visit_to_the_wounded_defenders_of_Ukraine_undergoing_treatment_at_a_military_hospital_(51937554922).jpg)
+
+President Volodymyr Zelenskyy visiting a military hospital for soldiers fighting in the [Kyiv Oblast](/wiki/Kyiv_offensive_(2022) "Kyiv offensive (2022)")
+, 13 March
+
+#### Phase 1: invasion of Ukraine 2022, 24 February – 7 April
+
+On the morning of 24 February, Putin [announced](/wiki/On_conducting_a_special_military_operation "On conducting a special military operation")
+ that Russia was initiating a "special military operation" in the Donbas. You will not have a quiet place on this earth – except for a grave.
+
+On 7 March 2022, Czech president [Miloš Zeman](/wiki/Milo%C5%A1_Zeman "Miloš Zeman")
+ decided to award Zelenskyy with the highest state award of the Czech Republic, the [Order of the White Lion](/wiki/Order_of_the_White_Lion "Order of the White Lion")
+, for "his bravery and courage in the face of Russia's invasion."[\[218\]](#cite_note-222)
+
+[![](//upload.wikimedia.org/wikipedia/commons/thumb/2/27/Volodymyr_Zelenskyy_met_with_the_heads_of_governments_of_Poland%2C_the_Czech_Republic_and_Slovenia_in_Kyiv._%2851940875546%29.jpg/250px-Volodymyr_Zelenskyy_met_with_the_heads_of_governments_of_Poland%2C_the_Czech_Republic_and_Slovenia_in_Kyiv._%2851940875546%29.jpg)](/wiki/File:Volodymyr_Zelenskyy_met_with_the_heads_of_governments_of_Poland,_the_Czech_Republic_and_Slovenia_in_Kyiv._(51940875546).jpg)
+
+Zelenskyy with Polish Prime Minister [Mateusz Morawiecki](/wiki/Mateusz_Morawiecki "Mateusz Morawiecki")
+, Czech Prime Minister [Petr Fiala](/wiki/Petr_Fiala "Petr Fiala")
+ and Slovenian Prime Minister [Janez Janša](/wiki/Janez_Jan%C5%A1a "Janez Janša")
+, Kyiv, 15 March
+
+Zelenskyy has repeatedly called for direct talks with Putin,[\[219\]](#cite_note-negotiation-223)
+ saying: "Good Lord, what do you want? He has made numerous addresses to the legislatures of the EU,[\[230\]](#cite_note-234)
+[\[231\]](#cite_note-235)
+ UK,[\[232\]](#cite_note-236)
+ Poland,[\[233\]](#cite_note-237)
+ Australia,[\[234\]](#cite_note-238)
+ Canada,[\[235\]](#cite_note-239)
+ US,[\[236\]](#cite_note-240)
+ Germany,[\[237\]](#cite_note-241)
+ Israel,[\[238\]](#cite_note-242)
+ Italy,[\[239\]](#cite_note-243)
+ Japan,[\[240\]](#cite_note-244)
+ the Netherlands,[\[241\]](#cite_note-245)
+ Romania,[\[242\]](#cite_note-246)
+ and the [Nordic countries](/wiki/Nordic_countries "Nordic countries")
+.[\[243\]](#cite_note-247)
+[\[244\]](#cite_note-248)
+[\[245\]](#cite_note-249)
+
+On 23 March, Zelenskyy was calling on Russians to [emigrate from Russia](/wiki/Russian_emigration_following_the_2022_invasion_of_Ukraine "Russian emigration following the 2022 invasion of Ukraine")
+ so as not to finance the war in Ukraine with their taxes.[\[246\]](#cite_note-250)
+ In March 2022, Zelenskyy supported the suspension of 11 Ukrainian political parties with ties to Russia: the [Socialist Party of Ukraine](/wiki/Socialist_Party_of_Ukraine "Socialist Party of Ukraine")
+, [Derzhava](/wiki/Derzhava_(Ukrainian_party) "Derzhava (Ukrainian party)")
+, Left Opposition, [Nashi](/wiki/Nashi_(political_party) "Nashi (political party)")
+, [Opposition Bloc](/wiki/Opposition_Bloc_(2019) "Opposition Bloc (2019)")
+, Opposition Platform — For Life, [Party of Shariy](/wiki/Party_of_Shariy "Party of Shariy")
+, [Progressive Socialist Party of Ukraine](/wiki/Progressive_Socialist_Party_of_Ukraine "Progressive Socialist Party of Ukraine")
+, [Union of Leftists](/wiki/Union_of_Leftists "Union of Leftists")
+, and the [Volodymyr Saldo Bloc](/wiki/Volodymyr_Saldo_Bloc "Volodymyr Saldo Bloc")
+.[\[247\]](#cite_note-251)
+[\[248\]](#cite_note-252)
+[\[249\]](#cite_note-253)
+ The [Communist Party of Ukraine](/wiki/Communist_Party_of_Ukraine "Communist Party of Ukraine")
+, another pro-Russia party, had already been banned in 2015 because of its support to the [Donbas separatists](/wiki/Russian_separatist_forces_in_Donbas "Russian separatist forces in Donbas")
+.[\[250\]](#cite_note-254)
+ Zelenskyy has also supported consolidating all TV news stations into a single 24-hour news broadcast run by the state of Ukraine during martial law.[\[251\]](#cite_note-255)
+[\[252\]](#cite_note-telemarathon_decree-256)
+
+#### Phase 2: South-Eastern front 2022, 8 April – 5 September
+
+In April 2022, Zelenskyy criticized Germany's ties with Russia.[\[253\]](#cite_note-257)
+ In May 2022, Zelenskyy said that Ukrainian men of [conscription](/wiki/Conscription "Conscription")
+ age had a duty to remain in Ukraine.[\[254\]](#cite_note-258)
+ As Zelenskyy ordered a [general military mobilization](/wiki/2022_Ukrainian_mobilization "2022 Ukrainian mobilization")
+ in February 2022, he also banned men aged 18 to 60 from leaving Ukraine.[\[255\]](#cite_note-259)
+[\[256\]](#cite_note-260)
+
+[![](//upload.wikimedia.org/wikipedia/commons/thumb/d/dd/%D0%A0%D0%BE%D0%B1%D0%BE%D1%87%D0%B0_%D0%BF%D0%BE%D1%97%D0%B7%D0%B4%D0%BA%D0%B0_%D0%9F%D1%80%D0%B5%D0%B7%D0%B8%D0%B4%D0%B5%D0%BD%D1%82%D0%B0_%D0%BD%D0%B0_%D0%A5%D0%B0%D1%80%D0%BA%D1%96%D0%B2%D1%89%D0%B8%D0%BD%D1%83_21.jpg/250px-%D0%A0%D0%BE%D0%B1%D0%BE%D1%87%D0%B0_%D0%BF%D0%BE%D1%97%D0%B7%D0%B4%D0%BA%D0%B0_%D0%9F%D1%80%D0%B5%D0%B7%D0%B8%D0%B4%D0%B5%D0%BD%D1%82%D0%B0_%D0%BD%D0%B0_%D0%A5%D0%B0%D1%80%D0%BA%D1%96%D0%B2%D1%89%D0%B8%D0%BD%D1%83_21.jpg)](/wiki/File:%D0%A0%D0%BE%D0%B1%D0%BE%D1%87%D0%B0_%D0%BF%D0%BE%D1%97%D0%B7%D0%B4%D0%BA%D0%B0_%D0%9F%D1%80%D0%B5%D0%B7%D0%B8%D0%B4%D0%B5%D0%BD%D1%82%D0%B0_%D0%BD%D0%B0_%D0%A5%D0%B0%D1%80%D0%BA%D1%96%D0%B2%D1%89%D0%B8%D0%BD%D1%83_21.jpg)
+
+Zelenskyy awarding a soldier near the front line in the [Kharkiv Oblast](/wiki/Kharkiv_Oblast "Kharkiv Oblast")
+, 29 May
+
+Zelenskyy denounced suggestions by former US diplomat [Henry Kissinger](/wiki/Henry_Kissinger "Henry Kissinger")
+ that Ukraine should [cede control of Crimea and Donbas](/wiki/List_of_national_border_changes_(1914%E2%80%93present) "List of national border changes (1914–present)")
+ to Russia in exchange for peace.[\[257\]](#cite_note-261)
+ On 25 May 2022, he said that Ukraine would not agree to peace until Russia agreed to return Crimea and the Donbas region to Ukraine.[\[258\]](#cite_note-262)
+ However, he later said he did not believe that all the land seized by Russia since 2014, which includes Crimea, could be recaptured by force, saying that "If we decide to go that way, we will lose hundreds of thousands of people."[\[259\]](#cite_note-263)
+ On 3 May 2022, Zelenskyy accused [Turkey](/wiki/Turkey "Turkey")
+ of having "double standards" by welcoming Russian tourists while attempting to act as an intermediary between Russia and Ukraine to end the war.[\[260\]](#cite_note-264)
+ On 25 May 2022, Zelenskyy said that he was satisfied with [China](/wiki/China "China")
+'s [policy](/wiki/China_and_the_2022_Russian_invasion_of_Ukraine "China and the 2022 Russian invasion of Ukraine")
+ of staying away from the conflict.[\[261\]](#cite_note-265)
+ In August 2022, he said China had the economic leverage to pressure Putin to end the war, adding,
+
+> I'm sure that without the Chinese market for the Russian Federation, Russia would be feeling complete economic isolation. According to NABU, the proposal restores both bodies’ full powers and safeguards.[\[315\]](#cite_note-319)
+ The new bill was adopted by parliament and signed by Zelenskyy on 31 July 2025; Zelenskyy said it was "very important that the state listens to public opinion".[\[316\]](#cite_note-billsigned_pravda-320)
+
+Political views
+---------------
+
+### Economic issues
+
+In a mid-June interview with [BIHUS info](/w/index.php?title=BIHUS_info&action=edit&redlink=1 "BIHUS info (page does not exist)")
+ \[[uk](https://uk.wikipedia.org/wiki/%D0%9D%D0%B0%D1%88%D1%96_%D0%B3%D1%80%D0%BE%D1%88%D1%96_%D0%B7_%D0%94%D0%B5%D0%BD%D0%B8%D1%81%D0%BE%D0%BC_%D0%91%D1%96%D0%B3%D1%83%D1%81%D0%BE%D0%BC "uk:Наші гроші з Денисом Бігусом")\
+\], a [representative of the president of Ukraine](/wiki/Representatives_of_the_President_of_Ukraine "Representatives of the President of Ukraine")
+ at the [Cabinet of Ministers](/wiki/Cabinet_of_Ministers_of_Ukraine "Cabinet of Ministers of Ukraine")
+, [Andriy Herus](/wiki/Andriy_Herus "Andriy Herus")
+ stated that Zelenskyy had never promised to lower communal tariffs, but that a campaign video in which Zelenskyy stated that the price of [natural gas in Ukraine](/wiki/Natural_gas_in_Ukraine "Natural gas in Ukraine")
+ could fall by 20–30 percent or maybe more was not a direct promise but actually "half-hinting" and "joking".[\[317\]](#cite_note-ZelenskyNP-321)
+ Zelenskyy's election manifesto mentioned tariffs only once — that money raised from a capital amnesty would go towards "lowering the tariff burden on low-income citizens".[\[318\]](#cite_note-322)
+[\[319\]](#cite_note-323)
+
+### Foreign policy
+
+[![](//upload.wikimedia.org/wikipedia/commons/thumb/f/ff/%D0%97%D1%83%D1%81%D1%82%D1%80%D1%96%D1%87_%D0%9F%D1%80%D0%B5%D0%B7%D0%B8%D0%B4%D0%B5%D0%BD%D1%82%D0%B0_%D0%A3%D0%BA%D1%80%D0%B0%D1%97%D0%BD%D0%B8_%D1%82%D0%B0_%D0%9F%D1%80%D0%B5%D0%BC%E2%80%98%D1%94%D1%80-%D0%BC%D1%96%D0%BD%D1%96%D1%81%D1%82%D1%80%D0%B0_%D0%92%D0%B5%D0%BB%D0%B8%D0%BA%D0%BE%D1%97_%D0%91%D1%80%D0%B8%D1%82%D0%B0%D0%BD%D1%96%D1%97_%D1%83_%D0%9A%D0%B8%D1%94%D0%B2%D1%96_31.jpg/250px-%D0%97%D1%83%D1%81%D1%82%D1%80%D1%96%D1%87_%D0%9F%D1%80%D0%B5%D0%B7%D0%B8%D0%B4%D0%B5%D0%BD%D1%82%D0%B0_%D0%A3%D0%BA%D1%80%D0%B0%D1%97%D0%BD%D0%B8_%D1%82%D0%B0_%D0%9F%D1%80%D0%B5%D0%BC%E2%80%98%D1%94%D1%80-%D0%BC%D1%96%D0%BD%D1%96%D1%81%D1%82%D1%80%D0%B0_%D0%92%D0%B5%D0%BB%D0%B8%D0%BA%D0%BE%D1%97_%D0%91%D1%80%D0%B8%D1%82%D0%B0%D0%BD%D1%96%D1%97_%D1%83_%D0%9A%D0%B8%D1%94%D0%B2%D1%96_31.jpg)](/wiki/File:%D0%97%D1%83%D1%81%D1%82%D1%80%D1%96%D1%87_%D0%9F%D1%80%D0%B5%D0%B7%D0%B8%D0%B4%D0%B5%D0%BD%D1%82%D0%B0_%D0%A3%D0%BA%D1%80%D0%B0%D1%97%D0%BD%D0%B8_%D1%82%D0%B0_%D0%9F%D1%80%D0%B5%D0%BC%E2%80%98%D1%94%D1%80-%D0%BC%D1%96%D0%BD%D1%96%D1%81%D1%82%D1%80%D0%B0_%D0%92%D0%B5%D0%BB%D0%B8%D0%BA%D0%BE%D1%97_%D0%91%D1%80%D0%B8%D1%82%D0%B0%D0%BD%D1%96%D1%97_%D1%83_%D0%9A%D0%B8%D1%94%D0%B2%D1%96_31.jpg)
+
+Zelenskyy and British Prime Minister [Boris Johnson](/wiki/Boris_Johnson "Boris Johnson")
+ pay tribute to fallen Ukrainian soldiers in Kyiv on 17 June 2022
+
+[![](//upload.wikimedia.org/wikipedia/commons/thumb/1/11/Prime_Minister_Rishi_Sunak_meets_Volodymyr_Zelenskyy_-_52899900249.jpg/250px-Prime_Minister_Rishi_Sunak_meets_Volodymyr_Zelenskyy_-_52899900249.jpg)](/wiki/File:Prime_Minister_Rishi_Sunak_meets_Volodymyr_Zelenskyy_-_52899900249.jpg)
+
+Zelenskyy with [Rishi Sunak](/wiki/Rishi_Sunak "Rishi Sunak")
+ on 15 May 2023
+
+[![](//upload.wikimedia.org/wikipedia/commons/thumb/1/13/Prime_Minister_Keir_Starmer_meets_President_Zelenskyy_%2853848423375%29.jpg/250px-Prime_Minister_Keir_Starmer_meets_President_Zelenskyy_%2853848423375%29.jpg)](/wiki/File:Prime_Minister_Keir_Starmer_meets_President_Zelenskyy_(53848423375).jpg)
+
+Zelenskyy with [Keir Starmer](/wiki/Keir_Starmer "Keir Starmer")
+ on 10 July 2024
+
+During his presidential campaign, Zelenskyy said that he supported Ukraine's becoming a member of the EU and NATO, but he said Ukrainian voters should decide on the country's membership of these two organisations in referendums.[\[320\]](#cite_note-Zelensky7209965-324)
+ At the same time, he believed that the Ukrainian people had already chosen "eurointegration."[\[320\]](#cite_note-Zelensky7209965-324)
+[\[321\]](#cite_note-325)
+ Zelenskyy's close advisor Bakanov also said that Zelenskyy's policy is supportive of membership of both the EU and NATO, and proposes holding referendums on membership.[\[322\]](#cite_note-326)
+ Zelenskyy's electoral programme claimed that Ukrainian NATO membership is "the choice of the Maidan and the course that is enshrined in the [Constitution](/wiki/Constitution_of_Ukraine "Constitution of Ukraine")
+, in addition, it is an instrument for strengthening our defense capability."[\[323\]](#cite_note-ZelenskyNATOFC-327)
+ The program states that Ukraine should set the goal to apply for a [NATO Membership Action Plan](/wiki/Membership_Action_Plan "Membership Action Plan")
+ in 2024.[\[323\]](#cite_note-ZelenskyNATOFC-327)
+ The programme also states that Zelenskyy "will do everything to ensure" that [Ukraine can apply for European Union membership](/wiki/Ukraine%E2%80%93European_Union_relations#Ukrainian_EU_membership "Ukraine–European Union relations")
+ in 2024.[\[324\]](#cite_note-7094332roadUNEU-328)
+ Two days before the second round, Zelenskyy stated that he wanted to build "a strong, powerful, free Ukraine, which is not the younger sister of Russia, which is not a corrupt partner of Europe, but our independent Ukraine."[\[325\]](#cite_note-329)
+ In October 2020, he spoke in support of [Azerbaijan](/wiki/Azerbaijan "Azerbaijan")
+ in regard to the [Nagorno-Karabakh war](/wiki/2020_Nagorno-Karabakh_war "2020 Nagorno-Karabakh war")
+ between Azerbaijan and ethnic Armenians over the [disputed region](/wiki/List_of_territorial_disputes "List of territorial disputes")
+ of [Nagorno-Karabakh](/wiki/Nagorno-Karabakh "Nagorno-Karabakh")
+. During the [war in Donbas](/wiki/War_in_Donbas_(2014%E2%80%932022) "War in Donbas (2014–2022)")
+, he actively supported the Ukrainian army.[\[44\]](#cite_note-0396374-zelenskiy-47)
+ Zelenskyy helped fund a [volunteer battalion](/wiki/Ukrainian_volunteer_battalions_(since_2014) "Ukrainian volunteer battalions (since 2014)")
+ fighting in Donbas.[\[334\]](#cite_note-338)
+ In a 2014 interview with _[Komsomolskaya Pravda v Ukraine](/wiki/Komsomolskaya_Pravda_v_Ukraine "Komsomolskaya Pravda v Ukraine")
+_, Zelenskyy said that he would have liked to pay a visit to Crimea, but would avoid it because "armed people are there."[\[335\]](#cite_note-339)
+ In August 2014, Zelenskyy performed for Ukrainian troops in [Mariupol](/wiki/Mariupol "Mariupol")
+ and later his studio donated ₴1 million to the Ukrainian army.[\[336\]](#cite_note-340)
+ Regarding the [2014 Russian annexation of Crimea](/wiki/Annexation_of_Crimea_by_the_Russian_Federation "Annexation of Crimea by the Russian Federation")
+, Zelenskyy said that, speaking realistically, it would be possible to return Crimea to Ukrainian control only after a [regime change](/wiki/Regime_change "Regime change")
+ in Russia.[\[337\]](#cite_note-341)
+
+In an interview in December 2018 with _Ukrainska Pravda_, Zelenskyy stated that as president he would try to end the ongoing war in Donbas by negotiating with Russia.[\[338\]](#cite_note-8/12/26/7202291/_Zelensky-342)
+ As he considered the leaders of the [Donetsk People's Republic](/wiki/Donetsk_People%27s_Republic "Donetsk People's Republic")
+ and the [Luhansk People's Republic](/wiki/Luhansk_People%27s_Republic "Luhansk People's Republic")
+ (DPR and LPR) to be Russia's "puppets," it would "make no sense to speak with them."[\[338\]](#cite_note-8/12/26/7202291/_Zelensky-342)
+ He did not rule out holding a referendum on the issue.[\[338\]](#cite_note-8/12/26/7202291/_Zelensky-342)
+ In an interview published three days before the 2019 presidential election (on 21 April), Zelenskyy stated that he was against granting the Donbas region "special status."[\[339\]](#cite_note-3daysbUpeZi-343)
+ In the interview he also said that if he were elected president he would not sign a law on amnesty for the militants of the DPR and LPR.[\[339\]](#cite_note-3daysbUpeZi-343)
+
+[![](//upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Normandy_format_%282019-12-09%29_01.jpg/250px-Normandy_format_%282019-12-09%29_01.jpg)](/wiki/File:Normandy_format_(2019-12-09)_01.jpg)
+
+Zelenskyy, French president [Macron](/wiki/Emmanuel_Macron "Emmanuel Macron")
+ and Russian president [Putin](/wiki/Vladimir_Putin "Vladimir Putin")
+ meeting in Paris on 9 December 2019 in the "[Normandy Format](/wiki/Normandy_Format "Normandy Format")
+" aimed at ending the [war in Donbas](/wiki/War_in_Donbas_(2014%E2%80%932022) "War in Donbas (2014–2022)")
+.
+
+In response to suggestions to the contrary, he stated in April 2019 that he regarded Putin "as an enemy."[\[340\]](#cite_note-344)
+ On 2 May 2019, Zelenskyy wrote on Facebook that "the border is the only thing Russia and Ukraine have in common."[\[341\]](#cite_note-345)
+
+Zelenskyy opposes the [Nord Stream 2](/wiki/Nord_Stream_2 "Nord Stream 2")
+ natural gas pipeline between Russia and Germany, calling it "a dangerous weapon, not only for Ukraine but for the whole of Europe."[\[342\]](#cite_note-346)
+
+On 25 May 2022, two months after the full-scale Russian invasion, Zelenskyy said "Ukraine will fight until it regains all its territories."[\[343\]](#cite_note-347)
+
+Zelenskyy has described the [extensive environmental damage from the war](/wiki/Environmental_impact_of_the_Russian_invasion_of_Ukraine "Environmental impact of the Russian invasion of Ukraine")
+ as "an environmental bomb of mass destruction" and "an [ecocide](/wiki/Ecocide "Ecocide")
+" (a crime in Ukraine) and has met with prominent European politicians and others to discuss the environmental damage.[\[344\]](#cite_note-348)
+[\[345\]](#cite_note-349)
+[\[346\]](#cite_note-:02-350)
+[\[347\]](#cite_note-:13-351)
+[\[348\]](#cite_note-352)
+\[_[excessive citations](/wiki/Wikipedia:Citing_sources#Bundling_citations "Wikipedia:Citing sources")\
+_\]
+
+### Government reform
+
+[![](//upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Volodymyr_Zelensky_visits_Brussels_2019.jpg/250px-Volodymyr_Zelensky_visits_Brussels_2019.jpg)](/wiki/File:Volodymyr_Zelensky_visits_Brussels_2019.jpg)
+
+Zelenskyy with NATO secretary general [Jens Stoltenberg](/wiki/Jens_Stoltenberg "Jens Stoltenberg")
+ in June 2019
+
+During the 2019 presidential campaign, Zelenskyy promised bills to fight [corruption](/wiki/Corruption_in_Ukraine "Corruption in Ukraine")
+, including removal of immunity from the [president](/wiki/President_of_Ukraine "President of Ukraine")
+, [members](/wiki/People%27s_Deputy_of_Ukraine "People's Deputy of Ukraine")
+ of the [Verkhovna Rada](/wiki/Verkhovna_Rada "Verkhovna Rada")
+ (Ukraine's national parliament) and judges, a law about impeachment, reform of election laws, and providing efficient trial by jury. He promised to bring the salary for military personnel "to the level of [NATO](/wiki/NATO "NATO")
+ standards."[\[349\]](#cite_note-353)
+
+Although Zelenskyy had earlier stated that he prefers elections with [open list](/wiki/Open_list "Open list")
+ election ballots (such as in his inauguration speech[\[114\]](#cite_note-inaugurationspeech-118)
+), after he called the snap [2019 Ukrainian parliamentary election](/wiki/2019_Ukrainian_parliamentary_election "2019 Ukrainian parliamentary election")
+, his draft law "On amendments to some laws of Ukraine in connection with the change of the electoral system for the election of people's deputies" proposed to hold the election with closed lists because the 60-day term to the snap election did not "leave any chances for the introduction of this system."[\[115\]](#cite_note-UPclosedlistsrejected-119)
+ However, this bill was rejected by parliament.[\[113\]](#cite_note-uawireclosedlists-117)
+
+### Social issues
+
+[![](//upload.wikimedia.org/wikipedia/commons/thumb/7/73/The_Prime_Minister%2C_Shri_Narendra_Modi_meeting_the_President_of_Ukraine%2C_Mr._Volodymyr_Zelenskyy%2C_in_Glasgow%2C_Scotland_on_November_02%2C_2021_%282%29.jpg/330px-The_Prime_Minister%2C_Shri_Narendra_Modi_meeting_the_President_of_Ukraine%2C_Mr._Volodymyr_Zelenskyy%2C_in_Glasgow%2C_Scotland_on_November_02%2C_2021_%282%29.jpg)](/wiki/File:The_Prime_Minister,_Shri_Narendra_Modi_meeting_the_President_of_Ukraine,_Mr._Volodymyr_Zelenskyy,_in_Glasgow,_Scotland_on_November_02,_2021_(2).jpg)
+
+Zelenskyy and Indian Prime Minister [Narendra Modi](/wiki/Narendra_Modi "Narendra Modi")
+ at the [COP26 climate summit](/wiki/United_Nations_Climate_Change_conference "United Nations Climate Change conference")
+ in Glasgow, November 2021
+
+Zelenskyy opposed targeting the Russian language in Ukraine and banning artists for their political opinions (such as those viewed by the Government as [anti-Ukrainian](/wiki/Anti-Ukrainian_sentiment "Anti-Ukrainian sentiment")
+).[\[350\]](#cite_note-354)
+[\[351\]](#cite_note-355)
+ In April 2019, he stated that he was not against a [Ukrainian language](/wiki/Ukrainian_language "Ukrainian language")
+ quota ([on radio and TV](/wiki/Ukrainization#Mass_media "Ukrainization")
+), although he noted they could be tweaked.[\[352\]](#cite_note-/7212672/_Zelensky-356)
+ He also said that Russian artists "who have turned into (anti-Ukrainian) politicians" should remain banned from entering Ukraine.[\[339\]](#cite_note-3daysbUpeZi-343)
+
+In response to a petition demanding equal rights for same-sex couples, Zelenskyy affirmed that democracies were measured by how they ensure equal rights for all citizens, that "all people are free and equal in their dignity and rights",[\[353\]](#cite_note-LGBTNYT-357)
+ and that the family "consists of persons who live together, are connected by common life, have mutual rights and obligations";[\[354\]](#cite_note-lgbtcnn-358)
+ he asked the [Prime Minister of Ukraine](/wiki/Prime_Minister_of_Ukraine "Prime Minister of Ukraine")
+ to review [civil partnerships](/wiki/Civil_union "Civil union")
+ for same-sex couples and called this "part of the work on establishing and ensuring human rights and freedoms".[\[354\]](#cite_note-lgbtcnn-358)
+ However, he said that [same-sex marriage](/wiki/Same-sex_marriage "Same-sex marriage")
+ could not be introduced during wartime as this would require amending the Constitution of Ukraine, which defines marriage as "based on the free consent of a woman and a man", and the Constitution cannot be changed during martial law.[\[353\]](#cite_note-LGBTNYT-357)
+[\[355\]](#cite_note-359)
+[\[356\]](#cite_note-blade-360)
+ Civil rights organizations such as [Kyiv Pride](/wiki/Kyiv_Pride "Kyiv Pride")
+ praised the statement,[\[356\]](#cite_note-blade-360)
+ though [Holos](/wiki/Holos_(political_party) "Holos (political party)")
+ MP [Inna Sovsun](/wiki/Inna_Sovsun "Inna Sovsun")
+ criticised the lack of details about legal proposals for civil partnerships.[\[353\]](#cite_note-LGBTNYT-357)
+
+On 2 December 2022, Zelenskyy said his administration would enter a bill in the Verkhovna Rada that would ban "religious organizations affiliated with centers of influence in the Russian Federation", referring to the [Ukrainian Orthodox Church (Moscow Patriarchate)](/wiki/Ukrainian_Orthodox_Church_(Moscow_Patriarchate) "Ukrainian Orthodox Church (Moscow Patriarchate)")
+ (UOC-MP), from operating in Ukraine.[\[357\]](#cite_note-361)
+ The bill was passed by parliament and signed by Zelenskyy in August 2024,[\[358\]](#cite_note-uocmp-362)
+ after opposition parties protested the bill's delay.[\[359\]](#cite_note-uocmpdelay-363)
+ The law treats each parish individually and gives it nine months to cut ties with the UOC-MP, following which a special commission will inspect individual parishes and file lawsuits against non-compliant ones; the court can then decide on a ban in each case.[\[360\]](#cite_note-uocmpexplain-364)
+
+Personal life
+-------------
+
+[![](//upload.wikimedia.org/wikipedia/commons/thumb/3/35/Volodymyr_Zelenskyy_voted_in_parliamentary_elections_%282019-07-21%29_05.jpg/250px-Volodymyr_Zelenskyy_voted_in_parliamentary_elections_%282019-07-21%29_05.jpg)](/wiki/File:Volodymyr_Zelenskyy_voted_in_parliamentary_elections_(2019-07-21)_05.jpg)
+
+Volodymyr Zelenskyy and [Olena Zelenska](/wiki/Olena_Zelenska "Olena Zelenska")
+ voting in the [2019 parliamentary election](/wiki/2019_Ukrainian_parliamentary_election "2019 Ukrainian parliamentary election")
+
+In September 2003, Zelenskyy married [Olena Kiyashko](/wiki/Olena_Zelenska "Olena Zelenska")
+, with whom he had attended school and university.[\[361\]](#cite_note-365)
+[\[362\]](#cite_note-TheEconomist-366)
+ Kiyashko worked as a scriptwriter at Kvartal 95.[\[363\]](#cite_note-367)
+ The couple's first daughter, Oleksandra, was born in July 2004. |
+| --- | --- | --- | --- | --- |
+| 2016 | _[Servant of the People](/wiki/Servant_of_the_People_(2015_TV_series) "Servant of the People (2015 TV series)")<br>, (_[Kvartal 95 Studio](/wiki/Kvartal_95_Studio "Kvartal 95 Studio")<br>) | Best Feature Series | Winner | [\[373\]](#cite_note-377) |
+| Production team for _Servant of the People_ | Best Producer of a TV Series/Film | Winner | [\[374\]](#cite_note-:10-378) |
+| Screenwriting team for _Evening Quarter_ | Best Screenwriter of a TV series | Winner | [\[374\]](#cite_note-:10-378) |
+| 2015 | Volodymyr Zelensky for _Evening Quarter_ | Best Host of entertainment program | Winner | [\[375\]](#cite_note-379) |
+| 2013 | Volodymyr Zelenskyy for _[Evening Quarter](/w/index.php?title=Evening_Quarter&action=edit&redlink=1 "Evening Quarter (page does not exist)")<br> \[[UK](https://uk.wikipedia.org/wiki/%D0%92%D0%B5%D1%87%D1%96%D1%80%D0%BD%D1%96%D0%B9_%D0%9A%D0%B2%D0%B0%D1%80%D1%82%D0%B0%D0%BB "uk:Вечірній Квартал")<br>\]_ | Best host of an entertainment program | Winner | [\[376\]](#cite_note-380) |
+| Production group of _Fairytale Rus_ (_Skazochnaya Rus_) | Best producer (production group) of a television program | Winner | [\[377\]](#cite_note-381) |
+| Scriptwriting team of _Evening_ _Quarter_ | Best screenwriter (screenwriting group) of a television program | Winner |
+| 2011 | Production team for _Matchmakers 4_ | Best producer of a television series | Nominee | [\[378\]](#cite_note-382) |
+| Screenwriting team for _Evening Quarter_ | Best screenwriter of a TV program | Nominee |
+| 2012 | Volodymyr Zelenskyy and [Valeriy Zhidkov](/w/index.php?title=Valeriy_Zhidkov&action=edit&redlink=1 "Valeriy Zhidkov (page does not exist)")<br> for _Evening_ _Quarter_ | Best host of an entertainment program | Winner | [\[379\]](#cite_note-383) |
+| Scriptwriting team of _Evening_ _Quarter_ | Best screenwriter (screenwriting group) of a television program | Winner |
+| 2010 | Screenwriting team of _Svaty_ | Best screenwriter of a television program | Winner | [\[380\]](#cite_note-384) |
+| Production group of _[Svaty](/wiki/Svaty "Svaty")<br>_ | Best producer (production group) of a television film/series | Winner |
+
+### Awards and decorations
+
+In 2022, British newspaper _[Financial Times](/wiki/Financial_Times "Financial Times")
+_[\[381\]](#cite_note-385)
+ and US magazine _[Time](/wiki/Time_(magazine) "Time (magazine)")
+_ both selected Zelenskyy as Person of the Year.[\[382\]](#cite_note-386)
+
+*    ![](//upload.wikimedia.org/wikipedia/commons/thumb/4/49/Flag_of_Ukraine.svg/40px-Flag_of_Ukraine.svg.png)[Ukraine](/wiki/Ukraine "Ukraine")
+    : [Honorary Diploma of the Cabinet of Ministers of Ukraine](/wiki/Honorary_Diploma_of_the_Cabinet_of_Ministers_of_Ukraine "Honorary Diploma of the Cabinet of Ministers of Ukraine")
+     (2003)[\[383\]](#cite_note-387)
+    
+*    ![](//upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Flag_of_the_Czech_Republic.svg/40px-Flag_of_the_Czech_Republic.svg.png)[Czech Republic](/wiki/Czech_Republic "Czech Republic")
+    : [![](//upload.wikimedia.org/wikipedia/commons/thumb/e/e0/CZE_Rad_Bileho_Lva_1_tridy_BAR.svg/40px-CZE_Rad_Bileho_Lva_1_tridy_BAR.svg.png)](/wiki/File:CZE_Rad_Bileho_Lva_1_tridy_BAR.svg)
+     Member 1st Class of the [Order of the White Lion](/wiki/Order_of_the_White_Lion "Order of the White Lion")
+     (2022)[\[384\]](#cite_note-388)
+    
+*    ![](//upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Flag_of_Estonia.svg/40px-Flag_of_Estonia.svg.png)[Estonia](/wiki/Estonia "Estonia")
+    : [Order of the Tallinn Coat of Arms](/w/index.php?title=Order_of_the_Tallinn_Coat_of_Arms&action=edit&redlink=1 "Order of the Tallinn Coat of Arms (page does not exist)")
+     \[[et](https://et.wikipedia.org/wiki/Tallinna_vapim%C3%A4rk "et:Tallinna vapimärk")\
+    \] (2022)[\[385\]](#cite_note-389)
+    
+*    ![](//upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Flag_of_Finland.svg/40px-Flag_of_Finland.svg.png)[Finland](/wiki/Finland "Finland")
+    : [![](//upload.wikimedia.org/wikipedia/commons/thumb/c/cc/FIN_Order_of_the_White_Rose_Grand_Cross_BAR.svg/40px-FIN_Order_of_the_White_Rose_Grand_Cross_BAR.svg.png)](/wiki/File:FIN_Order_of_the_White_Rose_Grand_Cross_BAR.svg)
+     Grand Cross of the [Order of the White Rose of Finland](/wiki/Order_of_the_White_Rose_of_Finland "Order of the White Rose of Finland")
+     with Collar (2025)[\[386\]](#cite_note-390)
+    
+*    ![](//upload.wikimedia.org/wikipedia/en/thumb/c/c3/Flag_of_France.svg/40px-Flag_of_France.svg.png)[France](/wiki/France "France")
+    : [![](//upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Legion_Honneur_GC_ribbon.svg/40px-Legion_Honneur_GC_ribbon.svg.png)](/wiki/File:Legion_Honneur_GC_ribbon.svg)
+     Grand Cross of the [Order of the Legion of Honour](/wiki/Legion_of_Honour "Legion of Honour")
+     (2023)[\[387\]](#cite_note-391)
+    
+*    ![](//upload.wikimedia.org/wikipedia/en/thumb/b/ba/Flag_of_Germany.svg/40px-Flag_of_Germany.svg.png)[Germany](/wiki/Germany "Germany")
+    : [Charlemagne Prize](/wiki/Charlemagne_Prize "Charlemagne Prize")
+     (2023)[\[388\]](#cite_note-392)
+    
+*    ![](//upload.wikimedia.org/wikipedia/commons/thumb/8/84/Flag_of_Latvia.svg/40px-Flag_of_Latvia.svg.png)[Latvia](/wiki/Latvia "Latvia")
+    : [![](//upload.wikimedia.org/wikipedia/commons/thumb/e/e2/LAT_Order_of_Viesturs_civ_BAR.svg/40px-LAT_Order_of_Viesturs_civ_BAR.svg.png)](/wiki/File:LAT_Order_of_Viesturs_civ_BAR.svg)
+     Member 1st Class of the [Order of Viesturs](/wiki/Order_of_Viesturs "Order of Viesturs")
+     (2022)[\[389\]](#cite_note-393)
+    
+*    ![](//upload.wikimedia.org/wikipedia/commons/thumb/1/11/Flag_of_Lithuania.svg/40px-Flag_of_Lithuania.svg.png)[Lithuania](/wiki/Lithuania "Lithuania")
+    : [![](//upload.wikimedia.org/wikipedia/commons/thumb/2/21/LTU_Order_of_Vytautas_the_Great_with_the_Golden_Chain_BAR.svg/40px-LTU_Order_of_Vytautas_the_Great_with_the_Golden_Chain_BAR.svg.png)](/wiki/File:LTU_Order_of_Vytautas_the_Great_with_the_Golden_Chain_BAR.svg)
+     [Order of Vytautas the Great](/wiki/Order_of_Vytautas_the_Great "Order of Vytautas the Great")
+     with the Golden Chain (2022)[\[390\]](#cite_note-394)
+    
+*    ![](//upload.wikimedia.org/wikipedia/en/thumb/1/12/Flag_of_Poland.svg/40px-Flag_of_Poland.svg.png)[Poland](/wiki/Poland "Poland")
+    :
+    *   [Jan Karski Eagle Award](/wiki/Jan_Karski_Eagle_Award "Jan Karski Eagle Award")
+         (2022)[\[391\]](#cite_note-395)
+        
+    *   [![](//upload.wikimedia.org/wikipedia/commons/thumb/b/b9/POL_Order_Or%C5%82a_Bia%C5%82ego_BAR.svg/40px-POL_Order_Or%C5%82a_Bia%C5%82ego_BAR.svg.png)](/wiki/File:POL_Order_Or%C5%82a_Bia%C5%82ego_BAR.svg)
+         Knight of the [Order of the White Eagle](/wiki/Order_of_the_White_Eagle_(Poland) "Order of the White Eagle (Poland)")
+         (2023)[\[392\]](#cite_note-396)
+        [\[393\]](#cite_note-397)
+        [\[394\]](#cite_note-398)
+        
+*    ![](//upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Flag_of_Portugal_%28official%29.svg/40px-Flag_of_Portugal_%28official%29.svg.png)[Portugal](/wiki/Portugal "Portugal")
+    : [![](//upload.wikimedia.org/wikipedia/commons/thumb/d/de/PRT_Order_of_Liberty_-_Grand_Collar_BAR.svg/40px-PRT_Order_of_Liberty_-_Grand_Collar_BAR.svg.png)](/wiki/File:PRT_Order_of_Liberty_-_Grand_Collar_BAR.svg)
+     Grand Collar of the [Order of Liberty](/wiki/Order_of_Liberty "Order of Liberty")
+     (2023)[\[395\]](#cite_note-399)
+    
+*    ![](//upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Flag_of_Slovakia.svg/40px-Flag_of_Slovakia.svg.png)[Slovakia](/wiki/Slovakia "Slovakia")
+    :
+    *   [State Award of Alexander Dubček](/wiki/Alexander_Dub%C4%8Dek "Alexander Dubček")
+         (2022)[\[396\]](#cite_note-400)
+        
+    *   [![](//upload.wikimedia.org/wikipedia/commons/thumb/c/c9/SVK_Rad_Bieleho_Dvojkriza_1_triedy_BAR.svg/40px-SVK_Rad_Bieleho_Dvojkriza_1_triedy_BAR.svg.png)](/wiki/File:SVK_Rad_Bieleho_Dvojkriza_1_triedy_BAR.svg)
+         Member 1st Class of the [Order of the White Double Cross](/wiki/Order_of_the_White_Double_Cross "Order of the White Double Cross")
+         (2024)[\[397\]](#cite_note-401)
+        
+*    ![](//upload.wikimedia.org/wikipedia/en/thumb/f/f3/Flag_of_Russia.svg/40px-Flag_of_Russia.svg.png)[Russia](/wiki/Russia "Russia")
+    : [Boris Nemtsov](/wiki/Boris_Nemtsov "Boris Nemtsov")
+     Prize (2022)[\[398\]](#cite_note-402)
+    
+*    ![](//upload.wikimedia.org/wikipedia/en/thumb/a/ae/Flag_of_the_United_Kingdom.svg/40px-Flag_of_the_United_Kingdom.svg.png)[United Kingdom](/wiki/United_Kingdom "United Kingdom")
+    : Sir Winston Churchill Leadership Award (2022)[\[399\]](#cite_note-403)
+    
+*    ![](//upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/40px-Flag_of_the_United_States.svg.png)[United States](/wiki/United_States "United States")
+    :
+    *   [![](//upload.wikimedia.org/wikipedia/commons/thumb/8/88/Purple_ribbon_bar_-_general_use.svg/40px-Purple_ribbon_bar_-_general_use.svg.png)](/wiki/File:Purple_ribbon_bar_-_general_use.svg)
+         [Ronald Reagan Freedom Award](/wiki/Ronald_Reagan_Freedom_Award "Ronald Reagan Freedom Award")
+         (2022)[\[400\]](#cite_note-404)
+        
+    *   [John F. [ISBN](/wiki/ISBN_(identifier) "ISBN (identifier)")
+     [9781787388635](/wiki/Special:BookSources/9781787388635 "Special:BookSources/9781787388635")
+    .
+
+External links
+--------------
+
+**Volodymyr Zelenskyy** at Wikipedia's [sister projects](/wiki/Wikipedia:Wikimedia_sister_projects "Wikipedia:Wikimedia sister projects")
+
+*   ![](//upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/20px-Commons-logo.svg.png)[Media](https://commons.wikimedia.org/wiki/%D0%92%D0%BE%D0%BB%D0%BE%D0%B4%D0%B8%D0%BC%D0%B8%D1%80_%D0%97%D0%B5%D0%BB%D0%B5%D0%BD%D1%81%D1%8C%D0%BA%D0%B8%D0%B9 "c:Володимир Зеленський")
+     from Commons
+*   ![](//upload.wikimedia.org/wikipedia/commons/thumb/2/24/Wikinews-logo.svg/40px-Wikinews-logo.svg.png)[News](https://en.wikinews.org/wiki/Category:Volodymyr_Zelenskyy "n:Category:Volodymyr Zelenskyy")
+     from Wikinews
+*   ![](//upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Wikiquote-logo.svg/40px-Wikiquote-logo.svg.png)[Quotations](https://en.wikiquote.org/wiki/Volodymyr_Zelenskyy "q:Volodymyr Zelenskyy")
+     from Wikiquote
+*   ![](//upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Wikisource-logo.svg/40px-Wikisource-logo.svg.png)[Texts](https://en.wikisource.org/wiki/Author:Volodymyr_Oleksandrovych_Zelenskyy "s:Author:Volodymyr Oleksandrovych Zelenskyy")
+     from Wikisource
+
+*   [Official website](https://president.gov.ua)
+     [![Edit this at Wikidata](//upload.wikimedia.org/wikipedia/en/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/20px-OOjs_UI_icon_edit-ltr-progressive.svg.png)](https://www.wikidata.org/wiki/Q3874799#P856 "Edit this at Wikidata")
+    
+*   [Kvartal 95](http://kvartal95.com/en/actors/vladimir/)
+     [Archived](https://web.archive.org/web/20190331072643/http://kvartal95.com/en/actors/vladimir/)
+     31 March 2019 at the [Wayback Machine](/wiki/Wayback_Machine "Wayback Machine")
+    
+*   [Volodymyr Zelenskyy](https://www.imdb.com/name/nm3305952/)
+     at [IMDb](/wiki/IMDb_(identifier) "IMDb (identifier)")
+     [![Edit this at Wikidata](//upload.wikimedia.org/wikipedia/en/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/20px-OOjs_UI_icon_edit-ltr-progressive.svg.png)](https://www.wikidata.org/wiki/Q3874799#P345 "Edit this at Wikidata")
+    
+*   [Appearances](https://www.c-span.org/person/?122633)
+     on [C-SPAN](/wiki/C-SPAN "C-SPAN")
+     [![Edit this at Wikidata](//upload.wikimedia.org/wikipedia/en/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/20px-OOjs_UI_icon_edit-ltr-progressive.svg.png)](https://www.wikidata.org/wiki/Q3874799#P2190 "Edit this at Wikidata")
+    
+
+| Political offices |     |     |
+| --- | --- | --- |
+| Preceded by<br><br>[Petro Poroshenko](/wiki/Petro_Poroshenko "Petro Poroshenko") | **[President of Ukraine](/wiki/President_of_Ukraine "President of Ukraine")<br>**  <br>[2019](/wiki/2019_Ukrainian_presidential_election "2019 Ukrainian presidential election")<br>–present | **Incumbent** |
+
+Volodymyr Zelenskyy
+
+[6th](/wiki/List_of_presidents_of_Ukraine "List of presidents of Ukraine")
+ [President of Ukraine](/wiki/President_of_Ukraine "President of Ukraine")
+ (2019–present)
+
+Presidency
+
+*   [Servant of the People](/wiki/Servant_of_the_People "Servant of the People")
+     (political party)
+*   Governments
+    *   [Groysman](/wiki/Groysman_Government "Groysman Government")
+        
+    *   [Honcharuk](/wiki/Honcharuk_Government "Honcharuk Government")
+        
+    *   [Shmyhal](/wiki/Shmyhal_Government "Shmyhal Government")
+        
+    *   [Svyrydenko](/wiki/Svyrydenko_Government "Svyrydenko Government")
+        
+*   [2019 Ukrainian parliamentary election](/wiki/2019_Ukrainian_parliamentary_election "2019 Ukrainian parliamentary election")
+    
+*   [2019 Trump–Ukraine scandal](/wiki/2019_Trump%E2%80%93Ukraine_scandal "2019 Trump–Ukraine scandal")
+    *   [conspiracy theories](/wiki/Conspiracy_theories_related_to_the_Trump%E2%80%93Ukraine_scandal "Conspiracy theories related to the Trump–Ukraine scandal")
+        
+*   [COVID-19 pandemic](/wiki/COVID-19_pandemic_in_Ukraine "COVID-19 pandemic in Ukraine")
+    
+*   [Great Construction](/wiki/Great_Construction "Great Construction")
+    
+*   [2020–2022 Ukrainian constitutional crisis](/wiki/2020%E2%80%932022_Ukrainian_constitutional_crisis "2020–2022 Ukrainian constitutional crisis")
+    
+*   [Sanctions against Ukrainian citizens](/wiki/NSDC_sanctions_against_Ukrainian_citizens "NSDC sanctions against Ukrainian citizens")
+    
+*   [Russo-Ukrainian War](/wiki/Russo-Ukrainian_War "Russo-Ukrainian War")
+    *   [Normandy Format](/wiki/Normandy_Format "Normandy Format")
+        
+*   [Association Trio](/wiki/Association_Trio "Association Trio")
+    
+*   [Russian invasion of Ukraine](/wiki/Russian_invasion_of_Ukraine "Russian invasion of Ukraine")
+    *   [prelude](/wiki/Prelude_to_the_Russian_invasion_of_Ukraine "Prelude to the Russian invasion of Ukraine")
+        
+    *   [assassination attempts](/wiki/Assassination_attempts_on_Volodymyr_Zelenskyy "Assassination attempts on Volodymyr Zelenskyy")
+        
+    *   [speeches](/wiki/Speeches_by_Volodymyr_Zelenskyy_during_the_Russian_invasion_of_Ukraine "Speeches by Volodymyr Zelenskyy during the Russian invasion of Ukraine")
+        
+    *   [Black Sea Grain Initiative](/wiki/Black_Sea_Grain_Initiative "Black Sea Grain Initiative")
+        
+    *   [U-24](/wiki/U-24_(association) "U-24 (association)")
+        
+    *   [Be Brave Like Ukraine](/wiki/Be_Brave_Like_Ukraine "Be Brave Like Ukraine")
+        
+    *   [United24](/wiki/United24 "United24")
+        
+    *   [Ukraine Recovery Conference](/wiki/Ukraine_Recovery_Conference "Ukraine Recovery Conference")
+        
+    *   [Accession of Ukraine to the European Union](/wiki/Accession_of_Ukraine_to_the_European_Union "Accession of Ukraine to the European Union")
+        
+    *   [2023 visit by Joe Biden to Ukraine](/wiki/2023_visit_by_Joe_Biden_to_Ukraine "2023 visit by Joe Biden to Ukraine")
+        
+    *   [2023 visit by Fumio Kishida to Ukraine](/wiki/2023_visit_by_Fumio_Kishida_to_Ukraine "2023 visit by Fumio Kishida to Ukraine")
+        
+    *   [2023 visit by Yoon Suk Yeol to Ukraine](/wiki/2023_visit_by_Yoon_Suk_Yeol_to_Ukraine "2023 visit by Yoon Suk Yeol to Ukraine")
+        
+    *   [June 2024 Ukraine peace summit](/wiki/June_2024_Ukraine_peace_summit "June 2024 Ukraine peace summit")
+        
+    *   [2024 Ukrainian coup attempt allegations](/wiki/2024_Ukrainian_coup_attempt_allegations "2024 Ukrainian coup attempt allegations")
+        
+*   [Ukraine–United States Mineral Resources Agreement](/wiki/Ukraine%E2%80%93United_States_Mineral_Resources_Agreement "Ukraine–United States Mineral Resources Agreement")
+    
+*   [International trips](/wiki/List_of_international_presidential_trips_made_by_Volodymyr_Zelenskyy "List of international presidential trips made by Volodymyr Zelenskyy")
+    *   [2022 United States visit](/wiki/2022_visit_by_Volodymyr_Zelenskyy_to_the_United_States "2022 visit by Volodymyr Zelenskyy to the United States")
+        
+    *   [2023 United Kingdom visit](/wiki/2023_visit_by_Volodymyr_Zelenskyy_to_the_United_Kingdom "2023 visit by Volodymyr Zelenskyy to the United Kingdom")
+        
+    *   [May 2023 Europe visits](/wiki/May_2023_European_visits_by_Volodymyr_Zelenskyy "May 2023 European visits by Volodymyr Zelenskyy")
+        
+    *   [2025 Trump Oval Office meeting](/wiki/2025_Trump%E2%80%93Zelenskyy_Oval_Office_meeting "2025 Trump–Zelenskyy Oval Office meeting")
+        
+
+Elections
+
+*   [2019 presidential election](/wiki/2019_Ukrainian_presidential_election "2019 Ukrainian presidential election")
+    
+
+Entertainment career  
+([Kvartal 95 Studio](/wiki/Kvartal_95_Studio "Kvartal 95 Studio")
+)
+
+Film
+
+|     |     |
+| --- | --- |
+| Directed | *   _[Me. [Kent Brantly](/wiki/Kent_Brantly "Kent Brantly")<br>     / Ella Watson-Stryker / Foday Gollah / [Salome Karwah](/wiki/Salome_Karwah "Salome Karwah") (2014)<br>*   [Angela Merkel](/wiki/Angela_Merkel "Angela Merkel")<br>     (2015)<br>*   [Donald Trump](/wiki/Donald_Trump "Donald Trump")<br>     (2016)<br>*   [The Silence Breakers](/wiki/MeToo_movement "MeToo movement")<br>     (2017)<br>*   The Guardians: [Jamal Khashoggi](/wiki/Jamal_Khashoggi "Jamal Khashoggi")<br>     / [Maria Ressa](/wiki/Maria_Ressa "Maria Ressa")<br>     / [Wa Lone](/wiki/Wa_Lone "Wa Lone")<br>     / [Kyaw Soe Oo](/wiki/Kyaw_Soe_Oo "Kyaw Soe Oo")<br>     / Staff of _[The Capital](/wiki/Capital_Gazette_shooting "Capital Gazette shooting")<br>    _ (2018)<br>*   [Greta Thunberg](/wiki/Greta_Thunberg "Greta Thunberg")<br>     (2019)<br>*   [Joe Biden](/wiki/Joe_Biden "Joe Biden")<br>     / [Kamala Harris](/wiki/Kamala_Harris "Kamala Harris")<br>     (2020)<br>*   [Elon Musk](/wiki/Elon_Musk "Elon Musk")<br>     (2021)<br>*   Volodymyr Zelenskyy / [Spirit of Ukraine](/wiki/Ukrainians "Ukrainians")<br>     (2022)<br>*   [Taylor Swift](/wiki/Taylor_Swift "Taylor Swift")<br>     (2023)<br>*   [Donald Trump](/wiki/Donald_Trump "Donald Trump")<br>     (2024) |
+
+[Russian invasion of Ukraine](/wiki/Russian_invasion_of_Ukraine "Russian invasion of Ukraine")
+
+Part of the [Russo-Ukrainian War](/wiki/Russo-Ukrainian_War "Russo-Ukrainian War")
+
+| Overview |     |
+| --- | --- |
+| General | *   [Outline](/wiki/Outline_of_the_Russo-Ukrainian_War "Outline of the Russo-Ukrainian War")<br>    <br>*   [Timeline](/wiki/Timeline_of_the_Russian_invasion_of_Ukraine "Timeline of the Russian invasion of Ukraine")<br>    *   [Prelude](/wiki/Timeline_of_the_prelude_to_the_Russian_invasion_of_Ukraine "Timeline of the prelude to the Russian invasion of Ukraine")<br>        <br>    *   [Feb–Apr 2022](/wiki/Timeline_of_the_Russian_invasion_of_Ukraine_(24_February_%E2%80%93_7_April_2022) "Timeline of the Russian invasion of Ukraine (24 February – 7 April 2022)")<br>        <br>    *   [Apr–Aug 2022](/wiki/Timeline_of_the_Russian_invasion_of_Ukraine_(8_April_%E2%80%93_28_August_2022) "Timeline of the Russian invasion of Ukraine (8 April – 28 August 2022)")<br>        <br>    *   [Aug–Nov 2022](/wiki/Timeline_of_the_Russian_invasion_of_Ukraine_(29_August_%E2%80%93_11_November_2022) "Timeline of the Russian invasion of Ukraine (29 August – 11 November 2022)")<br>        <br>    *   [Nov 2022 – Jun 2023](/wiki/Timeline_of_the_Russian_invasion_of_Ukraine_(12_November_2022_%E2%80%93_7_June_2023) "Timeline of the Russian invasion of Ukraine (12 November 2022 – 7 June 2023)")<br>        <br>    *   [Jun–Aug 2023](/wiki/Timeline_of_the_Russian_invasion_of_Ukraine_(8_June_2023_%E2%80%93_31_August_2023) "Timeline of the Russian invasion of Ukraine (8 June 2023 – 31 August 2023)")<br>        <br>    *   [Sep–Nov 2023](/wiki/Timeline_of_the_Russian_invasion_of_Ukraine_(1_September_%E2%80%93_30_November_2023) "Timeline of the Russian invasion of Ukraine (1 September – 30 November 2023)")<br>        <br>    *   [Dec 2023 – Mar 2024](/wiki/Timeline_of_the_Russian_invasion_of_Ukraine_(1_December_2023_%E2%80%93_31_March_2024) "Timeline of the Russian invasion of Ukraine (1 December 2023 – 31 March 2024)")<br>        <br>    *   [Apr–Jul 2024](/wiki/Timeline_of_the_Russian_invasion_of_Ukraine_(1_April_%E2%80%93_31_July_2024) "Timeline of the Russian invasion of Ukraine (1 April – 31 July 2024)")<br>        <br>    *   [Aug–Dec 2024](/wiki/Timeline_of_the_Russian_invasion_of_Ukraine_(1_August_%E2%80%93_31_December_2024) "Timeline of the Russian invasion of Ukraine (1 August – 31 December 2024)")<br>        <br>    *   [Jan–May 2025](/wiki/Timeline_of_the_Russian_invasion_of_Ukraine_(1_January_2025_%E2%80%93_31_May_2025) "Timeline of the Russian invasion of Ukraine (1 January 2025 – 31 May 2025)")<br>        <br>    *   [Jun 2025 – present](/wiki/Timeline_of_the_Russian_invasion_of_Ukraine_(1_June_2025_%E2%80%93_present) "Timeline of the Russian invasion of Ukraine (1 June 2025 – present)")<br>        <br>*   [Aerial warfare](/wiki/Aerial_warfare_in_the_Russian_invasion_of_Ukraine "Aerial warfare in the Russian invasion of Ukraine")<br>    <br>*   [Defense lines](/wiki/Russian_defense_lines_during_the_Russian_invasion_of_Ukraine "Russian defense lines during the Russian invasion of Ukraine")<br>    <br>*   [Foreign fighters](/wiki/Foreign_fighters_in_the_Russo-Ukrainian_War "Foreign fighters in the Russo-Ukrainian War")<br>    <br>*   [Information war](/wiki/Russian_information_war_against_Ukraine "Russian information war against Ukraine")<br>    <br>*   [Naval warfare](/wiki/Naval_warfare_in_the_Russian_invasion_of_Ukraine "Naval warfare in the Russian invasion of Ukraine")<br>    <br>*   [Legality](/wiki/Legality_of_the_Russian_invasion_of_Ukraine "Legality of the Russian invasion of Ukraine")<br>    <br>*   [Map](/wiki/Template:Russo-Ukrainian_War_detailed_map "Template:Russo-Ukrainian War detailed map")<br>    <br>*   [Order of battle](/wiki/Russian_invasion_of_Ukraine_order_of_battle "Russian invasion of Ukraine order of battle")<br>    <br>*   [Peace negotiations](/wiki/Peace_negotiations_in_the_Russian_invasion_of_Ukraine "Peace negotiations in the Russian invasion of Ukraine")<br>    *   [Ukraine's Peace Formula](/wiki/Ukraine%27s_Peace_Formula "Ukraine's Peace Formula")<br>        <br>    *   [China peace proposal](/wiki/China%27s_Position_on_the_Political_Settlement_of_the_Ukrainian_Crisis "China's Position on the Political Settlement of the Ukrainian Crisis")<br>        <br>    *   [June 2024 peace summit](/wiki/June_2024_Ukraine_peace_summit "June 2024 Ukraine peace summit")<br>        <br>*   [Proposed no-fly zone](/wiki/Proposed_no-fly_zone_in_the_Russian_invasion_of_Ukraine "Proposed no-fly zone in the Russian invasion of Ukraine")<br>    <br>*   [Red lines](/wiki/Red_lines_in_the_Russo-Ukrainian_War "Red lines in the Russo-Ukrainian War")<br>    <br>*   [Reparations](/wiki/Reparations_from_Russia_after_the_Russo-Ukrainian_War "Reparations from Russia after the Russo-Ukrainian War")<br>    <br>*   [Territorial control](/wiki/Territorial_control_during_the_Russo-Ukrainian_War "Territorial control during the Russo-Ukrainian War") |
+| [Prelude](/wiki/Prelude_to_the_Russian_invasion_of_Ukraine "Prelude to the Russian invasion of Ukraine") | *   [Reactions](/wiki/Reactions_to_the_2021%E2%80%932022_Russo-Ukrainian_crisis "Reactions to the 2021–2022 Russo-Ukrainian crisis")<br>    <br>*   [Disinformation](/wiki/Disinformation_in_the_Russian_invasion_of_Ukraine "Disinformation in the Russian invasion of Ukraine")<br>    *   [Ukraine bioweapons conspiracy theory](/wiki/Ukraine_bioweapons_conspiracy_theory "Ukraine bioweapons conspiracy theory")<br>        <br>    *   [Ukraine and weapons of mass destruction](/wiki/Ukraine_and_weapons_of_mass_destruction "Ukraine and weapons of mass destruction")<br>        <br>*   [2021 Russia–United States summit](/wiki/2021_Russia%E2%80%93United_States_summit "2021 Russia–United States summit")<br>    <br>*   [2021 Black Sea incident](/wiki/2021_Black_Sea_incident "2021 Black Sea incident")<br>    <br>*   [Belarus–European Union border crisis](/wiki/Belarus%E2%80%93European_Union_border_crisis "Belarus–European Union border crisis")<br>    <br>*   "[On the Historical Unity of Russians and Ukrainians](/wiki/On_the_Historical_Unity_of_Russians_and_Ukrainians "On the Historical Unity of Russians and Ukrainians")<br>    "<br>*   [Crimea Platform](/wiki/Crimea_Platform "Crimea Platform")<br>    <br>*   [Zapad 2021](/wiki/Zapad_2021 "Zapad 2021")<br>    <br>*   [December 2021 ultimatum](/wiki/December_2021_Russian_ultimatum_to_NATO "December 2021 Russian ultimatum to NATO")<br>    <br>*   [2022 Ukraine cyberattacks](/wiki/2022_Ukraine_cyberattacks "2022 Ukraine cyberattacks")<br>    <br>*   [Zametil 2022](/wiki/Zametil_2022 "Zametil 2022")<br>    <br>*   [Union Resolve 2022](/wiki/Union_Resolve_2022 "Union Resolve 2022")<br>    <br>*   [Stanytsia Luhanska kindergarten bombing](/wiki/Stanytsia_Luhanska_kindergarten_bombing "Stanytsia Luhanska kindergarten bombing")<br>    <br>*   [British–Polish–Ukrainian trilateral pact](/wiki/British%E2%80%93Polish%E2%80%93Ukrainian_trilateral_pact "British–Polish–Ukrainian trilateral pact")<br>    <br>*   [Evacuation of the Donetsk PR and Luhansk PR](/wiki/2022_evacuation_of_the_Donetsk_People%27s_Republic_and_the_Luhansk_People%27s_Republic "2022 evacuation of the Donetsk People's Republic and the Luhansk People's Republic")<br>    <br>*   [Mobilization in Donetsk PR and Luhansk PR](/wiki/2022_mobilization_in_the_Donetsk_People%27s_Republic_and_the_Luhansk_People%27s_Republic "2022 mobilization in the Donetsk People's Republic and the Luhansk People's Republic")<br>    <br>*   "[Address concerning the events in Ukraine](/wiki/Address_concerning_the_events_in_Ukraine "Address concerning the events in Ukraine")<br>    "<br>*   "[On conducting a special military operation](/wiki/On_conducting_a_special_military_operation "On conducting a special military operation")<br>    " |
+| Background | *   [Dissolution of the Soviet Union](/wiki/Dissolution_of_the_Soviet_Union "Dissolution of the Soviet Union")<br>    <br>*   [2014 pro-Russian unrest in Ukraine](/wiki/2014_pro-Russian_unrest_in_Ukraine "2014 pro-Russian unrest in Ukraine")<br>    <br>*   [Annexation of Crimea](/wiki/Annexation_of_Crimea_by_the_Russian_Federation "Annexation of Crimea by the Russian Federation")<br>    *   [reactions](/wiki/International_reactions_to_the_annexation_of_Crimea_by_the_Russian_Federation "International reactions to the annexation of Crimea by the Russian Federation")<br>        <br>*   [War in Donbas](/wiki/War_in_Donbas "War in Donbas")<br>    *   [2022 timeline](/wiki/Timeline_of_the_war_in_Donbas_(2022) "Timeline of the war in Donbas (2022)")<br>        <br>    *   [Minsk agreements](/wiki/Minsk_agreements "Minsk agreements")<br>        <br>    *   [humanitarian situation](/wiki/Humanitarian_situation_during_the_war_in_Donbas "Humanitarian situation during the war in Donbas")<br>        <br>    *   [international recognition of the Donetsk PR and Luhansk PR](/wiki/International_recognition_of_the_Donetsk_People%27s_Republic_and_the_Luhansk_People%27s_Republic "International recognition of the Donetsk People's Republic and the Luhansk People's Republic")<br>        <br>*   [Putinism](/wiki/Putinism "Putinism")<br>    *   _[Foundations of Geopolitics](/wiki/Foundations_of_Geopolitics "Foundations of Geopolitics")<br>        _<br>    *   [Novorossiya](/wiki/Novorossiya "Novorossiya")<br>        <br>    *   [Ruscism](/wiki/Ruscism "Ruscism")<br>        <br>    *   [Russian irredentism](/wiki/Russian_irredentism "Russian irredentism")<br>        <br>    *   [Russian imperialism](/wiki/Russian_imperialism "Russian imperialism") |
+| Foreign  <br>relations | *   [Russia–Ukraine](/wiki/Russia%E2%80%93Ukraine_relations "Russia–Ukraine relations")<br>    <br>*   [Belarus–Ukraine](/wiki/Belarus%E2%80%93Ukraine_relations "Belarus–Ukraine relations")<br>    <br>*   [Belarus–Russia](/wiki/Belarus%E2%80%93Russia_relations "Belarus–Russia relations")<br>    <br>*   [Russia–United States](/wiki/Russia%E2%80%93United_States_relations "Russia–United States relations")<br>    <br>*   [Ukraine–United States](/wiki/Ukraine%E2%80%93United_States_relations "Ukraine–United States relations")<br>    <br>*   [Russia–NATO](/wiki/Russia%E2%80%93NATO_relations "Russia–NATO relations")<br>    <br>*   [Ukraine–NATO](/wiki/Ukraine%E2%80%93NATO_relations "Ukraine–NATO relations")<br>    *   [enlargement of NATO](/wiki/Enlargement_of_NATO "Enlargement of NATO")<br>        <br>    *   [eastward expansion controversy](/wiki/Controversy_regarding_NATO%27s_eastward_expansion "Controversy regarding NATO's eastward expansion")<br>        <br>    *   [open door policy](/wiki/NATO_open_door_policy "NATO open door policy") |
+
+[Military engagements](/wiki/List_of_military_engagements_during_the_Russian_invasion_of_Ukraine "List of military engagements during the Russian invasion of Ukraine")
+
+[Southern  \
+Ukraine](/wiki/Southern_front_of_the_Russian_invasion_of_Ukraine "Southern front of the Russian invasion of Ukraine")
+
+*   [Snake Island campaign](/wiki/Snake_Island_campaign "Snake Island campaign")
+    
+*   [Siege of Mariupol](/wiki/Siege_of_Mariupol "Siege of Mariupol")
+    
+*   [Battle of Kherson](/wiki/Battle_of_Kherson "Battle of Kherson")
+    
+*   [Capture of Melitopol](/wiki/Capture_of_Melitopol "Capture of Melitopol")
+    
+*   [Battle of Mykolaiv](/wiki/Battle_of_Mykolaiv "Battle of Mykolaiv")
+    
+*   [Battle of Enerhodar](/wiki/Battle_of_Enerhodar "Battle of Enerhodar")
+    
+*   [Battle of Voznesensk](/wiki/Battle_of_Voznesensk "Battle of Voznesensk")
+    
+*   [Kherson counteroffensive](/wiki/2022_Kherson_counteroffensive "2022 Kherson counteroffensive")
+    *   [Liberation of Kherson](/wiki/Liberation_of_Kherson "Liberation of Kherson")
+        
+*   [Dnieper campaign](/wiki/Dnieper_campaign_(2022%E2%80%93present) "Dnieper campaign (2022–present)")
+    *   [Destruction of the Kakhovka Dam](/wiki/Destruction_of_the_Kakhovka_Dam "Destruction of the Kakhovka Dam")
+        
+
+[Eastern  \
+Ukraine](/wiki/Eastern_front_of_the_Russian_invasion_of_Ukraine "Eastern front of the Russian invasion of Ukraine")
+
+*   [Battle of Volnovakha](/wiki/Battle_of_Volnovakha "Battle of Volnovakha")
+    
+*   [Battle of Kharkiv](/wiki/Battle_of_Kharkiv_(2022) "Battle of Kharkiv (2022)")
+    
+*   [Battle of Izium](/wiki/Battle_of_Izium "Battle of Izium")
+    
+*   [Battle of Rubizhne](/wiki/Battle_of_Rubizhne "Battle of Rubizhne")
+    
+*   [Battle of Popasna](/wiki/Battle_of_Popasna "Battle of Popasna")
+    
+*   [Battle of Marinka](/wiki/Battle_of_Marinka_(2022%E2%80%932023) "Battle of Marinka (2022–2023)")
+    
+*   [Battle of Donbas](/wiki/Battle_of_Donbas_(2022) "Battle of Donbas (2022)")
+    *   [Battle of the Siverskyi Donets](/wiki/Battle_of_the_Siverskyi_Donets "Battle of the Siverskyi Donets")
+        
+    *   [Battle of Sievierodonetsk](/wiki/Battle_of_Sievierodonetsk_(2022) "Battle of Sievierodonetsk (2022)")
+        
+    *   [Battle of Lysychansk](/wiki/Battle_of_Lysychansk "Battle of Lysychansk")
+        
+    *   [Battle of Pisky](/wiki/Battle_of_Pisky "Battle of Pisky")
+        
+    *   [Battle of Bakhmut](/wiki/Battle_of_Bakhmut "Battle of Bakhmut")
+        
+    *   [Battle of Soledar](/wiki/Battle_of_Soledar "Battle of Soledar")
+        
+*   [Battle of Vuhledar](/wiki/Battle_of_Vuhledar "Battle of Vuhledar")
+    
+*   [Kharkiv counteroffensive](/wiki/2022_Kharkiv_counteroffensive "2022 Kharkiv counteroffensive")
+    *   [Battle of Lyman (September–October 2022)](/wiki/Battle_of_Lyman_(September%E2%80%93October_2022) "Battle of Lyman (September–October 2022)")
+        
+*   [Luhansk Oblast campaign](/wiki/Luhansk_Oblast_campaign "Luhansk Oblast campaign")
+    *   [Kupiansk](/wiki/Kupiansk_offensive "Kupiansk offensive")
+        
+    *   [Northeast Donetsk](/wiki/Northeast_Donetsk_campaign "Northeast Donetsk campaign")
+        
+*   [Battle of Avdiivka](/wiki/Battle_of_Avdiivka_(2023%E2%80%932024) "Battle of Avdiivka (2023–2024)")
+    
+*   [Battle of Chasiv Yar](/wiki/Battle_of_Chasiv_Yar "Battle of Chasiv Yar")
+    
+*   [Battle of Krasnohorivka](/wiki/Battle_of_Krasnohorivka "Battle of Krasnohorivka")
+    
+*   [Battle of Ocheretyne](/wiki/Battle_of_Ocheretyne "Battle of Ocheretyne")
+    
+*   [Battle of Toretsk](/wiki/Battle_of_Toretsk "Battle of Toretsk")
+    
+*   [Pokrovsk offensive](/wiki/Pokrovsk_offensive "Pokrovsk offensive")
+    
+*   [Battle of Kurakhove](/wiki/Battle_of_Kurakhove "Battle of Kurakhove")
+    
+
+[Northern  \
+Ukraine](/wiki/Northern_front_of_the_Russian_invasion_of_Ukraine "Northern front of the Russian invasion of Ukraine")
+
+*   [Capture of Chernobyl](/wiki/Capture_of_Chernobyl "Capture of Chernobyl")
+    
+*   [Russian Kyiv convoy](/wiki/Russian_Kyiv_convoy "Russian Kyiv convoy")
+    
+*   [Battle of Kyiv](/wiki/Battle_of_Kyiv_(2022) "Battle of Kyiv (2022)")
+    *   [Battle of Antonov Airport](/wiki/Battle_of_Antonov_Airport "Battle of Antonov Airport")
+        
+    *   [Battle of Hostomel](/wiki/Battle_of_Hostomel "Battle of Hostomel")
+        
+    *   [Battle of Bucha](/wiki/Battle_of_Bucha "Battle of Bucha")
+        
+    *   [Battle of Irpin](/wiki/Battle_of_Irpin "Battle of Irpin")
+        
+    *   [Battle of Makariv](/wiki/Battle_of_Makariv "Battle of Makariv")
+        
+    *   [Battle of Moshchun](/wiki/Battle_of_Moshchun "Battle of Moshchun")
+        
+    *   [Destruction of the Kozarovychi Dam](/wiki/Destruction_of_the_Kozarovychi_Dam "Destruction of the Kozarovychi Dam")
+        
+    *   [Battle of Brovary](/wiki/Battle_of_Brovary "Battle of Brovary")
+        
+*   [Battle of Slavutych](/wiki/Battle_of_Slavutych "Battle of Slavutych")
+    
+*   [Battle of Sumy](/wiki/Battle_of_Sumy "Battle of Sumy")
+    
+*   [Siege of Chernihiv](/wiki/Siege_of_Chernihiv "Siege of Chernihiv")
+    
+*   [Northeastern border skirmishes](/wiki/Northeastern_Ukraine%E2%80%93Russia_border_skirmishes "Northeastern Ukraine–Russia border skirmishes")
+    *   [2025 Sumy Oblast incursion](/wiki/2025_Sumy_Oblast_incursion "2025 Sumy Oblast incursion")
+        
+
+[Russia](/wiki/Attacks_in_Russia_during_the_Russian_invasion_of_Ukraine "Attacks in Russia during the Russian invasion of Ukraine")
+
+*   [Bryansk Oblast raid](/wiki/2023_Bryansk_Oblast_raid "2023 Bryansk Oblast raid")
+    
+*   [Kremlin drone attack](/wiki/Kremlin_drone_attack "Kremlin drone attack")
+    
+*   [Moscow drone strikes](/wiki/30_May_2023_Moscow_drone_strikes "30 May 2023 Moscow drone strikes")
+    
+*   [2023 Belgorod Oblast incursions](/wiki/2023_Belgorod_Oblast_incursions "2023 Belgorod Oblast incursions")
+    
+*   [30 December 2023 Belgorod shelling](/wiki/30_December_2023_Belgorod_shelling "30 December 2023 Belgorod shelling")
+    
+*   [February 2024 Belgorod missile strike](/wiki/February_2024_Belgorod_missile_strike "February 2024 Belgorod missile strike")
+    
+*   [May 2024 Belgorod missile strike](/wiki/May_2024_Belgorod_missile_strike "May 2024 Belgorod missile strike")
+    
+*   [March 2024 western Russia incursion](/wiki/March_2024_western_Russia_incursion "March 2024 western Russia incursion")
+    
+*   [2024 Kursk offensive](/wiki/2024_Kursk_offensive "2024 Kursk offensive")
+    *   [occupation](/wiki/Ukrainian_occupation_of_Kursk_Oblast "Ukrainian occupation of Kursk Oblast")
+        
+    *   [Battles for Olgovskiy Forest](/wiki/Battles_for_Olgovskiy_Forest "Battles for Olgovskiy Forest")
+        
+*   [Toropets depot explosions](/wiki/Toropets_depot_explosions "Toropets depot explosions")
+    
+*   [2025 Belgorod Oblast incursion](/wiki/2025_Belgorod_Oblast_incursion "2025 Belgorod Oblast incursion")
+    
+
+Airstrikes  
+by city
+
+*   [Chernihiv strikes](/wiki/Chernihiv_strikes_(2022%E2%80%93present) "Chernihiv strikes (2022–present)")
+    
+*   [Dnipro strikes](/wiki/Dnipro_strikes_(2022%E2%80%93present) "Dnipro strikes (2022–present)")
+    
+*   [Huliaipole strikes](/wiki/Shelling_of_Huliaipole "Shelling of Huliaipole")
+    
+*   [Ivano-Frankivsk strikes](/wiki/Ivano-Frankivsk_strikes_(2022%E2%80%93present) "Ivano-Frankivsk strikes (2022–present)")
+    
+*   [Kharkiv strikes](/wiki/Kharkiv_strikes_(2022%E2%80%93present) "Kharkiv strikes (2022–present)")
+    
+*   [Kherson strikes](/wiki/Kherson_strikes_(2022%E2%80%93present) "Kherson strikes (2022–present)")
+    
+*   [Khmelnytskyi strikes](/wiki/Khmelnytskyi_strikes_(2022%E2%80%93present) "Khmelnytskyi strikes (2022–present)")
+    
+*   [Kryvyi Rih strikes](/wiki/Kryvyi_Rih_strikes_(2022%E2%80%93present) "Kryvyi Rih strikes (2022–present)")
+    
+*   [Kyiv strikes](/wiki/Kyiv_strikes_(2022%E2%80%93present) "Kyiv strikes (2022–present)")
+    
+*   [Lviv strikes](/wiki/Lviv_strikes_(2022%E2%80%93present) "Lviv strikes (2022–present)")
+    
+*   [Mykolaiv strikes](/wiki/Mykolaiv_strikes_(2022%E2%80%93present) "Mykolaiv strikes (2022–present)")
+    
+*   [Odesa strikes](/wiki/Odesa_strikes_(2022%E2%80%93present) "Odesa strikes (2022–present)")
+    
+*   [Rivne strikes](/wiki/Rivne_strikes_(2022%E2%80%93present) "Rivne strikes (2022–present)")
+    
+*   [Vinnytsia strikes](/wiki/Vinnytsia_strikes_(2022%E2%80%93present) "Vinnytsia strikes (2022–present)")
+    
+*   [Zaporizhzhia strikes](/wiki/Zaporizhzhia_strikes_(2022%E2%80%93present) "Zaporizhzhia strikes (2022–present)")
+    
+*   [Zhytomyr strikes](/wiki/Zhytomyr_attacks_(2022%E2%80%93present) "Zhytomyr attacks (2022–present)")
+    
+
+Airstrikes  
+on military  
+targets
+
+*   [Chuhuiv air base attack](/wiki/Chuhuiv_air_base_attack "Chuhuiv air base attack")
+    
+*   [Millerovo air base attack](/wiki/Millerovo_air_base_attack "Millerovo air base attack")
+    
+*   [Chornobaivka attacks](/wiki/2022_Chornobaivka_attacks "2022 Chornobaivka attacks")
+    
+*   [7 March 2022 Mykolaiv military barracks attack](/wiki/7_March_2022_Mykolaiv_military_barracks_attack "7 March 2022 Mykolaiv military barracks attack")
+    
+*   [Yavoriv military base attack](/wiki/Yavoriv_military_base_attack "Yavoriv military base attack")
+    
+*   [18 March 2022 Mykolaiv military quarters attack](/wiki/18_March_2022_Mykolaiv_military_quarters_attack "18 March 2022 Mykolaiv military quarters attack")
+    
+*   [Berdiansk port attack](/wiki/2022_Berdiansk_port_attack "2022 Berdiansk port attack")
+    
+*   [Sinking of the _Moskva_](/wiki/Sinking_of_the_Moskva "Sinking of the Moskva")
+    
+*   [Desna barracks airstrike](/wiki/Desna_barracks_airstrike "Desna barracks airstrike")
+    
+*   [Attack on Nova Kakhovka](/wiki/2022_attack_on_Nova_Kakhovka "2022 attack on Nova Kakhovka")
+    
+*   [Crimea attacks](/wiki/Crimea_attacks_(2022%E2%80%93present) "Crimea attacks (2022–present)")
+    *   [Saky air base attack](/wiki/2022_Saky_air_base_attack "2022 Saky air base attack")
+        
+    *   [Drone attack on the Sevastopol Naval Base](/wiki/2022_drone_attack_on_the_Sevastopol_Naval_Base "2022 drone attack on the Sevastopol Naval Base")
+        
+    *   [Missile strike on the Black Sea Fleet headquarters](/wiki/Missile_strike_on_the_Black_Sea_Fleet_headquarters "Missile strike on the Black Sea Fleet headquarters")
+        
+*   [Dyagilevo and Engels air bases attacks](/wiki/Dyagilevo_and_Engels_air_bases_attacks "Dyagilevo and Engels air bases attacks")
+    
+*   [Makiivka military quarters shelling](/wiki/Makiivka_military_quarters_shelling "Makiivka military quarters shelling")
+    
+*   [Machulishchy air base attack](/wiki/Machulishchy_air_base_attack "Machulishchy air base attack")
+    
+*   [Zarichne barracks airstrike](/wiki/Zarichne_barracks_airstrike "Zarichne barracks airstrike")
+    
+*   [Operation Spider's Web](/wiki/Operation_Spider%27s_Web "Operation Spider's Web")
+    
+
+Resistance
+
+|     |     |
+| --- | --- |
+| [Russian-occupied Ukraine](/wiki/Ukrainian_resistance_during_the_Russian_invasion_of_Ukraine "Ukrainian resistance during the Russian invasion of Ukraine") | *   [Popular Resistance of Ukraine](/wiki/Popular_Resistance_of_Ukraine "Popular Resistance of Ukraine")<br>    <br>*   [Berdiansk Partisan Army](/wiki/Berdiansk_Partisan_Army "Berdiansk Partisan Army")<br>    <br>*   [Yellow Ribbon](/wiki/Yellow_Ribbon_(movement) "Yellow Ribbon (movement)")<br>    <br>*   [Atesh](/wiki/Atesh "Atesh") |
+| [Belarusian](/wiki/Belarusian_partisan_movement_(2020%E2%80%93present) "Belarusian partisan movement (2020–present)")<br> and [Russian partisans](/wiki/Russian_partisan_movement_(2022%E2%80%93present) "Russian partisan movement (2022–present)") | *   [Assassination of Vladlen Tatarsky](/wiki/Assassination_of_Vladlen_Tatarsky "Assassination of Vladlen Tatarsky")<br>    <br>*   [Civic Council](/wiki/Civic_Council_(Armed_Forces_of_Ukraine) "Civic Council (Armed Forces of Ukraine)")<br>    <br>*   [Irpin Declaration](/wiki/Irpin_Declaration "Irpin Declaration")<br>    <br>*   [Killing of Darya Dugina](/wiki/Darya_Dugina#Killing "Darya Dugina")<br>    *   [National Republican Army](/wiki/National_Republican_Army_(Russia) "National Republican Army (Russia)")<br>        <br>*   [Military commissariats arsons](/wiki/Russian_military_commissariats_attacks "Russian military commissariats attacks")<br>    *   [Ust-Ilimsk military commissariat shooting](/wiki/Ust-Ilimsk_military_commissariat_shooting "Ust-Ilimsk military commissariat shooting")<br>        <br>    *   [Black Bridge](/wiki/Black_Bridge_(Russia) "Black Bridge (Russia)")<br>        <br>*   [Rail war in Russia](/wiki/Rail_war_in_Russia_(2022%E2%80%93present) "Rail war in Russia (2022–present)")<br>    *   [Stop the Wagons](/wiki/Stop_the_Wagons "Stop the Wagons")<br>        <br>    *   [Combat Organization of Anarcho-Communists](/wiki/Combat_Organization_of_Anarcho-Communists "Combat Organization of Anarcho-Communists")<br>        <br>*   [Rail war in Belarus](/wiki/Rail_war_in_Belarus_(2022%E2%80%93present) "Rail war in Belarus (2022–present)")<br>    *   [Busly liaciać](/wiki/Busly_liacia%C4%87 "Busly liaciać")<br>        <br>    *   [BYPOL](/wiki/BYPOL "BYPOL")<br>        <br>    *   [Community of Railway Workers](/wiki/Community_of_Railway_Workers_of_Belarus "Community of Railway Workers of Belarus")<br>        <br>    *   [Cyber Partisans](/wiki/Cyber_Partisans "Cyber Partisans") |
+
+Russian  
+occupations
+
+|     |     |
+| --- | --- |
+| *   [Flags used in Russian-occupied Ukraine](/wiki/Flags_used_in_Russian-occupied_Ukraine "Flags used in Russian-occupied Ukraine") |     |
+| Ongoing | *   [Annexation referendums](/wiki/2022_annexation_referendums_in_Russian-occupied_Ukraine "2022 annexation referendums in Russian-occupied Ukraine")<br>    <br>*   [Annexation of Donetsk, Kherson, Luhansk and Zaporizhzhia oblasts](/wiki/Russian_annexation_of_Donetsk,_Kherson,_Luhansk_and_Zaporizhzhia_oblasts "Russian annexation of Donetsk, Kherson, Luhansk and Zaporizhzhia oblasts")<br>    <br>*   [Elections in Russian-occupied Ukraine](/wiki/2023_elections_in_Russian-occupied_Ukraine "2023 elections in Russian-occupied Ukraine")<br>    <br>*   [Russian-occupied territories of Ukraine](/wiki/Russian-occupied_territories_of_Ukraine "Russian-occupied territories of Ukraine")<br>    *   [Autonomous Republic of Crimea and Sevastopol](/wiki/Russian_occupation_of_Crimea "Russian occupation of Crimea")<br>        <br>    *   [Donetsk Oblast](/wiki/Donetsk_People%27s_Republic "Donetsk People's Republic")<br>        <br>    *   [Kharkiv Oblast](/wiki/Russian_occupation_of_Kharkiv_Oblast "Russian occupation of Kharkiv Oblast")<br>        <br>    *   [Kherson Oblast](/wiki/Russian_occupation_of_Kherson_Oblast "Russian occupation of Kherson Oblast")<br>        <br>    *   [Luhansk Oblast](/wiki/Luhansk_People%27s_Republic "Luhansk People's Republic")<br>        <br>    *   [Mykolaiv Oblast](/wiki/Russian_occupation_of_Mykolaiv_Oblast "Russian occupation of Mykolaiv Oblast")<br>        <br>    *   [Zaporizhzhia Oblast](/wiki/Russian_occupation_of_Zaporizhzhia_Oblast "Russian occupation of Zaporizhzhia Oblast")<br>        <br>    *   [Sumy Oblast](/wiki/Russian_occupation_of_Sumy_Oblast "Russian occupation of Sumy Oblast")<br>         (2025, reentry) |
+| Previous | *   [Chernihiv Oblast](/wiki/Russian_occupation_of_Chernihiv_Oblast "Russian occupation of Chernihiv Oblast")<br>    <br>*   [Kyiv Oblast](/wiki/Russian_occupation_of_Kyiv_Oblast "Russian occupation of Kyiv Oblast")<br>    <br>*   [Odesa Oblast](/wiki/Snake_Island_campaign "Snake Island campaign")<br>    <br>*   [Sumy Oblast](/wiki/Russian_occupation_of_Sumy_Oblast "Russian occupation of Sumy Oblast")<br>     (2022)<br>*   [Zhytomyr Oblast](/wiki/Russian_occupation_of_Zhytomyr_Oblast "Russian occupation of Zhytomyr Oblast") |
+
+Potentially  
+related
+
+*   [Black Sea drone incident](/wiki/2023_Black_Sea_drone_incident "2023 Black Sea drone incident")
+    
+*   [Bridge collapses in Russia](/wiki/2025_Russia_bridge_collapses "2025 Russia bridge collapses")
+    
+*   [Chernobyl Nuclear Power Plant drone strike](/wiki/Chernobyl_Nuclear_Power_Plant_drone_strike "Chernobyl Nuclear Power Plant drone strike")
+    
+*   [Mystery fires in Russia](/wiki/Russian_mystery_fires_(2022%E2%80%93present) "Russian mystery fires (2022–present)")
+    
+*   [Transnistria attacks](/wiki/2022_Transnistria_attacks "2022 Transnistria attacks")
+    
+*   [Zagreb Tu-141 crash](/wiki/2022_Zagreb_Tu-141_crash "2022 Zagreb Tu-141 crash")
+    
+
+Other
+
+*   [2022 Crimean Bridge explosion](/wiki/2022_Crimean_Bridge_explosion "2022 Crimean Bridge explosion")
+    
+*   [2023 Crimean Bridge explosion](/wiki/2023_Crimean_Bridge_explosion "2023 Crimean Bridge explosion")
+    
+*   [2025 Crimean Bridge explosion](/wiki/2025_Crimean_Bridge_explosion "2025 Crimean Bridge explosion")
+    
+*   [Assassination attempts on Volodymyr Zelenskyy](/wiki/Assassination_attempts_on_Volodymyr_Zelenskyy "Assassination attempts on Volodymyr Zelenskyy")
+    
+*   [Coup d'état attempt in Ukraine](/wiki/Prelude_to_the_Russian_invasion_of_Ukraine#2022_Ukrainian_coup_d'état_attempt "Prelude to the Russian invasion of Ukraine")
+    
+*   [Bridges in the Russo-Ukrainian War](/wiki/Bridges_in_the_Russo-Ukrainian_War "Bridges in the Russo-Ukrainian War")
+    
+*   [Dragon drone](/wiki/Dragon_drone "Dragon drone")
+    
+*   [Violations of non-combatant airspaces](/wiki/Violations_of_non-combatant_airspaces_during_the_Russian_invasion_of_Ukraine "Violations of non-combatant airspaces during the Russian invasion of Ukraine")
+    *   [Missile explosion in Poland](/wiki/2022_missile_explosion_in_Poland "2022 missile explosion in Poland")
+        
+*   [Operation Synytsia](/wiki/Operation_Synytsia "Operation Synytsia")
+    
+*   [Ukraine and electronic warfare](/wiki/Ukraine_and_electronic_warfare "Ukraine and electronic warfare")
+    
+*   [Use of long-range weapons by Ukraine in Russia](/wiki/Use_of_long-range_weapons_by_Ukraine_in_Russia "Use of long-range weapons by Ukraine in Russia")
+    
+*   [2023 Ukrainian counteroffensive](/wiki/2023_Ukrainian_counteroffensive "2023 Ukrainian counteroffensive")
+    
+*   [2024 Ukrainian cyberattacks against Russia](/wiki/2024_Ukrainian_cyberattacks_against_Russia "2024 Ukrainian cyberattacks against Russia")
+    
+*   [Wagner Group rebellion](/wiki/Wagner_Group_rebellion "Wagner Group rebellion")
+    
+
+| [War crimes](/wiki/War_crimes_in_the_Russian_invasion_of_Ukraine "War crimes in the Russian invasion of Ukraine") |     |
+| --- | --- |
+| General | *   [Accusations of genocide in Donbas](/wiki/Accusations_of_genocide_in_Donbas "Accusations of genocide in Donbas")<br>    <br>*   [Allegations of genocide of Ukrainians](/wiki/Allegations_of_genocide_of_Ukrainians_in_the_Russian_invasion_of_Ukraine "Allegations of genocide of Ukrainians in the Russian invasion of Ukraine")<br>    *   [child abductions](/wiki/Child_abductions_in_the_Russo-Ukrainian_War "Child abductions in the Russo-Ukrainian War")<br>        <br>*   [Attacks on hospitals](/wiki/Russian_strikes_on_hospitals_during_the_Russian_invasion_of_Ukraine "Russian strikes on hospitals during the Russian invasion of Ukraine")<br>    <br>*   [Cluster munitions](/wiki/Use_of_cluster_munitions_in_the_Russian_invasion_of_Ukraine "Use of cluster munitions in the Russian invasion of Ukraine")<br>    <br>*   [Incendiary weapons](/wiki/Use_of_incendiary_weapons_in_the_Russo-Ukrainian_War "Use of incendiary weapons in the Russo-Ukrainian War")<br>    <br>*   [Landmines](/wiki/Landmines_in_Ukraine "Landmines in Ukraine")<br>    <br>*   [Russian filtration camps](/wiki/Russian_filtration_camps_for_Ukrainians "Russian filtration camps for Ukrainians")<br>    <br>*   [Russian mobile crematoriums](/wiki/Russian_usage_of_mobile_crematoriums_in_Ukraine "Russian usage of mobile crematoriums in Ukraine")<br>    <br>*   [Russian theft of Ukrainian grain](/wiki/2022_Russian_theft_of_Ukrainian_grain "2022 Russian theft of Ukrainian grain")<br>    <br>*   [Russian torture chambers](/wiki/Russian_torture_chambers_in_Ukraine "Russian torture chambers in Ukraine")<br>    <br>*   [Looting](/wiki/Looting_by_Russian_forces_during_the_Russian_invasion_of_Ukraine "Looting by Russian forces during the Russian invasion of Ukraine")<br>    <br>*   [Sexual violence](/wiki/Sexual_violence_in_the_Russian_invasion_of_Ukraine "Sexual violence in the Russian invasion of Ukraine")<br>    <br>*   [Mistreatment of prisoners of war](/wiki/Treatment_of_prisoners_of_war_in_the_Russian_invasion_of_Ukraine "Treatment of prisoners of war in the Russian invasion of Ukraine") |
+| [Attacks on  <br>civilians](/wiki/Attacks_on_civilians_in_the_Russian_invasion_of_Ukraine "Attacks on civilians in the Russian invasion of Ukraine") | *   [February 2022 Kharkiv cluster bombing](/wiki/February_2022_Kharkiv_cluster_bombing "February 2022 Kharkiv cluster bombing")<br>    <br>*   [Kharkiv government building airstrike](/wiki/Kharkiv_government_building_airstrike "Kharkiv government building airstrike")<br>    <br>*   [3 March Chernihiv bombing](/wiki/3_March_2022_Chernihiv_bombing "3 March 2022 Chernihiv bombing")<br>    <br>*   [Irpin refugee column shelling](/wiki/Irpin_refugee_column_shelling "Irpin refugee column shelling")<br>    <br>*   [Mariupol hospital airstrike](/wiki/Mariupol_hospital_airstrike "Mariupol hospital airstrike")<br>    <br>*   [Stara Krasnianka care house attack](/wiki/Stara_Krasnianka_care_house_attack "Stara Krasnianka care house attack")<br>    <br>*   [Mykolaiv cluster bombing](/wiki/Mykolaiv_cluster_bombing "Mykolaiv cluster bombing")<br>    <br>*   [March 2022 Donetsk attack](/wiki/March_2022_Donetsk_attack "March 2022 Donetsk attack")<br>    <br>*   [2022 Borodianka airstrikes](/wiki/Bombing_of_Borodianka "Bombing of Borodianka")<br>    <br>*   [Chernihiv breadline attack](/wiki/16_March_2022_Chernihiv_breadline_attack "16 March 2022 Chernihiv breadline attack")<br>    <br>*   [Mariupol theatre airstrike](/wiki/Mariupol_theatre_airstrike "Mariupol theatre airstrike")<br>    <br>*   [Kyiv shopping centre bombing](/wiki/Kyiv_shopping_centre_bombing "Kyiv shopping centre bombing")<br>    <br>*   [Sumykhimprom ammonia leak](/wiki/Sumykhimprom_ammonia_leak "Sumykhimprom ammonia leak")<br>    <br>*   [March 2022 Kharkiv cluster bombing](/wiki/March_2022_Kharkiv_cluster_bombing "March 2022 Kharkiv cluster bombing")<br>    <br>*   [Mykolaiv government building missile strike](/wiki/Mykolaiv_government_building_missile_strike "Mykolaiv government building missile strike")<br>    <br>*   [Bucha massacre](/wiki/Bucha_massacre "Bucha massacre")<br>    <br>*   [Kramatorsk railway station attack](/wiki/Kramatorsk_railway_station_attack "Kramatorsk railway station attack")<br>    <br>*   [April 2022 Kharkiv cluster bombing](/wiki/April_2022_Kharkiv_cluster_bombing "April 2022 Kharkiv cluster bombing")<br>    <br>*   [Bilohorivka school bombing](/wiki/Bilohorivka_school_bombing "Bilohorivka school bombing")<br>    <br>*   [Shooting of Andrii Bohomaz](/wiki/Shooting_of_Andrii_Bohomaz "Shooting of Andrii Bohomaz")<br>    <br>*   [Maisky Market attack](/wiki/Maisky_Market_attack "Maisky Market attack")<br>    <br>*   [Kremenchuk shopping mall attack](/wiki/Kremenchuk_shopping_mall_attack "Kremenchuk shopping mall attack")<br>    <br>*   [Serhiivka missile strike](/wiki/Serhiivka_missile_strike "Serhiivka missile strike")<br>    <br>*   [Chasiv Yar missile strike](/wiki/Chasiv_Yar_missile_strike "Chasiv Yar missile strike")<br>    <br>*   [Olenivka prison massacre](/wiki/Olenivka_prison_massacre "Olenivka prison massacre")<br>    <br>*   [Kharkiv dormitories missile strike](/wiki/Kharkiv_dormitories_missile_strike "Kharkiv dormitories missile strike")<br>    <br>*   [Chaplyne railway station attack](/wiki/Chaplyne_railway_station_attack "Chaplyne railway station attack")<br>    <br>*   [Izium mass graves](/wiki/Izium_mass_graves "Izium mass graves")<br>    <br>*   [September 2022 Donetsk attack](/wiki/September_2022_Donetsk_attack "September 2022 Donetsk attack")<br>    <br>*   [Zaporizhzhia civilian convoy attack](/wiki/Zaporizhzhia_civilian_convoy_attack "Zaporizhzhia civilian convoy attack")<br>    <br>*   [Kupiansk civilian convoy shelling](/wiki/Kupiansk_civilian_convoy_shelling "Kupiansk civilian convoy shelling")<br>    <br>*   [Zaporizhzhia residential building airstrike](/wiki/2022_Zaporizhzhia_residential_building_airstrike "2022 Zaporizhzhia residential building airstrike")<br>    <br>*   [Russian strikes against Ukrainian infrastructure](/wiki/Russian_strikes_against_Ukrainian_infrastructure_(2022%E2%80%93present) "Russian strikes against Ukrainian infrastructure (2022–present)")<br>    <br>*   [2023 Dnipro residential building airstrike](/wiki/2023_Dnipro_residential_building_airstrike "2023 Dnipro residential building airstrike")<br>    <br>*   [Sloviansk airstrike](/wiki/April_2023_Sloviansk_airstrike "April 2023 Sloviansk airstrike")<br>    <br>*   [Uman missile strike](/wiki/2023_Uman_missile_strike "2023 Uman missile strike")<br>    <br>*   [Kramatorsk restaurant missile strike](/wiki/2023_Kramatorsk_restaurant_missile_strike "2023 Kramatorsk restaurant missile strike")<br>    <br>*   [Lyman cluster bombing](/wiki/Lyman_cluster_bombing "Lyman cluster bombing")<br>    <br>*   [2023 Pokrovsk missile strike](/wiki/2023_Pokrovsk_missile_strike "2023 Pokrovsk missile strike")<br>    <br>*   [Chernihiv missile strike](/wiki/August_2023_Chernihiv_missile_strike "August 2023 Chernihiv missile strike")<br>    <br>*   [Kostiantynivka missile strike](/wiki/September_2023_Kostiantynivka_missile_strike "September 2023 Kostiantynivka missile strike")<br>    <br>*   [Hroza missile attack](/wiki/Hroza_missile_attack "Hroza missile attack")<br>    <br>*   [Volnovakha massacre](/wiki/Volnovakha_massacre "Volnovakha massacre")<br>    <br>*   [December 2023 strikes](/wiki/29_December_2023_Russian_strikes_on_Ukraine "29 December 2023 Russian strikes on Ukraine")<br>    <br>*   [2024 Pokrovsk missile strike](/wiki/2024_Pokrovsk_missile_strike "2024 Pokrovsk missile strike")<br>    <br>*   [2024 Donetsk attack](/wiki/2024_Donetsk_attack "2024 Donetsk attack")<br>    <br>*   [Lysychansk missile strike](/wiki/2024_Lysychansk_missile_strike "2024 Lysychansk missile strike")<br>    <br>*   [6 March 2024 Odesa strike](/wiki/6_March_2024_Odesa_strike "6 March 2024 Odesa strike")<br>    <br>*   [March 2024 strikes](/wiki/22_March_2024_Russian_strikes_on_Ukraine "22 March 2024 Russian strikes on Ukraine")<br>    <br>*   [Human safari (terror campaign)](/wiki/Human_safari_(terror_campaign) "Human safari (terror campaign)")<br>    <br>*   [May 2024 Kharkiv strikes](/wiki/25_May_2024_Kharkiv_missile_strikes "25 May 2024 Kharkiv missile strikes")<br>    <br>*   [8 July 2024 strikes](/wiki/Kyiv_children%27s_hospital_airstrike "Kyiv children's hospital airstrike")<br>    <br>*   [2024 Kostiantynivka supermarket missile attack](/wiki/2024_Kostiantynivka_supermarket_missile_attack "2024 Kostiantynivka supermarket missile attack")<br>    <br>*   [26 August 2024 strikes](/wiki/26_August_2024_Russian_strikes_on_Ukraine "26 August 2024 Russian strikes on Ukraine")<br>    <br>*   [September 2024 Poltava strike](/wiki/September_2024_Poltava_strike "September 2024 Poltava strike")<br>    <br>*   [November 2024 strikes](/wiki/17_November_2024_Russian_strikes_on_Ukraine "17 November 2024 Russian strikes on Ukraine")<br>    <br>*   [February 2025 Poltava strike](/wiki/February_2025_Poltava_strike "February 2025 Poltava strike")<br>    <br>*   [2025 Sumy airstrike](/wiki/2025_Sumy_airstrike "2025 Sumy airstrike") |
+| Crimes  <br>against  <br>soldiers | *   [Torture of Russian soldiers in Mala Rohan](/wiki/Torture_of_Russian_soldiers_in_Mala_Rohan "Torture of Russian soldiers in Mala Rohan")<br>    <br>*   [Torture and castration of a Ukrainian POW in Pryvillia](/wiki/Torture_and_castration_of_a_Ukrainian_POW_in_Pryvillia "Torture and castration of a Ukrainian POW in Pryvillia")<br>    <br>*   [Rape of Donetsk People's Republic soldiers by Kadyrovites](/wiki/Rape_of_Donetsk_People%27s_Republic_soldiers_by_Kadyrovites "Rape of Donetsk People's Republic soldiers by Kadyrovites")<br>    <br>*   [Murder of Yevgeny Nuzhin](/wiki/Murder_of_Yevgeny_Nuzhin "Murder of Yevgeny Nuzhin")<br>    <br>*   [Makiivka surrender incident](/wiki/Makiivka_surrender_incident "Makiivka surrender incident")<br>    <br>*   [Execution of Oleksandr Matsievskyi](/wiki/Execution_of_Oleksandr_Matsievskyi "Execution of Oleksandr Matsievskyi")<br>    <br>*   [2022 Ukrainian prisoner of war beheading](/wiki/2022_Ukrainian_prisoner_of_war_beheading "2022 Ukrainian prisoner of war beheading") |
+| Legal cases | *   [ICC investigation](/wiki/International_Criminal_Court_investigation_in_Ukraine "International Criminal Court investigation in Ukraine")<br>    *   [Arrest warrants](/wiki/International_Criminal_Court_arrest_warrants_for_Russian_figures "International Criminal Court arrest warrants for Russian figures")<br>        <br>*   [ICJ court case](/wiki/Ukraine_v._Russian_Federation_(2022) "Ukraine v."
+
+# Your Summary
+Error while summarizing! 'SummarizeResultPrompt' object has no attribute 'retry_instruction' - Skipping the summary for https://en.wikipedia.org/wiki/Volodymyr_Zelenskyy.
+Useful result: From [Source](https://news.sky.com/story/ukraine-war-latest-russia-rape-putin-zelenskyy-12541713): 
+Content: The Sky News article discusses the ongoing war in Ukraine, mentioning meetings between Donald Trump's envoy and Vladimir Putin. It also reports on a call between Trump and Volodymyr Zelenskyy. The article mentions that Zelenskyy visited troops in the Sumy region. The article also mentions that the war began in 2022.
+
+Useful result: From [Source](https://www.aljazeera.com/news/2025/2/20/fact-check-did-ukraine-start-its-war-with-russia-as-trump-claims): 
+Content: Al Jazeera published an article on February 20, 2025, discussing the claim that Ukraine started the war with Russia. The article mentions that Donald Trump stated that Zelenskyy "started" the war. The article states that on February 24, 2022, Russian forces launched an invasion of Ukraine. <image:1>. The article also mentions that Putin announced a "special military operation" on February 24, 2022.
+
+Got 3 new web source(s):
+	1. https://www.britannica.com/event/2022-Russian-invasion-of-Ukraine
+	2. https://www.cirsd.org/en/horizons/horizons-summer-2022-issue-no.21/the-causes-and-consequences-of-the-ukraine-war
+	3. https://en.wikipedia.org/wiki/Russian_invasion_of_Ukraine
+Useful result: From [Source](https://www.britannica.com/event/2022-Russian-invasion-of-Ukraine): 
+Content: The Britannica article "Russia-Ukraine War" states that the full-scale invasion began on February 24, 2022, but the war between the two countries began in February 2014. The article mentions that between October and November 2021, Russia began a massive buildup of troops and military equipment along its border with Ukraine. On February 21, 2022, Putin recognized the independence of the self-proclaimed people’s republics of Donetsk and Luhansk. The article also includes images of the war <image:9153>, <image:9179>. The article was last updated on August 30, 2025, and was written by Michael Ray and fact-checked by The Editors of Encyclopaedia Britannica.
+
+Useful result: From [Source](https://www.cirsd.org/en/horizons/horizons-summer-2022-issue-no.21/the-causes-and-consequences-of-the-ukraine-war): 
+Content: The article from cirsd.org discusses the causes of the 2022 war in Ukraine. It mentions that Putin invaded Ukraine on February 24th, 2022. It also mentions the US and its allies' efforts to bring Ukraine into NATO, which Russia saw as a threat. The article also mentions that the "taproot of the crisis is the American-led effort to make Ukraine a Western bulwark on Russia’s borders." The author also mentions that Putin emphasized that Russia accepts “the new geopolitical reality that took shape after the dissolution of the USSR.” The article also mentions that President Biden was committed to bringing Ukraine into NATO.
+
+Useful result: From [Source](https://en.wikipedia.org/wiki/Russian_invasion_of_Ukraine): 
+Content: The Russian invasion of Ukraine began on February 24, 2022, escalating a conflict that started in 2014. The invasion followed Russia's build-up of troops near Ukraine's borders and demands to the West, including a ban on Ukraine joining NATO. On February 24, 2022, Vladimir Putin announced a "special military operation," citing support for Russian-backed breakaway republics in Donbas. The conflict has resulted in significant casualties, a refugee crisis, and global repercussions, including a world food crisis and disruptions to climate policy. The article also mentions the annexation of Crimea in 2014, which was preceded by the invasion of Crimea by Russian soldiers. <image:i>. The Normandy Format meeting in December 2019 was the only meeting between Zelenskyy and Putin.
+
+The claim 'Ukrainian President Volodymyr Zelenskyy started the 2022 war in Ukraine with Russia.' is false.
+Justification: The claim is false. Multiple sources, including a [Britannica article](https://www.britannica.com/event/2022-Russian-invasion-of-Ukraine) and a [Wikipedia article](https://en.wikipedia.org/wiki/Russian_invasion_of_Ukraine), indicate that the 2022 war was initiated by Russia's invasion of Ukraine on February 24, 2022, although the conflict has roots dating back to 2014.
+
+So, the overall veracity is: false
+Fact-check took 0:32 min.

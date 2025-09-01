@@ -1,0 +1,42 @@
+Extracting claims from Content: In February 2025 German Chancellor Olaf Scholz declared a state of emergency in Germany due to US President Donald Trump's peace plan for Ukraine.
+'Claim: "In February 2025 German Chancellor Olaf Scholz declared a state of emergency in Germany due to US President Donald Trump's peace plan for Ukraine."'
+Verifying Claim: "In February 2025 German Chancellor Olaf Scholz declared a state of emergency in Germany due to US President Donald Trump's peace plan for Ukraine."
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Olaf Scholz state of emergency February 2025')
+Failed to scrape https://en.iz.ru/en/1839824/2025-02-15/scholz-said-possibility-declaring-state-emergency-finance-ukraine
+Error 500: Server error.
+Skipping that URL.
+Skipping unsupported website: https://www.youtube.com/watch?v=4bIwzwsxc-E
+Got 3 new web source(s):
+	1. February 19, 2025 https://www.euronews.com/my-europe/2025/02/19/fact-check-scholz-did-not-call-for-german-state-of-emergency-over-russia-us-peace-talks
+	2. https://newsukraine.rbc.ua/news/scholz-proposes-declaring-state-of-emergency-1739502855.html
+	3. February 13, 2025 https://www.reuters.com/world/europe/there-must-be-no-imposed-peace-ukraine-says-germanys-scholz-2025-02-13/
+Useful result: From [Source](https://www.euronews.com/my-europe/2025/02/19/fact-check-scholz-did-not-call-for-german-state-of-emergency-over-russia-us-peace-talks): 
+Content: Euronews published a fact-check on February 19, 2025, stating that Olaf Scholz did not declare a state of emergency in Germany due to US peace talks with Russia. The article mentions that misleading claims were spreading online before the German elections. It clarifies that Scholz referred to "Notlage," an urgent situation, not a state of emergency ("Notstand"). <image:i>
+
+Useful result: From [Source](https://newsukraine.rbc.ua/news/scholz-proposes-declaring-state-of-emergency-1739502855.html): 
+Content: The article from RBC-Ukraine, authored by Kateryna Serohina, reports that Olaf Scholz proposed declaring a state of emergency in Germany due to the war in Ukraine. The article mentions recent statements from the Trump administration and a conversation between Trump and Putin on February 12. <image:9654>
+
+Useful result: From [Source](https://www.reuters.com/world/europe/there-must-be-no-imposed-peace-ukraine-says-germanys-scholz-2025-02-13/): 
+Content: Reuters published an article on February 13, 2025, stating that German Chancellor Olaf Scholz said there must be no imposed peace in Ukraine. The article mentions that U.S. President Donald Trump discussed the war in Ukraine with Russian President Vladimir Putin and Ukrainian President Volodymyr Zelenskiy. <image:9657>
+
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Donald Trump peace plan Ukraine Germany')
+Skipping unsupported website: https://www.facebook.com/GermanyinUSA/posts/president-trump-can-now-accomplish-an-important-step-towards-peace-said-chancell/1182006727292314/
+Got 3 new web source(s):
+	1. August 10, 2025 https://www.npr.org/2025/08/10/nx-s1-5497742/europe-trump-putin-alaska-ukraine-talks
+	2. https://www.theguardian.com/world/live/2025/aug/29/ukraine-russia-war-zelenskyy-putin-latest-europe-news-updates-live
+	3. June 13, 2025 https://www.atlanticcouncil.org/blogs/new-atlanticist/trump-promised-peace-through-strength-when-will-he-use-us-strength-to-bring-peace-to-ukraine/
+Useful result: From [Source](https://www.npr.org/2025/08/10/nx-s1-5497742/europe-trump-putin-alaska-ukraine-talks): 
+Content: NPR published an article on August 10, 2025, discussing a meeting between Donald Trump and Vladimir Putin in Alaska to discuss ending the war in Ukraine. The article mentions that European leaders, including German Chancellor Friedrich Merz, are urging for Ukraine to be included in the talks. <image:k>
+
+Useful result: From [Source](https://www.theguardian.com/world/live/2025/aug/29/ukraine-russia-war-zelenskyy-putin-latest-europe-news-updates-live): 
+Content: The Guardian reports on August 29, 2025, that French President Macron and German Chancellor Merz attended the 25th Franco-German Council of Ministers. The meeting included a pledge to provide more air defense systems to Ukraine. The article also mentions that Donald Trump's comments on EU digital regulations were pushed back by Merz. The article discusses a potential meeting between Putin and Zelenskyy, with a deadline for Russia to agree to the meeting. <image:9660>, <image:9662>, <image:9667>. The author is Jakub Krupa.
+
+Useful result: From [Source](https://www.atlanticcouncil.org/blogs/new-atlanticist/trump-promised-peace-through-strength-when-will-he-use-us-strength-to-bring-peace-to-ukraine/): 
+Content: The Atlantic Council published an article on June 5, 2025, discussing Donald Trump's approach to the war in Ukraine. The article mentions Trump's reluctance to take strong steps against Russia and his administration's decisions that disadvantage Ukraine. The article also mentions that the G7 members have decided not to release a joint communiqué. <image:9678>, <image:9676>, <image:9677>.
+
+The claim 'In February 2025 German Chancellor Olaf Scholz declared a state of emergency in Germany due to US President Donald Trump's peace plan for Ukraine.' is false.
+Justification: The claim is false. According to a Euronews fact-check from February 19, 2025, Olaf Scholz did not declare a state of emergency in Germany due to US peace talks with Russia; he referred to an urgent situation, not a state of emergency. Additionally, by August 2025, Friedrich Merz was the German Chancellor, not Olaf Scholz.
+
+So, the overall veracity is: false
+Fact-check took 1:25 min.

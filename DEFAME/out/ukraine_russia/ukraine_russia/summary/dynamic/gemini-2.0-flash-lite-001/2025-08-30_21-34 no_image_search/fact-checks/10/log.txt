@@ -1,0 +1,47 @@
+Extracting claims from Content: <image:8> This image shows fake children's toys that were photoshopped into the image by the Ukrainian Government after Kyiv's pediatric hospital was attacked by Russian cruise missiles on July 8, 2024.
+'Claim: "<image:8> This image shows fake children's toys that were photoshopped into the image by the Ukrainian Government after Kyiv's pediatric hospital was attacked by Russian cruise missiles on July 8, 2024."'
+Verifying Claim: "<image:8> This image shows fake children's toys that were photoshopped into the image by the Ukrainian Government after Kyiv's pediatric hospital was attacked by Russian cruise missiles on July 8, 2024."
+Not enough information yet. Continuing fact-check...
+Got 2 new web source(s):
+	1. https://kyivindependent.com/boys-body-found-under-rubble-in-kyiv/
+	2. https://newsukraine.rbc.ua/news/russian-strike-on-kyiv-number-of-killed-and-1720503127.html
+Useful result: From [Source](https://kyivindependent.com/boys-body-found-under-rubble-in-kyiv/): Found exact image on website with title: Boy's body found under rubble in Kyiv, death toll of July 8 attack ...
+Content: The Kyiv Independent published an article on July 9, 2024, reporting on a Russian strike in Kyiv on July 8, 2024, that hit a building in the Schevchenkyvskyi district, resulting in the death of a boy. <image:8> shows the aftermath of the attack. The article mentions that the Okhmatdyt hospital was also directly targeted.
+
+Useful result: From [Source](https://newsukraine.rbc.ua/news/russian-strike-on-kyiv-number-of-killed-and-1720503127.html): Found exact image on website with title: Russian strike on Kyiv - Number of killed and injured increases
+Content: The search result from News Ukraine, published on August 6, 2024, discusses a Russian missile attack on Kyiv on July 8, 2024, which hit the Okhmatdyt Children's Hospital. The article mentions that 27 people, including 4 children, were killed, and 117 were injured. The image <image:8> is present in the article. The author is Liliana Oleniak.
+
+Got 3 new web source(s):
+	1. July 11, 2024 https://www.hrw.org/news/2024/07/11/russias-july-8-attack-childrens-hospital-ukraine
+	2. July 09, 2024 https://press.un.org/en/2024/sc15761.doc.htm
+	3. https://en.wikipedia.org/wiki/8_July_2024_Russian_strikes_on_Ukraine
+Useful result: From [Source](https://www.hrw.org/news/2024/07/11/russias-july-8-attack-childrens-hospital-ukraine): 
+Content: Human Rights Watch published an article on July 11, 2024, about the Russian forces' attack on a children's hospital in Kyiv, Ukraine, on July 8, 2024. <image:k>. The attack killed at least 42 civilians, including five children. The article mentions that the hospital's director reported that the strike severely damaged several departments.
+
+Useful result: From [Source](https://press.un.org/en/2024/sc15761.doc.htm): 
+Content: The United Nations website reports on a missile attack on the Okhmatdyt children’s hospital in Kyiv on July 8, 2024. The attack is condemned by multiple parties as a war crime. The article mentions the hospital's intensive care, surgical, and oncology wards were severely damaged. <image:8> is not mentioned.
+
+Useful result: From [Source](https://en.wikipedia.org/wiki/8_July_2024_Russian_strikes_on_Ukraine): 
+Content: The Wikipedia article "8 July 2024 Russian strikes on Ukraine" describes a missile attack on Kyiv and other Ukrainian cities on July 8, 2024. The attacks resulted in at least 47 deaths and 189 injuries, including damage to the Okhmatdyt children's hospital in Kyiv. The article includes images of the damage. <image:i>. The Russian government claimed the strikes targeted defense industry targets and aviation bases. The international community, including the UN and various countries, condemned the attacks.
+
+Not enough information yet. Continuing fact-check...
+INFO: Dropping action 'reverse_search' as it was already performed.
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='image of Kyiv hospital attack July 8 2024 toys')
+Got 3 new web source(s):
+	1. https://www.reuters.com/pictures/russian-missile-attack-hits-ukraine-childrens-hospital-2024-07-08/
+	2. July 08, 2024 https://kyivindependent.com/russian-missile-attack-on-kyiv-hospitals-photos/
+	3. https://www.voanews.com/a/in-photos-attack-on-ukraine-children-s-hospital/7689653.html
+Useful result: From [Source](https://www.reuters.com/pictures/russian-missile-attack-hits-ukraine-childrens-hospital-2024-07-08/): 
+Content: The Reuters article, published on July 8, 2024, reports on a Russian missile attack on Ohmatdyt Children's Hospital in Kyiv, Ukraine. <image:8891> The article includes multiple images of the damaged hospital and people, including children, affected by the attack. The images were taken by Reuters photographers Gleb Garanich and Thomas Peter.
+
+Useful result: From [Source](https://kyivindependent.com/russian-missile-attack-on-kyiv-hospitals-photos/): 
+Content: The Kyiv Independent published an article on July 8, 2024, about the Russian missile attack on Kyiv hospitals. The article includes multiple images from Getty Images showing the damage to the Okhmatdyt Children's Hospital and the rescue efforts. <image:1>, <image:2>, <image:3>, <image:4>, <image:5>, <image:6>, <image:7>, <image:8>, <image:9>. The images show the aftermath of the attack, including injured children and rescue workers.
+
+Useful result: From [Source](https://www.voanews.com/a/in-photos-attack-on-ukraine-children-s-hospital/7689653.html): 
+Content: The Voice of America published an article on July 8, 2024, about a Russian missile attack on Okhmatdyt children's hospital in Kyiv, Ukraine. The article includes multiple images of the aftermath of the attack, showing the damaged hospital and rescuers at the scene. <image:8892>, <image:8893>, <image:8894>, <image:8895>.
+
+The claim '<image:8> This image shows fake children's toys that were photoshopped into the image by the Ukrainian Government after Kyiv's pediatric hospital was attacked by Russian cruise missiles on July 8, 2024.' is false.
+Justification: The claim that the image shows photoshopped toys is not supported by the evidence. While the image depicts toys amidst the rubble of a hospital, there is no evidence to suggest they were photoshopped. The attack on the Okhmatdyt Children's Hospital in Kyiv on July 8, 2024, is confirmed by multiple sources, but none of the provided images validate the claim of manipulation. Therefore, the claim is rated as false.
+
+So, the overall veracity is: false
+Fact-check took 0:54 min.
