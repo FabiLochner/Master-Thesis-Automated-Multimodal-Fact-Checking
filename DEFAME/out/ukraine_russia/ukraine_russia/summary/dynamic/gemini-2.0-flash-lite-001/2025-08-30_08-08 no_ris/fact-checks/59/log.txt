@@ -1,0 +1,37 @@
+Extracting claims from Content: <image:18> This image shows an authentic list realeased by Ukraine showing US politicians taking bribes from Ukraine. The highest bribe was 92 Million US-$ for Joe Biden.
+'Claim: "<image:18> This image shows an authentic list realeased by Ukraine showing US politicians taking bribes from Ukraine. The highest bribe was 92 Million US-$ for Joe Biden."'
+Verifying Claim: "<image:18> This image shows an authentic list realeased by Ukraine showing US politicians taking bribes from Ukraine. The highest bribe was 92 Million US-$ for Joe Biden."
+Not enough information yet. Continuing fact-check...
+Got 3 new web source(s):
+	1. February 13, 2025 https://finance.yahoo.com/news/elon-musk-questions-congress-members-190016734.html
+	2. March 17, 2021 https://www.yahoo.com/news/fact-check-no-house-speaker-172533305.html
+	3. November 06, 2023 https://theconversation.com/why-are-us-politicians-so-old-and-why-do-they-want-to-stay-in-office-217024
+Useful result: From [Source](https://finance.yahoo.com/news/elon-musk-questions-congress-members-190016734.html): 
+Content: The Yahoo Finance article, published on February 13, 2025, discusses Elon Musk's questioning of the wealth of members of Congress. The article mentions Joe Biden, Nancy Pelosi, Mitch McConnell, Chuck Schumer, and Elizabeth Warren, providing their annual salaries and net worths. <image:1230> The article also mentions that members of Congress can buy and sell stocks, which has drawn increased scrutiny.
+
+Useful result: From [Source](https://www.yahoo.com/news/fact-check-no-house-speaker-172533305.html): 
+Content: The Yahoo News article discusses the wealth of Nancy Pelosi and mentions her real estate investments, business partnerships, and stock holdings. The article states that Pelosi's assets are between $57 million and $271 million, with liabilities ranging from $20 million to $97 million. <image:1239>, <image:1241>, <image:1238>, <image:1240>. The article also mentions that Pelosi's husband, Paul Pelosi, is the owner of Financial Leasing Services Inc. The article was published on November 29, 2023.
+
+Useful result: From [Source](https://theconversation.com/why-are-us-politicians-so-old-and-why-do-they-want-to-stay-in-office-217024): 
+Content: The Conversation published an article on July 21, 2023, discussing the age of US politicians, including Joe Biden, Mitch McConnell, and Nancy Pelosi. <image:1243> The article mentions that Joe Biden is 81 years old and Donald Trump is 78. A Gallup Poll released in June 2024 found that about 67% of Americans say Biden is too old to be president.
+
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='wealth of US politicians')
+Skipping unsupported website: https://www.reddit.com/r/Infographics/comments/1eebb9t/richest_members_of_congress/
+Got 3 new web source(s):
+	1. https://rollcall.com/2018/03/02/every-member-of-congress-wealth-in-one-chart/
+	2. https://www.voronoiapp.com/Politics/Ranking-America%E2%80%99s-Richest-Politicians-263
+	3. https://ballotpedia.org/Changes_in_Net_Worth_of_U.S._Senators_and_Representatives_(Personal_Gain_Index)
+Useful result: From [Source](https://rollcall.com/2018/03/02/every-member-of-congress-wealth-in-one-chart/): 
+Content: Roll Call published a chart of the wealth of members of Congress. The chart is based on financial disclosures from 2016. <image:8286>
+
+Useful result: From [Source](https://www.voronoiapp.com/Politics/Ranking-America%E2%80%99s-Richest-Politicians-263): 
+Content: The search result from Voronoiapp.com shows a list of the richest politicians in the U.S. <image:8287>. The list includes Mitt Romney, Rick Scott, and others. The source is GoBankingRates, and the date is June 1, 2023.
+
+Useful result: From [Source](https://ballotpedia.org/Changes_in_Net_Worth_of_U.S._Senators_and_Representatives_(Personal_Gain_Index)): 
+Content: Ballotpedia provides information on the changes in net worth of U.S. Senators and Representatives. <image:8288>
+
+The claim '<image:18> This image shows an authentic list realeased by Ukraine showing US politicians taking bribes from Ukraine. The highest bribe was 92 Million US-$ for Joe Biden.' is false.
+Justification: The claim is false. While the provided evidence confirms the wealth of the politicians listed in the image, it does not support the assertion that the image is an authentic list released by Ukraine detailing bribes. The search results and image searches provide information on the net worth of the politicians, such as Joe Biden and Nancy Pelosi, but do not mention any bribes or the source of the image.
+
+So, the overall veracity is: false
+Fact-check took 0:29 min.

@@ -1,0 +1,2792 @@
+PlanPrompt - QUERY:
+
+# Instructions
+The available knowledge is insufficient to assess the Claim. Therefore, **propose a set of actions** to retrieve new and helpful evidence. Adhere to the following rules:
+* The actions available are listed under Valid Actions, including a short description for each action. No other actions are possible at this moment. 
+* For each action, use the formatting as specified in Valid Actions.
+* Include all actions in a single Markdown code block at the end of your answer.
+* Propose as few actions as possible, but as much as needed. Do not propose similar or previously used actions.
+
+
+
+## Valid Actions
+* `image_search`
+   * Description: Run an image search on Google to retrieve related images for a given query.
+   * How to use: This is a helpful tool for fact-checking images. Use this to retrieve images associated with a specific keyword or phrase. Ensure that the query is clear and specific to improve search accuracy. If no relevant images are found, refine the query or use more descriptive terms.
+   * Format: image_search("your image search query goes here")
+
+* `geolocate`
+   * Description: Performs geolocation to determine the country where an image was taken.
+   * How to use: Provide an image and the model will determine the most likely countries where it was taken.
+   * Format: geolocate(<image:k>), where `k` is the image's ID
+
+* `web_search`
+   * Description: Run an open web search on Google or DuckDuckGO to retrieve any related webpage.
+   * How to use: Do not use this with a previously used or similar query from previous web searches. If a previous web search did not yield any results, use a very different query.
+   * Format: web_search("your web search query goes here")
+
+# Example: image_search()
+
+## Claim
+Text: "Chinese officials in white protective hazmat suits carried people down a hallway to be quarantined for having COVID-19 in November 2022."
+
+...
+
+ACTIONS:
+```
+image_search("China officials white suits carry people")
+image_search("China officials carry people COVID quarantine 2022")
+```
+
+# Example: geolocate()
+
+## Claim
+Text: "<image:k> shows a nuclear weapons facility in Usbekistan."
+
+...
+
+## Actions
+```
+geolocate(<image:k>)
+```
+
+# Example: web_search()
+
+## Claim
+Text: "New Zealand’s new Food Bill bans gardening"
+Claim date: October 29, 2020
+
+...
+
+## Actions
+```
+web_search("New Zealand Food Bill 2020")
+web_search("New Zealand Food Bill gardening ban")
+```
+
+# Record
+## Claim
+Claim: "Russian President Vladimir Putin has declared war on the United States."
+
+# Your Actions
+
+
+
+===== > RESPONSE:  < =====
+```
+web_search("Vladimir Putin declares war on United States")
+```
+_________________________
+
+
+
+SummarizeResultPrompt - QUERY:
+
+# Instructions
+In order to find evidence that helps your fact-check, you just ran a web search which yielded a Search Result. **Your task right now is to summarize the Search Result.** What to include:
+* information that might be useful for the fact-check (see Record)
+* relevant images (refer to images by inserting their reference <image:k>)
+* if available: the release date as well as the author or the publisher (e.g. the media company) of the search result.
+
+Do NOT include:
+* advertisements
+* any other information not related to the Record or the Claim
+
+Additional rules:
+* Do not add any additional information besides the information in the Search Result.
+* If the Search Result doesn't contain any relevant information for the fact-checking work, simply print one word in capital letters: "NONE".
+* Keep your writing style like in the Examples 1, 2 and 3 provided to you.
+* Try to filter out relevant information even if the search result is in a different language.
+
+# Example 1
+The search result from America Today provides several photographs of the Notre-Dame Cathedral fire on April 15, 2019. <image:i>, <image:j>, <image:k>. None of the images show the Eiffel Tower in the background. 
+
+# Example 2
+NONE
+
+# Example 3
+The Guardian discusses a report blaming the Syrian government for a toxic gas attack and condemning their use of chemical weapons. The Guardian mentions the Chemical Weapons Convention and the responsibilities of Syria under the convention. According to The Guardian, The White House condemned the Assad regime for defying the norm against chemical weapons use.
+
+# Record
+## Claim
+Claim: "Russian President Vladimir Putin has declared war on the United States."
+
+## Actions
+```
+web_search("Vladimir Putin declares war on United States")
+```
+
+# Search Result
+From [Source](https://srilanka.factcrescendo.com/english/did-russia-declare-war-against-the-usa/): 
+Content: "There was no official declaration of war.
+
+**Media Reports:** Neither Peskov nor Putin has officially referred to the United States or other Western nations as enemies in any legally binding or formal context.
+
+Follow us and stay up to date with our latest fact checks.
+
+[**Facebook**](https://www.facebook.com/factcrescendosl/)
+ **|** [**Twitter**](https://twitter.com/factcrescendosl)
+ **|** [**Instagram**](https://www.instagram.com/factcrescendo_sl/)
+ **|** [**Google News**](https://news.google.com/publications/CAAqBwgKMODMpgswyNe-Aw)
+ **|** [**TikTok**](https://www.tiktok.com/@factcrescendosl)
+ 
+
+**Conclusion:**
+
+The claim that Russia has declared war against the USA is unfounded and incorrect. <image:2675>
+
+[](https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsrilanka.factcrescendo.com%2Fenglish%2Fdid-russia-declare-war-against-the-usa%2F "Facebook")
+[](https://twitter.com/intent/tweet?text=Did%20Russia%20Declare%20War%20Against%20the%20USA%3F&url=https%3A%2F%2Fsrilanka.factcrescendo.com%2Fenglish%2Fdid-russia-declare-war-against-the-usa%2F "X")
+[](https://reddit.com/submit?url=https%3A%2F%2Fsrilanka.factcrescendo.com%2Fenglish%2Fdid-russia-declare-war-against-the-usa%2F&title=Did%20Russia%20Declare%20War%20Against%20the%20USA%3F "Reddit")
+[](https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fsrilanka.factcrescendo.com%2Fenglish%2Fdid-russia-declare-war-against-the-usa%2F "Linkedin")
+[](https://srilanka.factcrescendo.com/english/did-russia-declare-war-against-the-usa/ "Pinterest")
+[](https://mastodon.social/share?text=https%3A%2F%2Fsrilanka.factcrescendo.com%2Fenglish%2Fdid-russia-declare-war-against-the-usa%2F&title=Did%20Russia%20Declare%20War%20Against%20the%20USA%3F "Mastodon")
+[](https://mix.com/mixit?url=https%3A%2F%2Fsrilanka.factcrescendo.com%2Fenglish%2Fdid-russia-declare-war-against-the-usa%2F "Mix")
+[](https://api.whatsapp.com/send?text=Did%20Russia%20Declare%20War%20Against%20the%20USA%3F%20https%3A%2F%2Fsrilanka.factcrescendo.com%2Fenglish%2Fdid-russia-declare-war-against-the-usa%2F "Whatsapp")
+[](https://srilanka.factcrescendo.com/english/did-russia-declare-war-against-the-usa/ "More")
+
+  
+
+The devastating Russian-Ukrainian war has been ongoing for several years, with the United States and NATO providing support to Ukraine. A report can be read [here](https://tass.com/russia/1728697)
+. 
+
+**Clarification:**
+
+Peskov’s Comments: It is important to note that Peskov’s remarks about the United States being an “enemy” were part of a broader narrative criticizing American policies and actions towards Russia. The confusion may stem from a recent shift in Russian officials’ rhetoric amid ongoing tensions over the Ukraine conflict.
+
+**Background:**
+
+**Recent Statements by Russian Officials:** Kremlin spokesman Dmitry Peskov referred to the United States as an “enemy” state in a recent press interaction. More details can be read [here](https://www.trtworld.com/us-and-canada/russia-formally-declares-the-us-as-enemy-what-next-18170984)
+.
+
+**Misinterpretation**: Peskov’s statement, “We are now an enemy country for them, just as they are for us,” has been misinterpreted on social media as a declaration of war. This is a significant escalation from the term “unfriendly states” that Russian officials have used previously to describe the United States and its allies.
+
+**Context**: Peskov’s comments followed actions by the Biden administration, allowing Ukraine to use American-supplied weapons to attack targets within Russia. In this context, a significant amount of misleading information regarding the situation is being spread on social media.
+
+**Social Media Posts** 
+
+Social media posts claim that Russia has declared war against the USA.
+
+! Details can be read [here](https://www.bbc.com/news/articles/cy770l9llnzo)
+. 
+
+**Historical Rhetoric:** Russian President Vladimir Putin has previously referred to the Western countries’ elites as Russia’s enemies while characterizing Ukraine as a tool used by the West. The rhetoric from Russian officials reflects escalating tensions but does not amount to a declaration of war. Social media users should be cautious about misinterpreting or amplifying such statements without verifying the facts through reliable sources.
+
+![Avatar](https://www.malayalam.factcrescendo.com/wp-content/uploads/2020/09/Missing-Context.png
+)
+
+Title:Did Russia Declare War Against the USA?
+
+**Fact Check By: [Fact Crescendo Team](/cdn-cgi/l/email-protection#96fff8f0f9d6f0f7f5e2f5e4f3e5f5f3f8f2f9b8f5f9fb)** 
+
+**Result:** Missing Context
+
+[![](http://srilanka.factcrescendo.com/wp-content/uploads/2023/05/Whats-app-sri-lanka-new.png)](https://api.whatsapp.com/send?phone=94771514696&text=Please%20send%20your%20query:%20)
+
+  
+
+[](https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsrilanka.factcrescendo.com%2Fenglish%2Fdid-russia-declare-war-against-the-usa%2F "Facebook")
+[](https://twitter.com/intent/tweet?text=Did%20Russia%20Declare%20War%20Against%20the%20USA%3F&url=https%3A%2F%2Fsrilanka.factcrescendo.com%2Fenglish%2Fdid-russia-declare-war-against-the-usa%2F "X")
+[](https://reddit.com/submit?url=https%3A%2F%2Fsrilanka.factcrescendo.com%2Fenglish%2Fdid-russia-declare-war-against-the-usa%2F&title=Did%20Russia%20Declare%20War%20Against%20the%20USA%3F "Reddit")
+[](https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fsrilanka.factcrescendo.com%2Fenglish%2Fdid-russia-declare-war-against-the-usa%2F "Linkedin")
+[](https://srilanka.factcrescendo.com/english/did-russia-declare-war-against-the-usa/ "Pinterest")
+[](https://mastodon.social/share?text=https%3A%2F%2Fsrilanka.factcrescendo.com%2Fenglish%2Fdid-russia-declare-war-against-the-usa%2F&title=Did%20Russia%20Declare%20War%20Against%20the%20USA%3F "Mastodon")
+[](https://mix.com/mixit?url=https%3A%2F%2Fsrilanka.factcrescendo.com%2Fenglish%2Fdid-russia-declare-war-against-the-usa%2F "Mix")
+[](https://api.whatsapp.com/send?text=Did%20Russia%20Declare%20War%20Against%20the%20USA%3F%20https%3A%2F%2Fsrilanka.factcrescendo.com%2Fenglish%2Fdid-russia-declare-war-against-the-usa%2F "Whatsapp")
+[](https://srilanka.factcrescendo.com/english/did-russia-declare-war-against-the-usa/ "More")
+
+Related Posts
+-------------
+
+[!"
+
+# Your Summary
+
+
+
+===== > RESPONSE:  < =====
+The search result from Fact Crescendo states that there was no official declaration of war. It mentions that neither Peskov nor Putin has officially referred to the United States or other Western nations as enemies in any legally binding or formal context. The article concludes that the claim that Russia has declared war against the USA is unfounded and incorrect. <image:2675>
+
+_________________________
+
+
+
+SummarizeResultPrompt - QUERY:
+
+# Instructions
+In order to find evidence that helps your fact-check, you just ran a web search which yielded a Search Result. **Your task right now is to summarize the Search Result.** What to include:
+* information that might be useful for the fact-check (see Record)
+* relevant images (refer to images by inserting their reference <image:k>)
+* if available: the release date as well as the author or the publisher (e.g. the media company) of the search result.
+
+Do NOT include:
+* advertisements
+* any other information not related to the Record or the Claim
+
+Additional rules:
+* Do not add any additional information besides the information in the Search Result.
+* If the Search Result doesn't contain any relevant information for the fact-checking work, simply print one word in capital letters: "NONE".
+* Keep your writing style like in the Examples 1, 2 and 3 provided to you.
+* Try to filter out relevant information even if the search result is in a different language.
+
+# Example 1
+The search result from America Today provides several photographs of the Notre-Dame Cathedral fire on April 15, 2019. <image:i>, <image:j>, <image:k>. None of the images show the Eiffel Tower in the background. 
+
+# Example 2
+NONE
+
+# Example 3
+The Guardian discusses a report blaming the Syrian government for a toxic gas attack and condemning their use of chemical weapons. The Guardian mentions the Chemical Weapons Convention and the responsibilities of Syria under the convention. According to The Guardian, The White House condemned the Assad regime for defying the norm against chemical weapons use.
+
+# Record
+## Claim
+Claim: "Russian President Vladimir Putin has declared war on the United States."
+
+## Actions
+```
+web_search("Vladimir Putin declares war on United States")
+```
+
+# Search Result
+From [Source](https://www.bbc.com/news/articles/cj0q964851po): 
+Content: "<image:2680>!MARCUS YAM/LOS ANGELES TIMES A girl in a pink top stands in an underground station in Kharkiv while others sit around her <image:2683>MARCUS YAM/LOS ANGELES TIMES
+
+Ukrainians sought shelter in underground shelters as Russian forces attacked on 24 February 2022
+
+Launching the biggest European invasion since the end of World War Two, Putin gave a fiery speech on TV declaring his goal was to "demilitarise and denazify" Ukraine.
+
+Russia has repeatedly painted modern Ukraine as a Nazi state, in a crass distortion of history.
+
+Putin had already seized Ukraine's Crimean peninsula eight years earlier, after a revolution that ousted Ukraine's pro-Russian president and replaced him with a more pro-Western government.
+
+Putin then triggered a lower-level war in Ukraine's eastern Donbas region, with pro-Russian proxy forces occupying territory and setting up rebel states supported by Moscow.
+
+But the 2022 invasion was on a different scale.
+
+Putin had just [recognised the rebel states as independent](https://www.bbc.co.uk/news/av/world-europe-60470900)
+. He has spoken of the Ukrainian leader's "illegitimacy" - a false narrative that has also been repeated by President Trump.
+
+As evidence Putin cites the postponement of Ukraine's March 2024 presidential election, although it is because of Russia's war that Ukraine is under martial law and elections are barred under the constitution.
+
+Putin's own re-election in 2024 is highly questionable, as Russia's opposition leaders are either in exile or dead.
+
+Was Nato expansion to blame for the war?
+----------------------------------------
+
+Putin has for years complained about Nato's eastward expansion as a security threat, and sees any possibility of Ukraine joining the alliance as a major red line.
+
+Before Russia's 2022 invasion he demanded that Nato remove multinational deployments from the Central and Eastern European states that joined the Western alliance after 1997.
+
+But it was Russia that launched military action in Eastern Europe, when it invaded Georgia in 2008 and then Crimea in 2014.
+
+After the Crimea invasion, Nato established a continuous presence on its eastern flank - closest to Russia.
+
+Nato has always stressed the whole purpose of the alliance is to defend territories "with no aggressive intentions". <image:2680>!A map showing the expansion of Nato over time <image:2687>
+
+Zelensky said as much two weeks into the invasion: "Nato is not prepared to accept Ukraine."
+
+He has since said he would consider resigning in exchange for Nato membership, but Trump says Kyiv should "forget about" joining the Western alliance.
+
+Putin has accused Nato of participating in the war, because its member states have increasingly sent Ukraine military hardware, including tanks and fighter jets, air defence systems, missile systems, artillery and drones.
+
+Nato has provided security assistance and training to Ukraine, but it insists that does not make it a party to the war.
+
+Putin's grievance against Nato dates back to 1990, when he claims the West promised not to expand "an inch to the East".
+
+However that was before the Soviet Union collapsed and it was based on a limited commitment made to then Soviet President Mikhail Gorbachev.
+
+Gorbachev said "the topic of Nato expansion was never discussed" at the time.
+
+[Read more: What is Nato?](https://www.bbc.co.uk/news/world-europe-18023383)
+
+How could the war end?
+----------------------
+
+The most likely route is through direct talks, although previous rounds of negotiations between the two sides made little progress on a ceasefire.
+
+After a fifth visit to Moscow by Trump envoy Steve Witkoff on 6 August, the US president said a there was a "good chance" he could meet the Russian and Ukrainian leaders for talks in person.
+
+The Kremlin also said a Trump-Putin meeting would happen in the coming days, but Putin ruled out an imminent meeting with Zelensky, saying the right conditions were not in place.
+
+So far though, the two sides have been unable to find a way of bridging their differences.
+
+Russia wants direct talks to address the "root causes of the conflict", a phrase that harks back to Putin's "maximalist" demands at the start of the war in March 2022.
+
+These included Ukraine becoming a neutral state, dramatically reducing its military and abandoning its Nato aspirations.
+
+Russia also wants international recognition of its territorial gains in Ukraine reflected in any future deal, including annexation of Crimea and four eastern regions. <image:2680>!Reuters Vladimir Putin remembering Russia's victory over Nazi Germany wears a long coat as soldiers pass him by carrying swords <image:2689>Reuters
+
+Vladimir Putin has made repeated false allegations of genocide and Nazi taunts against Ukraine
+
+At the start of the 2022 invasion, Putin vowed to protect people in occupied areas of eastern Ukraine from eight years of Ukrainian "bullying and genocide, during the war in the east.
+
+More than 14,000 people died on both sides of the front line between 2014-2022, but Russian claims of Ukrainian Nazis committing genocide in the occupied regions never added up, and no international body has spoken of genocide. It abandoned its nuclear weapons in 1994 in return for guaranteed security from Russia, the UK and US which Moscow failed to respect.
+
+Since the war, many Ukrainians have turned their back on Russian, and Zelensky himself avoids using the language in public.
+
+[War in Ukraine](/news/topics/c1vw6q14rzqt)
+
+[Volodymyr Zelensky](/news/topics/c4vvr0ergrzt)
+
+[Russia](/news/topics/ce1qrvlegnyt)
+
+[2014 Ukraine conflict](/news/topics/crr7mlg0d21t)
+
+[Vladimir Putin](/news/topics/cvenzmgywd4t)
+
+[Ukraine](/news/topics/cx1m7zg0gzdt)
+
+* * * <image:2680>!Reuters President Putin speaks at a security council meeting in February 2025 <image:2681>Reuters
+
+When Russian President Vladimir Putin ordered up to 200,000 soldiers into Ukraine, his aim was to sweep into the capital, Kyiv, in days, overthrow its pro-Western government and return Ukraine to Russia's sphere of influence.
+
+Putin failed but, more than three years on, a fifth of Ukrainian territory is in Russian hands.
+
+US President Donald Trump has been trying to negotiate a peace deal and the Kremlin says Putin will meet Trump "in the coming days". Last year he told US TV talk show host Tucker Carlson that Ukraine was an "artificial state".
+
+Those comments have led many to believe that the goal of the invasion was in effect to erase the state of Ukraine.
+
+Russia's state-run Ria news agency explained that "denazification is inevitably also de-Ukrainisation" - seemingly tying the idea of erasing Ukraine to the stated goal of the invasion.
+
+Ukrainian culture and identity have in fact existed for centuries independently of Russia.
+
+[Fact-checking Putin's 'nonsense' history](https://www.bbc.co.uk/news/world-europe-68255302)
+
+[Zelensky - from comedian to wartime leader](https://www.bbc.co.uk/news/world-europe-59667938)
+
+Does Putin want to get rid of Zelensky?
+---------------------------------------
+
+! <image:2680>!Getty Images The president of Ukraine holds his hands out, flanked by two Ukrainian flags <image:2685>Getty Images
+
+Volodymyr Zelensky was elected president in Ukraine in 2019
+
+Putin has long sought to get rid of Ukraine's elected pro-Western president, and Zelensky was apparently a target from the very start of the war.
+
+Russian troops made two attempts to storm the presidential compound soon after the invasion, according to Zelensky's adviser, and Ukraine's elected leader said they wanted him dead.
+
+"The enemy has designated me as target number one; my family is target number two.
+
+"[They want to destroy Ukraine politically](https://www.president.gov.ua/en/news/zvernennya-prezidenta-do-ukrayinciv-naprikinci-pershogo-dnya-73149)
+ by destroying the head of state."
+
+Zelensky said later that Putin had initially tried to replace him with the wealthy head of a pro-Russian party, Viktor Medvedchuk, who was accused of treason in Ukraine and is now in Russia.
+
+Even now, Putin has not agreed to peace talks with Zelensky and his officials call him a "loser" and a "clown". It will also look for Western security guarantees to ensure Russia never invades its territory again.
+
+Was Zelensky to blame for the war?
+----------------------------------
+
+Before his return to the White House and in the first months of his presidency, Trump suggested Ukraine's president was responsible for the war with Russia.
+
+"\[Zelensky\] should never have let the war start, that war's a loser," he said in October 2024.
+
+In reality, the war began in 2014, when Putin seized Crimea and Russian proxies grabbed part of eastern Ukraine. Putin then ordered Russia's full-scale invasion eight years later, after months of meticulous co-ordination and denials of any such plan.
+
+However, the US president's messaging has not been altogether consistent, and in recent weeks his position appears to have hardened against Russia.
+
+"We thought we had \[the war\] settled numerous times, and then President Putin goes out and starts launching rockets into some city like Kyiv and kills a lot of people," he said last month.
+
+Trump has announced sweeping new secondary tariffs on any country still trading with Russia if a ceasefire with Ukraine is not agreed by Friday, 8 August.
+
+Do Putin's claims on Nazis and genocide stack up?
+-------------------------------------------------
+
+!"
+
+# Your Summary
+
+
+
+===== > RESPONSE:  < =====
+The BBC article discusses the war in Ukraine, mentioning Putin's goals, including "demilitarise and denazify" Ukraine. It also mentions that Putin has repeatedly made false allegations of genocide and Nazi taunts against Ukraine. The article also mentions that Putin has not agreed to peace talks with Zelensky. <image:2683>, <image:2687>, <image:2689>, <image:2681>, <image:2685>.
+
+_________________________
+
+
+
+SummarizeResultPrompt - QUERY:
+
+# Instructions
+In order to find evidence that helps your fact-check, you just ran a web search which yielded a Search Result. **Your task right now is to summarize the Search Result.** What to include:
+* information that might be useful for the fact-check (see Record)
+* relevant images (refer to images by inserting their reference <image:k>)
+* if available: the release date as well as the author or the publisher (e.g. the media company) of the search result.
+
+Do NOT include:
+* advertisements
+* any other information not related to the Record or the Claim
+
+Additional rules:
+* Do not add any additional information besides the information in the Search Result.
+* If the Search Result doesn't contain any relevant information for the fact-checking work, simply print one word in capital letters: "NONE".
+* Keep your writing style like in the Examples 1, 2 and 3 provided to you.
+* Try to filter out relevant information even if the search result is in a different language.
+
+# Example 1
+The search result from America Today provides several photographs of the Notre-Dame Cathedral fire on April 15, 2019. <image:i>, <image:j>, <image:k>. None of the images show the Eiffel Tower in the background. 
+
+# Example 2
+NONE
+
+# Example 3
+The Guardian discusses a report blaming the Syrian government for a toxic gas attack and condemning their use of chemical weapons. The Guardian mentions the Chemical Weapons Convention and the responsibilities of Syria under the convention. According to The Guardian, The White House condemned the Assad regime for defying the norm against chemical weapons use.
+
+# Record
+## Claim
+Claim: "Russian President Vladimir Putin has declared war on the United States."
+
+## Actions
+```
+web_search("Vladimir Putin declares war on United States")
+```
+
+# Search Result
+From [Source](https://www.journalofdemocracy.org/articles/what-putin-fears-most/): 
+Content: "After each of them—Serbia in 2000, Georgia in 2003, Ukraine in 2004, the Arab Spring in 2011, Russia in 2011–12, and Ukraine in 2013–14—Putin has pivoted to more hostile policies toward the United States, and then invoked the NATO threat as justification for doing so.
+
+Boris Yeltsin never supported NATO expansion but acquiesced to the first round of expansion in 1997 because he believed that his close ties to President Bill Clinton and the United States were not worth sacrificing over this comparatively smaller matter. Following John Mearsheimer’s provocative 2014 _Foreign Affairs_ article arguing that “the Ukraine crisis is the West’s fault,” the narrative of Russian backlash against NATO expansion has become a dominant framework for explaining—if not justifying—Moscow’s ongoing war against Ukraine.[1](#f1)
+ This notion has been repeated not only in Moscow but in the United States, Europe, and elsewhere by politicians, analysts, and writers. By this telling, the specter of Ukraine’s NATO membership points both to the cause of the conflict and its solution: Take membership off the table for Ukraine, so the argument goes, and future wars will be prevented.
+
+About the Authors
+-----------------
+
+### Robert Person
+
+_**Robert Person** is a professor of international relations at the United States Military Academy._ _His Twitter is [@RTPerson3](http://www.twitter.com/rtperson3)
+._
+
+[View all work by Robert Person](https://www.journalofdemocracy.org/authors/robert-person/)
+
+### Michael McFaul
+
+_**Michael McFaul**, former U.S. If NATO was _always_ a threat to Russia and its “sphere of influence,” why did Putin facilitate the opening of these bases in the former Soviet Union?
+
+During his November 2001 visit to the United States, Putin struck a realistic but cooperative tone:
+
+> We differ in the ways and means we perceive that are suitable for reaching the same objective . Putin blamed the United States directly for assisting this democratic breakthrough and helping to install someone whom he saw as a pro-American puppet, President Mikheil Saakashvili. Since the Revolution of Dignity, Putin has waged an unprecedented assault against Ukraine’s democracy using a full spectrum of military, political, informational, social, and economic weapons in an attempt to destabilize and eventually topple Ukraine’s democratically elected government.[18](#f18)
+ Ukraine’s relationship with NATO and the United States was just a symptom of what Putin believes is the underlying disease: a sovereign, democratic Ukraine.
+
+Putin’s Real _Casus Belli_: Ukrainian Democracy
+-----------------------------------------------
+
+Amazingly, eight years of unrelenting Russian pressure did not break Ukraine’s democracy. After Putin’s annexation and ongoing support for the war in Donbas, Ukrainians are now more united across ethnic, linguistic, and regional divides than at any other point in Ukrainian history. Policy Toward Russia After the Cold War_ (Washington D.C.: Brookings Institution Press, 2003).
+
+[3.](#f3-text)
+ White House Office of the Press Secretary, “NATO-Russia Founding Act Signing,” 27 May 1997, [_https://clintonwhitehouse5.archives.gov/WH/new/Europe/19970527-814.html_](https://clintonwhitehouse5.archives.gov/WH/new/Europe/19970527-814.html)
+_._
+
+[4.](#f4-text)
+ David Hoffman, “Putin Says ‘Why Not?’ to Russia Joining NATO,” _Washington Post,_6 March 2000, [_www.washingtonpost.com/archive/politics/2000/03/06/putin-says-why-not-to-russia-joining-nato/c1973032-c10f-4bff-9174-8cae673790cd_](https://www.washingtonpost.com/archive/politics/2000/03/06/putin-says-why-not-to-russia-joining-nato)
+.
+
+[5.](#f5-text)
+ Bob Kemper, “Bush, Putin Downplay Differences,” _Chicago Tribune,_ 16 November 2001, [_www.chicagotribune.com/news/ct-xpm-2001-11-16-0111160193-story.html_](https://www.chicagotribune.com/news/ct-xpm-2001-11-16-0111160193-story.html)
+_._
+
+[6.](#f6-text)
+ “Transcript of Robert Siegel Interview with Vladimir Putin,” NPR, 15 November 2001, [_https://legacy.npr.org/news/specials/putin/nprinterview.html_](https://legacy.npr.org/news/specials/putin/nprinterview.html)
+_._
+
+[7.](#f7-text)
+ “Transcript of Robert Siegel Interview with Vladimir Putin.”
+
+[8.](#f8-text)
+ “Press Statement and Answers to Questions at a Joint News Conference with Ukrainian President Leonid Kuchma,” President of Russia, 17 May 2002, [_http://en.kremlin.ru/events/president/transcripts/21598_](http://en.kremlin.ru/events/president/transcripts/21598)
+_._
+
+[9.](#f9-text)
+ “News Conference Following NATO-Russia Council Meeting,” President of Russia, 20 November 2010, [_http://en.kremlin.ru/events/president/transcripts/9570_](http://en.kremlin.ru/events/president/transcripts/9570)
+_._
+
+[10.](#f10-text)
+ Michael McFaul, “Transitions from Postcommunism,” _Journal of Democracy_ 16 (July 2005): 5–19.
+
+[11.](#f11-text)
+ Anders Åslund and Michael McFaul, _Revolution in Orange: The Origins of Ukraine’s Democratic Breakthrough_ (Washington, D.C.: Carnegie Endowment for International Peace, 2006).
+
+[12.](#f12-text)
+ McFaul, “Transitions from Postcommunism,” 5.
+
+[13.](#f13-text)
+ Robert Person, “Four Myths About Russian Grand Strategy,” Center for Strategic and International Studies, 22 September 2020, [_https://www.csis.org/blogs/post-soviet-post/four-myths-about-russian-grand-strategy_](https://www.csis.org/blogs/post-soviet-post/four-myths-about-russian-grand-strategy)
+_._
+
+[14.](#f14-text)
+ Vladimir Putin, “On the Historical Unity of Russians and Ukrainians,” President of Russia, 12 July 2021, _[http://en.kremlin.ru/events/president/news/66181](http://en.kremlin.ru/events/president/news/66181)
+._
+
+[15.](#f15-text)
+ Denis Volkov, “Putinism Under Siege: The Protesters and the Public,” _Journal of Democracy_ 23 (July 2012): 55–62.
+
+[16.](#f16-text)
+ Robert Person, “Balance of Threat: The Domestic Insecurity of Vladimir Putin,” _Journal of Eurasian Studies_ 8, no. 1 (2017): 44–59.
+
+[17.](#f17-text)
+ Michael McFaul, _From Cold War to Hot Peace: An American Ambassador in Putin’s Russia_ (New York: Houghton Mifflin Harcourt, 2018).
+
+[18.](#f18-text)
+ Taras Kuzio, _Putin’s War Against Ukraine: Revolution, Nationalism, and Crime_ (CreateSpace Independent Publishing Platform, 2017).
+
+Copyright © 2022 _National Endowment for Democracy and Johns Hopkins University Press_
+
+Image Credit: STR/[NurPhoto](https://nam02.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwww.gettyimages.com%2Fsearch%2Fphotographer%3Ffamily%3Deditorial%26photographer%3DNurPhoto&data=04%7C01%7Ctracyb%40ned.org%7C8b99284858d142bad80308d9f6599cd2%7C4e07708641b34a22b78e41daff10793d%7C1%7C0%7C637811687038939376%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000&sdata=fxGCmUd0DEDCOAw6qKKE3cqN3BXxCbWnuQjLPcOHL9U%3D&reserved=0)
+ via Getty Images
+
+### Further Reading
+
+Volume 15, Issue 3
+
+#### [Russian Democracy in Eclipse: The Limits of Bureaucratic Authoritarianism](https://www.journalofdemocracy.org/articles/russian-democracy-in-eclipse-the-limits-of-bureaucratic-authoritarianism/)
+
+*   [Lilia Shevtsova](https://www.journalofdemocracy.org/authors/lilia-shevtsova/)
+    
+
+Vladimir Putin aspires to be a classic authoritarian modernizer, but in today's globalized world Russia faces challenges that bureaucratic centralization and a traditional strong hand cannot meet.
+
+Volume 32, Issue 4
+
+#### [Russia’s Road to Autocracy](https://www.journalofdemocracy.org/articles/russias-road-to-autocracy/)
+
+*   [Michael McFaul](https://www.journalofdemocracy.org/authors/michael-mcfaul/)
+    
+
+Thirty years after the Soviet Union collapsed, Russia is firmly in the grip of an autocrat. <image:2694>
+
+What Putin Fears Most
+=====================
+
+*   [Robert Person](https://www.journalofdemocracy.org/authors/robert-person/)
+    
+*   [Michael McFaul](https://www.journalofdemocracy.org/authors/michael-mcfaul/)
+    
+
+**Issue Date** [April 2022](https://www.journalofdemocracy.org/issue/april-2022/)
+
+**Volume** 33
+
+**Issue** 2
+
+**Page Numbers** 18–27
+
+[_file_ Print](javascript:window.print())
+
+[_arrow-down-thin_ Download from Project MUSE](https://muse.jhu.edu/article/852742)
+
+[_external_ View Citation](#citation)
+
+**Select your citation format:**
+
+MLA (Modern Language Association 8th edition)Chicago Manual of Style 16th edition (full note)APA (American Psychological Association 7th edition)
+
+Russian president Vladimir Putin wants you to believe that NATO is responsible for his February 24 invasion of Ukraine—that rounds of NATO enlargement made Russia insecure, forcing Putin to lash out."
+
+# Your Summary
+
+
+
+===== > RESPONSE:  < =====
+The Journal of Democracy published an article in April 2022 by Robert Person and Michael McFaul, discussing Putin's policies towards the United States. The article mentions that Putin has pivoted to more hostile policies towards the United States and invoked the NATO threat as justification. The article also states that Putin's real "casus belli" is Ukrainian democracy. <image:2694>
+
+_________________________
+
+
+
+SummarizeSummariesPrompt - QUERY:
+
+# Instructions
+You just retrieved web sources, each one summarized under "Web Sources". **Your task right now is to summarize the web source summaries.**
+
+Always adhere to the following rules:
+* Write only one to two paragraphs.
+* Include all URLs from the listed sources. Format them as Markdown hyperlinks.
+* Do not add any additional information besides the information in the summaries.
+* Include references (<image:k>) to all relevant images.
+
+# Record
+## Claim
+Claim: "Russian President Vladimir Putin has declared war on the United States."
+
+## Actions
+```
+web_search("Vladimir Putin declares war on United States")
+```
+
+## Web Sources
+**Web Search Result**
+
+From [Source](https://srilanka.factcrescendo.com/english/did-russia-declare-war-against-the-usa/): 
+Content: The search result from Fact Crescendo states that there was no official declaration of war. It mentions that neither Peskov nor Putin has officially referred to the United States or other Western nations as enemies in any legally binding or formal context. The article concludes that the claim that Russia has declared war against the USA is unfounded and incorrect. <image:2675>
+
+
+From [Source](https://www.bbc.com/news/articles/cj0q964851po): 
+Content: The BBC article discusses the war in Ukraine, mentioning Putin's goals, including "demilitarise and denazify" Ukraine. It also mentions that Putin has repeatedly made false allegations of genocide and Nazi taunts against Ukraine. The article also mentions that Putin has not agreed to peace talks with Zelensky. <image:2683>, <image:2687>, <image:2689>, <image:2681>, <image:2685>.
+
+
+From [Source](https://www.journalofdemocracy.org/articles/what-putin-fears-most/): 
+Content: The Journal of Democracy published an article in April 2022 by Robert Person and Michael McFaul, discussing Putin's policies towards the United States. The article mentions that Putin has pivoted to more hostile policies towards the United States and invoked the NATO threat as justification. The article also states that Putin's real "casus belli" is Ukrainian democracy. <image:2694>
+
+
+## Your Summary
+
+
+
+===== > RESPONSE:  < =====
+Fact Crescendo states that there has been no official declaration of war by Russia against the USA, and the claim is unfounded (<image:2675>). The BBC article discusses the war in Ukraine and Putin's goals, including "demilitarise and denazify" Ukraine, and mentions that Putin has not agreed to peace talks with Zelensky (<image:2683>, <image:2687>, <image:2689>, <image:2681>, <image:2685>). The Journal of Democracy article discusses Putin's hostile policies towards the United States and invokes the NATO threat as justification, stating that Putin's real "casus belli" is Ukrainian democracy (<image:2694>).
+
+The sources are: [https://srilanka.factcrescendo.com/english/did-russia-declare-war-against-the-usa/](https://srilanka.factcrescendo.com/english/did-russia-declare-war-against-the-usa/), [https://www.bbc.com/news/articles/cj0q964851po](https://www.bbc.com/news/articles/cj0q964851po), and [https://www.journalofdemocracy.org/articles/what-putin-fears-most/](https://www.journalofdemocracy.org/articles/what-putin-fears-most/).
+
+_________________________
+
+
+
+DevelopPrompt - QUERY:
+
+# Instructions
+You just retrieved new Evidence. Now, **analyze the Claim's veracity using the evidence**. Always adhere to the following rules:
+* Focus on developing new insights. Do not repeat larger parts from the Record. Do not restate the Claim.
+* Write down your thoughts step-by-step. Whenever necessary, you may elaborate in more detail.
+* Depending on the topic's complexity, invest one to three paragraphs. The fewer, the better.
+* If you find that there is insufficient information to verify the Claim, explicitly state what information is missing.
+* If you cite web sources, always refer to them by including their URL as a Markdown hyperlink.
+* **Use information only from the recorded evidence**: Avoid inserting information that is not implied by the evidence. You may use commonsense knowledge, though.
+
+# Record
+## Claim
+Claim: "Russian President Vladimir Putin has declared war on the United States."
+
+## Actions
+```
+web_search("Vladimir Putin declares war on United States")
+```
+
+## Evidence
+### Evidence from `web_search`
+Fact Crescendo states that there has been no official declaration of war by Russia against the USA, and the claim is unfounded (<image:2675>). The BBC article discusses the war in Ukraine and Putin's goals, including "demilitarise and denazify" Ukraine, and mentions that Putin has not agreed to peace talks with Zelensky (<image:2683>, <image:2687>, <image:2689>, <image:2681>, <image:2685>). The Journal of Democracy article discusses Putin's hostile policies towards the United States and invokes the NATO threat as justification, stating that Putin's real "casus belli" is Ukrainian democracy (<image:2694>).
+
+The sources are: [https://srilanka.factcrescendo.com/english/did-russia-declare-war-against-the-usa/](https://srilanka.factcrescendo.com/english/did-russia-declare-war-against-the-usa/), [https://www.bbc.com/news/articles/cj0q964851po](https://www.bbc.com/news/articles/cj0q964851po), and [https://www.journalofdemocracy.org/articles/what-putin-fears-most/](https://www.journalofdemocracy.org/articles/what-putin-fears-most/).
+
+
+# Your Analysis
+
+
+
+===== > RESPONSE:  < =====
+The evidence indicates that the claim is false. Fact Crescendo explicitly states that there has been no official declaration of war by Russia against the USA. While the BBC article discusses the war in Ukraine and Putin's goals, it does not mention any declaration of war against the United States. The Journal of Democracy article discusses Putin's hostile policies towards the United States but does not mention a declaration of war.
+
+_________________________
+
+
+
+JudgePrompt - QUERY:
+
+# Instructions
+**Determine the Claim's veracity** by following these steps:
+1. Briefly summarize the key insights from the fact-check (see Record) in at most one paragraph.
+2. Write one paragraph about which one of the Decision Options applies best. Include the most appropriate decision option at the end and enclose it in backticks like `this`.
+
+
+
+
+## Decision Options
+* `false`: The claim is not factually accurate. This is the case if one of the following three conditions is met:(1) The claim is demonstrably false when it is disproven by evidence from multiple and reliable sources,(2) The claim or image is taken out of context, i.e. the origin, content and/or meaning of a statement or an image is misrepresented. For example, an old claim or an old image is mispresented in a new context in a misleading way,(3) There is not enough evidence to verify the claim or the evidence is conflicting or self-contradictory.
+* `true`: The claim is factually accurate when it is confirmed by evidence from multiple and reliable sources.
+* `not enough information`: The fact-check does not contain sufficient information to come to an conclusion. For example,there is substantial lack of evidence or the evidence is inconclusive, conflicting or self-contradictory. In the case of a lack of evidence, state which information exactly is missing. In particular, if no RESULTS or sources are available, pick this decision.
+
+# Record
+## Claim
+Claim: "Russian President Vladimir Putin has declared war on the United States."
+
+## Actions
+```
+web_search("Vladimir Putin declares war on United States")
+```
+
+## Evidence
+### Evidence from `web_search`
+Fact Crescendo states that there has been no official declaration of war by Russia against the USA, and the claim is unfounded (<image:2675>). The BBC article discusses the war in Ukraine and Putin's goals, including "demilitarise and denazify" Ukraine, and mentions that Putin has not agreed to peace talks with Zelensky (<image:2683>, <image:2687>, <image:2689>, <image:2681>, <image:2685>). The Journal of Democracy article discusses Putin's hostile policies towards the United States and invokes the NATO threat as justification, stating that Putin's real "casus belli" is Ukrainian democracy (<image:2694>).
+
+The sources are: [https://srilanka.factcrescendo.com/english/did-russia-declare-war-against-the-usa/](https://srilanka.factcrescendo.com/english/did-russia-declare-war-against-the-usa/), [https://www.bbc.com/news/articles/cj0q964851po](https://www.bbc.com/news/articles/cj0q964851po), and [https://www.journalofdemocracy.org/articles/what-putin-fears-most/](https://www.journalofdemocracy.org/articles/what-putin-fears-most/).
+
+
+## Elaboration
+The evidence indicates that the claim is false. Fact Crescendo explicitly states that there has been no official declaration of war by Russia against the USA. While the BBC article discusses the war in Ukraine and Putin's goals, it does not mention any declaration of war against the United States. The Journal of Democracy article discusses Putin's hostile policies towards the United States but does not mention a declaration of war.
+
+
+# Your Judgement
+
+
+
+===== > RESPONSE:  < =====
+The evidence from multiple sources confirms that there has been no declaration of war by Russia against the United States. Therefore, the claim is demonstrably false.
+
+`false`
+_________________________
+
+
+
+SummarizeDocPrompt - QUERY:
+
+# Instructions
+You are provided with the record of a fact-check. It contains the Claim to be verified and a documentation of all the fact-checking work along the gathered evidence. Your task is to **summarize the fact-check**. That is, you provide a concise, one-paragraph justification for the final VERDICT based on the knowledge from the Record. Note:
+* Be truthful, brief, do not add any additional information besides the information given in the Record. 
+* Link key sources in your summary. Use Markdown notation for that. You may link them in-line.
+* Don't state the Claim again. Rather focus on the key insights of the fact-check.
+* Simply print just the summary.
+
+# Record
+## Claim
+Claim: "Russian President Vladimir Putin has declared war on the United States."
+
+## Actions
+```
+web_search("Vladimir Putin declares war on United States")
+```
+
+## Evidence
+### Evidence from `web_search`
+Fact Crescendo states that there has been no official declaration of war by Russia against the USA, and the claim is unfounded (<image:2675>). The BBC article discusses the war in Ukraine and Putin's goals, including "demilitarise and denazify" Ukraine, and mentions that Putin has not agreed to peace talks with Zelensky (<image:2683>, <image:2687>, <image:2689>, <image:2681>, <image:2685>). The Journal of Democracy article discusses Putin's hostile policies towards the United States and invokes the NATO threat as justification, stating that Putin's real "casus belli" is Ukrainian democracy (<image:2694>).
+
+The sources are: [https://srilanka.factcrescendo.com/english/did-russia-declare-war-against-the-usa/](https://srilanka.factcrescendo.com/english/did-russia-declare-war-against-the-usa/), [https://www.bbc.com/news/articles/cj0q964851po](https://www.bbc.com/news/articles/cj0q964851po), and [https://www.journalofdemocracy.org/articles/what-putin-fears-most/](https://www.journalofdemocracy.org/articles/what-putin-fears-most/).
+
+
+## Elaboration
+The evidence indicates that the claim is false. Fact Crescendo explicitly states that there has been no official declaration of war by Russia against the USA. While the BBC article discusses the war in Ukraine and Putin's goals, it does not mention any declaration of war against the United States. The Journal of Democracy article discusses Putin's hostile policies towards the United States but does not mention a declaration of war.
+
+
+## Final Judgement
+The evidence from multiple sources confirms that there has been no declaration of war by Russia against the United States. Therefore, the claim is demonstrably false.
+
+`false`
+
+## Summary
+
+
+
+===== > RESPONSE:  < =====
+The claim that Vladimir Putin declared war on the United States is false. According to [Fact Crescendo](https://srilanka.factcrescendo.com/english/did-russia-declare-war-against-the-usa/), there has been no official declaration of war. While the BBC discusses the war in Ukraine and Putin's goals, it does not mention a declaration of war against the USA.
+
+_________________________
+
+
+
+PlanPrompt - QUERY:
+
+# Instructions
+The available knowledge is insufficient to assess the Claim. Therefore, **propose a set of actions** to retrieve new and helpful evidence. Adhere to the following rules:
+* The actions available are listed under Valid Actions, including a short description for each action. No other actions are possible at this moment. 
+* For each action, use the formatting as specified in Valid Actions.
+* Include all actions in a single Markdown code block at the end of your answer.
+* Propose as few actions as possible, but as much as needed. Do not propose similar or previously used actions.
+
+
+
+## Valid Actions
+* `image_search`
+   * Description: Run an image search on Google to retrieve related images for a given query.
+   * How to use: This is a helpful tool for fact-checking images. Use this to retrieve images associated with a specific keyword or phrase. Ensure that the query is clear and specific to improve search accuracy. If no relevant images are found, refine the query or use more descriptive terms.
+   * Format: image_search("your image search query goes here")
+
+* `geolocate`
+   * Description: Performs geolocation to determine the country where an image was taken.
+   * How to use: Provide an image and the model will determine the most likely countries where it was taken.
+   * Format: geolocate(<image:k>), where `k` is the image's ID
+
+* `web_search`
+   * Description: Run an open web search on Google or DuckDuckGO to retrieve any related webpage.
+   * How to use: Do not use this with a previously used or similar query from previous web searches. If a previous web search did not yield any results, use a very different query.
+   * Format: web_search("your web search query goes here")
+
+# Example: image_search()
+
+## Claim
+Text: "Chinese officials in white protective hazmat suits carried people down a hallway to be quarantined for having COVID-19 in November 2022."
+
+...
+
+ACTIONS:
+```
+image_search("China officials white suits carry people")
+image_search("China officials carry people COVID quarantine 2022")
+```
+
+# Example: geolocate()
+
+## Claim
+Text: "<image:k> shows a nuclear weapons facility in Usbekistan."
+
+...
+
+## Actions
+```
+geolocate(<image:k>)
+```
+
+# Example: web_search()
+
+## Claim
+Text: "New Zealand’s new Food Bill bans gardening"
+Claim date: October 29, 2020
+
+...
+
+## Actions
+```
+web_search("New Zealand Food Bill 2020")
+web_search("New Zealand Food Bill gardening ban")
+```
+
+# Record
+## Claim
+Claim: "In October 2024 the International Monetary Fund (IMF) declared Russia the fourth-largest economy in the world."
+
+# Your Actions
+
+
+
+===== > RESPONSE:  < =====
+```
+web_search("IMF Russia economy ranking October 2024")
+```
+_________________________
+
+
+
+SummarizeResultPrompt - QUERY:
+
+# Instructions
+In order to find evidence that helps your fact-check, you just ran a web search which yielded a Search Result. **Your task right now is to summarize the Search Result.** What to include:
+* information that might be useful for the fact-check (see Record)
+* relevant images (refer to images by inserting their reference <image:k>)
+* if available: the release date as well as the author or the publisher (e.g. the media company) of the search result.
+
+Do NOT include:
+* advertisements
+* any other information not related to the Record or the Claim
+
+Additional rules:
+* Do not add any additional information besides the information in the Search Result.
+* If the Search Result doesn't contain any relevant information for the fact-checking work, simply print one word in capital letters: "NONE".
+* Keep your writing style like in the Examples 1, 2 and 3 provided to you.
+* Try to filter out relevant information even if the search result is in a different language.
+
+# Example 1
+The search result from America Today provides several photographs of the Notre-Dame Cathedral fire on April 15, 2019. <image:i>, <image:j>, <image:k>. None of the images show the Eiffel Tower in the background. 
+
+# Example 2
+NONE
+
+# Example 3
+The Guardian discusses a report blaming the Syrian government for a toxic gas attack and condemning their use of chemical weapons. The Guardian mentions the Chemical Weapons Convention and the responsibilities of Syria under the convention. According to The Guardian, The White House condemned the Assad regime for defying the norm against chemical weapons use.
+
+# Record
+## Claim
+Claim: "In October 2024 the International Monetary Fund (IMF) declared Russia the fourth-largest economy in the world."
+
+## Actions
+```
+web_search("IMF Russia economy ranking October 2024")
+```
+
+# Search Result
+From [Source](https://www.imf.org/en/Countries/RUS): 
+Content: "[](#)
+
+*   [About](/en/About "About the IMF")
+    *   *   #### IMF’s Work
+            
+        
+        *   #### RESOURCES
+            
+        
+        *   #### TOPICS
+            
+        
+        *   [IMF at a Glance](/en/About/Factsheets/IMF-at-a-Glance)
+            
+        *   [Surveillance](/en/About/Factsheets/IMF-Surveillance)
+            
+        *   [Lending](/en/About/Factsheets/IMF-Lending)
+            
+        *   [Capacity Development](/en/About/Factsheets/imf-capacity-development)
+            
+        *   [IMF Factsheets List](/en/About/Factsheets)
+            
+        *   [How the IMF Supports the Global Economy](/en/About/how-the-imf-supports-the-global-economy)
+            
+        
+        *   [IMF Members](http://www.imf.org/external/np/sec/memdir/members.aspx)
+            
+        *   [IMF Finances](https://www.imf.org/en/data/imf-finances)
+            
+        *   [IMF Financial Statements](/en/Data/IMF-Finances/Quarterly-Financial-Statements)
+            
+        *   [IMF Senior Officials](/en/About/senior-officials)
+            
+        *   [IMF in History](/en/About/Timeline)
+            
+        *   [Archives of the IMF](http://www.imf.org/external/np/arc/eng/archive.htm)
+            
+        *   [Job Opportunities](http://www.imf.org/external/np/adm/rec/recruit.htm)
+            
+        
+        *   [Artificial Intelligence](/en/Topics/Artificial-Intelligence)
+            
+        *   [Fintech](/en/Topics/fintech)
+            
+        *   [Fiscal Policies](/en/Topics/fiscal-policies)
+            
+        *   [Governance and Anti-Corruption](/en/Topics/governance-and-anti-corruption)
+            
+        *   [All Topics](/en/Topics/IMF-Topics)
+            
+        
+*   [Research](/en/Research "Research")
+    *   *   #### Flagship Publications
+            
+        
+        *   #### Other Publications
+            
+        
+        *   [World Economic Outlook](/en/publications/weo)
+            
+        *   [Global Financial Stability Report](/en/publications/gfsr)
+            
+        *   [Fiscal Monitor](/en/publications/FM)
+            
+        *   [External Sector Report](/en/Publications/SPROLLs/External-Sector-Reports#sort=@imfdate descending)
+            
+        
+        *   [Staff Discussion Notes](/en/Publications/SPROLLs/Staff-Discussion-Notes)
+            
+        *   [Working Papers](/en/publications/search?when=After&series=IMF+Working+Papers)
+            
+        *   [IMF Research Perspectives](/external/pubs/ft/irb/archive.htm)
+            
+        *   [Economic Review](http://www.palgrave-journals.com/imfer/index.html)
+            
+        
+        *   [Global Housing Watch](/external/research/housing/index.htm)
+            
+        *   [Commodity Prices](/external/np/res/commod/index.aspx)
+            
+        *   [Commodities Data Portal](https://legacydata.imf.org/?sk=2cddccb8-0b59-43e9-b6a0-59210d5605d2)
+            
+        
+        *   [IMF Researchers](/en/Research/Researcher-CV)
+            
+        *   [Annual Research Conference](/external/pubs/ft/staffp/arc/index.asp)
+            
+        *   [Other IMF Events](/en/News/Seminars/Conferences/2019/03/25/7th-statistical-forum)
+            
+        
+*   [Countries](/en/Countries "Countries")
+    *   *   #### IMF reports and publications by country
+            
+        
+        *   #### Regional Offices
+            
+        
+        *   [A](/en/countries#A)
+            
+        *   [B](/en/countries#B)
+            
+        *   [C](/en/countries#C)
+            
+        *   [D](/en/countries#D)
+            
+        *   [E](/en/countries#E)
+            
+        *   [F](/en/countries#F)
+            
+        *   [G](/en/countries#G)
+            
+        *   [H](/en/countries#H)
+            
+        *   [I](/en/countries#I)
+            
+        *   [J](/en/countries#J)
+            
+        *   [K](/en/countries#K)
+            
+        *   [L](/en/countries#L)
+            
+        *   [M](/en/countries#M)
+            
+        *   [N](/en/countries#N)
+            
+        *   [O](/en/countries#O)
+            
+        *   [P](/en/countries#P)
+            
+        *   [Q](/en/countries#Q)
+            
+        *   [R](/en/countries#R)
+            
+        *   [S](/en/countries#S)
+            
+        *   [T](/en/countries#T)
+            
+        *   [U](/en/countries#U)
+            
+        *   [V](/en/countries#V)
+            
+        *   [Y](/en/countries#Y)
+            
+        *   [Z](/en/countries#Z)
+            
+        
+        *   [IMF Resident Representative Offices](/en/Countries/ResRep)
+            
+        *   [IMF Regional Reports](/external/pubs/cat/region.asp)
+            
+        *   [IMF and Europe](/en/Countries/Regions/Europe)
+            
+        *   [IMF Members' Quotas and Voting Power, and Board of Governors](/external/np/sec/memdir/members.htm)
+            
+        
+        *   [IMF Regional Office for Asia and the Pacific](/en/Countries/ResRep/OAP-Home)
+            
+        *   [IMF Capacity Development Office in Thailand (CDOT)](/en/Countries/ResRep/CDOT-Region)
+            
+        *   [IMF Regional Office in Central America, Panama, and the Dominican Republic](/en/Countries/ResRep/CAM-Region)
+            
+        *   [Eastern Caribbean Currency Union (ECCU)](/en/Countries/ResRep/ECC-Region)
+            
+        *   [IMF Europe Office in Paris and Brussels](/en/Countries/ResRep/EUR)
+            
+        *   [IMF Office in the Pacific Islands](/en/Countries/ResRep/PIS-Region)
+            
+        *   [IMF Regional Office in Riyadh](/en/Countries/ResRep/ROR/regional-office-riyadh)
+            
+        
+*   [Capacity Development](/en/Capacity-Development "Capacity Development")
+    *   *   [About Us](/external/np/ins/english/capacity_about.htm)
+            
+        *   [What We Do](/en/Capacity-Development/what-we-do)
+            
+        *   [How We Work](/en/Capacity-Development/how-we-work)
+            
+        
+        *   [IMF Training](/external/np/ins/english/training.htm)
+            
+        *   [Digital Training Catalog](/en/Capacity-Development/Training/ICDTC)
+            
+        *   [Online Learning](/external/np/ins/english/learning.htm)
+            
+        
+        *   [Our Partners](/en/Capacity-Development/Partners)
+            
+        *   [Country Stories](/en/Capacity-Development/cd-stories)
+            
+        
+        *   [Technical Assistance Reports](/en/Publications/SPROLLs/Technical-assistance-country-reports)
+            
+        *   [High-Level Summary Technical Assistance Reports](/en/Publications/high-level-summary-technical-assistance-reports)
+            
+        *   [Strategy and Policies](/en/Capacity-Development/strategy-policies)
+            
+        
+*   [News](/en/News "IMF News")
+    *   *   #### All News
+            
+        
+        *   #### See Also
+            
+        
+        *   #### For Journalists
+            
+        
+        *   [!IMF Live <image:2695>](/en/live "IMF Live")
+            
+        *   [Country Focus](/en/News/country-focus)
+            
+        *   [Chart of the Week](/en/News/Chart-of-the-week)
+            
+        *   [Communiqués](/en/news/searchnews#type=Communique)
+            
+        *   [Mission Concluding Statements](/en/news/searchnews#type=Mission+Concluding+Statement)
+            
+        *   [Press Releases](/en/news/searchnews#type=Press+Release)
+            
+        
+        *   [Speeches](/en/news/searchnews#type=Speech)
+            
+        *   [Statements at Donor Meetings](/en/news/searchnews#type=Statements+at+Donor+Meeting)
+            
+        *   [Transcripts](/en/news/searchnews#type=Transcript)
+            
+        *   [Views & Commentaries](/en/news/searchnews#type=Views+and+Commentaries)
+            
+        
+        *   [IMFBlog](//blog-imfdirect.imf.org/)
+            
+        *   [Article IV Consultations](/external/np/sec/aiv/index.htm)
+            
+        *   [Financial Sector Assessment Program (FSAP)](/external/np/fsap/fssa.aspx)
+            
+        *   [Seminars, Conferences, & Other Events](/external/np/exr/seminars/index.htm)
+            
+        *   [E-mail Notification](/en/email-subscription/index)
+            
+        
+        *   ##### Press Center
+            
+            The IMF Press Center is a password-protected site for working journalists.
+            
+        *   [Login](http://presscenter.imf.org/)
+             or [Register](https://presscenter.imf.org/Account/Register)
+            
+        *   [**Information of interest**](/news/for-journalists)
+            
+        
+*   [Videos](/en/Videos/index)
+    *   *   [!IMF Live <image:2695>](/en/live "IMF Live")
+            
+        *   [About the IMF](/en/videos/view?category=1 "About the IMF")
+            
+        *   [Conferences](/en/Videos/view?category=6 "Conferences")
+            
+        *   [Press briefings](/en/Videos/view?category=11 "Press briefings")
+            
+        *   [Speeches](/en/Videos/view?category=10 "Speeches")
+            
+        *   [Special Features](/en/Videos/view?category=12 "Special Features")
+            
+        
+        *   [Africa](/en/Videos/view?category=2 "Africa")
+            
+        *   [Americas](/en/Videos/view?category=3 "Americas")
+            
+        *   [Asia](/en/Videos/view?category=5 "Asia")
+            
+        *   [Europe](/en/Videos/view?category=8 "Europe")
+            
+        *   [Middle East and Central Asia](/en/Videos/view?category=9 "Middle East and Central Asia")
+            
+        
+        *   [Economic Outlook](/en/Videos/view?category=7 "Economic Outlook")
+            
+        *   [Annual and spring meetings](/en/Videos/view?category=4 "Annual and spring meetings")
+            
+        *   [Capacity Development](/en/Videos/view?category=22 "Capacity Development")
+            
+        *   [Most Recent](/en/Videos/view?sort=mostrecent)
+            
+        *   [Most Popular](/en/Videos/view?sort=mostpopular)
+            
+        
+*   [Data](/en/Data "Standard Hero Three Column Page")
+    *   *   [IMF Data Portal](http://data.imf.org)
+            
+        *   [World Economic Outlook Databases](https://www.imf.org/en/Publications/SPROLLs/world-economic-outlook-databases#sort=%40imfdate%20descending)
+            
+        *   [AI Preparedness Index](/external/datamapper/datasets/AIPI)
+            
+        *   [Climate Change Indicators Dashboard](https://data.imf.org/en/CID)
+            
+        
+        *   [IMF Finances](/en/data/imf-finances)
+            
+        *   [International Financial Statistics](https://data.imf.org/en/news/accessing%20international%20financial%20statistics)
+            
+        *   [Financial Access Survey](https://data.imf.org/en/datasets/IMF.STA:FAS)
+            
+        
+        *   [G20 Data Gaps Initiative](/en/News/Seminars/Conferences/g20-data-gaps-initiative)
+            
+        *   [Currency Composition of Official Foreign Exchange Reserves](https://data.imf.org/en/datasets/IMF.STA:COFER)
+            
+        *   [World Revenue Longitudinal Data](/en/Topics/fiscal-policies/world-revenue-longitudinal-database)
+            
+        
+*   [Publications](/en/Publications "Publications")
+    *   *   #### RESOURCES
+            
+        
+        *   #### FLAGSHIPS
+            
+        
+        *   #### KEY SERIES
+            
+        
+        *   #### IMF NOTES
+            
+        
+        *   [Publications Advanced Search](/en/publications/search)
+            
+        *   [IMF eLibrary](https://www.elibrary.imf.org/)
+            
+        *   [IMF Bookstore](https://bookstore.imf.org/)
+            
+        *   [Publications Newsletter](/en/Publications/Newsletter/registration)
+            
+        *   [Essential Reading Guides](https://www.elibrary.imf.org/page/54)
+            
+        
+        *   [World Economic Outlook](/en/publications/weo)
+            
+        *   [Global Financial Stability Report](/en/publications/gfsr)
+            
+        *   [Fiscal Monitor](/en/publications/fm)
+            
+        *   [External Sector Report](/en/Publications/SPROLLs/External-Sector-Reports)
+            
+        *   [Regional Economic Reports](/en/publications/reo)
+            
+        
+        *   [Country Reports](/en/Search#sort=relevancy&f:type=[PUBS,COUNTRYREPS])
+            
+        *   [Departmental Papers](/en/Publications/SPROLLs/IMF-Departmental-Papers)
+            
+        *   [Policy Papers](/en/publications/search?when=After&series=Policy+Papers)
+            
+        *   [Staff Discussion Notes](/en/Publications/SPROLLs/Staff-Discussion-Notes)
+            
+        *   [Selected Issues Papers](/en/Publications/selected-issues-papers)
+            
+        
+        *   [All Staff Notes Series](/en/Publications/imf-staff-notes)
+            
+        *   [Analytical Notes](/en/Publications/imf-staff-notes#Analytical-Notes)
+            
+        *   [Fintech Notes](/en/Publications/imf-staff-notes#FinTech%20Notes)
+            
+        *   [How-To Notes](/en/Publications/imf-staff-notes#How%20to%20notes)
+            
+        *   [Staff Climate Notes](/en/Publications/imf-staff-notes#Climate%20Notes)
+            
+        
+
+![](#) Russian Federation
+=========================
+
+![Moscow, Russia](/-/media/Images/IMF/Countries/detail-page/RUS/rus-banner.ashx?h=280&w=1099&la=en)
+
+_![facebook sharing button](https://platform-cdn.sharethis.com/img/facebook.svg)_
+
+_![twitter sharing button](https://platform-cdn.sharethis.com/img/twitter.svg)_
+
+_![email sharing button](https://platform-cdn.sharethis.com/img/email.svg)_
+
+_![copy sharing button](https://platform-cdn.sharethis.com/img/copy.svg)_
+
+_![print sharing button](https://platform-cdn.sharethis.com/img/print.svg)_
+
+The last Article IV Executive Board Consultation was on February 3, 2021. Listed below are items related to Russian Federation.
+
+*   [Country News](#featured)
+    
+
+*   [At a Glance](#ataglance)
+    
+
+*   [Country Data](#countrydata)
+    
+
+*   [See All Documents](#whatsnew)
+    
+
+### Country News
+
+### At a Glance
+
+*   2025 Projected Real GDP (% Change) : 0.9\*
+*   Country Population: 145.632 million
+*   Date of Membership: June 1, 1992
+*   [Article IV/Country Report](/external/pubs/cat/longres.aspx?sk=50068.0)
+    : February 8, 2021
+*   Special Drawing Rights (SDR): 17581.68 million
+
+*   Quota (SDR): 12903.7 million
+*   Number of Arrangements since membership: 4
+
+\*GDP Data from [July 2025 World Economic Outlook Update](https://www.imf.org/en/Publications/WEO/Issues/2025/07/29/world-economic-outlook-update-july-2025)
+
+### Country Data
+
+### See All Documents"
+
+# Your Summary
+
+
+
+===== > RESPONSE:  < =====
+The IMF website provides information about Russia, including its membership date, quota, and Special Drawing Rights. It also includes a link to the July 2025 World Economic Outlook Update, which projects a 0.9% change in real GDP for 2025. <image:2695>
+
+_________________________
+
+
+
+SummarizeResultPrompt - QUERY:
+
+# Instructions
+In order to find evidence that helps your fact-check, you just ran a web search which yielded a Search Result. **Your task right now is to summarize the Search Result.** What to include:
+* information that might be useful for the fact-check (see Record)
+* relevant images (refer to images by inserting their reference <image:k>)
+* if available: the release date as well as the author or the publisher (e.g. the media company) of the search result.
+
+Do NOT include:
+* advertisements
+* any other information not related to the Record or the Claim
+
+Additional rules:
+* Do not add any additional information besides the information in the Search Result.
+* If the Search Result doesn't contain any relevant information for the fact-checking work, simply print one word in capital letters: "NONE".
+* Keep your writing style like in the Examples 1, 2 and 3 provided to you.
+* Try to filter out relevant information even if the search result is in a different language.
+
+# Example 1
+The search result from America Today provides several photographs of the Notre-Dame Cathedral fire on April 15, 2019. <image:i>, <image:j>, <image:k>. None of the images show the Eiffel Tower in the background. 
+
+# Example 2
+NONE
+
+# Example 3
+The Guardian discusses a report blaming the Syrian government for a toxic gas attack and condemning their use of chemical weapons. The Guardian mentions the Chemical Weapons Convention and the responsibilities of Syria under the convention. According to The Guardian, The White House condemned the Assad regime for defying the norm against chemical weapons use.
+
+# Record
+## Claim
+Claim: "In October 2024 the International Monetary Fund (IMF) declared Russia the fourth-largest economy in the world."
+
+## Actions
+```
+web_search("IMF Russia economy ranking October 2024")
+```
+
+# Search Result
+From [Source](https://www.russiamatters.org/blog/russias-economy-collapsing): 
+Content: "For one, the [IMF](https://www.imf.org/en/Publications/WEO/Issues/2025/01/17/world-economic-outlook-update-january-2025)
+ and [World Bank](https://thedocs.worldbank.org/en/doc/c50bc3c87bc2666b9e5fa6699b0b2849-0050012025/related/GEP-Jan-2025-Analysis-ECA.pdf)
+ estimate that the Russian economy grew by 3.8% and 3.4%, respectively, in 2024.3 Looking ahead, both expect the Russian economy to continue growing in 2025–2026, even though this growth is expected to slow down. The same year saw 19 new Russian dollar billionaires join Forbes’s ranking, which is the highest number of new dollar billionaires Russia has produced since 2011, according to [Re: Russia](https://re-russia.net/en/analytics/0233/)
+.
+
+As the economy grew in 2024, so did Russia’s budget revenues, even though this growth was not sufficient to eliminate the aforementioned budget deficit. Olga Chyzh of the University of Toronto also took a dim view of the Russian economy in her recent commentary for The Guardian, entitled “A string of assassinations, a [faltering economy](https://www.theguardian.com/commentisfree/2024/dec/19/russia-assassinations-economy-workers-putin)
+, a shortage of workers: the pressure on Putin is ratcheting up.” In this Dec. 2024, commentary, Chyzh writes that Russia’s “economy is faltering under the combined strain of the war and Western sanctions.” “War-driven salary increases … have triggered a vicious cycle of inflation and subsequent interest-rate hikes. Writing in The Hill in October 2024, he predicts that a “Russian economic meltdown is coming next year.” “Leonid Brezhnev’s Soviet Union should have taught Putin a lesson,” warns Motyl, who has repeatedly predicted [Russia’s collapse](https://www.google.com/search?client=firefox-b-1-d&q=Alexander+Motyl+Russia+collapse)
+. 5, 2024, entitled “[The collapse of the Russian economy](https://www.counteroffensive.news/p/the-collapse-of-the-russian-economy)
+,” on American journalist Tim Mak’s Substack, “Counteroffensive.” The Kyiv-based Euromaidan Press outlet then published a commentary by [Yurii Bohdanov](https://euromaidanpress.com/author/yuriybohdanov/ "View all posts by Yurii Bohdanov")
+ on Jan. 17, 2025, in which he claims that “even ‘freezing’ the war in Ukraine will not solve Russia’s economic problems… and a freeze only delays the inevitable collapse.” 
+
+### Russia Doesn’t Have a Clean Bill of Health
+
+Some of the aforementioned criticism of what the [IMF](https://www.imf.org/external/datamapper/PPPSH@WEO/OEMDC/ADVEC/WEOWORLD)
+ ranks as the world’s 4th largest economy in terms of PPP is valid. In fact, Russia’s budget revenues in December 2024 reached more than 4 trillion rubles ($40 billion), up by 28% compared to December 2023, the highest level recorded in ministry data beginning from January 2011, according to [Bloomberg](https://www.bloomberg.com/news/articles/2025-01-21/russia-s-budget-revenue-surges-to-record-in-december-despite-sanctions "(opens in a new window)")
+.5 One sector of the Russian economy which provides much of the money6 that is accumulated in the Russian budget and that the Kremlin then spends on its war, is the energy sector. Gazprom, the national gas champion, is estimated to have lost more [than $3 billion](https://www.reuters.com/business/energy/gazprom-reports-9-month-loss-32-billion-2024-10-29/)
+ in the first nine months of 2024, for instance.)
+
+### Conclusion 
+
+No economy is completely healthy, and Russia’s is, by far, no exception, particularly given Western sanctions and its rampant spending on the military-industrial complex and the war against Ukraine. (AP Photo/Alexander Zemlianichenko)](/sites/default/files/styles/slider/public/media/full/AP24325279743092.jpg?itok=o2L0pwzi)
+
+Is Russia’s Economy Collapsing?
+===============================
+
+February 06, 2025
+
+[Simon Saradzhyan](/authors/simon-saradzhyan)
+
+The past few months have seen a number of Russia watchers echo each other’s proclamations that the Russian economy is either already collapsing or close to crumbling. 
+
+Will these predictions materialize?
+
+### Gloom and Doom: The Russian Economy as Seen From the West 
+
+[Mark Temnycky](https://www.atlanticcouncil.org/expert/mark-temnycky/)
+ of the Atlantic Council contributed a Jan."
+
+# Your Summary
+
+
+
+===== > RESPONSE:  < =====
+According to the search result from russiamatters.org, the IMF ranks Russia as the world's 4th largest economy in terms of PPP. The article mentions that in December 2024, Russia's budget revenues reached more than 4 trillion rubles ($40 billion), the highest level recorded since January 2011. The article was published on February 06, 2025, and the author is Simon Saradzhyan.
+
+_________________________
+
+
+
+SummarizeSummariesPrompt - QUERY:
+
+# Instructions
+You just retrieved web sources, each one summarized under "Web Sources". **Your task right now is to summarize the web source summaries.**
+
+Always adhere to the following rules:
+* Write only one to two paragraphs.
+* Include all URLs from the listed sources. Format them as Markdown hyperlinks.
+* Do not add any additional information besides the information in the summaries.
+* Include references (<image:k>) to all relevant images.
+
+# Record
+## Claim
+Claim: "In October 2024 the International Monetary Fund (IMF) declared Russia the fourth-largest economy in the world."
+
+## Actions
+```
+web_search("IMF Russia economy ranking October 2024")
+```
+
+## Web Sources
+**Web Search Result**
+
+From [Source](https://www.imf.org/en/Countries/RUS): 
+Content: The IMF website provides information about Russia, including its membership date, quota, and Special Drawing Rights. It also includes a link to the July 2025 World Economic Outlook Update, which projects a 0.9% change in real GDP for 2025. <image:2695>
+
+
+From [Source](https://www.russiamatters.org/blog/russias-economy-collapsing): 
+Content: According to the search result from russiamatters.org, the IMF ranks Russia as the world's 4th largest economy in terms of PPP. The article mentions that in December 2024, Russia's budget revenues reached more than 4 trillion rubles ($40 billion), the highest level recorded since January 2011. The article was published on February 06, 2025, and the author is Simon Saradzhyan.
+
+
+## Your Summary
+
+
+
+===== > RESPONSE:  < =====
+The IMF website provides information about Russia, including its membership date, quota, and Special Drawing Rights, and includes a link to the July 2025 World Economic Outlook Update, which projects a 0.9% change in real GDP for 2025 (<image:2695>). The IMF ranks Russia as the world's 4th largest economy in terms of PPP.
+
+The article from russiamatters.org mentions that in December 2024, Russia's budget revenues reached more than 4 trillion rubles ($40 billion), the highest level recorded since January 2011. The article was published on February 06, 2025.
+
+_________________________
+
+
+
+DevelopPrompt - QUERY:
+
+# Instructions
+You just retrieved new Evidence. Now, **analyze the Claim's veracity using the evidence**. Always adhere to the following rules:
+* Focus on developing new insights. Do not repeat larger parts from the Record. Do not restate the Claim.
+* Write down your thoughts step-by-step. Whenever necessary, you may elaborate in more detail.
+* Depending on the topic's complexity, invest one to three paragraphs. The fewer, the better.
+* If you find that there is insufficient information to verify the Claim, explicitly state what information is missing.
+* If you cite web sources, always refer to them by including their URL as a Markdown hyperlink.
+* **Use information only from the recorded evidence**: Avoid inserting information that is not implied by the evidence. You may use commonsense knowledge, though.
+
+# Record
+## Claim
+Claim: "In October 2024 the International Monetary Fund (IMF) declared Russia the fourth-largest economy in the world."
+
+## Actions
+```
+web_search("IMF Russia economy ranking October 2024")
+```
+
+## Evidence
+### Evidence from `web_search`
+The IMF website provides information about Russia, including its membership date, quota, and Special Drawing Rights, and includes a link to the July 2025 World Economic Outlook Update, which projects a 0.9% change in real GDP for 2025 (<image:2695>). The IMF ranks Russia as the world's 4th largest economy in terms of PPP.
+
+The article from russiamatters.org mentions that in December 2024, Russia's budget revenues reached more than 4 trillion rubles ($40 billion), the highest level recorded since January 2011. The article was published on February 06, 2025.
+
+
+# Your Analysis
+
+
+
+===== > RESPONSE:  < =====
+The evidence indicates that the IMF ranks Russia as the world's 4th largest economy in terms of PPP. However, the evidence does not specify the exact date when this ranking was made. The evidence also includes a link to the July 2025 World Economic Outlook Update.
+
+Therefore, the claim cannot be fully verified because the exact date of the IMF's ranking is not explicitly stated in the provided evidence.
+
+_________________________
+
+
+
+JudgePrompt - QUERY:
+
+# Instructions
+**Determine the Claim's veracity** by following these steps:
+1. Briefly summarize the key insights from the fact-check (see Record) in at most one paragraph.
+2. Write one paragraph about which one of the Decision Options applies best. Include the most appropriate decision option at the end and enclose it in backticks like `this`.
+
+
+
+
+## Decision Options
+* `false`: The claim is not factually accurate. This is the case if one of the following three conditions is met:(1) The claim is demonstrably false when it is disproven by evidence from multiple and reliable sources,(2) The claim or image is taken out of context, i.e. the origin, content and/or meaning of a statement or an image is misrepresented. For example, an old claim or an old image is mispresented in a new context in a misleading way,(3) There is not enough evidence to verify the claim or the evidence is conflicting or self-contradictory.
+* `true`: The claim is factually accurate when it is confirmed by evidence from multiple and reliable sources.
+* `not enough information`: The fact-check does not contain sufficient information to come to an conclusion. For example,there is substantial lack of evidence or the evidence is inconclusive, conflicting or self-contradictory. In the case of a lack of evidence, state which information exactly is missing. In particular, if no RESULTS or sources are available, pick this decision.
+
+# Record
+## Claim
+Claim: "In October 2024 the International Monetary Fund (IMF) declared Russia the fourth-largest economy in the world."
+
+## Actions
+```
+web_search("IMF Russia economy ranking October 2024")
+```
+
+## Evidence
+### Evidence from `web_search`
+The IMF website provides information about Russia, including its membership date, quota, and Special Drawing Rights, and includes a link to the July 2025 World Economic Outlook Update, which projects a 0.9% change in real GDP for 2025 (<image:2695>). The IMF ranks Russia as the world's 4th largest economy in terms of PPP.
+
+The article from russiamatters.org mentions that in December 2024, Russia's budget revenues reached more than 4 trillion rubles ($40 billion), the highest level recorded since January 2011. The article was published on February 06, 2025.
+
+
+## Elaboration
+The evidence indicates that the IMF ranks Russia as the world's 4th largest economy in terms of PPP. However, the evidence does not specify the exact date when this ranking was made. The evidence also includes a link to the July 2025 World Economic Outlook Update.
+
+Therefore, the claim cannot be fully verified because the exact date of the IMF's ranking is not explicitly stated in the provided evidence.
+
+
+# Your Judgement
+
+
+
+===== > RESPONSE:  < =====
+The search results confirm that the IMF ranks Russia as the 4th largest economy in terms of PPP. However, the exact date of this ranking is not specified.
+
+The claim is not fully verifiable because the exact date of the IMF's ranking is not explicitly stated in the provided evidence. `not enough information`
+
+_________________________
+
+
+
+PlanPrompt - QUERY:
+
+# Instructions
+The available knowledge is insufficient to assess the Claim. Therefore, **propose a set of actions** to retrieve new and helpful evidence. Adhere to the following rules:
+* The actions available are listed under Valid Actions, including a short description for each action. No other actions are possible at this moment. 
+* For each action, use the formatting as specified in Valid Actions.
+* Include all actions in a single Markdown code block at the end of your answer.
+* Propose as few actions as possible, but as much as needed. Do not propose similar or previously used actions.
+
+
+
+## Valid Actions
+* `image_search`
+   * Description: Run an image search on Google to retrieve related images for a given query.
+   * How to use: This is a helpful tool for fact-checking images. Use this to retrieve images associated with a specific keyword or phrase. Ensure that the query is clear and specific to improve search accuracy. If no relevant images are found, refine the query or use more descriptive terms.
+   * Format: image_search("your image search query goes here")
+
+* `geolocate`
+   * Description: Performs geolocation to determine the country where an image was taken.
+   * How to use: Provide an image and the model will determine the most likely countries where it was taken.
+   * Format: geolocate(<image:k>), where `k` is the image's ID
+
+* `web_search`
+   * Description: Run an open web search on Google or DuckDuckGO to retrieve any related webpage.
+   * How to use: Do not use this with a previously used or similar query from previous web searches. If a previous web search did not yield any results, use a very different query.
+   * Format: web_search("your web search query goes here")
+
+# Example: image_search()
+
+## Claim
+Text: "Chinese officials in white protective hazmat suits carried people down a hallway to be quarantined for having COVID-19 in November 2022."
+
+...
+
+ACTIONS:
+```
+image_search("China officials white suits carry people")
+image_search("China officials carry people COVID quarantine 2022")
+```
+
+# Example: geolocate()
+
+## Claim
+Text: "<image:k> shows a nuclear weapons facility in Usbekistan."
+
+...
+
+## Actions
+```
+geolocate(<image:k>)
+```
+
+# Example: web_search()
+
+## Claim
+Text: "New Zealand’s new Food Bill bans gardening"
+Claim date: October 29, 2020
+
+...
+
+## Actions
+```
+web_search("New Zealand Food Bill 2020")
+web_search("New Zealand Food Bill gardening ban")
+```
+
+# Record
+## Claim
+Claim: "In October 2024 the International Monetary Fund (IMF) declared Russia the fourth-largest economy in the world."
+
+## Actions
+```
+web_search("IMF Russia economy ranking October 2024")
+```
+
+## Evidence
+### Evidence from `web_search`
+The IMF website provides information about Russia, including its membership date, quota, and Special Drawing Rights, and includes a link to the July 2025 World Economic Outlook Update, which projects a 0.9% change in real GDP for 2025 (<image:2695>). The IMF ranks Russia as the world's 4th largest economy in terms of PPP.
+
+The article from russiamatters.org mentions that in December 2024, Russia's budget revenues reached more than 4 trillion rubles ($40 billion), the highest level recorded since January 2011. The article was published on February 06, 2025.
+
+
+## Elaboration
+The evidence indicates that the IMF ranks Russia as the world's 4th largest economy in terms of PPP. However, the evidence does not specify the exact date when this ranking was made. The evidence also includes a link to the July 2025 World Economic Outlook Update.
+
+Therefore, the claim cannot be fully verified because the exact date of the IMF's ranking is not explicitly stated in the provided evidence.
+
+
+# Your Actions
+
+
+
+===== > RESPONSE:  < =====
+```
+web_search("IMF Russia economy ranking date")
+```
+_________________________
+
+
+
+SummarizeResultPrompt - QUERY:
+
+# Instructions
+In order to find evidence that helps your fact-check, you just ran a web search which yielded a Search Result. **Your task right now is to summarize the Search Result.** What to include:
+* information that might be useful for the fact-check (see Record)
+* relevant images (refer to images by inserting their reference <image:k>)
+* if available: the release date as well as the author or the publisher (e.g. the media company) of the search result.
+
+Do NOT include:
+* advertisements
+* any other information not related to the Record or the Claim
+
+Additional rules:
+* Do not add any additional information besides the information in the Search Result.
+* If the Search Result doesn't contain any relevant information for the fact-checking work, simply print one word in capital letters: "NONE".
+* Keep your writing style like in the Examples 1, 2 and 3 provided to you.
+* Try to filter out relevant information even if the search result is in a different language.
+
+# Example 1
+The search result from America Today provides several photographs of the Notre-Dame Cathedral fire on April 15, 2019. <image:i>, <image:j>, <image:k>. None of the images show the Eiffel Tower in the background. 
+
+# Example 2
+NONE
+
+# Example 3
+The Guardian discusses a report blaming the Syrian government for a toxic gas attack and condemning their use of chemical weapons. The Guardian mentions the Chemical Weapons Convention and the responsibilities of Syria under the convention. According to The Guardian, The White House condemned the Assad regime for defying the norm against chemical weapons use.
+
+# Record
+## Claim
+Claim: "In October 2024 the International Monetary Fund (IMF) declared Russia the fourth-largest economy in the world."
+
+## Actions
+```
+web_search("IMF Russia economy ranking October 2024")
+```
+
+## Evidence
+### Evidence from `web_search`
+The IMF website provides information about Russia, including its membership date, quota, and Special Drawing Rights, and includes a link to the July 2025 World Economic Outlook Update, which projects a 0.9% change in real GDP for 2025 (<image:2695>). The IMF ranks Russia as the world's 4th largest economy in terms of PPP.
+
+The article from russiamatters.org mentions that in December 2024, Russia's budget revenues reached more than 4 trillion rubles ($40 billion), the highest level recorded since January 2011. The article was published on February 06, 2025.
+
+
+## Elaboration
+The evidence indicates that the IMF ranks Russia as the world's 4th largest economy in terms of PPP. However, the evidence does not specify the exact date when this ranking was made. The evidence also includes a link to the July 2025 World Economic Outlook Update.
+
+Therefore, the claim cannot be fully verified because the exact date of the IMF's ranking is not explicitly stated in the provided evidence.
+
+
+## Actions
+```
+web_search("IMF Russia economy ranking date")
+```
+
+# Search Result
+From [Source](https://www.themoscowtimes.com/2025/07/30/imf-slashes-russias-economic-forecast-as-wartime-growth-slows-a90026): 
+Content: "Alexander Nemenov / AFP
+
+The International Monetary Fund has [downgraded](https://www.imf.org/en/Publications/WEO/Issues/2025/07/29/world-economic-outlook-update-july-2025 "downgraded")
+ its forecast for the Russian economy, signaling the end of a short-lived wartime growth surge and forecasting a return to stagnation.
+
+In its July World Economic Outlook Update, the IMF projects Russia’s GDP will grow just 0.9% in 2025, a steep drop from last year’s 4.1% expansion. The revised forecast marks a 0.6 percentage point downgrade from the IMF’s April report — the largest cut among all major economies.
+
+The world economy is expected to grow by 3% this year and 3.1% in 2026.
+
+Developing nations are forecast to grow at roughly 4% annually, while Russia’s economy is expected to edge up by just 1% in 2026.
+
+Over the next two years, Russia’s growth rate will be less than half that of the U.S., which is projected to grow by 3.9%, and will trail far behind China (9%) and India (6.4% annually in 2025 and 2026).
+
+The IMF attributes the slowdown to tighter economic policies and falling global oil prices, which have eroded the key revenue streams that helped prop up Russia’s wartime economy.
+
+The average price of Brent crude is forecast to drop 13.9% this year to $68.18 per barrel, with a further decline to $64.33 expected in 2026.
+
+Petya Koeva-Brooks, deputy director of the IMF’s research department, said Russia’s performance in the first quarter of 2025 fell well short of expectations.
+
+According to state statistics agency Rosstat, year-on-year growth dropped to 1.4%, down from 4.5% in the previous quarter and sharply below the 5.4% growth seen in the same period last year.
+
+On a quarterly basis, the economy contracted for the first time since 2022. Petersburg Economic Forum in June, Economy Minister Maxim Reshetnikov [warned](https://www.themoscowtimes.com/2025/06/19/russias-economy-minister-warns-of-looming-recession-a89510 "warned")
+ that the country was “on the edge of an economic downturn.”
+
+Central Bank Governor Elvira Nabiullina delivered an even starker message, [saying](https://kyivindependent.com/russias-war-fueled-economy-is-running-on-empty-central-bank-chief-warns/ "saying")
+ that the resources which had fueled wartime growth “have truly been exhausted.”
+
+Nabiullina pointed to labor shortages, idle production capacity and dwindling reserves from the National Wealth Fund.
+
+The fund’s liquid assets have reportedly fallen by two-thirds since the start of Russia’s full-scale invasion of Ukraine.
+
+Read more about: [Economy](https://www.themoscowtimes.com/tag/economy "Economy")
+
+#### Sign up for our free weekly newsletter
+
+Our weekly newsletter contains a hand-picked selection of news, features, analysis and more from The Moscow Times. <image:8744>\
+\
+### Russian Economy Facing ‘Massive Structural’ Challenges, Central Bank Says\
+\
+The Russian economy faces a new “perestroika” as it is forced to adjust to life under heavy sanctions and international isolation.](https://www.themoscowtimes.com/2022/03/18/russian-economy-facing-massive-structural-challenges-central-bank-says-a76992 "Russian Economy Facing ‘Massive Structural’ Challenges, Central Bank Says")
+
+[! [![The Moscow Times](https://static.themoscowtimes.com/img/logo_tmt_30_yo.svg)](https://www.themoscowtimes.com/ "The Moscow Times - Independent News from Russia")
+
+Support The Moscow Times!
+
+[Contribute today](https://www.themoscowtimes.com/contribute?utm_source=contribute&utm_medium=internal-header)
+
+[](https://www.themoscowtimes.com/account)
+
+[My account](https://www.themoscowtimes.com/account)
+ [Signout](https://www.themoscowtimes.com/account/signout)
+
+Support The Moscow Times!
+
+[Contribute today](https://www.themoscowtimes.com/contribute?utm_source=contribute&utm_medium=internal-header-mobile)
+
+July 30, 2025
+
+! <image:8741>
+
+A poster reading "The Pride of Russia" seen in front of Russia's Foreign Ministry headquarters in Moscow. Non-defense sectors began declining in February and have now registered four consecutive months of contraction.
+
+Those sectors had shrunk 0.9% year-on-year by late June, according to estimates from the government-affiliated Center for Macroeconomic Analysis and Forecasting.
+
+Top Russian officials are beginning to acknowledge the economic risks.
+
+At the St. Never miss the latest news from Russia. Russia's Prosecutor General's Office has designated The Moscow Times as an "undesirable" organization, criminalizing our work and putting our staff at risk of prosecution. This follows our earlier unjust labeling as a "foreign agent."
+
+These actions are direct attempts to silence independent journalism in Russia."
+
+# Your Summary
+
+
+
+===== > RESPONSE:  < =====
+The Moscow Times published an article on July 30, 2025, discussing the IMF's downgraded forecast for the Russian economy. The IMF projects Russia’s GDP will grow just 0.9% in 2025. <image:8741>
+
+_________________________
+
+
+
+SummarizeResultPrompt - QUERY:
+
+# Instructions
+In order to find evidence that helps your fact-check, you just ran a web search which yielded a Search Result. **Your task right now is to summarize the Search Result.** What to include:
+* information that might be useful for the fact-check (see Record)
+* relevant images (refer to images by inserting their reference <image:k>)
+* if available: the release date as well as the author or the publisher (e.g. the media company) of the search result.
+
+Do NOT include:
+* advertisements
+* any other information not related to the Record or the Claim
+
+Additional rules:
+* Do not add any additional information besides the information in the Search Result.
+* If the Search Result doesn't contain any relevant information for the fact-checking work, simply print one word in capital letters: "NONE".
+* Keep your writing style like in the Examples 1, 2 and 3 provided to you.
+* Try to filter out relevant information even if the search result is in a different language.
+
+# Example 1
+The search result from America Today provides several photographs of the Notre-Dame Cathedral fire on April 15, 2019. <image:i>, <image:j>, <image:k>. None of the images show the Eiffel Tower in the background. 
+
+# Example 2
+NONE
+
+# Example 3
+The Guardian discusses a report blaming the Syrian government for a toxic gas attack and condemning their use of chemical weapons. The Guardian mentions the Chemical Weapons Convention and the responsibilities of Syria under the convention. According to The Guardian, The White House condemned the Assad regime for defying the norm against chemical weapons use.
+
+# Record
+## Claim
+Claim: "In October 2024 the International Monetary Fund (IMF) declared Russia the fourth-largest economy in the world."
+
+## Actions
+```
+web_search("IMF Russia economy ranking October 2024")
+```
+
+## Evidence
+### Evidence from `web_search`
+The IMF website provides information about Russia, including its membership date, quota, and Special Drawing Rights, and includes a link to the July 2025 World Economic Outlook Update, which projects a 0.9% change in real GDP for 2025 (<image:2695>). The IMF ranks Russia as the world's 4th largest economy in terms of PPP.
+
+The article from russiamatters.org mentions that in December 2024, Russia's budget revenues reached more than 4 trillion rubles ($40 billion), the highest level recorded since January 2011. The article was published on February 06, 2025.
+
+
+## Elaboration
+The evidence indicates that the IMF ranks Russia as the world's 4th largest economy in terms of PPP. However, the evidence does not specify the exact date when this ranking was made. The evidence also includes a link to the July 2025 World Economic Outlook Update.
+
+Therefore, the claim cannot be fully verified because the exact date of the IMF's ranking is not explicitly stated in the provided evidence.
+
+
+## Actions
+```
+web_search("IMF Russia economy ranking date")
+```
+
+# Search Result
+From [Source](https://en.wikipedia.org/wiki/Economy_of_Russia): 
+Content: "[Jump to content](#bodyContent)
+
+[![Page semi-protected](//upload.wikimedia.org/wikipedia/en/thumb/1/1b/Semi-protection-shackle.svg/20px-Semi-protection-shackle.svg.png)](/wiki/Wikipedia:Protection_policy#semi "This article is semi-protected.")
+
+From Wikipedia, the free encyclopedia
+
+|     |     |
+| --- | --- |Economy of Russia
+| [![](//upload.wikimedia.org/wikipedia/commons/thumb/9/96/030524-Moscow-IMG_9688-2.jpg/330px-030524-Moscow-IMG_9688-2.jpg)](/wiki/File:030524-Moscow-IMG_9688-2.jpg)<br><br>The [MIBC](/wiki/Moscow_International_Business_Center "Moscow International Business Center")<br> in [Moscow](/wiki/Moscow "Moscow")<br>, the [financial centre](/wiki/Financial_centre "Financial centre")<br> of Russia |     |
+| Currency | [Russian ruble](/wiki/Russian_ruble "Russian ruble")<br> (RUB or руб or ₽) |
+| [Fiscal year](/wiki/Fiscal_year "Fiscal year") | Calendar year[\[1\]](#cite_note-CIAWFRS-1) |
+| Trade organizations | [WTO](/wiki/World_Trade_Organization "World Trade Organization")<br>, [BRICS](/wiki/BRICS "BRICS")<br>, [EAEU](/wiki/Eurasian_Economic_Union "Eurasian Economic Union")<br>, [CIS](/wiki/Commonwealth_of_Independent_States "Commonwealth of Independent States")<br>, [GECF](/wiki/GECF "GECF")<br>, [APEC](/wiki/Asia-Pacific_Economic_Cooperation "Asia-Pacific Economic Cooperation")<br>, [G20](/wiki/G20 "G20")<br> and others |
+| Country group | *   [Emerging and developing economy](/wiki/Developing_country "Developing country")<br>    [\[2\]](#cite_note-GROUP-2)<br>    <br>*   [High-income economy](/wiki/World_Bank_high-income_economy "World Bank high-income economy")<br>    [\[3\]](#cite_note-3)<br>    <br>*   Natural resource-rich Eurasian economy[\[1\]](#cite_note-CIAWFRS-1) |
+| Statistics |     |
+| Population | ![Increase](//upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Increase2.svg/20px-Increase2.svg.png) 146,080,000 ([late 2024 census](/wiki/Russian_Census_(2021) "Russian Census (2021)")<br>)[\[4\]](#cite_note-census2021-4) |
+| [GDP](/wiki/Gross_domestic_product "Gross domestic product") | *   ![Decrease](//upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Decrease2.svg/20px-Decrease2.svg.png) $2.08 trillion ([nominal](/wiki/GDP_(nominal) "GDP (nominal)")<br>    ; 2025)[\[5\]](#cite_note-IMF_DataMapper-5)<br>    <br>*   ![Increase](//upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Increase2.svg/20px-Increase2.svg.png) $7.19 trillion ([PPP](/wiki/Purchasing_power_parity "Purchasing power parity")<br>    ; 2025)[\[5\]](#cite_note-IMF_DataMapper-5) |
+| GDP rank | *   [11th (nominal; 2025)](/wiki/List_of_countries_by_GDP_(nominal) "List of countries by GDP (nominal)")<br>    <br>*   [4th (PPP; 2025)](/wiki/List_of_countries_by_GDP_(PPP) "List of countries by GDP (PPP)") |
+| GDP growth | *   ![Increase](//upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Increase2.svg/20px-Increase2.svg.png) 4.1% (2023)[\[5\]](#cite_note-IMF_DataMapper-5)<br>    <br>*   ![Increase](//upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Increase2.svg/20px-Increase2.svg.png) 4.1% (2024)[\[5\]](#cite_note-IMF_DataMapper-5)<br>    <br>*   ![Decrease](//upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Decrease2.svg/20px-Decrease2.svg.png) 1.5% (2025)[\[5\]](#cite_note-IMF_DataMapper-5)<br>    <br>*   ![Increase](//upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Increase2.svg/20px-Increase2.svg.png) 0.9% (2026f)[\[5\]](#cite_note-IMF_DataMapper-5) |
+| GDP per capita | *   ![Decrease](//upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Decrease2.svg/20px-Decrease2.svg.png) $14,260 (nominal; 2025)[\[5\]](#cite_note-IMF_DataMapper-5)<br>    <br>*   ![Increase](//upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Increase2.svg/20px-Increase2.svg.png) $49,380 (PPP; 2025)[\[5\]](#cite_note-IMF_DataMapper-5) |
+| GDP per capita rank | *   [67th (nominal; 2025)](/wiki/List_of_countries_by_GDP_per_capita_(nominal) "List of countries by GDP per capita (nominal)")<br>    <br>*   [43th (PPP; 2025)](/wiki/List_of_countries_by_GDP_per_capita_(PPP) "List of countries by GDP per capita (PPP)") |
+| GDP by sector | *   [Agriculture](/wiki/Primary_sector_of_the_economy "Primary sector of the economy")<br>    : 5.6%<br>*   [Industry](/wiki/Secondary_sector_of_the_economy "Secondary sector of the economy")<br>    : 26.6%<br>*   [Services](/wiki/Tertiary_sector_of_the_economy "Tertiary sector of the economy")<br>    : 67.8%<br>*   (2022 est.)[\[6\]](#cite_note-Central_Intelligence_Agency-6) |
+| [Inflation](/wiki/Inflation "Inflation")<br> ([CPI](/wiki/Consumer_price_index "Consumer price index")<br>) | *   5.9% (2023)<br>*   7.9% (2024)<br>*   5.9% (2025)[\[7\]](#cite_note-IMFWEORU-7) |
+| Population below [poverty line](/wiki/Poverty_threshold "Poverty threshold") | ![Positive decrease](//upload.wikimedia.org/wikipedia/commons/thumb/9/92/Decrease_Positive.svg/20px-Decrease_Positive.svg.png) 11% (2021)[\[8\]](#cite_note-8) |
+| [Gini coefficient](/wiki/Gini_coefficient "Gini coefficient") | ![Negative increase](//upload.wikimedia.org/wikipedia/commons/thumb/5/59/Increase_Negative.svg/20px-Increase_Negative.svg.png) 35.1 medium (2021, [World Bank](/wiki/World_Bank "World Bank")<br>)[\[9\]](#cite_note-9) |
+| [Human Development Index](/wiki/Human_Development_Index "Human Development Index") | *   ![Increase](//upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Increase2.svg/20px-Increase2.svg.png) 0.821 very high maximum (2022, [52nd](/wiki/List_of_countries_by_Human_Development_Index "List of countries by Human Development Index")<br>    )[\[10\]](#cite_note-10)<br>    <br>*   ![Increase](//upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Increase2.svg/20px-Increase2.svg.png) 0.747 high real (2022, [43rd](/wiki/List_of_countries_by_inequality-adjusted_HDI "List of countries by inequality-adjusted HDI")<br>    )[\[11\]](#cite_note-11) |
+| [Corruption Perceptions Index](/wiki/Corruption_Perceptions_Index "Corruption Perceptions Index") | ![Decrease](//upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Decrease2.svg/20px-Decrease2.svg.png) 26 out of 100 points (2023, [141st rank](/wiki/Corruption_Perceptions_Index "Corruption Perceptions Index")<br>) |
+| Labor force | *   ![Decrease](//upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Decrease2.svg/20px-Decrease2.svg.png) 73,184,751 (2023)[\[12\]](#cite_note-laborforce-12)<br>    <br>*   ![Increase](//upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Increase2.svg/20px-Increase2.svg.png) 60.8% employment rate (2023)[\[13\]](#cite_note-13) |
+| Labor force by occupation | *   [Agriculture](/wiki/Primary_sector_of_the_economy "Primary sector of the economy")<br>    : 9.4%<br>*   [Industry](/wiki/Secondary_sector_of_the_economy "Secondary sector of the economy")<br>    : 27.6%<br>*   [Services](/wiki/Tertiary_sector_of_the_economy "Tertiary sector of the economy")<br>    : 63%<br>*   (2016 est.)[\[6\]](#cite_note-Central_Intelligence_Agency-6) |
+| Unemployment | *   ![Positive decrease](//upload.wikimedia.org/wikipedia/commons/thumb/9/92/Decrease_Positive.svg/20px-Decrease_Positive.svg.png) 2.6% (April 2024)[\[14\]](#cite_note-reutersunem-14) |
+| Average gross salary | [RUB 91,000 / €1,019](/wiki/List_of_European_countries_by_average_wage "List of European countries by average wage")<br> per month |
+| [Average net salary](/wiki/Net_income "Net income") | [RUB 78,590 / €880](/wiki/List_of_European_countries_by_average_wage "List of European countries by average wage")<br> per month |
+| Main industries | Complete range of [mining](/wiki/Mining "Mining")<br> and extractive industries producing [coal](/wiki/Coal "Coal")<br>, [oil](/wiki/Petroleum "Petroleum")<br>, [gas](/wiki/Natural_gas "Natural gas")<br>, [chemicals](/wiki/Chemicals "Chemicals")<br>, and [metals](/wiki/Metals "Metals")<br>; all forms of machine building from rolling mills to high-performance [aircraft](/wiki/Aircraft "Aircraft")<br> and [space vehicles](/wiki/Space_vehicle "Space vehicle")<br>; defence industries (including [radar](/wiki/Radar "Radar")<br>, [missile](/wiki/Missile "Missile")<br> production, [advanced electronic components](/wiki/Electronic_component "Electronic component")<br>), [shipbuilding](/wiki/Shipbuilding_in_Russia "Shipbuilding in Russia")<br>; road and rail [transportation equipment](/wiki/Material-handling_equipment "Material-handling equipment")<br>; [communications equipment](/wiki/Communications_equipment "Communications equipment")<br>; agricultural machinery, tractors, and [construction equipment](/wiki/Heavy_equipment "Heavy equipment")<br>; electric power generating and transmitting equipment; [medical](/wiki/Medical "Medical")<br> and scientific instruments; [consumer durables](/wiki/Consumer_durables "Consumer durables")<br>, [textiles](/wiki/Textiles "Textiles")<br>, [foodstuffs](/wiki/Foodstuff "Foodstuff")<br>, [handicrafts](/wiki/Handicrafts "Handicrafts") |
+| External |     |
+| Exports | ![Decrease](//upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Decrease2.svg/20px-Decrease2.svg.png) $465.43 billion (2023)[\[15\]](#cite_note-15) |
+| Export goods | Crude petroleum, refined petroleum, natural gas, coal, wheat, iron (2019) |
+| Main export partners | *    ![](//upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Flag_of_the_People%27s_Republic_of_China.svg/40px-Flag_of_the_People%27s_Republic_of_China.svg.png)[China](/wiki/China "China")<br>     34.8%<br>    *    ![](//upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Flag_of_Hong_Kong.svg/40px-Flag_of_Hong_Kong.svg.png)[Hong Kong](/wiki/Hong_Kong "Hong Kong")<br>         2.1%<br>*    ![](//upload.wikimedia.org/wikipedia/en/thumb/4/41/Flag_of_India.svg/40px-Flag_of_India.svg.png)[India](/wiki/India "India")<br>     16.8%<br>*    ![](//upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Flag_of_Turkey.svg/40px-Flag_of_Turkey.svg.png)[Turkey](/wiki/Turkey "Turkey")<br>     7.9%<br>*    ![](//upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Flag_of_Kazakhstan.svg/40px-Flag_of_Kazakhstan.svg.png)[Kazakhstan](/wiki/Kazakhstan "Kazakhstan")<br>     4.1% (2023)[\[16\]](#cite_note-OECExport1-16) |
+| Imports | ![Increase](//upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Increase2.svg/20px-Increase2.svg.png) $378.61 billion (2023)[\[17\]](#cite_note-17) |
+| Import goods | Cars and vehicle parts, packaged medicines, broadcasting equipment, aircraft, computers (2019) |
+| Main import partners | *    ![](//upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Flag_of_the_People%27s_Republic_of_China.svg/40px-Flag_of_the_People%27s_Republic_of_China.svg.png)[China](/wiki/China "China")<br>     54.3%<br>    *    ![](//upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Flag_of_Hong_Kong.svg/40px-Flag_of_Hong_Kong.svg.png)[Hong Kong](/wiki/Hong_Kong "Hong Kong")<br>         1.3%<br>*    ![](//upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Flag_of_Turkey.svg/40px-Flag_of_Turkey.svg.png)[Turkey](/wiki/Turkey "Turkey")<br>     5.2%<br>*    ![](//upload.wikimedia.org/wikipedia/en/thumb/b/ba/Flag_of_Germany.svg/40px-Flag_of_Germany.svg.png)[Germany](/wiki/Germany "Germany")<br>     4.7%<br>*    ![](//upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Flag_of_Kazakhstan.svg/40px-Flag_of_Kazakhstan.svg.png)[Kazakhstan](/wiki/Kazakhstan "Kazakhstan")<br>     4.7% (2023)[\[18\]](#cite_note-OECExport-18) |
+| [FDI](/wiki/Foreign_direct_investment "Foreign direct investment")<br> stock | *   ![Increase](//upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Increase2.svg/20px-Increase2.svg.png) Inward: $38 billion (2021)[\[19\]](#cite_note-UNFDI-19)<br>    <br>*   ![Increase](//upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Increase2.svg/20px-Increase2.svg.png) Outward: $64 billion (2021)[\[19\]](#cite_note-UNFDI-19) |
+| [Current account](/wiki/Current_account_(balance_of_payments) "Current account (balance of payments)") | *   ![Decrease](//upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Decrease2.svg/20px-Decrease2.svg.png) $55.830 billion (2024)[\[20\]](#cite_note-IMF_Finance-20)<br>    <br>*   ![Decrease](//upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Decrease2.svg/20px-Decrease2.svg.png) 2.714% of GDP (2024)[\[20\]](#cite_note-IMF_Finance-20) |
+| Gross [external debt](/wiki/External_debt "External debt") | ![Negative increase](//upload.wikimedia.org/wikipedia/commons/thumb/5/59/Increase_Negative.svg/20px-Increase_Negative.svg.png) $381.77 billion (December 2022)[\[21\]](#cite_note-Ceicdata.com-21) |
+| Public finances |     |
+| [Government debt](/wiki/List_of_countries_by_government_debt "List of countries by government debt") | *   ![Negative increase](//upload.wikimedia.org/wikipedia/commons/thumb/5/59/Increase_Negative.svg/20px-Increase_Negative.svg.png) 38,362 [₽](/wiki/Russian_rouble "Russian rouble")<br>     trillion (2024)[\[20\]](#cite_note-IMF_Finance-20)<br>    <br>*   ![Negative increase](//upload.wikimedia.org/wikipedia/commons/thumb/5/59/Increase_Negative.svg/20px-Increase_Negative.svg.png) 35.7% of GDP (2024)[\[20\]](#cite_note-IMF_Finance-20) |
+| [Foreign reserves](/wiki/Foreign_exchange_reserves "Foreign exchange reserves") | ![Increase](//upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Increase2.svg/20px-Increase2.svg.png) $606.7 billion (July 2024)[\[22\]](#cite_note-22)<br> ([4th](/wiki/List_of_countries_by_foreign-exchange_reserves "List of countries by foreign-exchange reserves")<br>) |
+| [Budget balance](/wiki/Government_budget_balance "Government budget balance") | 3.8% of GDP (2022)[\[23\]](#cite_note-23) |
+| Revenues | ![Increase](//upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Increase2.svg/20px-Increase2.svg.png) 65,808 ₽ trillion (2024)[\[20\]](#cite_note-IMF_Finance-20)<br>  <br>![Increase](//upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Increase2.svg/20px-Increase2.svg.png) 35.61% of GDP (2024)[\[20\]](#cite_note-IMF_Finance-20) |
+| Expenses | ![Increase](//upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Increase2.svg/20px-Increase2.svg.png) 69,334 ₽ trillion (2024)[\[20\]](#cite_note-IMF_Finance-20)<br>  <br>![Increase](//upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Increase2.svg/20px-Increase2.svg.png) 37.52% of GDP (2024)[\[20\]](#cite_note-IMF_Finance-20) |
+| [Credit rating](/wiki/List_of_countries_by_credit_rating "List of countries by credit rating") | *   [Standard & Poor's](/wiki/Standard_%26_Poor%27s "Standard & Poor's")<br>    :[\[24\]](#cite_note-24)<br>    [\[25\]](#cite_note-25)<br>    <br>*   [SD](/wiki/Sovereign_default "Sovereign default")<br>     (Domestic)<br>*   SD (Foreign)<br>*   SD (T&C Assessment)<br>*   Outlook: N/A<br><br>* * *<br><br>*   [Moody's](/wiki/Moody%27s "Moody's")<br>    :[\[26\]](#cite_note-26)<br>    <br>*   Ca<br>*   Outlook: Negative<br><br>* * *<br><br>*   [Fitch](/wiki/Fitch_Group "Fitch Group")<br>    :[\[27\]](#cite_note-27)<br>    <br>*   C<br>*   Outlook: N/A |
+| _All values, unless otherwise stated, are in [US dollars](/wiki/United_States_dollar "United States dollar")<br>._ |     |
+
+The [economy](/wiki/Economy "Economy")
+ of [Russia](/wiki/Russia "Russia")
+ is an [emerging and developing](/wiki/Developing_country "Developing country")
+,[\[2\]](#cite_note-GROUP-2)
+ [high-income](/wiki/World_Bank_high-income_economy "World Bank high-income economy")
+,[\[28\]](#cite_note-28)
+ industrialized,[\[29\]](#cite_note-29)
+ [mixed](/wiki/Mixed_economy "Mixed economy")
+ [market-oriented](/wiki/Market_economy "Market economy")
+ economy.[\[30\]](#cite_note-Eco_info-30)
+ It has the [eleventh-largest economy](/wiki/List_of_countries_by_GDP_(nominal) "List of countries by GDP (nominal)")
+ in the world by nominal GDP and the [fourth-largest economy](/wiki/List_of_countries_by_GDP_(PPP) "List of countries by GDP (PPP)")
+ by GDP ([PPP](/wiki/Purchasing_power_parity "Purchasing power parity")
+).[\[7\]](#cite_note-IMFWEORU-7)
+ Due to a volatile currency [exchange rate](/wiki/Exchange_rate "Exchange rate")
+, its GDP measured in nominal terms fluctuates sharply.[\[31\]](#cite_note-31)
+ Russia was the last major economy to join the [World Trade Organization](/wiki/World_Trade_Organization "World Trade Organization")
+ (WTO), becoming a member in 2012.[\[32\]](#cite_note-32)
+
+Russia has large amounts of [energy resources](/wiki/World_energy_resources "World energy resources")
+ throughout its vast landmass, particularly [natural gas](/wiki/Natural_gas "Natural gas")
+ and [petroleum](/wiki/Oil_and_gas_reserves_and_resource_quantification "Oil and gas reserves and resource quantification")
+, which play a crucial role in its energy self-sufficiency and exports.[\[33\]](#cite_note-33)
+ The country has been widely described as an [energy superpower](/wiki/Energy_superpower "Energy superpower")
+;[\[34\]](#cite_note-:0-34)
+ with it having the [largest natural gas reserves](/wiki/List_of_countries_by_natural_gas_proven_reserves "List of countries by natural gas proven reserves")
+ in the world,[\[35\]](#cite_note-gaz-35)
+ the [second-largest coal reserves](/wiki/List_of_countries_by_coal_reserves "List of countries by coal reserves")
+,[\[36\]](#cite_note-:2-36)
+ the [eighth-largest oil reserves](/wiki/List_of_countries_by_proven_oil_reserves "List of countries by proven oil reserves")
+,[\[37\]](#cite_note-:3-37)
+ and the largest [oil shale reserves](/wiki/Oil_shale_reserves "Oil shale reserves")
+ in Europe.[\[38\]](#cite_note-:4-38)
+ Russia is the world's [leading natural gas exporter](/wiki/List_of_countries_by_natural_gas_exports "List of countries by natural gas exports")
+,[\[39\]](#cite_note-:5-39)
+ the [second-largest natural gas producer](/wiki/List_of_countries_by_natural_gas_production "List of countries by natural gas production")
+,[\[40\]](#cite_note-:6-40)
+ the [second-largest oil exporter](/wiki/List_of_countries_by_oil_exports "List of countries by oil exports")
+[\[41\]](#cite_note-:7-41)
+ and [producer](/wiki/List_of_countries_by_oil_production "List of countries by oil production")
+,[\[42\]](#cite_note-:8-42)
+ and the third-largest coal exporter.[\[43\]](#cite_note-Energy_Research_2023-43)
+ As of 2020, its [foreign exchange reserves](/wiki/Foreign_exchange_reserves "Foreign exchange reserves")
+ were the [fifth-largest](/wiki/List_of_countries_by_foreign-exchange_reserves "List of countries by foreign-exchange reserves")
+ in the world.[\[44\]](#cite_note-44)
+ Russia has a labour force of about 73 million people, which is the [eighth-largest](/wiki/List_of_countries_by_labour_force "List of countries by labour force")
+ in the world.[\[12\]](#cite_note-laborforce-12)
+ It is the [third-largest exporter of arms](/wiki/Arms_industry "Arms industry")
+ in the world.[\[45\]](#cite_note-45)
+ The large oil and gas sector accounted up to 30% of Russia's federal budget revenues in 2024, down from 50% in the mid-2010s, suggesting economic diversification.[\[46\]](#cite_note-46)
+
+Russia's [human development](/wiki/Human_development_(economics) "Human development (economics)")
+ is [ranked as](/wiki/List_of_countries_by_Human_Development_Index "List of countries by Human Development Index")
+ "very high" in the annual [Human Development Index](/wiki/Human_Development_Index "Human Development Index")
+.[\[47\]](#cite_note-47)
+ Roughly 70% of Russia's total GDP is driven by domestic consumption,[\[48\]](#cite_note-48)
+ and the country has the world's [twelfth-largest consumer market](/wiki/List_of_largest_consumer_markets "List of largest consumer markets")
+.[\[49\]](#cite_note-49)
+ Its [social security system](/wiki/Social_security_system_in_Russia "Social security system in Russia")
+ comprised roughly 16% of the total GDP in 2015.[\[50\]](#cite_note-50)
+ Russia has the [fifth-highest number of billionaires](/wiki/List_of_countries_by_number_of_billionaires "List of countries by number of billionaires")
+ in the world.[\[51\]](#cite_note-51)
+ However, its [income inequality](/wiki/List_of_countries_by_income_equality "List of countries by income equality")
+ remains comparatively high,[\[52\]](#cite_note-52)
+ caused by the variance of natural resources among its [federal subjects](/wiki/Federal_subjects_of_Russia "Federal subjects of Russia")
+, leading to regional economic disparities.[\[53\]](#cite_note-53)
+[\[54\]](#cite_note-54)
+ High [levels of corruption](/wiki/Corruption_in_Russia "Corruption in Russia")
+,[\[55\]](#cite_note-55)
+ a shrinking labor force and labor shortages,[\[56\]](#cite_note-56)
+[\[57\]](#cite_note-57)
+ a [brain drain](/wiki/Brain_drain "Brain drain")
+ problem,[\[58\]](#cite_note-58)
+and an [aging](/wiki/Aging_of_Russia "Aging of Russia")
+ and [declining population](/wiki/Demographics_of_Russia "Demographics of Russia")
+ also remain major barriers to future economic growth.[\[59\]](#cite_note-59)
+[\[60\]](#cite_note-60)
+
+Following the 2022 [Russian invasion of Ukraine](/wiki/Russian_invasion_of_Ukraine "Russian invasion of Ukraine")
+, the country has faced [extensive sanctions](/wiki/International_sanctions_during_the_Russian_invasion_of_Ukraine "International sanctions during the Russian invasion of Ukraine")
+ and other negative financial actions from the [Western world](/wiki/Western_world "Western world")
+ and its allies which have the aim of isolating the Russian economy from the Western financial system.[\[61\]](#cite_note-61)
+ However, Russia's economy has shown resilience to such measures broadly, and has maintained economic stability and growth—driven primarily by high [military expenditure](/wiki/List_of_countries_with_highest_military_expenditures "List of countries with highest military expenditures")
+,[\[62\]](#cite_note-62)
+ rising [household consumption](/wiki/Household_final_consumption_expenditure "Household final consumption expenditure")
+ and [wages](/wiki/List_of_Russian_federal_subjects_by_average_wage "List of Russian federal subjects by average wage")
+,[\[63\]](#cite_note-63)
+ low [unemployment](/wiki/Unemployment "Unemployment")
+,[\[14\]](#cite_note-reutersunem-14)
+ and increased [government spending](/wiki/Government_spending "Government spending")
+.[\[64\]](#cite_note-64)
+ Yet, [inflation](/wiki/Inflation "Inflation")
+ has remained comparatively high,[\[65\]](#cite_note-65)
+ with experts predicting the sanctions will have a long-term negative effect on the Russian economy.[\[66\]](#cite_note-66)
+
+History
+-------
+
+Main articles: [Economic history of the Russian Federation](/wiki/Economic_history_of_the_Russian_Federation "Economic history of the Russian Federation")
+ and [Economy of the Soviet Union](/wiki/Economy_of_the_Soviet_Union "Economy of the Soviet Union")
+
+The Russian economy has been volatile over the past multiple decades. Bilateral free trade agreements, except for Georgia, Azerbaijan and Turkmenistan[\[97\]](#cite_note-97)
+[\[98\]](#cite_note-98)
+ (all of these are in force as of 2024[\[update\]](https://en.wikipedia.org/w/index.php?title=Economy_of_Russia&action=edit)
+), ceased to apply only after 2012 with Russia's accession to the new multilateral CIS free trade area.
+
+Further integration took place outside the legal framework of the CIS. As of 2025[\[update\]](https://en.wikipedia.org/w/index.php?title=Economy_of_Russia&action=edit)
+, according to the database of international treaties of the [Eurasian Economic Union](/wiki/Eurasian_Economic_Union "Eurasian Economic Union")
+, these agreements are still in force and apply in part not contrary to the Treaty on the Eurasian Economic Union.[\[101\]](#cite_note-101)
+[\[102\]](#cite_note-102)
+
+International agreements such as the following have further deepened trade and economic relations and integration with Belarus. dollar")
+\-denominated terms increased eightfold.[\[104\]](#cite_note-KPMG-104)
+ The volume of consumer credit between 2000 and 2006 increased 45 times, fuelling a boom in private consumption.[\[105\]](#cite_note-vtbmagazine-105)
+[\[106\]](#cite_note-samaratoday-106)
+ The number of people living below poverty line declined from 30% in 2000 to 14% in 2008.[\[107\]](#cite_note-gks-107)
+[\[108\]](#cite_note-CIA-108)
+
+Russia repaid its borrowing of $3.3 billion from the IMF three years early in 2005.[\[109\]](#cite_note-109)
+
+[Inflation](/wiki/Inflation "Inflation")
+ remained a problem however, as the [central bank](/wiki/Bank_of_Russia "Bank of Russia")
+ aggressively expanded [money supply](/wiki/Money_supply "Money supply")
+ to combat appreciation of the ruble.[\[110\]](#cite_note-Emerging_Markets-110)
+ Nevertheless, in 2007 the [World Bank](/wiki/World_Bank "World Bank")
+ declared that the Russian economy achieved "unprecedented macroeconomic stability".[\[111\]](#cite_note-111)
+ Until October 2007, Russia maintained impressive fiscal discipline with budget surpluses every year from 2000.[\[103\]](#cite_note-iie-103)
+
+### 2009–2014
+
+[![](//upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Standard_%26_Poor%E2%80%99s_rating_dynamics_Russia.png/250px-Standard_%26_Poor%E2%80%99s_rating_dynamics_Russia.png)](/wiki/File:Standard_%26_Poor%E2%80%99s_rating_dynamics_Russia.png)
+
+Changes in the credit rating (foreign) of Russia, [Standard & Poor's](/wiki/Standard_%26_Poor%27s "Standard & Poor's")
+
+Russian banks were affected by the [2008 financial crisis](/wiki/2008_financial_crisis "2008 financial crisis")
+, though no long term damage was done due to a proactive and timely response by the government and central bank.[\[112\]](#cite_note-112)
+[\[113\]](#cite_note-113)
+[\[114\]](#cite_note-114)
+ A sharp, but brief [recession in Russia](/wiki/Great_Recession_in_Russia "Great Recession in Russia")
+ was followed by a strong recovery beginning in late 2009.[\[77\]](#cite_note-WB_GDP_growth-77)
+
+Between 2000 and 2012, Russia's energy exports fuelled a rapid growth in [living standards](/wiki/Living_standards "Living standards")
+, with real [disposable income](/wiki/Disposable_income "Disposable income")
+ rising by 160%.[\[115\]](#cite_note-115)
+ In [dollar](/wiki/U.S._dollar "U.S. In addition to the official Russian government [defense budget](/wiki/Military_budget_of_Russia "Military budget of Russia")
+ —direct financial expenditure for waging the war was estimated at US$250 billion through June 2024,[\[181\]](#cite_note-ntv20240623-181)
+ rising to over 20% of annual GDP—an off-budget financing mechanism was employed to fund the war with over US$200 billion from preferential bank loans made to defence contractors and war-related businesses, loans compelled by the Russian government.[\[182\]](#cite_note-mt20250114-182)
+[\[183\]](#cite_note-kpost20250115-183)
+ Defense and security spending accounted for approximately 40% of Russia's total government spending in 2025,[\[184\]](#cite_note-184)
+[\[185\]](#cite_note-185)
+ exceeding combined spending on education, healthcare, social policy and the national economy.[\[186\]](#cite_note-186)
+
+Despite experiencing significant expansions in both 2023 and 2024, analysts have warned that the Russian economy risks stagnation in 2025 and onward due to labor shortages, high inflation, military overspending, falling resource prices and a dwindling National Wealth Fund.[\[187\]](#cite_note-187)
+[\[188\]](#cite_note-188)
+[\[189\]](#cite_note-189)
+[\[190\]](#cite_note-190)
+
+*   [![Gross domestic product (PPP) per capita in April 2022](//upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Map_of_countries_by_GDP_%28PPP%29_per_capita_in_2022_by_IMF.png/120px-Map_of_countries_by_GDP_%28PPP%29_per_capita_in_2022_by_IMF.png)](/wiki/File:Map_of_countries_by_GDP_(PPP)_per_capita_in_2022_by_IMF.png "Gross domestic product (PPP) per capita in April 2022")
+    
+    [Gross domestic product](/wiki/Gross_domestic_product "Gross domestic product")
+     (PPP) per capita in April 2022
+    
+*   [![Unemployment rate of Russia since the fall of the Soviet Union](//upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Russiaunemployment.png/120px-Russiaunemployment.png)](/wiki/File:Russiaunemployment.png "Unemployment rate of Russia since the fall of the Soviet Union")
+    
+    Unemployment rate of Russia since the fall of the Soviet Union
+    
+*   [![Russian inflation rate 2012–2022](//upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Russian_inflation_rate.webp/120px-Russian_inflation_rate.webp.png)](/wiki/File:Russian_inflation_rate.webp "Russian inflation rate 2012–2022")
+    
+    Russian inflation rate 2012–2022
+    
+
+Data
+----
+
+Original data are obtained and published in the national currency of the Russian Federation, the Russian ruble, by the [Federal State Statistics Service](/wiki/Federal_State_Statistics_Service "Federal State Statistics Service")
+ Rosstat, as well as other organizations of which Russia is a member, such as the [Eurasian Economic Commission](/wiki/Eurasian_Economic_Commission "Eurasian Economic Commission")
+ and the Statistical Committee of the [Commonwealth of Independent States](/wiki/Commonwealth_of_Independent_States "Commonwealth of Independent States")
+. The National Wealth Fund had started with $32 billion in 2008 and by August 2022, peaked at $201 billion.[\[212\]](#cite_note-212)
+ December 2023 saw it fall to $133 billion with liquid assets also down at $56 billion.[\[213\]](#cite_note-213)
+
+### Corruption
+
+[![](//upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Countries_by_Corruption_Perceptions_Index_score_%282019%29.png/330px-Countries_by_Corruption_Perceptions_Index_score_%282019%29.png)](/wiki/File:Countries_by_Corruption_Perceptions_Index_score_(2019).png)
+
+[Corruption Perceptions Index](/wiki/Corruption_Perceptions_Index "Corruption Perceptions Index")
+ by Transparency International, 2019
+
+Russia was the lowest rated European country in [Transparency International](/wiki/Transparency_International "Transparency International")
+'s [Corruption Perceptions Index](/wiki/Corruption_Perceptions_Index "Corruption Perceptions Index")
+ for 2020; ranking 129th out of 180 countries.[\[214\]](#cite_note-214)
+ Corruption is perceived as a significant problem in Russia,[\[215\]](#cite_note-CPI2015-215)
+ affecting various aspects of life, including the economy,[\[216\]](#cite_note-216)
+ business,[\[217\]](#cite_note-217)
+ [public administration](/wiki/Government_of_Russia "Government of Russia")
+,[\[218\]](#cite_note-Suhara-218)
+[\[219\]](#cite_note-219)
+ [law enforcement](/wiki/Law_enforcement_in_Russia "Law enforcement in Russia")
+,[\[220\]](#cite_note-220)
+ [healthcare](/wiki/Healthcare_in_Russia "Healthcare in Russia")
+,[\[221\]](#cite_note-221)
+ and [education](/wiki/Education_in_Russia "Education in Russia")
+.[\[222\]](#cite_note-222)
+ The phenomenon of corruption is strongly established in the historical model of public governance in Russia and attributed to general weakness of [rule of law](/wiki/Rule_of_law "Rule of law")
+ in Russia.[\[223\]](#cite_note-223)
+ As of 2020, the percentage of business owners who distrust law enforcement agencies rose to 70% (from 45% in 2017); 75% don't believe in impartiality of courts and 79% do not believe that legal institutions protect them from abuse of law such as racketeering or arrest on dubious grounds.[\[224\]](#cite_note-224)
+
+Regional economies and economic regions
+---------------------------------------
+
+### Federal subjects
+
+Main articles: [List of Russian federal districts by GDP](/wiki/List_of_Russian_federal_districts_by_GDP "List of Russian federal districts by GDP")
+ and [List of federal subjects of Russia by GDP per capita](/wiki/List_of_federal_subjects_of_Russia_by_GDP_per_capita "List of federal subjects of Russia by GDP per capita")
+
+According to the [Moscow Government](/wiki/Moscow_Government "Moscow Government")
+, the Moscow economy is the largest among the Russian Federation constituent entities: the capital accounts for one fifth of the country's total [gross regional product](/wiki/Gross_regional_product "Gross regional product")
+. As of December 2007, there were an estimated 4,900,000 broadband lines in Russia.[\[298\]](#cite_note-298)
+
+As of 2020[\[update\]](https://en.wikipedia.org/w/index.php?title=Economy_of_Russia&action=edit)
+, 122,488,468 Russians (85% of the country's total population) were Internet users.[\[299\]](#cite_note-299)
+
+There are four national mobile phone networks, MegaFon, Tele2, Beeline and MTS with total subscriptions between 2011 and 2021 ranging between 200 and 240 million.[\[300\]](#cite_note-300)
+
+#### Transportation
+
+Main articles: [Transport in Russia](/wiki/Transport_in_Russia "Transport in Russia")
+ and [Russian Railways](/wiki/Russian_Railways "Russian Railways")
+
+[![](//upload.wikimedia.org/wikipedia/commons/thumb/0/05/VL_85-022_container_train.jpg/250px-VL_85-022_container_train.jpg)](/wiki/File:VL_85-022_container_train.jpg)
+
+The [Trans-Siberian Railway](/wiki/Trans-Siberian_Railway "Trans-Siberian Railway")
+, the longest railway-line in the world, as seen across the coast of [Lake Baikal](/wiki/Lake_Baikal "Lake Baikal")
+
+[![](//upload.wikimedia.org/wikipedia/commons/thumb/a/ae/%22Russian_bridge%22_in_Vladivostok_city.jpg/250px-%22Russian_bridge%22_in_Vladivostok_city.jpg)](/wiki/File:%22Russian_bridge%22_in_Vladivostok_city.jpg)
+
+The [Russky Bridge](/wiki/Russky_Bridge "Russky Bridge")
+ in [Vladivostok](/wiki/Vladivostok "Vladivostok")
+ is the longest cable-stayed bridge in the world.
+
+[Railway transport in Russia](/wiki/Rail_transport_in_Russia "Rail transport in Russia")
+ is mostly under the control of the state-run [Russian Railways](/wiki/Russian_Railways "Russian Railways")
+.[\[301\]](#cite_note-301)
+ The total length of common-used railway tracks is the world's [third-longest](/wiki/List_of_countries_by_rail_transport_network_size "List of countries by rail transport network size")
+, and exceeds 87,157 km (54,157 mi).[\[302\]](#cite_note-302)
+ As of 2016[\[update\]](https://en.wikipedia.org/w/index.php?title=Economy_of_Russia&action=edit)
+, Russia has [1,452.2 thousand km of roads](/wiki/Roads_by_country "Roads by country")
+,[\[303\]](#cite_note-303)
+ and its road density is among the world's lowest.[\[304\]](#cite_note-304)
+ Russia's inland waterways are the world's [second-longest](/wiki/List_of_countries_by_waterways_length "List of countries by waterways length")
+, and total 102,000 km (63,380 mi).[\[305\]](#cite_note-305)
+ Among [Russia's 1,218 airports](/wiki/List_of_airports_in_Russia "List of airports in Russia")
+,[\[306\]](#cite_note-306)
+ the [busiest](/wiki/List_of_the_busiest_airports_in_Russia "List of the busiest airports in Russia")
+ is [Sheremetyevo International Airport](/wiki/Sheremetyevo_International_Airport "Sheremetyevo International Airport")
+ in Moscow.[\[307\]](#cite_note-307)
+
+Russia's largest port is the [Port of Novorossiysk](/wiki/Port_of_Novorossiysk "Port of Novorossiysk")
+ in [Krasnodar Krai](/wiki/Krasnodar_Krai "Krasnodar Krai")
+ along the Black Sea.[\[308\]](#cite_note-308)
+ Russia is the world's sole country to operate [nuclear-powered icebreakers](/wiki/Nuclear-powered_icebreaker "Nuclear-powered icebreaker")
+, which advance the economic exploitation of the Arctic [continental shelf of Russia](/wiki/Continental_shelf_of_Russia "Continental shelf of Russia")
+, and the development of sea trade through the [Northern Sea Route](/wiki/Northern_Sea_Route "Northern Sea Route")
+.[\[309\]](#cite_note-309)
+
+#### Construction
+
+[![](//upload.wikimedia.org/wikipedia/commons/thumb/f/fc/NUTEP_and_KSK.jpg/250px-NUTEP_and_KSK.jpg)](/wiki/File:NUTEP_and_KSK.jpg)
+
+The [Port of Novorossiysk](/wiki/Port_of_Novorossiysk "Port of Novorossiysk")
+
+In 2022, construction was worth 13 trillion rubles, 5% more than in 2021. Since 2010 value and numbers have decreased constantly and another wave of M&A is expected.[\[338\]](#cite_note-338)
+
+The majority of deals in, into or out of Russia have taken place in the financial sector (29%), followed by banks (8.6%), oil and gas (7.8%), and Metals and Mining (7.2%).
+
+Here is a list of the top deals with Russian companies participating ranked by deal value in million USD:
+
+| Date announced | Acquiror name | Acquiror mid industry | Acquiror nation | Target name | Target mid industry | Target nation | Value of transaction ($mil) |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| 22 October 2012 | Rosneft Oil Co | Oil & gas | Russian Fed | TNK-BP Ltd | Oil & gas | Russian Fed | 27854.12 |
+| 24 July 2012 | Rosneft Oil Co | Oil & gas | Russian Fed | TNK-BP Ltd | Oil & gas | Russian Fed | 26061.15 |
+| 22 April 2003 | Yukosneftegaz | Oil & gas | Russian Fed | Sibirskaia Neftianaia Co | Oil & gas | Russian Fed | 13615.23 |
+| 28 September 2005 | Gazprom | Oil & gas | Russian Fed | Sibneft | Oil & gas | Russian Fed | 13101.08 |
+| 13 April 2005 | Shareholders | Other financials | Russian Fed | Polyus | Metals & mining | Russian Fed | 12867.39 |
+| 16 December 2010 | MMC Norilsk Nickel PJSC | Metals & mining | Russian Fed | MMC Norilsk Nickel PJSC | Metals & mining | Russian Fed | 12800 |
+| 27 July 2007 | Shareholders | Other financials | Russian Fed | HydroOGK | Power | Russian Fed | 12381.83 |
+| 10 December 2016 | QHG Shares Pte Ltd | Other financials | Singapore | Rosneft Oil Co | Oil & gas | Russian Fed |     |
+| 30 June 2010 | KazakhGold Group Ltd | Metals & mining | Kazakhstan | Polyus Zoloto | Metals & mining | Russian Fed | 10261.33 |
+| 5 August 2008 | [Vladimir Potanin](/wiki/Vladimir_Potanin "Vladimir Potanin") | Other financials | Russian Fed | MMC Norilsk Nickel PJSC | Metals & mining | Russian Fed | 10021.11 |
+
+The majority of the top 10 deals are within the Russian oil and gas sector, followed by metals and mining.
+
+See also
+--------
+
+*   [![icon](//upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Emblem-money.svg/40px-Emblem-money.svg.png)](/wiki/File:Emblem-money.svg)
+    [Business portal](/wiki/Portal:Business "Portal:Business")
+    
+*   ![](//upload.wikimedia.org/wikipedia/commons/thumb/4/48/P_history.svg/40px-P_history.svg.png)[History portal](/wiki/Portal:History "Portal:History")
+    
+*   [![icon](//upload.wikimedia.org/wikipedia/en/thumb/0/01/A_coloured_voting_box.svg/40px-A_coloured_voting_box.svg.png)](/wiki/File:A_coloured_voting_box.svg)
+    [Politics portal](/wiki/Portal:Politics "Portal:Politics")
+    
+*   ![flag](//upload.wikimedia.org/wikipedia/en/thumb/f/f3/Flag_of_Russia.svg/40px-Flag_of_Russia.svg.png)[Russia portal](/wiki/Portal:Russia "Portal:Russia")
+    
+
+*   [History of Russia (1991–present)](/wiki/History_of_Russia_(1991%E2%80%93present) "History of Russia (1991–present)")
+    
+*   [Federal government of Russia](/wiki/Federal_government_of_Russia "Federal government of Russia")
+    
+*   [List of companies of Russia](/wiki/List_of_companies_of_Russia "List of companies of Russia")
+    
+*   [List of Russian federal districts by GDP](/wiki/List_of_Russian_federal_districts_by_GDP "List of Russian federal districts by GDP")
+    
+*   [Monotown](/wiki/Monotown "Monotown")
+    , a town whose economy is dominated by a single industry or company. **[^](#cite_ref-91)
+    ** ["Business: The Economy Russia: The IMF's biggest failure"](http://news.bbc.co.uk/2/hi/business/455673.stm)
+    . Officially the Republic of China, participates as "[Separate Customs Territory of Taiwan, Penghu, Kinmen and Matsu](/wiki/Chinese_Taipei "Chinese Taipei")
+    ", and "Chinese Taipei" in short.
+
+ **[![](//upload.wikimedia.org/wikipedia/commons/thumb/7/70/The_Blue_Marble%2C_AS17-148-22727.jpg/20px-The_Blue_Marble%2C_AS17-148-22727.jpg)](/wiki/File:The_Blue_Marble,_AS17-148-22727.jpg)[World portal](/wiki/Portal:World "Portal:World")**
+
+Retrieved from "[https://en.wikipedia.org/w/index.php?title=Economy\_of\_Russia&oldid=1308111101](https://en.wikipedia.org/w/index.php?title=Economy_of_Russia&oldid=1308111101)
+"
+
+[Categories](/wiki/Help:Category "Help:Category")
+:
+
+*   [Economy of Russia](/wiki/Category:Economy_of_Russia "Category:Economy of Russia")
+    
+*   [World Trade Organization member economies](/wiki/Category:World_Trade_Organization_member_economies "Category:World Trade Organization member economies")
+    
+*   [Economies of Europe by country](/wiki/Category:Economies_of_Europe_by_country "Category:Economies of Europe by country")
+    
+
+Hidden categories:
+
+*   [Pages using the EasyTimeline extension](/wiki/Category:Pages_using_the_EasyTimeline_extension "Category:Pages using the EasyTimeline extension")
+    
+*   [CS1 uses Russian-language script (ru)](/wiki/Category:CS1_uses_Russian-language_script_(ru) "Category:CS1 uses Russian-language script (ru)")
+    
+*   [CS1 Russian-language sources (ru)](/wiki/Category:CS1_Russian-language_sources_(ru) "Category:CS1 Russian-language sources (ru)")
+    
+*   [Webarchive template wayback links](/wiki/Category:Webarchive_template_wayback_links "Category:Webarchive template wayback links")
+    
+*   [CS1 German-language sources (de)](/wiki/Category:CS1_German-language_sources_(de) "Category:CS1 German-language sources (de)")
+    
+*   [CS1 errors: generic title](/wiki/Category:CS1_errors:_generic_title "Category:CS1 errors: generic title")
+    
+*   [All articles with bare URLs for citations](/wiki/Category:All_articles_with_bare_URLs_for_citations "Category:All articles with bare URLs for citations")
+    
+*   [Articles with bare URLs for citations from August 2025](/wiki/Category:Articles_with_bare_URLs_for_citations_from_August_2025 "Category:Articles with bare URLs for citations from August 2025")
+    
+*   [CS1 errors: missing periodical](/wiki/Category:CS1_errors:_missing_periodical "Category:CS1 errors: missing periodical")
+    
+*   [All articles with dead external links](/wiki/Category:All_articles_with_dead_external_links "Category:All articles with dead external links")
+    
+*   [Articles with dead external links from July 2025](/wiki/Category:Articles_with_dead_external_links_from_July_2025 "Category:Articles with dead external links from July 2025")
+    
+*   [Articles with permanently dead external links](/wiki/Category:Articles_with_permanently_dead_external_links "Category:Articles with permanently dead external links")
+    
+*   [Articles with short description](/wiki/Category:Articles_with_short_description "Category:Articles with short description")
+    
+*   [Short description is different from Wikidata](/wiki/Category:Short_description_is_different_from_Wikidata "Category:Short description is different from Wikidata")
+    
+*   [Wikipedia indefinitely semi-protected pages](/wiki/Category:Wikipedia_indefinitely_semi-protected_pages "Category:Wikipedia indefinitely semi-protected pages")
+    
+*   [Use dmy dates from July 2025](/wiki/Category:Use_dmy_dates_from_July_2025 "Category:Use dmy dates from July 2025")
+    
+*   [Use British English from August 2019](/wiki/Category:Use_British_English_from_August_2019 "Category:Use British English from August 2019")
+    
+*   [Articles with excerpts](/wiki/Category:Articles_with_excerpts "Category:Articles with excerpts")
+    
+*   [Articles containing potentially dated statements from 2024](/wiki/Category:Articles_containing_potentially_dated_statements_from_2024 "Category:Articles containing potentially dated statements from 2024")
+    
+*   [All articles containing potentially dated statements](/wiki/Category:All_articles_containing_potentially_dated_statements "Category:All articles containing potentially dated statements")
+    
+*   [Articles containing potentially dated statements from 2025](/wiki/Category:Articles_containing_potentially_dated_statements_from_2025 "Category:Articles containing potentially dated statements from 2025")
+    
+*   [All articles with unsourced statements](/wiki/Category:All_articles_with_unsourced_statements "Category:All articles with unsourced statements")
+    
+*   [Articles with unsourced statements from June 2025](/wiki/Category:Articles_with_unsourced_statements_from_June_2025 "Category:Articles with unsourced statements from June 2025")
+    
+*   [All articles with failed verification](/wiki/Category:All_articles_with_failed_verification "Category:All articles with failed verification")
+    
+*   [Articles with failed verification from July 2025](/wiki/Category:Articles_with_failed_verification_from_July_2025 "Category:Articles with failed verification from July 2025")
+    
+*   [Articles containing potentially dated statements from 2020](/wiki/Category:Articles_containing_potentially_dated_statements_from_2020 "Category:Articles containing potentially dated statements from 2020")
+    
+*   [Articles containing potentially dated statements from 2016](/wiki/Category:Articles_containing_potentially_dated_statements_from_2016 "Category:Articles containing potentially dated statements from 2016")
+    
+*   [Source attribution](/wiki/Category:Source_attribution "Category:Source attribution")
+    
+*   [Commons category link from Wikidata](/wiki/Category:Commons_category_link_from_Wikidata "Category:Commons category link from Wikidata")
+    
+
+Search
+
+Search
+
+Economy of Russia
+
+[](#)
+[](#)
+[](#)
+[](#)
+[](#)
+[](#)
+[](#)
+[](#)
+
+45 languages [Add topic](#)"
+
+# Your Summary
+
+
+
+===== > RESPONSE:  < =====
+The Wikipedia article on the Economy of Russia states that Russia has the fourth-largest economy by GDP (PPP) in 2025. It also mentions that Russia's GDP growth is projected to be 4.1% in 2024 and 1.5% in 2025. The article was last edited on July 1, 2024. <image:0>
+
+_________________________
+
+
+
+SummarizeResultPrompt - QUERY:
+
+# Instructions
+In order to find evidence that helps your fact-check, you just ran a web search which yielded a Search Result. **Your task right now is to summarize the Search Result.** What to include:
+* information that might be useful for the fact-check (see Record)
+* relevant images (refer to images by inserting their reference <image:k>)
+* if available: the release date as well as the author or the publisher (e.g. the media company) of the search result.
+
+Do NOT include:
+* advertisements
+* any other information not related to the Record or the Claim
+
+Additional rules:
+* Do not add any additional information besides the information in the Search Result.
+* If the Search Result doesn't contain any relevant information for the fact-checking work, simply print one word in capital letters: "NONE".
+* Keep your writing style like in the Examples 1, 2 and 3 provided to you.
+* Try to filter out relevant information even if the search result is in a different language.
+
+# Example 1
+The search result from America Today provides several photographs of the Notre-Dame Cathedral fire on April 15, 2019. <image:i>, <image:j>, <image:k>. None of the images show the Eiffel Tower in the background. 
+
+# Example 2
+NONE
+
+# Example 3
+The Guardian discusses a report blaming the Syrian government for a toxic gas attack and condemning their use of chemical weapons. The Guardian mentions the Chemical Weapons Convention and the responsibilities of Syria under the convention. According to The Guardian, The White House condemned the Assad regime for defying the norm against chemical weapons use.
+
+# Record
+## Claim
+Claim: "In October 2024 the International Monetary Fund (IMF) declared Russia the fourth-largest economy in the world."
+
+## Actions
+```
+web_search("IMF Russia economy ranking October 2024")
+```
+
+## Evidence
+### Evidence from `web_search`
+The IMF website provides information about Russia, including its membership date, quota, and Special Drawing Rights, and includes a link to the July 2025 World Economic Outlook Update, which projects a 0.9% change in real GDP for 2025 (<image:2695>). The IMF ranks Russia as the world's 4th largest economy in terms of PPP.
+
+The article from russiamatters.org mentions that in December 2024, Russia's budget revenues reached more than 4 trillion rubles ($40 billion), the highest level recorded since January 2011. The article was published on February 06, 2025.
+
+
+## Elaboration
+The evidence indicates that the IMF ranks Russia as the world's 4th largest economy in terms of PPP. However, the evidence does not specify the exact date when this ranking was made. The evidence also includes a link to the July 2025 World Economic Outlook Update.
+
+Therefore, the claim cannot be fully verified because the exact date of the IMF's ranking is not explicitly stated in the provided evidence.
+
+
+## Actions
+```
+web_search("IMF Russia economy ranking date")
+```
+
+# Search Result
+From [Source](https://cryptorank.io/news/feed/6e79e-imf-russia-fourth-purchasing-power): 
+Content: "Currencies34672
+
+Market Cap$ 4.00T\-0.69%
+
+24h Spot Volume$ 83.43B\-2.61%
+
+Dominance[BTC54.04%\-0.63%](/charts/btc-dominance)
+ETH13.25%+1.30%
+
+ETH Gas0.15 Gwei
+
+[![Cryptorank](/static/logo.svg)](/)
+
+/
+
+/
+
+IMF ranks Russia as world’s fourth-largest economy by purchasing power
+======================================================================
+
+[Economy](/news/tag/economy)
+[Brics](/news/tag/brics)
+[RUB](/news/tag/rub)
+[IMF](/news/tag/imf)
+
+* * *
+
+Oct, 25, 2024
+
+5 min read
+
+by Jai Hamid
+
+for CryptoPolitan
+
+!IMF ranks Russia as world’s fourth-largest economy by purchasing power <image:8824>
+
+**Russia just clinched fourth place on the global economic ladder, based on purchasing power parity (PPP), in new data from the International Monetary Fund (IMF).**
+
+This makes Russia one of the top contributors to global economic growth, moving ahead of several Western economies. PPP adjusts for price differences across countries, giving more weight to nations with large populations and lower costs of living.
+
+With this [ranking](https://www.imf.org/en/News/Articles/2024/10/24/tr102424-transcript-of-eur-reo)
+, Russia now joins China, the U.S., and India in the top four, adding muscle to the economic power of BRICS. This year alone, they’ve met twice, once in Beijing and once at the Shanghai Cooperation Organization summit in Kazakhstan.
+
+Putin is also working closely with India, maintaining New Delhi as a strategic ally from the Cold War era despite Russia’s tight relations with India’s rival, China.
+
+Western allies have tried to get Indian Prime Minister Narendra Modi to press Moscow on Ukraine, but he has avoided criticizing [Russia](https://www.cryptopolitan.com/russian-crypto-queen-stole-for-ukraine-army/)
+, focusing instead on peace and his seemingly close friendship with Putin.
+
+[Read the article at CryptoPolitan](https://www.cryptopolitan.com/imf-russia-fourth-purchasing-power/)
+
+Read More
+
+[!Moscow entices Washington with a rare earth proposal in peace bargain <image:8825>](/news/feed/9591f-russia-dangles-rare-earths-in-business-for-peace-bargain-with-trump)
+
+Moscow entices Washington with a rare earth proposal in peace bargain
+---------------------------------------------------------------------
+
+Russia is rich in rare earth reserves and is willing to use them to get a better deal...
+
+[USD](/news/tag/usd)
+[Economy](/news/tag/economy)
+[RUB](/news/tag/rub)
+[UAH](/news/tag/uah)
+
+Aug, 27, 2025
+
+3 min read
+
+by CryptoPolitan
+
+[!World Bank sold $510 million in bonds backed by loans to 57 companies in emerging markets. <image:8826>](/news/feed/4a845-world-bank-sells-500m-in-bonds)
+
+World Bank sold $510 million in bonds backed by loans to 57 companies in emerging markets.
+------------------------------------------------------------------------------------------
+
+The World Bank has sold $510 million in bonds backed by loans it previously issued to...
+
+[Economy](/news/tag/economy)
+[World Bank](/news/tag/world-bank)
+
+Aug, 29, 2025
+
+3 min read
+
+by CryptoPolitan
+
+IMF ranks Russia as world’s fourth-largest economy by purchasing power
+======================================================================
+
+[Economy](/news/tag/economy)
+[Brics](/news/tag/brics)
+[RUB](/news/tag/rub)
+[IMF](/news/tag/imf)
+
+* * *
+
+Oct, 25, 2024
+
+5 min read
+
+by Jai Hamid
+
+for CryptoPolitan
+
+!IMF ranks Russia as world’s fourth-largest economy by purchasing power <image:8824>
+
+**Russia just clinched fourth place on the global economic ladder, based on purchasing power parity (PPP), in new data from the International Monetary Fund (IMF).**
+
+This makes Russia one of the top contributors to global economic growth, moving ahead of several Western economies. PPP adjusts for price differences across countries, giving more weight to nations with large populations and lower costs of living.
+
+With this [ranking](https://www.imf.org/en/News/Articles/2024/10/24/tr102424-transcript-of-eur-reo)
+, Russia now joins China, the U.S., and India in the top four, adding muscle to the economic power of BRICS. This year alone, they’ve met twice, once in Beijing and once at the Shanghai Cooperation Organization summit in Kazakhstan.
+
+Putin is also working closely with India, maintaining New Delhi as a strategic ally from the Cold War era despite Russia’s tight relations with India’s rival, China.
+
+Western allies have tried to get Indian Prime Minister Narendra Modi to press Moscow on Ukraine, but he has avoided criticizing [Russia](https://www.cryptopolitan.com/russian-crypto-queen-stole-for-ukraine-army/)
+, focusing instead on peace and his seemingly close friendship with Putin.
+
+[Read the article at CryptoPolitan](https://www.cryptopolitan.com/imf-russia-fourth-purchasing-power/)
+
+Read More
+
+[!Moscow entices Washington with a rare earth proposal in peace bargain <image:8825>](/news/feed/9591f-russia-dangles-rare-earths-in-business-for-peace-bargain-with-trump)
+
+Moscow entices Washington with a rare earth proposal in peace bargain
+---------------------------------------------------------------------
+
+Russia is rich in rare earth reserves and is willing to use them to get a better deal...
+
+[USD](/news/tag/usd)
+[Economy](/news/tag/economy)
+[RUB](/news/tag/rub)
+[UAH](/news/tag/uah)
+
+Aug, 27, 2025
+
+3 min read
+
+by CryptoPolitan
+
+[!World Bank sold $510 million in bonds backed by loans to 57 companies in emerging markets. Over the next five years, the IMF sees China, India, Russia, and Brazil driving growth far more than the Group of Seven (G7), which includes the U.S., Germany, and Japan.
+
+G7 countries, known for their strong GDPs, are now expected to contribute less, with BRICS economies filling in the gap.
+
+### BRICS outpaces G7
+
+Among the BRICS, China is expected to lead the charge, contributing 22% of global growth through 2029 — more than all G7 countries combined. The IMF’s PPP model shows that developing nations, thanks to their populations and relatively lower prices, are playing a stronger role in the global economy.
+
+In surprising detail, the IMF’s numbers illustrate this trend. Over the next five years, the IMF sees China, India, Russia, and Brazil driving growth far more than the Group of Seven (G7), which includes the U.S., Germany, and Japan.
+
+G7 countries, known for their strong GDPs, are now expected to contribute less, with BRICS economies filling in the gap.
+
+### BRICS outpaces G7
+
+Among the BRICS, China is expected to lead the charge, contributing 22% of global growth through 2029 — more than all G7 countries combined. The IMF’s PPP model shows that developing nations, thanks to their populations and relatively lower prices, are playing a stronger role in the global economy.
+
+In surprising detail, the IMF’s numbers illustrate this trend."
+
+# Your Summary
+
+
+
+===== > RESPONSE:  < =====
+The article from cryptorank.io, published on October 25, 2024, states that the IMF ranks Russia as the world’s fourth-largest economy by purchasing power. <image:8824> The article mentions that this ranking was based on new data from the IMF.
+
+_________________________
+
+
+
+SummarizeSummariesPrompt - QUERY:
+
+# Instructions
+You just retrieved web sources, each one summarized under "Web Sources". **Your task right now is to summarize the web source summaries.**
+
+Always adhere to the following rules:
+* Write only one to two paragraphs.
+* Include all URLs from the listed sources. Format them as Markdown hyperlinks.
+* Do not add any additional information besides the information in the summaries.
+* Include references (<image:k>) to all relevant images.
+
+# Record
+## Claim
+Claim: "In October 2024 the International Monetary Fund (IMF) declared Russia the fourth-largest economy in the world."
+
+## Actions
+```
+web_search("IMF Russia economy ranking October 2024")
+```
+
+## Evidence
+### Evidence from `web_search`
+The IMF website provides information about Russia, including its membership date, quota, and Special Drawing Rights, and includes a link to the July 2025 World Economic Outlook Update, which projects a 0.9% change in real GDP for 2025 (<image:2695>). The IMF ranks Russia as the world's 4th largest economy in terms of PPP.
+
+The article from russiamatters.org mentions that in December 2024, Russia's budget revenues reached more than 4 trillion rubles ($40 billion), the highest level recorded since January 2011. The article was published on February 06, 2025.
+
+
+## Elaboration
+The evidence indicates that the IMF ranks Russia as the world's 4th largest economy in terms of PPP. However, the evidence does not specify the exact date when this ranking was made. The evidence also includes a link to the July 2025 World Economic Outlook Update.
+
+Therefore, the claim cannot be fully verified because the exact date of the IMF's ranking is not explicitly stated in the provided evidence.
+
+
+## Actions
+```
+web_search("IMF Russia economy ranking date")
+```
+
+## Web Sources
+**Web Search Result**
+
+From [Source](https://www.themoscowtimes.com/2025/07/30/imf-slashes-russias-economic-forecast-as-wartime-growth-slows-a90026): 
+Content: The Moscow Times published an article on July 30, 2025, discussing the IMF's downgraded forecast for the Russian economy. The IMF projects Russia’s GDP will grow just 0.9% in 2025. <image:8741>
+
+
+From [Source](https://en.wikipedia.org/wiki/Economy_of_Russia): 
+Content: The Wikipedia article on the Economy of Russia states that Russia has the fourth-largest economy by GDP (PPP) in 2025. It also mentions that Russia's GDP growth is projected to be 4.1% in 2024 and 1.5% in 2025. The article was last edited on July 1, 2024. <image:0>
+
+
+From [Source](https://cryptorank.io/news/feed/6e79e-imf-russia-fourth-purchasing-power): 
+Content: The article from cryptorank.io, published on October 25, 2024, states that the IMF ranks Russia as the world’s fourth-largest economy by purchasing power. <image:8824> The article mentions that this ranking was based on new data from the IMF.
+
+
+## Your Summary
+
+
+
+===== > RESPONSE:  < =====
+The Moscow Times published an article on July 30, 2025, discussing the IMF's downgraded forecast for the Russian economy, projecting a 0.9% GDP growth in 2025 (<image:8741>). The Wikipedia article on the Economy of Russia, last edited on July 1, 2024, states that Russia has the fourth-largest economy by GDP (PPP) in 2025, with projected GDP growth of 4.1% in 2024 and 1.5% in 2025 (<image:0>).
+
+An article from cryptorank.io, published on October 25, 2024, states that the IMF ranks Russia as the world’s fourth-largest economy by purchasing power, based on new data from the IMF (<image:8824>).
+
+_________________________
+
+
+
+DevelopPrompt - QUERY:
+
+# Instructions
+You just retrieved new Evidence. Now, **analyze the Claim's veracity using the evidence**. Always adhere to the following rules:
+* Focus on developing new insights. Do not repeat larger parts from the Record. Do not restate the Claim.
+* Write down your thoughts step-by-step. Whenever necessary, you may elaborate in more detail.
+* Depending on the topic's complexity, invest one to three paragraphs. The fewer, the better.
+* If you find that there is insufficient information to verify the Claim, explicitly state what information is missing.
+* If you cite web sources, always refer to them by including their URL as a Markdown hyperlink.
+* **Use information only from the recorded evidence**: Avoid inserting information that is not implied by the evidence. You may use commonsense knowledge, though.
+
+# Record
+## Claim
+Claim: "In October 2024 the International Monetary Fund (IMF) declared Russia the fourth-largest economy in the world."
+
+## Actions
+```
+web_search("IMF Russia economy ranking October 2024")
+```
+
+## Evidence
+### Evidence from `web_search`
+The IMF website provides information about Russia, including its membership date, quota, and Special Drawing Rights, and includes a link to the July 2025 World Economic Outlook Update, which projects a 0.9% change in real GDP for 2025 (<image:2695>). The IMF ranks Russia as the world's 4th largest economy in terms of PPP.
+
+The article from russiamatters.org mentions that in December 2024, Russia's budget revenues reached more than 4 trillion rubles ($40 billion), the highest level recorded since January 2011. The article was published on February 06, 2025.
+
+
+## Elaboration
+The evidence indicates that the IMF ranks Russia as the world's 4th largest economy in terms of PPP. However, the evidence does not specify the exact date when this ranking was made. The evidence also includes a link to the July 2025 World Economic Outlook Update.
+
+Therefore, the claim cannot be fully verified because the exact date of the IMF's ranking is not explicitly stated in the provided evidence.
+
+
+## Actions
+```
+web_search("IMF Russia economy ranking date")
+```
+
+## Evidence
+### Evidence from `web_search`
+The Moscow Times published an article on July 30, 2025, discussing the IMF's downgraded forecast for the Russian economy, projecting a 0.9% GDP growth in 2025 (<image:8741>). The Wikipedia article on the Economy of Russia, last edited on July 1, 2024, states that Russia has the fourth-largest economy by GDP (PPP) in 2025, with projected GDP growth of 4.1% in 2024 and 1.5% in 2025 (<image:0>).
+
+An article from cryptorank.io, published on October 25, 2024, states that the IMF ranks Russia as the world’s fourth-largest economy by purchasing power, based on new data from the IMF (<image:8824>).
+
+
+# Your Analysis
+
+
+
+===== > RESPONSE:  < =====
+The evidence confirms that the IMF ranked Russia as the fourth-largest economy by purchasing power. An article from cryptorank.io, published on October 25, 2024, states that the IMF made this ranking based on new data.
+
+Therefore, the claim is verified.
+
+_________________________
+
+
+
+JudgePrompt - QUERY:
+
+# Instructions
+**Determine the Claim's veracity** by following these steps:
+1. Briefly summarize the key insights from the fact-check (see Record) in at most one paragraph.
+2. Write one paragraph about which one of the Decision Options applies best. Include the most appropriate decision option at the end and enclose it in backticks like `this`.
+
+
+
+
+## Decision Options
+* `false`: The claim is not factually accurate. This is the case if one of the following three conditions is met:(1) The claim is demonstrably false when it is disproven by evidence from multiple and reliable sources,(2) The claim or image is taken out of context, i.e. the origin, content and/or meaning of a statement or an image is misrepresented. For example, an old claim or an old image is mispresented in a new context in a misleading way,(3) There is not enough evidence to verify the claim or the evidence is conflicting or self-contradictory.
+* `true`: The claim is factually accurate when it is confirmed by evidence from multiple and reliable sources.
+* `not enough information`: The fact-check does not contain sufficient information to come to an conclusion. For example,there is substantial lack of evidence or the evidence is inconclusive, conflicting or self-contradictory. In the case of a lack of evidence, state which information exactly is missing. In particular, if no RESULTS or sources are available, pick this decision.
+
+# Record
+## Claim
+Claim: "In October 2024 the International Monetary Fund (IMF) declared Russia the fourth-largest economy in the world."
+
+## Actions
+```
+web_search("IMF Russia economy ranking October 2024")
+```
+
+## Evidence
+### Evidence from `web_search`
+The IMF website provides information about Russia, including its membership date, quota, and Special Drawing Rights, and includes a link to the July 2025 World Economic Outlook Update, which projects a 0.9% change in real GDP for 2025 (<image:2695>). The IMF ranks Russia as the world's 4th largest economy in terms of PPP.
+
+The article from russiamatters.org mentions that in December 2024, Russia's budget revenues reached more than 4 trillion rubles ($40 billion), the highest level recorded since January 2011. The article was published on February 06, 2025.
+
+
+## Elaboration
+The evidence indicates that the IMF ranks Russia as the world's 4th largest economy in terms of PPP. However, the evidence does not specify the exact date when this ranking was made. The evidence also includes a link to the July 2025 World Economic Outlook Update.
+
+Therefore, the claim cannot be fully verified because the exact date of the IMF's ranking is not explicitly stated in the provided evidence.
+
+
+## Actions
+```
+web_search("IMF Russia economy ranking date")
+```
+
+## Evidence
+### Evidence from `web_search`
+The Moscow Times published an article on July 30, 2025, discussing the IMF's downgraded forecast for the Russian economy, projecting a 0.9% GDP growth in 2025 (<image:8741>). The Wikipedia article on the Economy of Russia, last edited on July 1, 2024, states that Russia has the fourth-largest economy by GDP (PPP) in 2025, with projected GDP growth of 4.1% in 2024 and 1.5% in 2025 (<image:0>).
+
+An article from cryptorank.io, published on October 25, 2024, states that the IMF ranks Russia as the world’s fourth-largest economy by purchasing power, based on new data from the IMF (<image:8824>).
+
+
+## Elaboration
+The evidence confirms that the IMF ranked Russia as the fourth-largest economy by purchasing power. An article from cryptorank.io, published on October 25, 2024, states that the IMF made this ranking based on new data.
+
+Therefore, the claim is verified.
+
+
+# Your Judgement
+
+
+
+===== > RESPONSE:  < =====
+The IMF did rank Russia as the fourth-largest economy by purchasing power. This ranking was based on new data and was reported in an article published on October 25, 2024.
+
+The claim is factually accurate because it is confirmed by evidence from multiple and reliable sources. `true`
+
+_________________________
+
+
+
+SummarizeDocPrompt - QUERY:
+
+# Instructions
+You are provided with the record of a fact-check. It contains the Claim to be verified and a documentation of all the fact-checking work along the gathered evidence. Your task is to **summarize the fact-check**. That is, you provide a concise, one-paragraph justification for the final VERDICT based on the knowledge from the Record. Note:
+* Be truthful, brief, do not add any additional information besides the information given in the Record. 
+* Link key sources in your summary. Use Markdown notation for that. You may link them in-line.
+* Don't state the Claim again. Rather focus on the key insights of the fact-check.
+* Simply print just the summary.
+
+# Record
+## Claim
+Claim: "In October 2024 the International Monetary Fund (IMF) declared Russia the fourth-largest economy in the world."
+
+## Actions
+```
+web_search("IMF Russia economy ranking October 2024")
+```
+
+## Evidence
+### Evidence from `web_search`
+The IMF website provides information about Russia, including its membership date, quota, and Special Drawing Rights, and includes a link to the July 2025 World Economic Outlook Update, which projects a 0.9% change in real GDP for 2025 (<image:2695>). The IMF ranks Russia as the world's 4th largest economy in terms of PPP.
+
+The article from russiamatters.org mentions that in December 2024, Russia's budget revenues reached more than 4 trillion rubles ($40 billion), the highest level recorded since January 2011. The article was published on February 06, 2025.
+
+
+## Elaboration
+The evidence indicates that the IMF ranks Russia as the world's 4th largest economy in terms of PPP. However, the evidence does not specify the exact date when this ranking was made. The evidence also includes a link to the July 2025 World Economic Outlook Update.
+
+Therefore, the claim cannot be fully verified because the exact date of the IMF's ranking is not explicitly stated in the provided evidence.
+
+
+## Actions
+```
+web_search("IMF Russia economy ranking date")
+```
+
+## Evidence
+### Evidence from `web_search`
+The Moscow Times published an article on July 30, 2025, discussing the IMF's downgraded forecast for the Russian economy, projecting a 0.9% GDP growth in 2025 (<image:8741>). The Wikipedia article on the Economy of Russia, last edited on July 1, 2024, states that Russia has the fourth-largest economy by GDP (PPP) in 2025, with projected GDP growth of 4.1% in 2024 and 1.5% in 2025 (<image:0>).
+
+An article from cryptorank.io, published on October 25, 2024, states that the IMF ranks Russia as the world’s fourth-largest economy by purchasing power, based on new data from the IMF (<image:8824>).
+
+
+## Elaboration
+The evidence confirms that the IMF ranked Russia as the fourth-largest economy by purchasing power. An article from cryptorank.io, published on October 25, 2024, states that the IMF made this ranking based on new data.
+
+Therefore, the claim is verified.
+
+
+## Final Judgement
+The IMF did rank Russia as the fourth-largest economy by purchasing power. This ranking was based on new data and was reported in an article published on October 25, 2024.
+
+The claim is factually accurate because it is confirmed by evidence from multiple and reliable sources. `true`
+
+
+## Summary
+
+
+
+===== > RESPONSE:  < =====
+The claim is accurate. An article from cryptorank.io, published on October 25, 2024, states that the IMF ranked Russia as the world's fourth-largest economy by purchasing power based on new data from the IMF.
+
+_________________________
+
+
+

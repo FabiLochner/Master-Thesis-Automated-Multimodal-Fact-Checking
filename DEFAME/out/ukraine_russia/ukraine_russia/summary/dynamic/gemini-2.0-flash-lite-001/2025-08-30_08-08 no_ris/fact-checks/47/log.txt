@@ -1,0 +1,34 @@
+Extracting claims from Content: <image:14> This image shows a screenshot of an authentic Charlie Hebdo magazine cover from March 20, 2025 illustrating Ukrainian President Volodoymr Zelenskyy lying in a coffin and saying 'Ukraine is an independet state' in French.
+'Claim: "<image:14> This image shows a screenshot of an authentic Charlie Hebdo magazine cover from March 20, 2025 illustrating Ukrainian President Volodoymr Zelenskyy lying in a coffin and saying 'Ukraine is an independet state' in French."'
+Verifying Claim: "<image:14> This image shows a screenshot of an authentic Charlie Hebdo magazine cover from March 20, 2025 illustrating Ukrainian President Volodoymr Zelenskyy lying in a coffin and saying 'Ukraine is an independet state' in French."
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Charlie Hebdo March 20 2025 cover')
+Skipping fact-checking website: https://www.reuters.com/fact-check/charlie-hebdo-march-20-issue-about-russias-election-not-macron-2024-03-22/
+Skipping unsupported website: https://www.instagram.com/reel/DEXXwnQsmmg/
+Got 3 new web source(s):
+	1. https://without-lie.info/en/fake-with-another-fictional-cover-of-charlie-hebdo-magazine-with-a-caricature-of-the-president-of-ukraine/
+	2. https://mythdetector.com/en/coffin-was-not-published-by-charlie-hebdo/
+	3. https://gwaramedia.com/en/debunking-russian-fakes-no-charlie-hebdos-cover-didnt-ridicule-gay-parade-in-moldova/
+Useful result: From [Source](https://without-lie.info/en/fake-with-another-fictional-cover-of-charlie-hebdo-magazine-with-a-caricature-of-the-president-of-ukraine/): 
+Content: The search result from without-lie.info states that the Charlie Hebdo cover featuring Volodymyr Zelenskyy in a coffin is fake. The website provides evidence that the magazine did not publish this cover on March 20, 2025, as the serial number 1705 is incorrect. The website also mentions that the real cover of Charlie Hebdo was published on March 19, 2025. <image:14>
+
+Useful result: From [Source](https://mythdetector.com/en/coffin-was-not-published-by-charlie-hebdo/): 
+Content: The search result from Myth Detector, published on April 8, 2025, fact-checks a claim about a Charlie Hebdo cover depicting Zelenskyy in a coffin. <image:8247> The article states that the image is fabricated and was not published by Charlie Hebdo. It mentions that the magazine released four issues in March 2025, none of which matched the image. The article also notes that the issue number (1705) on the fabricated cover matches the actual issue published on March 26. The article provides links to fact-checks by Open and Facta and mentions other fabricated Charlie Hebdo covers. The article is part of Facebook’s fact-checking program.
+
+Useful result: From [Source](https://gwaramedia.com/en/debunking-russian-fakes-no-charlie-hebdos-cover-didnt-ridicule-gay-parade-in-moldova/): 
+Content: The article from Gwara Media, published on June 30, 2025, debunks a fake Charlie Hebdo cover. The fake cover, which was shared by pro-Russian Telegram channels, supposedly ridiculed a "gay parade" in Moldova. The actual Charlie Hebdo issue from June 11, 2025, featured a different cover. The author of the article is Olha Yakovleva. <image:8263> <image:8270>
+
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Charlie Hebdo Zelensky coffin')
+Skipping unsupported website: https://x.com/Seana_Davis/status/1903813196063932753
+Failed to download or open image: cannot identify image file <_io.BytesIO object at 0x7ffed14427f0>
+Got 2 new web source(s):
+	1. https://www.euronews.com/my-europe/2025/01/03/no-charlie-hebdo-didnt-publish-an-issue-with-zelenskyy-as-a-caricature-of-quasimodo
+	2. https://disinfo.detector.media/en/post/on-the-cover-of-charlie-hebdo-volodymyr-zelensky-in-the-form-of-a-dog-with-a-torn-off-arm-of-azovs-soldier
+Useful result: From [Source](https://www.euronews.com/my-europe/2025/01/03/no-charlie-hebdo-didnt-publish-an-issue-with-zelenskyy-as-a-caricature-of-quasimodo): 
+Content: Euronews published an article on January 3, 2025, stating that Charlie Hebdo did not publish an issue with Zelenskyy as a caricature. <image:8283>
+
+The claim '<image:14> This image shows a screenshot of an authentic Charlie Hebdo magazine cover from March 20, 2025 illustrating Ukrainian President Volodoymr Zelenskyy lying in a coffin and saying 'Ukraine is an independet state' in French.' is false.
+Justification: The claim is false. Multiple sources, including Myth Detector and Euronews, confirm that the Charlie Hebdo cover depicting Volodymyr Zelenskyy in a coffin is fabricated and was not published by the magazine.
+
+So, the overall veracity is: false
+Fact-check took 2:20 min.

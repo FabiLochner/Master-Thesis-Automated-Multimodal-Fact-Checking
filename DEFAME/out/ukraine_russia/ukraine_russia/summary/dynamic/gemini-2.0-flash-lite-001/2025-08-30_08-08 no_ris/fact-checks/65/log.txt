@@ -1,0 +1,25 @@
+Extracting claims from Content: In an interview with the Wall Street Journal, published on February 14, 2025, US Vice President J.D. Vance said the US military action is available against Russia.
+'Claim: "In an interview with the Wall Street Journal, published on February 14, 2025, US Vice President J.D. Vance said the US military action is available against Russia."'
+Verifying Claim: "In an interview with the Wall Street Journal, published on February 14, 2025, US Vice President J.D. Vance said the US military action is available against Russia."
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='J.D. Vance Wall Street Journal interview February 14, 2025 Russia')
+Skipping unsupported website: https://x.com/JDVance/status/1890425322962636870
+Skipping fact-checking website: https://www.newsweek.com/fact-check-did-jd-vance-say-us-military-action-available-against-russia-2032348
+Got 3 new web source(s):
+	1. February 14, 2025 https://www.cnn.com/2025/02/14/politics/jd-vance-us-troops-russia-ukraine-intl-hnk
+	2. February 14, 2025 https://www.reuters.com/world/us-vp-threatens-sanctions-military-action-push-putin-into-ukraine-deal-wsj-2025-02-14/
+	3. February 13, 2025 https://meduza.io/en/news/2025/02/14/vance-threatens-u-s-troops-in-ukraine-and-sanctions-on-russia-if-moscow-rejects-peace-deal-the-wall-street-journal
+Useful result: From [Source](https://www.cnn.com/2025/02/14/politics/jd-vance-us-troops-russia-ukraine-intl-hnk): 
+Content: CNN reports that US Vice President J.D. Vance said the US could use economic and military "tools of leverage" against Russia if they don't negotiate a peace deal with Ukraine in good faith. The article mentions an interview with the Wall Street Journal on Thursday, February 14, 2025. <image:k> shows Vance during a news conference at the White House on January 30, 2025. The article was updated on February 14, 2025. The author is Jessie Yeung from CNN.
+
+Useful result: From [Source](https://www.reuters.com/world/us-vp-threatens-sanctions-military-action-push-putin-into-ukraine-deal-wsj-2025-02-14/): 
+Content: Reuters reports that in an interview with the Wall Street Journal, U.S. Vice President J.D. Vance said the U.S. could use sanctions and potential military action against Russia if Putin does not agree to a peace deal with Ukraine. The article was published on February 14, 2025. <image:8295>
+
+Useful result: From [Source](https://meduza.io/en/news/2025/02/14/vance-threatens-u-s-troops-in-ukraine-and-sanctions-on-russia-if-moscow-rejects-peace-deal-the-wall-street-journal): 
+Content: The Wall Street Journal published an interview with U.S. Vice President J.D. Vance on February 14, 2025. Vance stated that the U.S. has not ruled out sanctions or deploying troops to Ukraine if Russia rejects a peace deal. Vance mentioned "military tools of leverage" and the possibility of sending U.S. troops to Ukraine.
+
+The claim 'In an interview with the Wall Street Journal, published on February 14, 2025, US Vice President J.D. Vance said the US military action is available against Russia.' is true.
+Justification: In an interview with the Wall Street Journal on February 14, 2025, U.S. Vice President J.D. Vance discussed potential actions against Russia, including the possibility of military action, as reported by sources like [CNN](https://www.cnn.com/) and [Reuters](https://www.reuters.com/).
+
+So, the overall veracity is: true
+Fact-check took 0:24 min.

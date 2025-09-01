@@ -1,0 +1,37 @@
+Extracting claims from Content: <image:23> This image shows a Russian ammunition depot in Toropets, Tver Oblast, before and after it was hit by a, possible nuclear, strike from the North Atlantic Treaty Organization (NATO).
+'Claim: "<image:23> This image shows a Russian ammunition depot in Toropets, Tver Oblast, before and after it was hit by a, possible nuclear, strike from the North Atlantic Treaty Organization (NATO)."'
+Verifying Claim: "<image:23> This image shows a Russian ammunition depot in Toropets, Tver Oblast, before and after it was hit by a, possible nuclear, strike from the North Atlantic Treaty Organization (NATO)."
+Not enough information yet. Continuing fact-check...
+Most likely location: Bhutan
+Top 10 locations: Bhutan, China, Malaysia, Cambodia, Ghana, Taiwan, Madagascar, Nigeria, Brazil, Colombia
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Russian ammunition depot Toropets Tver Oblast')
+Skipping unsupported website: https://www.reddit.com/r/CombatFootage/comments/1fjhrnh/mushroom_explosion_at_russian_ammunition/
+Got 3 new web source(s):
+	1. https://en.wikipedia.org/wiki/Toropets_depot_explosions
+	2. September 18, 2024 https://edition.cnn.com/2024/09/18/europe/ukraine-russian-weapons-depot-drone-attack-intl
+	3. September 18, 2024 https://www.euronews.com/my-europe/2024/09/18/what-was-stored-at-the-russian-arms-depot-in-tver-region-struck-by-ukraines-drones
+Useful result: From [Source](https://en.wikipedia.org/wiki/Toropets_depot_explosions): 
+Content: The Wikipedia article discusses the Ukrainian drone attack on a Russian ammunition depot in Toropets, Tver Oblast, on September 17-18, 2024. <image:23> The attack caused a series of explosions and fires, with the primary explosion creating a large crater and a seismic wave. The depot contained fuel tanks, missiles, and artillery ammunition, including Iskander and Tochka-U missile systems, guided aerial bombs, and North Korean munitions. The CIA provided intelligence to Ukraine about the depot. The article mentions that the facility was renovated in 2018 and was claimed to meet high international standards.
+
+Useful result: From [Source](https://edition.cnn.com/2024/09/18/europe/ukraine-russian-weapons-depot-drone-attack-intl): 
+Content: CNN reports that a Ukrainian drone attack destroyed a Russian ammunition depot in Toropets, Tver region, Russia. <image:23> shows the depot before and after the explosion. The attack caused a massive blast and large fires. The depot was storing Iskander and Tochka-U missile systems, guided aerial bombs, and artillery ammunition. The article was published on September 18, 2024.
+
+Useful result: From [Source](https://www.euronews.com/my-europe/2024/09/18/what-was-stored-at-the-russian-arms-depot-in-tver-region-struck-by-ukraines-drones): 
+Content: Euronews published an article on September 18, 2024, discussing a Ukrainian drone attack on a Russian weapons stockpile in the Tver region. The facility in Toropets, renovated in 2018, stored an estimated 30,000 tonnes of military munitions, including explosives, artillery shells, and ballistic missiles. The article mentions that the site was said to meet "the highest international standards" and could defend weapons from missiles and "even a small nuclear attack". The article states that the destruction of the ammunition will most likely negatively affect the northern operational group of the Russian army. According to Ukrainian sources, the site housed fuel tanks, missiles for Iskander and Tochka-U systems, guided aerial bombs, and artillery ammunition. The article also mentions that Russia had started to store North Korean munitions in Toropets. The article includes images showing the damage from the drone attack.
+
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Toropets Tver Oblast NATO strike')
+Skipping unsupported website: https://www.reddit.com/r/UkraineWarVideoReport/comments/1fjxwi1/russian_propaganda_channels_claim_that_attack_on/
+Got 2 new web source(s):
+	1. September 18, 2024 https://apnews.com/article/russia-ukraine-toropets-drones-attack-e3d05b2637d316b437e4789a35c7f59e
+	2. September 19, 2024 https://www.newsweek.com/russia-tver-ukraine-drones-1955582
+Useful result: From [Source](https://apnews.com/article/russia-ukraine-toropets-drones-attack-e3d05b2637d316b437e4789a35c7f59e): 
+Content: The Associated Press reports that Ukrainian drones struck a military depot in Toropets, Russia, causing a fire. The depot housed Iskander and Tochka-U missiles, as well as glide bombs and artillery shells. The article includes satellite images of the depot before and after the strike. <image:23> The images are from Maxar Technologies.
+
+Useful result: From [Source](https://www.newsweek.com/russia-tver-ukraine-drones-1955582): 
+Content: Newsweek reports on a suspected Ukrainian drone attack on an ammunition depot in Toropets, Tver region, Russia. The attack caused a large explosion and fire <image:8772>. The article mentions that the depot contained various types of missiles. The article also includes estimates of the blast's size, with one estimate suggesting it was equivalent to 1.3 to 1.8 kilotons of TNT. The article was published on September 18, 2024.
+
+The claim '<image:23> This image shows a Russian ammunition depot in Toropets, Tver Oblast, before and after it was hit by a, possible nuclear, strike from the North Atlantic Treaty Organization (NATO).' is false.
+Justification: The image depicts a Russian ammunition depot in Toropets, Tver Oblast, before and after a Ukrainian drone strike, not a NATO strike. Multiple sources, including CNN ([https://edition.cnn.com/2024/09/18/europe/ukraine-russian-weapons-depot-drone-attack-intl](https://edition.cnn.com/2024/09/18/europe/ukraine-russian-weapons-depot-drone-attack-intl)), Euronews ([https://www.euronews.com/my-europe/2024/09/18/what-was-stored-at-the-russian-arms-depot-in-tver-region-struck-by-ukraines-drones](https://www.euronews.com/my-europe/2024/09/18/what-was-stored-at-the-russian-arms-depot-in-tver-region-struck-by-ukraines-drones)), and the Associated Press, confirm the Ukrainian drone attack.
+
+So, the overall veracity is: false
+Fact-check took 2:44 min.

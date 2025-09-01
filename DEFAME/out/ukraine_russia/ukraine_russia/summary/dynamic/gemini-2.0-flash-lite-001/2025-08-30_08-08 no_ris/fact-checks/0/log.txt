@@ -1,0 +1,33 @@
+Extracting claims from Content: <image:1> This image shows a screenshot of an authentic Hull Daily Mail's frontpage from March 13, 2025 saying '70,000 Ukrainian soldiers in the Kursk region died in vain. The UK poured hundreds of millions of pounds into Zelensky's crushing failure'.
+'Claim: "<image:1> This image shows a screenshot of an authentic Hull Daily Mail's frontpage from March 13, 2025 saying '70,000 Ukrainian soldiers in the Kursk region died in vain. The UK poured hundreds of millions of pounds into Zelensky's crushing failure'."'
+Verifying Claim: "<image:1> This image shows a screenshot of an authentic Hull Daily Mail's frontpage from March 13, 2025 saying '70,000 Ukrainian soldiers in the Kursk region died in vain. The UK poured hundreds of millions of pounds into Zelensky's crushing failure'."
+Not enough information yet. Continuing fact-check...
+Got 3 new web source(s):
+	1. March 13, 2025 https://penrithcity.spydus.com/cgi-bin/spydus.exe/ENQ/WPAC/ISSENQ?SETLVL=&ISX=142144
+	2. March 17, 2025 https://mythdetector.com/en/british-hull-daily-mail/
+	3. March 13, 2025 https://www.magzter.com/GB/Reach-Publishing-Services-Limited/Hull-Daily-Mail/News/2023954?srsltid=AfmBOoqTSROYXfWSCNnJjzNlPL-FwMP5Yq_k0ESWpru9Vq4oC3aQXhx2
+Useful result: From [Source](https://penrithcity.spydus.com/cgi-bin/spydus.exe/ENQ/WPAC/ISSENQ?SETLVL=&ISX=142144): 
+Content: The search result is from penrithcity.spydus.com and it is about the Hull Daily Mail from March 13, 2025.
+
+Useful result: From [Source](https://mythdetector.com/en/british-hull-daily-mail/): 
+Content: The search result from mythdetector.com, published on March 17, 2025, fact-checks a falsified Hull Daily Mail cover. <image:66> The fabricated cover, dated March 13, 2025, claims that 70,000 Ukrainian soldiers died in vain in the Kursk region. The actual March 13 issue of the Hull Daily Mail does not mention Ukraine. <image:66> The article states that the image is a visual manipulation.
+
+Useful result: From [Source](https://www.magzter.com/GB/Reach-Publishing-Services-Limited/Hull-Daily-Mail/News/2023954?srsltid=AfmBOoqTSROYXfWSCNnJjzNlPL-FwMP5Yq_k0ESWpru9Vq4oC3aQXhx2): 
+Content: The search result is from Magzter and shows the Hull Daily Mail from March 13, 2025. <image:73> The front page of the newspaper includes the headline "BOY FOUND GUILTY OF ATTEMPTING TO MURDER GIRL WITH A SWORD". The publisher is Reach-Publishing-Services-Limited.
+
+Got 2 new web source(s):
+	1. March 28, 2025 https://gwaramedia.com/en/debunking-russian-fakes-hull-daily-mail-didnt-write-about-70000-ukrainian-soldiers-killed-in-russias-kursk-oblast/
+	2. March 26, 2025 https://www.thejournal.ie/ukraine-hull-daily-mail-debunk-6657051-Mar2025/
+Useful result: From [Source](https://gwaramedia.com/en/debunking-russian-fakes-hull-daily-mail-didnt-write-about-70000-ukrainian-soldiers-killed-in-russias-kursk-oblast/): 
+Content: The search result from Gwara Media, published on March 28, 2025, debunks a fake Hull Daily Mail front page. The fake front page, dated March 13, 2025, claimed that 70,000 Ukrainian soldiers died in the Kursk region. <image:1451>, <image:1452>. The article states that the real Hull Daily Mail cover for that date had a different headline. <image:1454>. The author is Olha Yakovleva.
+
+Useful result: From [Source](https://www.thejournal.ie/ukraine-hull-daily-mail-debunk-6657051-Mar2025/): 
+Content: The Journal.ie published an article on March 26, 2025, debunking a fake Hull Daily Mail front page. The fake front page, which was widely shared on social media, claimed that 70,000 Ukrainian soldiers died in the Kursk region. The article states that the Hull Daily Mail's parent company confirmed the headline was fake. The real front page from March 13, 2025, featured a different story. <image:1471> <image:1472>
+
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Hull Daily Mail front page March 13 2025')
+Got 0 new web source(s):
+The claim '<image:1> This image shows a screenshot of an authentic Hull Daily Mail's frontpage from March 13, 2025 saying '70,000 Ukrainian soldiers in the Kursk region died in vain. The UK poured hundreds of millions of pounds into Zelensky's crushing failure'.' is false.
+Justification: The claim is false. Multiple sources, including fact-checks from mythdetector.com and The Journal.ie, confirm that the image is a fabricated front page of the Hull Daily Mail. The real front page from March 13, 2025, did not contain the headline about Ukrainian soldiers, as evidenced by the actual front page found via web search.
+
+So, the overall veracity is: false
+Fact-check took 0:34 min.

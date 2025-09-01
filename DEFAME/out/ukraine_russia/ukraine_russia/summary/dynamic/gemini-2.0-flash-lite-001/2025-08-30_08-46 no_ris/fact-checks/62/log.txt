@@ -1,0 +1,25 @@
+Extracting claims from Content: <image:20> This image shows a US drone which was shot down in March 2025 by the Houthis using Russian missiles.
+'Claim: "<image:20> This image shows a US drone which was shot down in March 2025 by the Houthis using Russian missiles."'
+Verifying Claim: "<image:20> This image shows a US drone which was shot down in March 2025 by the Houthis using Russian missiles."
+Not enough information yet. Continuing fact-check...
+Most likely location: Israel
+Top 10 locations: Israel, Palestine, United Arab Emirates, Jordan, Tunisia, Albania, Andorra, Argentina, Australia, Austria
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='US drone shot down Houthis March 2025')
+Got 3 new web source(s):
+	1. April 23, 2025 https://abcnews.go.com/Politics/houthis-shoot-growing-number-us-drones/story?id=121099082
+	2. April 25, 2025 https://www.militarytimes.com/news/your-military/2025/04/25/houthi-rebels-have-shot-down-7-us-reaper-drones-in-recent-weeks/
+	3. https://en.wikipedia.org/wiki/March%E2%80%93May_2025_United_States_attacks_in_Yemen
+Useful result: From [Source](https://abcnews.go.com/Politics/houthis-shoot-growing-number-us-drones/story?id=121099082): 
+Content: ABC News reports that Houthi militants have shot down six MQ-9 Reaper drones since March 15, 2025. <image:i>. The article is written by Luis Martinez and was published on April 23, 2025.
+
+Useful result: From [Source](https://www.militarytimes.com/news/your-military/2025/04/25/houthi-rebels-have-shot-down-7-us-reaper-drones-in-recent-weeks/): 
+Content: The Military Times published an article on April 25, 2025, stating that Houthi rebels in Yemen have shot down seven U.S. Reaper drones in recent weeks. <image:8693>. The article mentions that the U.S. has been launching daily strikes since March 15, 2025.
+
+Useful result: From [Source](https://en.wikipedia.org/wiki/March%E2%80%93May_2025_United_States_attacks_in_Yemen): 
+Content: The search result is from Wikipedia and discusses the March–May 2025 United States attacks in Yemen. It mentions that the Houthis shot down a US MQ-9 Reaper drone in March 2025. The article also mentions several US airstrikes in Yemen during April 2025. The article also mentions the Red Sea crisis and the Gaza war. <image:20>
+
+The claim '<image:20> This image shows a US drone which was shot down in March 2025 by the Houthis using Russian missiles.' is false.
+Justification: The claim is false. While the Houthis did shoot down a US drone in March 2025, the image's geolocation data suggests it was taken in Israel, and there is no evidence to support that the image depicts a drone shot down by the Houthis. The web search results confirm the drone downing by the Houthis, as reported by sources like [ABC News](https://abcnews.go.com/) and [Military Times](https://www.militarytimes.com/).
+
+So, the overall veracity is: false
+Fact-check took 3:13 min.

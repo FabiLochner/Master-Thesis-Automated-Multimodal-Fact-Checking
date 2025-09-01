@@ -1,0 +1,66 @@
+Extracting claims from Content: <image:18> This image shows an authentic list realeased by Ukraine showing US politicians taking bribes from Ukraine. The highest bribe was 92 Million US-$ for Joe Biden.
+'Claim: "<image:18> This image shows an authentic list realeased by Ukraine showing US politicians taking bribes from Ukraine. The highest bribe was 92 Million US-$ for Joe Biden."'
+Verifying Claim: "<image:18> This image shows an authentic list realeased by Ukraine showing US politicians taking bribes from Ukraine. The highest bribe was 92 Million US-$ for Joe Biden."
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Joe Biden net worth')
+Got 3 new web source(s):
+	1. June 17, 2024 https://www.investopedia.com/joe-biden-net-worth-8655652
+	2. May 19, 2025 https://www.yahoo.com/news/joe-biden-net-worth-time-205550551.html
+	3. https://www.opensecrets.org/2020-presidential-race/financial-disclosures-and-net-worth
+Useful result: From [Source](https://www.investopedia.com/joe-biden-net-worth-8655652): 
+Content: According to Investopedia, President Joe Biden and first lady Jill Biden have an estimated net worth of $10 million. In 2023, they earned about $620,000 before taxes. <image:18>
+
+Useful result: From [Source](https://www.yahoo.com/news/joe-biden-net-worth-time-205550551.html): 
+Content: Yahoo News reports that Joe Biden's net worth is estimated to be around $9 million as of May 2025. <image:8662> The article also mentions that the president's annual salary is $400,000. The article was published in May 2025.
+
+Useful result: From [Source](https://www.opensecrets.org/2020-presidential-race/financial-disclosures-and-net-worth): 
+Content: The search result from OpenSecrets.org provides the minimum and maximum net worth of Joe Biden, which is $2,137,033 and $7,924,998, respectively. The source also provides net worth information for other politicians. <image:8673>
+
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Mitch McConnell net worth')
+Got 3 new web source(s):
+	1. https://www.opensecrets.org/personal-finances/mitch-mcconnell/net-worth?cid=N00003389
+	2. January 07, 2025 https://city-countyobserver.com/a-tale-of-two-wealthy-senators/
+	3. August 10, 2025 https://www.quiverquant.com/news/Net+Worth+Update%3A+Senator+Mitch+McConnell+Made+an+Estimated+%24174.2K+in+the+Stock+Market+Last+Month
+Useful result: From [Source](https://www.opensecrets.org/personal-finances/mitch-mcconnell/net-worth?cid=N00003389): 
+Content: The search result from OpenSecrets.org provides information about Mitch McConnell's net worth, which was estimated to be $34,137,534 in 2018. <image:8679>
+
+Useful result: From [Source](https://city-countyobserver.com/a-tale-of-two-wealthy-senators/): 
+Content: The search result discusses the net worth of Mitch McConnell and Chuck Schumer. It mentions that McConnell's net worth exceeds $30 million and Schumer's net worth surpasses $60 million. The article also mentions that McConnell's wealth increased due to inheritance and his marriage. It also mentions that Schumer's wealth stems from strategic investments, particularly in real estate.
+
+Useful result: From [Source](https://www.quiverquant.com/news/Net+Worth+Update%3A+Senator+Mitch+McConnell+Made+an+Estimated+%24174.2K+in+the+Stock+Market+Last+Month): 
+Content: The search result from Quiver Quantitative, published 2 weeks, 6 days ago, estimates Senator Mitch McConnell's net worth at $53.0M as of August 10th, 2025. It also mentions that McConnell made $174.2K in the stock market last month. <image:18>
+
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Nancy Pelosi net worth')
+Skipping unsupported website: https://www.youtube.com/watch?v=9_WV67-jWss
+Got 3 new web source(s):
+	1. https://www.opensecrets.org/personal-finances/nancy-pelosi/net-worth?cid=N00007360&year=2018
+	2. https://en.wikipedia.org/wiki/Nancy_Pelosi
+	3. https://www.quiverquant.com/congresstrading/politician/Nancy%20Pelosi-P000197/net-worth
+Useful result: From [Source](https://www.opensecrets.org/personal-finances/nancy-pelosi/net-worth?cid=N00007360&year=2018): 
+Content: OpenSecrets.org provides information on Nancy Pelosi's net worth, which was estimated at $114,662,521 in 2018. <image:8703>
+
+Useful result: From [Source](https://en.wikipedia.org/wiki/Nancy_Pelosi): 
+Content: The search result from Wikipedia provides information about Nancy Pelosi's net worth. In 2009, OpenSecrets estimated Pelosi's net worth at $58 million. In 2014, OpenSecrets reported Pelosi's net worth had almost doubled, to about $101 million. As of 2021, Pelosi's net worth was valued at $120 million.
+
+Useful result: From [Source](https://www.quiverquant.com/congresstrading/politician/Nancy%20Pelosi-P000197/net-worth): 
+Content: The search result is from Quiverquant.com and provides information about Nancy Pelosi, including her net worth, trade volume, and stock portfolio. It also includes a list of her trades and disclosed holdings. <image:18>
+
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='US politicians Ukraine bribes')
+Skipping unsupported website: https://oversight.house.gov/the-bidens-influence-peddling-timeline/
+Got 3 new web source(s):
+	1. January 15, 2025 https://www.euronews.com/my-europe/2025/01/15/old-false-claims-resurface-about-ukrainian-kickbacks-to-us-politicians
+	2. July 21, 2023 https://www.bbc.com/news/world-us-canada-66272217
+	3. https://en.wikipedia.org/wiki/Biden%E2%80%93Ukraine_conspiracy_theory
+Useful result: From [Source](https://www.euronews.com/my-europe/2025/01/15/old-false-claims-resurface-about-ukrainian-kickbacks-to-us-politicians): 
+Content: The Euronews article, published on January 15, 2025, debunks a claim circulating on social media that lists US politicians who allegedly received bribes from Ukraine. The article states that the image, which includes Joe Biden, Nancy Pelosi, and Mitt Romney, is false and lacks evidence. It notes that no legitimate news outlets have reported on the claims, and the claims have been debunked by other fact-checkers. The article also mentions that the claims originate from at least 2023 and are part of a disinformation campaign. <image:18>
+
+Useful result: From [Source](https://www.bbc.com/news/world-us-canada-66272217): 
+Content: The BBC News article from July 21, 2023, discusses an FBI document released by a top Senate Republican, detailing an allegation that Joe Biden and his son accepted bribes from a Ukrainian firm. <image:8767>, <image:8769>, <image:8771>. The document contains claims from a foreign informant, but there is no evidence that Joe Biden received any payments from Ukraine. The article also mentions that the allegations are similar to those aired by Biden's political opponents.
+
+Useful result: From [Source](https://en.wikipedia.org/wiki/Biden%E2%80%93Ukraine_conspiracy_theory): 
+Content: The search result is from Wikipedia and discusses the Biden–Ukraine conspiracy theory, which alleges that Joe Biden improperly withheld a loan guarantee and took a bribe to pressure Ukraine into firing a prosecutor to protect his son Hunter Biden. The article mentions that this theory was promoted by Russian intelligence and spread by various individuals and media outlets. It also states that a joint investigation by Republican Senate committees found no evidence of wrongdoing by Joe Biden. <image:18>
+
+The claim '<image:18> This image shows an authentic list realeased by Ukraine showing US politicians taking bribes from Ukraine. The highest bribe was 92 Million US-$ for Joe Biden.' is false.
+Justification: The claim is false. Multiple sources, including Euronews, have debunked the image <image:18>
+So, the overall veracity is: false
+Fact-check took 10:35 min.
