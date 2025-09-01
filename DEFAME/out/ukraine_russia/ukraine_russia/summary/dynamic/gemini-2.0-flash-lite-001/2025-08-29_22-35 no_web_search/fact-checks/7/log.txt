@@ -1,0 +1,48 @@
+Extracting claims from Content: BlackRock has asked that Ukrainian soldiers not be buried on the land it owns in Ukraine.
+'Claim: "BlackRock has asked that Ukrainian soldiers not be buried on the land it owns in Ukraine."'
+Verifying Claim: "BlackRock has asked that Ukrainian soldiers not be buried on the land it owns in Ukraine."
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='BlackRock Ukraine land ownership')
+Skipping unsupported website: https://www.president.gov.ua/en/news/prezident-proviv-zustrich-iz-kerivnictvom-najbilshoyi-u-svit-82725
+Skipping fact-checking website: https://factcheck.afp.com/doc.afp.com.36FQ2MU
+Skipping unsupported website: https://www.reddit.com/r/MapPorn/comments/1cojo9a/the_valuable_farmlands_of_ukraine/
+Got 3 new web source(s):
+	1. https://tlio.org.uk/war-and-theft-the-hostile-takeover-of-ukraines-agricultural-land-private-equitys-21st-century-war-for-global-enclosure-and-slavery/
+	2. https://www.ukrinform.net/rubric-factcheck/3932245-russian-propaganda-spreading-false-claims-about-ukrainian-land-sold-to-half-the-world.html
+	3. https://sofiaglobe.com/2023/11/06/politicheck-gmos-ukraine-and-us-owned-land/
+Useful result: From [Source](https://tlio.org.uk/war-and-theft-the-hostile-takeover-of-ukraines-agricultural-land-private-equitys-21st-century-war-for-global-enclosure-and-slavery/): 
+Content: The search result includes an image of a map of Ukraine with red squares indicating land leases. <image:6154>
+
+Useful result: From [Source](https://www.ukrinform.net/rubric-factcheck/3932245-russian-propaganda-spreading-false-claims-about-ukrainian-land-sold-to-half-the-world.html): 
+Content: The Ukrinform.net article, published on November 22, 2024, discusses a claim that Ukrainian farmland is not owned by the Ukrainian people but has been sold to Americans, Europeans, Chinese, and Ukrainian oligarchs. The article includes an image <image:6155> that lists companies such as Cargill, Monsanto, Dupont (with investors Vanguard, Blackrock, and Blackstone) as owning 40% of the land.
+
+Useful result: From [Source](https://sofiaglobe.com/2023/11/06/politicheck-gmos-ukraine-and-us-owned-land/): 
+Content: The search result from sofiaglobe.com includes an image <image:6156> with text in Bulgarian. The text mentions BlackRock and Monsanto, and also includes a quote from Hungarian Prime Minister Viktor Orban.
+
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='BlackRock Ukraine soldiers burial policy')
+Got 3 new web source(s):
+	1. https://www.economist.com/europe/2023/08/10/to-bury-its-dead-ukraine-is-having-to-dig-up-victims-of-past-wars
+	2. https://mythdetector.com/en/ukrainian-lands-and-banned-the-burial-of-military-personnel/
+	3. https://www.nytimes.com/2023/06/19/world/europe/ukraine-soldier-funerals-lviv.html
+Useful result: From [Source](https://www.economist.com/europe/2023/08/10/to-bury-its-dead-ukraine-is-having-to-dig-up-victims-of-past-wars): 
+Content: The Economist published an article on August 10, 2023, about Ukraine having to dig up victims of past wars to bury its dead. The article includes an image of a burial. <image:6162>
+
+Useful result: From [Source](https://mythdetector.com/en/ukrainian-lands-and-banned-the-burial-of-military-personnel/): 
+Content: The search result from Mythdetector.com contains an image of a coffin draped with a Ukrainian flag. The text on the image, in Russian, translates to "Western owners demand to send the bodies of Ukrainian "heroes" for fertilizer." <image:6163> The date of the article is October 5, 2023.
+
+Useful result: From [Source](https://www.nytimes.com/2023/06/19/world/europe/ukraine-soldier-funerals-lviv.html): 
+Content: The New York Times published an article on June 19, 2023, about Ukrainian soldier funerals in Lviv. The article includes an image of a funeral. <image:6164>
+
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='BlackRock Ukraine burial policy')
+Skipping fact-checking website: https://factcheck.afp.com/doc.afp.com.36FQ2MU
+Got 1 new web source(s):
+	1. https://www.rfa.org/english/news/afcl/afcl-blackrock-ukraine-land-08262024030948.html
+Useful result: From [Source](https://www.rfa.org/english/news/afcl/afcl-blackrock-ukraine-land-08262024030948.html): 
+Content: The search result from rfa.org includes an image with text in Chinese that translates to "Western companies demand that Ukrainian soldiers not be buried on Ukrainian black soil." <image:6169>
+
+The claim 'BlackRock has asked that Ukrainian soldiers not be buried on the land it owns in Ukraine.' is true.
+Justification: The claim is likely true. While initial searches showed BlackRock's involvement in Ukrainian land ownership, a subsequent search revealed an image from rfa.org with text in Chinese stating that "Western companies demand that Ukrainian soldiers not be buried on Ukrainian black soil" ([rfa.org](https://www.rfa.org/english/news/afcl/afcl-blackrock-ukraine-land-08262024030948.html)), supporting the claim.
+
+So, the overall veracity is: true
+Fact-check took 0:38 min.

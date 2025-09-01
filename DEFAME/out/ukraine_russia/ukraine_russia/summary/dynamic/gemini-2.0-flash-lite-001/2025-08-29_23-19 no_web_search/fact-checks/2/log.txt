@@ -1,0 +1,42 @@
+Extracting claims from Content: In February 2025 Ukrainian President Volodymyr Zelenskyy blocked access to US President Donald Trump's social media platform Truth Social across Ukraine.
+'Claim: "In February 2025 Ukrainian President Volodymyr Zelenskyy blocked access to US President Donald Trump's social media platform Truth Social across Ukraine."'
+Verifying Claim: "In February 2025 Ukrainian President Volodymyr Zelenskyy blocked access to US President Donald Trump's social media platform Truth Social across Ukraine."
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Volodymyr Zelenskyy Donald Trump Truth Social Ukraine')
+Got 3 new web source(s):
+	1. https://www.pbs.org/newshour/politics/trump-calls-ukraines-zelenskyy-a-dictator-tensions-rise-over-russia-war
+	2. https://www.aljazeera.com/news/2025/2/21/us-president-trumps-claims-about-zelenskyy-and-ukraine-fact-checked
+	3. https://www.npr.org/2025/02/28/nx-s1-5313079/trump-zelenskyy-meeting
+Useful result: From [Source](https://www.pbs.org/newshour/politics/trump-calls-ukraines-zelenskyy-a-dictator-tensions-rise-over-russia-war): 
+Content: The PBS article includes an image of Volodymyr Zelenskyy and Donald Trump. <image:7019>
+
+Useful result: From [Source](https://www.aljazeera.com/news/2025/2/21/us-president-trumps-claims-about-zelenskyy-and-ukraine-fact-checked): 
+Content: The search result from Al Jazeera contains an image of Volodymyr Zelenskyy and Donald Trump. <image:7021>
+
+Useful result: From [Source](https://www.npr.org/2025/02/28/nx-s1-5313079/trump-zelenskyy-meeting): 
+Content: The search result from NPR contains an image of Volodymyr Zelenskyy and Donald Trump. <image:7024>
+
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Truth Social blocked Ukraine February 2025')
+Failed to download or open image: HTTPSConnectionPool(host='cdnuploads.aa.com.tr', port=443): Read timed out. (read timeout=10)
+Skipping unsupported website: https://x.com/Shayan86/status/1893350166997971110
+Skipping fact-checking website: https://factcheck.afp.com/doc.afp.com.36YC3DG
+Failed to download or open image: cannot identify image file <_io.BytesIO object at 0x7ffef2b51d50>
+Got 3 new web source(s):
+	1. https://www.aa.com.tr/en/russia-ukraine-war/trump-s-truth-social-not-blocked-in-ukraine-says-kyiv/3488237
+	2. https://www.euronews.com/my-europe/2025/02/26/zelenskyy-hasnt-banned-trumps-truth-social-platform
+	3. https://en.wikipedia.org/wiki/Russian_invasion_of_Ukraine
+Useful result: From [Source](https://www.euronews.com/my-europe/2025/02/26/zelenskyy-hasnt-banned-trumps-truth-social-platform): 
+Content: Euronews states that Zelenskyy has not banned Trump's Truth Social platform. <image:7030>
+
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Zelenskyy Trump Truth Social Ukraine')
+Got 1 new web source(s):
+	1. https://whyy.org/articles/trump-pauses-aid-ukraine-russia-war/
+Useful result: From [Source](https://whyy.org/articles/trump-pauses-aid-ukraine-russia-war/): 
+Content: The WHYY article includes an image of Donald Trump and Volodymyr Zelenskyy. <image:7032>
+
+The claim 'In February 2025 Ukrainian President Volodymyr Zelenskyy blocked access to US President Donald Trump's social media platform Truth Social across Ukraine.' is false.
+Justification: The claim is false. A search of Euronews revealed that Volodymyr Zelenskyy did not ban Donald Trump's Truth Social platform, directly contradicting the claim.
+
+So, the overall veracity is: false
+Fact-check took 0:38 min.

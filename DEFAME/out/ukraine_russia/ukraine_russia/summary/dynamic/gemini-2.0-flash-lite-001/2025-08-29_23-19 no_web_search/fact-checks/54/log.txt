@@ -1,0 +1,59 @@
+Extracting claims from Content: Ukraine is selling half of the armaments it receives from the United States
+'Claim: "Ukraine is selling half of the armaments it receives from the United States"'
+Verifying Claim: "Ukraine is selling half of the armaments it receives from the United States"
+Not enough information yet. Continuing fact-check...
+Got 3 new web source(s):
+	1. https://cepa.org/article/what-the-us-is-sending-to-ukraine-right-now-and-what-it-isnt/
+	2. https://www.stimson.org/2022/u-s-military-assistance-to-ukraine/
+	3. https://abcnews.go.com/Politics/us-military-nato-officials-discuss-weapons-sales-aid/story?id=123691237
+Useful result: From [Source](https://cepa.org/article/what-the-us-is-sending-to-ukraine-right-now-and-what-it-isnt/): 
+Content: The search result contains an image of armaments being transported. <image:6432>
+
+Useful result: From [Source](https://www.stimson.org/2022/u-s-military-assistance-to-ukraine/): 
+Content: The search result contains an image of armaments being transported. <image:6433>
+
+Useful result: From [Source](https://abcnews.go.com/Politics/us-military-nato-officials-discuss-weapons-sales-aid/story?id=123691237): 
+Content: The search result contains an image of military equipment, including what appears to be rockets, being transported by trucks. <image:6436>
+
+Not enough information yet. Continuing fact-check...
+Got 3 new web source(s):
+	1. https://www.nytimes.com/2024/02/28/world/europe/ukraine-weapons-politician-charged-corruption.html
+	2. https://www.bloomberg.com/en/news/thp/2024-01-28/ukraine-says-corrupt-officials-stole-40-million-meant-to-buy-arms-for-the-war-with-russia
+	3. https://www.aljazeera.com/news/2025/8/2/ukraine-says-defence-sector-corruption-scheme-uncovered
+Useful result: From [Source](https://www.nytimes.com/2024/02/28/world/europe/ukraine-weapons-politician-charged-corruption.html): 
+Content: The New York Times published an article about a Ukrainian politician charged with corruption. <image:6904>
+
+Useful result: From [Source](https://www.bloomberg.com/en/news/thp/2024-01-28/ukraine-says-corrupt-officials-stole-40-million-meant-to-buy-arms-for-the-war-with-russia): 
+Content: Bloomberg reports that Ukrainian officials stole $40 million meant to buy arms. <image:6905>
+
+Useful result: From [Source](https://www.aljazeera.com/news/2025/8/2/ukraine-says-defence-sector-corruption-scheme-uncovered): 
+Content: Al Jazeera reports that Ukraine uncovered a corruption scheme in the defense sector. <image:6906>
+
+Got 3 new web source(s):
+	1. https://globalinitiative.net/analysis/a-new-phase-of-arms-trafficking-in-ukraine/
+	2. https://www.ft.com/content/bce78c78-b899-4dd2-b3a0-69d789b8aee8
+	3. https://www.rferl.org/a/ukraine-flood-of-arms-east-conflict-smuggling/27797454.html
+Useful result: From [Source](https://globalinitiative.net/analysis/a-new-phase-of-arms-trafficking-in-ukraine/): 
+Content: The search result from globalinitiative.net discusses arms trafficking in Ukraine <image:6910>.
+
+Useful result: From [Source](https://www.ft.com/content/bce78c78-b899-4dd2-b3a0-69d789b8aee8): 
+Content: The Financial Times published an image of Ukrainian soldiers with military equipment. <image:6912>
+
+Useful result: From [Source](https://www.rferl.org/a/ukraine-flood-of-arms-east-conflict-smuggling/27797454.html): 
+Content: Radio Free Europe/Radio Liberty (RFERL) published an article that includes an image of weapons in crates <image:6915>.
+
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Ukraine arms sales to other countries')
+Failed to download or open image: cannot identify image file <_io.BytesIO object at 0x7ffed15726b0>
+Got 3 new web source(s):
+	1. https://www.cato.org/commentary/ukraine-receives-weapons-support-around-world
+	2. https://www.statista.com/statistics/1294319/ukraine-arms-exports-by-country/
+	3. https://www.aljazeera.com/news/2022/6/15/infographic-what-weapons-has-ukraine-received-from-the-us-and-al
+Useful result: From [Source](https://www.statista.com/statistics/1294319/ukraine-arms-exports-by-country/): 
+Content: The search result from Statista.com provides a chart showing arms imports from Ukraine by country from 2018 to 2024 <image:7271>. The chart indicates that China was the largest importer of arms from Ukraine.
+
+The claim 'Ukraine is selling half of the armaments it receives from the United States' is false.
+Justification: The claim that Ukraine is selling half of the armaments it receives from the United States is not supported by the available evidence. While there is evidence of arms trafficking and corruption within Ukraine, as reported by sources like the [New York Times](https://www.nytimes.com/), [Bloomberg](https://www.bloomberg.com/), and [Al Jazeera](https://www.aljazeera.com/), there is no specific data to confirm the claim. Furthermore, although Ukraine exports arms, as shown by [Statista.com](https://www.statista.com/statistics/1294319/ukraine-arms-exports-by-country/), the origin of these arms is not specified.
+
+So, the overall veracity is: false
+Fact-check took 1:06 min.

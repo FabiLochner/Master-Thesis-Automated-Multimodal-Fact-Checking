@@ -1,0 +1,55 @@
+Extracting claims from Content: <image:8> This image shows fake children's toys that were photoshopped into the image by the Ukrainian Government after Kyiv's pediatric hospital was attacked by Russian cruise missiles on July 8, 2024.
+'Claim: "<image:8> This image shows fake children's toys that were photoshopped into the image by the Ukrainian Government after Kyiv's pediatric hospital was attacked by Russian cruise missiles on July 8, 2024."'
+Verifying Claim: "<image:8> This image shows fake children's toys that were photoshopped into the image by the Ukrainian Government after Kyiv's pediatric hospital was attacked by Russian cruise missiles on July 8, 2024."
+Not enough information yet. Continuing fact-check...
+Got 2 new web source(s):
+	1. https://kyivindependent.com/boys-body-found-under-rubble-in-kyiv/
+	2. https://newsukraine.rbc.ua/news/russian-strike-on-kyiv-number-of-killed-and-1720503127.html
+Useful result: From [Source](https://kyivindependent.com/boys-body-found-under-rubble-in-kyiv/): Found exact image on website with title: Boy's body found under rubble in Kyiv, death toll of July 8 attack ...
+Content: The Kyiv Independent published an article on July 9, 2024, reporting on a Russian strike in Kyiv on July 8, 2024. The article includes an image of the aftermath of the attack, showing rubble and emergency personnel. <image:8> The article states that the attack hit a residential building and the Okhmatdyt hospital.
+
+Useful result: From [Source](https://newsukraine.rbc.ua/news/russian-strike-on-kyiv-number-of-killed-and-1720503127.html): Found exact image on website with title: Russian strike on Kyiv - Number of killed and injured increases
+Content: The search result from RBC-Ukraine discusses a Russian missile attack on Kyiv on July 8, which hit the Okhmatdyt Children's Hospital. The article mentions that 27 people, including 4 children, were killed and 117 were injured. The image <image:8> is present in the article. The author is Liliana Oleniak. The article was published on August 6.
+
+Got 3 new web source(s):
+	1. https://www.hrw.org/news/2024/07/11/russias-july-8-attack-childrens-hospital-ukraine
+	2. https://www.reuters.com/pictures/russian-missile-attack-hits-ukraine-childrens-hospital-2024-07-08/
+	3. https://www.pbs.org/newshour/world/russian-missile-attack-hits-ukrainian-childrens-hospital-amid-bombardment-dozens-killed
+Useful result: From [Source](https://www.hrw.org/news/2024/07/11/russias-july-8-attack-childrens-hospital-ukraine): 
+Content: Human Rights Watch published an article on July 11, 2024, about the Russian attack on a children's hospital in Ukraine on July 8, 2024. <image:4615>
+
+Useful result: From [Source](https://www.reuters.com/pictures/russian-missile-attack-hits-ukraine-childrens-hospital-2024-07-08/): 
+Content: Reuters published an article about a Russian missile attack on a children's hospital in Ukraine on July 8, 2024. The article contains an image of children and adults. <image:4616>
+
+Useful result: From [Source](https://www.pbs.org/newshour/world/russian-missile-attack-hits-ukrainian-childrens-hospital-amid-bombardment-dozens-killed): 
+Content: PBS reports on a Russian missile attack on a Ukrainian children's hospital. <image:4617>
+
+Not enough information yet. Continuing fact-check...
+INFO: Dropping action 'reverse_search' as it was already performed.
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='photoshopped toys kyiv hospital attack')
+Got 1 new web source(s):
+	1. https://www.theguardian.com/world/article/2024/jul/08/ukraine-horror-russian-bombing-kyiv-childrens-hospital
+Useful result: From [Source](https://www.theguardian.com/world/article/2024/jul/08/ukraine-horror-russian-bombing-kyiv-childrens-hospital): 
+Content: The Guardian published an article on July 8, 2024, about the Russian bombing of a children's hospital in Kyiv. <image:6677>
+
+Not enough information yet. Continuing fact-check...
+INFO: Dropping action 'reverse_search' as it was already performed.
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='toy car rubble kyiv hospital')
+Got 3 new web source(s):
+	1. https://www.bbc.com/news/videos/c6p2g1101z2o
+	2. https://abcnews.go.com/Health/ukrainian-maternity-hospital-treating-wounded-soldiers-russia-conflict/story?id=83178712
+	3. https://apnews.com/article/russia-ukraine-war-missiles-children-hospital-kyiv-0a33ed16baf2c509b205705bdd1155db
+Useful result: From [Source](https://www.bbc.com/news/videos/c6p2g1101z2o): 
+Content: The BBC published a video about the Russian attack on a children's hospital in Kyiv. <image:6681>
+
+Useful result: From [Source](https://abcnews.go.com/Health/ukrainian-maternity-hospital-treating-wounded-soldiers-russia-conflict/story?id=83178712): 
+Content: The ABC News article from March 10, 2022, shows a purple toy rabbit amidst the rubble of a Ukrainian maternity hospital. <image:6682>
+
+Useful result: From [Source](https://apnews.com/article/russia-ukraine-war-missiles-children-hospital-kyiv-0a33ed16baf2c509b205705bdd1155db): 
+Content: The Associated Press published an article about the Russian missile attack on a children's hospital in Kyiv. The article includes an image of injured people. <image:6683>
+
+The claim '<image:8> This image shows fake children's toys that were photoshopped into the image by the Ukrainian Government after Kyiv's pediatric hospital was attacked by Russian cruise missiles on July 8, 2024.' is false.
+Justification: The claim that the image shows photoshopped toys is unverified. While the image depicts the aftermath of a Russian attack on a Kyiv children's hospital on July 8, 2024, as reported by sources like the [Kyiv Independent](https://kyivindependent.com/), [RBC-Ukraine](https://www.rbc.ua/ukr/news/rosiya-obstrilyala-kiyiv-pid-udarom-okhmadit-1720448789.html), and [Human Rights Watch](https://www.hrw.org/news/2024/07/11/russias-july-8-attack-childrens-hospital-ukraine), the provided evidence does not offer any information to confirm or deny the authenticity of the toys in the image.
+
+So, the overall veracity is: false
+Fact-check took 0:47 min.

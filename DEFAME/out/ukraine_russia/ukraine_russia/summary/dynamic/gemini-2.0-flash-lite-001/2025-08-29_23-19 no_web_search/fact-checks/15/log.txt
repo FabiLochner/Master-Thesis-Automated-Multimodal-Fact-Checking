@@ -1,0 +1,31 @@
+Extracting claims from Content: In February 2025 Ukrainian President Volodymyr Zelenskyy's approval rating in Ukraine was down at 4%.
+'Claim: "In February 2025 Ukrainian President Volodymyr Zelenskyy's approval rating in Ukraine was down at 4%."'
+Verifying Claim: "In February 2025 Ukrainian President Volodymyr Zelenskyy's approval rating in Ukraine was down at 4%."
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Volodymyr Zelenskyy approval rating February 2025')
+Skipping fact-checking website: https://www.reuters.com/fact-check/zelenskiys-latest-approval-rating-is-63-not-4-contrary-trumps-claim-2025-02-21/
+Got 3 new web source(s):
+	1. https://www.euronews.com/2025/02/19/zelenskyys-approval-rating-grows-to-57-debunking-trumps-4-support-claim
+	2. https://www.pewresearch.org/global/2024/07/02/confidence-in-zelenskyy-and-support-for-ukraine/
+	3. https://abcnews.go.com/International/zelenskyy-4-approval-trump-claims-50/story?id=118959595
+Useful result: From [Source](https://www.euronews.com/2025/02/19/zelenskyys-approval-rating-grows-to-57-debunking-trumps-4-support-claim): 
+Content: Euronews.com published an article stating that Zelenskyy's approval rating grew to 57% in February 2025, debunking a claim of 4% support. <image:7068>
+
+Useful result: From [Source](https://www.pewresearch.org/global/2024/07/02/confidence-in-zelenskyy-and-support-for-ukraine/): 
+Content: The Pew Research Center published a survey in July 2024 showing mixed views of Zelenskyy globally. <image:7069> The survey does not include data from February 2025.
+
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Ukraine president approval rating February 2025')
+Got 2 new web source(s):
+	1. https://www.reuters.com/world/us/trump-approval-rating-holds-steady-44-reutersipsos-poll-finds-2025-02-25/
+	2. https://kiis.com.ua/?lang=eng&cat=reports&id=1497&page=1
+Useful result: From [Source](https://www.reuters.com/world/us/trump-approval-rating-holds-steady-44-reutersipsos-poll-finds-2025-02-25/): 
+Content: Reuters published an article on February 25, 2025, reporting on a Reuters/Ipsos poll. The poll indicates that in 2025, the approval rating of the president is at 44%. <image:7079>
+
+Useful result: From [Source](https://kiis.com.ua/?lang=eng&cat=reports&id=1497&page=1): 
+Content: The search result from KIIS.com.ua provides a graph showing the approval rating of the Ukrainian president. The graph includes data from December 2024-January 2025, showing an approval rating of 63%. <image:7080>
+
+The claim 'In February 2025 Ukrainian President Volodymyr Zelenskyy's approval rating in Ukraine was down at 4%.' is false.
+Justification: The claim is false. Evidence from multiple sources, including Euronews.com and a Reuters/Ipsos poll, indicates that Volodymyr Zelenskyy's approval rating in February 2025 was significantly higher than 4%. Specifically, Euronews.com reported 57%, and the Reuters/Ipsos poll showed 44%. Additionally, data from KIIS.com.ua shows a 63% approval rating between December 2024 and January 2025.
+
+So, the overall veracity is: false
+Fact-check took 0:23 min.

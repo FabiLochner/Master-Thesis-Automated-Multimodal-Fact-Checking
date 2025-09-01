@@ -1,0 +1,38 @@
+Extracting claims from Content: <image:10> This image shows Ukrainian President Volodymyr Zelensky wearing a suit after the large-scale Russian invasion in Ukraine: in a talk with Klaus Schwab at the World Economic Forum.
+'Claim: "<image:10> This image shows Ukrainian President Volodymyr Zelensky wearing a suit after the large-scale Russian invasion in Ukraine: in a talk with Klaus Schwab at the World Economic Forum."'
+Verifying Claim: "<image:10> This image shows Ukrainian President Volodymyr Zelensky wearing a suit after the large-scale Russian invasion in Ukraine: in a talk with Klaus Schwab at the World Economic Forum."
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Volodymyr Zelensky Klaus Schwab World Economic Forum')
+Skipping unsupported website: https://www.youtube.com/watch?v=sJ9iHTuYnbc
+Got 3 new web source(s):
+	1. https://today.uconn.edu/2023/02/one-year-after-the-russian-invasion-of-ukraine-can-businesses-prevent-future-wars/
+	2. https://www.shutterstock.com/editorial/image-editorial/volodymyr-zelensky-president-ukraine-r-klaus-schwab-10532640et
+	3. https://ecfr.eu/article/the-decline-and-fall-of-davos-man/
+Useful result: From [Source](https://today.uconn.edu/2023/02/one-year-after-the-russian-invasion-of-ukraine-can-businesses-prevent-future-wars/): 
+Content: The search result from UConn Today shows a picture of Klaus Schwab at the World Economic Forum. The image also shows Volodymyr Zelensky on a screen. <image:6684>
+
+Useful result: From [Source](https://www.shutterstock.com/editorial/image-editorial/volodymyr-zelensky-president-ukraine-r-klaus-schwab-10532640et): 
+Content: The search result from Shutterstock shows a photograph of Volodymyr Zelensky and Klaus Schwab. <image:6685>
+
+Useful result: From [Source](https://ecfr.eu/article/the-decline-and-fall-of-davos-man/): 
+Content: The search result from ecfr.eu shows an image of Volodymyr Zelensky at the World Economic Forum. <image:6686>
+
+Not enough information yet. Continuing fact-check...
+Got 3 new web source(s):
+	1. https://en.m.wikipedia.org/wiki/File:Ukraine_President_Volodymyr_Zelenskyy_and_Klaus_Schwab_at_the_World_Economic_Forum_in_Davos,_22_January_2020.jpg
+	2. https://scn.wikipedia.org/wiki/File:Ukraine_President_Volodymyr_Zelenskyy_and_Klaus_Schwab_at_the_World_Economic_Forum_in_Davos,_22_January_2020.jpg
+	3. https://commons.wikimedia.org/wiki/File:Ukraine_President_Volodymyr_Zelenskyy_and_Klaus_Schwab_at_the_World_Economic_Forum_in_Davos,_22_January_2020.jpg
+Useful result: From [Source](https://en.m.wikipedia.org/wiki/File:Ukraine_President_Volodymyr_Zelenskyy_and_Klaus_Schwab_at_the_World_Economic_Forum_in_Davos,_22_January_2020.jpg): Found exact image on website with title: File:Ukraine President Volodymyr Zelenskyy and Klaus Schwab at ...
+Content: The image is from the website of the President of Ukraine and shows Volodymyr Zelenskyy and Klaus Schwab at the World Economic Forum in Davos on January 22, 2020. <image:10>. The image is licensed under the Creative Commons Attribution 4.0 International license.
+
+Useful result: From [Source](https://scn.wikipedia.org/wiki/File:Ukraine_President_Volodymyr_Zelenskyy_and_Klaus_Schwab_at_the_World_Economic_Forum_in_Davos,_22_January_2020.jpg): Found exact image on website with title: File:Ukraine President Volodymyr Zelenskyy and Klaus Schwab at ...
+Content: The image is from January 22, 2020, and shows Volodymyr Zelenskyy and Klaus Schwab at the World Economic Forum in Davos. <image:279> The image is from the President of Ukraine Volodymyr Zelenskyy Official website.
+
+Useful result: From [Source](https://commons.wikimedia.org/wiki/File:Ukraine_President_Volodymyr_Zelenskyy_and_Klaus_Schwab_at_the_World_Economic_Forum_in_Davos,_22_January_2020.jpg): Found exact image on website with title: File:Ukraine President Volodymyr Zelenskyy and Klaus Schwab at ...
+Content: The image is from the World Economic Forum in Davos, January 22, 2020, and shows Volodymyr Zelenskyy and Klaus Schwab. <image:282> The image is from the website of the President of Ukraine and is licensed under Creative Commons Attribution 4.0 International.
+
+The claim '<image:10> This image shows Ukrainian President Volodymyr Zelensky wearing a suit after the large-scale Russian invasion in Ukraine: in a talk with Klaus Schwab at the World Economic Forum.' is false.
+Justification: The image depicts Volodymyr Zelensky and Klaus Schwab at the World Economic Forum. However, a reverse image search reveals that the photo was taken on January 22, 2020, well before the large-scale Russian invasion of Ukraine, making the claim inaccurate. The image can be found on [en.m.wikipedia.org](https://en.m.wikipedia.org/wiki/File:Ukraine_President_Volodymyr_Zelenskyy_and_Klaus_Schwab_at_the_World_Economic_Forum_in_Davos,_22_January_2020.jpg).
+
+So, the overall veracity is: false
+Fact-check took 0:28 min.

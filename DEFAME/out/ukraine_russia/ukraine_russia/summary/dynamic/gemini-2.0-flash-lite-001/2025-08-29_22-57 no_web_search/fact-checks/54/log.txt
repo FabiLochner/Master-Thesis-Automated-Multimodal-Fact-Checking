@@ -1,0 +1,65 @@
+Extracting claims from Content: Ukraine is selling half of the armaments it receives from the United States
+'Claim: "Ukraine is selling half of the armaments it receives from the United States"'
+Verifying Claim: "Ukraine is selling half of the armaments it receives from the United States"
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Ukraine arms sales US')
+Failed to download or open image: cannot identify image file <_io.BytesIO object at 0x7ffed1593b50>
+Got 3 new web source(s):
+	1. https://www.bbc.com/news/world-us-canada-68136840
+	2. https://foreignpolicy.com/2022/12/29/arms-sales-united-states-nato-russia-ukraine-war-the-arsenal-of-democracy-is-back-in-business/
+	3. https://www.vox.com/world-politics/2024/2/4/24059340/us-arms-exports-2023-ukraine-war-russia-gaza
+Useful result: From [Source](https://www.bbc.com/news/world-us-canada-68136840): 
+Content: The BBC News website contains an image of tanks. <image:6900>
+
+Useful result: From [Source](https://www.vox.com/world-politics/2024/2/4/24059340/us-arms-exports-2023-ukraine-war-russia-gaza): 
+Content: The search result from Vox.com contains an image of a tank. <image:6903>
+
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Ukraine arms sales corruption')
+Got 3 new web source(s):
+	1. https://www.nytimes.com/2024/02/28/world/europe/ukraine-weapons-politician-charged-corruption.html
+	2. https://www.bloomberg.com/en/news/thp/2024-01-28/ukraine-says-corrupt-officials-stole-40-million-meant-to-buy-arms-for-the-war-with-russia
+	3. https://www.aljazeera.com/news/2025/8/2/ukraine-says-defence-sector-corruption-scheme-uncovered
+Useful result: From [Source](https://www.nytimes.com/2024/02/28/world/europe/ukraine-weapons-politician-charged-corruption.html): 
+Content: The New York Times published an article on February 28, 2024, about a Ukrainian politician charged with corruption. <image:6904>
+
+Useful result: From [Source](https://www.bloomberg.com/en/news/thp/2024-01-28/ukraine-says-corrupt-officials-stole-40-million-meant-to-buy-arms-for-the-war-with-russia): 
+Content: Bloomberg reports that Ukrainian officials stole $40 million meant to buy arms for the war with Russia. <image:6905>
+
+Useful result: From [Source](https://www.aljazeera.com/news/2025/8/2/ukraine-says-defence-sector-corruption-scheme-uncovered): 
+Content: Al Jazeera reports on a corruption scheme uncovered in Ukraine's defense sector. <image:6906>
+
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Ukraine arms trafficking investigation')
+Got 3 new web source(s):
+	1. https://globalinitiative.net/analysis/a-new-phase-of-arms-trafficking-in-ukraine/
+	2. https://www.ft.com/content/bce78c78-b899-4dd2-b3a0-69d789b8aee8
+	3. https://www.rferl.org/a/ukraine-flood-of-arms-east-conflict-smuggling/27797454.html
+Useful result: From [Source](https://globalinitiative.net/analysis/a-new-phase-of-arms-trafficking-in-ukraine/): 
+Content: The Global Initiative website discusses a new phase of arms trafficking in Ukraine. <image:6910>
+
+Useful result: From [Source](https://www.ft.com/content/bce78c78-b899-4dd2-b3a0-69d789b8aee8): 
+Content: The Financial Times contains an image of Ukrainian soldiers with a multiple rocket launcher. <image:6912>
+
+Useful result: From [Source](https://www.rferl.org/a/ukraine-flood-of-arms-east-conflict-smuggling/27797454.html): 
+Content: The search result from Radio Free Europe/Radio Liberty contains an image of weapons in crates <image:6915>.
+
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Ukraine arms sales US investigation')
+Got 3 new web source(s):
+	1. https://www.theguardian.com/world/2025/jul/24/ukraine-war-briefing-more-bradleys-and-hawks-in-322m-us-arms-sale
+	2. https://www.defenseone.com/policy/2024/05/us-plan-may-boost-nato-arms-production-ukraine/396864/
+	3. https://www.cnn.com/2023/07/20/politics/pentagon-watchdog-report-ukraine-weaponry
+Useful result: From [Source](https://www.theguardian.com/world/2025/jul/24/ukraine-war-briefing-more-bradleys-and-hawks-in-322m-us-arms-sale): 
+Content: The Guardian reports on a $322 million US arms sale to Ukraine and includes an image of missiles <image:6919>.
+
+Useful result: From [Source](https://www.defenseone.com/policy/2024/05/us-plan-may-boost-nato-arms-production-ukraine/396864/): 
+Content: The search result from defenseone.com contains an image of Ukrainian soldiers with a multiple rocket launcher <image:6920>.
+
+Useful result: From [Source](https://www.cnn.com/2023/07/20/politics/pentagon-watchdog-report-ukraine-weaponry): 
+Content: CNN reports on a Pentagon watchdog report regarding weaponry in Ukraine <image:6921>.
+
+The claim 'Ukraine is selling half of the armaments it receives from the United States' is false.
+Justification: The investigation found no evidence to support the claim that Ukraine is selling half of the armaments it receives from the United States. While reports indicate corruption and arms trafficking in Ukraine ([https://www.bloomberg.com/en/news/thp/2024-01-28/ukraine-says-corrupt-officials-stole-40-million-meant-to-buy-arms-for-the-war-with-russia](https://www.bloomberg.com/en/news/thp/2024-01-28/ukraine-says-corrupt-officials-stole-40-million-meant-to-buy-arms-for-the-war-with-russia), [https://globalinitiative.net/analysis/a-new-phase-of-arms-trafficking-in-ukraine/](https://globalinitiative.net/analysis/a-new-phase-of-arms-trafficking-in-ukraine/)), the sources do not specify the origin of the trafficked arms or the scale of any potential sales.
+
+So, the overall veracity is: false
+Fact-check took 1:02 min.

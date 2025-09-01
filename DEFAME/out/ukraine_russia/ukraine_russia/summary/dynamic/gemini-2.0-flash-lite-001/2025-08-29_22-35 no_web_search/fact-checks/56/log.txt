@@ -1,0 +1,25 @@
+Extracting claims from Content: <image:17> This image shows Ben Stiller and Ukrainian President Volodymyr Zelensky at their meeting on June 20, 2022, for which Stiller received $4 million from USAID.
+'Claim: "<image:17> This image shows Ben Stiller and Ukrainian President Volodymyr Zelensky at their meeting on June 20, 2022, for which Stiller received $4 million from USAID."'
+Verifying Claim: "<image:17> This image shows Ben Stiller and Ukrainian President Volodymyr Zelensky at their meeting on June 20, 2022, for which Stiller received $4 million from USAID."
+Not enough information yet. Continuing fact-check...
+Searching google_vision with query: ImageQuery(limit=3, start_date=None, end_date=None, search_type='reverse', text='', image=<defame.common.medium.Image object at 0x7ffee17863e0>)
+Got 5 new web source(s):
+	1. https://maldita.es/malditobulo/20250207/hollywood-disinformation-twitter-community-notes/
+	2. https://news.sky.com/story/ukraine-war-ben-stiller-visits-kyiv-and-tells-president-volodymyr-zelenskyy-you-are-my-hero-12636878
+	3. https://deadline.com/2022/06/ukraine-zelensky-ben-stiller-visit-international-refugee-day-joe-biden-russia-war-1235048800/
+	4. https://www.theguardian.com/world/2023/jan/14/what-happened-in-the-russia-ukraine-war-this-week-catch-up-with-the-must-read-news-and-analysis
+	5. https://www.infobae.com/entretenimiento/2025/02/06/ben-stiller-nego-que-su-viaje-humanitario-a-ucrania-fuese-financiado-por-usaid-son-mentiras/
+Useful result: From [Source](https://maldita.es/malditobulo/20250207/hollywood-disinformation-twitter-community-notes/): Found exact image on website with title: Hollywood stars in Ukraine allegedly paid by USAID - Maldita.es
+Content: The article from Maldita.es, published on February 7, 2025, discusses a disinformation campaign claiming that USAID paid celebrities to visit Ukraine. The article includes the image of Ben Stiller and Volodymyr Zelensky <image:17> and states that the narrative that USAID paid Ben Stiller $4 million to take photos with Zelensky is false. The article mentions that the disinformation campaign has spread in at least nine languages and has been shared by channels linked to the Kremlin. The article also mentions that Ben Stiller denied the allegation. <image:6456>, <image:6457>, <image:6464>, <image:6465>, <image:6466>, <image:6467>, <image:6468>, <image:6469>, <image:6472>.
+
+Useful result: From [Source](https://news.sky.com/story/ukraine-war-ben-stiller-visits-kyiv-and-tells-president-volodymyr-zelenskyy-you-are-my-hero-12636878): Found exact image on website with title: Ukraine war: Ben Stiller visits Kyiv and tells President Volodymyr ...
+Content: The Sky News article, published on June 20, 2022, reports on Ben Stiller's visit to Kyiv, Ukraine, where he met with President Volodymyr Zelenskyy. <image:6474> The article mentions Stiller's role as a UNHCR goodwill ambassador and his meetings with Ukrainian refugees in Poland. <image:6475>
+
+Useful result: From [Source](https://deadline.com/2022/06/ukraine-zelensky-ben-stiller-visit-international-refugee-day-joe-biden-russia-war-1235048800/): Found exact image on website with title: Ben Stiller Praises Ukraine Prez Zelenskyy As Hero; Biden Punts On ...
+Content: The article from Deadline, published on June 20, 2022, discusses Ben Stiller's visit to Kyiv and his meeting with Ukrainian President Volodymyr Zelenskyy. <image:6477>, <image:6481>. The article does not mention Stiller receiving $4 million from USAID.
+
+The claim '<image:17> This image shows Ben Stiller and Ukrainian President Volodymyr Zelensky at their meeting on June 20, 2022, for which Stiller received $4 million from USAID.' is false.
+Justification: The image accurately depicts Ben Stiller and Volodymyr Zelenskyy meeting. However, the claim that Stiller received $4 million from USAID for the meeting is false, as reported by [Maldita.es](https://maldita.es/malditobulo/20250207/hollywood-disinformation-twitter-community-notes/), which identifies it as part of a disinformation campaign.
+
+So, the overall veracity is: false
+Fact-check took 1:43 min.

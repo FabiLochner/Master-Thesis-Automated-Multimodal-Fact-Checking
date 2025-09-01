@@ -1,0 +1,47 @@
+Extracting claims from Content: In a press conference on December 9, 2024 Ukrainian President Volodymyr Zelenskyy said: 'I will ask Biden to invite me to NATO ... there's no point in talking to Trump.'
+'Claim: "In a press conference on December 9, 2024 Ukrainian President Volodymyr Zelenskyy said: 'I will ask Biden to invite me to NATO ... there's no point in talking to Trump.'"'
+Verifying Claim: "In a press conference on December 9, 2024 Ukrainian President Volodymyr Zelenskyy said: 'I will ask Biden to invite me to NATO ... there's no point in talking to Trump.'"
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Zelenskyy Biden NATO Trump December 9 2024 press conference')
+Skipping unsupported website: https://ua.usembassy.gov/remarks-by-president-biden-and-president-volodymyr-zelenskyy-of-ukraine-in-joint-press-conference/
+Skipping unsupported website: https://it.usembassy.gov/president-biden-and-president-volodymyr-zelenskyy-of-ukraine-in-joint-press-conference/
+Failed to download or open image: cannot identify image file <_io.BytesIO object at 0x7ffed15590d0>
+Got 3 new web source(s):
+	1. https://scdailygazette.com/2024/09/27/zelenskyy-in-washington-meets-with-u-s-leaders-to-beef-up-support-for-ukraine/
+	2. https://www.aljazeera.com/news/2024/7/12/key-takeaways-from-president-bidens-big-boy-nato-news-conference
+	3. https://breakingdefense.com/2024/07/zelenskyy-implores-us-to-continue-aid-for-ukraine-amid-election-uncertainty/
+Useful result: From [Source](https://scdailygazette.com/2024/09/27/zelenskyy-in-washington-meets-with-u-s-leaders-to-beef-up-support-for-ukraine/): 
+Content: The search result from scdailygazette.com, published on September 27, 2024, contains an image of Volodymyr Zelenskyy. <image:7071>
+
+Useful result: From [Source](https://www.aljazeera.com/news/2024/7/12/key-takeaways-from-president-bidens-big-boy-nato-news-conference): 
+Content: The search result from Al Jazeera contains an image of President Biden at a press conference. <image:7073>
+
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Zelenskyy press conference December 9 2024 NATO Trump')
+Got 2 new web source(s):
+	1. https://www.pbs.org/newshour/world/trump-meets-with-zelenskyy-at-nato-summit-says-ukraine-war-is-a-mess-for-putin
+	2. https://www.cfr.org/report/ukraine-nato-and-war-termination
+Useful result: From [Source](https://www.pbs.org/newshour/world/trump-meets-with-zelenskyy-at-nato-summit-says-ukraine-war-is-a-mess-for-putin): 
+Content: The search result from pbs.org includes an image of Zelenskyy and Trump shaking hands at a NATO summit. <image:7085> The article discusses a meeting between Trump and Zelenskyy.
+
+Useful result: From [Source](https://www.cfr.org/report/ukraine-nato-and-war-termination): 
+Content: The search result from cfr.org includes an image of Volodymyr Zelenskyy. <image:7087>
+
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Zelenskyy December 9 2024 press conference transcript')
+Skipping unsupported website: https://it.usembassy.gov/president-biden-and-president-volodymyr-zelenskyy-of-ukraine-in-joint-press-conference/
+Got 3 new web source(s):
+	1. https://www.nbcnews.com/politics/politics-news/read-full-transcript-ukrainian-president-volodymyr-zelenskyy-interview-rcna192389
+	2. https://abcnews.go.com/International/ukrainian-president-volodymyr-zelenskyy/story?id=83085078
+	3. https://www.npr.org/2024/09/03/nx-s1-5099023/russia-ukraine-war-missile-strike-poltava
+Useful result: From [Source](https://www.nbcnews.com/politics/politics-news/read-full-transcript-ukrainian-president-volodymyr-zelenskyy-interview-rcna192389): 
+Content: The search result from nbcnews.com includes an image of Volodymyr Zelenskyy. The article is a transcript of an interview with Zelenskyy.
+
+Useful result: From [Source](https://www.npr.org/2024/09/03/nx-s1-5099023/russia-ukraine-war-missile-strike-poltava): 
+Content: The search result from npr.org includes an image of Zelenskyy at a press conference on September 2, 2024. <image:7099>
+
+The claim 'In a press conference on December 9, 2024 Ukrainian President Volodymyr Zelenskyy said: 'I will ask Biden to invite me to NATO ... there's no point in talking to Trump.'' is false.
+Justification: The claim that Volodymyr Zelenskyy made the specified statement in a press conference on December 9, 2024, cannot be verified. Multiple searches for relevant press conferences, transcripts, and news reports did not yield any evidence supporting the claim.
+
+So, the overall veracity is: false
+Fact-check took 0:53 min.

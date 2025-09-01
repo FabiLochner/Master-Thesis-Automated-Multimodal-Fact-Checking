@@ -1,0 +1,39 @@
+Extracting claims from Content: <image:25> This image shows a military parade of Poland's army on August 14, 2024, preparing for war with Russia.
+'Claim: "<image:25> This image shows a military parade of Poland's army on August 14, 2024, preparing for war with Russia."'
+Verifying Claim: "<image:25> This image shows a military parade of Poland's army on August 14, 2024, preparing for war with Russia."
+Not enough information yet. Continuing fact-check...
+Got 0 new web source(s):
+Not enough information yet. Continuing fact-check...
+INFO: Dropping action 'reverse_search' as it was already performed.
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Poland military parade August 14 2024')
+Failed to download or open image: cannot identify image file <_io.BytesIO object at 0x7ffee811db20>
+Got 3 new web source(s):
+	1. https://militarnyi.com/en/news/a-large-scale-parade-dedicated-to-the-day-of-the-polish-army-took-place-in-poland/
+	2. https://www.ksat.com/news/world/2024/08/15/poland-showcases-its-growing-army-on-a-holiday-that-celebrates-its-historic-defeat-of-the-red-army/
+	3. https://balkaninsight.com/2023/08/15/poland-plays-national-security-politics-with-military-parade/
+Useful result: From [Source](https://militarnyi.com/en/news/a-large-scale-parade-dedicated-to-the-day-of-the-polish-army-took-place-in-poland/): 
+Content: The article from Militarnyi.com discusses a large-scale parade dedicated to the Day of the Polish Army. <image:6625>
+
+Useful result: From [Source](https://www.ksat.com/news/world/2024/08/15/poland-showcases-its-growing-army-on-a-holiday-that-celebrates-its-historic-defeat-of-the-red-army/): 
+Content: KSAT reports on a military parade in Poland on August 15, 2024. <image:6626>
+
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Poland army tanks parade')
+Got 3 new web source(s):
+	1. https://www.cnn.com/2023/08/15/europe/poland-military-parade-europe-clout-intl
+	2. https://www.aljazeera.com/news/2023/8/16/poland-holds-huge-military-parade-as-war-rages-in-neighbouring-ukraine
+	3. https://www.theglobeandmail.com/world/article-poland-displays-military-might-in-huge-parade-as-elections-loom-2/
+Useful result: From [Source](https://www.cnn.com/2023/08/15/europe/poland-military-parade-europe-clout-intl): 
+Content: CNN published an article about a military parade in Poland. The article includes an image of tanks. <image:6627>
+
+Useful result: From [Source](https://www.aljazeera.com/news/2023/8/16/poland-holds-huge-military-parade-as-war-rages-in-neighbouring-ukraine): 
+Content: Al Jazeera reports that Poland held a military parade on August 15, 2023. <image:6628>
+
+Useful result: From [Source](https://www.theglobeandmail.com/world/article-poland-displays-military-might-in-huge-parade-as-elections-loom-2/): 
+Content: The Globe and Mail published an article about Poland's military parade. The article includes an image of tanks. <image:6629>
+
+The claim '<image:25> This image shows a military parade of Poland's army on August 14, 2024, preparing for war with Russia.' is false.
+Justification: The claim is inaccurate. While Poland did hold a military parade, the evidence suggests it occurred on August 15, 2024, not August 14, 2024, as stated in the claim. Furthermore, there is no evidence to support the assertion that the parade was a preparation for war with Russia. Sources like [KSAT](https://www.ksat.com/news/world/2024/08/15/poland-showcases-its-growing-army-on-a-holiday-that-celebrates-its-historic-defeat-of-the-red-army/) and [Militarnyi.com](https://militarnyi.com/en/news/a-large-scale-parade-dedicated-to-the-day-of-the-polish-army-took-place-in-poland/) confirm the parade but do not mention the date or the war preparation.
+
+So, the overall veracity is: false
+Fact-check took 0:33 min.
+Worker 0 is done and terminates gracefully.

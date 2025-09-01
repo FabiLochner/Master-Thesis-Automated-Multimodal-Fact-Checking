@@ -1,0 +1,185 @@
+Extracting claims from Content: Ukraine is selling half of the armaments it receives from the United States
+'Claim: "Ukraine is selling half of the armaments it receives from the United States"'
+Verifying Claim: "Ukraine is selling half of the armaments it receives from the United States"
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Ukraine arms sales US aid')
+Got 3 new web source(s):
+	1. https://cepa.org/article/what-the-us-is-sending-to-ukraine-right-now-and-what-it-isnt/
+	2. https://www.stimson.org/2022/u-s-military-assistance-to-ukraine/
+	3. https://abcnews.go.com/Politics/us-military-nato-officials-discuss-weapons-sales-aid/story?id=123691237
+Useful result: From [Source](https://cepa.org/article/what-the-us-is-sending-to-ukraine-right-now-and-what-it-isnt/): 
+Content: The search result from CEPA.org contains an image of armaments. <image:6432>
+
+Useful result: From [Source](https://www.stimson.org/2022/u-s-military-assistance-to-ukraine/): 
+Content: The search result contains an image of armaments being transported. <image:6433>
+
+Useful result: From [Source](https://abcnews.go.com/Politics/us-military-nato-officials-discuss-weapons-sales-aid/story?id=123691237): 
+Content: The search result from ABC News contains an image of military equipment. <image:6436>
+
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Ukraine corruption arms sales')
+Failed to download or open image: cannot identify image file <_io.BytesIO object at 0x7ffed1619d50>
+Got 3 new web source(s):
+	1. https://www.rand.org/pubs/commentary/2024/08/something-is-rotten-in-the-state-of-russian-arms-industry.html
+	2. https://www.nytimes.com/2024/02/28/world/europe/ukraine-weapons-politician-charged-corruption.html
+	3. https://www.bloomberg.com/en/news/thp/2024-01-28/ukraine-says-corrupt-officials-stole-40-million-meant-to-buy-arms-for-the-war-with-russia
+Useful result: From [Source](https://www.nytimes.com/2024/02/28/world/europe/ukraine-weapons-politician-charged-corruption.html): 
+Content: The New York Times published an article on February 28, 2024, about a Ukrainian politician charged with corruption. <image:6509>
+
+Useful result: From [Source](https://www.bloomberg.com/en/news/thp/2024-01-28/ukraine-says-corrupt-officials-stole-40-million-meant-to-buy-arms-for-the-war-with-russia): 
+Content: Bloomberg reports that Ukrainian officials stole $40 million meant to buy arms for the war with Russia. <image:6510>
+
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Ukraine arms sales statistics')
+Got 3 new web source(s):
+	1. https://www.stlouisfed.org/on-the-economy/2022/nov/arms-trade-bearing-russia-ukraine-war
+	2. https://www.statista.com/chart/33514/military-hardware-allocated-to-ukraine/
+	3. https://aoav.org.uk/2023/european-arms-industry-profits-amid-ukraine-invasion/
+Useful result: From [Source](https://www.stlouisfed.org/on-the-economy/2022/nov/arms-trade-bearing-russia-ukraine-war): 
+Content: The St. Louis Fed provides a graph showing the share of international arms exports from different countries, including the U.S. <image:6514>.
+
+Useful result: From [Source](https://www.statista.com/chart/33514/military-hardware-allocated-to-ukraine/): 
+Content: The search result from Statista.com provides a chart showing the military hardware allocated to Ukraine by selected countries between January 24, 2022, and August 31, 2024. <image:6515>
+
+Useful result: From [Source](https://aoav.org.uk/2023/european-arms-industry-profits-amid-ukraine-invasion/): 
+Content: The search result from AOAV.org contains an image showing the European arms company revenue and profits in 2022 <image:6516>.
+
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='US aid to Ukraine arms tracking')
+Failed to download or open image: cannot identify image file <_io.BytesIO object at 0x7ffed15f61b0>
+Got 3 new web source(s):
+	1. https://www.voanews.com/a/us-personnel-tracking-american-supplied-gear-in-ukraine-/6819038.html
+	2. https://www.ifw-kiel.de/publications/news/ukraine-support-tracker-new-aid-drops-to-lowest-level-since-january-2022/
+	3. https://www.nytimes.com/2024/01/11/world/europe/us-military-aid-ukraine.html
+Useful result: From [Source](https://www.voanews.com/a/us-personnel-tracking-american-supplied-gear-in-ukraine-/6819038.html): 
+Content: The Voice of America published an article about US personnel tracking American-supplied gear in Ukraine. <image:6520>
+
+Useful result: From [Source](https://www.nytimes.com/2024/01/11/world/europe/us-military-aid-ukraine.html): 
+Content: The New York Times published an article about US military aid to Ukraine. <image:6521>
+
+Not enough information yet. Continuing fact-check...
+Error while calling the Gemini LLM! Continuing with empty response.
+Error code: 400 - [{'error': {'code': 400, 'message': 'Request contains an invalid argument.', 'status': 'INVALID_ARGUMENT'}}]
+Prompt used:
+# Instructions
+The available knowledge is insufficient to assess the Claim. Therefore, **propose a set of actions** to retrieve new and helpful evidence. Adhere to the following rules:
+* The actions available are listed under Valid Actions, including a short description for each action. No other actions are possible at this moment. 
+* For each action, use the formatting as specified in Valid Actions.
+* Include all actions in a single Markdown code block at the end of your answer.
+* Propose as few actions as possible, but as much as needed. Do not propose similar or previously used actions.
+
+
+
+## Valid Actions
+* `reverse_search`
+   * Description: Performs a reverse image search to find similar images on the web.
+   * How to use: Provide an image and the model will perform a reverse search to find similar images.
+   * Format: reverse_search(<image:k>), where `k` is the image's ID
+
+* `image_search`
+   * Description: Run an image search on Google to retrieve related images for a given query.
+   * How to use: This is a helpful tool for fact-checking images. Use this to retrieve images associated with a specific keyword or phrase. Ensure that the query is clear and specific to improve search accuracy. If no relevant images are found, refine the query or use more descriptive terms.
+   * Format: image_search("your image search query goes here")
+
+* `geolocate`
+   * Description: Performs geolocation to determine the country where an image was taken.
+   * How to use: Provide an image and the model will determine the most likely countries where it was taken.
+   * Format: geolocate(<image:k>), where `k` is the image's ID
+
+# Example: reverse_search()
+
+## Claim
+Text: "<image:k> shows a rare event of a solar eclipse with a double ring."
+
+...
+
+## Actions
+```
+reverse_search(<image:k>)
+```
+
+# Example: image_search()
+
+## Claim
+Text: "Chinese officials in white protective hazmat suits carried people down a hallway to be quarantined for having COVID-19 in November 2022."
+
+...
+
+ACTIONS:
+```
+image_search("China officials white suits carry people")
+image_search("China officials carry people COVID quarantine 2022")
+```
+
+# Example: geolocate()
+
+## Claim
+Text: "<image:k> shows a nuclear weapons facility in Usbekistan."
+
+...
+
+## Actions
+```
+geolocate(<image:k>)
+```
+
+# Record
+## Claim
+Claim: "Ukraine is selling half of the armaments it receives from the United States"
+
+## Actions
+```
+image_search("Ukraine arms sales US aid")
+image_search("Ukraine corruption arms sales")
+```
+
+## Evidence
+### Evidence from `image_search`
+The search results include images of armaments and military equipment. One source is from CEPA.org and contains an image of armaments <image:6432>. Another source is from Stimson.org and contains an image of armaments being transported <image:6433>. ABC News also provides an image of military equipment <image:6436>.
+
+The sources are: [https://cepa.org/article/what-the-us-is-sending-to-ukraine-right-now-and-what-it-isnt/](https://cepa.org/article/what-the-us-is-sending-to-ukraine-right-now-and-what-it-isnt/), [https://www.stimson.org/2022/u-s-military-assistance-to-ukraine/](https://www.stimson.org/2022/u-s-military-assistance-to-ukraine/), and [https://abcnews.go.com/Politics/us-military-nato-officials-discuss-weapons-sales-aid/story?id=123691237](https://abcnews.go.com/Politics/us-military-nato-officials-discuss-weapons-sales-aid/story?id=123691237).
+
+
+### Evidence from `image_search`
+The New York Times published an article about a Ukrainian politician charged with corruption (<image:6509>). Bloomberg reports that Ukrainian officials stole $40 million meant to buy arms for the war with Russia (<image:6510>).
+
+The provided sources are: [Source](https://www.rand.org/pubs/commentary/2024/08/something-is-rotten-in-the-state-of-russian-arms-industry.html) and [Source](https://www.nytimes.com/2024/02/28/world/europe/ukraine-weapons-politician-charged-corruption.html) and [Source](https://www.bloomberg.com/en/news/thp/2024-01-28/ukraine-says-corrupt-officials-stole-40-million-meant-to-buy-arms-for-the-war-with-russia).
+
+
+## Elaboration
+The evidence reveals that Ukraine has faced corruption issues, including officials stealing funds intended for arms purchases. However, the evidence does not provide any information about the amount of armaments sold by Ukraine, let alone the claim that it is half of the received armaments.
+
+Therefore, the claim cannot be verified with the provided evidence. More information is needed to assess the veracity of the claim.
+
+
+## Actions
+```
+image_search("Ukraine arms sales statistics")
+image_search("US aid to Ukraine arms tracking")
+```
+
+## Evidence
+### Evidence from `image_search`
+The St. Louis Fed provides a graph showing the share of international arms exports from different countries, including the U.S. <image:6514> Statista.com provides a chart showing the military hardware allocated to Ukraine by selected countries between January 24, 2022, and August 31, 2024 <image:6515>. AOAV.org contains an image showing the European arms company revenue and profits in 2022 <image:6516>.
+
+The sources are: [https://www.stlouisfed.org/on-the-economy/2022/nov/arms-trade-bearing-russia-ukraine-war](https://www.stlouisfed.org/on-the-economy/2022/nov/arms-trade-bearing-russia-ukraine-war), [https://www.statista.com/chart/33514/military-hardware-allocated-to-ukraine/](https://www.statista.com/chart/33514/military-hardware-allocated-to-ukraine/), and [https://aoav.org.uk/2023/european-arms-industry-profits-amid-ukraine-invasion/](https://aoav.org.uk/2023/european-arms-industry-profits-amid-ukraine-invasion/).
+
+
+### Evidence from `image_search`
+The Voice of America published an article about US personnel tracking American-supplied gear in Ukraine <image:6520>. The New York Times published an article about US military aid to Ukraine <image:6521>. The Kiel Institute for the World Economy published an article about Ukraine support tracker.
+
+The sources are: [https://www.voanews.com/a/us-personnel-tracking-american-supplied-gear-in-ukraine-/6819038.html](https://www.voanews.com/a/us-personnel-tracking-american-supplied-gear-in-ukraine-/6819038.html), [https://www.ifw-kiel.de/publications/news/ukraine-support-tracker-new-aid-drops-to-lowest-level-since-january-2022/](https://www.ifw-kiel.de/publications/news/ukraine-support-tracker-new-aid-drops-to-lowest-level-since-january-2022/), and [https://www.nytimes.com/2024/01/11/world/europe/us-military-aid-ukraine.html](https://www.nytimes.com/2024/01/11/world/europe/us-military-aid-ukraine.html).
+
+
+## Elaboration
+The evidence indicates that the U.S. is a major provider of military hardware to Ukraine, and there are efforts to track the supplied gear. However, the evidence does not provide any data on the volume of arms sales by Ukraine.
+
+Therefore, the claim cannot be verified. The information about the amount of armaments sold by Ukraine is still missing.
+
+
+# Your Actions
+No new actions were found in this response:
+ and performed actions: image_search("Ukraine arms sales US aid"), image_search("Ukraine corruption arms sales"), image_search("Ukraine arms sales statistics"), image_search("US aid to Ukraine arms tracking")
+The claim 'Ukraine is selling half of the armaments it receives from the United States' is false.
+Justification: The claim is unverified. While there is evidence of corruption in Ukraine and the U.S. providing significant military aid, there is no information to support the claim that Ukraine is selling half of the armaments it receives from the United States.
+
+So, the overall veracity is: false
+Fact-check took 3:38 min.

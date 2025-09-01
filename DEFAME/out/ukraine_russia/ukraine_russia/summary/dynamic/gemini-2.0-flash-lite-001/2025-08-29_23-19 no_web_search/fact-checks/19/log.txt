@@ -1,0 +1,56 @@
+Extracting claims from Content: Italian Prime Minister Giorgia Meloni condemned the US-Ukrainian bombing of Russia at the G20 summit in Rio de Janeiro in November 2024.
+'Claim: "Italian Prime Minister Giorgia Meloni condemned the US-Ukrainian bombing of Russia at the G20 summit in Rio de Janeiro in November 2024."'
+Verifying Claim: "Italian Prime Minister Giorgia Meloni condemned the US-Ukrainian bombing of Russia at the G20 summit in Rio de Janeiro in November 2024."
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Giorgia Meloni G20 summit Rio de Janeiro November 2024')
+Skipping unsupported website: https://www.governo.it/en/articolo/president-meloni-brazil-attend-g20-summit/27061
+Skipping unsupported website: https://www.instagram.com/p/DCi_BloTgVP/
+Skipping unsupported website: https://www.mea.gov.in/newsdetail1.htm?12954/
+Got 3 new web source(s):
+	1. https://en.ilsole24ore.com/art/g20-meloni-sees-lula-common-will-to-strengthen-strategic-partnership-AGkMUgDB
+	2. https://italianismo.com.br/en/meloni-confirma-viagem-ao-brasil-em-novembro/
+	3. https://timesofindia.indiatimes.com/india/always-a-pleasure-pm-modi-meets-italian-pm-meloni-on-sidelines-of-rio-de-janeiro-g20-summit/articleshow/115432849.cms
+Useful result: From [Source](https://en.ilsole24ore.com/art/g20-meloni-sees-lula-common-will-to-strengthen-strategic-partnership-AGkMUgDB): 
+Content: Il Sole 24 Ore published an image of Giorgia Meloni at the G20 summit. <image:7082>
+
+Useful result: From [Source](https://italianismo.com.br/en/meloni-confirma-viagem-ao-brasil-em-novembro/): 
+Content: The search result from italianismo.com.br confirms Giorgia Meloni's trip to Brazil in November. <image:7083>
+
+Useful result: From [Source](https://timesofindia.indiatimes.com/india/always-a-pleasure-pm-modi-meets-italian-pm-meloni-on-sidelines-of-rio-de-janeiro-g20-summit/articleshow/115432849.cms): 
+Content: The Times of India published an article about a meeting between Italian Prime Minister Giorgia Meloni and Indian Prime Minister Modi at the G20 summit in Rio de Janeiro in 2024. <image:7084>
+
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='G20 summit Rio de Janeiro November 2024 Russia Ukraine')
+Failed to download or open image: cannot identify image file <_io.BytesIO object at 0x7ffed1612ac0>
+Failed to download or open image: cannot identify image file <_io.BytesIO object at 0x7ffeec5dd1c0>
+Got 3 new web source(s):
+	1. https://www.france24.com/en/americas/20241120-g20-rio-summit-ukraine-lula-climate-action
+	2. https://www.consilium.europa.eu/en/meetings/international-summit/2024/11/18-19/
+	3. https://www.reuters.com/world/rio-de-janeiro-host-g20-summit-2024-2023-05-09/
+Useful result: From [Source](https://www.reuters.com/world/rio-de-janeiro-host-g20-summit-2024-2023-05-09/): 
+Content: The Reuters article, published on May 9, 2023, states that Rio de Janeiro will host the G20 summit in 2024. <image:7093>
+
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Giorgia Meloni G20 summit Rio de Janeiro November 2024 Russia Ukraine')
+Skipping fact-checking website: https://www.reuters.com/fact-check/italys-meloni-comment-misrepresented-condemnation-us-stance-ukraine-missiles-2024-11-29/
+Got 3 new web source(s):
+	1. https://oglobo.globo.com/english/noticia/2024/11/20/g20-summit-was-a-victory-for-brazilian-diplomacy-in-a-challenging-global-context-analysts-say.ghtml
+	2. https://www.ft.com/content/1da295ef-8faa-4cd6-a535-6e6675808406
+	3. https://apnews.com/article/italy-g7-meloni-putin-ukraine-78cdbaa0d45f9b11a190ee647063eb5f
+Useful result: From [Source](https://oglobo.globo.com/english/noticia/2024/11/20/g20-summit-was-a-victory-for-brazilian-diplomacy-in-a-challenging-global-context-analysts-say.ghtml): 
+Content: O Globo published an image of the G20 summit in Rio de Janeiro in November 2024. <image:7101>
+
+Useful result: From [Source](https://www.ft.com/content/1da295ef-8faa-4cd6-a535-6e6675808406): 
+Content: The Financial Times published an image of Giorgia Meloni at the G20 summit in Brazil in 2024. <image:7102>
+
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Giorgia Meloni speech G20 summit Rio de Janeiro November 2024 Russia Ukraine')
+Skipping unsupported website: https://www.youtube.com/watch?v=0yvAoWtqdCE
+Got 3 new web source(s):
+	1. https://www.reuters.com/world/europe/italy-working-implement-agreement-g7-ukraine-loan-meloni-2024-10-15/
+	2. https://mainichi.jp/english/articles/20240616/p2g/00m/0in/036000c
+	3. https://www.theguardian.com/world/article/2024/jun/12/all-eyes-are-on-her-italys-far-right-chameleon-giorgia-meloni-prepares-to-host-the-g7
+The claim 'Italian Prime Minister Giorgia Meloni condemned the US-Ukrainian bombing of Russia at the G20 summit in Rio de Janeiro in November 2024.' is false.
+Justification: The claim that Italian Prime Minister Giorgia Meloni condemned the US-Ukrainian bombing of Russia at the G20 summit in Rio de Janeiro in November 2024 cannot be verified. While evidence confirms Meloni's presence at the summit, no information was found regarding her statements on the matter.
+
+So, the overall veracity is: false
+Fact-check took 0:58 min.

@@ -1,0 +1,41 @@
+Extracting claims from Content: <image:20> This image shows a US drone which was shot down in March 2025 by the Houthis using Russian missiles.
+'Claim: "<image:20> This image shows a US drone which was shot down in March 2025 by the Houthis using Russian missiles."'
+Verifying Claim: "<image:20> This image shows a US drone which was shot down in March 2025 by the Houthis using Russian missiles."
+Not enough information yet. Continuing fact-check...
+Got 3 new web source(s):
+	1. https://www.fswc.ca/news/fswc-calls-for-canadians-to-stand-with-israel
+	2. https://turdef.com/country/israel-news?page=5
+	3. https://www.timesofisrael.com/the-daily-edition/2023-10-07/
+Useful result: From [Source](https://www.fswc.ca/news/fswc-calls-for-canadians-to-stand-with-israel): Found exact image on website with title: FSWC Calls for Canadians to Stand with Israel
+Content: The image <image:20> is found on the website of Friends of Simon Wiesenthal Center (FSWC) in a news release from October 7, 2023, titled "FSWC Calls for Canadians to Stand with Israel". The image shows the aftermath of an attack in Israel.
+
+Useful result: From [Source](https://turdef.com/country/israel-news?page=5): Found exact image on website with title: Israel Defence News - TURDEF
+Content: The search result from TURDEF contains the image in the claim <image:20> and identifies it as the "Second Yom Kippur War in Israel" <image:1356>. The article was published on October 7, 2023.
+
+Useful result: From [Source](https://www.timesofisrael.com/the-daily-edition/2023-10-07/): Found exact image on website with title: The Daily Edition | The Times of Israel
+Content: The Times of Israel published an article on October 7, 2023, about the Hamas attack on Israel. The article includes images of the aftermath of the attacks, including burning vehicles and buildings. <image:20> is included in the article. The article is authored by ToI Staff.
+
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='US drone shot down Houthis Russian missiles')
+Skipping unsupported website: https://www.youtube.com/watch?v=jBSEJmdlJ0o
+Got 3 new web source(s):
+	1. https://www.nytimes.com/2023/11/08/world/middleeast/yemen-houthi-us-drone.html
+	2. https://www.cnn.com/2024/01/09/politics/us-navy-houthi-missiles-drones-red-sea
+	3. https://news.usni.org/2023/12/16/u-k-american-warships-shoot-down-houthi-launched-drones-in-red-sea
+Useful result: From [Source](https://www.nytimes.com/2023/11/08/world/middleeast/yemen-houthi-us-drone.html): 
+Content: The New York Times published an article in 2023 about a US drone. <image:6952>
+
+Useful result: From [Source](https://www.cnn.com/2024/01/09/politics/us-navy-houthi-missiles-drones-red-sea): 
+Content: CNN reports on the Houthis' attacks on ships in the Red Sea. <image:6953>
+
+Useful result: From [Source](https://news.usni.org/2023/12/16/u-k-american-warships-shoot-down-houthi-launched-drones-in-red-sea): 
+Content: The USNI News published on December 16, 2023, shows a U.S. warship shooting down Houthi-launched drones in the Red Sea. <image:6956>
+
+Not enough information yet. Continuing fact-check...
+INFO: Dropping action 'reverse_search' as it was already performed.
+Most likely location: Israel
+Top 10 locations: Israel, Palestine, United Arab Emirates, Jordan, Tunisia, Albania, Andorra, Argentina, Australia, Austria
+The claim '<image:20> This image shows a US drone which was shot down in March 2025 by the Houthis using Russian missiles.' is false.
+Justification: The image in the claim, which is purported to show a US drone shot down by the Houthis, was geolocated to Israel, contradicting the claim's context. Furthermore, image searches did not yield any results that support the claim. Therefore, the claim is false.
+
+So, the overall veracity is: false
+Fact-check took 1:44 min.

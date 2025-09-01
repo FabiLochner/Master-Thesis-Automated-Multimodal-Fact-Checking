@@ -1,0 +1,50 @@
+Extracting claims from Content: French President Emmanuel Macron called Russian President Vladimir Putin a 'butcher' during his press conference with Donald Trump on Monday, Feb. 24, 2025.
+'Claim: "French President Emmanuel Macron called Russian President Vladimir Putin a 'butcher' during his press conference with Donald Trump on Monday, Feb. 24, 2025."'
+Verifying Claim: "French President Emmanuel Macron called Russian President Vladimir Putin a 'butcher' during his press conference with Donald Trump on Monday, Feb. 24, 2025."
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Emmanuel Macron Donald Trump press conference')
+Got 3 new web source(s):
+	1. https://www.vpm.org/npr-news/npr-news/2025-02-24/trump-and-macron-meet-in-washington-as-europe-pleads-for-continued-help-with-ukraine
+	2. https://www.abc.net.au/listen/programs/pm/macron-corrects-trump-in-press-conference/104981718
+	3. https://abcnews.go.com/International/macron-warns-trump-careful-ukraine-fact-checks-white/story?id=119157061
+Useful result: From [Source](https://www.vpm.org/npr-news/npr-news/2025-02-24/trump-and-macron-meet-in-washington-as-europe-pleads-for-continued-help-with-ukraine): 
+Content: The search result from VPM.org contains an image of Emmanuel Macron and Donald Trump. <image:7301>
+
+Useful result: From [Source](https://www.abc.net.au/listen/programs/pm/macron-corrects-trump-in-press-conference/104981718): 
+Content: The search result from ABC News Australia contains an image of a press conference with Emmanuel Macron and Donald Trump. <image:7302>
+
+Useful result: From [Source](https://abcnews.go.com/International/macron-warns-trump-careful-ukraine-fact-checks-white/story?id=119157061): 
+Content: The search result from ABC News contains an image of Emmanuel Macron and Donald Trump. <image:7303>
+
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Macron Trump press conference Putin butcher')
+Skipping unsupported website: https://www.youtube.com/watch?v=Gdick8JaEcE
+Got 3 new web source(s):
+	1. https://www.npr.org/2025/02/24/nx-s1-5306974/trump-macron-white-house-russia-ukraine-war-nato
+	2. https://abcnews.go.com/Politics/trump-hosts-frances-macron-white-house-amid-ukraine/story?id=119123204
+	3. https://www.theguardian.com/us-news/2025/feb/24/trump-ukraine-putin-peacekeepers-macron
+Useful result: From [Source](https://www.npr.org/2025/02/24/nx-s1-5306974/trump-macron-white-house-russia-ukraine-war-nato): 
+Content: NPR.org published an article on February 24, 2025, about the meeting between Trump and Macron. <image:7309>
+
+Useful result: From [Source](https://abcnews.go.com/Politics/trump-hosts-frances-macron-white-house-amid-ukraine/story?id=119123204): 
+Content: The search result from ABC News includes an image of a press conference between Macron and Trump. <image:7310>
+
+Useful result: From [Source](https://www.theguardian.com/us-news/2025/feb/24/trump-ukraine-putin-peacekeepers-macron): 
+Content: The Guardian published an article on February 24, 2025, about Trump and Macron. <image:7311>
+
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Macron Putin butcher')
+Failed to download or open image: HTTPSConnectionPool(host='cdnuploads.aa.com.tr', port=443): Read timed out. (read timeout=10)
+Failed to download or open image: cannot identify image file <_io.BytesIO object at 0x7ffed15be3e0>
+Got 3 new web source(s):
+	1. https://www.aa.com.tr/en/europe/macron-distances-himself-from-us-biden-calling-putin-a-butcher/2547489
+	2. https://www.rfi.fr/en/international/20220805-no-more-macron-putin-phone-calls-france-now-rated-unfriendly-by-moscow
+	3. https://www.axios.com/2022/03/27/macron-putin-biden-escalate
+Useful result: From [Source](https://www.axios.com/2022/03/27/macron-putin-biden-escalate): 
+Content: Axios reports that Macron called Putin a "butcher" in March 2022. <image:7324>
+
+The claim 'French President Emmanuel Macron called Russian President Vladimir Putin a 'butcher' during his press conference with Donald Trump on Monday, Feb. 24, 2025.' is false.
+Justification: The claim is false. While Emmanuel Macron did call Vladimir Putin a "butcher," according to an Axios report ([https://www.axios.com/2022/03/27/macron-putin-biden-escalate](https://www.axios.com/2022/03/27/macron-putin-biden-escalate)), this occurred in March 2022, not during a press conference with Donald Trump on February 24, 2025.
+
+So, the overall veracity is: false
+Fact-check took 1:08 min.

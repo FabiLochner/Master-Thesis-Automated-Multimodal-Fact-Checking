@@ -1,0 +1,26 @@
+Extracting claims from Content: Russian President Vladimir Putin has declared war on the United States.
+'Claim: "Russian President Vladimir Putin has declared war on the United States."'
+Verifying Claim: "Russian President Vladimir Putin has declared war on the United States."
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Vladimir Putin declares war on United States')
+Failed to download or open image: HTTPConnectionPool(host='static.kremlin.ru', port=80): Read timed out. (read timeout=10)
+Got 3 new web source(s):
+	1. https://www.cnn.com/2022/05/03/europe/russia-ukraine-declaration-of-war-intl-hnk-ml
+	2. http://en.kremlin.ru/events/president/news/67843
+	3. https://www.lowyinstitute.org/the-interpreter/why-russia-has-only-now-declared-war-ukraine
+Useful result: From [Source](https://www.cnn.com/2022/05/03/europe/russia-ukraine-declaration-of-war-intl-hnk-ml): 
+Content: The search result from CNN contains an image of Vladimir Putin. <image:7325>
+
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Putin declare war US')
+Failed to download or open image: HTTPConnectionPool(host='static.kremlin.ru', port=80): Read timed out. (read timeout=10)
+Got 0 new web source(s):
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Vladimir Putin war declaration United States')
+Failed to download or open image: HTTPConnectionPool(host='static.kremlin.ru', port=80): Read timed out. (read timeout=10)
+Got 0 new web source(s):
+The claim 'Russian President Vladimir Putin has declared war on the United States.' is false.
+Justification: The image searches conducted did not yield any evidence to support the claim that Vladimir Putin has declared war on the United States. The search results primarily contained an image of Putin, but no news reports or official statements were found to verify the claim. Therefore, the claim is unverified.
+
+So, the overall veracity is: false
+Fact-check took 0:54 min.

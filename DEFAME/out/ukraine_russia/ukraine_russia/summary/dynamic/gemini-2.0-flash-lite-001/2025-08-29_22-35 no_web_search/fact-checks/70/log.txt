@@ -1,0 +1,30 @@
+Extracting claims from Content: Russian President Vladimir Putin has declared war on the United States.
+'Claim: "Russian President Vladimir Putin has declared war on the United States."'
+Verifying Claim: "Russian President Vladimir Putin has declared war on the United States."
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Vladimir Putin declares war on United States')
+Failed to download or open image: HTTPConnectionPool(host='static.kremlin.ru', port=80): Read timed out. (read timeout=10)
+Got 3 new web source(s):
+	1. https://www.cnn.com/2022/05/03/europe/russia-ukraine-declaration-of-war-intl-hnk-ml
+	2. http://en.kremlin.ru/events/president/news/67843
+	3. https://www.lowyinstitute.org/the-interpreter/why-russia-has-only-now-declared-war-ukraine
+Useful result: From [Source](https://www.cnn.com/2022/05/03/europe/russia-ukraine-declaration-of-war-intl-hnk-ml): 
+Content: The search result from CNN contains an image of Vladimir Putin. <image:6581>
+
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Putin war declaration United States')
+Failed to download or open image: HTTPConnectionPool(host='static.kremlin.ru', port=80): Read timed out. (read timeout=10)
+Got 0 new web source(s):
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Russia declares war on United States')
+Skipping unsupported website: https://www.youtube.com/watch?v=7H1Op8vPnyM
+Got 1 new web source(s):
+	1. https://www.aljazeera.com/news/2022/2/24/putins-speech-declaring-war-on-ukraine-translated-excerpts
+Useful result: From [Source](https://www.aljazeera.com/news/2022/2/24/putins-speech-declaring-war-on-ukraine-translated-excerpts): 
+Content: The search result from Al Jazeera contains an image of Vladimir Putin. <image:6600>
+
+The claim 'Russian President Vladimir Putin has declared war on the United States.' is false.
+Justification: The fact-check involved multiple image searches related to Vladimir Putin and declarations of war, but none of the search results provided evidence to support the claim that Putin declared war on the United States. The evidence primarily consisted of images of Putin from various news sources, such as [CNN](https://www.cnn.com/2022/05/03/europe/russia-ukraine-declaration-of-war-intl-hnk-ml) and [Al Jazeera](https://www.aljazeera.com/news/2022/2/24/putins-speech-declaring-war-on-ukraine-translated-excerpts), without any mention of a war declaration against the U.S.
+
+So, the overall veracity is: false
+Fact-check took 0:49 min.

@@ -1,0 +1,52 @@
+Extracting claims from Content: <image:4> This image shows Hitler's parade car which was bought by the Ukrainian president Volodymyr Zelenskyy for 15 Million US-$.
+'Claim: "<image:4> This image shows Hitler's parade car which was bought by the Ukrainian president Volodymyr Zelenskyy for 15 Million US-$."'
+Verifying Claim: "<image:4> This image shows Hitler's parade car which was bought by the Ukrainian president Volodymyr Zelenskyy for 15 Million US-$."
+Not enough information yet. Continuing fact-check...
+Got 3 new web source(s):
+	1. https://www.voanews.com/a/russian-propagandists-push-fake-story-that-zelenskyy-bought-hitler-s-car/7818175.html
+	2. https://theins.ru/en/antifake/275232
+	3. https://truthmeter.mk/endless-inspiration-for-disinformation-zelenskys-new-alleged-luxury-is-hitlers-mercedes/
+Useful result: From [Source](https://www.voanews.com/a/russian-propagandists-push-fake-story-that-zelenskyy-bought-hitler-s-car/7818175.html): Found exact image on website with title: Russian propagandists push fake story that Zelenskyy bought ... - VOA
+Content: The Voice of America (VOA) published an article on October 10, 2024, debunking a fake story spread by Russian propagandists claiming that Volodymyr Zelenskyy bought Hitler's parade car. The article states that the image of the car was taken from a photo widely available on the internet and digitally edited. The VOA article also mentions that the Seattle Tribune, which published the fake story, is not a real media outlet. <image:163>, <image:164>
+
+Useful result: From [Source](https://theins.ru/en/antifake/275232): Found exact image on website with title: Russian media spread hoax about Zelensky buying Hitler's car for ...
+Content: The Insider published on October 11, 2024, an article debunking a hoax spread by Russian media. The hoax claimed that Volodymyr Zelenskyy bought Adolf Hitler's parade car for $15 million. The article states that the image of the car was doctored and taken from a 2017 auction announcement. <image:4>, <image:j>, <image:k>. The article also mentions that the car was purchased by Australian national Clive Palmer in February 2022.
+
+Useful result: From [Source](https://truthmeter.mk/endless-inspiration-for-disinformation-zelenskys-new-alleged-luxury-is-hitlers-mercedes/): Found exact image on website with title: Endless inspiration for disinformation — Zelensky's new alleged ...
+Content: The article from Truthmeter.mk, published on November 4, 2024, debunks the claim that Volodymyr Zelenskyy bought Hitler's Mercedes-Benz 770 for $15 million. The article states that the image is a montage and the claim is disinformation. The article mentions that the car was auctioned in Arizona, USA, in 2018. The article also mentions that the news originated from the "news portal" Seattle Tribune, which was created a few days before the news was published. <image:4>, <image:167>.
+
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Hitler parade car')
+Got 3 new web source(s):
+	1. https://www.seattletimes.com/seattle-news/how-hitlers-car-ended-up-parked-in-medina/
+	2. https://www.newsweek.com/adolf-hitlers-car-will-be-sold-auction-who-would-buy-it-756783
+	3. https://www.euronews.com/2016/12/13/360-video-the-car-that-was-made-for-hitler
+Useful result: From [Source](https://www.seattletimes.com/seattle-news/how-hitlers-car-ended-up-parked-in-medina/): 
+Content: The Seattle Times published an article about Hitler's car. The article includes a photograph of Hitler in his parade car. <image:7033>
+
+Useful result: From [Source](https://www.newsweek.com/adolf-hitlers-car-will-be-sold-auction-who-would-buy-it-756783): 
+Content: Newsweek published an article about Adolf Hitler's car. <image:7034> shows Hitler in the car.
+
+Useful result: From [Source](https://www.euronews.com/2016/12/13/360-video-the-car-that-was-made-for-hitler): 
+Content: Euronews shows a black car that was made for Hitler. <image:7035>
+
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Volodymyr Zelenskyy car')
+Skipping unsupported website: https://www.youtube.com/watch?v=wo_XVBgca5s
+Skipping unsupported website: https://www.president.gov.ua/en/news/prezident-za-kermom-avtomobilya-pereviriv-vidremontovanu-dil-58049
+Got 3 new web source(s):
+	1. https://www.dw.com/en/fact-check-new-fakes-on-zelenskyys-purported-wealth/a-69552392
+	2. https://www.ft.com/content/cbc949ff-45a7-451f-972d-e80127d7c9ec
+	3. https://www.aljazeera.com/news/liveblog/2023/5/20/g7-summit-live-news-ukraines-zelenskyy-set-to-arrive-in-japan
+Useful result: From [Source](https://www.dw.com/en/fact-check-new-fakes-on-zelenskyys-purported-wealth/a-69552392): 
+Content: The search result from DW.com states that the claim about Zelenskyy's new car is fake. <image:7040>
+
+Useful result: From [Source](https://www.ft.com/content/cbc949ff-45a7-451f-972d-e80127d7c9ec): 
+Content: The Financial Times published an image of a car with bullet holes and a police officer investigating the scene. <image:7041>
+
+Useful result: From [Source](https://www.aljazeera.com/news/liveblog/2023/5/20/g7-summit-live-news-ukraines-zelenskyy-set-to-arrive-in-japan): 
+Content: Al Jazeera shows an image of Volodymyr Zelenskyy's car. <image:7042>
+
+The claim '<image:4> This image shows Hitler's parade car which was bought by the Ukrainian president Volodymyr Zelenskyy for 15 Million US-$.' is false.
+Justification: The claim that Volodymyr Zelenskyy bought Hitler's parade car for $15 million is false. Multiple sources, including The Voice of America ([https://www.voanews.com/a/russian-propagandists-push-fake-story-that-zelenskyy-bought-hitler-s-car/7818175.html](https://www.voanews.com/a/russian-propagandists-push-fake-story-that-zelenskyy-bought-hitler-s-car/7818175.html)) and Truthmeter.mk ([https://truthmeter.mk/endless-inspiration-for-disinformation-zelenskys-new-alleged-luxury-is-hitlers-mercedes/](https://truthmeter.mk/endless-inspiration-for-disinformation-zelenskys-new-alleged-luxury-is-hitlers-mercedes/)), confirm the image is doctored and the story is fake. The car was auctioned in 2018 and purchased by Clive Palmer in 2022.
+
+So, the overall veracity is: false
+Fact-check took 0:32 min.
