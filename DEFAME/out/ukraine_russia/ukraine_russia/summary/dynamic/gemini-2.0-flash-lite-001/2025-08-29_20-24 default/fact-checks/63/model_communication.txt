@@ -1,0 +1,844 @@
+PlanPrompt - QUERY:
+
+# Instructions
+The available knowledge is insufficient to assess the Claim. Therefore, **propose a set of actions** to retrieve new and helpful evidence. Adhere to the following rules:
+* The actions available are listed under Valid Actions, including a short description for each action. No other actions are possible at this moment. 
+* For each action, use the formatting as specified in Valid Actions.
+* Include all actions in a single Markdown code block at the end of your answer.
+* Propose as few actions as possible, but as much as needed. Do not propose similar or previously used actions.
+
+
+
+## Valid Actions
+* `reverse_search`
+   * Description: Performs a reverse image search to find similar images on the web.
+   * How to use: Provide an image and the model will perform a reverse search to find similar images.
+   * Format: reverse_search(<image:k>), where `k` is the image's ID
+
+* `image_search`
+   * Description: Run an image search on Google to retrieve related images for a given query.
+   * How to use: This is a helpful tool for fact-checking images. Use this to retrieve images associated with a specific keyword or phrase. Ensure that the query is clear and specific to improve search accuracy. If no relevant images are found, refine the query or use more descriptive terms.
+   * Format: image_search("your image search query goes here")
+
+* `geolocate`
+   * Description: Performs geolocation to determine the country where an image was taken.
+   * How to use: Provide an image and the model will determine the most likely countries where it was taken.
+   * Format: geolocate(<image:k>), where `k` is the image's ID
+
+* `web_search`
+   * Description: Run an open web search on Google or DuckDuckGO to retrieve any related webpage.
+   * How to use: Do not use this with a previously used or similar query from previous web searches. If a previous web search did not yield any results, use a very different query.
+   * Format: web_search("your web search query goes here")
+
+# Example: reverse_search()
+
+## Claim
+Text: "<image:k> shows a rare event of a solar eclipse with a double ring."
+
+...
+
+## Actions
+```
+reverse_search(<image:k>)
+```
+
+# Example: image_search()
+
+## Claim
+Text: "Chinese officials in white protective hazmat suits carried people down a hallway to be quarantined for having COVID-19 in November 2022."
+
+...
+
+ACTIONS:
+```
+image_search("China officials white suits carry people")
+image_search("China officials carry people COVID quarantine 2022")
+```
+
+# Example: geolocate()
+
+## Claim
+Text: "<image:k> shows a nuclear weapons facility in Usbekistan."
+
+...
+
+## Actions
+```
+geolocate(<image:k>)
+```
+
+# Example: web_search()
+
+## Claim
+Text: "New Zealand’s new Food Bill bans gardening"
+Claim date: October 29, 2020
+
+...
+
+## Actions
+```
+web_search("New Zealand Food Bill 2020")
+web_search("New Zealand Food Bill gardening ban")
+```
+
+# Record
+## Claim
+Claim: "In an interview with NDTV on March 17, 2025 Director of US National Intelligence Tulsi Gabbard said that President Donald Trump and Russian President Vladimir Putin were good friends."
+
+# Your Actions
+
+
+
+===== > RESPONSE:  < =====
+```
+web_search("Tulsi Gabbard NDTV interview March 17 2025 Trump Putin")
+```
+_________________________
+
+
+
+SummarizeResultPrompt - QUERY:
+
+# Instructions
+In order to find evidence that helps your fact-check, you just ran a web search which yielded a Search Result. **Your task right now is to summarize the Search Result.** What to include:
+* information that might be useful for the fact-check (see Record)
+* relevant images (refer to images by inserting their reference <image:k>)
+* if available: the release date as well as the author or the publisher (e.g. the media company) of the search result.
+
+Do NOT include:
+* advertisements
+* any other information not related to the Record or the Claim
+
+Additional rules:
+* Do not add any additional information besides the information in the Search Result.
+* If the Search Result doesn't contain any relevant information for the fact-checking work, simply print one word in capital letters: "NONE".
+* Keep your writing style like in the Examples 1, 2 and 3 provided to you.
+* Try to filter out relevant information even if the search result is in a different language.
+
+# Example 1
+The search result from America Today provides several photographs of the Notre-Dame Cathedral fire on April 15, 2019. <image:i>, <image:j>, <image:k>. None of the images show the Eiffel Tower in the background. 
+
+# Example 2
+NONE
+
+# Example 3
+The Guardian discusses a report blaming the Syrian government for a toxic gas attack and condemning their use of chemical weapons. The Guardian mentions the Chemical Weapons Convention and the responsibilities of Syria under the convention. According to The Guardian, The White House condemned the Assad regime for defying the norm against chemical weapons use.
+
+# Record
+## Claim
+Claim: "In an interview with NDTV on March 17, 2025 Director of US National Intelligence Tulsi Gabbard said that President Donald Trump and Russian President Vladimir Putin were good friends."
+
+## Actions
+```
+web_search("Tulsi Gabbard NDTV interview March 17 2025 Trump Putin")
+```
+
+# Search Result
+From [Source](https://www.ndtv.com/world-news/trump-focused-on-peace-tulsi-gabbard-on-russia-ukraine-war-7941806): 
+Content: ""Trump remains committed once again to identifying this ideology that drives Islamist terrorism, helping to defeat that ideology and their ability to exact that terror on people."
+    
+
+  
+
+Show full article
+
+Track [Latest News](https://www.ndtv.com/latest)
+ Live on NDTV.com and get [news](https://www.ndtv.com)
+ updates from [India](https://www.ndtv.com/india)
+ and around the [world](https://www.ndtv.com/world-news)
+
+Follow us:
+
+[](https://twitter.com/ndtv)
+[](https://www.youtube.com/user/ndtv)
+[](https://www.whatsapp.com/channel/0029Va4lixw7z4kcvZI9JM12)
+[](https://www.instagram.com/ndtv/)
+[](https://www.facebook.com/ndtv)
+
+[Tulsi Gabbard](https://www.ndtv.com/topic/tulsi-gabbard)
+, [Tulsi Gabbard Exclusive](https://www.ndtv.com/topic/tulsi-gabbard-exclusive)
+, [Donald Trump](https://www.ndtv.com/topic/donald-trump)
+
+[](https://www.ndtv.com/world)
+
+Edition
+
+[![INDIA](https://www.ndtv.com/estatic/static/images/india-flag-icon.svg)\
+\
+INDIA](https://www.ndtv.com "NDTV")
+[![World](https://drop.ndtv.com/images/world-globeNew.svg)\
+\
+World](https://www.ndtv.com/world "NDTV World")
+
+ Search for News, Photos and Videos
+
+Get App for Better Experience
+
+[Install Now](javascript:void(0))
+
+*   choose your destination
+    
+    *   [Hindi](https://ndtv.in/)
+        
+    *   [Marathi](https://marathi.ndtv.com/)
+        
+    *   [MPCG](https://mpcg.ndtv.in/)
+        
+    *   [Rajasthan](https://rajasthan.ndtv.in/)
+        
+    
+*   News Updates
+    
+    *   [Live TV](https://www.ndtv.com/video/live/channel/ndtv24x7)
+        
+    *   [India](https://www.ndtv.com/india)
+        
+    *   [Spotlight](https://www.ndtv.com/spotlight)
+        
+    *   [Beeps](https://www.ndtv.com/beeps/)
+        
+    *   [Latest](https://www.ndtv.com/latest)
+        
+    *   [Video](https://www.ndtv.com/video)
+        
+    *   [Podcast](https://www.ndtv.com/podcast)
+        
+    *   [Profit](https://www.ndtvprofit.com/)
+        
+    *   [Movies](https://www.ndtv.com/entertainment)
+        
+    *   [Cricket](https://sports.ndtv.com/cricket)
+        
+    *   [Cities](https://www.ndtv.com/cities)
+        
+*   Featured
+    
+    *   [Notifications](https://www.ndtv.com/notifications)
+        
+    *   [Opinion](https://www.ndtv.com/opinion)
+        
+    *   [Web Stories](https://www.ndtv.com/webstories)
+        
+    *   [Trends](https://www.ndtv.com/trends)
+        
+    *   [Feature](https://www.ndtv.com/feature)
+        
+*   More Links
+    
+    *   [Offbeat](https://www.ndtv.com/offbeat)
+        
+    *   [Science](https://www.ndtv.com/science)
+        
+    *   [People](https://www.ndtv.com/people)
+        
+    *   [South](https://www.ndtv.com/south)
+        
+    *   [Education](https://www.ndtv.com/education)
+        
+    *   [Tech](https://www.gadgets360.com)
+        
+    *   [Food](https://food.ndtv.com)
+        
+    *   [Sports](https://sports.ndtv.com)
+        
+    *   [Health](https://doctor.ndtv.com/)
+        
+    *   [Lifestyle](https://www.ndtv.com/lifestyle)
+        
+    *   [Photos](https://www.ndtv.com/photos)
+        
+    *   [TV Schedule](https://www.ndtv.com/tv-schedule)
+        
+    *   [Toolbox](https://www.ndtv.com/tools)
+        
+*   Follow Us On
+    
+    *   [Facebook](https://www.facebook.com/ndtv)
+        
+    *   [Twitter](https://twitter.com/ndtv)
+        
+    *   [Instagram](https://www.instagram.com/ndtv)
+        
+    *   [Linkedin](https://in.linkedin.com/company/ndtv)
+        
+    *   [Youtube](https://www.youtube.com/user/ndtv)
+        
+    *   [Whatsapp](https://whatsapp.com/channel/0029Va4lixw7z4kcvZI9JM12)
+        
+    *   [Threads](https://www.threads.net/@ndtv)
+        
+    *   [Snapchat](https://story.snapchat.com/p/0ec7a62d-e215-4c0c-94f0-ac70d8355798)
+        
+
+arrow-down search
+
+search olympic crypto\_icon
+
+arrow-rgt arrow-next arrow-up close reddit-fill facebook-fill whatsapp-fill cog left-arrow snapchat-fill astrology-icn left-arrow
+
+![Please Click on allow](https://alerts.ndtv.com/images/web.png)
+
+Listen to the [latest songs](https://www.jiosaavn.com/featured/trending_today/I3kvhipIy73uCJW60TJk1Q__)
+, only on [JioSaavn.com](https://www.jiosaavn.com) President Trump will have a very productive conversation with Putin at the appropriate time, rooted in his unwavering commitment to peace."
+    
+11. arrow-down comments printer search bell top-nav right-arrow left-arrow
+
+Advertisement
+
+"Trump Focused On Peace": US Intel Chief Tulsi Gabbard On Russia-Ukraine War
+============================================================================
+
+Trump remains very committed to combating and defeating the threat of Islamist terrorism, said Tulsi Gabbard.
+-------------------------------------------------------------------------------------------------------------
+
+Read Time:3 mins
+
+Share
+
+*   Twitter
+*   WhatsApp
+*   Facebook
+*   Reddit
+*   [Email](mailto:?subject=Trump Focused On Peace: US Intel Chief Tulsi Gabbard On Russia-Ukraine War&body=Check out this link https://www.ndtv.com/world-news/trump-focused-on-peace-tulsi-gabbard-on-russia-ukraine-war-7941806)
+    
+
+Link Copied
+
+US President Donald Trump is focused on peace and has made unprecedented progress in the negotiations between Russia and Ukraine, US Director of National Intelligence Tulsi Gabbard told NDTV in an exclusive conversation today.
+
+Here are the top 10 quotes by Tulsi Gabbard:
+--------------------------------------------
+
+1. "Trump remains very committed to combating and defeating the threat of Islamist terrorism. "Trump is also taking action where the previous administration failed. So, President Trump has taken a decisive action for our own safety, security, and prosperity."
+    
+
+8. "President Trump is seeing this ongoing conflict with very clear eyes. "Under the previous administration, there was no effort at all towards peace or direct dialogue with Putin to bring an end to this war. So, in a very short period of time, Trump has made much more progress towards peace than any other previous effort. The talks are just beginning between Trump's incoming cabinet and the Bangladesh government, but this continues to remain a central focus area of concern."
+    
+12."
+
+# Your Summary
+
+
+
+===== > RESPONSE:  < =====
+NDTV interviewed Tulsi Gabbard. According to NDTV, Gabbard said that Donald Trump is focused on peace and has made unprecedented progress in the negotiations between Russia and Ukraine.
+
+_________________________
+
+
+
+SummarizeResultPrompt - QUERY:
+
+# Instructions
+In order to find evidence that helps your fact-check, you just ran a web search which yielded a Search Result. **Your task right now is to summarize the Search Result.** What to include:
+* information that might be useful for the fact-check (see Record)
+* relevant images (refer to images by inserting their reference <image:k>)
+* if available: the release date as well as the author or the publisher (e.g. the media company) of the search result.
+
+Do NOT include:
+* advertisements
+* any other information not related to the Record or the Claim
+
+Additional rules:
+* Do not add any additional information besides the information in the Search Result.
+* If the Search Result doesn't contain any relevant information for the fact-checking work, simply print one word in capital letters: "NONE".
+* Keep your writing style like in the Examples 1, 2 and 3 provided to you.
+* Try to filter out relevant information even if the search result is in a different language.
+
+# Example 1
+The search result from America Today provides several photographs of the Notre-Dame Cathedral fire on April 15, 2019. <image:i>, <image:j>, <image:k>. None of the images show the Eiffel Tower in the background. 
+
+# Example 2
+NONE
+
+# Example 3
+The Guardian discusses a report blaming the Syrian government for a toxic gas attack and condemning their use of chemical weapons. The Guardian mentions the Chemical Weapons Convention and the responsibilities of Syria under the convention. According to The Guardian, The White House condemned the Assad regime for defying the norm against chemical weapons use.
+
+# Record
+## Claim
+Claim: "In an interview with NDTV on March 17, 2025 Director of US National Intelligence Tulsi Gabbard said that President Donald Trump and Russian President Vladimir Putin were good friends."
+
+## Actions
+```
+web_search("Tulsi Gabbard NDTV interview March 17 2025 Trump Putin")
+```
+
+# Search Result
+From [Source](https://www.newsweek.com/tulsi-gabbard-shares-details-trumps-relationship-putin-2046181): 
+Content: "Director of National Intelligence, has said President [Donald Trump](https://www.newsweek.com/topic/donald-trump)
+ is "looking forward to success" ahead of his scheduled phone call with Russian President [Vladimir Putin](https://www.newsweek.com/topic/vladimir-putin)
+ on Tuesday.
+
+The Context
+-----------
+
+Trump will speak with Putin later on Tuesday as part of his efforts to end the war in Ukraine.
+
+Gabbard's comments came in an interview with Indian news network NDTV. Find him on Twitter @GabeWhisnant.
+
+[Writers Page](/authors/gabe-whisnant)
+
+[Gabe Whisnant](javascript:void(0);)
+
+Evening Politics Editor
+
+ [![Trust Project Icon](https://g.newsweek.com/www/images/trust-project-icon.svg) Newsweek Is A Trust Project Member](/editorial-guidelines)
+
+[FOLLOW](/authors/sonam-sheth)
+
+news article
+
+Based on facts, either observed and verified firsthand by the reporter, or reported and verified from knowledgeable sources.
+
+Share
+
+[](https://www.facebook.com/sharer/sharer.php?u=https://www.newsweek.com/tulsi-gabbard-shares-details-trumps-relationship-putin-2046181)
+[](https://twitter.com/intent/tweet?text=Trump+%27looking+forward+to+success%27+ahead+of+Putin+call%2C+Gabbard+says+https://www.newsweek.com/tulsi-gabbard-shares-details-trumps-relationship-putin-2046181)
+[](https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fwww.newsweek.com%2Ftulsi-gabbard-shares-details-trumps-relationship-putin-2046181&title=Trump+%27looking+forward+to+success%27+ahead+of+Putin+call%2C+Gabbard+says)
+[](http://reddit.com/submit?url=https://www.newsweek.com/tulsi-gabbard-shares-details-trumps-relationship-putin-2046181&title=Trump+%27looking+forward+to+success%27+ahead+of+Putin+call%2C+Gabbard+says)
+[](mailto:?&subject=Trump+%27looking+forward+to+success%27+ahead+of+Putin+call%2C+Gabbard+says&body=https://www.newsweek.com/tulsi-gabbard-shares-details-trumps-relationship-putin-2046181)
+[](https://share.flipboard.com/bookmarklet/popout?v=2&url=https://www.newsweek.com/tulsi-gabbard-shares-details-trumps-relationship-putin-2046181)
+[](https://api.whatsapp.com/send?text=Trump+%27looking+forward+to+success%27+ahead+of+Putin+call%2C+Gabbard+says+https://www.newsweek.com/tulsi-gabbard-shares-details-trumps-relationship-putin-2046181)
+
+Copy Link
+
+✓ Link copied to clipboard!
+
+Listen
+
+Translate
+
+*   English (Original)
+*   Español
+*   中国人
+*   Français
+*   Deutsch
+*   Portuguese
+*   हिन्दी
+
+Newsweek AI is in beta. So already in a very short period of time, President Trump has made much more progress towards peace than any effort that has occurred by anyone, previously.
+
+"I'm sure that President Trump will have a very productive conversation with Putin, once again, rooted in his unwavering commitment to peace."
+
+In the same interview, **Gabbard** also hailed Trump's relationship with Indian Prime Minister [Narendra Modi](https://www.newsweek.com/topic/narendra-modi)
+: "With President Trump's leadership in the United States, of course Prime Minister Modi's longstanding leadership here in India, we have two leaders of our two great countries who are very good friends and who are very focused on how we can strengthen those shared objectives and those shared interests."
+
+What Happens Next
+-----------------
+
+Trump and Putin are slated to speak over the phone on Tuesday.
+
+_This article contains reporting by The Associated Press._
+
+_Correction 3/18/25, 8:43 a.m. ET: This article was updated to delete erroneous Associated Press reporting and clarify comments Tulsi Gabbard made about the relationship between President Donald Trump and Indian Prime Minister Narendra Modi._
+
+_Update 3/17/25, 6:41 p.m. Her visit to India holds special significance: Gabbard, a veteran, was the first Hindu elected to [Congress](https://www.newsweek.com/topic/congress)
+ when she served as a representative from Hawaii.
+
+What To Know
+------------
+
+Gabbard criticized former President [Joe Biden](https://www.newsweek.com/topic/joe-biden)
+'s handling of the war in Ukraine and said Trump's push for both sides to agree to a ceasefire comes from an "unwavering commitment to peace."
+
+!Trump and Putin <image:1416>
+
+U.S. That prompted Zelensky to say he was ready to sign a rare earth minerals deal that the Trump administration has pushed for in exchange for continued aid to Ukraine.
+
+Last week, Ukraine agreed to the U.S.'s proposal for a 30-day ceasefire, subject to the Kremlin's agreement.
+
+What People Are Saying
+----------------------
+
+**Gabbard criticized the Biden administration's handling of the Russia-Ukraine war, telling NDTV:** "Under the previous administration, during which this war began, there was no effort, there was no effort at all towards peace. Sonam has extensive experience covering [national security](https://nam12.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwww.businessinsider.com%2Fhow-trump-us-botched-coronavirus-pandemic-response-2020-3&data=05%7C02%7Cl.jackson%40newsweek.com%7Ca234837a625c4bac52ac08dcec64f0f7%7Cc6bc3eb5d7334f82ba021aa6e30053d3%7C0%7C0%7C638645165518611721%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C0%7C%7C%7C&sdata=D6I%2FxRLUotLs4QzK4jS28nkVVXuYttbNs85X%2BrjsiGk%3D&reserved=0)
+, foreign policy, [elections](https://nam12.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwww.businessinsider.com%2F2020-election-administration-was-successful-not-a-disaster-2020-11&data=05%7C02%7Cl.jackson%40newsweek.com%7Ca234837a625c4bac52ac08dcec64f0f7%7Cc6bc3eb5d7334f82ba021aa6e30053d3%7C0%7C0%7C638645165518632389%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C0%7C%7C%7C&sdata=KAes6J3i04%2B64WCXxm0RCz3vQAvuDDCEOrXWUj9w3WU%3D&reserved=0)
+, and [stories](https://nam12.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwww.businessinsider.com%2Frudy-giuliani-indicted-georgia-trump-rico-2023-8&data=05%7C02%7Cl.jackson%40newsweek.com%7Ca234837a625c4bac52ac08dcec64f0f7%7Cc6bc3eb5d7334f82ba021aa6e30053d3%7C0%7C0%7C638645165518643691%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C0%7C%7C%7C&sdata=UVHr%2FDvHxkPt8Yck1UQFE9taRulpsKNVwPKHsny0CjI%3D&reserved=0)
+ at the [intersection of law and politics](https://nam12.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwww.businessinsider.com%2Fgaetz-associate-joel-greenberg-doj-plead-guilty-6-felony-counts-2021-5&data=05%7C02%7Cl.jackson%40newsweek.com%7Ca234837a625c4bac52ac08dcec64f0f7%7Cc6bc3eb5d7334f82ba021aa6e30053d3%7C0%7C0%7C638645165518655207%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C0%7C%7C%7C&sdata=V8JmCHV2iUXZQLbW77GYGkfUejf%2BRryxzOgoZ84z9Gg%3D&reserved=0)
+. Inconsistencies may occur.
+
+✖
+
+[Tulsi Gabbard](https://www.newsweek.com/topic/tulsi-gabbard)
+, the U.S. President Donald Trump (L) shakes hand with Russian President Vladimir Putin after a meeting in Helsinki, Finland, on July 16, 2018. President Donald Trump (L) shakes hand with Russian President Vladimir Putin after a meeting in Helsinki, Finland, on July 16, 2018."
+
+# Your Summary
+
+
+
+===== > RESPONSE:  < =====
+Newsweek published an article stating that Tulsi Gabbard said in an interview with NDTV that President Trump is "looking forward to success" ahead of his phone call with Russian President Putin. The article also mentions that Gabbard criticized the Biden administration's handling of the Russia-Ukraine war. The article was updated on March 17, 2025. <image:1416>
+
+_________________________
+
+
+
+SummarizeResultPrompt - QUERY:
+
+# Instructions
+In order to find evidence that helps your fact-check, you just ran a web search which yielded a Search Result. **Your task right now is to summarize the Search Result.** What to include:
+* information that might be useful for the fact-check (see Record)
+* relevant images (refer to images by inserting their reference <image:k>)
+* if available: the release date as well as the author or the publisher (e.g. the media company) of the search result.
+
+Do NOT include:
+* advertisements
+* any other information not related to the Record or the Claim
+
+Additional rules:
+* Do not add any additional information besides the information in the Search Result.
+* If the Search Result doesn't contain any relevant information for the fact-checking work, simply print one word in capital letters: "NONE".
+* Keep your writing style like in the Examples 1, 2 and 3 provided to you.
+* Try to filter out relevant information even if the search result is in a different language.
+
+# Example 1
+The search result from America Today provides several photographs of the Notre-Dame Cathedral fire on April 15, 2019. <image:i>, <image:j>, <image:k>. None of the images show the Eiffel Tower in the background. 
+
+# Example 2
+NONE
+
+# Example 3
+The Guardian discusses a report blaming the Syrian government for a toxic gas attack and condemning their use of chemical weapons. The Guardian mentions the Chemical Weapons Convention and the responsibilities of Syria under the convention. According to The Guardian, The White House condemned the Assad regime for defying the norm against chemical weapons use.
+
+# Record
+## Claim
+Claim: "In an interview with NDTV on March 17, 2025 Director of US National Intelligence Tulsi Gabbard said that President Donald Trump and Russian President Vladimir Putin were good friends."
+
+## Actions
+```
+web_search("Tulsi Gabbard NDTV interview March 17 2025 Trump Putin")
+```
+
+# Search Result
+From [Source](https://www.usnews.com/news/politics/articles/2025-03-17/gabbard-says-trump-is-looking-forward-to-success-ahead-of-talk-with-putin): 
+Content: "Gabbard Says Trump Is 'Looking Forward to Success' Ahead of Talk With Putin
+===========================================================================
+
+U\_S\_ Director of National Intelligence Tulsi Gabbard, speaking ahead of an expected phone conversation Tuesday between President Donald Trump and Russian President Vladimir Putin, said Monday that while the negotiations to end Russia war with Ukraine have just begun, Trump is “looking forward to success.”
+
+By Associated Press
+
+|
+
+March 17, 2025
+
+By Associated Press
+
+|
+
+March 17, 2025, at 10:58 p.m.
+
+SaveComment
+
+_More_
+
+[![U.S. News & World Report](https://www.usnews.com/static/img/usn-logo-large.svg)](https://www.usnews.com)
+
+Gabbard Says Trump Is 'Looking Forward to Success' Ahead of Talk With Putin
+
+[](https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.usnews.com%2Fnews%2Fpolitics%2Farticles%2F2025-03-17%2Fgabbard-says-trump-is-looking-forward-to-success-ahead-of-talk-with-putin%3Fsrc=usn_fb)
+[](https://twitter.com/intent/tweet?text=Gabbard%20Says%20Trump%20Is%20'Looking%20Forward%20to%20Success'%20Ahead%20of%20Talk%20With%20Putin&url=https%3A%2F%2Fwww.usnews.com%2Fnews%2Fpolitics%2Farticles%2F2025-03-17%2Fgabbard-says-trump-is-looking-forward-to-success-ahead-of-talk-with-putin%3Fsrc=usn_tw)
+[](https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fwww.usnews.com%2Fnews%2Fpolitics%2Farticles%2F2025-03-17%2Fgabbard-says-trump-is-looking-forward-to-success-ahead-of-talk-with-putin&src=usn_li&title=Gabbard%20Says%20Trump%20Is%20'Looking%20Forward%20to%20Success'%20Ahead%20of%20Talk%20With%20Putin&summary=From%20U.S.%20News%20%26%20World%20Report%3A&source=U.%20S.%20News)
+[](mailto:?subject=Gabbard%20Says%20Trump%20Is%20%27Looking%20Forward%20to%20Success'%20Ahead%20of%20Talk%20With%20Putin&body=From%20U.S.%20News%20%26%20World%20Report%3A%20%20https%3A%2F%2Fwww.usnews.com%2Fnews%2Fpolitics%2Farticles%2F2025-03-17%2Fgabbard-says-trump-is-looking-forward-to-success-ahead-of-talk-with-putin)
+_More_
+
+![Alex Brandon](https://www.usnews.com/object/image/00000195-5878-d3ca-a9d7-78ffd20f0000/639619301b514cf1b30dbf7a22a4cedaTrump_Zelenskyy_36428.jpg?update-time=1740944076000&size=responsive640)
+
+Alex Brandon
+
+FILE - Director of National Intelligence Tulsi Gabbard listens to President Donald Trump during her swearing-in at the Oval Office of the White House, Feb. Director of National Intelligence Tulsi Gabbard, speaking ahead of an expected phone conversation Tuesday between [President Donald Trump and Russian President Vladimir Putin](https://apnews.com/article/donald-trump-vladimir-putin-ukraine-russia-b86c7230a3d9df6a76ed0a064ec3402a)
+, said Monday that while the negotiations to end Russia's war with Ukraine have just begun, Trump is “looking forward to success.”
+
+Gabbard criticized former President Joe Biden’s handling of the [war in Ukraine](https://apnews.com/hub/russia-ukraine)
+ and said Trump’s push for both sides to agree to a ceasefire comes from an “unwavering commitment to peace.”
+
+“Under the previous administration, during which this war began, there was no effort, there was no effort at all towards peace. So already in a very short period of time, President Trump has made much more progress towards peace than any effort that has occurred by anyone, previously,” Gabbard said in an interview with India's NDTV. Her trip also includes stops in Japan and Thailand.
+
+In the interview with NDTV, Gabbard hailed the relationship between Trump and Indian [Prime Minister Narendra Modi](https://apnews.com/hub/narendra-modi)
+ and said both leaders are committed to strengthening ties between their countries.
+
+“With President Trump’s leadership in the United States, of course Prime Minister Modi’s longstanding leadership here in India, we have two leaders of our two great countries who are very good friends and who are very focused on how we can strengthen those shared objectives and those shared interests.”
+
+\_\_
+
+Eds: This story was updated on Mar. Director of National Intelligence Tulsi Gabbard said President Donald Trump and Russian President Vladimir Putin “are very good friends.” Gabbard was talking about Trump and Indian Prime Minister Narendra Modi.
+
+READ:
+
+[The 10 Oldest U.S. “I’m sure that President Trump will have a very productive conversation with Putin, once again, rooted in his unwavering commitment to peace.”
+
+[Trump](https://apnews.com/hub/donald-trump)
+ will speak with [Putin](https://apnews.com/hub/vladimir-putin)
+ on Tuesday in a possible pivot point in efforts to end the war in Ukraine and an opportunity for Trump to continue reorienting American foreign policy.
+
+Gabbard's visit to India holds special significance: Gabbard, a veteran, was the [first Hindu](https://apnews.com/article/trump-gabbard-director-national-intelligence-466dfdfe2f949ea20bc2f4ef13e21438)
+ elected to Congress when she served as a representative from Hawaii. 21, 2025\
+\
+![](https://www.usnews.com/object/image/0000016e-46bf-d237-ad6e-e7bfd7430000/191107-worstpresidentsintro-stock.jpg?update-time=1573145064597&size=responsiveSquare150)](https://www.usnews.com/news/special-reports/the-worst-presidents/slideshows/the-10-worst-presidents)
+
+[### The Best Cartoons on Donald Trump\
+\
+July 29, 2025, at 12:21 p.m.\
+\
+![](https://www.usnews.com/object/image/00000198-56f5-d71f-a3ff-f6ff48400000/weekly2.jpg?update-time=1753805862103&size=responsiveSquare150)](https://www.usnews.com/cartoons/the-best-political-cartoons-on-donald-trump)
+
+[### Photos: President Trump's First 100 Days\
+\
+Here is a visual look at the 47th president’s first months in office.\
+\
+April 28, 2025\
+\
+![](https://www.usnews.com/object/image/00000196-402e-d7bd-a5de-c96f3e680000/trump-05.jpg?update-time=1744834571209&size=responsiveSquare150)](https://www.usnews.com/photos/2025/in-pictures-president-donald-trumps-first-100-days-second-term)
+
+[### Will Medicaid Cuts Create Ghost Towns?\
+\
+Experts are warning that recent steep cuts to Medicaid will turn rural communities into ghost towns as hospitals shut down and take large swaths of the population with them.\
+\
+Aneeta Mathur-Ashton July 30, 2025\
+\
+![](https://www.usnews.com/object/image/00000198-5d31-dd27-abfb-fdf3e64a0000/ap17316631803832.jpg?update-time=1753911111656&size=responsiveSquare150)](https://www.usnews.com/news/national-news/articles/2025-07-30/will-cuts-to-medicaid-hasten-the-demise-of-rural-america)
+
+[### Tracking Trump’s Higher Ed Reform\
+\
+From student loan reform to canceling ‘woke’ programs, Trump has dedicated significant time and attention to reshaping higher education.\
+\
+Cecelia Smith-SchoenwalderJuly 28, 2025\
+\
+![](https://www.usnews.com/object/image/00000198-1a23-dc3e-a798-5b3fc67d0000/trump-vs-edu-copy.jpg?update-time=1752785226780&size=responsiveSquare150)](https://www.usnews.com/news/national-news/articles/trumps-higher-education-crackdown-visa-revocations-dei-bans-lawsuits-and-funding-cuts)
+
+[### When the ‘Big, Beautiful Bill’ Begins\
+\
+Provisions in President Donald Trump’s massive tax and spending cuts bill will be staggered over the next several years for a myriad of reasons, including mitigating political blowback in the 2026 midterm election.\
+\
+Aneeta Mathur-Ashton July 25, 2025\
+\
+![](https://www.usnews.com/object/image/00000198-581d-dc78-a5ff-7afd82e40001/250729news-trumpbbb.jpg?update-time=1753825009458&size=responsiveSquare150)](https://www.usnews.com/news/national-news/articles/timeline-of-key-provisions-in-trumps-big-beautiful-bill)
+
+[### Colleges and Foreign Funds: What to Know\
+\
+The Trump administration’s intense scrutiny of colleges and universities has yet another focus: foreign funding.\
+\
+Laura MannweilerJuly 24, 2025\
+\
+![](https://www.usnews.com/object/image/00000198-3d1d-d06b-a5dc-7f1faa370000/gettyimages-2207741769.jpg?update-time=1753373024869&size=responsiveSquare150)](https://www.usnews.com/news/national-news/articles/2025-07-24/trump-administration-targets-foreign-funding-at-universities-what-to-know)
+
+[### Rural Hospitals Brace for Medicaid Cuts\
+\
+Rural hospital associations, medical insurance companies and doctors warn the recent cuts to Medicaid will roil rural communities.\
+\
+Aneeta Mathur-Ashton July 21, 2025\
+\
+![](https://www.usnews.com/object/image/00000198-2e68-d5e9-a3d9-ae6d843a0000/gettyimages-1229703347.jpg?update-time=1753126686751&size=responsiveSquare150)](https://www.usnews.com/news/national-news/articles/2025-07-21/rural-hospitals-brace-for-fallout-from-medicaid-cuts)
+
+[### How SNAP Cuts Affect Your State\
+\
+The massive budget bill signed by President Donald Trump will result in sharp cuts to food benefits for the neediest Americans. Here’s how it could play out in your state.\
+\
+Jaclyn Jeffrey-Wilensky and Marissa YelenikJuly 18, 2025\
+\
+![](https://www.usnews.com/object/image/00000196-f93c-dc90-a1fe-f9fc1cb80000/gettyimages-2199171291.jpg?update-time=1747939137278&size=responsiveSquare150)](https://www.usnews.com/news/national-news/articles/2025-07-18/map-see-how-cuts-to-snap-food-assistance-would-affect-your-state)
+
+[### Paying for Med School Post-Megabill\
+\
+Experts say they’re concerned about how Trump’s signature bill could affect medical students and hospitals.\
+\
+Gabrielle CabanesJuly 18, 2025\
+\
+![](https://www.usnews.com/object/image/00000198-1f2f-d3a9-abbd-5f6f09da0000/gettyimages-2208510176.jpg?update-time=1752871300175&size=responsiveSquare150)](https://www.usnews.com/news/national-news/articles/2025-07-18/how-the-passage-of-the-big-beautiful-bill-could-impact-med-students-and-hospitals)
+
+Load More 17, 2025, to delete erroneous reporting that U.S."
+
+# Your Summary
+
+
+
+===== > RESPONSE:  < =====
+U.S. News & World Report published an article on March 17, 2025, stating that Director of National Intelligence Tulsi Gabbard said President Donald Trump and Russian President Vladimir Putin “are very good friends.” The article mentions an interview with NDTV. <image:i>
+
+_________________________
+
+
+
+SummarizeSummariesPrompt - QUERY:
+
+# Instructions
+You just retrieved web sources, each one summarized under "Web Sources". **Your task right now is to summarize the web source summaries.**
+
+Always adhere to the following rules:
+* Write only one to two paragraphs.
+* Include all URLs from the listed sources. Format them as Markdown hyperlinks.
+* Do not add any additional information besides the information in the summaries.
+* Include references (<image:k>) to all relevant images.
+
+# Record
+## Claim
+Claim: "In an interview with NDTV on March 17, 2025 Director of US National Intelligence Tulsi Gabbard said that President Donald Trump and Russian President Vladimir Putin were good friends."
+
+## Actions
+```
+web_search("Tulsi Gabbard NDTV interview March 17 2025 Trump Putin")
+```
+
+## Web Sources
+**Web Search Result**
+
+From [Source](https://www.ndtv.com/world-news/trump-focused-on-peace-tulsi-gabbard-on-russia-ukraine-war-7941806): 
+Content: NDTV interviewed Tulsi Gabbard. According to NDTV, Gabbard said that Donald Trump is focused on peace and has made unprecedented progress in the negotiations between Russia and Ukraine.
+
+
+From [Source](https://www.newsweek.com/tulsi-gabbard-shares-details-trumps-relationship-putin-2046181): 
+Content: Newsweek published an article stating that Tulsi Gabbard said in an interview with NDTV that President Trump is "looking forward to success" ahead of his phone call with Russian President Putin. The article also mentions that Gabbard criticized the Biden administration's handling of the Russia-Ukraine war. The article was updated on March 17, 2025. <image:1416>
+
+
+From [Source](https://www.usnews.com/news/politics/articles/2025-03-17/gabbard-says-trump-is-looking-forward-to-success-ahead-of-talk-with-putin): 
+Content: U.S. News & World Report published an article on March 17, 2025, stating that Director of National Intelligence Tulsi Gabbard said President Donald Trump and Russian President Vladimir Putin “are very good friends.” The article mentions an interview with NDTV. <image:i>
+
+
+## Your Summary
+
+
+
+===== > RESPONSE:  < =====
+NDTV interviewed Tulsi Gabbard, where she discussed Donald Trump's focus on peace and progress in negotiations between Russia and Ukraine ([https://www.ndtv.com/world-news/trump-focused-on-peace-tulsi-gabbard-on-russia-ukraine-war-7941806](https://www.ndtv.com/world-news/trump-focused-on-peace-tulsi-gabbard-on-russia-ukraine-war-7941806)). Newsweek reported that Gabbard said Trump was "looking forward to success" ahead of a phone call with Putin, and also criticized the Biden administration's handling of the Russia-Ukraine war ([https://www.newsweek.com/tulsi-gabbard-shares-details-trumps-relationship-putin-2046181](https://www.newsweek.com/tulsi-gabbard-shares-details-trumps-relationship-putin-2046181)) <image:1416>.
+
+U.S. News & World Report also reported that Gabbard said Trump and Putin "are very good friends" in an interview with NDTV ([https://www.usnews.com/news/politics/articles/2025-03-17/gabbard-says-trump-is-looking-forward-to-success-ahead-of-talk-with-putin](https://www.usnews.com/news/politics/articles/2025-03-17/gabbard-says-trump-is-looking-forward-to-success-ahead-of-talk-with-putin)) <image:i>.
+
+_________________________
+
+
+
+DevelopPrompt - QUERY:
+
+# Instructions
+You just retrieved new Evidence. Now, **analyze the Claim's veracity using the evidence**. Always adhere to the following rules:
+* Focus on developing new insights. Do not repeat larger parts from the Record. Do not restate the Claim.
+* Write down your thoughts step-by-step. Whenever necessary, you may elaborate in more detail.
+* Depending on the topic's complexity, invest one to three paragraphs. The fewer, the better.
+* If you find that there is insufficient information to verify the Claim, explicitly state what information is missing.
+* If you cite web sources, always refer to them by including their URL as a Markdown hyperlink.
+* **Use information only from the recorded evidence**: Avoid inserting information that is not implied by the evidence. You may use commonsense knowledge, though.
+
+# Record
+## Claim
+Claim: "In an interview with NDTV on March 17, 2025 Director of US National Intelligence Tulsi Gabbard said that President Donald Trump and Russian President Vladimir Putin were good friends."
+
+## Actions
+```
+web_search("Tulsi Gabbard NDTV interview March 17 2025 Trump Putin")
+```
+
+## Evidence
+### Evidence from `web_search`
+NDTV interviewed Tulsi Gabbard, where she discussed Donald Trump's focus on peace and progress in negotiations between Russia and Ukraine ([https://www.ndtv.com/world-news/trump-focused-on-peace-tulsi-gabbard-on-russia-ukraine-war-7941806](https://www.ndtv.com/world-news/trump-focused-on-peace-tulsi-gabbard-on-russia-ukraine-war-7941806)). Newsweek reported that Gabbard said Trump was "looking forward to success" ahead of a phone call with Putin, and also criticized the Biden administration's handling of the Russia-Ukraine war ([https://www.newsweek.com/tulsi-gabbard-shares-details-trumps-relationship-putin-2046181](https://www.newsweek.com/tulsi-gabbard-shares-details-trumps-relationship-putin-2046181)) <image:1416>.
+
+U.S. News & World Report also reported that Gabbard said Trump and Putin "are very good friends" in an interview with NDTV ([https://www.usnews.com/news/politics/articles/2025-03-17/gabbard-says-trump-is-looking-forward-to-success-ahead-of-talk-with-putin](https://www.usnews.com/news/politics/articles/2025-03-17/gabbard-says-trump-is-looking-forward-to-success-ahead-of-talk-with-putin)) <image:i>.
+
+
+# Your Analysis
+
+
+
+===== > RESPONSE:  < =====
+The evidence confirms that Tulsi Gabbard was interviewed by NDTV on March 17, 2025. U.S. News & World Report states that Gabbard said Trump and Putin "are very good friends" in the NDTV interview ([https://www.usnews.com/news/politics/articles/2025-03-17/gabbard-says-trump-is-looking-forward-to-success-ahead-of-talk-with-putin](https://www.usnews.com/news/politics/articles/2025-03-17/gabbard-says-trump-is-looking-forward-to-success-ahead-of-talk-with-putin)).
+
+Therefore, the claim is supported by the evidence.
+
+_________________________
+
+
+
+JudgePrompt - QUERY:
+
+# Instructions
+**Determine the Claim's veracity** by following these steps:
+1. Briefly summarize the key insights from the fact-check (see Record) in at most one paragraph.
+2. Write one paragraph about which one of the Decision Options applies best. Include the most appropriate decision option at the end and enclose it in backticks like `this`.
+
+
+
+
+## Decision Options
+* `not enough information`: The fact-check does not contain sufficient information to come to an conclusion. For example,there is substantial lack of evidence or the evidence is inconclusive, conflicting or self-contradictory. In the case of a lack of evidence, state which information exactly is missing. In particular, if no RESULTS or sources are available, pick this decision.
+* `true`: The claim is factually accurate when it is confirmed by evidence from multiple and reliable sources.
+* `false`: The claim is not factually accurate. This is the case if one of the following three conditions is met:(1) The claim is demonstrably false when it is disproven by evidence from multiple and reliable sources,(2) The claim or image is taken out of context, i.e. the origin, content and/or meaning of a statement or an image is misrepresented. For example, an old claim or an old image is mispresented in a new context in a misleading way,(3) There is not enough evidence to verify the claim or the evidence is conflicting or self-contradictory.
+
+# Record
+## Claim
+Claim: "In an interview with NDTV on March 17, 2025 Director of US National Intelligence Tulsi Gabbard said that President Donald Trump and Russian President Vladimir Putin were good friends."
+
+## Actions
+```
+web_search("Tulsi Gabbard NDTV interview March 17 2025 Trump Putin")
+```
+
+## Evidence
+### Evidence from `web_search`
+NDTV interviewed Tulsi Gabbard, where she discussed Donald Trump's focus on peace and progress in negotiations between Russia and Ukraine ([https://www.ndtv.com/world-news/trump-focused-on-peace-tulsi-gabbard-on-russia-ukraine-war-7941806](https://www.ndtv.com/world-news/trump-focused-on-peace-tulsi-gabbard-on-russia-ukraine-war-7941806)). Newsweek reported that Gabbard said Trump was "looking forward to success" ahead of a phone call with Putin, and also criticized the Biden administration's handling of the Russia-Ukraine war ([https://www.newsweek.com/tulsi-gabbard-shares-details-trumps-relationship-putin-2046181](https://www.newsweek.com/tulsi-gabbard-shares-details-trumps-relationship-putin-2046181)) <image:1416>.
+
+U.S. News & World Report also reported that Gabbard said Trump and Putin "are very good friends" in an interview with NDTV ([https://www.usnews.com/news/politics/articles/2025-03-17/gabbard-says-trump-is-looking-forward-to-success-ahead-of-talk-with-putin](https://www.usnews.com/news/politics/articles/2025-03-17/gabbard-says-trump-is-looking-forward-to-success-ahead-of-talk-with-putin)) <image:i>.
+
+
+## Elaboration
+The evidence confirms that Tulsi Gabbard was interviewed by NDTV on March 17, 2025. U.S. News & World Report states that Gabbard said Trump and Putin "are very good friends" in the NDTV interview ([https://www.usnews.com/news/politics/articles/2025-03-17/gabbard-says-trump-is-looking-forward-to-success-ahead-of-talk-with-putin](https://www.usnews.com/news/politics/articles/2025-03-17/gabbard-says-trump-is-looking-forward-to-success-ahead-of-talk-with-putin)).
+
+Therefore, the claim is supported by the evidence.
+
+
+# Your Judgement
+
+
+
+===== > RESPONSE:  < =====
+The evidence confirms that Tulsi Gabbard stated that Trump and Putin were good friends in an interview with NDTV on March 17, 2025.
+
+`true`
+_________________________
+
+
+
+SummarizeDocPrompt - QUERY:
+
+# Instructions
+You are provided with the record of a fact-check. It contains the Claim to be verified and a documentation of all the fact-checking work along the gathered evidence. Your task is to **summarize the fact-check**. That is, you provide a concise, one-paragraph justification for the final VERDICT based on the knowledge from the Record. Note:
+* Be truthful, brief, do not add any additional information besides the information given in the Record. 
+* Link key sources in your summary. Use Markdown notation for that. You may link them in-line.
+* Don't state the Claim again. Rather focus on the key insights of the fact-check.
+* Simply print just the summary.
+
+# Record
+## Claim
+Claim: "In an interview with NDTV on March 17, 2025 Director of US National Intelligence Tulsi Gabbard said that President Donald Trump and Russian President Vladimir Putin were good friends."
+
+## Actions
+```
+web_search("Tulsi Gabbard NDTV interview March 17 2025 Trump Putin")
+```
+
+## Evidence
+### Evidence from `web_search`
+NDTV interviewed Tulsi Gabbard, where she discussed Donald Trump's focus on peace and progress in negotiations between Russia and Ukraine ([https://www.ndtv.com/world-news/trump-focused-on-peace-tulsi-gabbard-on-russia-ukraine-war-7941806](https://www.ndtv.com/world-news/trump-focused-on-peace-tulsi-gabbard-on-russia-ukraine-war-7941806)). Newsweek reported that Gabbard said Trump was "looking forward to success" ahead of a phone call with Putin, and also criticized the Biden administration's handling of the Russia-Ukraine war ([https://www.newsweek.com/tulsi-gabbard-shares-details-trumps-relationship-putin-2046181](https://www.newsweek.com/tulsi-gabbard-shares-details-trumps-relationship-putin-2046181)) <image:1416>.
+
+U.S. News & World Report also reported that Gabbard said Trump and Putin "are very good friends" in an interview with NDTV ([https://www.usnews.com/news/politics/articles/2025-03-17/gabbard-says-trump-is-looking-forward-to-success-ahead-of-talk-with-putin](https://www.usnews.com/news/politics/articles/2025-03-17/gabbard-says-trump-is-looking-forward-to-success-ahead-of-talk-with-putin)) <image:i>.
+
+
+## Elaboration
+The evidence confirms that Tulsi Gabbard was interviewed by NDTV on March 17, 2025. U.S. News & World Report states that Gabbard said Trump and Putin "are very good friends" in the NDTV interview ([https://www.usnews.com/news/politics/articles/2025-03-17/gabbard-says-trump-is-looking-forward-to-success-ahead-of-talk-with-putin](https://www.usnews.com/news/politics/articles/2025-03-17/gabbard-says-trump-is-looking-forward-to-success-ahead-of-talk-with-putin)).
+
+Therefore, the claim is supported by the evidence.
+
+
+## Final Judgement
+The evidence confirms that Tulsi Gabbard stated that Trump and Putin were good friends in an interview with NDTV on March 17, 2025.
+
+`true`
+
+## Summary
+
+
+
+===== > RESPONSE:  < =====
+In an interview with NDTV on March 17, 2025, Tulsi Gabbard, then Director of US National Intelligence, stated that Donald Trump and Vladimir Putin were "very good friends," as reported by U.S. News & World Report ([https://www.usnews.com/news/politics/articles/2025-03-17/gabbard-says-trump-is-looking-forward-to-success-ahead-of-talk-with-putin](https://www.usnews.com/news/politics/articles/2025-03-17/gabbard-says-trump-is-looking-forward-to-success-ahead-of-talk-with-putin)).
+
+_________________________
+
+
+

@@ -1,0 +1,54 @@
+Number of workers: 3
+Total run duration: 0:00:38 h
+Time per claim: 0:21 min
+Model:
+  Calls: 31
+  Input tokens: 88K
+  Output tokens: 3.4K
+  Input tokens cost: $0.01
+  Output tokens cost: $0.00
+  Total cost: $0.01
+Tools:
+  searcher:
+    Total searches: 5
+    Search engine calls:
+      google: 4
+      google_vision: 1
+Predictions:
+  Dataset_Metrics:
+    Total: 3
+    Refused: 0
+    Balanced_Accuracy: 0.67
+    Matthew_Correlation_Coefficient: 0.0
+    True_Negative_Rate_Specificity: 0.67
+    Macro_Averaged_F1_Score: 0.4
+    Macro_Averaged_F0.5_Score: 0.45
+    Correct_Predictions: 2
+    Wrong_Predictions: 1
+  Claim_Type_Metrics:
+    Claim_Type_Metrics:
+      Claims_Text_Only:
+        Balanced_Accuracy: 0.5
+        Matthews_Correlation_Coefficient: 0.0
+        True_Negative_Rate/Specificity: 0.5
+        False_Precision: 1.0
+        False_Recall: 0.5
+        False_F1_Score: 0.67
+        False_F0.5_Score: 0.83
+        True_Precision: 0.0
+        True_Recall: 0.0
+        True_F1_Score: 0.0
+        True_F0.5_Score: 0.0
+        Correct_Predictions: 1
+        Wrong_Predictions: 1
+      Claims_Normal_Images:
+        Balanced_Accuracy: 1.0
+        Matthews_Correlation_Coefficient: 0.0
+        True_Negative_Rate/Specificity: 1.0
+        False_Precision: 1.0
+        False_Recall: 1.0
+        False_F1_Score: 1.0
+        False_F0.5_Score: 1.0
+        Correct_Predictions: 1
+        Wrong_Predictions: 0
+      Claims_Altered_Images: {}

@@ -1,0 +1,1616 @@
+PlanPrompt - QUERY:
+
+# Instructions
+The available knowledge is insufficient to assess the Claim. Therefore, **propose a set of actions** to retrieve new and helpful evidence. Adhere to the following rules:
+* The actions available are listed under Valid Actions, including a short description for each action. No other actions are possible at this moment. 
+* For each action, use the formatting as specified in Valid Actions.
+* Include all actions in a single Markdown code block at the end of your answer.
+* Propose as few actions as possible, but as much as needed. Do not propose similar or previously used actions.
+
+
+
+## Valid Actions
+* `web_search`
+   * Description: Run an open web search on Google or DuckDuckGO to retrieve any related webpage.
+   * How to use: Do not use this with a previously used or similar query from previous web searches. If a previous web search did not yield any results, use a very different query.
+   * Format: web_search("your web search query goes here")
+
+* `geolocate`
+   * Description: Performs geolocation to determine the country where an image was taken.
+   * How to use: Provide an image and the model will determine the most likely countries where it was taken.
+   * Format: geolocate(<image:k>), where `k` is the image's ID
+
+* `reverse_search`
+   * Description: Performs a reverse image search to find similar images on the web.
+   * How to use: Provide an image and the model will perform a reverse search to find similar images.
+   * Format: reverse_search(<image:k>), where `k` is the image's ID
+
+* `image_search`
+   * Description: Run an image search on Google to retrieve related images for a given query.
+   * How to use: This is a helpful tool for fact-checking images. Use this to retrieve images associated with a specific keyword or phrase. Ensure that the query is clear and specific to improve search accuracy. If no relevant images are found, refine the query or use more descriptive terms.
+   * Format: image_search("your image search query goes here")
+
+# Example: web_search()
+
+## Claim
+Text: "New Zealand’s new Food Bill bans gardening"
+Claim date: October 29, 2020
+
+...
+
+## Actions
+```
+web_search("New Zealand Food Bill 2020")
+web_search("New Zealand Food Bill gardening ban")
+```
+
+# Example: geolocate()
+
+## Claim
+Text: "<image:k> shows a nuclear weapons facility in Usbekistan."
+
+...
+
+## Actions
+```
+geolocate(<image:k>)
+```
+
+# Example: reverse_search()
+
+## Claim
+Text: "<image:k> shows a rare event of a solar eclipse with a double ring."
+
+...
+
+## Actions
+```
+reverse_search(<image:k>)
+```
+
+# Example: image_search()
+
+## Claim
+Text: "Chinese officials in white protective hazmat suits carried people down a hallway to be quarantined for having COVID-19 in November 2022."
+
+...
+
+ACTIONS:
+```
+image_search("China officials white suits carry people")
+image_search("China officials carry people COVID quarantine 2022")
+```
+
+# Record
+## Claim
+Claim: "<image:16> This image shows Ukrainian President Volodymyr Zelenskyy signing Israeli bombs intended for use against Palestinians in Gaza."
+
+# Your Actions
+
+
+
+===== > RESPONSE:  < =====
+```
+reverse_search(<image:16>)
+web_search("Volodymyr Zelenskyy signing bombs")
+```
+_________________________
+
+
+
+SummarizeResultPrompt - QUERY:
+
+# Instructions
+In order to find evidence that helps your fact-check, you just ran a web search which yielded a Search Result. **Your task right now is to summarize the Search Result.** What to include:
+* information that might be useful for the fact-check (see Record)
+* relevant images (refer to images by inserting their reference <image:k>)
+* if available: the release date as well as the author or the publisher (e.g. the media company) of the search result.
+
+Do NOT include:
+* advertisements
+* any other information not related to the Record or the Claim
+
+Additional rules:
+* Do not add any additional information besides the information in the Search Result.
+* If the Search Result doesn't contain any relevant information for the fact-checking work, simply print one word in capital letters: "NONE".
+* Keep your writing style like in the Examples 1, 2 and 3 provided to you.
+* Try to filter out relevant information even if the search result is in a different language.
+
+# Example 1
+The search result from America Today provides several photographs of the Notre-Dame Cathedral fire on April 15, 2019. <image:i>, <image:j>, <image:k>. None of the images show the Eiffel Tower in the background. 
+
+# Example 2
+NONE
+
+# Example 3
+The Guardian discusses a report blaming the Syrian government for a toxic gas attack and condemning their use of chemical weapons. The Guardian mentions the Chemical Weapons Convention and the responsibilities of Syria under the convention. According to The Guardian, The White House condemned the Assad regime for defying the norm against chemical weapons use.
+
+# Record
+## Claim
+Claim: "<image:16> This image shows Ukrainian President Volodymyr Zelenskyy signing Israeli bombs intended for use against Palestinians in Gaza."
+
+## Actions
+```
+reverse_search(<image:16>)
+web_search("Volodymyr Zelenskyy signing bombs")
+```
+
+# Search Result
+From [Source](https://www.bbc.com/news/articles/c80rkv0k4j8o): Found exact image on website with title: Republican anger clouds Zelensky's crunch Biden meeting - BBC
+Content: "
+
+[Home](/)
+
+News
+
+[Sport](/sport)
+
+Business
+
+Innovation
+
+Culture
+
+Arts
+
+Travel
+
+Earth
+
+Audio
+
+[Video](/video)
+
+Live
+
+[Weather](https://www.bbc.com/weather)
+
+[Newsletters](https://www.bbc.com/newsletters)
+
+Republican anger clouds Zelensky-Biden 'victory plan' meeting
+=============================================================
+
+26 September 2024
+
+ShareSave
+
+Holly Honderich & Paul Kirby
+
+BBC News
+
+ShareSave
+
+! <image:950>! EPA-EFE/REX/Shutterstock Ukrainian President Volodymyr Zelensky (left) and US President Joe Biden meet at the White House. Photo: 26 September 2024 <image:951> EPA-EFE/REX/Shutterstock
+
+Volodymyr Zelensky (left) and Joe Biden said they would focus on Ukraine's "victory plan" at their White House talks
+
+Volodymyr Zelensky is meeting Joe Biden and Kamala Harris at the White House to discuss his "victory plan", which the Ukrainian president hopes will pressure Russia into agreeing a diplomatic end to the war.
+
+Details have been kept secret, but Zelensky is likely to ask the US president and vice-president for continuing military and financial support, as well as security guarantees.
+
+It comes amid a row with Donald Trump and the Republican party ahead of November's US presidential election.
+
+They were angered by Zelensky's visit to an arms factory in Biden's hometown of Scranton with top Democrats. Zelensky will meet Trump on Friday despite earlier reports that the meeting had been cancelled.
+
+Zelensky's visit to the ammunition factory in the key swing state of Pennsylvania was labelled by leading Republicans as a partisan campaign event.
+
+In a public letter, speaker of the US House Mike Johnson said the visit was "designed to help Democrats" and claimed it amounted to "election interference".
+
+He also demanded that Ukraine fire its ambassador to Washington who helped arrange the visit.
+
+The Republican-led House Oversight Committee has also announced it would investigate whether Zelensky's trip was an attempt to use a foreign leader to benefit Harris's campaign.
+
+Her Republican rival for the presidency, Donald Trump, mocked Zelensky at a campaign event as the "greatest salesman on Earth" and accused him of refusing to "make a deal" with Moscow.
+
+Earlier this week, Trump also praised Russia's military capabilities, saying: "They beat Hitler, they beat Napoleon - that’s what they do, they fight."
+
+The two men have long had a fractious relationship. In 2019, Trump was impeached by the US House over accusations that he pressured Ukraine's leader to dig up damaging information on a political rival.
+
+The row clouded a week in which Zelensky has twice addressed the United Nations, ramping up efforts to persuade the US and other allies to boost support more than two and a half years into Russia's full-scale invasion.
+
+At the White House meetings, Zelensky is expected to push again for US backing to fire Western-made long-range missiles deep into Russian territory, which Biden has so far blocked.
+
+Before the meeting, Biden said: "Let me be clear, Russia will not prevail in war... Ukraine will prevail".
+
+He also pledged to support Kyiv "in its path to membership to both the EU and Nato".
+
+Meanwhile, Zelensky thanked the US for its "unwavering bipartisan support".
+
+He later met Harris, with the vice-president reiterating her support for Ukraine and arguing the US must continue its role of global leadership.
+
+With Russian troops advancing in the east of Ukraine, the outcome of Zelensky's meeting with Biden and Harris is seen by many experts as a key moment in his attempt to shore up US support before the November election.
+
+On Wednesday, Russia's Vladimir Putin announced a plan to revise Moscow's nuclear doctrine, to enable Russia to use nuclear weapons against non-nuclear states if they are supported by nuclear states.
+
+Putin's spokesperson later clarified that it was meant as a "specific signal" to the West.
+
+*   [Putin proposes new rules for using nuclear weapons](https://www.bbc.com/news/articles/c5yjej0rvw0o)
+    
+
+! <image:950>!Reuters President Volodymyr Zelensky signs ammunition while visiting the Scranton Army Ammunition Plant (SCAAP) in Scranton, Pennsylvania, USA, on 23 September 2024 <image:954>Reuters
+
+President Volodymyr Zelensky visited the Scranton Army Ammunition Plant alongside top Democrats on Friday
+
+Hours before his meeting with Zelensky, Biden announced a $7.9bn (£5.9bn) package of military assistance to Ukraine.
+
+The aid, part of a $61bn package that passed Congress in April, will be approved through presidential drawdown authority and will pull from existing Pentagon supplies to deliver the arms more quickly.
+
+Congressional Republicans blocked the package for months earlier this year, before ultimately relenting and passing the legislation. The delay caused arms supplies to Ukraine to dry up for several months.
+
+Zelensky thanked the US - Ukraine's largest foreign donor.
+
+At the same time, he also reportedly expressed frustration at the delay in delivering weapons that were already promised when he met US congressmen on Thursday morning.
+
+[Russia planning to target nuclear plants, Zelensky says\
+-------------------------------------------------------](https://www.bbc.com/news/articles/c20mz0l36gjo)
+
+[Zelensky looks to Biden to back Ukraine 'victory plan'\
+------------------------------------------------------](https://www.bbc.com/news/articles/c07n811zyp2o)
+
+! <image:950>!Strap <image:956>
+
+More on the US election
+-----------------------
+
+*   SIMPLE GUIDE: [Everything you need to know about the vote](https://www.bbc.co.uk/news/world-us-canada-67285325)
+    
+*   EXPLAINER: [Seven swing states that could decide election](https://www.bbc.com/news/articles/c511pyn3xw3o)
+    
+*   FACT CHECK: [Was US economy stronger under Biden or Trump?](https://www.bbc.com/news/articles/c8xl5vnlzpwo)
+    
+
+! <image:950>!US election unspun promo banner  <image:958>
+
+North America correspondent Anthony Zurcher makes sense of the race for the White House in his weekly US Election Unspun newsletter.
+
+Readers in the UK [can sign up here](https://www.bbc.co.uk/newsletters/zgmn46f)
+. Those outside the UK [can sign up here.](https://cloud.email.bbc.com/US_Election_Unspun_newsletter_signup?&at_bbc_team=studios&at_medium=Onsite&at_objective=acquisition&at_ptr_name=bbc.com&at_link_origin=azurcherarticle&at_campaign=uselectionunspun&at_campaign_type=owned)
+
+[War in Ukraine](/news/topics/c1vw6q14rzqt)
+
+[Volodymyr Zelensky](/news/topics/c4vvr0ergrzt)
+
+[Russia](/news/topics/ce1qrvlegnyt)
+
+[United States](/news/topics/cx1m7zg01xyt)
+
+[Ukraine](/news/topics/cx1m7zg0gzdt)
+
+[Joe Biden](/news/topics/czyymgqmn6dt)
+
+* * *"
+
+# Your Summary
+
+
+
+===== > RESPONSE:  < =====
+The BBC News article, published on September 26, 2024, discusses a meeting between Ukrainian President Volodymyr Zelensky and US President Joe Biden. The article mentions Zelensky's visit to the Scranton Army Ammunition Plant (SCAAP) on September 23, 2024, where he signed ammunition. <image:954> The article does not mention Israeli bombs or Gaza.
+
+_________________________
+
+
+
+SummarizeResultPrompt - QUERY:
+
+# Instructions
+In order to find evidence that helps your fact-check, you just ran a web search which yielded a Search Result. **Your task right now is to summarize the Search Result.** What to include:
+* information that might be useful for the fact-check (see Record)
+* relevant images (refer to images by inserting their reference <image:k>)
+* if available: the release date as well as the author or the publisher (e.g. the media company) of the search result.
+
+Do NOT include:
+* advertisements
+* any other information not related to the Record or the Claim
+
+Additional rules:
+* Do not add any additional information besides the information in the Search Result.
+* If the Search Result doesn't contain any relevant information for the fact-checking work, simply print one word in capital letters: "NONE".
+* Keep your writing style like in the Examples 1, 2 and 3 provided to you.
+* Try to filter out relevant information even if the search result is in a different language.
+
+# Example 1
+The search result from America Today provides several photographs of the Notre-Dame Cathedral fire on April 15, 2019. <image:i>, <image:j>, <image:k>. None of the images show the Eiffel Tower in the background. 
+
+# Example 2
+NONE
+
+# Example 3
+The Guardian discusses a report blaming the Syrian government for a toxic gas attack and condemning their use of chemical weapons. The Guardian mentions the Chemical Weapons Convention and the responsibilities of Syria under the convention. According to The Guardian, The White House condemned the Assad regime for defying the norm against chemical weapons use.
+
+# Record
+## Claim
+Claim: "<image:16> This image shows Ukrainian President Volodymyr Zelenskyy signing Israeli bombs intended for use against Palestinians in Gaza."
+
+## Actions
+```
+reverse_search(<image:16>)
+web_search("Volodymyr Zelenskyy signing bombs")
+```
+
+# Search Result
+From [Source](https://www.bbc.co.uk/news/articles/c80rkv0k4j8o): Found exact image on website with title: Republican anger clouds Zelensky-Biden 'victory plan' meeting - BBC
+Content: "!Ukrainian President Volodymyr Zelensky (left) and US President Joe Biden meet at the White House. Photo: 26 September 2024 <image:959>Image source, EPA-EFE/REX/Shutterstock
+
+Image caption,
+
+Volodymyr Zelensky (left) and Joe Biden said they would focus on Ukraine's "victory plan" at their White House talks
+
+Holly Honderich & Paul Kirby
+
+BBC News
+
+*   Published
+    
+    26 September 2024
+    
+
+**Volodymyr Zelensky is meeting Joe Biden and Kamala Harris at the White House to discuss his "victory plan", which the Ukrainian president hopes will pressure Russia into agreeing a diplomatic end to the war.**
+
+Details have been kept secret, but Zelensky is likely to ask the US president and vice-president for continuing military and financial support, as well as security guarantees.
+
+It comes amid a row with Donald Trump and the Republican party ahead of November's US presidential election.
+
+They were angered by Zelensky's visit to an arms factory in Biden's hometown of Scranton with top Democrats. Zelensky will meet Trump on Friday despite earlier reports that the meeting had been cancelled.
+
+Zelensky's visit to the ammunition factory in the key swing state of Pennsylvania was labelled by leading Republicans as a partisan campaign event.
+
+In a public letter, speaker of the US House Mike Johnson said the visit was "designed to help Democrats" and claimed it amounted to "election interference".
+
+He also demanded that Ukraine fire its ambassador to Washington who helped arrange the visit.
+
+The Republican-led House Oversight Committee has also announced it would investigate whether Zelensky's trip was an attempt to use a foreign leader to benefit Harris's campaign.
+
+Her Republican rival for the presidency, Donald Trump, mocked Zelensky at a campaign event as the "greatest salesman on Earth" and accused him of refusing to "make a deal" with Moscow.
+
+Earlier this week, Trump also praised Russia's military capabilities, saying: "They beat Hitler, they beat Napoleon - that’s what they do, they fight."
+
+The two men have long had a fractious relationship. In 2019, Trump was impeached by the US House over accusations that he pressured Ukraine's leader to dig up damaging information on a political rival.
+
+The row clouded a week in which Zelensky has twice addressed the United Nations, ramping up efforts to persuade the US and other allies to boost support more than two and a half years into Russia's full-scale invasion.
+
+At the White House meetings, Zelensky is expected to push again for US backing to fire Western-made long-range missiles deep into Russian territory, which Biden has so far blocked.
+
+Before the meeting, Biden said: "Let me be clear, Russia will not prevail in war... Ukraine will prevail".
+
+He also pledged to support Kyiv "in its path to membership to both the EU and Nato".
+
+Meanwhile, Zelensky thanked the US for its "unwavering bipartisan support".
+
+He later met Harris, with the vice-president reiterating her support for Ukraine and arguing the US must continue its role of global leadership.
+
+With Russian troops advancing in the east of Ukraine, the outcome of Zelensky's meeting with Biden and Harris is seen by many experts as a key moment in his attempt to shore up US support before the November election.
+
+On Wednesday, Russia's Vladimir Putin announced a plan to revise Moscow's nuclear doctrine, to enable Russia to use nuclear weapons against non-nuclear states if they are supported by nuclear states.
+
+Putin's spokesperson later clarified that it was meant as a "specific signal" to the West.
+
+*   [Putin proposes new rules for using nuclear weapons](/news/articles/c5yjej0rvw0o)
+    
+
+!President Volodymyr Zelensky signs ammunition while visiting the Scranton Army Ammunition Plant (SCAAP) in Scranton, Pennsylvania, USA, on 23 September 2024 <image:960>Image source, Reuters
+
+Image caption,
+
+President Volodymyr Zelensky visited the Scranton Army Ammunition Plant alongside top Democrats on Friday
+
+Hours before his meeting with Zelensky, Biden announced a $7.9bn (£5.9bn) package of military assistance to Ukraine.
+
+The aid, part of a $61bn package that passed Congress in April, will be approved through presidential drawdown authority and will pull from existing Pentagon supplies to deliver the arms more quickly.
+
+Congressional Republicans blocked the package for months earlier this year, before ultimately relenting and passing the legislation. The delay caused arms supplies to Ukraine to dry up for several months.
+
+Zelensky thanked the US - Ukraine's largest foreign donor.
+
+At the same time, he also reportedly expressed frustration at the delay in delivering weapons that were already promised when he met US congressmen on Thursday morning.
+
+*   [Russia planning to target nuclear plants, Zelensky says](/news/articles/c20mz0l36gjo)
+    
+    *   Published
+        
+        25 September 2024
+        
+    
+*   [Zelensky looks to Biden to back Ukraine 'victory plan'](/news/articles/c07n811zyp2o)
+    
+    *   Published
+        
+        25 September 2024
+        
+    
+
+!Strap <image:961>
+
+More on the US election
+-----------------------
+
+*   SIMPLE GUIDE: [Everything you need to know about the vote](/news/world-us-canada-67285325)
+    
+*   EXPLAINER: [Seven swing states that could decide election](/news/articles/c511pyn3xw3o)
+    
+*   FACT CHECK: [Was US economy stronger under Biden or Trump?](/news/articles/c8xl5vnlzpwo)
+    
+
+!US election unspun promo banner  <image:962>
+
+North America correspondent Anthony Zurcher makes sense of the race for the White House in his weekly US Election Unspun newsletter.
+
+Readers in the UK [can sign up here](/newsletters/zgmn46f)
+. Those outside the UK [can sign up here.](https://cloud.email.bbc.com/US_Election_Unspun_newsletter_signup?&at_bbc_team=studios&at_medium=Onsite&at_objective=acquisition&at_ptr_name=bbc.com&at_link_origin=azurcherarticle&at_campaign=uselectionunspun&at_campaign_type=owned)
+
+Related topics
+--------------
+
+*   [War in Ukraine](/news/topics/c1vw6q14rzqt)
+    
+*   [Volodymyr Zelensky](/news/topics/c4vvr0ergrzt)
+    
+*   [Russia](/news/topics/ce1qrvlegnyt)
+    
+*   [United States](/news/topics/cx1m7zg01xyt)
+    
+*   [Ukraine](/news/topics/cx1m7zg0gzdt)
+    
+*   [Joe Biden](/news/topics/czyymgqmn6dt)"
+
+# Your Summary
+
+
+
+===== > RESPONSE:  < =====
+The image in the claim shows Ukrainian President Volodymyr Zelensky signing ammunition at the Scranton Army Ammunition Plant (SCAAP) in Scranton, Pennsylvania, USA, on September 23, 2024. The BBC published the article on September 26, 2024. <image:960>
+
+_________________________
+
+
+
+SummarizeResultPrompt - QUERY:
+
+# Instructions
+In order to find evidence that helps your fact-check, you just ran a web search which yielded a Search Result. **Your task right now is to summarize the Search Result.** What to include:
+* information that might be useful for the fact-check (see Record)
+* relevant images (refer to images by inserting their reference <image:k>)
+* if available: the release date as well as the author or the publisher (e.g. the media company) of the search result.
+
+Do NOT include:
+* advertisements
+* any other information not related to the Record or the Claim
+
+Additional rules:
+* Do not add any additional information besides the information in the Search Result.
+* If the Search Result doesn't contain any relevant information for the fact-checking work, simply print one word in capital letters: "NONE".
+* Keep your writing style like in the Examples 1, 2 and 3 provided to you.
+* Try to filter out relevant information even if the search result is in a different language.
+
+# Example 1
+The search result from America Today provides several photographs of the Notre-Dame Cathedral fire on April 15, 2019. <image:i>, <image:j>, <image:k>. None of the images show the Eiffel Tower in the background. 
+
+# Example 2
+NONE
+
+# Example 3
+The Guardian discusses a report blaming the Syrian government for a toxic gas attack and condemning their use of chemical weapons. The Guardian mentions the Chemical Weapons Convention and the responsibilities of Syria under the convention. According to The Guardian, The White House condemned the Assad regime for defying the norm against chemical weapons use.
+
+# Record
+## Claim
+Claim: "<image:16> This image shows Ukrainian President Volodymyr Zelenskyy signing Israeli bombs intended for use against Palestinians in Gaza."
+
+## Actions
+```
+reverse_search(<image:16>)
+web_search("Volodymyr Zelenskyy signing bombs")
+```
+
+# Search Result
+From [Source](https://nypost.com/2024/09/25/opinion/zelenskys-arms-factory-visit-reeks-of-partisan-foreign-election-interference/): Found exact image on website with title: Zelensky's arms-factory visit reeks of partisan foreign-election ...
+Content: "!Ukrainian president Volodymyr Zelensky appeared to be campaigning in Scranton, Pa. for the Democrats. <image:963>
+
+Ukrainian president Volodymyr Zelensky appeared to be campaigning in Scranton, Pa. for the Democrats. UKRAINIAN PRESIDENTIAL PRESS SERVICE/AFP via Getty Images
+
+What was [Ukrainian President Volodymyr Zelensky](https://nypost.com/2024/09/25/us-news/house-gop-accuses-kamala-harris-of-using-zelensky-as-campaign-surrogate-launches-foreign-interference-inquiry/)
+ doing at what sure _looked_ like a partisan US political event this week?
+
+And how did the White House let this happen?
+
+Zelensky got flown into battleground Pennsylvania aboard a USAF C-17 plane on Tuesday; he then toured the Scranton Army Ammunition Plant accompanied by Gov. Josh Shapiro, Sen. Bob Casey, Rep. Matt Cartwright — the last two being active Democratic candidates.
+
+And it looks like no GOP candidates got invited — trapping a foreign head of state into apparently taking sides in US domestic politics.
+
+Yet Zelensky was guarded by Secret Service agents and driven around in Secret Service vehicles, adding more reek of impropriety: Who covered those expenses?
+
+Someone in the Biden administration pulled a fast one: Pennsylvania has a fair number of anti-Russian Polish-Americans and others of Eastern European heritage who might be swayed by Zelensky’s seeming preference.
+
+Legalities aside, this is terrible for Zelensky: Ukraine desperately needs support from Republicans as well as Democrats in Congress, and will no matter who holds the White House next year.
+
+House Speaker Mike Johnson is calling on Zelensky to fire his US ambassador for letting this disgrace happen, a move that could mend _Ukraine’s_ fences here.
+
+But Congress will need answers on the American side, too: After all, Democrats impeached President Donald Trump over _his_ supposed abuses linked to Ukraine; now we have the misuse of a foreign guest’s visit to influence US politics.
+
+We absolutely endorse US support of Kyiv against Moscow’s brutal invasion: Vladimir Putin must not succeed.
+
+And Democratic candidates have every right to slam those Republicans who want to hang Ukraine out to dry.
+
+But dragging any foreign leader, _especially_ one who’s seeking now new support for his nation from the White House, into US politics is morally criminal — at least.
+
+Whether at the White House or the State Department, _American_ heads need to roll over this."
+
+# Your Summary
+
+
+
+===== > RESPONSE:  < =====
+The New York Post published an article on September 25, 2024, discussing Ukrainian President Volodymyr Zelensky's visit to the Scranton Army Ammunition Plant in Pennsylvania. <image:963> The article suggests that Zelensky's visit, accompanied by Democratic candidates, appeared to be a partisan political event.
+
+_________________________
+
+
+
+SummarizeSummariesPrompt - QUERY:
+
+# Instructions
+You just retrieved web sources, each one summarized under "Web Sources". **Your task right now is to summarize the web source summaries.**
+
+Always adhere to the following rules:
+* Write only one to two paragraphs.
+* Include all URLs from the listed sources. Format them as Markdown hyperlinks.
+* Do not add any additional information besides the information in the summaries.
+* Include references (<image:k>) to all relevant images.
+
+# Record
+## Claim
+Claim: "<image:16> This image shows Ukrainian President Volodymyr Zelenskyy signing Israeli bombs intended for use against Palestinians in Gaza."
+
+## Actions
+```
+reverse_search(<image:16>)
+web_search("Volodymyr Zelenskyy signing bombs")
+```
+
+## Web Sources
+**Reverse Search Result** The exact image was found in the following sources:
+
+From [Source](https://www.bbc.com/news/articles/c80rkv0k4j8o): Found exact image on website with title: Republican anger clouds Zelensky's crunch Biden meeting - BBC
+Content: The BBC News article, published on September 26, 2024, discusses a meeting between Ukrainian President Volodymyr Zelensky and US President Joe Biden. The article mentions Zelensky's visit to the Scranton Army Ammunition Plant (SCAAP) on September 23, 2024, where he signed ammunition. <image:954> The article does not mention Israeli bombs or Gaza.
+
+
+From [Source](https://www.bbc.co.uk/news/articles/c80rkv0k4j8o): Found exact image on website with title: Republican anger clouds Zelensky-Biden 'victory plan' meeting - BBC
+Content: The image in the claim shows Ukrainian President Volodymyr Zelensky signing ammunition at the Scranton Army Ammunition Plant (SCAAP) in Scranton, Pennsylvania, USA, on September 23, 2024. The BBC published the article on September 26, 2024. <image:960>
+
+
+From [Source](https://nypost.com/2024/09/25/opinion/zelenskys-arms-factory-visit-reeks-of-partisan-foreign-election-interference/): Found exact image on website with title: Zelensky's arms-factory visit reeks of partisan foreign-election ...
+Content: The New York Post published an article on September 25, 2024, discussing Ukrainian President Volodymyr Zelensky's visit to the Scranton Army Ammunition Plant in Pennsylvania. <image:963> The article suggests that Zelensky's visit, accompanied by Democratic candidates, appeared to be a partisan political event.
+
+
+## Your Summary
+
+
+
+===== > RESPONSE:  < =====
+The image shows Ukrainian President Volodymyr Zelensky signing ammunition at the Scranton Army Ammunition Plant (SCAAP) in Pennsylvania, USA, on September 23, 2024. The BBC published an article on September 26, 2024, discussing the meeting between Zelensky and US President Joe Biden, and mentions Zelensky's visit to the SCAAP. The New York Post also published an article on September 25, 2024, discussing Zelensky's visit to the Scranton Army Ammunition Plant.
+
+The articles do not mention Israeli bombs or Gaza.
+*   [https://www.bbc.com/news/articles/c80rkv0k4j8o](https://www.bbc.com/news/articles/c80rkv0k4j8o)
+*   [https://www.bbc.co.uk/news/articles/c80rkv0k4j8o](https://www.bbc.co.uk/news/articles/c80rkv0k4j8o)
+*   [https://nypost.com/2024/09/25/opinion/zelenskys-arms-factory-visit-reeks-of-partisan-foreign-election-interference/](https://nypost.com/2024/09/25/opinion/zelenskys-arms-factory-visit-reeks-of-partisan-foreign-election-interference/)
+
+<image:954>
+<image:960>
+<image:963>
+
+_________________________
+
+
+
+SummarizeResultPrompt - QUERY:
+
+# Instructions
+In order to find evidence that helps your fact-check, you just ran a web search which yielded a Search Result. **Your task right now is to summarize the Search Result.** What to include:
+* information that might be useful for the fact-check (see Record)
+* relevant images (refer to images by inserting their reference <image:k>)
+* if available: the release date as well as the author or the publisher (e.g. the media company) of the search result.
+
+Do NOT include:
+* advertisements
+* any other information not related to the Record or the Claim
+
+Additional rules:
+* Do not add any additional information besides the information in the Search Result.
+* If the Search Result doesn't contain any relevant information for the fact-checking work, simply print one word in capital letters: "NONE".
+* Keep your writing style like in the Examples 1, 2 and 3 provided to you.
+* Try to filter out relevant information even if the search result is in a different language.
+
+# Example 1
+The search result from America Today provides several photographs of the Notre-Dame Cathedral fire on April 15, 2019. <image:i>, <image:j>, <image:k>. None of the images show the Eiffel Tower in the background. 
+
+# Example 2
+NONE
+
+# Example 3
+The Guardian discusses a report blaming the Syrian government for a toxic gas attack and condemning their use of chemical weapons. The Guardian mentions the Chemical Weapons Convention and the responsibilities of Syria under the convention. According to The Guardian, The White House condemned the Assad regime for defying the norm against chemical weapons use.
+
+# Record
+## Claim
+Claim: "<image:16> This image shows Ukrainian President Volodymyr Zelenskyy signing Israeli bombs intended for use against Palestinians in Gaza."
+
+## Actions
+```
+reverse_search(<image:16>)
+web_search("Volodymyr Zelenskyy signing bombs")
+```
+
+# Search Result
+From [Source](https://spotlight.ebu.ch/p/video-caption-falsely-claims-zelenskyy): 
+Content: "factory supporting Ukraine's defense needs
+
+[![George Powell's avatar](https://substackcdn.com/image/fetch/$s_!Iu9l!,w_36,h_36,c_fill,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F1646329b-ef5d-477f-8936-2cd4f5ba7c58_399x399.jpeg)](https://substack.com/@powellgeorge)
+
+[George Powell](https://substack.com/@powellgeorge)
+
+Mar 13, 2025
+
+[](https://spotlight.ebu.ch/p/video-caption-falsely-claims-zelenskyy/comments)
+
+1
+
+[Share](javascript:void(0))
+
+### **CLAIM**
+
+Posts claimed Ukrainian President Volodymyr Zelenskyy signed artillery shells destined to be dropped on Gaza during a visit to a Pennsylvania munitions factory.
+
+* * *
+
+### **BACKGROUND**
+
+A video and still images shared online were described as showing Ukrainian President Volodymyr Zelenskyy signing artillery shells destined for use in Gaza by Israel.
+
+One [version](https://x.com/firasshams1/status/1896565304148574479)
+ of video was circulated online at the beginning of March with the caption: “For those feeling sorry for Volodymyr Zelensky, here’s the Ukrainian President signing bombs to be dropped on innocent Gazans”. Zelensky signing bombs that killed Palestinian women and children”.
+
+* * *
+
+### **METHOD**
+
+The video of Zelenskyy and Pennsylvania Governor Josh Shapiro signing artillery shells began to circulate online following an eventful meeting at the White House between Zelenskyy, President Donald Trump and Vice President JD Vance on February 28 which turned into a near-shouting match. [![Eurovision News | Spotlight](https://substackcdn.com/image/fetch/$s_!u-Oh!,w_80,h_80,c_fill,f_auto,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F82236b8f-82a2-4d9e-bc4b-1a00add2558a_1280x1280.png)](/)
+
+[![Eurovision News | Spotlight](https://substackcdn.com/image/fetch/$s_!911f!,e_trim:10:white/e_trim:10:transparent/h_72,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F49a12212-38d7-43d8-a17f-3b0b9994ff07_1344x256.jpeg)](/)
+
+========================================================================================================================================================================================================================================================================================================
+
+SubscribeSign in
+
+Video caption falsely claims Zelenskyy signed bombs for Gaza
+============================================================
+
+### The video actually shows him at a U.S. Available at: [Zelensky signing bombs that killed Palestinian women and children](https://x.com/Abdella07967637/status/1896372053160366410)
+ \[Accessed 13 Mar. During the meeting, Trump told Zelenskyy to make a deal with Russia to end the war in Ukraine. He also told Zelenskyy he was “[gambling with World War III](https://www.politico.com/news/2025/02/28/trump-vance-zelenskyy-oval-office-exchange-00206727)
+”.
+
+A reverse Google Image search of a screen shot from the video however revealed that it was published several months before the fateful White House meeting.
+
+Governor Josh Shapiro shared the video on September 23, 2024, with a caption referencing Ukraine’s war with Russia. This version allowed us to see that Zelenskyy wrote “Glory to Ukraine” on one shell and “Thanks for Support” on another, both referencing Ukraine’s war with Russia and not Israel’s war in Gaza.
+
+[![](https://substackcdn.com/image/fetch/$s_!XBxv!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F84d7b62f-0236-4e29-b82b-1dd0a9e179f5_1280x720.png)](https://substackcdn.com/image/fetch/$s_!XBxv!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F84d7b62f-0236-4e29-b82b-1dd0a9e179f5_1280x720.png)
+
+[Information](https://www.president.gov.ua/en/news/prezident-vidvidav-skrentonskij-armijskij-boyepripasnij-zavo-93389)
+ about Zelenskyy’s visit to the ammunition factory, as well as details on its operations, was provided on Ukraine’s official government website.
+
+“The plant’s capacity is fully dedicated to meeting Ukraine’s needs, particularly for the production of 155mm shells, which has significantly increased over the past year,” the statement read.
+
+A statement regarding the visit was also released on the U.S. Army [website](https://www.army.mil/article/279911/ukrainian_president_zelenskyy_tours_scranton_army_ammunition_plant)
+ which confirmed the factory was being used to bolster Ukraine’s ammunition stockpile.
+
+* * *
+
+### **RATING**
+
+The video shows Zelenskyy visiting a munitions factory that produces armaments for the Ukrainian Security and Defense Forces, not Israel. It was published five months before the February 2025 meeting and a longer version of the video reveals that Zelenskyy’s handwritten messages do not reference Ukraine’s war with Russia or Israel’s war in Gaza. Available at: [For those feeling sorry for Volodymyr Zelensky](https://x.com/firasshams1/status/1896565304148574479)
+ \[Accessed 13 Mar."
+
+# Your Summary
+
+
+
+===== > RESPONSE:  < =====
+The search result from Eurovision News | Spotlight states that the claim that Volodymyr Zelenskyy signed artillery shells destined to be dropped on Gaza is false. The video shows Zelenskyy at a U.S. munitions factory that produces armaments for Ukraine. The video was published in September 2024, and Zelenskyy's handwritten messages reference Ukraine's war with Russia, not Israel's war in Gaza. <image:16>
+
+_________________________
+
+
+
+SummarizeResultPrompt - QUERY:
+
+# Instructions
+In order to find evidence that helps your fact-check, you just ran a web search which yielded a Search Result. **Your task right now is to summarize the Search Result.** What to include:
+* information that might be useful for the fact-check (see Record)
+* relevant images (refer to images by inserting their reference <image:k>)
+* if available: the release date as well as the author or the publisher (e.g. the media company) of the search result.
+
+Do NOT include:
+* advertisements
+* any other information not related to the Record or the Claim
+
+Additional rules:
+* Do not add any additional information besides the information in the Search Result.
+* If the Search Result doesn't contain any relevant information for the fact-checking work, simply print one word in capital letters: "NONE".
+* Keep your writing style like in the Examples 1, 2 and 3 provided to you.
+* Try to filter out relevant information even if the search result is in a different language.
+
+# Example 1
+The search result from America Today provides several photographs of the Notre-Dame Cathedral fire on April 15, 2019. <image:i>, <image:j>, <image:k>. None of the images show the Eiffel Tower in the background. 
+
+# Example 2
+NONE
+
+# Example 3
+The Guardian discusses a report blaming the Syrian government for a toxic gas attack and condemning their use of chemical weapons. The Guardian mentions the Chemical Weapons Convention and the responsibilities of Syria under the convention. According to The Guardian, The White House condemned the Assad regime for defying the norm against chemical weapons use.
+
+# Record
+## Claim
+Claim: "<image:16> This image shows Ukrainian President Volodymyr Zelenskyy signing Israeli bombs intended for use against Palestinians in Gaza."
+
+## Actions
+```
+reverse_search(<image:16>)
+web_search("Volodymyr Zelenskyy signing bombs")
+```
+
+# Search Result
+From [Source](https://www.foxnews.com/politics/josh-shapiro-blasted-signing-missile-alongside-zelenskyy-bidens-hometown-party-war): 
+Content: "to lose children'](https://www.foxnews.com/video/6357499589112)
+
+Ukrainian President Volodymyr Zelenskyy provides an update on the war in Ukraine to Fox News anchor Bret Baier on 'Special Report.'
+
+NEWYou can now listen to Fox News articles!
+
+Pennsylvania Democratic Gov. city to clean up, lower crime](https://www.foxnews.com/video/6377254560112)
+    
+*    [!Trump says 'he's not happy' with Putin over new strike after talks <image:3655>](https://www.foxnews.com/video/6377254464112)
+    
+    [#### Trump says 'he's not happy' with Putin over new strike after talks](https://www.foxnews.com/video/6377254464112)
+    
+*    [!Trump praises Noem for painting entire border wall ‘beautiful’ black <image:3656>](https://www.foxnews.com/video/6377252484112)
+    
+    [#### Trump praises Noem for painting entire border wall ‘beautiful’ black](https://www.foxnews.com/video/6377252484112)
+    
+*    [!'Meet the American' who founded the Grand Ole Opry <image:3657>](https://www.foxnews.com/video/6377250488112)
+    
+    [#### 'Meet the American' who founded the Grand Ole Opry](https://www.foxnews.com/video/6377250488112)
+    
+*    [!Trump hints at federal crime crackdown in Chicago <image:3659>](https://www.foxnews.com/video/6377254333112)
+    
+    [#### Trump hints at federal crime crackdown in Chicago](https://www.foxnews.com/video/6377254333112)
+    
+*    [!Tomi Lahren: If you pick a fight with DeSantis you'll lose <image:3660>](https://www.foxnews.com/video/6377252170112)
+    
+    [#### Tomi Lahren: If you pick a fight with DeSantis you'll lose](https://www.foxnews.com/video/6377252170112)
+    
+
+Right Arrow
+
+[close](#)
+
+    [!Ukrainian President Zelenskyy: 'It is so difficult to lose people... to lose children' <image:3661>](https://www.foxnews.com/video/6357499589112)
+
+#### [Ukrainian President Zelenskyy: 'It is so difficult to lose people... Tim Walz to be Vice President Kamala Harris’ running mate, posted a video of him signing the missile at the Scranton Army Ammunition Plant (SCAAP), in President Biden’s hometown.
+
+"We must all do our part in the fight for freedom – from the workers in Scranton who make Pennsylvania the arsenal of democracy to the brave Ukrainian soldiers protecting their country," Shapiro captioned his video.
+
+"We stand with Ukraine in their just defense of their homeland in the face of Russian aggression."
+
+However, response from the right was brisk – with conservative commentator David Harris Jr. (AP Photo)
+
+Other critics contrasted the autograph [with Shapiro’s](https://www.foxnews.com/politics/pennsylvania-governor-democratic-attorney-general-josh-shapiro-defeats-gop-challenger-doug-mastriano)
+ criticisms of former President Trump.
+
+"Zelenskyy just essentially endorsed Kamala in Pennsylvania while with Josh Shapiro autographing ammunition," wrote Philadelphia commentator Joey Mannarino on X.
+
+"He called Trump and Vance ‘radical’. – locked in a tight re-election race with businessman David McCormick – was seen shaking hands with Zelenskyy as Shapiro wrote a message on the missile.
+
+Other critics pointed out that chaos was erupting elsewhere in the commonwealth while Shapiro, Zelenskyy and Casey were touring the ordnance plant.
+
+[**SCRANTON OPENS UP ABOUT ‘BIDENOMICS’**](https://www.foxnews.com/media/bidens-hometown-reveals-how-really-feels-bidenomics)
+
+ !Josh Shapiro speaks during the roll call of states on Day 2 of the Democratic National Convention <image:3664>
+
+Pennsylvania Gov. (Charles Creitz)
+
+In an official statement, Shapiro said Pennsylvania is the "birthplace of American freedom" and Pennsylvanians therefore stand with Ukrainians in their fight against "naked aggression."
+
+He also noted Pennsylvania will sign an agreement with the Ukrainian state of Zaporizhizhia that will "foster collaboration for years to come."
+
+In regard to the agreement, Pennsylvania Secretary of Community & Economic Development Rick Siger [told WHTM](https://www.abc27.com/pennsylvania/shapiro-zelenskyy-sign-agreement-establishing-partnership-between-pennsylvania-ukrainian-province/)
+ that the pact will "help support the future economic revitalization of Ukraine, while boosting our economy and creating jobs for Pennsylvanians."
+
+Fox News Digital reached out to Shapiro and Casey for further comment but did not receive a response at press time.
+
+Charles Creitz is a reporter for Fox News Digital. 
+
+He joined Fox News in 2013 as a writer and production assistant. 
+
+Charles covers [media](https://www.foxnews.com/media)
+, [politics](https://www.foxnews.com/politics)
+ and culture for Fox News Digital.
+
+Charles is a Pennsylvania native and graduated from Temple University with a B.A."
+
+# Your Summary
+
+
+
+===== > RESPONSE:  < =====
+The search result from Fox News discusses Ukrainian President Volodymyr Zelenskyy signing a missile at the Scranton Army Ammunition Plant (SCAAP) in Pennsylvania. The article mentions that Pennsylvania Governor Josh Shapiro also signed the missile. <image:3661>
+
+_________________________
+
+
+
+SummarizeResultPrompt - QUERY:
+
+# Instructions
+In order to find evidence that helps your fact-check, you just ran a web search which yielded a Search Result. **Your task right now is to summarize the Search Result.** What to include:
+* information that might be useful for the fact-check (see Record)
+* relevant images (refer to images by inserting their reference <image:k>)
+* if available: the release date as well as the author or the publisher (e.g. the media company) of the search result.
+
+Do NOT include:
+* advertisements
+* any other information not related to the Record or the Claim
+
+Additional rules:
+* Do not add any additional information besides the information in the Search Result.
+* If the Search Result doesn't contain any relevant information for the fact-checking work, simply print one word in capital letters: "NONE".
+* Keep your writing style like in the Examples 1, 2 and 3 provided to you.
+* Try to filter out relevant information even if the search result is in a different language.
+
+# Example 1
+The search result from America Today provides several photographs of the Notre-Dame Cathedral fire on April 15, 2019. <image:i>, <image:j>, <image:k>. None of the images show the Eiffel Tower in the background. 
+
+# Example 2
+NONE
+
+# Example 3
+The Guardian discusses a report blaming the Syrian government for a toxic gas attack and condemning their use of chemical weapons. The Guardian mentions the Chemical Weapons Convention and the responsibilities of Syria under the convention. According to The Guardian, The White House condemned the Assad regime for defying the norm against chemical weapons use.
+
+# Record
+## Claim
+Claim: "<image:16> This image shows Ukrainian President Volodymyr Zelenskyy signing Israeli bombs intended for use against Palestinians in Gaza."
+
+## Actions
+```
+reverse_search(<image:16>)
+web_search("Volodymyr Zelenskyy signing bombs")
+```
+
+# Search Result
+From [Source](https://caliber.az/en/post/zelenskyy-s-glory-to-ukraine-inscription-on-us-bombs-in-pennsylvania-stirs-controversy): 
+Content: "[WORLD](https://caliber.az/en/category/world)
+
+A+
+
+A-
+
+Zelenskyy's "Glory to Ukraine" inscription on US bombs in Pennsylvania stirs controversy
+========================================================================================
+
+15 October 2024 18:57
+
+**Ukrainian President Volodymyr Zelenskyy's recent visit to Pennsylvania has stirred significant controversy, raising questions about the intersection of foreign diplomacy and US electoral politics.** 
+
+During a tour aimed at bolstering support for Ukraine, Zelenskyy made headlines after signing munitions at the Scranton Army Ammunition Plant, a move that has elicited mixed reactions from both local residents and political leaders, **[Caliber.Az](https://caliber.az/en)
+** reports, **[citing](https://www.politico.eu/article/polish-american-lean-donald-trump-despite-ukraine-war-dupont-pennsylvania/)** Politico.
+
+While at the plant, Zelenskyy inscribed messages of gratitude on US bombs, including the phrase “Glory to Ukraine.” Democratic Governor Josh Shapiro, who was present during the signing, appeared supportive of the gesture. “Because you’re signing bombs that could potentially kill innocent people. Share it on social media!
+
+[![facebook](https://caliber.az/templates/Default/api/f.svg)](https://www.facebook.com/sharer/sharer.php?u=https://caliber.az/en/post/zelenskyy-s-glory-to-ukraine-inscription-on-us-bombs-in-pennsylvania-stirs-controversy)
+[![twitter](https://caliber.az/templates/Default/api/x.svg)](http://twitter.com/share?text=Zelenskyy's "Glory to Ukraine" inscription on US bombs in  Pennsylvania stirs controversy&url=https://caliber.az/en/post/zelenskyy-s-glory-to-ukraine-inscription-on-us-bombs-in-pennsylvania-stirs-controversy)
+[!vkontakte <image:3669>](https://vk.com/share.php?url=https://caliber.az/en/post/zelenskyy-s-glory-to-ukraine-inscription-on-us-bombs-in-pennsylvania-stirs-controversy)
+[![whatsapp](https://caliber.az/templates/Default/api/w.svg)](whatsapp://send?text=https://caliber.az/en/post/zelenskyy-s-glory-to-ukraine-inscription-on-us-bombs-in-pennsylvania-stirs-controversy)
+[!telegram <image:3671>](https://t.me/share?url=https://caliber.az/en/post/zelenskyy-s-glory-to-ukraine-inscription-on-us-bombs-in-pennsylvania-stirs-controversy)
+
+![print](https://caliber.az/templates/Default/api/print.svg)
+
+![copy link](https://caliber.az/templates/Default/api/copy.png)
+
+Ссылка скопирована
+
+!ads <image:3673>
+
+[!twitter <image:3674>\
+\
+Follow us on Twitter\
+\
+Follow us on Twitter](https://twitter.com/CaliberEnglish)
+
+Most read
+
+[1\
+\
+NATO member states at impasse over military presence, mandate in Ukraine - source\
+---------------------------------------------------------------------------------\
+\
+2880\
+\
+20 August 2025 14:31](https://caliber.az/en/post/nato-member-states-at-impasse-over-military-presence-mandate-in-ukraine-source)
+[2\
+\
+Northrop Grumman hits new F-35 production milestone, bolstering US air power\
+----------------------------------------------------------------------------\
+\
+2704\
+\
+21 August 2025 04:32](https://caliber.az/en/post/northrop-grumman-hits-new-f-35-production-milestone-bolstering-us-air-power)
+[3\
+\
+Pentagon's ambitious sea drone fleet faces turbulent waters\
+-----------------------------------------------------------\
+\
+1092\
+\
+20 August 2025 20:07](https://caliber.az/en/post/pentagon-s-ambitious-sea-drone-fleet-faces-turbulent-waters)
+[4\
+\
+Abu Dhabi’s strive to outshine fraternal Dubai as global financial hub\
+----------------------------------------------------------------------\
+\
+889\
+\
+21 August 2025 23:07](https://caliber.az/en/post/abu-dhabi-s-strive-to-outshine-fraternal-dubai-as-global-financial-hub)
+[5\
+\
+Chevron resumes US imports of Venezuelan oil following new US license\
+---------------------------------------------------------------------\
+\
+839\
+\
+21 August 2025 20:45](https://caliber.az/en/post/chevron-resumes-us-imports-of-venezuelan-oil-following-new-us-license)
+[6\
+\
+Venezuela mobilises millions amid US naval activity in Latin America\
+--------------------------------------------------------------------\
+\
+820\
+\
+20 August 2025 11:00](https://caliber.az/en/post/venezuela-mobilises-millions-amid-us-naval-activity-in-latin-america)
+[7\
+\
+Mosquito-borne virus Chikungunya expands as climate change fuels spread\
+-----------------------------------------------------------------------\
+\
+807\
+\
+20 August 2025 05:07](https://caliber.az/en/post/mosquito-borne-virus-chikungunya-expands-as-climate-change-fuels-spread)
+[8\
+\
+US sends destroyers toward Venezuela as Trump intensifies pressure on drug cartels\
+----------------------------------------------------------------------------------\
+\
+758\
+\
+20 August 2025 09:48](https://caliber.az/en/post/us-sends-destroyers-toward-venezuela-as-trump-intensifies-pressure-on-drug-cartels)
+[9\
+\
+Boeing nears landmark deal to sell 500 jets to China amid trade talks\
+---------------------------------------------------------------------\
+\
+713\
+\
+21 August 2025 20:11](https://caliber.az/en/post/boeing-nears-landmark-deal-to-sell-500-jets-to-china-amid-trade-talks)
+[10\
+\
+IAEA races to restore access as Iran blocks nuclear inspections\
+---------------------------------------------------------------\
+\
+700\
+\
+21 August 2025 16:49](https://caliber.az/en/post/iaea-races-to-restore-access-as-iran-blocks-nuclear-inspections)
+
+**WORLD**
+
+The most important world news
+
+[](https://caliber.az/en/post/dissecting-structure-behind-russia-s-shadow-troops-in-ukraine-n)
+[Dissecting structure behind Russia's "shadow" troops in Ukraine Article by War on the Rocks\
+-------------------------------------------------------------------------------------------](https://caliber.az/en/post/dissecting-structure-behind-russia-s-shadow-troops-in-ukraine-n)
+
+[](https://caliber.az/en/post/dissecting-structure-behind-russia-s-shadow-troops-in-ukraine-n)
+[WORLD](https://caliber.az/en/category/world)
+
+23 August 2025 01:07
+
+[](https://caliber.az/en/post/russian-climber-trapped-on-kyrgyzstan-s-highest-peak-as-evacuation-faces-deadly-setbacks)
+[Russian climber trapped on Kyrgyzstan’s highest peak as evacuation faces deadly setbacks\
+----------------------------------------------------------------------------------------](https://caliber.az/en/post/russian-climber-trapped-on-kyrgyzstan-s-highest-peak-as-evacuation-faces-deadly-setbacks)
+
+[](https://caliber.az/en/post/russian-climber-trapped-on-kyrgyzstan-s-highest-peak-as-evacuation-faces-deadly-setbacks)
+[WORLD](https://caliber.az/en/category/world)
+
+22 August 2025 23:01
+
+[](https://caliber.az/en/post/trump-says-he-d-rather-not-attend-potential-putin-zelenskyy-meeting)
+[Trump says he’d “rather not” attend potential Putin-Zelenskyy meeting\
+---------------------------------------------------------------------](https://caliber.az/en/post/trump-says-he-d-rather-not-attend-potential-putin-zelenskyy-meeting)
+
+[](https://caliber.az/en/post/trump-says-he-d-rather-not-attend-potential-putin-zelenskyy-meeting)
+[WORLD](https://caliber.az/en/category/world)
+
+22 August 2025 21:15
+
+[](https://caliber.az/en/post/canada-to-lift-retaliatory-tariffs-on-us-consumer-goods-to-ease-trade-tensions)
+[Canada to lift retaliatory tariffs on US consumer goods to ease trade tensions\
+------------------------------------------------------------------------------](https://caliber.az/en/post/canada-to-lift-retaliatory-tariffs-on-us-consumer-goods-to-ease-trade-tensions)
+
+[](https://caliber.az/en/post/canada-to-lift-retaliatory-tariffs-on-us-consumer-goods-to-ease-trade-tensions)
+[WORLD](https://caliber.az/en/category/world)
+
+22 August 2025 20:42
+
+[](https://caliber.az/en/post/serbian-president-urges-dialogue-amid-prolonged-anti-government-protests)
+[Serbian president urges dialogue amid prolonged anti-government protests\
+------------------------------------------------------------------------](https://caliber.az/en/post/serbian-president-urges-dialogue-amid-prolonged-anti-government-protests)
+
+[](https://caliber.az/en/post/serbian-president-urges-dialogue-amid-prolonged-anti-government-protests)
+[WORLD](https://caliber.az/en/category/world)
+
+22 August 2025 20:31
+
+[](https://caliber.az/en/post/waymo-gets-green-light-to-test-driverless-cars-in-new-york-city)
+[Waymo gets green light to test driverless cars in New York City\
+---------------------------------------------------------------](https://caliber.az/en/post/waymo-gets-green-light-to-test-driverless-cars-in-new-york-city)
+
+[](https://caliber.az/en/post/waymo-gets-green-light-to-test-driverless-cars-in-new-york-city)
+[WORLD](https://caliber.az/en/category/world)
+
+22 August 2025 20:09
+
+[](https://caliber.az/en/post/zelenskyy-ukraine-needs-more-fighter-jets-to-secure-its-skies)
+[Zelenskyy: Ukraine needs more fighter jets to secure its skies\
+--------------------------------------------------------------](https://caliber.az/en/post/zelenskyy-ukraine-needs-more-fighter-jets-to-secure-its-skies)
+
+[](https://caliber.az/en/post/zelenskyy-ukraine-needs-more-fighter-jets-to-secure-its-skies)
+[WORLD](https://caliber.az/en/category/world)
+
+22 August 2025 19:46
+
+[](https://caliber.az/en/post/kyiv-ready-for-direct-talks-with-putin-zelenskyy-signals-flexibility)
+[Kyiv ready for direct talks with Putin, Zelenskyy signals flexibility\
+---------------------------------------------------------------------](https://caliber.az/en/post/kyiv-ready-for-direct-talks-with-putin-zelenskyy-signals-flexibility)
+
+[](https://caliber.az/en/post/kyiv-ready-for-direct-talks-with-putin-zelenskyy-signals-flexibility)
+[WORLD](https://caliber.az/en/category/world)
+
+22 August 2025 19:35
+
+[](https://caliber.az/en/post/european-ministers-warn-iran-on-looming-nuclear-sanctions-snapback)
+[European officials warn Iran on looming nuclear sanctions snapback\
+------------------------------------------------------------------](https://caliber.az/en/post/european-ministers-warn-iran-on-looming-nuclear-sanctions-snapback)
+
+[](https://caliber.az/en/post/european-ministers-warn-iran-on-looming-nuclear-sanctions-snapback)
+[WORLD](https://caliber.az/en/category/world)
+
+22 August 2025 19:23
+
+[](https://caliber.az/en/post/sweden-to-expand-nuclear-power-with-first-new-plant-in-50-years)
+[Sweden to expand nuclear power with first new plant in 50 years\
+---------------------------------------------------------------](https://caliber.az/en/post/sweden-to-expand-nuclear-power-with-first-new-plant-in-50-years)
+
+[](https://caliber.az/en/post/sweden-to-expand-nuclear-power-with-first-new-plant-in-50-years)
+[WORLD](https://caliber.az/en/category/world)
+
+22 August 2025 18:49
+
+[](https://caliber.az/en/post/ukraine-nato-discuss-robust-security-pact-to-deter-russian-aggression)
+[Ukraine, NATO discuss robust security pact to deter Russian aggression\
+----------------------------------------------------------------------](https://caliber.az/en/post/ukraine-nato-discuss-robust-security-pact-to-deter-russian-aggression)
+
+[](https://caliber.az/en/post/ukraine-nato-discuss-robust-security-pact-to-deter-russian-aggression)
+[WORLD](https://caliber.az/en/category/world)
+
+22 August 2025 18:16
+
+[](https://caliber.az/en/post/israeli-forces-conduct-operations-in-syria-s-regions)
+[Israeli forces conduct operations in Syria’s regions\
+----------------------------------------------------](https://caliber.az/en/post/israeli-forces-conduct-operations-in-syria-s-regions)
+
+[](https://caliber.az/en/post/israeli-forces-conduct-operations-in-syria-s-regions)
+[WORLD](https://caliber.az/en/category/world)
+
+22 August 2025 18:05
+
+[](https://caliber.az/en/post/nato-chief-praises-ukrainian-resilience-vows-continued-assistance)
+[NATO chief praises Ukrainian resilience, vows continued assistance\
+------------------------------------------------------------------](https://caliber.az/en/post/nato-chief-praises-ukrainian-resilience-vows-continued-assistance)
+
+[](https://caliber.az/en/post/nato-chief-praises-ukrainian-resilience-vows-continued-assistance)
+[WORLD](https://caliber.az/en/category/world)
+
+22 August 2025 17:27
+
+[](https://caliber.az/en/post/belarus-seeks-to-improve-relations-with-the-us-says-lukashenko)
+[Belarus seeks to improve relations with the US, says Lukashenko\
+---------------------------------------------------------------](https://caliber.az/en/post/belarus-seeks-to-improve-relations-with-the-us-says-lukashenko)
+
+[](https://caliber.az/en/post/belarus-seeks-to-improve-relations-with-the-us-says-lukashenko)
+[WORLD](https://caliber.az/en/category/world)
+
+22 August 2025 17:18
+
+[](https://caliber.az/en/post/elon-musk-s-bid-to-buy-openai-included-pitch-to-meta-s-ceo-court-documents-show)
+[Elon Musk’s bid to buy OpenAI included pitch to Meta’s CEO, court documents show\
+--------------------------------------------------------------------------------](https://caliber.az/en/post/elon-musk-s-bid-to-buy-openai-included-pitch-to-meta-s-ceo-court-documents-show)
+
+[](https://caliber.az/en/post/elon-musk-s-bid-to-buy-openai-included-pitch-to-meta-s-ceo-court-documents-show)
+[WORLD](https://caliber.az/en/category/world)
+
+22 August 2025 17:09
+
+[](https://caliber.az/en/post/zelenskyy-turkiye-commits-to-maritime-role-in-ukraine-s-security-guarantees)
+[Zelenskyy: Türkiye commits to maritime role in Ukraine’s security guarantees\
+----------------------------------------------------------------------------](https://caliber.az/en/post/zelenskyy-turkiye-commits-to-maritime-role-in-ukraine-s-security-guarantees)
+
+[](https://caliber.az/en/post/zelenskyy-turkiye-commits-to-maritime-role-in-ukraine-s-security-guarantees)
+[WORLD](https://caliber.az/en/category/world)
+
+22 August 2025 16:51
+
+[](https://caliber.az/en/post/barcelona-mayor-cancels-trip-to-israel-amid-entry-ban)
+[Barcelona mayor cancels trip to Israel amid entry ban\
+-----------------------------------------------------](https://caliber.az/en/post/barcelona-mayor-cancels-trip-to-israel-amid-entry-ban)
+
+[](https://caliber.az/en/post/barcelona-mayor-cancels-trip-to-israel-amid-entry-ban)
+[WORLD](https://caliber.az/en/category/world)
+
+22 August 2025 16:42
+
+[](https://caliber.az/en/post/poland-condemns-israeli-settlement-plans-in-west-bank-reaffirms-support-for-two-state-solution)
+[Poland condemns Israeli settlement plans in West Bank reaffirms support for two-state solution\
+----------------------------------------------------------------------------------------------](https://caliber.az/en/post/poland-condemns-israeli-settlement-plans-in-west-bank-reaffirms-support-for-two-state-solution)
+
+[](https://caliber.az/en/post/poland-condemns-israeli-settlement-plans-in-west-bank-reaffirms-support-for-two-state-solution)
+[WORLD](https://caliber.az/en/category/world)
+
+22 August 2025 16:33
+
+[](https://caliber.az/en/post/belgium-plans-major-military-expansion-with-new-aircraft-naval-vessels-drones)
+[Belgium plans major military expansion with new aircraft, naval vessels, drones\
+-------------------------------------------------------------------------------](https://caliber.az/en/post/belgium-plans-major-military-expansion-with-new-aircraft-naval-vessels-drones)
+
+[](https://caliber.az/en/post/belgium-plans-major-military-expansion-with-new-aircraft-naval-vessels-drones)
+[WORLD](https://caliber.az/en/category/world)
+
+22 August 2025 16:15
+
+[](https://caliber.az/en/post/trump-administration-launches-massive-review-of-55-million-us-visa-holders)
+[Trump administration launches massive review of 55 million US visa holders\
+--------------------------------------------------------------------------](https://caliber.az/en/post/trump-administration-launches-massive-review-of-55-million-us-visa-holders)
+
+[](https://caliber.az/en/post/trump-administration-launches-massive-review-of-55-million-us-visa-holders)
+[WORLD](https://caliber.az/en/category/world)
+
+22 August 2025 15:57
+
+[](https://caliber.az/en/post/angry-trump-sends-hungarian-pm-handwritten-note-over-ukraine-oil-pipeline-attack)
+["Angry" Trump sends Hungarian PM handwritten note over Ukraine oil pipeline attack\
+----------------------------------------------------------------------------------](https://caliber.az/en/post/angry-trump-sends-hungarian-pm-handwritten-note-over-ukraine-oil-pipeline-attack)
+
+[](https://caliber.az/en/post/angry-trump-sends-hungarian-pm-handwritten-note-over-ukraine-oil-pipeline-attack)
+[WORLD](https://caliber.az/en/category/world)
+
+22 August 2025 15:48
+
+[](https://caliber.az/en/post/eu-grants-emergency-funding-to-finland-over-estlink-2-cable-damage)
+[EU grants emergency funding to Finland over Estlink 2 cable damage\
+------------------------------------------------------------------](https://caliber.az/en/post/eu-grants-emergency-funding-to-finland-over-estlink-2-cable-damage)
+
+[](https://caliber.az/en/post/eu-grants-emergency-funding-to-finland-over-estlink-2-cable-damage)
+[WORLD](https://caliber.az/en/category/world)
+
+22 August 2025 15:39
+
+[](https://caliber.az/en/post/belarus-leader-opens-doors-to-putin-zelenskyy-peace-talks)
+[Belarus leader opens doors to Putin–Zelenskyy peace talks\
+---------------------------------------------------------](https://caliber.az/en/post/belarus-leader-opens-doors-to-putin-zelenskyy-peace-talks)
+
+[](https://caliber.az/en/post/belarus-leader-opens-doors-to-putin-zelenskyy-peace-talks)
+[WORLD](https://caliber.az/en/category/world)
+
+22 August 2025 15:30
+
+[](https://caliber.az/en/post/top-european-leaders-to-attend-moldova-s-independence-day-celebrations)
+[Top European leaders to attend Moldova’s Independence Day celebrations\
+----------------------------------------------------------------------](https://caliber.az/en/post/top-european-leaders-to-attend-moldova-s-independence-day-celebrations)
+
+[](https://caliber.az/en/post/top-european-leaders-to-attend-moldova-s-independence-day-celebrations)
+[WORLD](https://caliber.az/en/category/world)
+
+22 August 2025 15:21
+
+[](https://caliber.az/en/post/trump-claims-washington-safe-again-following-national-guard-deployment)
+[Trump claims Washington “safe again” following National Guard deployment\
+------------------------------------------------------------------------](https://caliber.az/en/post/trump-claims-washington-safe-again-following-national-guard-deployment)
+
+[](https://caliber.az/en/post/trump-claims-washington-safe-again-following-national-guard-deployment)
+[WORLD](https://caliber.az/en/category/world)
+
+22 August 2025 15:12
+
+[](https://caliber.az/en/post/slovakia-hungary-urge-eu-to-act-as-druzhba-pipeline-disruptions-continue)
+[Slovakia, Hungary urge EU to act as Druzhba pipeline disruptions continue\
+-------------------------------------------------------------------------](https://caliber.az/en/post/slovakia-hungary-urge-eu-to-act-as-druzhba-pipeline-disruptions-continue)
+
+[](https://caliber.az/en/post/slovakia-hungary-urge-eu-to-act-as-druzhba-pipeline-disruptions-continue)
+[WORLD](https://caliber.az/en/category/world)
+
+22 August 2025 15:03
+
+[](https://caliber.az/en/post/us-suspends-work-visas-for-foreign-truck-drivers-amid-safety-employment-concerns)
+[US suspends work visas for foreign truck drivers amid safety, employment concerns\
+---------------------------------------------------------------------------------](https://caliber.az/en/post/us-suspends-work-visas-for-foreign-truck-drivers-amid-safety-employment-concerns)
+
+[](https://caliber.az/en/post/us-suspends-work-visas-for-foreign-truck-drivers-amid-safety-employment-concerns)
+[WORLD](https://caliber.az/en/category/world)
+
+22 August 2025 14:03
+
+[](https://caliber.az/en/post/niger-army-kills-boko-haram-leader-in-precision-strike-in-lake-chad-basin)
+[Niger army kills Boko Haram leader in precision strike in Lake Chad basin\
+-------------------------------------------------------------------------](https://caliber.az/en/post/niger-army-kills-boko-haram-leader-in-precision-strike-in-lake-chad-basin)
+
+[](https://caliber.az/en/post/niger-army-kills-boko-haram-leader-in-precision-strike-in-lake-chad-basin)
+[WORLD](https://caliber.az/en/category/world)
+
+22 August 2025 13:41
+
+[](https://caliber.az/en/post/former-sri-lankan-president-arrested-over-alleged-misuse-of-public-funds)
+[Former Sri Lankan president arrested over alleged misuse of public funds\
+------------------------------------------------------------------------](https://caliber.az/en/post/former-sri-lankan-president-arrested-over-alleged-misuse-of-public-funds)
+
+[](https://caliber.az/en/post/former-sri-lankan-president-arrested-over-alleged-misuse-of-public-funds)
+[WORLD](https://caliber.az/en/category/world)
+
+22 August 2025 13:32
+
+[](https://caliber.az/en/post/eu-s-kallas-warns-strongest-security-guarantee-is-strong-ukrainian-army)
+[EU’s Kallas warns strongest security guarantee is strong Ukrainian army\
+-----------------------------------------------------------------------](https://caliber.az/en/post/eu-s-kallas-warns-strongest-security-guarantee-is-strong-ukrainian-army)
+
+[](https://caliber.az/en/post/eu-s-kallas-warns-strongest-security-guarantee-is-strong-ukrainian-army)
+[WORLD](https://caliber.az/en/category/world)
+
+22 August 2025 13:23
+
+[](https://caliber.az/en/post/south-africa-questions-russia-over-suspected-exploitation-of-young-recruits)
+[South Africa questions Russia over suspected exploitation of young recruits\
+---------------------------------------------------------------------------](https://caliber.az/en/post/south-africa-questions-russia-over-suspected-exploitation-of-young-recruits)
+
+[](https://caliber.az/en/post/south-africa-questions-russia-over-suspected-exploitation-of-young-recruits)
+[WORLD](https://caliber.az/en/category/world)
+
+22 August 2025 13:05
+
+[](https://caliber.az/en/post/ukraine-plans-to-bring-war-veterans-into-presidential-office-staff)
+[Ukraine plans to bring war veterans into presidential office staff\
+------------------------------------------------------------------](https://caliber.az/en/post/ukraine-plans-to-bring-war-veterans-into-presidential-office-staff)
+
+[](https://caliber.az/en/post/ukraine-plans-to-bring-war-veterans-into-presidential-office-staff)
+[WORLD](https://caliber.az/en/category/world)
+
+22 August 2025 12:47
+
+[](https://caliber.az/en/post/pm-romania-offers-nato-bases-to-support-lasting-peace-in-ukraine)
+[PM: Romania offers NATO bases to support lasting peace in Ukraine\
+-----------------------------------------------------------------](https://caliber.az/en/post/pm-romania-offers-nato-bases-to-support-lasting-peace-in-ukraine)
+
+[](https://caliber.az/en/post/pm-romania-offers-nato-bases-to-support-lasting-peace-in-ukraine)
+[WORLD](https://caliber.az/en/category/world)
+
+22 August 2025 12:38
+
+[](https://caliber.az/en/post/france-suspends-visa-free-agreement-with-algeria-for-diplomatic-passports)
+[France suspends visa-free agreement with Algeria for diplomatic passports\
+-------------------------------------------------------------------------](https://caliber.az/en/post/france-suspends-visa-free-agreement-with-algeria-for-diplomatic-passports)
+
+[](https://caliber.az/en/post/france-suspends-visa-free-agreement-with-algeria-for-diplomatic-passports)
+[WORLD](https://caliber.az/en/category/world)
+
+22 August 2025 11:53
+
+[](https://caliber.az/en/post/israel-approves-military-plans-against-hamas-in-gaza)
+[Israel approves military plans against Hamas in Gaza\
+----------------------------------------------------](https://caliber.az/en/post/israel-approves-military-plans-against-hamas-in-gaza)
+
+[](https://caliber.az/en/post/israel-approves-military-plans-against-hamas-in-gaza)
+[WORLD](https://caliber.az/en/category/world)
+
+22 August 2025 11:17
+
+[](https://caliber.az/en/post/syria-israel-to-sign-security-agreement-in-september-with-trump-present)
+[Syria, Israel to sign security agreement in September with Trump present\
+------------------------------------------------------------------------](https://caliber.az/en/post/syria-israel-to-sign-security-agreement-in-september-with-trump-present)
+
+[](https://caliber.az/en/post/syria-israel-to-sign-security-agreement-in-september-with-trump-present)
+[WORLD](https://caliber.az/en/category/world)
+
+22 August 2025 11:08
+
+[](https://caliber.az/en/post/hungary-halts-russian-oil-deliveries-after-drone-strikes-on-druzhba-pipeline)
+[Hungary halts Russian oil deliveries after drone strikes on Druzhba pipeline\
+----------------------------------------------------------------------------](https://caliber.az/en/post/hungary-halts-russian-oil-deliveries-after-drone-strikes-on-druzhba-pipeline)
+
+[](https://caliber.az/en/post/hungary-halts-russian-oil-deliveries-after-drone-strikes-on-druzhba-pipeline)
+[WORLD](https://caliber.az/en/category/world)
+
+22 August 2025 10:58
+
+[](https://caliber.az/en/post/us-sanctions-multiple-international-shipping-firms-over-iran-oil-smuggling)
+[US sanctions multiple international shipping firms over Iran oil smuggling\
+--------------------------------------------------------------------------](https://caliber.az/en/post/us-sanctions-multiple-international-shipping-firms-over-iran-oil-smuggling)
+
+[](https://caliber.az/en/post/us-sanctions-multiple-international-shipping-firms-over-iran-oil-smuggling)
+[WORLD](https://caliber.az/en/category/world)
+
+22 August 2025 10:47
+
+[](https://caliber.az/en/post/over-20-world-leaders-to-attend-shanghai-cooperation-organisation-summit-in-tianjin)
+[Over 20 world leaders to attend Shanghai Cooperation Organisation summit in Tianjin\
+-----------------------------------------------------------------------------------](https://caliber.az/en/post/over-20-world-leaders-to-attend-shanghai-cooperation-organisation-summit-in-tianjin)
+
+[](https://caliber.az/en/post/over-20-world-leaders-to-attend-shanghai-cooperation-organisation-summit-in-tianjin)
+[WORLD](https://caliber.az/en/category/world)
+
+22 August 2025 10:38
+
+!loading <image:3679> There’s innocent on both sides.”
+
+The backlash against Zelenskyy’s visit was further amplified by political commentators and Republican leaders. Reports indicate that Zelenskyy’s remarks about the Republican candidate for US vice president, whom he labeled as radical, only fueled this perception.
+
+Senator Lindsey Graham, a prominent Republican figure, also condemned Zelenskyy's presence at the military plant, asserting that such actions could jeopardize Ukraine’s long-term objectives in its fight against Russia. “We need to ensure that incidents like this do not detract from the long-term goals of ensuring success for Ukraine,” Graham remarked.
+
+_By Khagan Isayev_
+
+**Caliber.Az**
+
+Read more about the key topics in this news story.
+
+[#AMMUNITION PLANT](https://caliber.az/en/tag/AMMUNITION PLANT)
+[#PENNSYLVANIA](https://caliber.az/en/tag/PENNSYLVANIA)
+[#ZELENSKYY](https://caliber.az/en/tag/ZELENSKYY)
+
+Views: **843**
+
+  
+
+share-lineLiked the story?"
+
+# Your Summary
+
+
+
+===== > RESPONSE:  < =====
+The article from Caliber.Az, published on October 15, 2024, reports on Ukrainian President Volodymyr Zelenskyy's visit to the Scranton Army Ammunition Plant in Pennsylvania, where he signed munitions. The article mentions that Zelenskyy inscribed messages on US bombs, including "Glory to Ukraine." The visit has stirred controversy, with mixed reactions from local residents and political leaders. <image:16> is included in the article.
+
+_________________________
+
+
+
+SummarizeSummariesPrompt - QUERY:
+
+# Instructions
+You just retrieved web sources, each one summarized under "Web Sources". **Your task right now is to summarize the web source summaries.**
+
+Always adhere to the following rules:
+* Write only one to two paragraphs.
+* Include all URLs from the listed sources. Format them as Markdown hyperlinks.
+* Do not add any additional information besides the information in the summaries.
+* Include references (<image:k>) to all relevant images.
+
+# Record
+## Claim
+Claim: "<image:16> This image shows Ukrainian President Volodymyr Zelenskyy signing Israeli bombs intended for use against Palestinians in Gaza."
+
+## Actions
+```
+reverse_search(<image:16>)
+web_search("Volodymyr Zelenskyy signing bombs")
+```
+
+## Web Sources
+**Web Search Result**
+
+From [Source](https://spotlight.ebu.ch/p/video-caption-falsely-claims-zelenskyy): 
+Content: The search result from Eurovision News | Spotlight states that the claim that Volodymyr Zelenskyy signed artillery shells destined to be dropped on Gaza is false. The video shows Zelenskyy at a U.S. munitions factory that produces armaments for Ukraine. The video was published in September 2024, and Zelenskyy's handwritten messages reference Ukraine's war with Russia, not Israel's war in Gaza. <image:16>
+
+
+From [Source](https://www.foxnews.com/politics/josh-shapiro-blasted-signing-missile-alongside-zelenskyy-bidens-hometown-party-war): 
+Content: The search result from Fox News discusses Ukrainian President Volodymyr Zelenskyy signing a missile at the Scranton Army Ammunition Plant (SCAAP) in Pennsylvania. The article mentions that Pennsylvania Governor Josh Shapiro also signed the missile. <image:3661>
+
+
+From [Source](https://caliber.az/en/post/zelenskyy-s-glory-to-ukraine-inscription-on-us-bombs-in-pennsylvania-stirs-controversy): 
+Content: The article from Caliber.Az, published on October 15, 2024, reports on Ukrainian President Volodymyr Zelenskyy's visit to the Scranton Army Ammunition Plant in Pennsylvania, where he signed munitions. The article mentions that Zelenskyy inscribed messages on US bombs, including "Glory to Ukraine." The visit has stirred controversy, with mixed reactions from local residents and political leaders. <image:16> is included in the article.
+
+
+## Your Summary
+
+
+
+===== > RESPONSE:  < =====
+The claim that Volodymyr Zelenskyy signed Israeli bombs intended for use against Palestinians in Gaza is false. The image (<image:16>) shows Zelenskyy signing artillery shells at a U.S. munitions factory, not Israeli bombs. The video was published in September 2024, and the messages reference Ukraine's war with Russia, not Israel's war in Gaza.
+
+Zelenskyy signed a missile at the Scranton Army Ammunition Plant (SCAAP) in Pennsylvania, along with Pennsylvania Governor Josh Shapiro. Zelenskyy inscribed messages on US bombs, including "Glory to Ukraine." (<image:16>)
+
+_________________________
+
+
+
+DevelopPrompt - QUERY:
+
+# Instructions
+You just retrieved new Evidence. Now, **analyze the Claim's veracity using the evidence**. Always adhere to the following rules:
+* Focus on developing new insights. Do not repeat larger parts from the Record. Do not restate the Claim.
+* Write down your thoughts step-by-step. Whenever necessary, you may elaborate in more detail.
+* Depending on the topic's complexity, invest one to three paragraphs. The fewer, the better.
+* If you find that there is insufficient information to verify the Claim, explicitly state what information is missing.
+* If you cite web sources, always refer to them by including their URL as a Markdown hyperlink.
+* **Use information only from the recorded evidence**: Avoid inserting information that is not implied by the evidence. You may use commonsense knowledge, though.
+
+# Record
+## Claim
+Claim: "<image:16> This image shows Ukrainian President Volodymyr Zelenskyy signing Israeli bombs intended for use against Palestinians in Gaza."
+
+## Actions
+```
+reverse_search(<image:16>)
+web_search("Volodymyr Zelenskyy signing bombs")
+```
+
+## Evidence
+### Evidence from `reverse_search`
+The image shows Ukrainian President Volodymyr Zelensky signing ammunition at the Scranton Army Ammunition Plant (SCAAP) in Pennsylvania, USA, on September 23, 2024. The BBC published an article on September 26, 2024, discussing the meeting between Zelensky and US President Joe Biden, and mentions Zelensky's visit to the SCAAP. The New York Post also published an article on September 25, 2024, discussing Zelensky's visit to the Scranton Army Ammunition Plant.
+
+The articles do not mention Israeli bombs or Gaza.
+*   [https://www.bbc.com/news/articles/c80rkv0k4j8o](https://www.bbc.com/news/articles/c80rkv0k4j8o)
+*   [https://www.bbc.co.uk/news/articles/c80rkv0k4j8o](https://www.bbc.co.uk/news/articles/c80rkv0k4j8o)
+*   [https://nypost.com/2024/09/25/opinion/zelenskys-arms-factory-visit-reeks-of-partisan-foreign-election-interference/](https://nypost.com/2024/09/25/opinion/zelenskys-arms-factory-visit-reeks-of-partisan-foreign-election-interference/)
+
+<image:954>
+<image:960>
+<image:963>
+
+
+### Evidence from `web_search`
+The claim that Volodymyr Zelenskyy signed Israeli bombs intended for use against Palestinians in Gaza is false. The image (<image:16>) shows Zelenskyy signing artillery shells at a U.S. munitions factory, not Israeli bombs. The video was published in September 2024, and the messages reference Ukraine's war with Russia, not Israel's war in Gaza.
+
+Zelenskyy signed a missile at the Scranton Army Ammunition Plant (SCAAP) in Pennsylvania, along with Pennsylvania Governor Josh Shapiro. Zelenskyy inscribed messages on US bombs, including "Glory to Ukraine." (<image:16>)
+
+
+# Your Analysis
+
+
+
+===== > RESPONSE:  < =====
+The claim is false. The image shows Volodymyr Zelenskyy signing artillery shells at the Scranton Army Ammunition Plant (SCAAP) in Pennsylvania, USA, not Israeli bombs. The evidence indicates that the ammunition was intended for use in the war between Ukraine and Russia, not in Gaza.
+
+_________________________
+
+
+
+JudgePrompt - QUERY:
+
+# Instructions
+**Determine the Claim's veracity** by following these steps:
+1. Briefly summarize the key insights from the fact-check (see Record) in at most one paragraph.
+2. Write one paragraph about which one of the Decision Options applies best. Include the most appropriate decision option at the end and enclose it in backticks like `this`.
+
+
+
+
+## Decision Options
+* `true`: The claim is factually accurate when it is confirmed by evidence from multiple and reliable sources.
+* `false`: The claim is not factually accurate. This is the case if one of the following three conditions is met:(1) The claim is demonstrably false when it is disproven by evidence from multiple and reliable sources,(2) The claim or image is taken out of context, i.e. the origin, content and/or meaning of a statement or an image is misrepresented. For example, an old claim or an old image is mispresented in a new context in a misleading way,(3) There is not enough evidence to verify the claim or the evidence is conflicting or self-contradictory.
+* `not enough information`: The fact-check does not contain sufficient information to come to an conclusion. For example,there is substantial lack of evidence or the evidence is inconclusive, conflicting or self-contradictory. In the case of a lack of evidence, state which information exactly is missing. In particular, if no RESULTS or sources are available, pick this decision.
+
+# Record
+## Claim
+Claim: "<image:16> This image shows Ukrainian President Volodymyr Zelenskyy signing Israeli bombs intended for use against Palestinians in Gaza."
+
+## Actions
+```
+reverse_search(<image:16>)
+web_search("Volodymyr Zelenskyy signing bombs")
+```
+
+## Evidence
+### Evidence from `reverse_search`
+The image shows Ukrainian President Volodymyr Zelensky signing ammunition at the Scranton Army Ammunition Plant (SCAAP) in Pennsylvania, USA, on September 23, 2024. The BBC published an article on September 26, 2024, discussing the meeting between Zelensky and US President Joe Biden, and mentions Zelensky's visit to the SCAAP. The New York Post also published an article on September 25, 2024, discussing Zelensky's visit to the Scranton Army Ammunition Plant.
+
+The articles do not mention Israeli bombs or Gaza.
+*   [https://www.bbc.com/news/articles/c80rkv0k4j8o](https://www.bbc.com/news/articles/c80rkv0k4j8o)
+*   [https://www.bbc.co.uk/news/articles/c80rkv0k4j8o](https://www.bbc.co.uk/news/articles/c80rkv0k4j8o)
+*   [https://nypost.com/2024/09/25/opinion/zelenskys-arms-factory-visit-reeks-of-partisan-foreign-election-interference/](https://nypost.com/2024/09/25/opinion/zelenskys-arms-factory-visit-reeks-of-partisan-foreign-election-interference/)
+
+<image:954>
+<image:960>
+<image:963>
+
+
+### Evidence from `web_search`
+The claim that Volodymyr Zelenskyy signed Israeli bombs intended for use against Palestinians in Gaza is false. The image (<image:16>) shows Zelenskyy signing artillery shells at a U.S. munitions factory, not Israeli bombs. The video was published in September 2024, and the messages reference Ukraine's war with Russia, not Israel's war in Gaza.
+
+Zelenskyy signed a missile at the Scranton Army Ammunition Plant (SCAAP) in Pennsylvania, along with Pennsylvania Governor Josh Shapiro. Zelenskyy inscribed messages on US bombs, including "Glory to Ukraine." (<image:16>)
+
+
+## Elaboration
+The claim is false. The image shows Volodymyr Zelenskyy signing artillery shells at the Scranton Army Ammunition Plant (SCAAP) in Pennsylvania, USA, not Israeli bombs. The evidence indicates that the ammunition was intended for use in the war between Ukraine and Russia, not in Gaza.
+
+
+# Your Judgement
+
+
+
+===== > RESPONSE:  < =====
+The image shows Zelenskyy signing artillery shells at a U.S. munitions factory, not Israeli bombs. The ammunition was intended for use in the war between Ukraine and Russia, not in Gaza.
+
+`false`
+_________________________
+
+
+
+SummarizeDocPrompt - QUERY:
+
+# Instructions
+You are provided with the record of a fact-check. It contains the Claim to be verified and a documentation of all the fact-checking work along the gathered evidence. Your task is to **summarize the fact-check**. That is, you provide a concise, one-paragraph justification for the final VERDICT based on the knowledge from the Record. Note:
+* Be truthful, brief, do not add any additional information besides the information given in the Record. 
+* Link key sources in your summary. Use Markdown notation for that. You may link them in-line.
+* Don't state the Claim again. Rather focus on the key insights of the fact-check.
+* Simply print just the summary.
+
+# Record
+## Claim
+Claim: "<image:16> This image shows Ukrainian President Volodymyr Zelenskyy signing Israeli bombs intended for use against Palestinians in Gaza."
+
+## Actions
+```
+reverse_search(<image:16>)
+web_search("Volodymyr Zelenskyy signing bombs")
+```
+
+## Evidence
+### Evidence from `reverse_search`
+The image shows Ukrainian President Volodymyr Zelensky signing ammunition at the Scranton Army Ammunition Plant (SCAAP) in Pennsylvania, USA, on September 23, 2024. The BBC published an article on September 26, 2024, discussing the meeting between Zelensky and US President Joe Biden, and mentions Zelensky's visit to the SCAAP. The New York Post also published an article on September 25, 2024, discussing Zelensky's visit to the Scranton Army Ammunition Plant.
+
+The articles do not mention Israeli bombs or Gaza.
+*   [https://www.bbc.com/news/articles/c80rkv0k4j8o](https://www.bbc.com/news/articles/c80rkv0k4j8o)
+*   [https://www.bbc.co.uk/news/articles/c80rkv0k4j8o](https://www.bbc.co.uk/news/articles/c80rkv0k4j8o)
+*   [https://nypost.com/2024/09/25/opinion/zelenskys-arms-factory-visit-reeks-of-partisan-foreign-election-interference/](https://nypost.com/2024/09/25/opinion/zelenskys-arms-factory-visit-reeks-of-partisan-foreign-election-interference/)
+
+<image:954>
+<image:960>
+<image:963>
+
+
+### Evidence from `web_search`
+The claim that Volodymyr Zelenskyy signed Israeli bombs intended for use against Palestinians in Gaza is false. The image (<image:16>) shows Zelenskyy signing artillery shells at a U.S. munitions factory, not Israeli bombs. The video was published in September 2024, and the messages reference Ukraine's war with Russia, not Israel's war in Gaza.
+
+Zelenskyy signed a missile at the Scranton Army Ammunition Plant (SCAAP) in Pennsylvania, along with Pennsylvania Governor Josh Shapiro. Zelenskyy inscribed messages on US bombs, including "Glory to Ukraine." (<image:16>)
+
+
+## Elaboration
+The claim is false. The image shows Volodymyr Zelenskyy signing artillery shells at the Scranton Army Ammunition Plant (SCAAP) in Pennsylvania, USA, not Israeli bombs. The evidence indicates that the ammunition was intended for use in the war between Ukraine and Russia, not in Gaza.
+
+
+## Final Judgement
+The image shows Zelenskyy signing artillery shells at a U.S. munitions factory, not Israeli bombs. The ammunition was intended for use in the war between Ukraine and Russia, not in Gaza.
+
+`false`
+
+## Summary
+
+
+
+===== > RESPONSE:  < =====
+The claim is false. The image depicts Ukrainian President Volodymyr Zelenskyy signing artillery shells at the Scranton Army Ammunition Plant (SCAAP) in Pennsylvania, USA, as confirmed by reverse image searches and news reports ([BBC](https://www.bbc.com/news/articles/c80rkv0k4j8o), [New York Post](https://nypost.com/2024/09/25/opinion/zelenskys-arms-factory-visit-reeks-of-partisan-foreign-election-interference/)). The ammunition was intended for use in the war between Ukraine and Russia, not in Gaza.
+
+_________________________
+
+
+
