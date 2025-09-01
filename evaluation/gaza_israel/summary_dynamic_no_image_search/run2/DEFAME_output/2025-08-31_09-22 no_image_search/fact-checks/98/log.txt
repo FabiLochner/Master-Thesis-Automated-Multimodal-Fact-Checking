@@ -1,0 +1,41 @@
+Extracting claims from Content: <image:64> This is an authentic image of Dwayne Johnson waring the Israeli flag in support of Israel.
+'Claim: "<image:64> This is an authentic image of Dwayne Johnson waring the Israeli flag in support of Israel."'
+Verifying Claim: "<image:64> This is an authentic image of Dwayne Johnson waring the Israeli flag in support of Israel."
+Not enough information yet. Continuing fact-check...
+Got 0 new web source(s):
+Not enough information yet. Continuing fact-check...
+INFO: Dropping action 'reverse_search' as it was already performed.
+Got 3 new web source(s):
+	1. October 11, 2023 https://www.marca.com/en/lifestyle/world-news/2023/10/11/6526c4cc22601d2d748b45da.html
+	2. February 18, 2025 https://shopisrael.com/blogs/support/does-dwayne-johnson-support-israel?srsltid=AfmBOopy4n2f7lxTWWqdiE6_xSd1XeW0AbQOVlP76nNPJQ6KrktIHL3X
+	3. October 09, 2023 https://variety.com/2023/film/news/hollywood-stars-support-israel-palestine-conflict-1235749537/
+Useful result: From [Source](https://www.marca.com/en/lifestyle/world-news/2023/10/11/6526c4cc22601d2d748b45da.html): 
+Content: The search result from Marca.com, published on October 11, 2023, discusses Dwayne "The Rock" Johnson's views on the Israel-Palestine conflict. <image:2699> Johnson expressed heartbreak and outrage at the events, condemning the actions of Hamas and the loss of innocent lives. The article mentions Johnson's Instagram post and notes that he does not appear to be showing a clear allegiance with either side of the conflict.
+
+Useful result: From [Source](https://shopisrael.com/blogs/support/does-dwayne-johnson-support-israel?srsltid=AfmBOopy4n2f7lxTWWqdiE6_xSd1XeW0AbQOVlP76nNPJQ6KrktIHL3X): 
+Content: The search result from Shop Israel discusses Dwayne Johnson's relationship with Israel. It states that Johnson has not been noted for direct engagements with Israel, but has expressed his views on the Israel-Palestine conflict. He has made public statements condemning terrorism and expressing sympathy for innocent lives lost in the conflict. Johnson's overall stance on Israel is not explicitly supportive or critical, but he emphasizes compassion and peace. The article was published on February 28, 2025. <image:1>
+
+Useful result: From [Source](https://variety.com/2023/film/news/hollywood-stars-support-israel-palestine-conflict-1235749537/): 
+Content: The article from Variety, published on October 9, 2023, reports that Dwayne "The Rock" Johnson, along with other Hollywood stars, expressed support for Israel amid the Hamas attacks. <image:2700> shows Dwayne Johnson. The article also mentions that Dwayne Johnson posted on Instagram in support of Israel.
+
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Dwayne Johnson wearing Israeli flag image')
+Skipping fact-checking website: https://www.snopes.com/fact-check/dwayne-johnson-israel-gaza-netanyahu/
+Skipping unsupported website: https://www.instagram.com/p/DMo_a4oisQ9/
+Got 3 new web source(s):
+	1. July 30, 2025 https://www.yahoo.com/news/articles/fact-check-fake-dwayne-johnson-234700368.html
+	2. August 05, 2025 https://mythdetector.com/en/dwayne-johnson-about-israel/
+	3. October 13, 2023 https://www.hindustantimes.com/htcity/cinema/gal-gadot-madonna-dwayne-johnson-justin-bieber-celebrities-come-out-to-support-israel-amid-ongoing-conflict-101697024471665.html
+Useful result: From [Source](https://www.yahoo.com/news/articles/fact-check-fake-dwayne-johnson-234700368.html): 
+Content: The Yahoo News article fact-checks a claim that Dwayne "The Rock" Johnson said, "I've seen a lot of evil in Hollywood scripts — but nothing compares to what Israel is doing in Gaza. The Israeli government and its Prime Minister Netanyahu are heartless criminals with no shred of humanity." The article states that the quote is an incorrect attribution. The article mentions that the quote first appeared on an X account named Global Lens News. <image:11846>, <image:11847>, <image:11848>.
+
+Useful result: From [Source](https://mythdetector.com/en/dwayne-johnson-about-israel/): 
+Content: The search result from Myth Detector, published on August 5, 2025, fact-checks a fabricated quote attributed to Dwayne Johnson about Israel. The quote, which criticizes the Israeli government, is not found on Johnson's official social media accounts. The article includes images of the fabricated quote and screenshots of social media posts sharing it. <image:11865>, <image:11858>. The source also mentions that the quote has been fact-checked by Snopes.
+
+Useful result: From [Source](https://www.hindustantimes.com/htcity/cinema/gal-gadot-madonna-dwayne-johnson-justin-bieber-celebrities-come-out-to-support-israel-amid-ongoing-conflict-101697024471665.html): 
+Content: The Hindustan Times published an article on October 13, 2023, discussing celebrities who have shown support for Israel amid the conflict with Hamas. The article mentions Dwayne Johnson, Gal Gadot, Gigi Hadid, and others. Dwayne Johnson posted a note condemning terrorism. <image:64>
+
+The claim '<image:64> This is an authentic image of Dwayne Johnson waring the Israeli flag in support of Israel.' is true.
+Justification: The claim is supported by evidence. Dwayne Johnson has expressed support for Israel, and the image in the claim is present in a news article ([https://www.hindustantimes.com/htcity/cinema/gal-gadot-madonna-dwayne-johnson-justin-bieber-celebrities-come-out-to-support-israel-amid-ongoing-conflict-101697024471665.html](https://www.hindustantimes.com/htcity/cinema/gal-gadot-madonna-dwayne-johnson-justin-bieber-celebrities-come-out-to-support-israel-amid-ongoing-conflict-101697024471665.html)).
+
+So, the overall veracity is: true
+Fact-check took 3:38 min.

@@ -1,0 +1,38 @@
+Extracting claims from Content: <image:24> This image shows the remains of Nasrallah's ring after being killed in an Israeli airstrike in Beirut on September 28, 2024.
+'Claim: "<image:24> This image shows the remains of Nasrallah's ring after being killed in an Israeli airstrike in Beirut on September 28, 2024."'
+Verifying Claim: "<image:24> This image shows the remains of Nasrallah's ring after being killed in an Israeli airstrike in Beirut on September 28, 2024."
+Not enough information yet. Continuing fact-check...
+Got 3 new web source(s):
+	1. September 28, 2024 https://www.npr.org/2024/09/28/g-s1-25279/israels-military-says-it-killed-hezbollah-leader
+	2. September 30, 2024 https://www.theguardian.com/world/2024/sep/30/lebanon-reels-from-israeli-bombardment-with-no-sign-of-respite
+	3. September 28, 2024 https://www.washingtonpost.com/world/2024/09/28/israel-lebanon-hezbollah-hamas-war-news-gaza/
+Useful result: From [Source](https://www.npr.org/2024/09/28/g-s1-25279/israels-military-says-it-killed-hezbollah-leader): 
+Content: The NPR article, published on September 28, 2024, reports that the leader of Hezbollah, Hassan Nasrallah, was killed in Israeli airstrikes in Beirut. <image:1367>, <image:1369>. The article mentions that the Israeli military confirmed the killing.
+
+Useful result: From [Source](https://www.theguardian.com/world/2024/sep/30/lebanon-reels-from-israeli-bombardment-with-no-sign-of-respite): 
+Content: The Guardian published an article discussing Israeli airstrikes in Beirut that killed Hezbollah’s leader, Hassan Nasrallah. The article is more than 9 months old. <image:1371>, <image:1372>, <image:1373>.
+
+Useful result: From [Source](https://www.washingtonpost.com/world/2024/09/28/israel-lebanon-hezbollah-hamas-war-news-gaza/): 
+Content: The Washington Post reports that an Israeli airstrike in Beirut targeted Hezbollah leader Hasan Nasrallah. The article mentions that the strike occurred on September 27, 2024, and that there is widespread concern about retaliation. The article also mentions that international leaders praised and condemned the strike. The article was published on September 28, 2024. <image:24>
+
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Nasrallah ring')
+Skipping unsupported website: https://x.com/nexta_tv/status/1840020692307206548
+Skipping fact-checking website: https://www.reuters.com/fact-check/image-does-not-show-hezbollah-leader-nasrallahs-damaged-ring-2024-10-03/
+Got 3 new web source(s):
+	1. https://today.lorientlejour.com/article/1433023/what-do-hassan-nasrallahs-rings-mean.html
+	2. https://apnews.com/article/obituary-nasrallah-lebanon-israel-2da3789a02fd4e2e88511a7f59174d19
+	3. https://timeukraineisrael.com/en/news/world/nasrallahs-ring-auction-sale-and-aid-for-lebanon-and-gaza/
+Useful result: From [Source](https://today.lorientlejour.com/article/1433023/what-do-hassan-nasrallahs-rings-mean.html): 
+Content: The article from L'Orient-Le Jour discusses the rings worn by Hassan Nasrallah. <image:10284>
+
+Useful result: From [Source](https://apnews.com/article/obituary-nasrallah-lebanon-israel-2da3789a02fd4e2e88511a7f59174d19): 
+Content: The Associated Press published an obituary of Hassan Nasrallah. The image shows Nasrallah wearing a ring. <image:10285>
+
+Useful result: From [Source](https://timeukraineisrael.com/en/news/world/nasrallahs-ring-auction-sale-and-aid-for-lebanon-and-gaza/): 
+Content: The search result from timeukraineisrael.com shows a picture of Nasrallah's ring. <image:10286>
+
+The claim '<image:24> This image shows the remains of Nasrallah's ring after being killed in an Israeli airstrike in Beirut on September 28, 2024.' is true.
+Justification: The claim is supported by evidence. Multiple news sources, including the [Washington Post](https://www.washingtonpost.com/world/2024/09/28/israel-lebanon-hezbollah-hamas-war-news-gaza/), report that Hassan Nasrallah was killed in an Israeli airstrike in Beirut and include the image of the ring in question.
+
+So, the overall veracity is: true
+Fact-check took 0:23 min.

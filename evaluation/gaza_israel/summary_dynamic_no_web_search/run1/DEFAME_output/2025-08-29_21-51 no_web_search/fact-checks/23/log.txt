@@ -1,0 +1,39 @@
+Extracting claims from Content: The Guardian published an article with the headline: 'Gaza will rise from the ashes to become a city of the future to rival Bradford.'
+'Claim: "The Guardian published an article with the headline: 'Gaza will rise from the ashes to become a city of the future to rival Bradford.'"'
+Verifying Claim: "The Guardian published an article with the headline: 'Gaza will rise from the ashes to become a city of the future to rival Bradford.'"
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='The Guardian Gaza city of the future Bradford')
+Skipping fact-checking website: https://www.reuters.com/fact-check/guardian-headline-gaza-becoming-city-rivalling-bradford-is-fake-2024-11-27/
+Failed to download or open image: No connection adapters were found for 'x-raw-image:///cad56caf89302d6a32b4a61b8ec813f2659ba368e9c8c95c69a040114378ab1c'
+Got 3 new web source(s):
+	1. https://www.theguardian.com/cities/2016/jul/28/future-gaza-city-world-tourism-hub-palestinian
+	2. https://www.sgr.org.uk/resources/gaza-one-most-intense-bombardments-history
+	3. https://www.cnn.com/2024/02/10/middleeast/khan-younis-devastation
+Useful result: From [Source](https://www.theguardian.com/cities/2016/jul/28/future-gaza-city-world-tourism-hub-palestinian): 
+Content: The Guardian published an article about the future of Gaza. <image:7487> The article was published on July 28, 2016.
+
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='The Guardian Gaza Bradford')
+Skipping fact-checking website: https://www.reuters.com/fact-check/guardian-headline-gaza-becoming-city-rivalling-bradford-is-fake-2024-11-27/
+Got 1 new web source(s):
+	1. https://www.theguardian.com/world/2013/nov/07/yorkshire-educated-woman-female-hamas-spokesperson
+Useful result: From [Source](https://www.theguardian.com/world/2013/nov/07/yorkshire-educated-woman-female-hamas-spokesperson): 
+Content: The Guardian published an article. <image:7492>
+
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Gaza will rise from the ashes to become a city of the future to rival Bradford The Guardian')
+Skipping fact-checking website: https://www.reuters.com/fact-check/guardian-headline-gaza-becoming-city-rivalling-bradford-is-fake-2024-11-27/
+Skipping fact-checking website: https://fullfact.org/online/fake-guardian-article-gaza-bradford/
+Skipping unsupported website: https://www.instagram.com/p/DHRqEi8Plos/
+Got 3 new web source(s):
+	1. https://www.theguardian.com/world/2023/oct/12/the-buildings-are-now-ashes-gazans-feel-nowhere-is-safe-from-israeli-bombs
+	2. https://www.theatlantic.com/photo/2014/07/death-toll-in-gaza-climbs-israel-calls-up-more-troops/100784/
+	3. https://www.vanityfair.com/news/2023/10/gaza-journalists-israel-hamas-war?srsltid=AfmBOoq2TFOzoHWsxXsXlrvShsgA3g3QrjgnqSJXMZOo7_LXhWQCyvlr
+Useful result: From [Source](https://www.theguardian.com/world/2023/oct/12/the-buildings-are-now-ashes-gazans-feel-nowhere-is-safe-from-israeli-bombs): 
+Content: The Guardian published an article about Gaza. <image:7493> The article was published on October 12, 2023.
+
+The claim 'The Guardian published an article with the headline: 'Gaza will rise from the ashes to become a city of the future to rival Bradford.'' is false.
+Justification: The Guardian has published articles about Gaza, as evidenced by multiple search results ([Source 1](https://www.theguardian.com/cities/2016/jul/28/future-gaza-city-world-tourism-hub-palestinian), [Source 2](https://www.theguardian.com/world/2023/oct/12/the-buildings-are-now-ashes-gazans-feel-nowhere-is-safe-from-israeli-bombs)). However, none of the provided evidence confirms the specific headline mentioned in the claim. Therefore, the claim remains unverified.
+
+So, the overall veracity is: false
+Fact-check took 0:24 min.

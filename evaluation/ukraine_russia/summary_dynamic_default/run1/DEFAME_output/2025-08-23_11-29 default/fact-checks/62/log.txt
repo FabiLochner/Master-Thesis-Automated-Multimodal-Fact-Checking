@@ -1,0 +1,39 @@
+Extracting claims from Content: <image:20> This image shows a US drone which was shot down in March 2025 by the Houthis using Russian missiles.
+'Claim: "<image:20> This image shows a US drone which was shot down in March 2025 by the Houthis using Russian missiles."'
+Verifying Claim: "<image:20> This image shows a US drone which was shot down in March 2025 by the Houthis using Russian missiles."
+Not enough information yet. Continuing fact-check...
+Most likely location: Israel
+Top 10 locations: Israel, Palestine, United Arab Emirates, Jordan, Tunisia, Albania, Andorra, Argentina, Australia, Austria
+Got 3 new web source(s):
+	1. https://www.fswc.ca/news/fswc-calls-for-canadians-to-stand-with-israel
+	2. https://turdef.com/country/israel-news?page=5
+	3. https://www.timesofisrael.com/the-daily-edition/2023-10-07/
+Useful result: From [Source](https://www.fswc.ca/news/fswc-calls-for-canadians-to-stand-with-israel): Found exact image on website with title: FSWC Calls for Canadians to Stand with Israel
+Content: The image in the claim is found on the Friends of Simon Wiesenthal Center (FSWC) website. The article is dated October 7, 2023, and is titled "FSWC Calls for Canadians to Stand with Israel". <image:1348>
+
+Useful result: From [Source](https://turdef.com/country/israel-news?page=5): Found exact image on website with title: Israel Defence News - TURDEF
+Content: The search result from TURDEF contains an image that matches the image in the claim <image:1356>. The article is titled "Second Yom Kippur War in Israel" and was published on October 7, 2023. The article states that Hamas attacked Israel on the 50th anniversary of the Yom Kippur War.
+
+Useful result: From [Source](https://www.timesofisrael.com/the-daily-edition/2023-10-07/): Found exact image on website with title: The Daily Edition | The Times of Israel
+Content: The Times of Israel published an article on October 7, 2023, about the Hamas attack on Israel. The article includes images of the aftermath of the attacks, including burning vehicles and buildings. <image:20> is present in the article. The article does not mention a US drone being shot down by the Houthis using Russian missiles.
+
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='US drone shot down Houthi Russian missiles')
+Skipping unsupported website: https://www.youtube.com/watch?v=oykCfbppNrA
+Got 3 new web source(s):
+	1. February 26, 2025 https://www.atlanticcouncil.org/blogs/menasource/houthi-strikes-on-us-mq9-reaper-drones/
+	2. April 24, 2025 https://apnews.com/article/houthis-us-warships-red-sea-e6e97a7131c48640ccf74b1916628234
+	3. https://en.wikipedia.org/wiki/Red_Sea_crisis
+Useful result: From [Source](https://www.atlanticcouncil.org/blogs/menasource/houthi-strikes-on-us-mq9-reaper-drones/): 
+Content: The Atlantic Council published an article discussing Houthi strikes on US MQ-9 Reaper drones. The article mentions that the Houthis shot down three MQ-9 Reapers between 2017 and 2019. On December 28, 2024, the Houthis announced they shot down a US MQ-9 Reaper over Yemen. Four days later, the Houthis claimed to have downed a second US-made drone in the Marib governorate, marking the first Houthi strike of an MQ-9 Reaper in 2025. The Houthis' arsenal includes Russian-made missiles.
+
+Useful result: From [Source](https://apnews.com/article/houthis-us-warships-red-sea-e6e97a7131c48640ccf74b1916628234): 
+Content: The Associated Press reports that Houthi rebels have shot down seven U.S. Reaper drones in recent weeks. The article was published on November 20, 2024. <image:20> is not in the article.
+
+Useful result: From [Source](https://en.wikipedia.org/wiki/Red_Sea_crisis): 
+Content: The search result from Wikipedia discusses the Red Sea crisis, which began in October 2023 with Houthi attacks on Israel. It mentions that the Houthis have been attacking shipping vessels in the Red Sea. The Houthis are supported by Iran, and have been using weapons of Russian, Chinese, or Iranian origin. The timeline of events includes the beginning of Operation Prosperity Guardian on December 18, 2023, and US airstrikes in March 2025. The article also mentions that the US has lost MQ-9 Reapers and F/A-18 Super Hornets. The article also mentions that Russia may be arming the Houthis with advanced anti-ship missiles.
+
+The claim '<image:20> This image shows a US drone which was shot down in March 2025 by the Houthis using Russian missiles.' is false.
+Justification: The image in the claim is associated with the Hamas attack on Israel in October 2023, as evidenced by its appearance in articles from the [Friends of Simon Wiesenthal Center](https://www.fswc.ca/news/fswc-calls-for-canadians-to-stand-with-israel), TURDEF, and [The Times of Israel](https://www.timesofisrael.com/the-daily-edition/2023-10-07/). The geolocation data suggests the image was taken in Israel. While the Houthis have shot down US drones, the image does not depict such an event.
+
+So, the overall veracity is: false
+Fact-check took 4:30 min.

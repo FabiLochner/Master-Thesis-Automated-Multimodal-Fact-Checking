@@ -1,0 +1,37 @@
+Extracting claims from Content: <image:18> This image shows an authentic list realeased by Ukraine showing US politicians taking bribes from Ukraine. The highest bribe was 92 Million US-$ for Joe Biden.
+'Claim: "<image:18> This image shows an authentic list realeased by Ukraine showing US politicians taking bribes from Ukraine. The highest bribe was 92 Million US-$ for Joe Biden."'
+Verifying Claim: "<image:18> This image shows an authentic list realeased by Ukraine showing US politicians taking bribes from Ukraine. The highest bribe was 92 Million US-$ for Joe Biden."
+Not enough information yet. Continuing fact-check...
+Got 3 new web source(s):
+	1. February 13, 2025 https://finance.yahoo.com/news/elon-musk-questions-congress-members-190016734.html
+	2. March 17, 2021 https://www.yahoo.com/news/fact-check-no-house-speaker-172533305.html
+	3. November 06, 2023 https://theconversation.com/why-are-us-politicians-so-old-and-why-do-they-want-to-stay-in-office-217024
+Useful result: From [Source](https://finance.yahoo.com/news/elon-musk-questions-congress-members-190016734.html): 
+Content: The Yahoo Finance article, published on February 13, 2025, discusses Elon Musk's questioning of the wealth of members of Congress. The article mentions Joe Biden, Nancy Pelosi, Mitch McConnell, Chuck Schumer, and Elizabeth Warren. It also mentions that members of Congress can buy and sell stocks, options, and cryptocurrency as long as they disclose the transactions in a timely manner. <image:1230>
+
+Useful result: From [Source](https://www.yahoo.com/news/fact-check-no-house-speaker-172533305.html): 
+Content: The Yahoo News article discusses the wealth of Nancy Pelosi, mentioning her real estate investments and stock holdings. <image:1239>, <image:1241>, <image:1238>, <image:1240>. It also mentions that Pelosi's salary doesn't tell the whole story about the personal wealth she and her husband have built. The article also mentions that Pelosi's office did not immediately respond to a request for comment.
+
+Useful result: From [Source](https://theconversation.com/why-are-us-politicians-so-old-and-why-do-they-want-to-stay-in-office-217024): 
+Content: The Conversation published an article on July 21, 2023, discussing the age of US politicians. The article mentions Joe Biden, Mitch McConnell, and Nancy Pelosi. <image:1243> shows Donald Trump and Joe Biden. A Gallup Poll released in June 2024 found that about 67% of Americans say Biden is too old to be president.
+
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='US politicians Ukraine bribes')
+Skipping unsupported website: https://oversight.house.gov/the-bidens-influence-peddling-timeline/
+Got 3 new web source(s):
+	1. July 21, 2023 https://www.bbc.com/news/world-us-canada-66272217
+	2. December 31, 2024 https://thedispatch.com/article/claims-about-kickbacks-to-u-s-politicians-from-ukraine-are-false/
+	3. January 15, 2025 https://www.euronews.com/video/2025/01/15/old-false-claims-resurface-about-ukrainian-kickbacks-to-us-politicians
+Useful result: From [Source](https://www.bbc.com/news/world-us-canada-66272217): 
+Content: The BBC News article from July 21, 2023, reports that a top Senate Republican released an FBI document detailing an allegation that President Joe Biden and his son accepted bribes from a Ukrainian firm. <image:4361>, <image:4363>, <image:4365>. The document is an unclassified memo from June 2020, outlining claims by a foreign informant. The article states that there is no evidence that Joe Biden received any payments from Ukraine. The memo alleges that Burisma made two $5m payments to "the Bidens". The FBI considers the informant to be highly credible, but the report details how the informant said he could not vouch for the accuracy of the information he was passing along.
+
+Useful result: From [Source](https://thedispatch.com/article/claims-about-kickbacks-to-u-s-politicians-from-ukraine-are-false/): 
+Content: The Dispatch published on December 31, 2024, states that a viral image claiming U.S. politicians received kickback payments from Ukraine is false. The earliest version of the post appeared on a Thai-language website on October 3, 2023, and linked to a Russian video site. The article mentions that Ukrainian officials have not released any such information, and there is no evidence of such payments. <image:4366>
+
+Useful result: From [Source](https://www.euronews.com/video/2025/01/15/old-false-claims-resurface-about-ukrainian-kickbacks-to-us-politicians): 
+Content: The search result from Euronews, updated on 15/01/2025, discusses old false claims about Ukrainian kickbacks to US politicians. The article includes images of Joe Biden and Volodymyr Zelenskyy. <image:4377>, <image:4376>.
+
+The claim '<image:18> This image shows an authentic list realeased by Ukraine showing US politicians taking bribes from Ukraine. The highest bribe was 92 Million US-$ for Joe Biden.' is false.
+Justification: The claim that Ukraine released a list of US politicians taking bribes is false. Multiple sources, including the BBC News ([https://www.bbc.com/news/world-us-canada-66272217](https://www.bbc.com/news/world-us-canada-66272217)), The Dispatch, and Euronews, confirm that the image is a false claim and that Ukrainian officials have not released any such information.
+
+So, the overall veracity is: false
+Fact-check took 1:00 min.

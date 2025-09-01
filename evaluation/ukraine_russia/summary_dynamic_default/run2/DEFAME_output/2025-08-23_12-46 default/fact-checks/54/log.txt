@@ -1,0 +1,64 @@
+Extracting claims from Content: Ukraine is selling half of the armaments it receives from the United States
+'Claim: "Ukraine is selling half of the armaments it receives from the United States"'
+Verifying Claim: "Ukraine is selling half of the armaments it receives from the United States"
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Ukraine arms sales US aid')
+Skipping unsupported website: https://www.state.gov/bureau-of-political-military-affairs/releases/2025/01/u-s-security-cooperation-with-ukraine
+Got 3 new web source(s):
+	1. July 23, 2025 https://apnews.com/article/ukraine-weapons-pentagon-sale-missiles-russia-war-accaa67f34ae81c90aaf9e96b594f036
+	2. July 15, 2025 https://www.csis.org/analysis/trump-sends-weapons-ukraine-numbers
+	3. https://www.forumarmstrade.org/ukrainearms.html
+Useful result: From [Source](https://apnews.com/article/ukraine-weapons-pentagon-sale-missiles-russia-war-accaa67f34ae81c90aaf9e96b594f036): 
+Content: The Associated Press reports that the State Department approved $322 million in weapons sales to Ukraine, including supplies, maintenance, repair, and overhaul of U.S. armored vehicles and surface-to-air missile systems. <image:0> The article was published on July 17, 2024, by The Associated Press.
+
+Useful result: From [Source](https://www.csis.org/analysis/trump-sends-weapons-ukraine-numbers): 
+Content: The CSIS analysis discusses the state of military aid to Ukraine, including the announcements and deliveries of weapons. <image:4789>, <image:4790>. The article mentions the Ukraine Security Assistance Initiative (USAI) and Foreign Military Sales (FMS) as mechanisms for providing funds to Ukraine. It also touches upon the pause in aid by the Trump administration and the reasons behind it.
+
+Useful result: From [Source](https://www.forumarmstrade.org/ukrainearms.html): 
+Content: The search result from forumarmstrade.org provides a timeline of military aid to Ukraine from various countries, including the United States, Germany, the Netherlands, Denmark, Lithuania, Latvia, the Czech Republic, Japan, Norway, the United Kingdom, and France. The aid includes various armaments, ammunition, and equipment. The United States has provided small arms and ammunition seized from Iranian forces. The result also mentions that the Pentagon did not properly track $1 billion worth of military equipment sent to Ukraine.
+
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Ukraine arms sales corruption')
+Got 3 new web source(s):
+	1. January 27, 2024 https://www.bbc.com/news/world-europe-68120973
+	2. https://www.pbs.org/frontlineworld/stories/sierraleone/context.html
+	3. August 13, 2025 https://www.occrp.org/en/news/bulgaria-raids-arms-dealers-in-ukraine-led-corruption-probe
+Useful result: From [Source](https://www.bbc.com/news/world-europe-68120973): 
+Content: The BBC News reports that Ukraine's security service has uncovered corruption in an arms purchase by the military worth about $40m (£31m). The SBU said defence officials signed a contract for 100,000 mortar shells in August 2022, but no arms were ever provided. The article was published on January 28, 2024. <image:4880>, <image:4881>
+
+Useful result: From [Source](https://www.pbs.org/frontlineworld/stories/sierraleone/context.html): 
+Content: PBS.org discusses illicit weapons, high-level corruption, and organized crime centered in Ukraine. Ukraine inherited huge stockpiles after the Soviet Union collapsed in 1991. A Ukrainian parliamentary inquiry concluded that between 1992 and 1998, Ukraine lost $32 billion in military assets, in part through theft and discount arms sales. Ukraine has gained a reputation as one of the world's most active suppliers of illegal small arms.
+
+Useful result: From [Source](https://www.occrp.org/en/news/bulgaria-raids-arms-dealers-in-ukraine-led-corruption-probe): 
+Content: The Organized Crime and Corruption Reporting Project (OCCRP) reports that Bulgarian authorities searched the homes and offices of arms dealers in multiple cities as part of a corruption investigation launched by Ukraine. The investigation is probing alleged overpricing in arms sales to Kyiv. The article was published on August 13, 2025. <image:0>
+
+Got 2 new web source(s):
+	1. February 18, 2025 https://globalinitiative.net/analysis/future-trends-in-arms-trafficking-from-the-ukraine-conflict/
+	2. February 06, 2025 https://www.euam-ukraine.eu/news/moia-launches-the-coordination-centre-to-combat-illicit-arms-trafficking/
+Useful result: From [Source](https://globalinitiative.net/analysis/future-trends-in-arms-trafficking-from-the-ukraine-conflict/): 
+Content: The Global Initiative Against Transnational Organized Crime published an article on June 18, 2024, discussing future trends in arms trafficking from the Ukraine conflict. <image:1112> The article mentions that criminal groups are establishing more organized arms trafficking markets, routes, and supply chains. The article also states that the scale of the problem is much larger than past occurrences of large-scale diversion, such as the Balkans and Afghanistan. The article highlights the need for flexible and scalable policy responses.
+
+Useful result: From [Source](https://www.euam-ukraine.eu/news/moia-launches-the-coordination-centre-to-combat-illicit-arms-trafficking/): 
+Content: The Ministry of Internal Affairs of Ukraine launched the Coordination Centre to Combat Illicit Arms Trafficking on February 6, 2025. <image:1115>, <image:1117>, <image:1118>, <image:1120>. The center aims to counteract illegal arms trafficking and ensure the exchange of information between Ukrainian authorities and partner countries. The EU Advisory Mission Ukraine supports the center. The article mentions that law enforcement agencies seize weapons from illicit trafficking.
+
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Ukraine arms sales statistics')
+Got 3 new web source(s):
+	1. https://tradingeconomics.com/ukraine/weapons-sales
+	2. March 10, 2025 https://www.sipri.org/media/press-release/2025/ukraine-worlds-biggest-arms-importer-united-states-dominance-global-arms-exports-grows-russian
+	3. https://data.worldbank.org/indicator/MS.MIL.XPRT.KD?locations=UA
+Useful result: From [Source](https://tradingeconomics.com/ukraine/weapons-sales): 
+Content: The search result from tradingeconomics.com provides data on Ukraine's weapons sales. Weapons Sales in Ukraine decreased to 34 SIPRI TIV Million in 2023 from 72 SIPRI TIV Million in 2022. The data is sourced from SIPRI.
+
+Useful result: From [Source](https://www.sipri.org/media/press-release/2025/ukraine-worlds-biggest-arms-importer-united-states-dominance-global-arms-exports-grows-russian): 
+Content: The Stockholm International Peace Research Institute (SIPRI) reports that Ukraine became the world's largest importer of major arms in 2020–24, with imports increasing nearly 100 times compared to 2015–19. (<image:0>) The USA supplied 45% of the major arms to Ukraine, followed by Germany (12%) and Poland (11%). The article was published on March 10, 2025.
+
+Useful result: From [Source](https://data.worldbank.org/indicator/MS.MIL.XPRT.KD?locations=UA): 
+Content: The World Bank provides data on arms exports from Ukraine, sourced from the Stockholm International Peace Research Institute (SIPRI). The data is available at armstransfers.sipri.org/ArmsTransfer. The World Bank's website was last updated in 2025.
+
+The claim 'Ukraine is selling half of the armaments it receives from the United States' is false.
+Justification: The claim is unsupported by the evidence. While Ukraine's arms sales decreased in 2023, and it is the world's largest importer of arms, with the U.S. as a major supplier, there is no data to confirm that Ukraine is selling half of the armaments it receives from the United States. The provided sources, including [tradingeconomics.com](https://tradingeconomics.com/ukraine/weapons-sales) and [SIPRI](https://www.sipri.org/media/press-release/2025/ukraine-worlds-biggest-arms-importer-united-states-dominance-global-arms-exports-grows-russian), focus on import/export statistics and do not provide the specific information needed to verify the claim.
+
+So, the overall veracity is: false
+Fact-check took 10:58 min.
+Worker 1 is done and terminates gracefully.

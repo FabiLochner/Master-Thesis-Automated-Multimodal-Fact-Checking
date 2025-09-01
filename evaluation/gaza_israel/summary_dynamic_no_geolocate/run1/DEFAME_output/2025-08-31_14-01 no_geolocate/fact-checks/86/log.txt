@@ -1,0 +1,43 @@
+Extracting claims from Content: <image:55> This image shows U.S. warships being en route to the Lebanon coast in August 2024 to support the Israel Defence Forces (IDF).
+'Claim: "<image:55> This image shows U.S. warships being en route to the Lebanon coast in August 2024 to support the Israel Defence Forces (IDF)."'
+Verifying Claim: "<image:55> This image shows U.S. warships being en route to the Lebanon coast in August 2024 to support the Israel Defence Forces (IDF)."
+Not enough information yet. Continuing fact-check...
+Got 2 new web source(s):
+	1. https://www.dvidshub.net/news/474750/uss-mount-whitney-lcc-20-arrives-kiel-germany-marking-its-final-stop-after-completing-baltops-24
+	2. https://www.jbsa.mil/News/News/Article/3828763/us-officials-agree-natos-worth-is-unquestionable/
+Useful result: From [Source](https://www.dvidshub.net/news/474750/uss-mount-whitney-lcc-20-arrives-kiel-germany-marking-its-final-stop-after-completing-baltops-24): Found exact image on website with title: USS Mount Whitney (LCC 20) arrives in Kiel, Germany, marking its ...
+Content: The image is found on a website called DVIDS, and the title is "USS Mount Whitney (LCC 20) arrives in Kiel, Germany, marking its final stop after completing BALTOPS 24". The photo was taken on June 8, 2024, in the Baltic Sea. The USS Mount Whitney arrived in Kiel, Germany, on June 19, 2024, after participating in BALTOPS 24. The exercise included participation from various NATO countries. The article mentions the exercise enhanced interoperability and cooperation among allied nations. The author is Capt. John Huntress.
+
+Useful result: From [Source](https://www.jbsa.mil/News/News/Article/3828763/us-officials-agree-natos-worth-is-unquestionable/): Found exact image on website with title: U.S. officials agree NATO's worth is unquestionable
+Content: The search result is from a U.S. government website and contains an image of multiple military ships at sea. <image:55> The image is from June 8, 2024, and is related to exercise Baltic Operations 2024. The article discusses NATO and its importance.
+
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='U.S. warships Lebanon coast August 2024')
+Got 3 new web source(s):
+	1. August 02, 2024 https://news.usni.org/2024/08/02/carrier-uss-abraham-lincoln-heads-to-middle-east-as-iran-threatens-strikes-against-israel
+	2. August 03, 2024 https://www.npr.org/2024/08/03/nx-s1-5062390/us-military-deployment-middle-east-israel-iran
+	3. August 04, 2024 https://www.theguardian.com/world/article/2024/aug/03/us-bolsters-military-presence-in-middle-east-as-threat-of-regional-escalation-intensifies
+Useful result: From [Source](https://news.usni.org/2024/08/02/carrier-uss-abraham-lincoln-heads-to-middle-east-as-iran-threatens-strikes-against-israel): 
+Content: The USNI News article, published on August 2, 2024, reports that the USS Abraham Lincoln is heading to the Middle East. The article mentions that the deployment follows reports of potential retaliation against Israel by Iranian military officials and proxy forces. The article also mentions the presence of a three-ship Wasp Amphibious Ready Group in the Eastern Mediterranean, which could be used for a non-combatant evacuation from Lebanon. <image:12865>
+
+Useful result: From [Source](https://www.npr.org/2024/08/03/nx-s1-5062390/us-military-deployment-middle-east-israel-iran): 
+Content: The NPR article, published on August 3, 2024, reports that the U.S. is deploying ships and fighter jets to the Middle East to defend Israel. The U.S. is also taking steps to increase readiness to deploy additional land-based ballistic missile defense. <image:12883>, <image:12885>, <image:12888>, <image:12889>.
+
+Useful result: From [Source](https://www.theguardian.com/world/article/2024/aug/03/us-bolsters-military-presence-in-middle-east-as-threat-of-regional-escalation-intensifies): 
+Content: The Guardian published an article on August 3, 2024, stating that the U.S. military will deploy additional Navy cruisers and destroyers to the Middle East. The article mentions that the U.S. is increasing its military presence in the Middle East due to rising tensions and potential escalation following the killing of Hamas leader Ismail Haniyeh. The article includes a file photo of a US Osprey landing on the flight deck of the USS Abraham Lincoln in the Arabian Sea. <image:12890>
+
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='U.S. warships support IDF August 2024')
+Skipping unsupported website: https://www.defense.gov/News/News-Stories/Article/Article/3869868/austin-orders-additional-naval-assets-to-middle-east-amid-rising-tensions/
+Got 2 new web source(s):
+	1. August 03, 2024 https://www.bbc.com/news/articles/cw5y5637eqdo
+	2. August 03, 2024 https://www.reuters.com/world/middle-east/pentagon-tells-israel-it-will-adjust-us-troops-middle-east-2024-08-02/
+Useful result: From [Source](https://www.bbc.com/news/articles/cw5y5637eqdo): 
+Content: The BBC reported on August 3, 2024, that the U.S. would send additional warships and fighter jets to the Middle East to help defend Israel from possible attacks by Iran. <image:12897>, <image:12898>
+
+Useful result: From [Source](https://www.reuters.com/world/middle-east/pentagon-tells-israel-it-will-adjust-us-troops-middle-east-2024-08-02/): 
+Content: The Pentagon said it would deploy additional Navy warships to the Middle East in August 2024. The U.S. is increasing support for the defense of Israel. The article mentions the USS Dwight D. Eisenhower. <image:12899>
+
+The claim '<image:55> This image shows U.S. warships being en route to the Lebanon coast in August 2024 to support the Israel Defence Forces (IDF).' is false.
+Justification: The image in the claim, which shows military ships at sea, was taken in the Baltic Sea on June 8, 2024, and is related to the exercise Baltic Operations 2024, as confirmed by a reverse image search ([https://www.dvidshub.net/news/474750/uss-mount-whitney-lcc-20-arrives-kiel-germany-marking-its-final-stop-after-completing-baltops-24](https://www.dvidshub.net/news/474750/uss-mount-whitney-lcc-20-arrives-kiel-germany-marking-its-final-stop-after-completing-baltops-24)). Therefore, the image does not depict U.S. warships en route to the Lebanon coast in August 2024 to support the IDF.
+
+So, the overall veracity is: false
+Fact-check took 1:39 min.

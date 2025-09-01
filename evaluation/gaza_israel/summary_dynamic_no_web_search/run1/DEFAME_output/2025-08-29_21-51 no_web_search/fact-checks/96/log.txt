@@ -1,0 +1,42 @@
+Extracting claims from Content: <image:63> This image shows Mayar Hamida (9 years old) and Bilal Hamida (6 years old) who were killed by Israel along with their mother and grandmother at Al-Jaoni UN school in Al-Nuseirat refugee camp on July, 6 2024.
+'Claim: "<image:63> This image shows Mayar Hamida (9 years old) and Bilal Hamida (6 years old) who were killed by Israel along with their mother and grandmother at Al-Jaoni UN school in Al-Nuseirat refugee camp on July, 6 2024."'
+Verifying Claim: "<image:63> This image shows Mayar Hamida (9 years old) and Bilal Hamida (6 years old) who were killed by Israel along with their mother and grandmother at Al-Jaoni UN school in Al-Nuseirat refugee camp on July, 6 2024."
+Not enough information yet. Continuing fact-check...
+Got 0 new web source(s):
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Mayar Hamida Bilal Hamida killed Israel')
+Skipping unsupported website: https://www.facebook.com/photo.php?fbid=990740149366980&id=100052930128929&set=a.619803503127315
+Skipping unsupported website: https://www.instagram.com/p/C40zUFJIMjt/
+Skipping fact-checking website: https://www.misbar.com/en/factcheck/2024/07/15/israel-tragically-killed-the-hamida-siblings-in-october-2023-not-recently
+Got 2 new web source(s):
+	1. https://www.hrw.org/report/2007/09/05/why-they-died/civilian-casualties-lebanon-during-2006-war
+	2. https://english.palinfo.com/Zionist-Terrorism/2023/11/18/82751/
+Useful result: From [Source](https://www.hrw.org/report/2007/09/05/why-they-died/civilian-casualties-lebanon-during-2006-war): 
+Content: The Human Rights Watch report "Why They Died: Civilian Casualties in Lebanon During the 2006 War" contains an image of a man holding a framed photo. <image:7828>
+
+Useful result: From [Source](https://english.palinfo.com/Zionist-Terrorism/2023/11/18/82751/): 
+Content: The search result from palinfo.com contains an image of Mayar Hamida and Bilal Hamida. <image:7829>
+
+Not enough information yet. Continuing fact-check...
+INFO: Dropping action 'reverse_search' as it was already performed.
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Mayar Hamida Bilal Hamida Al-Nuseirat refugee camp July 6 2024')
+Skipping unsupported website: https://twitter.com/WAFANewsEnglish/status/1809833597525704994
+Skipping unsupported website: https://www.instagram.com/pbipalestine/p/C9HiUfntUsZ/
+Skipping fact-checking website: https://www.misbar.com/en/factcheck/2024/07/15/israel-tragically-killed-the-hamida-siblings-in-october-2023-not-recently
+Got 1 new web source(s):
+	1. https://gigaza.org/en/massacres/page/86/?e-page-00fab05=3
+Useful result: From [Source](https://gigaza.org/en/massacres/page/86/?e-page-00fab05=3): 
+Content: The search result from gigaza.org contains an image of a destroyed building and people in the Al-Nuseirat refugee camp. <image:7832>
+
+Not enough information yet. Continuing fact-check...
+INFO: Dropping action 'reverse_search' as it was already performed.
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Mayar Hamida Bilal Hamida Israel Al-Jaoni UN school Al-Nuseirat refugee camp')
+Skipping unsupported website: https://twitter.com/WAFANewsEnglish/status/1809833597525704994
+Skipping unsupported website: https://www.instagram.com/pbipalestine/p/C9HiUfntUsZ/
+Skipping fact-checking website: https://www.misbar.com/en/factcheck/2024/07/15/israel-tragically-killed-the-hamida-siblings-in-october-2023-not-recently
+Skipping unsupported website: https://www.facebook.com/photo.php?fbid=990740149366980&id=100052930128929&set=a.619803503127315
+Got 0 new web source(s):
+The claim '<image:63> This image shows Mayar Hamida (9 years old) and Bilal Hamida (6 years old) who were killed by Israel along with their mother and grandmother at Al-Jaoni UN school in Al-Nuseirat refugee camp on July, 6 2024.' is false.
+Justification: The provided evidence does not confirm the claim that Mayar Hamida and Bilal Hamida were killed by Israel. While image searches provide context to the location mentioned in the claim, they lack information about the circumstances of their deaths or Israel's involvement. Therefore, the claim cannot be verified due to a lack of supporting evidence.
+
+So, the overall veracity is: false
+Fact-check took 0:26 min.

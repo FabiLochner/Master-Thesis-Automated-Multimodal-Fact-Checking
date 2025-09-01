@@ -1,0 +1,37 @@
+Extracting claims from Content: <image:40> This image shows Ukrainian President Volodymyr Zelenskyy in March 2025 signing Israeli bombs intended for use against Palestinians in Gaza.
+'Claim: "<image:40> This image shows Ukrainian President Volodymyr Zelenskyy in March 2025 signing Israeli bombs intended for use against Palestinians in Gaza."'
+Verifying Claim: "<image:40> This image shows Ukrainian President Volodymyr Zelenskyy in March 2025 signing Israeli bombs intended for use against Palestinians in Gaza."
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Zelenskyy signing bombs March 2025')
+Skipping fact-checking website: https://www.reuters.com/fact-check/video-does-not-show-zelenskiy-signing-bombs-be-dropped-gazans-2025-03-11/
+Got 3 new web source(s):
+	1. March 13, 2025 https://spotlight.ebu.ch/p/video-caption-falsely-claims-zelenskyy
+	2. March 19, 2025 https://www.cnn.com/2025/03/19/europe/ukraine-russia-drone-attacks-intl-hnk
+	3. July 03, 2025 https://www.euronews.com/my-europe/2025/03/07/zelenskyy-calls-for-air-and-sea-truce-after-large-scale-russian-missile-attack
+Useful result: From [Source](https://spotlight.ebu.ch/p/video-caption-falsely-claims-zelenskyy): 
+Content: The search result from Spotlight by EBU, published on March 13, 2025, addresses a claim that Ukrainian President Volodymyr Zelenskyy signed artillery shells destined for use in Gaza. The article states that the video and images were shared online with captions falsely claiming Zelenskyy signed bombs to be dropped on Gazans. The video actually shows Zelenskyy at a U.S. munitions factory. The video was shared on September 23, 2024, and the handwritten messages do not reference Ukraine’s war with Russia or Israel’s war in Gaza. <image:40>
+
+Useful result: From [Source](https://www.cnn.com/2025/03/19/europe/ukraine-russia-drone-attacks-intl-hnk): 
+Content: The CNN article, published on March 19, 2025, discusses the exchange of attacks between Ukraine and Russia, hours after a call between Trump and Putin. The article mentions that Zelenskyy accused Putin of breaking his pledge. The article also includes images of Putin and Trump. <image:40> is not present in the article.
+
+Useful result: From [Source](https://www.euronews.com/my-europe/2025/03/07/zelenskyy-calls-for-air-and-sea-truce-after-large-scale-russian-missile-attack): 
+Content: The search result from Euronews, published on March 7, 2025, reports that Volodymyr Zelenskyy called for an air and sea truce after a Russian missile attack. The article mentions Zelenskyy's proposals for stopping the war, including halting attacks on energy and civilian infrastructure. It also discusses talks with the US on ending the war. <image:40>
+
+Got 3 new web source(s):
+	1. https://www.theguardian.com/us-news/2024/sep/25/trump-zelenskyy-ukraine-feud-republicans-election-interference
+	2. https://www.bbc.com/news/articles/c5y30244467o
+	3. https://penncapital-star.com/government-politics/shapiro-casey-meet-with-zelenskyy-at-scranton-pennsylvania-ammunitions-factory/
+Useful result: From [Source](https://www.theguardian.com/us-news/2024/sep/25/trump-zelenskyy-ukraine-feud-republicans-election-interference): 
+Content: The Guardian published an image of Zelenskyy signing a bomb. <image:7264>
+
+Useful result: From [Source](https://www.bbc.com/news/articles/c5y30244467o): 
+Content: The BBC News website shows an image of Volodymyr Zelenskyy signing what appear to be artillery shells. <image:7265>
+
+Useful result: From [Source](https://penncapital-star.com/government-politics/shapiro-casey-meet-with-zelenskyy-at-scranton-pennsylvania-ammunitions-factory/): 
+Content: The Penn Capital-Star published an image of Volodymyr Zelenskyy. <image:7267>
+
+The claim '<image:40> This image shows Ukrainian President Volodymyr Zelenskyy in March 2025 signing Israeli bombs intended for use against Palestinians in Gaza.' is false.
+Justification: The image shows Ukrainian President Volodymyr Zelenskyy signing artillery shells at a U.S. munitions factory on September 23, 2024, not bombs intended for use against Palestinians in Gaza in March 2025. This information is supported by a Spotlight by EBU article ([https://spotlight.ebu.ch/p/video-caption-falsely-claims-zelenskyy](https://spotlight.ebu.ch/p/video-caption-falsely-claims-zelenskyy)).
+
+So, the overall veracity is: false
+Fact-check took 0:43 min.

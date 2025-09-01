@@ -1,0 +1,68 @@
+Extracting claims from Content: <image:59> This image shows a palestinian child stuck under the rubble in Gaza after an Israeli airstrike in July 2024.
+'Claim: "<image:59> This image shows a palestinian child stuck under the rubble in Gaza after an Israeli airstrike in July 2024."'
+Verifying Claim: "<image:59> This image shows a palestinian child stuck under the rubble in Gaza after an Israeli airstrike in July 2024."
+Not enough information yet. Continuing fact-check...
+Got 4 new web source(s):
+	1. https://english.enabbaladi.net/archives/2023/03/shams-journey-from-under-the-rubble-to-abu-dhabis-burjeel-hospital/
+	2. https://uaetimes.ae/shams-journey-from-under-the-rubble-to-abu-dhabis-burjeel-hospital/
+	3. https://english.elpais.com/international/2023-07-20/the-manual-of-repression-shared-by-modern-tyrants.html
+	4. https://elpais.com/planeta-futuro/2023-07-20/el-manual-de-represion-que-comparten-los-tiranos-modernos.html
+Useful result: From [Source](https://english.enabbaladi.net/archives/2023/03/shams-journey-from-under-the-rubble-to-abu-dhabis-burjeel-hospital/): Found exact image on website with title: Sham's journey from under the rubble to Abu Dhabi's Burjeel Hospital
+Content: The image is of a Syrian child, Sham, who was rescued from the rubble in Armanaz, Idlib, after an earthquake on February 7, 2023. The child was later transferred to hospitals in Turkey and Abu Dhabi for treatment. The article is from Enab Baladi, an independent Syrian media organization. <image:4663>, <image:4664>.
+
+Useful result: From [Source](https://uaetimes.ae/shams-journey-from-under-the-rubble-to-abu-dhabis-burjeel-hospital/): Found exact image on website with title: Sham's journey from under the rubble to Abu Dhabi's Burjeel Hospital
+Content: The search result is from UAE Times, published on March 14, 2023. It discusses the journey of a Syrian child, Sham, who was rescued from the rubble after an earthquake in February 2023. The article mentions that Sham was transferred to Abu Dhabi's Burjeel Hospital for treatment. The image <image:59> is found in the article. The article also mentions that the child was rescued on February 7, 40 hours after an earthquake struck southern Turkey and four Syrian provinces.
+
+Useful result: From [Source](https://english.elpais.com/international/2023-07-20/the-manual-of-repression-shared-by-modern-tyrants.html): Found exact image on website with title: The 'manual of repression' shared by modern tyrants | International
+Content: The article from El País, published on July 20, 2023, discusses how modern tyrants share tactics of repression. The article includes an image <image:4699> of a screen showing a girl trapped in rubble and a video call with Asma al-Assad. The article also includes the image <image:59> of a child in rubble.
+
+Got 3 new web source(s):
+	1. https://en.wikipedia.org/wiki/13_July_2024_al-Mawasi_attack
+	2. July 27, 2024 https://www.cnn.com/2024/07/27/middleeast/israel-gaza-deir-al-balah-school-intl
+	3. July 27, 2024 https://www.npr.org/2024/07/27/nx-s1-5054283/gaza-school-shelter-deaths-israeli-airstrike
+Useful result: From [Source](https://en.wikipedia.org/wiki/13_July_2024_al-Mawasi_attack): 
+Content: The Wikipedia article discusses the 13 July 2024 al-Mawasi attack in the Gaza Strip, where Israeli airstrikes killed at least 90 Palestinians and injured over 300. <image:59> The attack occurred during the Gaza war, targeting an area where civilians had been told was safe. The article mentions that Israel said the strike targeted Hamas leaders, and that the attack led to international condemnations. The EU called for an independent investigation and accountability, describing the attack a possible war crime.
+
+Useful result: From [Source](https://www.cnn.com/2024/07/27/middleeast/israel-gaza-deir-al-balah-school-intl): 
+Content: The CNN article, published on July 27, 2024, reports on an Israeli airstrike on a school in Deir-al Balah, central Gaza, where at least 30 people were killed. <image:59> The article includes images of the aftermath, including bodies at a hospital and people fleeing the area. The article also mentions the ongoing conflict between Israel and Hamas, and the displacement of Palestinians.
+
+Useful result: From [Source](https://www.npr.org/2024/07/27/nx-s1-5054283/gaza-school-shelter-deaths-israeli-airstrike): 
+Content: The NPR article, published on July 27, 2024, reports on an Israeli airstrike that hit a school being used as a shelter in Gaza, resulting in at least 30 deaths, including children. <image:12318>, <image:12319>. The Israeli military stated it targeted a Hamas command center.
+
+Not enough information yet. Continuing fact-check...
+INFO: Dropping action 'reverse_search' as it was already performed.
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Palestinian child rubble Gaza Israeli airstrike')
+Got 3 new web source(s):
+	1. https://www.aljazeera.com/news/2023/10/19/israels-war-against-gazas-children-explained
+	2. https://www.dci-palestine.org/40_percent_of_palestinians_killed_in_gaza_are_children
+	3. https://www.nbcnews.com/video/rescue-workers-fight-to-save-children-trapped-in-gaza-city-airstrike-rubble-196401733655
+Useful result: From [Source](https://www.aljazeera.com/news/2023/10/19/israels-war-against-gazas-children-explained): 
+Content: Al Jazeera published an article on October 19, 2023, about the impact of the Israeli war on Gaza's children. The article includes an image of children near rubble. <image:13961>
+
+Useful result: From [Source](https://www.dci-palestine.org/40_percent_of_palestinians_killed_in_gaza_are_children): 
+Content: The search result from Defense for Children International - Palestine contains an image of children standing in front of a destroyed building. <image:13962>
+
+Useful result: From [Source](https://www.nbcnews.com/video/rescue-workers-fight-to-save-children-trapped-in-gaza-city-airstrike-rubble-196401733655): 
+Content: The NBC News video shows rescue workers trying to save a child trapped in the rubble after an airstrike in Gaza City. <image:13963>
+
+Not enough information yet. Continuing fact-check...
+INFO: Dropping action 'reverse_search' as it was already performed.
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='image of child under rubble Gaza Israeli airstrike')
+Got 3 new web source(s):
+	1. https://www.gettyimages.com/photos/children-of-gaza-gaza-massacre
+	2. December 28, 2023 https://www.aljazeera.com/gallery/2023/12/28/photos-gaza-children
+	3. https://www.alamy.com/stock-photo/palestinian-child-in-rubble.html
+Useful result: From [Source](https://www.gettyimages.com/photos/children-of-gaza-gaza-massacre): 
+Content: The Getty Images search result contains multiple images related to the impact of Israeli airstrikes on Gaza, including images of children. The images show children near rubble, injured children, and children struggling to access food and water. Some images show the aftermath of airstrikes, including destroyed buildings and bodies. The images were taken in different locations and dates, including July 2024. <image:13973>, <image:13968>, <image:13969>, <image:13982>, <image:13984>, <image:13988>, <image:13970>.
+
+Useful result: From [Source](https://www.aljazeera.com/gallery/2023/12/28/photos-gaza-children): 
+Content: The Al Jazeera article, published on December 28, 2023, discusses the impact of Israeli attacks on children in Gaza. It mentions that over 8,663 Palestinian children have been killed by Israeli forces since October 7, 2023. The article includes several images of children in Gaza, including those affected by the attacks. <image:13961>
+
+Useful result: From [Source](https://www.alamy.com/stock-photo/palestinian-child-in-rubble.html): 
+Content: The search result from Alamy contains stock photos and images of a Palestinian child in rubble.
+
+The claim '<image:59> This image shows a palestinian child stuck under the rubble in Gaza after an Israeli airstrike in July 2024.' is false.
+Justification: The claim cannot be verified. While there is evidence of Israeli airstrikes in Gaza in July 2024 and images of children affected by the attacks, the provided evidence does not confirm the specific context of the image in the claim.
+
+So, the overall veracity is: false
+Fact-check took 1:22 min.

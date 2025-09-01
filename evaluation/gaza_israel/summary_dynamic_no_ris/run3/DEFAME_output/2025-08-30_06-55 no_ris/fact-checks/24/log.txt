@@ -1,0 +1,66 @@
+Extracting claims from Content: <image:18> This image shows a screenshot of the X profile of UNRWA which has placed a black band over its profile photo in mourning for the death of Yahya Sinwar, Hamas leader in the Gaza Strip, in October 2024.
+'Claim: "<image:18> This image shows a screenshot of the X profile of UNRWA which has placed a black band over its profile photo in mourning for the death of Yahya Sinwar, Hamas leader in the Gaza Strip, in October 2024."'
+Verifying Claim: "<image:18> This image shows a screenshot of the X profile of UNRWA which has placed a black band over its profile photo in mourning for the death of Yahya Sinwar, Hamas leader in the Gaza Strip, in October 2024."
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='UNRWA Yahya Sinwar death')
+Got 3 new web source(s):
+	1. https://en.wikipedia.org/wiki/Killing_of_Yahya_Sinwar
+	2. October 18, 2024 https://www.npr.org/2024/10/18/nx-s1-5157608/israel-hamas-sinwar-gaza-future
+	3. October 17, 2024 https://www.csis.org/analysis/what-does-yahya-sinwars-death-mean
+Useful result: From [Source](https://en.wikipedia.org/wiki/Killing_of_Yahya_Sinwar): 
+Content: The Wikipedia article discusses the killing of Yahya Sinwar, the leader of Hamas, on October 16, 2024, during a patrol in Tel al-Sultan, Rafah, Gaza Strip. <image:18> The article includes an image of Sinwar, wounded and in a chair, and mentions that a UNRWA teacher's passport was found on his person. The article also details reactions to his death from various groups and countries, including Hamas, Iran, and Afghanistan.
+
+Useful result: From [Source](https://www.npr.org/2024/10/18/nx-s1-5157608/israel-hamas-sinwar-gaza-future): 
+Content: The NPR article, published on October 18, 2024, discusses the death of Hamas leader Yahya Sinwar. The article mentions that Sinwar's death has prompted reactions of celebration and concern. It also mentions that the Hamas political bureau confirmed Sinwar’s death and declared that he has now become “an icon for the Palestinian people.” <image:10153>, <image:10154>. The article also mentions that Israeli authorities believe there are still 101 hostages held inside Gaza.
+
+Useful result: From [Source](https://www.csis.org/analysis/what-does-yahya-sinwars-death-mean): 
+Content: The CSIS published an article on October 17, 2024, discussing the death of Yahya Sinwar, Hamas leader. <image:10156> shows a photo of Yahya Sinwar. The article states that the Israeli government announced that its soldiers had killed Hamas leader Yahya Sinwar in a firefight in southern Gaza.
+
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='UNRWA profile picture mourning')
+Failed to download or open image: cannot identify image file <_io.BytesIO object at 0x7ffed17eb1a0>
+Skipping fact-checking website: https://www.reuters.com/fact-check/unrwa-added-black-ribbon-its-logo-2023-not-after-sinwars-death-2024-10-24/
+Skipping unsupported website: https://www.instagram.com/p/DII5TqnvhMD/
+Skipping unsupported website: https://www.facebook.com/unrwa/posts/people-in-gaza-have-lost-everything-and-need-everything-humanitarian-access-cont/970532785107054/
+Got 2 new web source(s):
+	1. https://www.unrwa.org/newsroom/official-statements/remarks-unrwa-commissioner-general-philippe-lazzarini-memorial-service
+	2. https://www.nbcnews.com/news/world/israel-banning-unrwa-palestinian-territories-gaza-hamas-west-bank-rcna189554
+Useful result: From [Source](https://www.nbcnews.com/news/world/israel-banning-unrwa-palestinian-territories-gaza-hamas-west-bank-rcna189554): 
+Content: The NBC News article discusses Israel's ban on UNRWA in Palestinian territories. <image:10160>
+
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='UNRWA profile picture mourning Yahya Sinwar')
+Skipping fact-checking website: https://www.reuters.com/fact-check/unrwa-added-black-ribbon-its-logo-2023-not-after-sinwars-death-2024-10-24/
+Skipping unsupported website: https://x.com/dwnews/status/1848073906894090751
+Skipping unsupported website: https://www.youtube.com/watch?v=-4PletYv0O0
+Skipping unsupported website: https://twitter.com/dwnews/status/1847340619552723415
+Got 3 new web source(s):
+	1. October 18, 2024 https://www.dw.com/en/fact-check-black-ribbon-on-unrwa-logo-does-not-show-mourning-for-sinwar/a-70532996
+	2. October 25, 2024 https://www.thecanadianpressnews.ca/fact_checking/black-band-on-unrwas-social-media-profiles-appeared-before-yahya-sinwars-death/article_33032eb2-f64b-55c6-8a57-3289e6a014cf.html
+	3. October 28, 2024 https://pesacheck.org/false-unrwa-didnt-update-its-profile-photo-to-mourn-the-death-of-hamas-leader-yahya-sinwar-f8219db942b5
+Useful result: From [Source](https://www.dw.com/en/fact-check-black-ribbon-on-unrwa-logo-does-not-show-mourning-for-sinwar/a-70532996): 
+Content: The DW article fact-checks the claim that UNRWA is mourning Yahya Sinwar's death by adding a black ribbon to its profile picture. The article states that the black ribbon was added to the profile picture before Sinwar's death, as early as October 22, 2023, to show solidarity with the victims of war. The article also mentions that not all UNRWA social media accounts have the black ribbon. The article was published by DW.
+
+Useful result: From [Source](https://www.thecanadianpressnews.ca/fact_checking/black-band-on-unrwas-social-media-profiles-appeared-before-yahya-sinwars-death/article_33032eb2-f64b-55c6-8a57-3289e6a014cf.html): 
+Content: The Canadian Press News fact-checked the claim that UNRWA added a black band to its social media profiles to mourn Yahya Sinwar's death. The fact-check found the claim to be false. The black band was present on UNRWA's social media profiles before Sinwar's death. <image:10163>, <image:10164>
+
+Useful result: From [Source](https://pesacheck.org/false-unrwa-didnt-update-its-profile-photo-to-mourn-the-death-of-hamas-leader-yahya-sinwar-f8219db942b5): 
+Content: The search result from PesaCheck, published on October 28, 2024, states that a post claiming UNRWA added a black band to its profile photo to mourn the death of Hamas leader Yahya Sinwar is FALSE. The black ribbon is a tribute to UNRWA team members killed in Gaza. The article mentions that the Israeli army killed Sinwar on October 17, 2024.
+
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='UNRWA profile picture')
+Skipping unsupported website: https://www.facebook.com/unrwa/
+Failed to download or open image: cannot identify image file <_io.BytesIO object at 0x7ffe4db189a0>
+Got 3 new web source(s):
+	1. https://www.cnn.com/2024/08/05/middleeast/un-probe-unwra-gaza-israel-intl-latam
+	2. https://www.nbcnews.com/news/world/israel-unwra-ban-devastating-palestinians-rcna177766
+	3. https://en.wikipedia.org/wiki/UNRWA
+Useful result: From [Source](https://www.cnn.com/2024/08/05/middleeast/un-probe-unwra-gaza-israel-intl-latam): 
+Content: The CNN article discusses an UN probe into UNRWA. <image:10234>
+
+Useful result: From [Source](https://www.nbcnews.com/news/world/israel-unwra-ban-devastating-palestinians-rcna177766): 
+Content: The NBC News article discusses Israel's ban on UNRWA in Palestinian territories. <image:10235>
+
+The claim '<image:18> This image shows a screenshot of the X profile of UNRWA which has placed a black band over its profile photo in mourning for the death of Yahya Sinwar, Hamas leader in the Gaza Strip, in October 2024.' is false.
+Justification: The claim is false. Multiple fact-checking sources, including [DW](https://www.dw.com/en/fact-check-black-ribbon-on-unrwa-logo-does-not-show-mourning-for-sinwar/a-70532996), [The Canadian Press News](https://www.thecanadianpressnews.ca/fact_checking/black-band-on-unrwas-social-media-profiles-appeared-before-yahya-sinwars-death/article_33032eb2-f64b-55c6-8a57-3289e6a014cf.html), and PesaCheck ([https://pesacheck.org/false-unrwa-didnt-update-its-profile-photo-to-mourn-the-death-of-hamas-leader-yahya-sinwar-f8219db942b5](https://pesacheck.org/false-unrwa-didnt-update-its-profile-photo-to-mourn-the-death-of-hamas-leader-yahya-sinwar-f8219db942b5)), confirm that the black ribbon on UNRWA's profile picture predates Yahya Sinwar's death and was not related to his death.
+
+So, the overall veracity is: false
+Fact-check took 3:13 min.

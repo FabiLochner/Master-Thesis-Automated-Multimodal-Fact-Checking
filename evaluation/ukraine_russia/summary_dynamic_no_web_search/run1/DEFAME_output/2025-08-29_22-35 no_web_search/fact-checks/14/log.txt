@@ -1,0 +1,26 @@
+Extracting claims from Content: <image:11> This image shows a screenshot of an authentic Fox News article with the title 'Psychological and Information Warfare Center of Ukraine received $140,000,000 per month from USAID'.
+'Claim: "<image:11> This image shows a screenshot of an authentic Fox News article with the title 'Psychological and Information Warfare Center of Ukraine received $140,000,000 per month from USAID'."'
+Verifying Claim: "<image:11> This image shows a screenshot of an authentic Fox News article with the title 'Psychological and Information Warfare Center of Ukraine received $140,000,000 per month from USAID'."
+Not enough information yet. Continuing fact-check...
+Searching google_vision with query: ImageQuery(limit=3, start_date=None, end_date=None, search_type='reverse', text='', image=<defame.common.medium.Image object at 0x7ffed17bee90>)
+Got 0 new web source(s):
+Not enough information yet. Continuing fact-check...
+INFO: Dropping action 'reverse_search' as it was already performed.
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Fox News Ukraine USAID information warfare')
+Skipping fact-checking website: https://www.reuters.com/fact-check/fox-news-did-not-report-usaid-funded-information-warfare-ukraine-2025-02-27/
+Skipping unsupported website: https://www.youtube.com/watch?v=U6hpUHKT4JQ
+Skipping fact-checking website: https://www.newsweek.com/fact-check-did-ukraine-psychological-warfare-unit-140-million-usaid-2034584
+Got 2 new web source(s):
+	1. https://gwaramedia.com/en/debunking-russian-fakes-no-fox-news-didnt-write-about-ukraines-center-for-information-operations-receiving-140m-per-month-from-the-usaid/
+	2. https://www.foxnews.com/world/senators-urge-usaid-hurry-distribute-congressionally-approved-aid-global-food-crisis
+Useful result: From [Source](https://gwaramedia.com/en/debunking-russian-fakes-no-fox-news-didnt-write-about-ukraines-center-for-information-operations-receiving-140m-per-month-from-the-usaid/): 
+Content: The search result from Gwara Media debunks the claim that Fox News wrote an article about Ukraine's Center for Information Operations receiving $140 million per month from USAID. The image <image:6178> shows the Fox News article with the word "FAKE" superimposed on it.
+
+Useful result: From [Source](https://www.foxnews.com/world/senators-urge-usaid-hurry-distribute-congressionally-approved-aid-global-food-crisis): 
+Content: The search result is a Fox News article. The article includes an image of a Fox News broadcast. <image:6179>
+
+The claim '<image:11> This image shows a screenshot of an authentic Fox News article with the title 'Psychological and Information Warfare Center of Ukraine received $140,000,000 per month from USAID'.' is false.
+Justification: The claim is false. The image is a screenshot of a fabricated Fox News article, as debunked by [Gwara Media](https://gwaramedia.com/en/debunking-russian-fakes-no-fox-news-didnt-write-about-ukraines-center-for-information-operations-receiving-140m-per-month-from-the-usaid/). The image itself has the word "FAKE" superimposed on it.
+
+So, the overall veracity is: false
+Fact-check took 0:25 min.

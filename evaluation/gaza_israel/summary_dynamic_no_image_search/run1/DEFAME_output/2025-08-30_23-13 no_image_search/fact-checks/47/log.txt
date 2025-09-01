@@ -1,0 +1,27 @@
+Extracting claims from Content: <image:10225> This image shows Jet Blue Airlines' in-flight map where Israel's borders were inaccurate and the area was shown under the label 'Palestinian Territories'. The indicent occured in September 2024.
+'Claim: "<image:10225> This image shows Jet Blue Airlines' in-flight map where Israel's borders were inaccurate and the area was shown under the label 'Palestinian Territories'. The indicent occured in September 2024."'
+Verifying Claim: "<image:10225> This image shows Jet Blue Airlines' in-flight map where Israel's borders were inaccurate and the area was shown under the label 'Palestinian Territories'. The indicent occured in September 2024."
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='JetBlue in-flight map Israel Palestinian Territories')
+Skipping fact-checking website: https://www.snopes.com/fact-check/jetblue-map-israel-palestine/
+Got 3 new web source(s):
+	1. September 04, 2024 https://www.jpost.com/diaspora/article-818656
+	2. September 08, 2024 https://www.ynetnews.com/travel/article/bjgp0065hc
+	3. September 08, 2024 https://viewfromthewing.com/jetblue-fires-seat-back-map-vendor-for-obliterating-israel/
+Useful result: From [Source](https://www.jpost.com/diaspora/article-818656): 
+Content: The Jerusalem Post reports that JetBlue Airways changed Israel's borders and name to 'Palestinian Territories' on its in-flight map. The incident sparked outrage. The article was published on September 4, 2024. <image:1>.
+
+Useful result: From [Source](https://www.ynetnews.com/travel/article/bjgp0065hc): 
+Content: The article from Ynet News discusses JetBlue's in-flight map labeling Israel as "Palestinian Territories". <image:11347>, <image:11348>. JetBlue stated that the map app was provided by a third-party company and that they were not previously aware of the issue. The airline apologized and announced it would change its policy. The incident occurred in September 2024. <image:10225>.
+
+Useful result: From [Source](https://viewfromthewing.com/jetblue-fires-seat-back-map-vendor-for-obliterating-israel/): 
+Content: The search result discusses an incident where JetBlue's in-flight map labeled much of Israel as "Palestinian Territories." <image:11350>. The author states that JetBlue has decided to switch to a new map vendor. The incident is related to a passenger expressing himself about the Hamas massacre of Israel on October 7th. The author also mentions that the map notations are somewhat amusing. The source is viewfromthewing.com.
+
+Searching google_vision with query: ImageQuery(limit=3, start_date=None, end_date=None, search_type='reverse', text='', image=<defame.common.medium.Image object at 0x7ffed8206aa0>)
+Skipping fact-checking website: https://www.snopes.com/tag/flying/
+Got 0 new web source(s):
+The claim '<image:10225> This image shows Jet Blue Airlines' in-flight map where Israel's borders were inaccurate and the area was shown under the label 'Palestinian Territories'. The indicent occured in September 2024.' is true.
+Justification: The claim is accurate. Multiple sources, including The Jerusalem Post ([https://www.jpost.com/diaspora/article-818656](https://www.jpost.com/diaspora/article-818656)), confirm that JetBlue's in-flight map inaccurately depicted Israel's borders and labeled the area as "Palestinian Territories" in September 2024. JetBlue apologized and announced a policy change.
+
+So, the overall veracity is: true
+Fact-check took 0:36 min.

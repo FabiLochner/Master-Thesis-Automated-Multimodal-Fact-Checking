@@ -1,0 +1,32 @@
+Extracting claims from Content: <image:14> This image shows a screenshot of an authentic Charlie Hebdo magazine cover from March 20, 2025 illustrating Ukrainian President Volodoymr Zelenskyy lying in a coffin and saying 'Ukraine is an independet state' in French.
+'Claim: "<image:14> This image shows a screenshot of an authentic Charlie Hebdo magazine cover from March 20, 2025 illustrating Ukrainian President Volodoymr Zelenskyy lying in a coffin and saying 'Ukraine is an independet state' in French."'
+Verifying Claim: "<image:14> This image shows a screenshot of an authentic Charlie Hebdo magazine cover from March 20, 2025 illustrating Ukrainian President Volodoymr Zelenskyy lying in a coffin and saying 'Ukraine is an independet state' in French."
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Charlie Hebdo March 20 2025 cover')
+Skipping fact-checking website: https://www.reuters.com/fact-check/charlie-hebdo-march-20-issue-about-russias-election-not-macron-2024-03-22/
+Skipping unsupported website: https://www.youtube.com/watch?v=LLEB8_e391o
+Failed to scrape https://gwaramedia.com/en/debunking-russian-fakes-no-charlie-hebdos-cover-didnt-ridicule-gay-parade-in-moldova/
+Error 500: Server error.
+Skipping that URL.
+Skipping unsupported website: https://www.instagram.com/reel/DEXXwnQsmmg/
+Failed to scrape https://ca.news.yahoo.com/fake-charlie-hebdo-cover-shows-054516532.html
+Error 500: Server error.
+Skipping that URL.
+Failed to scrape https://charliehebdo.fr/themes/english/
+Error 500: Server error.
+Skipping that URL.
+Skipping unsupported website: https://x.com/Seana_Davis/status/1903813196063932753
+Got 2 new web source(s):
+	1. March 19, 2025 https://without-lie.info/en/fake-with-another-fictional-cover-of-charlie-hebdo-magazine-with-a-caricature-of-the-president-of-ukraine/
+	2. April 08, 2025 https://mythdetector.com/en/coffin-was-not-published-by-charlie-hebdo/
+Useful result: From [Source](https://without-lie.info/en/fake-with-another-fictional-cover-of-charlie-hebdo-magazine-with-a-caricature-of-the-president-of-ukraine/): 
+Content: The search result from without-lie.info states that the Charlie Hebdo cover featuring Volodymyr Zelenskyy in a coffin is fake. The article mentions the release date of the fake cover as March 20, 2025, with issue number 1705. However, the real cover was published on March 19, 2025. <image:14> The article also provides links to other fake covers and mentions that Russian propaganda channels spread the fake cover.
+
+Useful result: From [Source](https://mythdetector.com/en/coffin-was-not-published-by-charlie-hebdo/): 
+Content: The search result from Myth Detector states that the image of Zelenskyy in a coffin, allegedly a Charlie Hebdo cover from March 20, 2025, is fake. The magazine did not release an issue on that date, and the cover's serial number matches an issue from March 26, 2025. The article was published on April 8, 2025. <image:8652>
+
+The claim '<image:14> This image shows a screenshot of an authentic Charlie Hebdo magazine cover from March 20, 2025 illustrating Ukrainian President Volodoymr Zelenskyy lying in a coffin and saying 'Ukraine is an independet state' in French.' is false.
+Justification: The image of the Charlie Hebdo cover is fake. According to [without-lie.info](https://without-lie.info/en/fake-with-another-fictional-cover-of-charlie-hebdo-magazine-with-a-caricature-of-the-president-of-ukraine/), the cover was released on March 20, 2025, but the real cover was published on March 19, 2025. Furthermore, [Myth Detector](https://mythdetector.com/en/coffin-was-not-published-by-charlie-hebdo/) indicates that the magazine did not release an issue on that date, and the serial number matches an issue from March 26, 2025.
+
+So, the overall veracity is: false
+Fact-check took 5:59 min.

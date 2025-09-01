@@ -1,0 +1,1026 @@
+PlanPrompt - QUERY:
+
+# Instructions
+The available knowledge is insufficient to assess the Claim. Therefore, **propose a set of actions** to retrieve new and helpful evidence. Adhere to the following rules:
+* The actions available are listed under Valid Actions, including a short description for each action. No other actions are possible at this moment. 
+* For each action, use the formatting as specified in Valid Actions.
+* Include all actions in a single Markdown code block at the end of your answer.
+* Propose as few actions as possible, but as much as needed. Do not propose similar or previously used actions.
+
+
+
+## Valid Actions
+* `web_search`
+   * Description: Run an open web search on Google or DuckDuckGO to retrieve any related webpage.
+   * How to use: Do not use this with a previously used or similar query from previous web searches. If a previous web search did not yield any results, use a very different query.
+   * Format: web_search("your web search query goes here")
+
+* `reverse_search`
+   * Description: Performs a reverse image search to find similar images on the web.
+   * How to use: Provide an image and the model will perform a reverse search to find similar images.
+   * Format: reverse_search(<image:k>), where `k` is the image's ID
+
+* `image_search`
+   * Description: Run an image search on Google to retrieve related images for a given query.
+   * How to use: This is a helpful tool for fact-checking images. Use this to retrieve images associated with a specific keyword or phrase. Ensure that the query is clear and specific to improve search accuracy. If no relevant images are found, refine the query or use more descriptive terms.
+   * Format: image_search("your image search query goes here")
+
+* `geolocate`
+   * Description: Performs geolocation to determine the country where an image was taken.
+   * How to use: Provide an image and the model will determine the most likely countries where it was taken.
+   * Format: geolocate(<image:k>), where `k` is the image's ID
+
+# Example: web_search()
+
+## Claim
+Text: "New Zealand’s new Food Bill bans gardening"
+Claim date: October 29, 2020
+
+...
+
+## Actions
+```
+web_search("New Zealand Food Bill 2020")
+web_search("New Zealand Food Bill gardening ban")
+```
+
+# Example: reverse_search()
+
+## Claim
+Text: "<image:k> shows a rare event of a solar eclipse with a double ring."
+
+...
+
+## Actions
+```
+reverse_search(<image:k>)
+```
+
+# Example: image_search()
+
+## Claim
+Text: "Chinese officials in white protective hazmat suits carried people down a hallway to be quarantined for having COVID-19 in November 2022."
+
+...
+
+ACTIONS:
+```
+image_search("China officials white suits carry people")
+image_search("China officials carry people COVID quarantine 2022")
+```
+
+# Example: geolocate()
+
+## Claim
+Text: "<image:k> shows a nuclear weapons facility in Usbekistan."
+
+...
+
+## Actions
+```
+geolocate(<image:k>)
+```
+
+# Record
+## Claim
+Claim: "Ukraine is selling half of the armaments it receives from the United States"
+
+# Your Actions
+
+
+
+===== > RESPONSE:  < =====
+```
+web_search("Ukraine arms sales US aid")
+web_search("US aid to Ukraine arms accountability")
+```
+_________________________
+
+
+
+SummarizeResultPrompt - QUERY:
+
+# Instructions
+In order to find evidence that helps your fact-check, you just ran a web search which yielded a Search Result. **Your task right now is to summarize the Search Result.** What to include:
+* information that might be useful for the fact-check (see Record)
+* relevant images (refer to images by inserting their reference <image:k>)
+* if available: the release date as well as the author or the publisher (e.g. the media company) of the search result.
+
+Do NOT include:
+* advertisements
+* any other information not related to the Record or the Claim
+
+Additional rules:
+* Do not add any additional information besides the information in the Search Result.
+* If the Search Result doesn't contain any relevant information for the fact-checking work, simply print one word in capital letters: "NONE".
+* Keep your writing style like in the Examples 1, 2 and 3 provided to you.
+* Try to filter out relevant information even if the search result is in a different language.
+
+# Example 1
+The search result from America Today provides several photographs of the Notre-Dame Cathedral fire on April 15, 2019. <image:i>, <image:j>, <image:k>. None of the images show the Eiffel Tower in the background. 
+
+# Example 2
+NONE
+
+# Example 3
+The Guardian discusses a report blaming the Syrian government for a toxic gas attack and condemning their use of chemical weapons. The Guardian mentions the Chemical Weapons Convention and the responsibilities of Syria under the convention. According to The Guardian, The White House condemned the Assad regime for defying the norm against chemical weapons use.
+
+# Record
+## Claim
+Claim: "Ukraine is selling half of the armaments it receives from the United States"
+
+## Actions
+```
+web_search("Ukraine arms sales US aid")
+web_search("US aid to Ukraine arms accountability")
+```
+
+# Search Result
+From [Source](https://www.cnn.com/2025/08/28/politics/trump-missile-sale-ukraine): 
+Content: "[Politics](https://www.cnn.com/politics)
+ • 2 min read
+
+Trump administration approves sale of 3,350 extended range missiles to Ukraine
+==============================================================================
+
+By
+
+[![Jennifer Hansler](https://media.cnn.com/api/v1/images/stellar/prod/170706100235-jennifer-hansler.jpg?c=16x9&q=h_270,w_480,c_fill/c_thumb,g_face,w_50,h_50)](https://www.cnn.com/profiles/jennifer-hansler)
+[Jennifer Hansler](https://www.cnn.com/profiles/jennifer-hansler)
+
+PUBLISHED Aug 28, 2025, 5:29 PM ET
+
+![US President Donald Trump and Ukrainian President Volodymyr Zelenskiy meet at the Oval Office of the White House on August 18, 2025.](https://media.cnn.com/api/v1/images/stellar/prod/2025-08-18t175318z-359473650-rc2t9gattclm-rtrmadp-3-ukraine-crisis-summit-20250828212658633.jpg?c=original&q=w_860,c_fill)
+
+US President Donald Trump and Ukrainian President Volodymyr Zelenskiy meet at the Oval Office of the White House on August 18, 2025.
+
+Kevin Lamarque/Reuters
+
+War in Ukraine Donald Trump National security Russia
+
+[See all topics](/follow)
+
+Facebook Tweet [Email](mailto:?subject=CNN%20content%20share&body=Check%20out%20this%20article%3A%0Ahttps%3A%2F%2Fwww.cnn.com%2F2025%2F08%2F28%2Fpolitics%2Ftrump-missile-sale-ukraine "Share with email")
+ Link
+
+Link Copied!
+
+Follow
+
+The Trump administration has approved the sale of 3,350 Extended Range Attack Munition (ERAM) missiles to Ukraine, providing a potentially powerful tool to Kyiv as it continues to face a [relentless assault by Russia](https://www.cnn.com/2025/08/28/europe/ukraine-russia-kyiv-attack-hnk-intl)
+.
+
+The announcement of the proposed $825 million sale Thursday comes as diplomatic efforts to end the war have yet to yield a result and following a deadly night of Russian strikes on the Ukrainian capital.
+
+It was announced after President Donald Trump met this month with Russian President Vladimir Putin and separately with Ukrainian President Volodymyr Zelensky.
+
+Although the Trump administration has approved a number of sales of equipment to sustain existing weapons, this appears to be the first major arms sale of new weapons to Ukraine announced by the administration.
+
+A source familiar said that if the sale is concluded as expected, the missiles – which have a range of 150-280 miles – could be delivered later this year.
+
+It is unclear whether there will be restrictions on their use.
+
+“Ukraine will use funding from Denmark, the Netherlands, and Norway and Foreign Military Financing from the United States for this purchase,” the notice from the State Department said. “The ERAM is an example of working together with our NATO allies to develop a capable and scalable system capable of being delivered on a fast timeline.”
+
+“This proposed sale will support the foreign policy and national security objectives of the United States by improving the security of a partner country that is a force for political stability and economic progress in Europe,” it said.
+
+War in Ukraine Donald Trump National security Russia
+
+[See all topics](/follow)
+
+Facebook Tweet [Email](mailto:?subject=CNN%20content%20share&body=Check%20out%20this%20article%3A%0Ahttps%3A%2F%2Fwww.cnn.com%2F2025%2F08%2F28%2Fpolitics%2Ftrump-missile-sale-ukraine "Share with email")
+ Link
+
+Link Copied!
+
+Follow
+
+Ad Feedback
+
+Ad Feedback
+
+Ad Feedback"
+
+# Your Summary
+
+
+
+===== > RESPONSE:  < =====
+CNN published an article on August 28, 2025, stating that the Trump administration approved the sale of 3,350 Extended Range Attack Munition (ERAM) missiles to Ukraine. <image:k> The sale, valued at $825 million, will be funded by Denmark, the Netherlands, Norway, and Foreign Military Financing from the United States.
+
+_________________________
+
+
+
+SummarizeResultPrompt - QUERY:
+
+# Instructions
+In order to find evidence that helps your fact-check, you just ran a web search which yielded a Search Result. **Your task right now is to summarize the Search Result.** What to include:
+* information that might be useful for the fact-check (see Record)
+* relevant images (refer to images by inserting their reference <image:k>)
+* if available: the release date as well as the author or the publisher (e.g. the media company) of the search result.
+
+Do NOT include:
+* advertisements
+* any other information not related to the Record or the Claim
+
+Additional rules:
+* Do not add any additional information besides the information in the Search Result.
+* If the Search Result doesn't contain any relevant information for the fact-checking work, simply print one word in capital letters: "NONE".
+* Keep your writing style like in the Examples 1, 2 and 3 provided to you.
+* Try to filter out relevant information even if the search result is in a different language.
+
+# Example 1
+The search result from America Today provides several photographs of the Notre-Dame Cathedral fire on April 15, 2019. <image:i>, <image:j>, <image:k>. None of the images show the Eiffel Tower in the background. 
+
+# Example 2
+NONE
+
+# Example 3
+The Guardian discusses a report blaming the Syrian government for a toxic gas attack and condemning their use of chemical weapons. The Guardian mentions the Chemical Weapons Convention and the responsibilities of Syria under the convention. According to The Guardian, The White House condemned the Assad regime for defying the norm against chemical weapons use.
+
+# Record
+## Claim
+Claim: "Ukraine is selling half of the armaments it receives from the United States"
+
+## Actions
+```
+web_search("Ukraine arms sales US aid")
+web_search("US aid to Ukraine arms accountability")
+```
+
+# Search Result
+From [Source](https://www.forumarmstrade.org/ukrainearms.html): 
+Content: "The government is also working on obtaining another 300,000 additional shells _(see_   [_opinion article_](https://www.ft.com/content/a315defa-9c4a-4513-9199-6b897a544a15)
+ _here)._ Also it was announced that **the Netherlands** in cooperation with **Denmark** and **Germany** will purchase RQ-35 Heidrun reconnaissance drones for Ukraine worth €200 million _(see_ [_statement_](https://www.mil.gov.ua/news/2024/04/15/zasidannya-koaliczii-droniv-3-miljoni-evro-na-fpv-droni-vid-litvi-i-450-bpak/)
+ _and_ [_media_](https://mil.in.ua/en/news/the-netherlands-in-cooperation-with-denmark-and-germany-will-purchase-rq-35-heidrun-uavs-for-ukraine/)
+ _here)._  
+  
+On April 13, Ukraine's President announced that Germany will send an additional Patriot air-defense system to Ukraine _(see_ [_statement_](https://www.president.gov.ua/en/news/nimechchina-nadast-nam-she-odin-patriot-pracyuyemo-nad-dodat-90293)
+_)._  
+  
+On April 12, **the Netherlands** allocated an additional billion euros in military aid to Ukraine this year (_see_ [_statement_](https://twitter.com/MinPres/status/1778770784653123834)
+ _here)._  
+​  
+On April 11, **Lithua****nia** donated counter-drone systems and generators to the Armed Forces of Ukraine _(see_ _[statement](https://kam.lt/ukrainai-perduoti-antidronai-generatoriai-ir-sulankstomos-lovytes/)
+ and [media](https://mil.in.ua/en/news/lithuania-donates-counter-drone-systems-and-generators-to-the-armed-forces-of-ukraine/)
+ here)._ Also Ukraine and **L****atvia** signed a 10-year bilateral security agreement which envisages Latvia’s commitment to provide Ukraine with military support to the amount of 0.25% of GDP by 2026 _(__see_ [_statement_](https://t.me/V_Zelenskiy_official/10035)
+ _and_ [_media_](https://mil.in.ua/en/news/ukraine-and-latvia-signed-a-bilateral-security-agreement/)
+ _here)._  
+  
+On April 10, **Germany** updated its lists of military aid to Ukraine with 1 All Terrain Tracked Carrier Warthog; 6,000 rounds 155mm ammunition; 16 reconnaissance drones VECTOR with spare parts; 30 reconnaissance drones RQ-35 HEIDRUN; 30 frequency range extensions for anti-drone devices; 2 mine clearing tanks WISENT 1 with spare parts; 11 mobile, remote controlled and protected mine clearing systems; 3 mine ploughs; 70 IR cameras; 24 outboard motors; 1 mln rounds of ammunition for fire arms; 680 assault rifles MK 556; 50 precision rifles HLR 338 with 60,000 rounds ammunition; 120 rifles CR 308; 5,000 detonators (_see_ [_updated list_](https://www.bundesregierung.de/breg-en/search/military-support-ukraine-2054992)
+ _here)._  
+  
+On April 9, the US Secretary of State determined an emergency existed to move forward a $138 million sale of HAWK sustainment services, bypassing the standard Congressional review period (see [announcement](https://www.dsca.mil/press-media/major-arms-sales/ukraine-hawk-phase-iii-missile-system-sustainment)
+).  Also, US Central Command announced that **the United States** handed Ukraine an array of small arms and ammunition seized from Iranian forces as they tried to deliver them to Tehran-backed Houthi rebels in Yemen. It will include ammunition, generators and detonation systems to Ukraine (January), as well as M577 armored personnel carriers (February) (s_ee_ [_media_](https://www.ukrinform.net/rubric-defense/3811565-lithuania-endorses-longterm-military-aid-package-worth-eur-200m-for-ukraine.html)
+ _here)._ The report released by **the United States** Inspector General of the Department of Defense, stated that the Pentagon did not properly track $1 billion worth of military equipment sent to Ukraine _(see_ [_report_](https://media.defense.gov/2024/Jan/11/2003374323/-1/-1/1/DODIG-2024-043-EEMU_REDACTED%20SECURE.PDF)
+ _here)._  
+  
+On January 8, the **Czech Republic** delivered approximately 30 Dana M2 152mm wheeled self-propelled howitzers to Ukraine (_see [media](https://www.armyrecognition.com/defense_news_january_2024_global_security_army_industry/ukraine_boosts_its_artillery_capabilities_with_30_czech_dana_m2_152mm_howitzers.html)
+ here_).   
+  
+On January 7, **Japan** promised a $37 million contribution to a NATO fund that will provide the anti-drone system and other gear to Ukraine _(see_ [_media_](https://www.japantimes.co.jp/news/2024/01/07/japan/politics/yoko-kamikawa-ukraine-visit/)
+ _here)._  
+  
+On January 4, **Germany** updated its lists of military aid to Ukraine with Leopard 2A6 ammunition, 10 Marder 1A3 IFVs, IRIS-T missiles, 1 Skynex air defense system and ammunition, 2 TRML-4D radars, 9080 15mm shells, 2 WISENT-1 tanks, 1 BIBER bridge-laying tank, 3350 combat helmets, 30 drone sensors, 10 GO12 recon radars, 10 Zetros trucks, 4 semi-trailers, 34 motor vehicles, 305 MK 556 assault rifles, 750,000 rounds of small arms ammunition, 1152 winter camouflage nets, 2000 winter camouflage ponchos (_see [updated list](https://www.bundesregierung.de/breg-en/news/military-support-ukraine-2054992)
+ here_).   
+  
+On January 1, **Norway** decided to allow direct sales of weapons from the Norwegian defense industry to Ukraine (_see [statement](https://www.regjeringen.no/en/aktuelt/direct-sales-of-weapons-and-defense-related-products-to-ukraine-permitted-from-1-january-2024/id3020487/)
+ here_). 
+
+ 
+
+**2023**  
+  
+click on a time period below to expand information
+
+October-December
+
+ December  
+​  
+On December 30, the **United Kingdom** announced it will be sending 200 additional air defense missiles to Ukraine (_see [media](https://www.reuters.com/world/europe/britain-send-200-air-defence-missiles-ukraine-2023-12-29/)
+ here_).   
+  
+On December 28, the **United States** announced a new security assistance package for Ukraine consisting of additional NASAMS munitions, Stinger anti-aircraft missiles, air defense system components, additional HIMARS ammunition, 155mm and 105mm artillery rounds, TOW missiles, Javelin and AT-4 anti-armor systems, more than 15 million rounds of small arms ammunition, demolitions munitions, spare parts, medical equipment, maintenance, and other ancillary equipment (_see [statement](https://www.defense.gov/News/Releases/Release/Article/3627179/biden-administration-announces-new-security-assistance-for-ukraine/)
+ here_). Defense Dept_ _[official transcript](https://www.defense.gov/News/Transcripts/Transcript/Article/3011263/secretary-of-defense-lloyd-j-austin-iii-holds-a-news-conference-following-ukrai/)
+ and [media](https://https//www.nationalworld.com/news/world/stormer-armoured-vehicles-starstreak-missile-system-ukraine-russia-3661133)
+ and [additional media](https://www.theguardian.com/politics/2022/apr/25/uk-military-aid-to-ukraine-could-rise-to-500m-mps-told)_)  
+  
+On Sunday, April 24, the **United States** Secretary of State declared an emergency need to sell $165 million in ammunition via the Foreign Military Sales (FMS) program, bypassing Congressional review. _(See official [notification](https://www.dsca.mil/press-media/major-arms-sales/ukraine-non-standard-ammunition)
+.)_  
+  
+On Friday, April 22, **Canada** announced that it had delivered M777 howitzers and associated ammunition, with commitments since January 2022 of more than 118 million CAD (_see [official release](https://www.canada.ca/en/department-national-defence/news/2022/04/canada-announces-artillery-and-other-additional-military-aid-for-ukraine.html)
+_). In a media interview. President Emmanuel Macron confirmed that **France** provided MILAN anti-tank guided missile systems and CAESAR artillery howitzers. Arms Transfers to Israel - Trump](/us-israel-trump-era.html)
+    
+*   [Biden Arms Transfers To Israel](/bidenarmsisrael.html)
+    
+*   [Jobs Corner](/jobcorner.html)
+    
+*   [Media directories](/journalists.html)
+    
+    *   [Middle East](/journalists-middleeast.html)
+        
+    *   [General US arms sales](/journalists-usarmssaless.html)
+        
+    *   [Ukraine](/journalists-ukraine.html)
+        
+    
+*   [Major Arms Sales Notifications Tracker](/major-arms-sales-notifications-tracker.html)
+    
+*   [U.S. Landmine Policy](/uslandmine.html)
+    
+*   [Resource Page - Under Threshold Arms Sales](/underthreshold.html)
+    
+*   [Resource Page - USML Cat I-III to Commerce](/catitoiii.html)
+    
+*   [HD State Tracker](/hdtracker.html)
+    
+*   [Get on the list](/get-on-the-list.html)
+    
+*   [About](/about.html)
+    
+*   [Archives](/archives.html)
+    
+    *   [All archives](/all-archives.html)
+        
+    *   [Newsletter](/newsletter.html)
+        
+    *   [Blog](/blog.html)
+        
+    
+
+**Arms Transfers to Ukraine**
+-----------------------------
+
+|     |     |
+| --- | --- |
+| As tensions mounted in late 2021 and into 2022 concerning a Russian invasion of Ukraine, many countries announced arms transfers to Ukraine. Please contact experts directly for further comments.)
+
+* * *
+
+**Select Timeline - 2021-2025**    (jump to [2021](https://www.forumarmstrade.org/ukrainearms.html#2021)
+, [2022](https://www.forumarmstrade.org/ukrainearms.html#2022)
+, [2023](https://www.forumarmstrade.org/ukrainearms.html#2023)
+, [2024](https://www.forumarmstrade.org/ukrainearms.html#2024)
+)  
+  
+**2025**  
+  
+April  
+  
+On April 24, Denmark announced the allocation of DKK 317 million (approximately $45.5 million) for the purchase of artillery shells for Ukraine through Estonia, as part of its 25th military aid package, according to the Danish Ministry of Defence _(see [statement](https://www.fmn.dk/da/nyheder/2025/danmark-udmonter-over-300-mio.-kroner-til-artilleriammunition-til-ukraine/)
+)._  
+  
+On April 11, Norway announced it will allocate €822 million to train and equip the new Nordic-Baltic Brigade of the Ukrainian Armed Forces, with funds designated for personnel training, unit equipment, and the brigade’s material infrastructure, according to the official website of the Norwegian government _(see [statement](https://www.regjeringen.no/en/aktuelt/norway-will-contribute-ten-billion-norwegian-kroner-to-equipping-and-training-a-ukrainian-brigade/id3097272/)
+)._ Lithuanian Defense Minister Dovilė Šakalienė announced a €20 million pledge to Ukraine for ammunition purchases, emphasizing the urgency of accelerating aid and warning that “the summer could be very difficult.” _(see [media](https://www.lrt.lt/en/news-in-english/19/2534646/lithuania-to-push-forward-eur20m-military-aid-for-ukraine-summer-may-be-very-difficult)
+)._ Dutch Defence Minister Ruben Brekelmans announced that the Netherlands will allocate €150 million to strengthen Ukraine’s air defense and support the UK-Netherlands “Drone Line” project, according to a Suspilne TV correspondent at the Contact Group on Defense of Ukraine meeting _(see [media](https://suspilne.media/992605-posilenna-ppo-ukraini-niderlandi-vidilaut-150-mln/)
+)._ German Defence Minister Boris Pistorius announced in his opening remarks at NATO headquarters in Brussels that Germany will provide Ukraine with additional missiles for the Patriot air defense systems. The package includes artillery ammunition _(see_ [_media_](https://kyivindependent.com/finland-announces-over-200-million-military-aid-package-for-ukraine/)
+_)._  
+  
+On March 11, according to several media reports and public officials, **the United States** resumed the arms transfers to Ukraine _(see [media](https://www.pravda.com.ua/eng/news/2025/03/12/7502593/)
+)._   
+  
+On March 8, **France** announced that preparation of a new military aid package for Ukraine valued at €195 million and funded by proceeds from frozen Russian assets. 
+  
+On December 10, the Biden administration notified the **United States** Congress of the potential sale of F-16 sustainment services and related equipment for an estimated cost of $266.4 million (see [notification](https://www.dsca.mil/press-media/major-arms-sales/ukraine-f-16-sustainment-services)
+). Of this amount, 22.5 billion Norwegian kroner (nearly $2 billion) will go toward military support, and 12.5 billion Norwegian kroner (approximately $1.1 billion) will be allocated to humanitarian and civilian aid _(see [statement](https://www.regjeringen.no/no/aktuelt/okt-og-mer-langvarig-stotte-til-ukraina/id3076878/)
+ here)._  
+  
+On November 24, **Lithuania** delivered another military aid package to Ukraine, including generators, M113 spare parts, weapons, and ammunition _(see_ [_statement_](https://x.com/Lithuanian_MoD/status/1860662997837848660?ref_src=twsrc%5Etfw%7Ctwcamp%5Etweetembed%7Ctwterm%5E1860662997837848660%7Ctwgr%5E40849b11769750b643a3d7d5d8f7b7599ae68fea%7Ctwcon%5Es1_&ref_url=https%3A%2F%2Fsuspilne.media%2F887269-generatori-zbroa-i-boepripasi-litva-peredala-ukraini-cergovij-paket-dopomogi%2F)
+ _here)._  
+  
+On November 22, **Canada** announced that its donation of the new air defense system NASAMS had arrived in Ukraine _(see_ _[statement](https://www.canada.ca/en/department-national-defence/news/2024/11/canadas-donation-of-new-air-defence-system-arrives-in-ukraine.html)
+ here)._  
+  
+On November 20, **t****he US** Department of Defense (DoD) announced its 70th tranche of military assistance under the Presidential Drawdown Authority (PDA) valued at $275 million, which includes HIMARS ammunition; 155mm and 105mm artillery ammunition; 60mm and 81mm mortar rounds; drones; Tube-launched, Optically tracked, Wire-guided (TOW) missiles; Javelin and AT-4 anti-armor systems; small arms and ammunition; demolitions equipment; and Chemical, Biological, Radiological, Nuclear protective equipment. US Secretary of Defense Lloyd Austin confirmed that the United States is providing Ukraine with antipersonnel landmines with controlled detonations to help defend against Russian offensive operations in eastern Ukraine _(see_ [_statement_](https://www.defense.gov/News/Releases/Release/Article/3972421/biden-administration-announces-additional-security-assistance-for-ukraine/)
+ _and [factsheet](https://media.defense.gov/2024/Nov/20/2003590818/-1/-1/0/UKRAINE-FACT-SHEET-PDA-70.PDF)
+)._ **Germany** announced delivery of additional weapons and equipment to Ukraine, including ammunition for Mardar infantry fighting vehicles (IFV), 47 mine-resistant ambush-protected vehicles (MRAPs), one TRML-4D aerial radar system, four Panzerhaubitze 2000 self-propelled howitzers, 40,000 155mm artillery rounds, seven M109 155mm howitzer barrels, over 200 various reconnaissance drones, mine-clearing and logistics vehicles, and small arms ammunition _(see updated_ _[list](https://www.bundesregierung.de/breg-en/news/military-support-ukraine-2054992)
+_ _here)._ **The UK** announced a new military aid package of £7.5million for attack and surveillance drones to Ukraine."
+
+# Your Summary
+
+
+
+===== > RESPONSE:  < =====
+The search result provides a timeline of military aid to Ukraine from various countries, including the United States, Germany, the Netherlands, and others. It details specific equipment and financial aid packages, but does not mention Ukraine selling armaments. The US Department of Defense announced that the Pentagon did not properly track $1 billion worth of military equipment sent to Ukraine.
+
+_________________________
+
+
+
+SummarizeSummariesPrompt - QUERY:
+
+# Instructions
+You just retrieved web sources, each one summarized under "Web Sources". **Your task right now is to summarize the web source summaries.**
+
+Always adhere to the following rules:
+* Write only one to two paragraphs.
+* Include all URLs from the listed sources. Format them as Markdown hyperlinks.
+* Do not add any additional information besides the information in the summaries.
+* Include references (<image:k>) to all relevant images.
+
+# Record
+## Claim
+Claim: "Ukraine is selling half of the armaments it receives from the United States"
+
+## Actions
+```
+web_search("Ukraine arms sales US aid")
+web_search("US aid to Ukraine arms accountability")
+```
+
+## Web Sources
+**Web Search Result**
+
+From [Source](https://www.cnn.com/2025/08/28/politics/trump-missile-sale-ukraine): 
+Content: CNN published an article on August 28, 2025, stating that the Trump administration approved the sale of 3,350 Extended Range Attack Munition (ERAM) missiles to Ukraine. <image:k> The sale, valued at $825 million, will be funded by Denmark, the Netherlands, Norway, and Foreign Military Financing from the United States.
+
+
+From [Source](https://www.forumarmstrade.org/ukrainearms.html): 
+Content: The search result provides a timeline of military aid to Ukraine from various countries, including the United States, Germany, the Netherlands, and others. It details specific equipment and financial aid packages, but does not mention Ukraine selling armaments. The US Department of Defense announced that the Pentagon did not properly track $1 billion worth of military equipment sent to Ukraine.
+
+
+## Your Summary
+
+
+
+===== > RESPONSE:  < =====
+The Trump administration approved the sale of 3,350 Extended Range Attack Munition (ERAM) missiles to Ukraine, valued at $825 million, funded by Denmark, the Netherlands, Norway, and Foreign Military Financing from the United States, according to a CNN article published on August 28, 2025 (<image:k>, [Source](https://www.cnn.com/2025/08/28/politics/trump-missile-sale-ukraine)). A timeline of military aid to Ukraine from various countries, including the United States, Germany, and the Netherlands, details specific equipment and financial aid packages, but does not mention Ukraine selling armaments ([Source](https://www.forumarmstrade.org/ukrainearms.html)). The US Department of Defense announced that the Pentagon did not properly track $1 billion worth of military equipment sent to Ukraine.
+
+_________________________
+
+
+
+SummarizeResultPrompt - QUERY:
+
+# Instructions
+In order to find evidence that helps your fact-check, you just ran a web search which yielded a Search Result. **Your task right now is to summarize the Search Result.** What to include:
+* information that might be useful for the fact-check (see Record)
+* relevant images (refer to images by inserting their reference <image:k>)
+* if available: the release date as well as the author or the publisher (e.g. the media company) of the search result.
+
+Do NOT include:
+* advertisements
+* any other information not related to the Record or the Claim
+
+Additional rules:
+* Do not add any additional information besides the information in the Search Result.
+* If the Search Result doesn't contain any relevant information for the fact-checking work, simply print one word in capital letters: "NONE".
+* Keep your writing style like in the Examples 1, 2 and 3 provided to you.
+* Try to filter out relevant information even if the search result is in a different language.
+
+# Example 1
+The search result from America Today provides several photographs of the Notre-Dame Cathedral fire on April 15, 2019. <image:i>, <image:j>, <image:k>. None of the images show the Eiffel Tower in the background. 
+
+# Example 2
+NONE
+
+# Example 3
+The Guardian discusses a report blaming the Syrian government for a toxic gas attack and condemning their use of chemical weapons. The Guardian mentions the Chemical Weapons Convention and the responsibilities of Syria under the convention. According to The Guardian, The White House condemned the Assad regime for defying the norm against chemical weapons use.
+
+# Record
+## Claim
+Claim: "Ukraine is selling half of the armaments it receives from the United States"
+
+## Actions
+```
+web_search("Ukraine arms sales US aid")
+web_search("US aid to Ukraine arms accountability")
+```
+
+# Search Result
+From [Source](http://cepr.org/voxeu/columns/new-analysis-economists-ukraine-cost-us-aid-ukraine-less-half-official-figures): 
+Content: "Aid Is Going to Ukraine?](https://www.cfr.org/article/how-much-us-aid-going-ukraine)
+”, Council on Foreign Relations, 27 September.
+
+Motkin, A (2023), “[Ukraine’s Diia platform sets the global gold standard for e-government](https://www.atlanticcouncil.org/blogs/ukrainealert/ukraines-diia-platform-sets-the-global-gold-standard-for-e-government/)
+”, Atlantic Council, 30 May.
+
+Trebesch, C, G Irto and T Nishikawa (2025), [Kiel Institute Ukraine Support Tracker.](https://www.ifw-kiel.de/topics/war-against-ukraine/ukraine-support-tracker/)
+
+US Congress (2023), “[Oversight, Transparency, and Accountability of Ukraine Assistance](https://www.congress.gov/event/118th-congress/house-event/115597/text)
+”.
+
+US State Department (2025), “[U.S. 2025), my co-authors and I assess the economic value of the military aid provided by the US to Ukraine. Poland) under the ‘Ukraine aid’ umbrella, to identify specifically grants made by the US to Ukraine.
+
+We also examine direct budget support (non-military aid) from the US to Ukraine, stripping out repayable loans, including specifically grants made by the US to Ukraine, and accounting for US funds that were used to collateralise loans. We also note the extensive terms and conditionality of this aid, which meant that the aid was among the most transparent and audited expenditures, and the Government of Ukraine was never in a position to misappropriate any of the funds.
+
+Our analysis concludes that in three years of full-scale war, **the total monetary value of US aid delivered to Ukraine’s government amounts to $50.9 billion**, **of which $18.3 billion comprises military aid**, with the remaining $32.6 billion direct budget support in the form of expense reimbursement through the World Bank and collateral for loans. These figures differ from the appropriation amounts by a factor of two to three (see Figure 1)
+
+**Figure 1** Breakdown of different categories of US aid provided to Ukraine into military (in blue) and direct budget support (in green), with verified values shaded in dark colouring and excess reported amounts in light colouring
+
+![Figure 1 Breakdown of different categories of US aid provided to Ukraine into military (in blue) and direct budget support (in green), with verified values shaded in dark colouring and excess reported amounts in light colouring](/sites/default/files/styles/flexible_wysiwyg/public/2025-03/full_aid_breakdown.png?itok=E5D1BADQ)
+
+![Figure 1 Breakdown of different categories of US aid provided to Ukraine into military (in blue) and direct budget support (in green), with verified values shaded in dark colouring and excess reported amounts in light colouring](/sites/default/files/styles/popup_small/public/2025-03/full_aid_breakdown.png?itok=x9uGOBrS)
+
+We break down US support into eight categories: (1) direct funding via international institutional accounts (e.g. World Bank); (2) loans; (3) collateral for the issuance of loans to the Government of Ukraine; (4) Treasury Account Grants for US defence procurement; (5) direct equipment transfer under Presidential  Drawdown Authority; (6) indirect equipment transfer by purchasing replacement equipment for an ally; (7) so-called ‘lend-lease’ agreements (enacted but never used); and (8) Foreign Military Financing (FMF) accounts, which allowed strategic loans to Ukraine to purchase US defence supplies.
+
+**Direct funding** (1) consists of the $31 billion that the US provided through World Bank accounts managed by USAID contractors Deloitte and KPMG. Poland is a NATO member, so investment in its defence sector is not aid for Ukraine. 
+
+The **lend-lease** (7) programme expired unused.
+
+**Foreign military assistance loans** (8) comprise approximately $9.2 billion in loans allocated by the US for Ukraine and 17 other countries affected by the Russian war to procure American-made military supplies, services, and equipment.
+
+Summing these together, we estimate that the true value of military aid provided by the US to Ukraine totals $18.3 billion, and the direct budgetary support totals $32.6 billion (in the form of reimbursement of expenses or collateral for loans), although this portion also includes overheads by intermediaries, and the true value is likely lower.
+
+The total comes out to $50.9 billion, or less than $17 billion per year. For comparison, it is roughly the cost of maintenance and energy for federal buildings.
+
+In addition, we note that Ukraine has been subject to extensive audits as an aid recipient (US Congress 2023), and there has been no evidence of issues or anomalies unearthed through those mechanisms. Furthermore, budgetary support from the US to Ukraine has often come with conditionality such as Ukraine implementing specific reforms (Yellen 2024).
+
+Overall, despite the US being the largest country-to-country provider of aid to Ukraine, the value provided is significantly smaller than frequently cited numbers, and small in relative terms compared to the US economy. Department of Treasury, 30 December.
+
+          [![Banner image for Vox debate on consequences of the war](/sites/default/files/styles/16_9_small/public/2023-02/Ukraine2%20Trebesch-1.png?itok=YyyPARKc)](/voxeu/columns/foreign-support-ukraine-evidence-database-military-financial-and-humanitarian-aid "Foreign support to Ukraine: Evidence from a database of military, financial, and humanitarian aid")
+
+VoxEU Column
+
+### [Foreign support to Ukraine: Evidence from a database of military, financial, and humanitarian aid](/voxeu/columns/foreign-support-ukraine-evidence-database-military-financial-and-humanitarian-aid)
+
+*   [Christoph Trebesch](/about/people/christoph-trebesch)
+    
+
+21 Feb 2023
+
+!\[\](../../../../../../../../../../var/folders/34/zq18d8kx7kbgby0j06p\_j6t40000gn/T/TemporaryItems/NSIRD\_screencaptureui\_EM2XPo/Screenshot 2022-01-04 at 17.01.16.png)*   [Politics and economics](/themes/politics-and-economics "Go to the Politics and economics page")
+    
+!\[\](../../../../../../../../../../var/folders/34/zq18d8kx7kbgby0j06p\_j6t40000gn/T/TemporaryItems/NSIRD\_screencaptureui\_EM2XPo/Screenshot 2022-01-04 at 17.01.16.png)*   [Ukraine Initiative](/themes/ukraine-initiative "Go to the Ukraine Initiative page")
+    
+
+          [![Banner for Vox debate on consequences of war](/sites/default/files/styles/16_9_small/public/2023-02/Ukraine2%20roland.png?itok=bvshymGL)](/voxeu/columns/helping-ukraine-not-only-crucial-peace-europe-also-world-peace "Helping Ukraine is not only crucial for peace in Europe but also for world peace")
+
+VoxEU Column
+
+### [Helping Ukraine is not only crucial for peace in Europe but also for world peace](/voxeu/columns/helping-ukraine-not-only-crucial-peace-europe-also-world-peace)
+
+*   [Gérard Roland](/about/people/gerard-roland)
+    
+
+7 Feb 2023
+
+!\[\](../../../../../../../../../../var/folders/34/zq18d8kx7kbgby0j06p\_j6t40000gn/T/TemporaryItems/NSIRD\_screencaptureui\_EM2XPo/Screenshot 2022-01-04 at 17.01.16.png)*   [Politics and economics](/themes/politics-and-economics "Go to the Politics and economics page")
+    
+
+          [![Image of hadn't counting coins against background of soldier and Ukrainian and Russian flags](/sites/default/files/styles/16_9_small/public/2022-09/AdobeStock_487411421.jpeg?itok=KaXCHqmQ)](/voxeu/columns/financing-ukraines-victory-why-and-how "Financing Ukraine’s victory: Why and how")
+
+VoxEU Column
+
+### [Financing Ukraine’s victory: Why and how](/voxeu/columns/financing-ukraines-victory-why-and-how)
+
+*   [Jacob Nell](/about/people/jacob-nell)
+    
+*   [Olena Bilan](/about/people/olena-bilan)
+    
+*   [Torbjörn Becker](/about/people/torbjorn-becker)
+    
+*   [Yuriy Gorodnichenko](/about/people/yuriy-gorodnichenko)
+    
+*   [Tymofiy Mylovanov](/about/people/tymofiy-mylovanov)
+    
+*   [Nataliia Shapoval](/about/people/nataliia-shapoval)
+    
+
+29 Sep 2022
+
+!\[\](../../../../../../../../../../var/folders/34/zq18d8kx7kbgby0j06p\_j6t40000gn/T/TemporaryItems/NSIRD\_screencaptureui\_EM2XPo/Screenshot 2022-01-04 at 17.01.16.png)*   [Politics and economics](/themes/politics-and-economics "Go to the Politics and economics page")"
+
+# Your Summary
+
+
+
+===== > RESPONSE:  < =====
+The search result from CEPR.org discusses the economic value of US military aid to Ukraine. According to the analysis, the total monetary value of US aid delivered to Ukraine's government amounts to $50.9 billion, of which $18.3 billion comprises military aid. <image:k> The article mentions that Ukraine has been subject to extensive audits and there has been no evidence of issues or anomalies unearthed through those mechanisms. The article was published in 2025.
+
+_________________________
+
+
+
+SummarizeResultPrompt - QUERY:
+
+# Instructions
+In order to find evidence that helps your fact-check, you just ran a web search which yielded a Search Result. **Your task right now is to summarize the Search Result.** What to include:
+* information that might be useful for the fact-check (see Record)
+* relevant images (refer to images by inserting their reference <image:k>)
+* if available: the release date as well as the author or the publisher (e.g. the media company) of the search result.
+
+Do NOT include:
+* advertisements
+* any other information not related to the Record or the Claim
+
+Additional rules:
+* Do not add any additional information besides the information in the Search Result.
+* If the Search Result doesn't contain any relevant information for the fact-checking work, simply print one word in capital letters: "NONE".
+* Keep your writing style like in the Examples 1, 2 and 3 provided to you.
+* Try to filter out relevant information even if the search result is in a different language.
+
+# Example 1
+The search result from America Today provides several photographs of the Notre-Dame Cathedral fire on April 15, 2019. <image:i>, <image:j>, <image:k>. None of the images show the Eiffel Tower in the background. 
+
+# Example 2
+NONE
+
+# Example 3
+The Guardian discusses a report blaming the Syrian government for a toxic gas attack and condemning their use of chemical weapons. The Guardian mentions the Chemical Weapons Convention and the responsibilities of Syria under the convention. According to The Guardian, The White House condemned the Assad regime for defying the norm against chemical weapons use.
+
+# Record
+## Claim
+Claim: "Ukraine is selling half of the armaments it receives from the United States"
+
+## Actions
+```
+web_search("Ukraine arms sales US aid")
+web_search("US aid to Ukraine arms accountability")
+```
+
+# Search Result
+From [Source](https://cbsaustin.com/news/nation-world/exploring-impact-accountability-us-military-aid-to-ukraine-war-russia-congressional-budget-funding-money-weapons-refugees-tracking-territory-report): 
+Content: "<image:5981>](https://cbsaustin.com/game-center#/games/guessword)
+
+[Daily Crossword](/game-center#/games/crossword)
+
+[Guess Word](/game-center#/games/guessword)
+
+[Jewel Block](/game-center#/games/jewelblock)
+
+[Micro Crossword](/game-center#/games/microcrossword)
+
+[Classic Sudoku](/game-center#/games/sudoku)
+
+[Word Search](/game-center#/games/wordsearch)
+
+![CBS logo](/resources/defaults/news_3.0/network_logos/cbs_logo.svg)
+
+[Watch](/watch)
+
+[Now\
+\
+100\
+\
+Sat\
+\
+95\
+\
+Sun\
+\
+89](/weather)
+
+[](/watch)
+
+![profile icon](https://sinclairstoryline.com/resources/defaults/news_3.0/icons/ui/sbg-account-symbol.svg)
+
+Fact Check Team: Exploring the impact, accountability of US military aid to Ukraine
+===================================================================================
+
+* * *
+
+by EMMA WITHROW | Fact Check Team
+
+Wed, September 25th 2024 at 4:45 PM
+
+Updated Thu, September 26th 2024 at 9:48 PM
+
+![UserWay icon for accessibility widget](/resources/defaults/news_3.0/icons/accessibility/userway-transparent.svg)
+
+[![U.S. (AP Photo/Mark Schiefelbein, Pool)](/resources/media2/16x9/5868/986/0x306/90/967953b9-5449-4978-aea3-f44a7dbe5a5b-AP24255680274907.jpg)](/news/nation-world/gallery/exploring-impact-accountability-us-military-aid-to-ukraine-war-russia-congressional-budget-funding-money-weapons-refugees-tracking-territory-report?photo=1)
+
+[![Smoke, dust and debris can be seen after after a Russian attack that hit a residential building in Kharkiv, Ukraine, Tuesday Sept. (Ukrainian Emergency Services via AP)](/resources/media2/16x9/1024/648/0x53/90/dbc8515c-ed72-49b1-a6f1-842aeca6b430-AP24268517806627.jpg)](/news/nation-world/gallery/exploring-impact-accountability-us-military-aid-to-ukraine-war-russia-congressional-budget-funding-money-weapons-refugees-tracking-territory-report?photo=2)
+
+[![FILE - A key artillery shell in Ukraine's fight against Russia, the 155 mm howitzer shell, is in production at the Scranton Army Ammunition Plant in Scranton, Pa., on Tuesday, Aug. (AP Photo/Ted Shaffrey, File)](/resources/media2/16x9/3684/648/0x192/90/b053b5f3-8f2b-452f-977a-4e3314853f37-AP24265557078958.jpg)](/news/nation-world/gallery/exploring-impact-accountability-us-military-aid-to-ukraine-war-russia-congressional-budget-funding-money-weapons-refugees-tracking-territory-report?photo=3)
+
+[![Image icon](/resources/defaults/news_3.0/icons/ui/sbg-gallery_w.svg)\
+\
+4\
+\
+VIEW ALL PHOTOS\
+\
+![View All Photos](/resources/media2/16x9/4032/648/0x210/90/87b2c944-1f05-4a46-9f51-5389973cf470-AP24265557058208.jpg)](/news/nation-world/gallery/exploring-impact-accountability-us-military-aid-to-ukraine-war-russia-congressional-budget-funding-money-weapons-refugees-tracking-territory-report)
+
+U.S. (AP Photo/Mark Schiefelbein, Pool)
+
+![Save this story to your profile](/resources/defaults/news_3.0/icons/ui/save-story.svg)Save Story
+
+![Share story](/resources/defaults/news_3.0/icons/ui/share-outline.svg)Share
+
+TOPICS:
+
+[Military aid](/topic/Military%20aid)
+[Ukraine](/topic/Ukraine)
+[Biden Administration](/topic/Biden%20Administration)
+[Weapons](/topic/Weapons)
+[Accountability](/topic/Accountability)
+[Funding](/topic/Funding)
+[Zelenskyy](/topic/Zelenskyy)
+[Foreign aid](/topic/Foreign%20aid)
+
+WASHINGTON (TND) — The Biden Administration is [still planning on sending $5.9 billion](https://www.politico.com/news/2024/09/24/white-house-ukraine-military-aid-00180780 "https://www.politico.com/news/2024/09/24/white-house-ukraine-military-aid-00180780")
+ worth of weapons and equipment to Ukraine but has some obstacles to overcome before the funding expires at the end of the month.
+
+According to the Congressional Budget Office, the U.S. has given Ukraine more than [$107 billion in military assistance](https://www.crfb.org/blogs/congressionally-approved-ukraine-aid-totals-175-billion "https://www.crfb.org/blogs/congressionally-approved-ukraine-aid-totals-175-billion")
+ since Russia invaded in 2022.
+
+But where is all the money going?[](https://www.cfr.org/article/how-much-us-aid-going-ukraine#chapter-title-0-1 "https://www.cfr.org/article/how-much-us-aid-going-ukraine#chapter-title-0-1")
+  
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+[According to the Council on Foreign Relations](https://www.cfr.org/article/how-much-us-aid-going-ukraine#chapter-title-0-1 "https://www.cfr.org/article/how-much-us-aid-going-ukraine#chapter-title-0-1")
+:  
+
+> The historic sums are helping a broad set of Ukrainian people and institutions, including refugees, law enforcement, and independent radio broadcasters, though most of the aid has been military-related.
+
+The money and weapons are always accounted for though. Back in January, a [report from the Office of the Inspector General](https://media.defense.gov/2024/Jan/11/2003374323/-1/-1/1/DODIG-2024-043-EEMU_REDACTED%20SECURE.PDF "https://media.defense.gov/2024/Jan/11/2003374323/-1/-1/1/DODIG-2024-043-EEMU_REDACTED%20SECURE.PDF")
+ found at least [one billion dollars worth of weapons](https://www.axios.com/2024/01/11/us-military-aid-ukraine-track-report "https://www.axios.com/2024/01/11/us-military-aid-ukraine-track-report")
+ that got sent to Ukraine wasn’t properly tracked and could’ve been stolen, smuggled, or potentially gone to Ukraine’s military but wasn’t properly recorded
+
+Despite all the money and military equipment the U.S. is sending to Ukraine the war is still not over.
+
+[On one front in the north](https://www.npr.org/2024/08/19/g-s1-17561/ukraine-russia-war-three-fronts "https://www.npr.org/2024/08/19/g-s1-17561/ukraine-russia-war-three-fronts")
+, Ukrainian troops carried out a surprise invasion into Russian territory and have maintained that ground since early August. But on another in the East, Russian forces are making steady advances and are closing in on a town with the majority of Ukraine’s military supply lines. 
+
+But [Ukrainian President Volodymyr Zelenskyy said he has a victory](https://www.politico.eu/article/ukraines-victory-sets-a-deadline-for-partners-speedy-and-strategic-steps-needed-from-today-and-until-december/ "https://www.politico.eu/article/ukraines-victory-sets-a-deadline-for-partners-speedy-and-strategic-steps-needed-from-today-and-until-december/")
+ plan he’s going to present to Biden next week.
+
+Ukraine isn’t the only recipient of massive amounts of foreign aid from the U.S."
+
+# Your Summary
+
+
+
+===== > RESPONSE:  < =====
+The CBS Austin article, published on September 25, 2024, discusses U.S. military aid to Ukraine. It mentions that the Biden Administration is planning to send $5.9 billion worth of weapons and equipment to Ukraine. The U.S. has provided Ukraine with more than $107 billion in military assistance since 2022. A report from the Office of the Inspector General found that at least one billion dollars worth of weapons sent to Ukraine wasn’t properly tracked. <image:5981>, <image:5981>, <image:5981>, <image:5981>.
+
+_________________________
+
+
+
+SummarizeResultPrompt - QUERY:
+
+# Instructions
+In order to find evidence that helps your fact-check, you just ran a web search which yielded a Search Result. **Your task right now is to summarize the Search Result.** What to include:
+* information that might be useful for the fact-check (see Record)
+* relevant images (refer to images by inserting their reference <image:k>)
+* if available: the release date as well as the author or the publisher (e.g. the media company) of the search result.
+
+Do NOT include:
+* advertisements
+* any other information not related to the Record or the Claim
+
+Additional rules:
+* Do not add any additional information besides the information in the Search Result.
+* If the Search Result doesn't contain any relevant information for the fact-checking work, simply print one word in capital letters: "NONE".
+* Keep your writing style like in the Examples 1, 2 and 3 provided to you.
+* Try to filter out relevant information even if the search result is in a different language.
+
+# Example 1
+The search result from America Today provides several photographs of the Notre-Dame Cathedral fire on April 15, 2019. <image:i>, <image:j>, <image:k>. None of the images show the Eiffel Tower in the background. 
+
+# Example 2
+NONE
+
+# Example 3
+The Guardian discusses a report blaming the Syrian government for a toxic gas attack and condemning their use of chemical weapons. The Guardian mentions the Chemical Weapons Convention and the responsibilities of Syria under the convention. According to The Guardian, The White House condemned the Assad regime for defying the norm against chemical weapons use.
+
+# Record
+## Claim
+Claim: "Ukraine is selling half of the armaments it receives from the United States"
+
+## Actions
+```
+web_search("Ukraine arms sales US aid")
+web_search("US aid to Ukraine arms accountability")
+```
+
+# Search Result
+From [Source](https://internationalpolicy.org/publications/maintaining-transparency-in-us-security-assistance-to-ukraine/): 
+Content: "After 2014 and the events of [Euromaidan](https://www.opensocietyfoundations.org/explainers/understanding-ukraines-euromaidan-protests)
+, officials in Kyiv promised to crack down on corruption throughout society, including in its [defense sector](https://www.corruptionjusticeandlegitimacy.org/post/accomplishing-the-impossible-how-ukraine-advanced-anti-corruption-reforms-in-defense-security)
+. 
+
+Since Russia’s full-scale invasion in February 2022, the US government has been caught between three competing demands: surging defense articles and services to Ukraine, ensuring accountability for US arms shipments, and managing escalation risks. arms transfers, informing procedures and policies for future transfers.
+
+##### US Security Assistance to Ukraine
+
+Since 2015, the United States government [has](https://oig.usaid.gov/node/6707)
+ trained and equipped the Ukrainian military through Operation Atlantic Resolve. Drawdowns and supplemental bills have become the main methods to appropriate funds for Ukrainian assistance, including humanitarian aid. 
+
+Initially, the US supplied light weapons and small arms, like [Javelin anti-tank missiles](https://www.reuters.com/world/europe/us-plane-brings-military-equipment-munitions-ukraine-2022-01-25/)
+, and has since expanded to include artillery, tanks, and long-range ordinance [like](https://www.reuters.com/world/us/us-quietly-shipped-long-range-atacms-missiles-ukraine-2024-04-24/)
+ the Army Tactical Missile. In September 2002, the State Department announced that two years prior, Ukraine’s president Leonid Kuchma [illegally](https://www.armscontrol.org/act/2002-10/news/us-says-ukrainian-president-approved-arms-sale-iraq)
+ sold missiles to Iraq, and in light of this, the US put a hold on a portion of its aid to the country. In August, the Government Accountability Office [found](https://www.defenseone.com/business/2024/08/us-still-needs-improve-monitoring-arms-sent-ukraine-gao-finds/398950/)
+ that the State Department and the Pentagon have not always communicated on how to properly ensure that end-use monitoring is being implemented. This figure leaves out the [non-military](https://www.gao.gov/blog/ukraine-aid-important-so-oversight-funding-and-assistance)
+ aid to Ukraine from the US, and it excludes the [tens of billions of aid](https://www.defense.gov/Spotlights/Support-for-Ukraine/Timeline/)
+ provided to the country since Russia’s initial invasion of Ukraine in 2014. While the sheer amount of aid has caused [political](https://www.washingtonpost.com/national-security/2024/08/23/ukraine-kursk-offensive-russia-weapons/)
+ [disputes](https://www.pbs.org/newshour/world/how-stalled-u-s-aid-for-ukraine-exemplifies-gops-softening-stance-on-russia)
+ in Washington, it has been a relatively successful program so far. <image:5982>
+
+If the US government succeeds in helping Ukraine defend its territory without the arms being diverted to forces outside Ukraine, or used by Ukrainian forces in acts in violation of international humanitarian law, it could emerge as a useful precedent for promoting transparency in U.S. With [an incursion](https://kyivindependent.com/ukraines-incursion-into-kursk-consistent-with-us-policy/)
+ into Russia’s European territory, Ukraine has expanded the battlefield to include both legally Ukrainian and Russian soil.
+
+[Since](https://abcnews.go.com/Politics/trump-admin-approves-sale-anti-tank-weapons-ukraine/story?id=65989898)
+ the Trump Administration, the United States government has been more transparent about security assistance to Ukraine than arms shipments to other countries. Scandals like this, in addition to Ukraine’s political instability, meant the US government was reluctant to provide military aid to the country."
+
+# Your Summary
+
+
+
+===== > RESPONSE:  < =====
+The International Policy Journal discusses US security assistance to Ukraine, mentioning the US has sent a massive amount of aid to bolster Ukraine's military since the Russian invasion. <image:5982> The article also mentions that the US government has been more transparent about security assistance to Ukraine than arms shipments to other countries. The Government Accountability Office found that the State Department and the Pentagon have not always communicated on how to properly ensure that end-use monitoring is being implemented.
+
+_________________________
+
+
+
+SummarizeSummariesPrompt - QUERY:
+
+# Instructions
+You just retrieved web sources, each one summarized under "Web Sources". **Your task right now is to summarize the web source summaries.**
+
+Always adhere to the following rules:
+* Write only one to two paragraphs.
+* Include all URLs from the listed sources. Format them as Markdown hyperlinks.
+* Do not add any additional information besides the information in the summaries.
+* Include references (<image:k>) to all relevant images.
+
+# Record
+## Claim
+Claim: "Ukraine is selling half of the armaments it receives from the United States"
+
+## Actions
+```
+web_search("Ukraine arms sales US aid")
+web_search("US aid to Ukraine arms accountability")
+```
+
+## Web Sources
+**Web Search Result**
+
+From [Source](http://cepr.org/voxeu/columns/new-analysis-economists-ukraine-cost-us-aid-ukraine-less-half-official-figures): 
+Content: The search result from CEPR.org discusses the economic value of US military aid to Ukraine. According to the analysis, the total monetary value of US aid delivered to Ukraine's government amounts to $50.9 billion, of which $18.3 billion comprises military aid. <image:k> The article mentions that Ukraine has been subject to extensive audits and there has been no evidence of issues or anomalies unearthed through those mechanisms. The article was published in 2025.
+
+
+From [Source](https://cbsaustin.com/news/nation-world/exploring-impact-accountability-us-military-aid-to-ukraine-war-russia-congressional-budget-funding-money-weapons-refugees-tracking-territory-report): 
+Content: The CBS Austin article, published on September 25, 2024, discusses U.S. military aid to Ukraine. It mentions that the Biden Administration is planning to send $5.9 billion worth of weapons and equipment to Ukraine. The U.S. has provided Ukraine with more than $107 billion in military assistance since 2022. A report from the Office of the Inspector General found that at least one billion dollars worth of weapons sent to Ukraine wasn’t properly tracked. <image:5981>, <image:5981>, <image:5981>, <image:5981>.
+
+
+From [Source](https://internationalpolicy.org/publications/maintaining-transparency-in-us-security-assistance-to-ukraine/): 
+Content: The International Policy Journal discusses US security assistance to Ukraine, mentioning the US has sent a massive amount of aid to bolster Ukraine's military since the Russian invasion. <image:5982> The article also mentions that the US government has been more transparent about security assistance to Ukraine than arms shipments to other countries. The Government Accountability Office found that the State Department and the Pentagon have not always communicated on how to properly ensure that end-use monitoring is being implemented.
+
+
+## Your Summary
+
+
+
+===== > RESPONSE:  < =====
+The Center for Economic and Policy Research ([CEPR.org](http://cepr.org/voxeu/columns/new-analysis-economists-ukraine-cost-us-aid-ukraine-less-half-official-figures)) states that the total value of US aid to Ukraine is $50.9 billion, with $18.3 billion in military aid. It also mentions that there is no evidence of issues or anomalies unearthed through audits. <image:k>
+
+CBS Austin ([cbsaustin.com/news/nation-world/exploring-impact-accountability-us-military-aid-to-ukraine-war-russia-congressional-budget-funding-money-weapons-refugees-tracking-territory-report](https://cbsaustin.com/news/nation-world/exploring-impact-accountability-us-military-aid-to-ukraine-war-russia-congressional-budget-funding-money-weapons-refugees-tracking-territory-report)) reports that the U.S. has provided Ukraine with over $107 billion in military assistance since 2022 and that a report found that at least one billion dollars worth of weapons sent to Ukraine wasn’t properly tracked. <image:5981> The International Policy Journal ([internationalpolicy.org/publications/maintaining-transparency-in-us-security-assistance-to-ukraine/](https://internationalpolicy.org/publications/maintaining-transparency-in-us-security-assistance-to-ukraine/)) discusses US security assistance to Ukraine, mentioning the US has sent a massive amount of aid to bolster Ukraine's military. <image:5982>
+
+_________________________
+
+
+
+DevelopPrompt - QUERY:
+
+# Instructions
+You just retrieved new Evidence. Now, **analyze the Claim's veracity using the evidence**. Always adhere to the following rules:
+* Focus on developing new insights. Do not repeat larger parts from the Record. Do not restate the Claim.
+* Write down your thoughts step-by-step. Whenever necessary, you may elaborate in more detail.
+* Depending on the topic's complexity, invest one to three paragraphs. The fewer, the better.
+* If you find that there is insufficient information to verify the Claim, explicitly state what information is missing.
+* If you cite web sources, always refer to them by including their URL as a Markdown hyperlink.
+* **Use information only from the recorded evidence**: Avoid inserting information that is not implied by the evidence. You may use commonsense knowledge, though.
+
+# Record
+## Claim
+Claim: "Ukraine is selling half of the armaments it receives from the United States"
+
+## Actions
+```
+web_search("Ukraine arms sales US aid")
+web_search("US aid to Ukraine arms accountability")
+```
+
+## Evidence
+### Evidence from `web_search`
+The Trump administration approved the sale of 3,350 Extended Range Attack Munition (ERAM) missiles to Ukraine, valued at $825 million, funded by Denmark, the Netherlands, Norway, and Foreign Military Financing from the United States, according to a CNN article published on August 28, 2025 (<image:k>, [Source](https://www.cnn.com/2025/08/28/politics/trump-missile-sale-ukraine)). A timeline of military aid to Ukraine from various countries, including the United States, Germany, and the Netherlands, details specific equipment and financial aid packages, but does not mention Ukraine selling armaments ([Source](https://www.forumarmstrade.org/ukrainearms.html)). The US Department of Defense announced that the Pentagon did not properly track $1 billion worth of military equipment sent to Ukraine.
+
+
+### Evidence from `web_search`
+The Center for Economic and Policy Research ([CEPR.org](http://cepr.org/voxeu/columns/new-analysis-economists-ukraine-cost-us-aid-ukraine-less-half-official-figures)) states that the total value of US aid to Ukraine is $50.9 billion, with $18.3 billion in military aid. It also mentions that there is no evidence of issues or anomalies unearthed through audits. <image:k>
+
+CBS Austin ([cbsaustin.com/news/nation-world/exploring-impact-accountability-us-military-aid-to-ukraine-war-russia-congressional-budget-funding-money-weapons-refugees-tracking-territory-report](https://cbsaustin.com/news/nation-world/exploring-impact-accountability-us-military-aid-to-ukraine-war-russia-congressional-budget-funding-money-weapons-refugees-tracking-territory-report)) reports that the U.S. has provided Ukraine with over $107 billion in military assistance since 2022 and that a report found that at least one billion dollars worth of weapons sent to Ukraine wasn’t properly tracked. <image:5981> The International Policy Journal ([internationalpolicy.org/publications/maintaining-transparency-in-us-security-assistance-to-ukraine/](https://internationalpolicy.org/publications/maintaining-transparency-in-us-security-assistance-to-ukraine/)) discusses US security assistance to Ukraine, mentioning the US has sent a massive amount of aid to bolster Ukraine's military. <image:5982>
+
+
+# Your Analysis
+
+
+
+===== > RESPONSE:  < =====
+The evidence does not support the claim that Ukraine is selling half of the armaments it receives from the United States. While there are reports of the US providing substantial military aid to Ukraine, and some equipment not being properly tracked, there is no mention of Ukraine selling any of the received armaments. One source mentions a sale of missiles to Ukraine, but this was approved by the Trump administration and funded by other countries, not a sale by Ukraine.
+
+_________________________
+
+
+
+JudgePrompt - QUERY:
+
+# Instructions
+**Determine the Claim's veracity** by following these steps:
+1. Briefly summarize the key insights from the fact-check (see Record) in at most one paragraph.
+2. Write one paragraph about which one of the Decision Options applies best. Include the most appropriate decision option at the end and enclose it in backticks like `this`.
+
+
+
+
+## Decision Options
+* `true`: The claim is factually accurate when it is confirmed by evidence from multiple and reliable sources.
+* `not enough information`: The fact-check does not contain sufficient information to come to an conclusion. For example,there is substantial lack of evidence or the evidence is inconclusive, conflicting or self-contradictory. In the case of a lack of evidence, state which information exactly is missing. In particular, if no RESULTS or sources are available, pick this decision.
+* `false`: The claim is not factually accurate. This is the case if one of the following three conditions is met:(1) The claim is demonstrably false when it is disproven by evidence from multiple and reliable sources,(2) The claim or image is taken out of context, i.e. the origin, content and/or meaning of a statement or an image is misrepresented. For example, an old claim or an old image is mispresented in a new context in a misleading way,(3) There is not enough evidence to verify the claim or the evidence is conflicting or self-contradictory.
+
+# Record
+## Claim
+Claim: "Ukraine is selling half of the armaments it receives from the United States"
+
+## Actions
+```
+web_search("Ukraine arms sales US aid")
+web_search("US aid to Ukraine arms accountability")
+```
+
+## Evidence
+### Evidence from `web_search`
+The Trump administration approved the sale of 3,350 Extended Range Attack Munition (ERAM) missiles to Ukraine, valued at $825 million, funded by Denmark, the Netherlands, Norway, and Foreign Military Financing from the United States, according to a CNN article published on August 28, 2025 (<image:k>, [Source](https://www.cnn.com/2025/08/28/politics/trump-missile-sale-ukraine)). A timeline of military aid to Ukraine from various countries, including the United States, Germany, and the Netherlands, details specific equipment and financial aid packages, but does not mention Ukraine selling armaments ([Source](https://www.forumarmstrade.org/ukrainearms.html)). The US Department of Defense announced that the Pentagon did not properly track $1 billion worth of military equipment sent to Ukraine.
+
+
+### Evidence from `web_search`
+The Center for Economic and Policy Research ([CEPR.org](http://cepr.org/voxeu/columns/new-analysis-economists-ukraine-cost-us-aid-ukraine-less-half-official-figures)) states that the total value of US aid to Ukraine is $50.9 billion, with $18.3 billion in military aid. It also mentions that there is no evidence of issues or anomalies unearthed through audits. <image:k>
+
+CBS Austin ([cbsaustin.com/news/nation-world/exploring-impact-accountability-us-military-aid-to-ukraine-war-russia-congressional-budget-funding-money-weapons-refugees-tracking-territory-report](https://cbsaustin.com/news/nation-world/exploring-impact-accountability-us-military-aid-to-ukraine-war-russia-congressional-budget-funding-money-weapons-refugees-tracking-territory-report)) reports that the U.S. has provided Ukraine with over $107 billion in military assistance since 2022 and that a report found that at least one billion dollars worth of weapons sent to Ukraine wasn’t properly tracked. <image:5981> The International Policy Journal ([internationalpolicy.org/publications/maintaining-transparency-in-us-security-assistance-to-ukraine/](https://internationalpolicy.org/publications/maintaining-transparency-in-us-security-assistance-to-ukraine/)) discusses US security assistance to Ukraine, mentioning the US has sent a massive amount of aid to bolster Ukraine's military. <image:5982>
+
+
+## Elaboration
+The evidence does not support the claim that Ukraine is selling half of the armaments it receives from the United States. While there are reports of the US providing substantial military aid to Ukraine, and some equipment not being properly tracked, there is no mention of Ukraine selling any of the received armaments. One source mentions a sale of missiles to Ukraine, but this was approved by the Trump administration and funded by other countries, not a sale by Ukraine.
+
+
+# Your Judgement
+
+
+
+===== > RESPONSE:  < =====
+The evidence indicates that the claim is not supported by the available information. While there are reports of military aid from the US to Ukraine and some issues with tracking equipment, there is no evidence to suggest that Ukraine is selling half of the armaments it receives.
+
+`false`
+
+_________________________
+
+
+
+SummarizeDocPrompt - QUERY:
+
+# Instructions
+You are provided with the record of a fact-check. It contains the Claim to be verified and a documentation of all the fact-checking work along the gathered evidence. Your task is to **summarize the fact-check**. That is, you provide a concise, one-paragraph justification for the final VERDICT based on the knowledge from the Record. Note:
+* Be truthful, brief, do not add any additional information besides the information given in the Record. 
+* Link key sources in your summary. Use Markdown notation for that. You may link them in-line.
+* Don't state the Claim again. Rather focus on the key insights of the fact-check.
+* Simply print just the summary.
+
+# Record
+## Claim
+Claim: "Ukraine is selling half of the armaments it receives from the United States"
+
+## Actions
+```
+web_search("Ukraine arms sales US aid")
+web_search("US aid to Ukraine arms accountability")
+```
+
+## Evidence
+### Evidence from `web_search`
+The Trump administration approved the sale of 3,350 Extended Range Attack Munition (ERAM) missiles to Ukraine, valued at $825 million, funded by Denmark, the Netherlands, Norway, and Foreign Military Financing from the United States, according to a CNN article published on August 28, 2025 (<image:k>, [Source](https://www.cnn.com/2025/08/28/politics/trump-missile-sale-ukraine)). A timeline of military aid to Ukraine from various countries, including the United States, Germany, and the Netherlands, details specific equipment and financial aid packages, but does not mention Ukraine selling armaments ([Source](https://www.forumarmstrade.org/ukrainearms.html)). The US Department of Defense announced that the Pentagon did not properly track $1 billion worth of military equipment sent to Ukraine.
+
+
+### Evidence from `web_search`
+The Center for Economic and Policy Research ([CEPR.org](http://cepr.org/voxeu/columns/new-analysis-economists-ukraine-cost-us-aid-ukraine-less-half-official-figures)) states that the total value of US aid to Ukraine is $50.9 billion, with $18.3 billion in military aid. It also mentions that there is no evidence of issues or anomalies unearthed through audits. <image:k>
+
+CBS Austin ([cbsaustin.com/news/nation-world/exploring-impact-accountability-us-military-aid-to-ukraine-war-russia-congressional-budget-funding-money-weapons-refugees-tracking-territory-report](https://cbsaustin.com/news/nation-world/exploring-impact-accountability-us-military-aid-to-ukraine-war-russia-congressional-budget-funding-money-weapons-refugees-tracking-territory-report)) reports that the U.S. has provided Ukraine with over $107 billion in military assistance since 2022 and that a report found that at least one billion dollars worth of weapons sent to Ukraine wasn’t properly tracked. <image:5981> The International Policy Journal ([internationalpolicy.org/publications/maintaining-transparency-in-us-security-assistance-to-ukraine/](https://internationalpolicy.org/publications/maintaining-transparency-in-us-security-assistance-to-ukraine/)) discusses US security assistance to Ukraine, mentioning the US has sent a massive amount of aid to bolster Ukraine's military. <image:5982>
+
+
+## Elaboration
+The evidence does not support the claim that Ukraine is selling half of the armaments it receives from the United States. While there are reports of the US providing substantial military aid to Ukraine, and some equipment not being properly tracked, there is no mention of Ukraine selling any of the received armaments. One source mentions a sale of missiles to Ukraine, but this was approved by the Trump administration and funded by other countries, not a sale by Ukraine.
+
+
+## Final Judgement
+The evidence indicates that the claim is not supported by the available information. While there are reports of military aid from the US to Ukraine and some issues with tracking equipment, there is no evidence to suggest that Ukraine is selling half of the armaments it receives.
+
+`false`
+
+
+## Summary
+
+
+
+===== > RESPONSE:  < =====
+The claim is not supported by the evidence. While the US has provided significant military aid to Ukraine, and there have been issues with tracking some equipment, there is no evidence to suggest that Ukraine is selling half of the armaments it receives from the United States. Sources like [CNN](https://www.cnn.com/2025/08/28/politics/trump-missile-sale-ukraine) and [forumarmstrade.org](https://www.forumarmstrade.org/ukrainearms.html) detail aid packages and sales but do not mention Ukraine selling armaments.
+
+_________________________
+
+
+

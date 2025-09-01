@@ -1,0 +1,65 @@
+Extracting claims from Content: President Donald Trump posted on Truth Social on July 25, 2024, as a reaction to the attempted assasination of him on July 13, 2024, 'I hope that America obliterates Israel.'
+'Claim: "President Donald Trump posted on Truth Social on July 25, 2024, as a reaction to the attempted assasination of him on July 13, 2024, 'I hope that America obliterates Israel.'"'
+Verifying Claim: "President Donald Trump posted on Truth Social on July 25, 2024, as a reaction to the attempted assasination of him on July 13, 2024, 'I hope that America obliterates Israel.'"
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Truth Social Donald Trump July 25 2024')
+Failed to download or open image: cannot identify image file <_io.BytesIO object at 0x7ffed1629ee0>
+Got 3 new web source(s):
+	1. https://www.cnbc.com/video/2025/07/18/how-frequently-does-trump-post-on-social-media.html
+	2. https://www.latimes.com/entertainment-arts/tv/story/2024-04-03/i-spent-24-hours-on-trump-truth-social-so-you-dont-have-to
+	3. https://www.theguardian.com/us-news/article/2024/may/20/trump-truth-social-loss
+Useful result: From [Source](https://www.latimes.com/entertainment-arts/tv/story/2024-04-03/i-spent-24-hours-on-trump-truth-social-so-you-dont-have-to): 
+Content: The Los Angeles Times published an article on April 3, 2024, about Donald Trump's Truth Social activity. The article includes an image of Donald Trump at the Bitcoin 2024 conference in Nashville, which took place from July 25-27, 2024. <image:7631>
+
+Useful result: From [Source](https://www.theguardian.com/us-news/article/2024/may/20/trump-truth-social-loss): 
+Content: The Guardian published an article about Donald Trump and Truth Social. <image:7632> The article was published on May 20, 2024.
+
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Donald Trump Truth Social Israel obliterate')
+Skipping unsupported website: https://www.facebook.com/trtworld/posts/us-president-donald-trump-posting-on-truth-social-after-israels-strike-on-iran-t/1163590532469853/
+Skipping unsupported website: https://x.com/IranIntl_En/status/1957439956210569646
+Got 3 new web source(s):
+	1. https://www.nbcnews.com/politics/donald-trump/trump-engages-truth-social-diplomacy-iran-crisis-rcna214719
+	2. https://www.aljazeera.com/news/2025/6/25/12-posts-from-12-day-war-how-trump-live-posted-israel-iran-conflict
+	3. https://www.theatlantic.com/politics/archive/2025/06/israel-iran-trump-truth-social/683306/
+Useful result: From [Source](https://www.nbcnews.com/politics/donald-trump/trump-engages-truth-social-diplomacy-iran-crisis-rcna214719): 
+Content: The search result from NBC News includes an image <image:7643> of a Truth Social post by Donald J. Trump. The post says: "THE CEASEFIRE IS NOW IN EFFECT. PLEASE DO NOT VIOLATE IT! DONALD J. TRUMP, PRESIDENT OF THE UNITED STATES!". The post was made 11 hours prior to the search.
+
+Useful result: From [Source](https://www.aljazeera.com/news/2025/6/25/12-posts-from-12-day-war-how-trump-live-posted-israel-iran-conflict): 
+Content: Al Jazeera published an article about Donald Trump's posts on Truth Social during a conflict between Iran and Israel. The article includes posts from June 13 and June 15, 2025. <image:7644>
+
+Useful result: From [Source](https://www.theatlantic.com/politics/archive/2025/06/israel-iran-trump-truth-social/683306/): 
+Content: The Atlantic provides an image of a Truth Social post from Donald J. Trump. <image:7645> The post states: "ISRAEL is not going to attack Iran. All planes will turn around and head home Wave' to Iran. Nobody will be hurt, the Ceasefire is in effect! Thank you for DONALD J. TRUMP, PRESIDENT OF THE UNITED STATES". The post was made 4 hours prior to the publication of the article.
+
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Donald Trump Truth Social July 25 2024 Israel')
+Got 3 new web source(s):
+	1. https://www.cnn.com/2024/07/26/politics/trump-netanyahu-meeting-mar-a-lago
+	2. https://tennesseelookout.com/2024/07/25/in-capitol-address-israeli-leader-calls-for-u-s-backing-to-defeat-hamas/
+	3. https://www.nytimes.com/2024/07/25/world/middleeast/trump-netanyahu-israel-gaza.html
+Useful result: From [Source](https://www.cnn.com/2024/07/26/politics/trump-netanyahu-meeting-mar-a-lago): 
+Content: CNN published an article on July 26, 2024, about a meeting between Trump and Netanyahu. <image:7663>
+
+Useful result: From [Source](https://tennesseelookout.com/2024/07/25/in-capitol-address-israeli-leader-calls-for-u-s-backing-to-defeat-hamas/): 
+Content: The Tennessee Lookout published an article on July 25, 2024, about an address by an Israeli leader. <image:7664>
+
+Useful result: From [Source](https://www.nytimes.com/2024/07/25/world/middleeast/trump-netanyahu-israel-gaza.html): 
+Content: The New York Times published an article on July 25, 2024, about Donald Trump and Netanyahu <image:7665>.
+
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Donald Trump Truth Social July 25 2024 attempted assassination')
+Failed to download or open image: cannot identify image file <_io.BytesIO object at 0x7ffed172c9a0>
+Got 3 new web source(s):
+	1. https://www.cnn.com/2024/07/14/politics/timeline-trump-rally-shooting-dg
+	2. https://www.desmoinesregister.com/story/news/2024/07/14/see-sunday-enewspaper-for-special-coverage-of-trump-rally-shooting/74401975007/
+	3. https://www.axios.com/2024/07/14/trump-assassination-truth-social-update
+Useful result: From [Source](https://www.cnn.com/2024/07/14/politics/timeline-trump-rally-shooting-dg): 
+Content: CNN published an article on July 14, 2024, about the attempted assassination of Donald Trump on July 13, 2024. The article includes a statement from the Trump campaign <image:7670>.
+
+Useful result: From [Source](https://www.axios.com/2024/07/14/trump-assassination-truth-social-update): 
+Content: Axios published an article on July 14, 2024, about an attempted assassination of Donald Trump, including an image <image:7671>.
+
+The claim 'President Donald Trump posted on Truth Social on July 25, 2024, as a reaction to the attempted assasination of him on July 13, 2024, 'I hope that America obliterates Israel.'' is false.
+Justification: The claim that Donald Trump posted on Truth Social on July 25, 2024, stating "I hope that America obliterates Israel" cannot be verified. While evidence confirms Trump's use of Truth Social and an attempted assassination on July 13, 2024, no evidence supports the specific post with the quoted statement.
+
+So, the overall veracity is: false
+Fact-check took 1:00 min.

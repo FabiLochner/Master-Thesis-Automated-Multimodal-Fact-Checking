@@ -1,0 +1,36 @@
+Extracting claims from Content: As the tensions between Israel and Hezbollah escalate in October, 2024, the U.S. government is offering Americans loans to pay for flights out of Lebanon while they have been flying Israeli citizens out of Israel on chartered flights for a year 'on US taxpayers' dime.
+'Claim: "As the tensions between Israel and Hezbollah escalate in October, 2024, the U.S. government is offering Americans loans to pay for flights out of Lebanon while they have been flying Israeli citizens out of Israel on chartered flights for a year 'on US taxpayers' dime."'
+Verifying Claim: "As the tensions between Israel and Hezbollah escalate in October, 2024, the U.S. government is offering Americans loans to pay for flights out of Lebanon while they have been flying Israeli citizens out of Israel on chartered flights for a year 'on US taxpayers' dime."
+Not enough information yet. Continuing fact-check...
+Got 3 new web source(s):
+	1. https://www.usnews.com/news/politics/articles/2024-10-03/us-arranges-flights-to-bring-americans-out-of-lebanon-as-others-seek-escape
+	2. https://www.usatoday.com/story/travel/news/2024/10/16/state-department-offers-crisis-support-americans-fleeing-lebanon/75702899007/
+	3. https://www.foxbusiness.com/lifestyle/us-embassy-lebanon-urges-americans-book-any-ticket-available-few-remaining-departing-flights
+Useful result: From [Source](https://www.foxbusiness.com/lifestyle/us-embassy-lebanon-urges-americans-book-any-ticket-available-few-remaining-departing-flights): 
+Content: The Fox Business article includes an image of people with luggage. <image:7178>
+
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='US chartered flights Israeli citizens October 2023 - October 2024')
+Got 3 new web source(s):
+	1. https://alaskabeacon.com/2023/10/12/with-violence-raging-in-israel-u-s-citizens-to-be-flown-out-on-charters/
+	2. https://idahocapitalsun.com/2023/10/12/with-violence-raging-in-israel-u-s-citizens-to-be-flown-out-on-charters/
+	3. https://www.reuters.com/world/first-us-charter-flight-out-israel-lands-athens-official-says-2023-10-13/
+Useful result: From [Source](https://alaskabeacon.com/2023/10/12/with-violence-raging-in-israel-u-s-citizens-to-be-flown-out-on-charters/): 
+Content: The Alaska Beacon published an article on October 12, 2023, stating that U.S. citizens were being flown out of Israel on chartered flights. <image:14224> shows a picture of Antony Blinken and Benjamin Netanyahu.
+
+Useful result: From [Source](https://idahocapitalsun.com/2023/10/12/with-violence-raging-in-israel-u-s-citizens-to-be-flown-out-on-charters/): 
+Content: The Idaho Capital Sun published an article on October 12, 2023, stating that the U.S. government is flying U.S. citizens out of Israel on chartered flights. <image:14225>
+
+Useful result: From [Source](https://www.reuters.com/world/first-us-charter-flight-out-israel-lands-athens-official-says-2023-10-13/): 
+Content: Reuters published an article on October 13, 2023, stating that the first U.S. charter flight out of Israel landed in Athens. <image:14226>
+
+Not enough information yet. Continuing fact-check...
+No new actions were found in this response:
+```
+image_search("US government loans Americans flights Lebanon October 2024")
+image_search("US chartered flights Israeli citizens October 2023 - October 2024")
+``` and performed actions: image_search("US government loans Americans flights Lebanon October 2024"), image_search("US chartered flights Israeli citizens October 2023 - October 2024")
+The claim 'As the tensions between Israel and Hezbollah escalate in October, 2024, the U.S. government is offering Americans loans to pay for flights out of Lebanon while they have been flying Israeli citizens out of Israel on chartered flights for a year 'on US taxpayers' dime.' is false.
+Justification: The U.S. government organized chartered flights to evacuate U.S. citizens from Israel in October 2023, as reported by the [Alaska Beacon](https://alaskabeacon.com/2023/10/12/with-violence-raging-in-israel-u-s-citizens-to-be-flown-out-on-charters/) and the [Idaho Capital Sun](https://idahocapitalsun.com/2023/10/12/with-violence-raging-in-israel-u-s-citizens-to-be-flown-out-on-charters/). However, there is no evidence to support the claim that the U.S. government is offering loans to Americans for flights out of Lebanon in October 2024, nor is there evidence of flying Israeli citizens out of Israel for a year.
+
+So, the overall veracity is: false
+Fact-check took 0:32 min.

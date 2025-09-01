@@ -1,0 +1,3703 @@
+PlanPrompt - QUERY:
+
+# Instructions
+The available knowledge is insufficient to assess the Claim. Therefore, **propose a set of actions** to retrieve new and helpful evidence. Adhere to the following rules:
+* The actions available are listed under Valid Actions, including a short description for each action. No other actions are possible at this moment. 
+* For each action, use the formatting as specified in Valid Actions.
+* Include all actions in a single Markdown code block at the end of your answer.
+* Propose as few actions as possible, but as much as needed. Do not propose similar or previously used actions.
+
+
+
+## Valid Actions
+* `geolocate`
+   * Description: Performs geolocation to determine the country where an image was taken.
+   * How to use: Provide an image and the model will determine the most likely countries where it was taken.
+   * Format: geolocate(<image:k>), where `k` is the image's ID
+
+* `web_search`
+   * Description: Run an open web search on Google or DuckDuckGO to retrieve any related webpage.
+   * How to use: Do not use this with a previously used or similar query from previous web searches. If a previous web search did not yield any results, use a very different query.
+   * Format: web_search("your web search query goes here")
+
+* `reverse_search`
+   * Description: Performs a reverse image search to find similar images on the web.
+   * How to use: Provide an image and the model will perform a reverse search to find similar images.
+   * Format: reverse_search(<image:k>), where `k` is the image's ID
+
+# Example: geolocate()
+
+## Claim
+Text: "<image:k> shows a nuclear weapons facility in Usbekistan."
+
+...
+
+## Actions
+```
+geolocate(<image:k>)
+```
+
+# Example: web_search()
+
+## Claim
+Text: "New Zealand’s new Food Bill bans gardening"
+Claim date: October 29, 2020
+
+...
+
+## Actions
+```
+web_search("New Zealand Food Bill 2020")
+web_search("New Zealand Food Bill gardening ban")
+```
+
+# Example: reverse_search()
+
+## Claim
+Text: "<image:k> shows a rare event of a solar eclipse with a double ring."
+
+...
+
+## Actions
+```
+reverse_search(<image:k>)
+```
+
+# Record
+## Claim
+Claim: "<image:10257> This image shows a man from Gaza holding the hand of his son killed in an Israeli bombing in July, 2024."
+
+# Your Actions
+
+
+
+===== > RESPONSE:  < =====
+```
+web_search("man orange jacket rubble")
+reverse_search(<image:10257>)
+```
+_________________________
+
+
+
+SummarizeResultPrompt - QUERY:
+
+# Instructions
+In order to find evidence that helps your fact-check, you just ran a web search which yielded a Search Result. **Your task right now is to summarize the Search Result.** What to include:
+* information that might be useful for the fact-check (see Record)
+* relevant images (refer to images by inserting their reference <image:k>)
+* if available: the release date as well as the author or the publisher (e.g. the media company) of the search result.
+
+Do NOT include:
+* advertisements
+* any other information not related to the Record or the Claim
+
+Additional rules:
+* Do not add any additional information besides the information in the Search Result.
+* If the Search Result doesn't contain any relevant information for the fact-checking work, simply print one word in capital letters: "NONE".
+* Keep your writing style like in the Examples 1, 2 and 3 provided to you.
+* Try to filter out relevant information even if the search result is in a different language.
+
+# Example 1
+The search result from America Today provides several photographs of the Notre-Dame Cathedral fire on April 15, 2019. <image:i>, <image:j>, <image:k>. None of the images show the Eiffel Tower in the background. 
+
+# Example 2
+NONE
+
+# Example 3
+The Guardian discusses a report blaming the Syrian government for a toxic gas attack and condemning their use of chemical weapons. The Guardian mentions the Chemical Weapons Convention and the responsibilities of Syria under the convention. According to The Guardian, The White House condemned the Assad regime for defying the norm against chemical weapons use.
+
+# Record
+## Claim
+Claim: "<image:10257> This image shows a man from Gaza holding the hand of his son killed in an Israeli bombing in July, 2024."
+
+## Actions
+```
+web_search("man orange jacket rubble")
+reverse_search(<image:10257>)
+```
+
+# Search Result
+From [Source](https://www.llbean.com/buy/mens-orange-jackets): 
+Content: "Please upgrade to one of the following for a smoother, safer shopping experience with us:
+
+[![Chrome's Logo](/dept_resources/shared/dept_images/chrome_logo.png)\
+\
+CHROME](https://www.google.com/chrome/)
+
+[![Firefox's Logo](/dept_resources/shared/dept_images/firefox_logo.png)\
+\
+FIREFOX](https://www.mozilla.org/en-US/firefox/new/)
+
+[![Safari's Logo](/dept_resources/shared/dept_images/safari_logo.png)\
+\
+SAFARI](https://support.apple.com/downloads/safari)
+
+[![Microsoft Edge's Logo](/dept_resources/shared/dept_images/edge_logo.png)\
+\
+MICROSOFT EDGE](https://www.microsoft.com/en-us/edge)
+
+[Skip to product results](#thumbnail-header-title)
+
+Men's Orange Jackets
+====================
+
+<p>Brighten up your outdoor adventures with our collection of men's orange jackets. Embrace the vibrant spirit of the outdoors with a versatile layer that stands out in both urban and wilderness settings.</p>
+
+Read More
+
+Sort by:
+
+SORT
+
+*   Recommended
+*   Price: Low to High
+*   Price: High to Low
+*   Bestselling
+*   Newest
+*   Customer Rating
+
+Sort by: Recommended Price (lowest to highest) Price (highest to lowest) Bestselling Newest Customer Rating
+
+Filter & Sort
+
+298 Items
+
+*   [!Men's Warm-Up Jacket, Fleece Lined <image:12396>](https://www.llbean.com/llb/shop/32937)
+    
+    [Men's Warm-Up Jacket, Fleece Lined](https://www.llbean.com/llb/shop/32937)
+    
+    $99
+    
+    A rust orange, fleece-lined jacket offering water and wind resistance with Thinsulate™ insulated sleeves.
+    
+    Pros: Perfect fit Durable construction Versatile use Water resistant Excellent warmth
+    
+*   [!Men's Trail Model Rain Jacket <image:12397>](https://www.llbean.com/llb/shop/121904)
+    
+    [Men's Trail Model Rain Jacket](https://www.llbean.com/llb/shop/121904)
+    
+    $99
+    
+    An amber orange, packable, waterproof rain jacket made from 100% recycled nylon with adjustable hood and cuffs.
+    
+    Pros: Lightweight and packable Durable material Effective rain protection High quality construction Comfortable fit
+    
+*   [!Men's Waterproof PrimaLoft Packaway Jacket <image:12398>](https://www.llbean.com/llb/shop/119862)
+    
+    [Men's Waterproof PrimaLoft Packaway Jacket](https://www.llbean.com/llb/shop/119862)
+    
+    $280
+    
+    An orange, waterproof, windproof jacket with PrimaLoft insulation, packable design, and multiple zippered pockets.
+    
+    Pros: Waterproof Lightweight Well-made Warmth Comfortable
+    
+*   [!Men's Quilted Sweatshirt, Mockneck <image:12401>](https://www.llbean.com/llb/shop/123793)
+    
+    [Men's Quilted Sweatshirt, Mockneck](https://www.llbean.com/llb/shop/123793)
+    
+    Price was from: $89.95 now: $69.99 $89.95 $69.99
+    
+    An orange quilted pullover with raglan sleeves and kangaroo pocket, made from polyester-cotton blend.
+    
+    Pros: Great quality Warmth Stylish True to size Comfortable
+    
+*   [!Men's Mountain Classic Anorak <image:12402>](https://www.llbean.com/llb/shop/115663)
+    
+    [Men's Mountain Classic Anorak](https://www.llbean.com/llb/shop/115663)
+    
+    $69.95
+    
+    An orange wind- and water-resistant anorak made from durable Supplex nylon with an attached hood and packable design.
+    
+*   [!Men's Adventure Grid Fleece, Quarter-Zip <image:12403>](https://www.llbean.com/llb/shop/123567)
+    
+    [Men's Adventure Grid Fleece, Quarter-Zip](https://www.llbean.com/llb/shop/123567)
+    
+    $84.95
+    
+    An orange quarter-zip fleece with UPF 50+ protection, moisture-wicking fabric, and thumb holes.
+    
+    Pros: High quality Great warmth Lightweight design Stylish color Comfortable fit
+    
+*   [!Men's Waterproof Ultralight Down Jacket <image:12404>](https://www.llbean.com/llb/shop/124872)
+    
+    [Men's Waterproof Ultralight Down Jacket](https://www.llbean.com/llb/shop/124872)
+    
+    Price was from: $350 now: $239 $350 $239
+    
+    A warm, waterproof down jacket in dark terracotta, featuring recycled materials and multiple zippered pockets.
+    
+    Pros: Multiple pockets Waterproofness Lightweight Warmth Comfortable fit
+    
+*   [!Men's Mountain Classic Full-Zip Jacket <image:12405>](https://www.llbean.com/llb/shop/121903)
+    
+    [Men's Mountain Classic Full-Zip Jacket](https://www.llbean.com/llb/shop/121903)
+    
+    $79.95
+    
+    A windproof, water-resistant orange jacket made from lightweight Supplex nylon with an attached hood and full-zip design.
+    
+*   [!Men's Double L Field Shirt, Hunter Orange <image:12407>](https://www.llbean.com/llb/shop/122747)
+    
+    [Men's Double L Field Shirt, Hunter Orange](https://www.llbean.com/llb/shop/122747)
+    
+    $89.95
+    
+    A rugged, hunter orange cotton-acrylic shirt with reinforced forearms and bi-swing articulation for full motion.
+    
+    Pros: High quality Good fit Great warmth Excellent cuff design Ideal weight
+    
+*   [!Men's Northwoods Rain Jacket <image:12408>](https://www.llbean.com/llb/shop/124358)
+    
+    [Men's Northwoods Rain Jacket](https://www.llbean.com/llb/shop/124358)
+    
+    Price was from: $139 now: $69.99 $139 $69.99
+    
+    A lightweight, durable hunting rain jacket in hunter orange with a TEK 2.5 waterproof, breathable membrane.
+    
+    Pros: Good price Waterproof protection Quiet material
+    
+*   [!Men's Northwoods II Rain Jacket <image:12409>](https://www.llbean.com/llb/shop/20010171)
+    
+    [Men's Northwoods II Rain Jacket](https://www.llbean.com/llb/shop/20010171)
+    
+    $150
+    
+    A lightweight orange hunting jacket made from quiet, waterproof TEK polyester with adjustable hood and cuffs.
+    
+*   [!Men's Pathfinder GORE-TEX Shell Jacket <image:12410>](https://www.llbean.com/llb/shop/1000010396)
+    
+    [Men's Pathfinder GORE-TEX Shell Jacket](https://www.llbean.com/llb/shop/1000010396)
+    
+    $300
+    
+    An orange, windproof, waterproof jacket made from recycled polyester with GORE-TEX ePE fabric for year-round wear.
+    
+*   [!Men's PrimaLoft Packaway Hooded Jacket <image:12412>](https://www.llbean.com/llb/shop/20010133)
+    
+    [Men's PrimaLoft Packaway Hooded Jacket](https://www.llbean.com/llb/shop/20010133)
+    
+    $220
+    
+    An orange, water- and wind-resistant puffer jacket with recycled polyester and innovative PrimaLoft® insulation.
+    
+*   [!Men's PrimaLoft Packaway Jacket <image:12413>](https://www.llbean.com/llb/shop/20010126)
+    
+    [Men's PrimaLoft Packaway Jacket](https://www.llbean.com/llb/shop/20010126)
+    
+    $200
+    
+    An orange, lightweight insulated jacket with recycled polyester, wind and water resistance, and packable convenience.
+    
+*   [!Men's Organic Cotton Waffle Sweater, Quarter Zip <image:12415>](https://www.llbean.com/llb/shop/123583)
+    
+    [Men's Organic Cotton Waffle Sweater, Quarter Zip](https://www.llbean.com/llb/shop/123583)
+    
+    Price was from: $99.95 now: $74.99 $99.95 $74.99
+    
+    A cozy rust orange quarter-zip sweater made from 100% organic cotton with a thick waffle-stitch knit.
+    
+    Pros: Beautiful design High quality Warm and cozy True to size Comfortable fit
+    
+*   [!Big Game Hunting Safety Vest <image:12416>](https://www.llbean.com/llb/shop/111743)
+    
+    [Big Game Hunting Safety Vest](https://www.llbean.com/llb/shop/111743)
+    
+    $39.95
+    
+    A blaze orange safety vest made of 100% polyester with dual side cargo pockets for easy gear access.
+    
+    Pros: Easy-to-use zipper Convenient pockets High visibility
+    
+*   [!Men's Double L Waxed-Cotton Upland Vest, Hunter Orange <image:12418>](https://www.llbean.com/llb/shop/122740)
+    
+    [Men's Double L Waxed-Cotton Upland Vest, Hunter Orange](https://www.llbean.com/llb/shop/122740)
+    
+    $180
+    
+    A machine-washable, waxed-cotton hunting vest in hunter orange with large game pouch and ammo loops.
+    
+*   [!Men's Lakewashed Double-Knit Quarter-Zip Pullover <image:12419>](https://www.llbean.com/llb/shop/128947)
+    
+    [Men's Lakewashed Double-Knit Quarter-Zip Pullover](https://www.llbean.com/llb/shop/128947)
+    
+    Price was from: $79.95 now: $64.99 $79.95 $64.99
+    
+    A versatile brick orange heather pullover with ribbed texture, made from a comfortable polyester-cotton blend.
+    
+*   [!Men's Ridge Runner Hunter's Vest <image:12421>](https://www.llbean.com/llb/shop/128445)
+    
+    [Men's Ridge Runner Hunter's Vest](https://www.llbean.com/llb/shop/128445)
+    
+    Price was from: $59.95 now: $24.99 $59.95 $24.99
+    
+    A blaze orange Polartec vest with dual cargo pockets, perfect for hunters, runners, and hikers.
+    
+
+Men's Orange Jackets
+--------------------
+
+There’s something unmistakably bold and timeless about a men’s orange jacket. Whether it’s a lightweight layer for a breezy June evening or a trusty companion for early-morning hikes, orange jackets bring a pop of color to any outdoor adventure. For those who like to keep their wardrobe versatile, an orange jacket offers a fresh alternative to more muted tones, brightening up everyday outings and weekend getaways alike. 
+  
+When shopping for a men’s orange jacket, comfort and durability should be top of mind. A well-made orange jacket can be the go-to layer for early morning walks with the dog, cool nights around the campfire, or even just running errands on a blustery day. And as the weather shifts, it’s easy to layer an orange jacket over a favorite sweatshirt or under a rain shell, making it a year-round staple. If you’re looking ahead to colder months, you might want to explore the full selection of [Orange Winter Jackets](https://www.llbean.com/buy/orange-winter-jackets)
+ for options designed to keep you warm when the temperature drops. 
+  
+No matter where the day leads, a men’s orange jacket is up for the challenge—ready to handle a spontaneous weekend getaway, a quick run to the farmer’s market, or a leisurely stroll through the park. The best orange jackets are built to last, with classic designs and thoughtful touches that never go out of style."
+
+# Your Summary
+
+
+
+===== > RESPONSE:  < =====
+The search result from LLBean.com features a collection of men's orange jackets, including rain jackets, hunting vests, and insulated options. <image:12396>, <image:12397>, <image:12398>, <image:12401>, <image:12402>, <image:12403>, <image:12404>, <image:12405>, <image:12407>, <image:12408>, <image:12409>, <image:12410>, <image:12412>, <image:12413>, <image:12415>, <image:12416>, <image:12418>, <image:12419>, <image:12421>. The jackets are described as versatile and suitable for various outdoor activities.
+
+_________________________
+
+
+
+SummarizeResultPrompt - QUERY:
+
+# Instructions
+In order to find evidence that helps your fact-check, you just ran a web search which yielded a Search Result. **Your task right now is to summarize the Search Result.** What to include:
+* information that might be useful for the fact-check (see Record)
+* relevant images (refer to images by inserting their reference <image:k>)
+* if available: the release date as well as the author or the publisher (e.g. the media company) of the search result.
+
+Do NOT include:
+* advertisements
+* any other information not related to the Record or the Claim
+
+Additional rules:
+* Do not add any additional information besides the information in the Search Result.
+* If the Search Result doesn't contain any relevant information for the fact-checking work, simply print one word in capital letters: "NONE".
+* Keep your writing style like in the Examples 1, 2 and 3 provided to you.
+* Try to filter out relevant information even if the search result is in a different language.
+
+# Example 1
+The search result from America Today provides several photographs of the Notre-Dame Cathedral fire on April 15, 2019. <image:i>, <image:j>, <image:k>. None of the images show the Eiffel Tower in the background. 
+
+# Example 2
+NONE
+
+# Example 3
+The Guardian discusses a report blaming the Syrian government for a toxic gas attack and condemning their use of chemical weapons. The Guardian mentions the Chemical Weapons Convention and the responsibilities of Syria under the convention. According to The Guardian, The White House condemned the Assad regime for defying the norm against chemical weapons use.
+
+# Record
+## Claim
+Claim: "<image:10257> This image shows a man from Gaza holding the hand of his son killed in an Israeli bombing in July, 2024."
+
+## Actions
+```
+web_search("man orange jacket rubble")
+reverse_search(<image:10257>)
+```
+
+# Search Result
+From [Source](https://www.patagonia.com/shop/mens/jackets-vests/orange): 
+Content: "This is what we can do.
+
+[Read Yvon’s Letter](https://www.patagonia.com/ownership/)
+
+*   [Patagonia](/)
+    
+*   [Worn Wear](https://wornwear.patagonia.com/?utm_source=ecomm&utm_medium=internal&utm_campaign=global_nav_top_drawer)
+    
+*   [Food + Drink](https://www.patagoniaprovisions.com/?utm_source=patagonia.com&utm_medium=referral&utm_campaign=header_tabs)
+    
+*   [Take Action](https://www.patagonia.com/actionworks/?utm_source=patagonia.com&utm_medium=referral&utm_campaign=header_tabs)
+    
+
+##### Filter & Sort
+
+[Clear All](https://www.patagonia.com/shop/mens/jackets-vests)
+
+###### In-Store Pickup
+
+Find a Store Change
+
+*   [](null)
+    
+
+###### Sort By
+
+*   [Price Low to High](https://www.patagonia.com/on/demandware.store/Sites-patagonia-us-Site/en_US/Search-UpdateGrid?cgid=mens-jackets-vests&prefn1=refinementColor&prefv1=Orange&start=0&sortval=low_price&sortrule=asc)
+    
+*   [Price High to Low](https://www.patagonia.com/on/demandware.store/Sites-patagonia-us-Site/en_US/Search-UpdateGrid?cgid=mens-jackets-vests&prefn1=refinementColor&prefv1=Orange&start=0&sortval=low_price&sortrule=desc)
+    
+*   [Best Seller](https://www.patagonia.com/on/demandware.store/Sites-patagonia-us-Site/en_US/Search-UpdateGrid?cgid=mens-jackets-vests&prefn1=refinementColor&prefv1=Orange&start=0&sortval=best_seller&sortrule=desc)
+    
+*   [Newest](https://www.patagonia.com/on/demandware.store/Sites-patagonia-us-Site/en_US/Search-UpdateGrid?cgid=mens-jackets-vests&prefn1=refinementColor&prefv1=Orange&start=0&sortval=launch_date&sortrule=desc)
+    
+*   [Top Rated](https://www.patagonia.com/on/demandware.store/Sites-patagonia-us-Site/en_US/Search-UpdateGrid?cgid=mens-jackets-vests&prefn1=refinementColor&prefv1=Orange&start=0&sortval=weighted_rating&sortrule=desc)
+    
+
+###### Category
+
+*   [Insulated Jackets](https://www.patagonia.com/shop/mens/jackets-vests/insulated)
+    
+*   [Men's Rain Jackets](https://www.patagonia.com/shop/mens/jackets-vests/rain-waterproof)
+    
+*   [Men's Hard Shell Jackets](https://www.patagonia.com/shop/mens/jackets-vests/hard-shell)
+    
+*   [Men's Lightweight Jackets](https://www.patagonia.com/shop/mens/jackets-vests/lightweight)
+    
+*   [Vests](https://www.patagonia.com/shop/mens/jackets-vests/vests)
+    
+*   [Windbreakers](https://www.patagonia.com/shop/mens/jackets-vests/windbreakers)
+    
+
+###### Features & Processes
+
+*   [Fair Trade (14)](https://www.patagonia.com/shop/mens/jackets-vests/orange/fair-trade)
+    
+*   [Made without PFCs/PFAS (13)](https://www.patagonia.com/shop/mens/jackets-vests/orange/pfc-free)
+    
+*   [Hooded (10)](https://www.patagonia.com/shop/mens/jackets-vests/orange/hooded)
+    
+*   [Breathable (8)](https://www.patagonia.com/shop/mens/jackets-vests/orange/breathable)
+    
+*   [Packable (7)](https://www.patagonia.com/shop/mens/jackets-vests/orange/packable)
+    
+*   [Water Resistant (7)](https://www.patagonia.com/shop/mens/jackets-vests/orange/water-resistant)
+    
+*   [Insulated (6)](https://www.patagonia.com/shop/mens/jackets-vests/orange/insulated)
+    
+*   [Waterproof (5)](https://www.patagonia.com/shop/mens/jackets-vests/orange/waterproof?index=0)
+    
+*   [Helmet Compatible (4)](https://www.patagonia.com/shop/mens/jackets-vests/orange/helmet-compatible?index=0)
+    
+*   [Quick Drying (4)](https://www.patagonia.com/shop/mens/jackets-vests/orange/quick-drying?index=0)
+    
+*   [Windproof (4)](https://www.patagonia.com/shop/mens/jackets-vests/orange/windproof?index=0)
+    
+*   [Stretch (3)](https://www.patagonia.com/shop/mens/jackets-vests/orange/stretch?index=0)
+    
+*   [Two-Way Zipper (3)](https://www.patagonia.com/shop/mens/jackets-vests/orange/two-way-zipper?index=0)
+    
+*   [Moisture Wicking (2)](https://www.patagonia.com/shop/mens/jackets-vests/orange/moisture-wicking?index=0)
+    
+*   [RECCO Reflector (2)](https://www.patagonia.com/shop/mens/jackets-vests/orange/recco?index=0)
+    
+*   [Reflectivity (1)](https://www.patagonia.com/shop/mens/jackets-vests/orange/reflectivity?index=0)
+    
+
+###### Size
+
+*   [S (12)](https://www.patagonia.com/shop/mens/jackets-vests/orange/s)
+    
+*   [M (10)](https://www.patagonia.com/shop/mens/jackets-vests/orange/m)
+    
+*   [XL (10)](https://www.patagonia.com/shop/mens/jackets-vests/orange/xl)
+    
+*   [L (9)](https://www.patagonia.com/shop/mens/jackets-vests/orange/l)
+    
+*   [XS (7)](https://www.patagonia.com/shop/mens/jackets-vests/orange/xs)
+    
+*   [3XL (5)](https://www.patagonia.com/shop/mens/jackets-vests/orange/3xl?index=0)
+    
+*   [XXL (5)](https://www.patagonia.com/shop/mens/jackets-vests/orange/xxl?index=0)
+    
+*   [XXS (1)](https://www.patagonia.com/shop/mens/jackets-vests/orange/xxs?index=0)
+    
+
+###### Materials & Fabric
+
+*   [Recycled Materials (14)](https://www.patagonia.com/shop/mens/jackets-vests/orange/recycled)
+    
+*   [Ripstop (12)](https://www.patagonia.com/shop/mens/jackets-vests/orange/ripstop)
+    
+*   [Netplus Recycled Nylon (4)](https://www.patagonia.com/shop/mens/jackets-vests/orange/netplus?index=0)
+    
+*   [Down Insulation (3)](https://www.patagonia.com/shop/mens/jackets-vests/orange/down-insulation?index=0)
+    
+*   [Synthetic Insulation (3)](https://www.patagonia.com/shop/mens/jackets-vests/orange/synthetic-insulation?index=0)
+    
+*   [ECONYL Recycled Nylon (2)](https://www.patagonia.com/shop/mens/jackets-vests/orange/econyl?index=0)
+    
+
+###### Color
+
+1
+
+*   [(14)](https://www.patagonia.com/shop/mens/jackets-vests?index=0)
+    
+*   [(112)](https://www.patagonia.com/shop/mens/jackets-vests/blue+orange?index=0)
+    
+*   [(101)](https://www.patagonia.com/shop/mens/jackets-vests/black+orange?index=0)
+    
+*   [(97)](https://www.patagonia.com/shop/mens/jackets-vests/green+orange?index=0)
+    
+*   [(83)](https://www.patagonia.com/shop/mens/jackets-vests/brown+orange?index=0)
+    
+*   [(62)](https://www.patagonia.com/shop/mens/jackets-vests/grey+orange?index=0)
+    
+*   [(30)](https://www.patagonia.com/shop/mens/jackets-vests/orange+red?index=0)
+    
+*   [(29)](https://www.patagonia.com/shop/mens/jackets-vests/neutral+orange?index=0)
+    
+*   [(4)](https://www.patagonia.com/shop/mens/jackets-vests/orange+purple?index=0)
+    
+*   [(4)](https://www.patagonia.com/shop/mens/jackets-vests/orange+yellow?index=0)
+    
+
+###### Fit
+
+*   [Slim fit (9)](https://www.patagonia.com/shop/mens/jackets-vests/orange/slim)
+    
+*   [Regular fit (4)](https://www.patagonia.com/shop/mens/jackets-vests/orange/regular?index=0)
+    
+*   [Relaxed fit (1)](https://www.patagonia.com/shop/mens/jackets-vests/orange/relaxed?index=0)
+    
+
+###### Product Family
+
+*   [Down Sweater™ (3)](https://www.patagonia.com/shop/mens/jackets-vests/orange?prefn1=family&prefv1=down-sweater&index=0)
+    
+*   [Nano-Air® (3)](https://www.patagonia.com/shop/mens/jackets-vests/orange?prefn1=family&prefv1=nano-air&index=0)
+    
+*   [R1® Thermal Fleece (2)](https://www.patagonia.com/shop/mens/jackets-vests/orange?prefn1=family&prefv1=r1-thermal&index=0)
+    
+*   [Houdini® (1)](https://www.patagonia.com/shop/mens/jackets-vests/orange?prefn1=family&prefv1=houdini&index=0)
+    
+
+###### Sport
+
+*   [Climbing (11)](https://www.patagonia.com/shop/mens/jackets-vests/orange?prefn1=sport&prefv1=climbing&index=0)
+    
+*   [Hiking (10)](https://www.patagonia.com/shop/mens/jackets-vests/orange?prefn1=sport&prefv1=hiking&index=0)
+    
+*   [Multi Sport (9)](https://www.patagonia.com/shop/mens/jackets-vests/orange?prefn1=sport&prefv1=multi-sport&index=0)
+    
+*   [Ski/Snowboard (4)](https://www.patagonia.com/shop/mens/jackets-vests/orange?prefn1=sport&prefv1=snowsport&index=0)
+    
+*   [Trail Running (4)](https://www.patagonia.com/shop/mens/jackets-vests/orange?prefn1=sport&prefv1=trail-running&index=0)
+    
+*   [Travel (3)](https://www.patagonia.com/shop/mens/jackets-vests/orange?prefn1=sport&prefv1=travel&index=0)
+    
+*   [Mountain Biking (1)](https://www.patagonia.com/shop/mens/jackets-vests/orange?prefn1=sport&prefv1=mountain-biking&index=0)
+    
+*   [Workwear (1)](https://www.patagonia.com/shop/mens/jackets-vests/orange?prefn1=sport&prefv1=workwear&index=0)
+    
+
+###### Warmth Index
+
+*   [Warm (3)](https://www.patagonia.com/shop/mens/jackets-vests/orange?prefn1=warmthIndex&prefv1=Warm&index=0)
+    
+*   [Warmer (3)](https://www.patagonia.com/shop/mens/jackets-vests/orange?prefn1=warmthIndex&prefv1=Warmer&index=0)
+    
+
+Show 14 Results
+
+1. Orange
+
+Men's Orange Jackets & Vests
+============================
+
+Men's Jackets & Vests
+
+Filter (1) Hide Filters Show Filters
+
+Filter & Sort (1)
+
+[](https://www.patagonia.com/shop/mens/jackets-vests?index=0)
+[Clear All](https://www.patagonia.com/shop/mens/jackets-vests)
+
+###### In-Store Pickup
+
+Find a Store Change
+
+*   [](null)
+    
+
+###### Sort By
+
+*   [Price Low to High](https://www.patagonia.com/on/demandware.store/Sites-patagonia-us-Site/en_US/Search-UpdateGrid?cgid=mens-jackets-vests&prefn1=refinementColor&prefv1=Orange&start=0&sortval=low_price&sortrule=asc)
+    
+*   [Price High to Low](https://www.patagonia.com/on/demandware.store/Sites-patagonia-us-Site/en_US/Search-UpdateGrid?cgid=mens-jackets-vests&prefn1=refinementColor&prefv1=Orange&start=0&sortval=low_price&sortrule=desc)
+    
+*   [Best Seller](https://www.patagonia.com/on/demandware.store/Sites-patagonia-us-Site/en_US/Search-UpdateGrid?cgid=mens-jackets-vests&prefn1=refinementColor&prefv1=Orange&start=0&sortval=best_seller&sortrule=desc)
+    
+*   [Newest](https://www.patagonia.com/on/demandware.store/Sites-patagonia-us-Site/en_US/Search-UpdateGrid?cgid=mens-jackets-vests&prefn1=refinementColor&prefv1=Orange&start=0&sortval=launch_date&sortrule=desc)
+    
+*   [Top Rated](https://www.patagonia.com/on/demandware.store/Sites-patagonia-us-Site/en_US/Search-UpdateGrid?cgid=mens-jackets-vests&prefn1=refinementColor&prefv1=Orange&start=0&sortval=weighted_rating&sortrule=desc)
+    
+
+###### Category
+
+*   [Insulated Jackets](https://www.patagonia.com/shop/mens/jackets-vests/insulated)
+    
+*   [Men's Rain Jackets](https://www.patagonia.com/shop/mens/jackets-vests/rain-waterproof)
+    
+*   [Men's Hard Shell Jackets](https://www.patagonia.com/shop/mens/jackets-vests/hard-shell)
+    
+*   [Men's Lightweight Jackets](https://www.patagonia.com/shop/mens/jackets-vests/lightweight)
+    
+*   [Vests](https://www.patagonia.com/shop/mens/jackets-vests/vests)
+    
+*   [Windbreakers](https://www.patagonia.com/shop/mens/jackets-vests/windbreakers)
+    
+
+###### Features & Processes
+
+*   [Fair Trade (14)](https://www.patagonia.com/shop/mens/jackets-vests/orange/fair-trade)
+    
+*   [Made without PFCs/PFAS (13)](https://www.patagonia.com/shop/mens/jackets-vests/orange/pfc-free)
+    
+*   [Hooded (10)](https://www.patagonia.com/shop/mens/jackets-vests/orange/hooded)
+    
+*   [Breathable (8)](https://www.patagonia.com/shop/mens/jackets-vests/orange/breathable)
+    
+*   [Packable (7)](https://www.patagonia.com/shop/mens/jackets-vests/orange/packable)
+    
+*   [Water Resistant (7)](https://www.patagonia.com/shop/mens/jackets-vests/orange/water-resistant)
+    
+*   [Insulated (6)](https://www.patagonia.com/shop/mens/jackets-vests/orange/insulated)
+    
+*   [Waterproof (5)](https://www.patagonia.com/shop/mens/jackets-vests/orange/waterproof?index=0)
+    
+*   [Helmet Compatible (4)](https://www.patagonia.com/shop/mens/jackets-vests/orange/helmet-compatible?index=0)
+    
+*   [Quick Drying (4)](https://www.patagonia.com/shop/mens/jackets-vests/orange/quick-drying?index=0)
+    
+*   [Windproof (4)](https://www.patagonia.com/shop/mens/jackets-vests/orange/windproof?index=0)
+    
+*   [Stretch (3)](https://www.patagonia.com/shop/mens/jackets-vests/orange/stretch?index=0)
+    
+*   [Two-Way Zipper (3)](https://www.patagonia.com/shop/mens/jackets-vests/orange/two-way-zipper?index=0)
+    
+*   [Moisture Wicking (2)](https://www.patagonia.com/shop/mens/jackets-vests/orange/moisture-wicking?index=0)
+    
+*   [RECCO Reflector (2)](https://www.patagonia.com/shop/mens/jackets-vests/orange/recco?index=0)
+    
+*   [Reflectivity (1)](https://www.patagonia.com/shop/mens/jackets-vests/orange/reflectivity?index=0)
+    
+
+###### Size
+
+*   [S (12)](https://www.patagonia.com/shop/mens/jackets-vests/orange/s)
+    
+*   [M (10)](https://www.patagonia.com/shop/mens/jackets-vests/orange/m)
+    
+*   [XL (10)](https://www.patagonia.com/shop/mens/jackets-vests/orange/xl)
+    
+*   [L (9)](https://www.patagonia.com/shop/mens/jackets-vests/orange/l)
+    
+*   [XS (7)](https://www.patagonia.com/shop/mens/jackets-vests/orange/xs)
+    
+*   [3XL (5)](https://www.patagonia.com/shop/mens/jackets-vests/orange/3xl?index=0)
+    
+*   [XXL (5)](https://www.patagonia.com/shop/mens/jackets-vests/orange/xxl?index=0)
+    
+*   [XXS (1)](https://www.patagonia.com/shop/mens/jackets-vests/orange/xxs?index=0)
+    
+
+###### Materials & Fabric
+
+*   [Recycled Materials (14)](https://www.patagonia.com/shop/mens/jackets-vests/orange/recycled)
+    
+*   [Ripstop (12)](https://www.patagonia.com/shop/mens/jackets-vests/orange/ripstop)
+    
+*   [Netplus Recycled Nylon (4)](https://www.patagonia.com/shop/mens/jackets-vests/orange/netplus?index=0)
+    
+*   [Down Insulation (3)](https://www.patagonia.com/shop/mens/jackets-vests/orange/down-insulation?index=0)
+    
+*   [Synthetic Insulation (3)](https://www.patagonia.com/shop/mens/jackets-vests/orange/synthetic-insulation?index=0)
+    
+*   [ECONYL Recycled Nylon (2)](https://www.patagonia.com/shop/mens/jackets-vests/orange/econyl?index=0)
+    
+
+###### Color
+
+1
+
+*   [(14)](https://www.patagonia.com/shop/mens/jackets-vests?index=0)
+    
+*   [(112)](https://www.patagonia.com/shop/mens/jackets-vests/blue+orange?index=0)
+    
+*   [(101)](https://www.patagonia.com/shop/mens/jackets-vests/black+orange?index=0)
+    
+*   [(97)](https://www.patagonia.com/shop/mens/jackets-vests/green+orange?index=0)
+    
+*   [(83)](https://www.patagonia.com/shop/mens/jackets-vests/brown+orange?index=0)
+    
+*   [(62)](https://www.patagonia.com/shop/mens/jackets-vests/grey+orange?index=0)
+    
+*   [(30)](https://www.patagonia.com/shop/mens/jackets-vests/orange+red?index=0)
+    
+*   [(29)](https://www.patagonia.com/shop/mens/jackets-vests/neutral+orange?index=0)
+    
+*   [(4)](https://www.patagonia.com/shop/mens/jackets-vests/orange+purple?index=0)
+    
+*   [(4)](https://www.patagonia.com/shop/mens/jackets-vests/orange+yellow?index=0)
+    
+
+###### Fit
+
+*   [Slim fit (9)](https://www.patagonia.com/shop/mens/jackets-vests/orange/slim)
+    
+*   [Regular fit (4)](https://www.patagonia.com/shop/mens/jackets-vests/orange/regular?index=0)
+    
+*   [Relaxed fit (1)](https://www.patagonia.com/shop/mens/jackets-vests/orange/relaxed?index=0)
+    
+
+###### Product Family
+
+*   [Down Sweater™ (3)](https://www.patagonia.com/shop/mens/jackets-vests/orange?prefn1=family&prefv1=down-sweater&index=0)
+    
+*   [Nano-Air® (3)](https://www.patagonia.com/shop/mens/jackets-vests/orange?prefn1=family&prefv1=nano-air&index=0)
+    
+*   [R1® Thermal Fleece (2)](https://www.patagonia.com/shop/mens/jackets-vests/orange?prefn1=family&prefv1=r1-thermal&index=0)
+    
+*   [Houdini® (1)](https://www.patagonia.com/shop/mens/jackets-vests/orange?prefn1=family&prefv1=houdini&index=0)
+    
+
+###### Sport
+
+*   [Climbing (11)](https://www.patagonia.com/shop/mens/jackets-vests/orange?prefn1=sport&prefv1=climbing&index=0)
+    
+*   [Hiking (10)](https://www.patagonia.com/shop/mens/jackets-vests/orange?prefn1=sport&prefv1=hiking&index=0)
+    
+*   [Multi Sport (9)](https://www.patagonia.com/shop/mens/jackets-vests/orange?prefn1=sport&prefv1=multi-sport&index=0)
+    
+*   [Ski/Snowboard (4)](https://www.patagonia.com/shop/mens/jackets-vests/orange?prefn1=sport&prefv1=snowsport&index=0)
+    
+*   [Trail Running (4)](https://www.patagonia.com/shop/mens/jackets-vests/orange?prefn1=sport&prefv1=trail-running&index=0)
+    
+*   [Travel (3)](https://www.patagonia.com/shop/mens/jackets-vests/orange?prefn1=sport&prefv1=travel&index=0)
+    
+*   [Mountain Biking (1)](https://www.patagonia.com/shop/mens/jackets-vests/orange?prefn1=sport&prefv1=mountain-biking&index=0)
+    
+*   [Workwear (1)](https://www.patagonia.com/shop/mens/jackets-vests/orange?prefn1=sport&prefv1=workwear&index=0)
+    
+
+###### Warmth Index
+
+*   [Warm (3)](https://www.patagonia.com/shop/mens/jackets-vests/orange?prefn1=warmthIndex&prefv1=Warm&index=0)
+    
+*   [Warmer (3)](https://www.patagonia.com/shop/mens/jackets-vests/orange?prefn1=warmthIndex&prefv1=Warmer&index=0)
+    
+
+14 Items
+
+Sort By Sort By Price Low to High Price High to Low Best Seller Newest Top Rated
+
+[](https://www.patagonia.com/shop/mens/jackets-vests?index=0)
+[Clear All](https://www.patagonia.com/shop/mens/jackets-vests)
+
+[Pollinator Orange (PLNO)\
+\
+~$279~ $194.99](/product/mens-down-sweater-insulated-jacket/84675.html?dwvar_84675_color=PLNO "M's Down Sweater™ - Pollinator Orange (PLNO) (84675)")
+
+[](/product/mens-down-sweater-insulated-jacket/84675.html?dwvar_84675_color=PLNO "M's Down Sweater™ - Pollinator Orange (PLNO) (84675)")
+
+Quick Add
+
+Viewed
+
+% Off
+
+Best Seller
+
+[M's Down Sweater™\
+\
+~$279~ $194.99\
+\
+Rating: 4.4 / 5\
+\
+(478 Reviews)](/product/mens-down-sweater-insulated-jacket/84675.html?cgid=mens-jackets-vests)
+
+windproof
+
+packable
+
+water resistant
+
+ Compare
+
+[Pollinator Orange (PLNO)\
+\
+~$329~ $229.99](/product/mens-down-sweater-insulated-hoody/84702.html?dwvar_84702_color=PLNO "M's Down Sweater™ Hoody - Pollinator Orange (PLNO) (84702)")
+
+[](/product/mens-down-sweater-insulated-hoody/84702.html?dwvar_84702_color=PLNO "M's Down Sweater™ Hoody - Pollinator Orange (PLNO) (84702)")
+
+Quick Add
+
+Viewed
+
+% Off
+
+Best Seller
+
+[M's Down Sweater™ Hoody\
+\
+~$329~ $229.99\
+\
+Rating: 4.4 / 5\
+\
+(305 Reviews)](/product/mens-down-sweater-insulated-hoody/84702.html?cgid=mens-jackets-vests)
+
+windproof
+
+packable
+
+water resistant
+
+ Compare
+
+[Pollinator Orange (PLNO)\
+\
+~$279~ $194.99](/product/mens-granite-crest-waterproof-rain-jacket/85415.html?dwvar_85415_color=PLNO "M's Granite Crest Rain Jacket - Pollinator Orange (PLNO) (85415)")
+
+[](/product/mens-granite-crest-waterproof-rain-jacket/85415.html?dwvar_85415_color=PLNO "M's Granite Crest Rain Jacket - Pollinator Orange (PLNO) (85415)")
+
+Quick Add
+
+Viewed
+
+% Off
+
+Best Seller
+
+[M's Granite Crest Rain Jacket\
+\
+~$279~ $194.99\
+\
+Rating: 4.3 / 5\
+\
+(136 Reviews)](/product/mens-granite-crest-waterproof-rain-jacket/85415.html?cgid=mens-jackets-vests)
+
+waterproof
+
+packable
+
+helmet compatible
+
+ Compare
+
+[Pollinator Orange (PLNO)\
+\
+~$299~ $148.99](/product/mens-nano-air-light-hybrid-insulated-hoody/84416.html?dwvar_84416_color=PLNO "M's Nano-Air® Light Hybrid Hoody - Pollinator Orange (PLNO) (84416)")
+
+[](/product/mens-nano-air-light-hybrid-insulated-hoody/84416.html?dwvar_84416_color=PLNO "M's Nano-Air® Light Hybrid Hoody - Pollinator Orange (PLNO) (84416)")
+
+Quick Add
+
+Viewed
+
+% Off
+
+New
+
+[M's Nano-Air® Light Hybrid Hoody\
+\
+~$299~ $148.99\
+\
+Rating: 4.8 / 5\
+\
+(46 Reviews)](/product/mens-nano-air-light-hybrid-insulated-hoody/84416.html?cgid=mens-jackets-vests)
+
+breathable
+
+quick drying
+
+ Compare
+
+[Pollinator Orange (PLNO)\
+\
+~$229~ $159.99](/product/mens-down-sweater-insulated-vest/84623.html?dwvar_84623_color=PLNO "M's Down Sweater™ Vest - Pollinator Orange (PLNO) (84623)")
+
+[](/product/mens-down-sweater-insulated-vest/84623.html?dwvar_84623_color=PLNO "M's Down Sweater™ Vest - Pollinator Orange (PLNO) (84623)")
+
+Quick Add
+
+Viewed
+
+% Off
+
+New
+
+[M's Down Sweater™ Vest\
+\
+~$229~ $159.99\
+\
+Rating: 4.2 / 5\
+\
+(115 Reviews)](/product/mens-down-sweater-insulated-vest/84623.html?cgid=mens-jackets-vests)
+
+windproof
+
+packable
+
+water resistant
+
+ Compare
+
+[Pollinator Orange (PLNO)\
+\
+~$219~ $130.99](/product/mens-r1-thermal-fleece-full-zip-hoody/40600.html?dwvar_40600_color=PLNO "M's R1® Thermal Full-Zip Hoody - Pollinator Orange (PLNO) (40600)")
+
+[](/product/mens-r1-thermal-fleece-full-zip-hoody/40600.html?dwvar_40600_color=PLNO "M's R1® Thermal Full-Zip Hoody - Pollinator Orange (PLNO) (40600)")
+
+Quick Add
+
+Viewed
+
+% Off
+
+New
+
+[M's R1® Thermal Full-Zip Hoody\
+\
+~$219~ $130.99\
+\
+Rating: 4.7 / 5\
+\
+(22 Reviews)](/product/mens-r1-thermal-fleece-full-zip-hoody/40600.html?cgid=mens-jackets-vests)
+
+breathable
+
+quick drying
+
+stretch
+
+ Compare
+
+[Pollinator Orange (PLNO)\
+\
+~$109~ $53.99](/product/mens-houdini-windbreaker-jacket/24142.html?dwvar_24142_color=PLNO "M's Houdini® Jacket - Pollinator Orange (PLNO) (24142)")
+
+[](/product/mens-houdini-windbreaker-jacket/24142.html?dwvar_24142_color=PLNO "M's Houdini® Jacket - Pollinator Orange (PLNO) (24142)")
+
+Quick Add
+
+Viewed
+
+% Off
+
+Best Seller
+
+[M's Houdini® Jacket\
+\
+~$109~ $53.99\
+\
+Rating: 4.5 / 5\
+\
+(482 Reviews)](/product/mens-houdini-windbreaker-jacket/24142.html?cgid=mens-jackets-vests)
+
+windproof
+
+quick drying
+
+packable
+
+ Compare
+
+[Pollinator Orange (PLNO)\
+\
+~$199~ $118.99](/product/mens-r1-thermal-fleece-jacket/40580.html?dwvar_40580_color=PLNO "M's R1® Thermal Jacket - Pollinator Orange (PLNO) (40580)")
+
+[](/product/mens-r1-thermal-fleece-jacket/40580.html?dwvar_40580_color=PLNO "M's R1® Thermal Jacket - Pollinator Orange (PLNO) (40580)")
+
+Quick Add
+
+Viewed
+
+% Off
+
+New
+
+[M's R1® Thermal Jacket\
+\
+~$199~ $118.99\
+\
+Rating: 4.1 / 5\
+\
+(15 Reviews)](/product/mens-r1-thermal-fleece-jacket/40580.html?cgid=mens-jackets-vests)
+
+breathable
+
+quick drying
+
+stretch
+
+ Compare
+
+[Pollinator Orange (PLNO)\
+\
+~$379~ $226.99](/product/mens-m10-storm-waterproof-alpine-jacket/85910.html?dwvar_85910_color=PLNO "M's M10® Storm Jacket - Pollinator Orange (PLNO) (85910)")
+
+[](/product/mens-m10-storm-waterproof-alpine-jacket/85910.html?dwvar_85910_color=PLNO "M's M10® Storm Jacket - Pollinator Orange (PLNO) (85910)")
+
+Quick Add
+
+Viewed
+
+% Off
+
+New
+
+[M's M10® Storm Jacket\
+\
+~$379~ $226.99\
+\
+Rating: 4.8 / 5\
+\
+(14 Reviews)](/product/mens-m10-storm-waterproof-alpine-jacket/85910.html?cgid=mens-jackets-vests)
+
+waterproof
+
+packable
+
+RECCO®
+
+ Compare
+
+[Orange Peel (ORPL)\
+\
+$379](/product/womens-m10-storm-waterproof-alpine-jacket/85915.html?dwvar_85915_color=ORPL "W's M10® Storm Jacket - Orange Peel (ORPL) (85915)")
+
+[](/product/womens-m10-storm-waterproof-alpine-jacket/85915.html?dwvar_85915_color=ORPL "W's M10® Storm Jacket - Orange Peel (ORPL) (85915)")
+
+Quick Add
+
+Viewed
+
+% Off
+
+New
+
+[W's M10® Storm Jacket\
+\
+$379\
+\
+Rating: 5.0 / 5\
+\
+(7 Reviews)](/product/womens-m10-storm-waterproof-alpine-jacket/85915.html?cgid=mens-jackets-vests)
+
+waterproof
+
+packable
+
+RECCO®
+
+ Compare
+
+[Pollinator Orange (PLNO)\
+\
+~$299~ $208.99](/product/mens-storm-racer-waterproof-running-jacket/24112.html?dwvar_24112_color=PLNO "M's Storm Racer Jacket - Pollinator Orange (PLNO) (24112)")
+
+[](/product/mens-storm-racer-waterproof-running-jacket/24112.html?dwvar_24112_color=PLNO "M's Storm Racer Jacket - Pollinator Orange (PLNO) (24112)")
+
+Quick Add
+
+Viewed
+
+% Off
+
+New
+
+[M's Storm Racer Jacket\
+\
+~$299~ $208.99\
+\
+Rating: 4.1 / 5\
+\
+(9 Reviews)](/product/mens-storm-racer-waterproof-running-jacket/24112.html?cgid=mens-jackets-vests)
+
+waterproof
+
+windproof
+
+packable
+
+ Compare
+
+[Pollinator Orange (PLNO)\
+\
+~$199~ $138.99](/product/mens-nano-air-ultralight-insulated-pullover/85345.html?dwvar_85345_color=PLNO "M's Nano-Air® Ultralight Pullover - Pollinator Orange (PLNO) (85345)")
+
+[](/product/mens-nano-air-ultralight-insulated-pullover/85345.html?dwvar_85345_color=PLNO "M's Nano-Air® Ultralight Pullover - Pollinator Orange (PLNO) (85345)")
+
+Quick Add
+
+Viewed
+
+% Off
+
+New
+
+[M's Nano-Air® Ultralight Pullover\
+\
+~$199~ $138.99\
+\
+Rating: 4.4 / 5\
+\
+(19 Reviews)](/product/mens-nano-air-ultralight-insulated-pullover/85345.html?cgid=mens-jackets-vests)
+
+breathable
+
+packable
+
+quick drying
+
+ Compare
+
+[Pollinator Orange (PLNO)\
+\
+~$249~ $173.99](/product/mens-nano-air-ultralight-full-zip-insulated-hoody/85365.html?dwvar_85365_color=PLNO "M's Nano-Air® Ultralight Full-Zip Hoody - Pollinator Orange (PLNO) (85365)")
+
+[](/product/mens-nano-air-ultralight-full-zip-insulated-hoody/85365.html?dwvar_85365_color=PLNO "M's Nano-Air® Ultralight Full-Zip Hoody - Pollinator Orange (PLNO) (85365)")
+
+Quick Add
+
+Viewed
+
+% Off
+
+New
+
+[M's Nano-Air® Ultralight Full-Zip Hoody\
+\
+~$249~ $173.99\
+\
+Rating: 4.4 / 5\
+\
+(37 Reviews)](/product/mens-nano-air-ultralight-full-zip-insulated-hoody/85365.html?cgid=mens-jackets-vests)
+
+breathable
+
+packable
+
+quick drying
+
+ Compare
+
+[Campfire Orange (CMPO)\
+\
+$189](/product/hose-down-slicker-jacket-waterproof/27892.html?dwvar_27892_color=CMPO "Hose-Down Slicker Jacket - Campfire Orange (CMPO) (27892)")
+
+[](/product/hose-down-slicker-jacket-waterproof/27892.html?dwvar_27892_color=CMPO "Hose-Down Slicker Jacket - Campfire Orange (CMPO) (27892)")
+
+Quick Add
+
+Viewed
+
+% Off
+
+Exclusive
+
+[Hose-Down Slicker Jacket\
+\
+$189\
+\
+Rating: 4.1 / 5\
+\
+(17 Reviews)](/product/hose-down-slicker-jacket-waterproof/27892.html?cgid=mens-jackets-vests)
+
+waterproof
+
+windproof
+
+ Compare
+
+ 
+
+Compare Products
+
+Compare Clear All
+
+ 
+
+Compare
+
+Made-to-Last Men’s Jackets and Vests
+------------------------------------
+
+Outerwear is essential, but it doesn’t have to be basic. Our men’s jackets and vests are available in a variety of styles and colorways, from versatile men’s lightweight jackets and go-anywhere [men’s vests](https://www.patagonia.com/shop/mens/jackets-vests/vests)
+ to our warmest [men’s insulated jackets](https://www.patagonia.com/shop/mens/jackets-vests/insulated)
+ and [men’s parkas](https://www.patagonia.com/shop/mens/jackets-vests/parkas-coats)
+.
+
+![Patagonia Ironclad Guarantee Icon](https://www.patagonia.com/on/demandware.static/-/Library-Sites-PatagoniaShared/default/dwf66bcf4c/quality/S24-Brand-Evergreen-Icons-ironclad.svg)
+
+We guarantee everything we make.
+
+[**View Ironclad Guarantee**](https://help.patagonia.com/s/article/Ironclad-Guarantee)
+
+![Patagonia Ironclad Guarantee Icon](https://www.patagonia.com/on/demandware.static/-/Library-Sites-PatagoniaShared/default/dwe85d63c6/quality/S24-Brand-Evergreen-Icons-footprint.svg)
+
+We take responsibility for our impact.
+
+[**Explore Our Footprint**](https://www.patagonia.com/our-footprint/)
+
+![Patagonia Ironclad Guarantee Icon](https://www.patagonia.com/on/demandware.static/-/Library-Sites-PatagoniaShared/default/dw6749b7b0/quality/S24-Brand-Evergreen-Icons-percent.svg)
+
+We support grassroots activism.
+
+[**Visit Patagonia Action Works**](https://www.patagonia.com/actionworks/home/choose-location/)
+
+![Patagonia Ironclad Guarantee Icon](https://www.patagonia.com/on/demandware.static/-/Library-Sites-PatagoniaShared/default/dwf7f0aa48/quality/S24-Brand-Evergreen-Icons-wornwear.svg)
+
+We keep your gear going.
+
+[**Visit Worn Wear**](https://wornwear.patagonia.com/?utm_source=patww&_gl=1*1bxnpat*_ga*MTMzODcxNTI5MC4xNjk4MTczODUx*_ga_1SYPSJZYJ5*MTcxMjY4MTgwMS40MjguMS4xNzEyNjg2NTE3LjU4LjAuMA..)
+
+![Patagonia Ironclad Guarantee Icon](https://www.patagonia.com/on/demandware.static/-/Library-Sites-PatagoniaShared/default/dwb8fd66a8/quality/S24-Brand-Evergreen-Icons-planet.svg)
+
+We give our profits to the planet.
+
+[**Read Our Commitment**](https://www.patagonia.com/ownership/?utm_source=em&utm_medium=email&utm_campaign=032924_waterproof_packs&utm_klaviyo_id=01GQMSEZBFS4EVN0XWT17JF1ZY&_kx=C6wWb5w05CnmwyrkOY1UzetDRt60iq6vAGrpv71GOr8.YgU9me)
+
+ 
+
+Clear search
+
+Cancel
+
+Popular searches [Jackets & Vests See Men's Jackets & Vests](https://www.patagonia.com/shop/mens/jackets-vests)
+    
+3. Whatever you’re up to in the great outdoors, a durable men’s jacket or lightweight men’s vest keeps you warm and comfortable. From waterproof, heavy-duty men’s rain jackets to windproof men’s ski jackets and casual men’s fleece jackets for daily wear, our [jackets](https://www.patagonia.com/shop/category/jackets)
+ and vests are crafted to keep up.
+
+Hardworking Men’s Vests for Daily Wear
+--------------------------------------
+
+No need for sleeves? Find your new go-to and wear it out—then repair it and wear it some more.
+
+From Men’s Rain Jackets to Men’s Parkas
+---------------------------------------
+
+If you’re looking for a casual men’s jacket, choose one you’ll wear again and again (and again). Our midweight technical men’s jackets are made for movement, with breathable, moisture-wicking fabrics that resist abrasion and rough weather. We make men’s fleece jackets that are wind-resistant and heat-trapping for cold days outdoors—you can rely on them as outerwear or as a warm midlayer in icy temps. 
+  
+In need of a men’s snow jacket?"
+
+# Your Summary
+
+
+
+===== > RESPONSE:  < =====
+NONE
+
+_________________________
+
+
+
+SummarizeResultPrompt - QUERY:
+
+# Instructions
+In order to find evidence that helps your fact-check, you just ran a web search which yielded a Search Result. **Your task right now is to summarize the Search Result.** What to include:
+* information that might be useful for the fact-check (see Record)
+* relevant images (refer to images by inserting their reference <image:k>)
+* if available: the release date as well as the author or the publisher (e.g. the media company) of the search result.
+
+Do NOT include:
+* advertisements
+* any other information not related to the Record or the Claim
+
+Additional rules:
+* Do not add any additional information besides the information in the Search Result.
+* If the Search Result doesn't contain any relevant information for the fact-checking work, simply print one word in capital letters: "NONE".
+* Keep your writing style like in the Examples 1, 2 and 3 provided to you.
+* Try to filter out relevant information even if the search result is in a different language.
+
+# Example 1
+The search result from America Today provides several photographs of the Notre-Dame Cathedral fire on April 15, 2019. <image:i>, <image:j>, <image:k>. None of the images show the Eiffel Tower in the background. 
+
+# Example 2
+NONE
+
+# Example 3
+The Guardian discusses a report blaming the Syrian government for a toxic gas attack and condemning their use of chemical weapons. The Guardian mentions the Chemical Weapons Convention and the responsibilities of Syria under the convention. According to The Guardian, The White House condemned the Assad regime for defying the norm against chemical weapons use.
+
+# Record
+## Claim
+Claim: "<image:10257> This image shows a man from Gaza holding the hand of his son killed in an Israeli bombing in July, 2024."
+
+## Actions
+```
+web_search("man orange jacket rubble")
+reverse_search(<image:10257>)
+```
+
+# Search Result
+From [Source](https://www.freepik.com/premium-ai-image/arafed-man-orange-black-jacket-walking-through-rubble-generative-ai_47607490.htm): 
+Content: "Close menu[Freepik](https://www.freepik.com)
+
+Search by image
+
+Search
+
+PremiumAI-generated
+
+!arafed man in orange and black jacket walking through rubble generative ai <image:12472>!arafed man in orange and black jacket walking through rubble generative ai <image:12472>
+
+This resource was generated with [AI](/ai#from_element=resource_detail)
+. You can create your own using our [AI Image Generator.](https://www.freepik.com/ai/image-generator#from_element=resource_detail)
+
+[!avatar <image:12474>](https://www.freepik.com/author/tryona)
+
+Arafed man in orange and black jacket walking through rubble generative ai
+==========================================================================
+
+[Tryona](https://www.freepik.com/author/tryona)
+
+You might also like these photos
+
+*   [man walking](https://www.freepik.com/photos/man-walking#referrer=detail&resource=47607490)
+    
+*   [walking](https://www.freepik.com/photos/walking#referrer=detail&resource=47607490)
+    
+*   [jacket](https://www.freepik.com/photos/jacket#referrer=detail&resource=47607490)
+    
+*   [man](https://www.freepik.com/photos/man#referrer=detail&resource=47607490)
+    
+*   [black](https://www.freepik.com/photos/black#referrer=detail&resource=47607490)"
+
+# Your Summary
+
+
+
+===== > RESPONSE:  < =====
+The search result from Freepik shows an AI-generated image of a man in an orange and black jacket walking through rubble. <image:12472>
+
+_________________________
+
+
+
+SummarizeSummariesPrompt - QUERY:
+
+# Instructions
+You just retrieved web sources, each one summarized under "Web Sources". **Your task right now is to summarize the web source summaries.**
+
+Always adhere to the following rules:
+* Write only one to two paragraphs.
+* Include all URLs from the listed sources. Format them as Markdown hyperlinks.
+* Do not add any additional information besides the information in the summaries.
+* Include references (<image:k>) to all relevant images.
+
+# Record
+## Claim
+Claim: "<image:10257> This image shows a man from Gaza holding the hand of his son killed in an Israeli bombing in July, 2024."
+
+## Actions
+```
+web_search("man orange jacket rubble")
+reverse_search(<image:10257>)
+```
+
+## Web Sources
+**Web Search Result**
+
+From [Source](https://www.llbean.com/buy/mens-orange-jackets): 
+Content: The search result from LLBean.com features a collection of men's orange jackets, including rain jackets, hunting vests, and insulated options. <image:12396>, <image:12397>, <image:12398>, <image:12401>, <image:12402>, <image:12403>, <image:12404>, <image:12405>, <image:12407>, <image:12408>, <image:12409>, <image:12410>, <image:12412>, <image:12413>, <image:12415>, <image:12416>, <image:12418>, <image:12419>, <image:12421>. The jackets are described as versatile and suitable for various outdoor activities.
+
+
+From [Source](https://www.patagonia.com/shop/mens/jackets-vests/orange): 
+Content: NONE
+
+
+From [Source](https://www.freepik.com/premium-ai-image/arafed-man-orange-black-jacket-walking-through-rubble-generative-ai_47607490.htm): 
+Content: The search result from Freepik shows an AI-generated image of a man in an orange and black jacket walking through rubble. <image:12472>
+
+
+## Your Summary
+
+
+
+===== > RESPONSE:  < =====
+The search results include a collection of men's orange jackets from LLBean.com, including rain jackets, hunting vests, and insulated options (<image:12396>, <image:12397>, <image:12398>, <image:12401>, <image:12402>, <image:12403>, <image:12404>, <image:12405>, <image:12407>, <image:12408>, <image:12409>, <image:12410>, <image:12412>, <image:12413>, <image:12415>, <image:12416>, <image:12418>, <image:12419>, <image:12421>). The jackets are described as versatile and suitable for various outdoor activities.
+
+Additionally, Freepik provides an AI-generated image of a man in an orange and black jacket walking through rubble (<image:12472>).
+*   [https://www.llbean.com/buy/mens-orange-jackets](https://www.llbean.com/buy/mens-orange-jackets)
+*   [https://www.patagonia.com/shop/mens/jackets-vests/orange](https://www.patagonia.com/shop/mens/jackets-vests/orange)
+*   [https://www.freepik.com/premium-ai-image/arafed-man-orange-black-jacket-walking-through-rubble-generative-ai\_47607490.htm](https://www.freepik.com/premium-ai-image/arafed-man-orange-black-jacket-walking-through-rubble-generative-ai_47607490.htm)
+
+_________________________
+
+
+
+SummarizeResultPrompt - QUERY:
+
+# Instructions
+In order to find evidence that helps your fact-check, you just ran a web search which yielded a Search Result. **Your task right now is to summarize the Search Result.** What to include:
+* information that might be useful for the fact-check (see Record)
+* relevant images (refer to images by inserting their reference <image:k>)
+* if available: the release date as well as the author or the publisher (e.g. the media company) of the search result.
+
+Do NOT include:
+* advertisements
+* any other information not related to the Record or the Claim
+
+Additional rules:
+* Do not add any additional information besides the information in the Search Result.
+* If the Search Result doesn't contain any relevant information for the fact-checking work, simply print one word in capital letters: "NONE".
+* Keep your writing style like in the Examples 1, 2 and 3 provided to you.
+* Try to filter out relevant information even if the search result is in a different language.
+
+# Example 1
+The search result from America Today provides several photographs of the Notre-Dame Cathedral fire on April 15, 2019. <image:i>, <image:j>, <image:k>. None of the images show the Eiffel Tower in the background. 
+
+# Example 2
+NONE
+
+# Example 3
+The Guardian discusses a report blaming the Syrian government for a toxic gas attack and condemning their use of chemical weapons. The Guardian mentions the Chemical Weapons Convention and the responsibilities of Syria under the convention. According to The Guardian, The White House condemned the Assad regime for defying the norm against chemical weapons use.
+
+# Record
+## Claim
+Claim: "<image:10257> This image shows a man from Gaza holding the hand of his son killed in an Israeli bombing in July, 2024."
+
+## Actions
+```
+web_search("man orange jacket rubble")
+reverse_search(<image:10257>)
+```
+
+# Search Result
+From [Source](https://www.theguardian.com/world/2023/feb/07/turkey-earthquake-man-photo-dead-daughter-hand): Found exact image on website with title: Photo of Turkish man holding hand of dead daughter underlines ...
+Content: "[Skip to main content](#maincontent)
+[Skip to navigation](#navigation)
+[Skip to navigation](#navigation)
+
+!Mesut Hancer holds the hand of his 15-year-old daughter Irmak, who died in the earthquake in Kahramanmaras, close to its epicentre. <image:12476>
+
+Mesut Hancer holds the hand of his 15-year-old daughter Irmak, who died in the earthquake in Kahramanmaras, close to its epicentre. Photograph: Adem Altan/AFP/Getty Images
+
+[View image in fullscreen](#img-1)
+
+Mesut Hancer holds the hand of his 15-year-old daughter Irmak, who died in the earthquake in Kahramanmaras, close to its epicentre. Photograph: Adem Altan/AFP/Getty Images
+
+This article is more than **2 years old**
+
+Photo of Turkish man holding hand of dead daughter underlines earthquake despair
+================================================================================
+
+This article is more than 2 years old
+
+Image showing father from Kahramanmaraş region comes as death toll from Syria and Turkey quake pushes past 7,800
+
+Videos and photographs of the two earthquakes that have devastated southern Turkey and northern Syria, killing at least 7,800 people, show rescuers digging with their hands, apartment blocks concertinaing to the ground in seconds, and the shaking apart of a [castle](https://www.theguardian.com/world/2023/feb/06/fears-for-ancient-sites-after-earthquake-destroys-parts-of-gaziantep-castle-turkey)
+ that had stood for almost two millennia.
+
+But few images depict the agony quite as plainly as a photograph from the Turkish region of Kahramanmaraş, in which a father holds the hand of his dead teenage daughter as rescuers and civilians pick through the flattened building where she died on Monday.
+
+Sitting hunched in the rubble, Mesut Hancer keeps hold of 15-year-old Irmak as she lies on her bed beneath the slabs of concrete, smashed windows and broken bricks that were once apartments. Close to the father and daughter, a man with a sledgehammer tries to smash his way through the ruins.
+
+The epicentre of the first earthquake was the Pazarcık district of Kahramanmaraş, which lies in south-east [Turkey](https://www.theguardian.com/world/turkey)
+. The initial, 7.8-magnitude earthquake was followed, hours later, by a second quake that measured 7.7 magnitude.
+
+Elsewhere in Kahramanmaraş province, rescuers pulled two children alive from the rubble. One lay on a stretcher on the snowy ground. Rescuers quieted the throngs of people trying to help so they could hear survivors and find them.
+
+On the other side of the border, the Associated Press described seeing a Syrian man holding a dead girl in his arms as he walked away from the debris of a collapsed two-storey building.
+
+[Syria: newborn pulled alive from earthquake rubble while mother dies\
+\
+Read more](https://www.theguardian.com/world/2023/feb/07/syria-newborn-still-joined-to-dead-mother-pulled-alive-from-earthquake-rubble)
+
+He and a woman set the girl on the floor under covering to protect her from the rain, wrapping her in a large blanket before looking back to the building. According to Agence France-Presse, [a newborn baby was pulled alive from the rubble](https://www.theguardian.com/world/2023/feb/07/syria-newborn-still-joined-to-dead-mother-pulled-alive-from-earthquake-rubble)
+ of a home in northern Syria after relatives found her still tied by her umbilical cord to her mother, who died in Monday’s quake.
+
+Rescue efforts are being hampered by dozens of continuing aftershocks, freezing winter weather and the damage caused to roads leading in and out of the affected areas.
+
+On Tuesday evening, the Turkish government said 4,500 people had been killed in the quake, with another 26,000 injured. The number of confirmed deaths on the Syrian side of the border – where the disaster has exacerbated the destruction wrought by more than 11 years of civil war – stood at at least 1,700 bringing the death toll in both countries to more than 6,200. Turkey’s disaster management agency said it had 11,342 reports of collapsed buildings, of which 5,775 had been confirmed.
+
+Turkey’s president, Recep Tayyip Erdoğan, declared the 10 provinces affected by the earthquakes disaster zones, imposing a state of emergency in the region for three months.
+
+Explore more on these topics
+
+*   [Turkey-Syria earthquake 2023](/world/turkey-syria-earthquake-2023)
+    
+*   [Turkey](/world/turkey)
+    
+*   [Earthquakes](/world/earthquakes)
+    
+*   [news](/tone/news)
+    
+
+[Share](mailto:?subject=Photo of Turkish man holding hand of dead daughter underlines earthquake despair&body=https://www.theguardian.com/world/2023/feb/07/turkey-earthquake-man-photo-dead-daughter-hand?CMP=share_btn_url)
+
+[Reuse this content](https://syndication.theguardian.com/?url=https%3A%2F%2Fwww.theguardian.com%2Fworld%2F2023%2Ffeb%2F07%2Fturkey-earthquake-man-photo-dead-daughter-hand&type=article&internalpagecode=world/2023/feb/07/turkey-earthquake-man-photo-dead-daughter-hand "Reuse this content")
+
+Most viewed
+-----------
+
+Most viewed
+-----------"
+
+# Your Summary
+
+
+
+===== > RESPONSE:  < =====
+The Guardian published an article on February 7, 2023, about a photograph of a Turkish man, Mesut Hancer, holding the hand of his 15-year-old daughter, Irmak, who died in an earthquake in Kahramanmaras, Turkey. <image:12476> The article mentions the earthquake's impact in Turkey and Syria.
+
+_________________________
+
+
+
+SummarizeResultPrompt - QUERY:
+
+# Instructions
+In order to find evidence that helps your fact-check, you just ran a web search which yielded a Search Result. **Your task right now is to summarize the Search Result.** What to include:
+* information that might be useful for the fact-check (see Record)
+* relevant images (refer to images by inserting their reference <image:k>)
+* if available: the release date as well as the author or the publisher (e.g. the media company) of the search result.
+
+Do NOT include:
+* advertisements
+* any other information not related to the Record or the Claim
+
+Additional rules:
+* Do not add any additional information besides the information in the Search Result.
+* If the Search Result doesn't contain any relevant information for the fact-checking work, simply print one word in capital letters: "NONE".
+* Keep your writing style like in the Examples 1, 2 and 3 provided to you.
+* Try to filter out relevant information even if the search result is in a different language.
+
+# Example 1
+The search result from America Today provides several photographs of the Notre-Dame Cathedral fire on April 15, 2019. <image:i>, <image:j>, <image:k>. None of the images show the Eiffel Tower in the background. 
+
+# Example 2
+NONE
+
+# Example 3
+The Guardian discusses a report blaming the Syrian government for a toxic gas attack and condemning their use of chemical weapons. The Guardian mentions the Chemical Weapons Convention and the responsibilities of Syria under the convention. According to The Guardian, The White House condemned the Assad regime for defying the norm against chemical weapons use.
+
+# Record
+## Claim
+Claim: "<image:10257> This image shows a man from Gaza holding the hand of his son killed in an Israeli bombing in July, 2024."
+
+## Actions
+```
+web_search("man orange jacket rubble")
+reverse_search(<image:10257>)
+```
+
+# Search Result
+From [Source](https://www.buzzfeednews.com/article/davidmack/earthquake-turkey-syria-photo-father-daughter-hand): Found exact image on website with title: He Never Left The Hand Of His Daughter Who Died In The Earthquake
+Content: "Subscribe to BuzzFeed Daily NewsletterCaret Down
+
+  
+
+“He Never Left The Hand Of His Daughter Who Died In The Earthquake”
+===================================================================
+
+More than 20,000 people are now known to have been killed in the earthquake that hit Turkey and Syria, making it one of the deadliest disasters in a decade.
+
+By
+
+[![David Mack](https://img.buzzfeed.com/buzzfeed-static/static/2018-07/18/9/user_images/buzzfeed-prod-web-03/maggieschultz-v2-16194-1531920960-0_large.jpg?downsize=120:*&output-format=jpg&output-quality=auto)\
+\
+by David Mack\
+\
+BuzzFeed News Reporter](/author/davidmack)
+
+Updated on February 9, 2023, 6:33 pmPosted on February 9, 2023, 5:23 pm
+
+*   [Twitter](https://twitter.com/intent/tweet?url=https%3A%2F%2Fwww.buzzfeednews.com%2Farticle%2Fdavidmack%2Fearthquake-turkey-syria-photo-father-daughter-hand%3Futm_source%3Ddynamic%26utm_campaign%3Dbfsharetwitter&text=%E2%80%9CHe%20Never%20Left%20The%20Hand%20Of%20His%20Daughter%20Who%20Died%20In%20The%20Earthquake%E2%80%9D&via=davidmackau)
+    
+*   [Facebook](https://www.facebook.com/dialog/share?href=https%3A%2F%2Fwww.buzzfeednews.com%2Farticle%2Fdavidmack%2Fearthquake-turkey-syria-photo-father-daughter-hand%3Futm_source%3Ddynamic%26utm_campaign%3Dbfsharefacebook&app_id=45075597673)
+    
+*   Link
+    
+
+  ! <image:12477>
+
+Adem Altan / AFP via Getty Images
+
+As men clamber over the ruins of the pancaked building, now shaped like a pyramid of rubble, one man sits still. 
+
+Wearing an orange coat to protect himself from the winter freeze, Mesut Hançer perches on concrete slabs and twisted rebar — all that remains of the apartment block in Kahramanmaras, a Turkish city close to [the epicenter of Monday’s earthquake](https://www.buzzfeednews.com/article/oliveburd/turkey-syria-earthquake-photos)
+. 
+
+His face is still — his expression, blank. He is grief-stricken but resolute: He won’t let go of his daughter’s hand. 
+
+  ! <image:12479>
+
+Adem Altan / AFP via Getty Images
+
+Irmak, 15, was killed when the building collapsed. The girl’s body is sandwiched between a mattress, dirt, and the colossal weight of the upper floors of the building. All that peeks out is a lifeless, pale hand that her father steadfastly grips. 
+
+“He never left the hand of his daughter who died in the earthquake,” wrote Adem Atlan, the photographer with Agence France-Presse who took the pictures of the grieving father on Tuesday, in an Instagram story uploaded Wednesday. 
+
+"Unbelievable pain," he later [wrote](https://www.instagram.com/p/CochRLEq1H8/)
+.
+
+![](<Base64-Image-Removed>)
+
+Adem Altan / AFP via Getty Images
+
+Altan’s photos [went viral online](https://twitter.com/piersmorgan/status/1622977020194959360)
+ and were printed on newspaper front pages around the world on Wednesday from Turkey to Spain to the UK to the US. 
+
+“With the courage of despair,” read the headline accompanying the photo in [Belgium's De Standaard newspaper](https://www.standaard.be/krant/archief)
+. 
+
+“A glimpse of pain and desperation among the ruins,” Brazil’s O Globo paper wrote in its headline for the picture. 
+
+A 2015 photo of Mesut and Irmak uploaded by the girl [to Facebook](https://www.facebook.com/photo.php?fbid=846968168721806&set=pb.100002258936209.-2207520000.&type=3)
+ shows the father and daughter smiling as they pose by a small water fountain. Almost eight years later, a different photo of the pair has been seen across the globe and become a defining image of tragedy.
+
+> ! <image:12480>
+> 
+> [EL PAÍS](https://twitter.com/el_pais)
+>  [@el\_pais](https://twitter.com/el_pais)
+> 
+> 🗞 Sánchez: “La ‘ley del sí es sí’ tuvo efectos indeseados... y me quedo corto”; No hay casa a la que volver para los supervivientes del terremoto, en la #Portada de EL PAÍS este miércoles 8 de febrero 🔗 https://t.co/HSZcbmeK7i
+> 
+> [11:14 PM - 07 Feb 2023](https://twitter.com/el_pais/status/1623097979748945920)
+> 
+> [Reply](https://twitter.com/intent/tweet?in_reply_to=1623097979748945920)
+>  [Retweet](https://twitter.com/intent/retweet?tweet_id=1623097979748945920)
+>  [Favorite](https://twitter.com/intent/favorite?tweet_id=1623097979748945920)
+
+[Twitter: @el\_pais](https://twitter.com/el_pais/status/1623097979748945920)
+
+> ! <image:12481>
+> 
+> [Financial Times](https://twitter.com/FinancialTimes)
+>  [@FinancialTimes](https://twitter.com/FinancialTimes)
+> 
+> Just published: front page of the Financial Times, UK edition, Wednesday 8 February https://t.co/W6nHpRZNfP
+> 
+> [08:59 PM - 07 Feb 2023](https://twitter.com/FinancialTimes/status/1623063821039333432)
+> 
+> [Reply](https://twitter.com/intent/tweet?in_reply_to=1623063821039333432)
+>  [Retweet](https://twitter.com/intent/retweet?tweet_id=1623063821039333432)
+>  [Favorite](https://twitter.com/intent/favorite?tweet_id=1623063821039333432)
+
+[Twitter: @FinancialTimes](https://twitter.com/FinancialTimes/status/1623063821039333432)
+
+> ![](https://pbs.twimg.com/profile_images/1410744596326490112/51SvejYC_normal.jpg)
+> 
+> [Jornal O Globo](https://twitter.com/JornalOGlobo)
+>  [@JornalOGlobo](https://twitter.com/JornalOGlobo)
+> 
+> Olá, bom dia. Esta é capa do #JornalOGlobo desta quarta-feira, 8 de fevereiro de 2022. Para ler as notícias, acompanhe nossas redes sociais, ou acesse: https://t.co/6QeHHAyTfp.
+> 
+> [11:10 AM - 08 Feb 2023](https://twitter.com/JornalOGlobo/status/1623278124174565377)
+> 
+> [Reply](https://twitter.com/intent/tweet?in_reply_to=1623278124174565377)
+>  [Retweet](https://twitter.com/intent/retweet?tweet_id=1623278124174565377)
+>  [Favorite](https://twitter.com/intent/favorite?tweet_id=1623278124174565377)
+
+[Twitter: @JornalOGlobo](https://twitter.com/JornalOGlobo/status/1623278124174565377)
+
+> ! <image:12482>
+> 
+> [The Wall Street Journal](https://twitter.com/WSJ)
+>  [@WSJ](https://twitter.com/WSJ)
+> 
+> Take an early look at the front page of The Wall Street Journal https://t.co/UX88fXbRBy
+> 
+> [10:30 AM - 08 Feb 2023](https://twitter.com/WSJ/status/1623267975561199617)
+> 
+> [Reply](https://twitter.com/intent/tweet?in_reply_to=1623267975561199617)
+>  [Retweet](https://twitter.com/intent/retweet?tweet_id=1623267975561199617)
+>  [Favorite](https://twitter.com/intent/favorite?tweet_id=1623267975561199617)
+
+[Twitter: @WSJ](https://twitter.com/WSJ/status/1623267975561199617)
+
+Irmak is just one of a horrifyingly large number of people killed by Monday’s 7.8 magnitude earthquake, which has devastated large swaths of Turkey and neighboring Syria.
+
+More than 20,000 people are known to have died, according to [tallies from the Associated Press on Thursday](https://apnews.com/article/politics-syria-government-damascus-turkey-6ba6f153102945d93340dbf55e63d4bf)
+, making the disaster one of the deadliest of the last decade. 
+
+There are few more traumatized corners of the globe that the quake could have struck than Syria’s northwest. 
+
+That country, plagued for more than a decade by a civil war that has wrought devastation and triggered a global refugee crisis, already had 15 million people in need of humanitarian aid even before the tremor began, according to David Miliband, president and CEO of the International Rescue Committee.
+
+“One of the deadliest earthquakes this century, followed by hundreds of aftershocks, now adds to a litany of devastation,” Miliband said in a statement shared with BuzzFeed News, calling for aid to begin “skyrocketing” in order to meet the desperate need.  
+
+![](<Base64-Image-Removed>)
+
+Anadolu Agency via Getty Images
+
+Search and rescue efforts in the Besnaya district of Idlib, Syria, on Thursday. 
+
+On Thursday, three days after the quake, the first convoy of aid trucks finally reached the opposition-held Idlib area in Syria’s northwest. The trucks arrived via the only crossing with the Turkish border that the United Nations has authorized for use but that had been blocked for days by damage.  
+
+However, the White Helmets, a humanitarian group that assists in the region, said the aid was merely the same supplies that had preceded the disaster. “It is not special aid and equipment for the search and rescue teams, and the recovery of those trapped under the rubble,” the group [said on Twitter](https://twitter.com/SyriaCivilDef/status/1623667466860740608)
+. “We are disappointed at a time when we are desperate for equipment that will help us save lives from under the rubble.”
+
+Almost 2,000 people have died in the region, according to the White Helmets. Many of the dead had fled destruction and violence elsewhere in Syria only to lose their lives when buildings collapsed there. 
+
+> ! <image:12483>
+> 
+> [The White Helmets](https://twitter.com/SyriaCivilDef)
+>  [@SyriaCivilDef](https://twitter.com/SyriaCivilDef)
+> 
+> Another rescue … of a different child named Sham. Our teams rescued Sham and her siblings, Zaid and Rama, from under the rubble of their house in the village of Meles, west of #Idlib. We had hoped that their mother would be with them, but death preceded us. #Syria #earthquake
+> 
+> [02:41 PM - 09 Feb 2023](https://twitter.com/SyriaCivilDef/status/1623693503581528065)
+> 
+> [Reply](https://twitter.com/intent/tweet?in_reply_to=1623693503581528065)
+>  [Retweet](https://twitter.com/intent/retweet?tweet_id=1623693503581528065)
+>  [Favorite](https://twitter.com/intent/favorite?tweet_id=1623693503581528065)
+
+[Twitter: @SyriaCivilDef](https://twitter.com/SyriaCivilDef/status/1623693503581528065)
+
+As time passes, hopes dim that more people will be found alive — but there are still miracles. On Thursday, the White Helmets shared a photo of a young girl named Sham being pulled from the rubble. The group said her two siblings were also saved, but their mother was killed. 
+
+Among the international figures who have arrived in the region to assist in relief and recovery efforts are a small contingent of 87 rescue workers from Ukraine, which itself has been plagued by war for the past year. 
+
+![](<Base64-Image-Removed>)
+
+DHA (Demiroren News Agency)/AFP via Getty Images
+
+An aerial view of collapsed buildings in Hatay province in southeastern Turkey on Thursday.
+
+Ukraine’s State Emergency Service shared [images on Facebook](https://www.facebook.com/MNS.GOV.UA/posts/pfbid02TvFnUitq3HtA6kwWYG86mT79T1CVgDMgFWc82MTHiNYkPAjGmKxK66Mc3FxYH2MVl)
+ of the workers searching damaged buildings in Turkey for signs of life.
+
+"Our first task is search and rescue operations — to find the living people!” spokesperson Oleksandr Khorunzhiy [said](https://www.facebook.com/MNS.GOV.UA/posts/pfbid02pY78BwEzgveGq9rCJ14ZwhcSs4zk4iNjdKCypYG3aLEgRiuyRmEf86W4QoAY2GVql)
+. “We haven't found anyone yet but we are working on it. The work goes on around the clock.”
+
+UPDATE
+------
+
+Feb. 09, 2023, at 18:33 PM
+
+The death toll in this story has been updated.  
+
+Topics in this article
+----------------------
+
+*   [Natural Disasters](/topic/natural-disasters)
+    
+
+*   [![David Mack](https://img.buzzfeed.com/buzzfeed-static/static/2018-07/18/9/user_images/buzzfeed-prod-web-03/maggieschultz-v2-16194-1531920960-0_large.jpg?downsize=120:*&output-format=jpg&output-quality=auto)\
+    \
+    David Mack\
+    \
+    BuzzFeed News Reporter](/author/davidmack)
+    
+
+[Skip to footer](#news-footer)"
+
+# Your Summary
+
+
+
+===== > RESPONSE:  < =====
+The article, published on February 9, 2023, by BuzzFeed News, discusses the aftermath of the earthquake in Turkey and Syria. It features a photograph <image:10257> of a man in an orange jacket, Mesut Hançer, holding the hand of his deceased daughter, Irmak, who died in the earthquake. The image was taken by Adem Altan / AFP via Getty Images. The article states that the earthquake occurred in Turkey and Syria, not Gaza, and the event took place in February 2023, not July 2024.
+
+_________________________
+
+
+
+SummarizeResultPrompt - QUERY:
+
+# Instructions
+In order to find evidence that helps your fact-check, you just ran a web search which yielded a Search Result. **Your task right now is to summarize the Search Result.** What to include:
+* information that might be useful for the fact-check (see Record)
+* relevant images (refer to images by inserting their reference <image:k>)
+* if available: the release date as well as the author or the publisher (e.g. the media company) of the search result.
+
+Do NOT include:
+* advertisements
+* any other information not related to the Record or the Claim
+
+Additional rules:
+* Do not add any additional information besides the information in the Search Result.
+* If the Search Result doesn't contain any relevant information for the fact-checking work, simply print one word in capital letters: "NONE".
+* Keep your writing style like in the Examples 1, 2 and 3 provided to you.
+* Try to filter out relevant information even if the search result is in a different language.
+
+# Example 1
+The search result from America Today provides several photographs of the Notre-Dame Cathedral fire on April 15, 2019. <image:i>, <image:j>, <image:k>. None of the images show the Eiffel Tower in the background. 
+
+# Example 2
+NONE
+
+# Example 3
+The Guardian discusses a report blaming the Syrian government for a toxic gas attack and condemning their use of chemical weapons. The Guardian mentions the Chemical Weapons Convention and the responsibilities of Syria under the convention. According to The Guardian, The White House condemned the Assad regime for defying the norm against chemical weapons use.
+
+# Record
+## Claim
+Claim: "<image:10257> This image shows a man from Gaza holding the hand of his son killed in an Israeli bombing in July, 2024."
+
+## Actions
+```
+web_search("man orange jacket rubble")
+reverse_search(<image:10257>)
+```
+
+# Search Result
+From [Source](https://www.cnn.com/2023/02/13/middleeast/turkey-quake-man-daughter-hand-photo-intl): Found exact image on website with title: Behind the defining image of the Turkey earthquake | CNN
+Content: "[](#maincontent)
+
+‘I couldn’t save my daughter’: Behind the defining image of the Turkey earthquake
+=================================================================================
+
+[![Karen Smith](https://media.cnn.com/api/v1/images/stellar/prod/190205030610-karen-smith-profile.jpg?c=16x9&q=h_270,w_480,c_fill/c_thumb,g_face,w_100,h_100)](https://www.cnn.com/profiles/karen-smith-profile)
+
+By Christian Edwards, Talia Kayali and [Karen Smith](https://www.cnn.com/profiles/karen-smith-profile)
+, CNN
+
+3 min read
+
+Updated 8:51 AM EST, Mon February 13, 2023
+
+[](mailto:?subject=CNN%20content%20share&body=Check%20out%20this%20article%3A%0Ahttps%3A%2F%2Fwww.cnn.com%2F2023%2F02%2F13%2Fmiddleeast%2Fturkey-quake-man-daughter-hand-photo-intl "Share with email")
+
+Link Copied!
+
+![Mesut Hancer holds the hand of his 15-year-old daughter Irmak, who died in the earthquake in Kahramanmaras, Turkey, close to the epicenter, on February 7.](https://media.cnn.com/api/v1/images/stellar/prod/230213132643-01-earthquake-mesut-hancer-020723.jpg?c=16x9&q=h_833,w_1480,c_fill)
+
+Mesut Hancer holds the hand of his 15-year-old daughter Irmak, who died in the earthquake in Kahramanmaras, Turkey, close to the epicenter, on February 7.
+
+Adem Altan/AFP/Getty Images
+
+CNN  — 
+
+It’s been a week since a massive [7.8 magnitude earthquake](https://cnn.com/2023/02/07/middleeast/earthquake-turkey-syria-why-deadly-intl/index.html)
+ rocked [Turkey](https://cnn.com/2023/02/11/middleeast/turkey-syria-earthquake-recovery-intl/index.html)
+ and [Syria](https://cnn.com/2023/02/08/middleeast/syria-left-behind-earthquake-mime-intl/index.html)
+, claiming the lives of more than [36,000](https://cnn.com/middleeast/live-news/turkey-syria-earthquake-updates-2-13-23-intl/index.html)
+ people. Many tens of thousands more have been injured. Millions may be left homeless.
+
+Few images have captured the devastation of the past week as starkly as a photograph of Mesut Hancer.
+
+He was photographed holding the hand of his 15-year-old daughter, Irmak, under the rubble in the southern Turkish city of Kahramanmaras, near the epicenter of the quake. He said she died at the moment it hit, with no chance of escape.
+
+In an interview with CNN Turk Saturday, Hancer spoke about the lives behind the image that has come to define last week’s tragic disaster.
+
+Irmak had been visiting her grandmother, Hancer said, and he spent three days trying to free her body from the rubble.
+
+“It was awful. As soon as I heard the news, I rushed there. And with my own bare hands, with my own means, with great effort I tried to pull out my daughter. However, unfortunately, I couldn’t save my daughter,” Hancer said.
+
+“Losing a mother, a father or siblings aside, losing a child is on another level of despair,” he said.
+
+When Hancer arrived at the wreckage, the terrible reality of the situation became apparent.
+
+![Seven members of his family ended up under the rubble, Hancer told CNN Turk.](https://media.cnn.com/api/v1/images/stellar/prod/230207121217-06-earthquake-020723-kahramanmaras-turkey.jpg?q=w_1110,c_fill)
+
+Seven members of his family ended up under the rubble, Hancer told CNN Turk.
+
+Adem Altan/AFP/Getty Images
+
+“I didn’t have hope because there was a large girder on my daughter. Her waist up was free but below her waist under the rubble,” she was crushed, he said. “Unfortunately, during the earthquake, she died right there and then. She didn’t have a chance of survival.”
+
+Hancer said he spent three days trying to free his daughter’s body from the rubble.
+
+“With my own effort, with my own means, I reached her. I couldn’t ask anyone \[for help\], because there are a lot of people under the rubble,” he said.
+
+The death toll in Turkey has reached 31,643, Turkish Emergency Coordination Center SAKOM said Monday. The confirmed death toll in Syria is 4,574.
+
+[Rescue efforts](https://cnn.com/2023/02/10/middleeast/turkey-syria-earthquake-intl/index.html)
+ continue in both countries, but authorities have been overwhelmed by the sheer scale of the disaster. More than [5,700 buildings](https://cnn.com/2023/02/08/middleeast/turkey-earthquake-public-anger-intl/index.html)
+ in Turkey have collapsed, according to the country’s disaster agency.
+
+“I also talked with AFAD \[the Disaster and Emergency Management Presidency in Turkey\], and they helped as much as they could. But they said they could not provide an excavator to that area,” Hancer said.
+
+[![A view of the damage as the search for survivors continues, in the aftermath of a deadly earthquake  in Kahramanmaras, Turkey February 10, 2023. REUTERS/Stoyan Nenov\
+TPX IMAGES OF THE DAY     ](https://media.cnn.com/api/v1/images/stellar/prod/230210120225-01-turkey-syria-earthquake-recovery-intl.jpg?c=16x9&q=h_144,w_256,c_fill)\
+\
+A view of the damage as the search for survivors continues, in the aftermath of a deadly earthquake in Kahramanmaras, Turkey February 10, 2023. REUTERS/Stoyan Nenov TPX IMAGES OF THE DAY\
+\
+Stoyan Nenov/Reuters\
+\
+Related article Quake-hit Turkey and Syria face years of rebuilding. Experts say it didn't have to be this way](/2023/02/11/middleeast/turkey-syria-earthquake-recovery-intl/index.html)
+
+Hancer is grieving not only for his daughter. The earthquake struck when members of his family had traveled across Turkey to his mother’s house, where his daughter was staying.
+
+“My mother, my two older brothers, my sister-in-law and her little daughter. There were seven people including my daughter. They were all under the rubble,” Hancer said.
+
+Hancer’s home has also been badly damaged, he said, adding that he doesn’t have anywhere to stay. “We cannot enter our house because we don’t have the means. We are left outside.”
+
+Thousands of families are facing similar grief and devastation.
+
+Meanwhile, amid growing public anger over the government’s response to the disaster, Turkish authorities have carried out a wave of arrests of property developers accused of “negligence” over building collapses due to last week’s earthquake.
+
+Ad Feedback
+
+Ad Feedback
+
+Ad Feedback
+
+Ad Feedback
+
+Ad Feedback
+
+Ad Feedback
+
+Ad Feedback
+
+Ad Feedback"
+
+# Your Summary
+
+
+
+===== > RESPONSE:  < =====
+The image shows Mesut Hancer holding the hand of his 15-year-old daughter, Irmak, who died in the earthquake in Kahramanmaras, Turkey, on February 7, 2023. <image:10257>. The article was published by CNN on February 13, 2023.
+
+_________________________
+
+
+
+SummarizeSummariesPrompt - QUERY:
+
+# Instructions
+You just retrieved web sources, each one summarized under "Web Sources". **Your task right now is to summarize the web source summaries.**
+
+Always adhere to the following rules:
+* Write only one to two paragraphs.
+* Include all URLs from the listed sources. Format them as Markdown hyperlinks.
+* Do not add any additional information besides the information in the summaries.
+* Include references (<image:k>) to all relevant images.
+
+# Record
+## Claim
+Claim: "<image:10257> This image shows a man from Gaza holding the hand of his son killed in an Israeli bombing in July, 2024."
+
+## Actions
+```
+web_search("man orange jacket rubble")
+reverse_search(<image:10257>)
+```
+
+## Web Sources
+**Reverse Search Result** The exact image was found in the following sources:
+
+From [Source](https://www.theguardian.com/world/2023/feb/07/turkey-earthquake-man-photo-dead-daughter-hand): Found exact image on website with title: Photo of Turkish man holding hand of dead daughter underlines ...
+Content: The Guardian published an article on February 7, 2023, about a photograph of a Turkish man, Mesut Hancer, holding the hand of his 15-year-old daughter, Irmak, who died in an earthquake in Kahramanmaras, Turkey. <image:12476> The article mentions the earthquake's impact in Turkey and Syria.
+
+
+From [Source](https://www.buzzfeednews.com/article/davidmack/earthquake-turkey-syria-photo-father-daughter-hand): Found exact image on website with title: He Never Left The Hand Of His Daughter Who Died In The Earthquake
+Content: The article, published on February 9, 2023, by BuzzFeed News, discusses the aftermath of the earthquake in Turkey and Syria. It features a photograph <image:10257> of a man in an orange jacket, Mesut Hançer, holding the hand of his deceased daughter, Irmak, who died in the earthquake. The image was taken by Adem Altan / AFP via Getty Images. The article states that the earthquake occurred in Turkey and Syria, not Gaza, and the event took place in February 2023, not July 2024.
+
+
+From [Source](https://www.cnn.com/2023/02/13/middleeast/turkey-quake-man-daughter-hand-photo-intl): Found exact image on website with title: Behind the defining image of the Turkey earthquake | CNN
+Content: The image shows Mesut Hancer holding the hand of his 15-year-old daughter, Irmak, who died in the earthquake in Kahramanmaras, Turkey, on February 7, 2023. <image:10257>. The article was published by CNN on February 13, 2023.
+
+
+## Your Summary
+
+
+
+===== > RESPONSE:  < =====
+The image (<image:10257>) shows Mesut Hancer holding the hand of his deceased daughter, Irmak, who died in an earthquake in Kahramanmaras, Turkey. The event occurred in February 2023, not July 2024, and the location was Turkey, not Gaza.
+
+The Guardian ([https://www.theguardian.com/world/2023/feb/07/turkey-earthquake-man-photo-dead-daughter-hand](https://www.theguardian.com/world/2023/feb/07/turkey-earthquake-man-photo-dead-daughter-hand)), BuzzFeed News ([https://www.buzzfeednews.com/article/davidmack/earthquake-turkey-syria-photo-father-daughter-hand](https://www.buzzfeednews.com/article/davidmack/earthquake-turkey-syria-photo-father-daughter-hand)), and CNN ([https://www.cnn.com/2023/02/13/middleeast/turkey-quake-man-daughter-hand-photo-intl](https://www.cnn.com/2023/02/13/middleeast/turkey-quake-man-daughter-hand-photo-intl)) all published articles about the image.
+
+_________________________
+
+
+
+DevelopPrompt - QUERY:
+
+# Instructions
+You just retrieved new Evidence. Now, **analyze the Claim's veracity using the evidence**. Always adhere to the following rules:
+* Focus on developing new insights. Do not repeat larger parts from the Record. Do not restate the Claim.
+* Write down your thoughts step-by-step. Whenever necessary, you may elaborate in more detail.
+* Depending on the topic's complexity, invest one to three paragraphs. The fewer, the better.
+* If you find that there is insufficient information to verify the Claim, explicitly state what information is missing.
+* If you cite web sources, always refer to them by including their URL as a Markdown hyperlink.
+* **Use information only from the recorded evidence**: Avoid inserting information that is not implied by the evidence. You may use commonsense knowledge, though.
+
+# Record
+## Claim
+Claim: "<image:10257> This image shows a man from Gaza holding the hand of his son killed in an Israeli bombing in July, 2024."
+
+## Actions
+```
+web_search("man orange jacket rubble")
+reverse_search(<image:10257>)
+```
+
+## Evidence
+### Evidence from `web_search`
+The search results include a collection of men's orange jackets from LLBean.com, including rain jackets, hunting vests, and insulated options (<image:12396>, <image:12397>, <image:12398>, <image:12401>, <image:12402>, <image:12403>, <image:12404>, <image:12405>, <image:12407>, <image:12408>, <image:12409>, <image:12410>, <image:12412>, <image:12413>, <image:12415>, <image:12416>, <image:12418>, <image:12419>, <image:12421>). The jackets are described as versatile and suitable for various outdoor activities.
+
+Additionally, Freepik provides an AI-generated image of a man in an orange and black jacket walking through rubble (<image:12472>).
+*   [https://www.llbean.com/buy/mens-orange-jackets](https://www.llbean.com/buy/mens-orange-jackets)
+*   [https://www.patagonia.com/shop/mens/jackets-vests/orange](https://www.patagonia.com/shop/mens/jackets-vests/orange)
+*   [https://www.freepik.com/premium-ai-image/arafed-man-orange-black-jacket-walking-through-rubble-generative-ai\_47607490.htm](https://www.freepik.com/premium-ai-image/arafed-man-orange-black-jacket-walking-through-rubble-generative-ai_47607490.htm)
+
+
+### Evidence from `reverse_search`
+The image (<image:10257>) shows Mesut Hancer holding the hand of his deceased daughter, Irmak, who died in an earthquake in Kahramanmaras, Turkey. The event occurred in February 2023, not July 2024, and the location was Turkey, not Gaza.
+
+The Guardian ([https://www.theguardian.com/world/2023/feb/07/turkey-earthquake-man-photo-dead-daughter-hand](https://www.theguardian.com/world/2023/feb/07/turkey-earthquake-man-photo-dead-daughter-hand)), BuzzFeed News ([https://www.buzzfeednews.com/article/davidmack/earthquake-turkey-syria-photo-father-daughter-hand](https://www.buzzfeednews.com/article/davidmack/earthquake-turkey-syria-photo-father-daughter-hand)), and CNN ([https://www.cnn.com/2023/02/13/middleeast/turkey-quake-man-daughter-hand-photo-intl](https://www.cnn.com/2023/02/13/middleeast/turkey-quake-man-daughter-hand-photo-intl)) all published articles about the image.
+
+
+# Your Analysis
+
+
+
+===== > RESPONSE:  < =====
+The claim is false. The image depicts Mesut Hancer in Turkey holding the hand of his deceased daughter, Irmak, who died in an earthquake in February 2023. The event occurred in Turkey, not Gaza, and the date was February 2023, not July 2024.
+
+_________________________
+
+
+
+JudgePrompt - QUERY:
+
+# Instructions
+**Determine the Claim's veracity** by following these steps:
+1. Briefly summarize the key insights from the fact-check (see Record) in at most one paragraph.
+2. Write one paragraph about which one of the Decision Options applies best. Include the most appropriate decision option at the end and enclose it in backticks like `this`.
+
+
+
+
+## Decision Options
+* `not enough information`: The fact-check does not contain sufficient information to come to an conclusion. For example,there is substantial lack of evidence or the evidence is inconclusive, conflicting or self-contradictory. In the case of a lack of evidence, state which information exactly is missing. In particular, if no RESULTS or sources are available, pick this decision.
+* `false`: The claim is not factually accurate. This is the case if one of the following three conditions is met:(1) The claim is demonstrably false when it is disproven by evidence from multiple and reliable sources,(2) The claim or image is taken out of context, i.e. the origin, content and/or meaning of a statement or an image is misrepresented. For example, an old claim or an old image is mispresented in a new context in a misleading way,(3) There is not enough evidence to verify the claim or the evidence is conflicting or self-contradictory.
+* `true`: The claim is factually accurate when it is confirmed by evidence from multiple and reliable sources.
+
+# Record
+## Claim
+Claim: "<image:10257> This image shows a man from Gaza holding the hand of his son killed in an Israeli bombing in July, 2024."
+
+## Actions
+```
+web_search("man orange jacket rubble")
+reverse_search(<image:10257>)
+```
+
+## Evidence
+### Evidence from `web_search`
+The search results include a collection of men's orange jackets from LLBean.com, including rain jackets, hunting vests, and insulated options (<image:12396>, <image:12397>, <image:12398>, <image:12401>, <image:12402>, <image:12403>, <image:12404>, <image:12405>, <image:12407>, <image:12408>, <image:12409>, <image:12410>, <image:12412>, <image:12413>, <image:12415>, <image:12416>, <image:12418>, <image:12419>, <image:12421>). The jackets are described as versatile and suitable for various outdoor activities.
+
+Additionally, Freepik provides an AI-generated image of a man in an orange and black jacket walking through rubble (<image:12472>).
+*   [https://www.llbean.com/buy/mens-orange-jackets](https://www.llbean.com/buy/mens-orange-jackets)
+*   [https://www.patagonia.com/shop/mens/jackets-vests/orange](https://www.patagonia.com/shop/mens/jackets-vests/orange)
+*   [https://www.freepik.com/premium-ai-image/arafed-man-orange-black-jacket-walking-through-rubble-generative-ai\_47607490.htm](https://www.freepik.com/premium-ai-image/arafed-man-orange-black-jacket-walking-through-rubble-generative-ai_47607490.htm)
+
+
+### Evidence from `reverse_search`
+The image (<image:10257>) shows Mesut Hancer holding the hand of his deceased daughter, Irmak, who died in an earthquake in Kahramanmaras, Turkey. The event occurred in February 2023, not July 2024, and the location was Turkey, not Gaza.
+
+The Guardian ([https://www.theguardian.com/world/2023/feb/07/turkey-earthquake-man-photo-dead-daughter-hand](https://www.theguardian.com/world/2023/feb/07/turkey-earthquake-man-photo-dead-daughter-hand)), BuzzFeed News ([https://www.buzzfeednews.com/article/davidmack/earthquake-turkey-syria-photo-father-daughter-hand](https://www.buzzfeednews.com/article/davidmack/earthquake-turkey-syria-photo-father-daughter-hand)), and CNN ([https://www.cnn.com/2023/02/13/middleeast/turkey-quake-man-daughter-hand-photo-intl](https://www.cnn.com/2023/02/13/middleeast/turkey-quake-man-daughter-hand-photo-intl)) all published articles about the image.
+
+
+## Elaboration
+The claim is false. The image depicts Mesut Hancer in Turkey holding the hand of his deceased daughter, Irmak, who died in an earthquake in February 2023. The event occurred in Turkey, not Gaza, and the date was February 2023, not July 2024.
+
+
+# Your Judgement
+
+
+
+===== > RESPONSE:  < =====
+The image shows a man in Turkey holding the hand of his deceased daughter after an earthquake in February 2023, not in Gaza in July 2024. The claim misrepresents the location, date, and context of the image. `false`
+_________________________
+
+
+
+SummarizeDocPrompt - QUERY:
+
+# Instructions
+You are provided with the record of a fact-check. It contains the Claim to be verified and a documentation of all the fact-checking work along the gathered evidence. Your task is to **summarize the fact-check**. That is, you provide a concise, one-paragraph justification for the final VERDICT based on the knowledge from the Record. Note:
+* Be truthful, brief, do not add any additional information besides the information given in the Record. 
+* Link key sources in your summary. Use Markdown notation for that. You may link them in-line.
+* Don't state the Claim again. Rather focus on the key insights of the fact-check.
+* Simply print just the summary.
+
+# Record
+## Claim
+Claim: "<image:10257> This image shows a man from Gaza holding the hand of his son killed in an Israeli bombing in July, 2024."
+
+## Actions
+```
+web_search("man orange jacket rubble")
+reverse_search(<image:10257>)
+```
+
+## Evidence
+### Evidence from `web_search`
+The search results include a collection of men's orange jackets from LLBean.com, including rain jackets, hunting vests, and insulated options (<image:12396>, <image:12397>, <image:12398>, <image:12401>, <image:12402>, <image:12403>, <image:12404>, <image:12405>, <image:12407>, <image:12408>, <image:12409>, <image:12410>, <image:12412>, <image:12413>, <image:12415>, <image:12416>, <image:12418>, <image:12419>, <image:12421>). The jackets are described as versatile and suitable for various outdoor activities.
+
+Additionally, Freepik provides an AI-generated image of a man in an orange and black jacket walking through rubble (<image:12472>).
+*   [https://www.llbean.com/buy/mens-orange-jackets](https://www.llbean.com/buy/mens-orange-jackets)
+*   [https://www.patagonia.com/shop/mens/jackets-vests/orange](https://www.patagonia.com/shop/mens/jackets-vests/orange)
+*   [https://www.freepik.com/premium-ai-image/arafed-man-orange-black-jacket-walking-through-rubble-generative-ai\_47607490.htm](https://www.freepik.com/premium-ai-image/arafed-man-orange-black-jacket-walking-through-rubble-generative-ai_47607490.htm)
+
+
+### Evidence from `reverse_search`
+The image (<image:10257>) shows Mesut Hancer holding the hand of his deceased daughter, Irmak, who died in an earthquake in Kahramanmaras, Turkey. The event occurred in February 2023, not July 2024, and the location was Turkey, not Gaza.
+
+The Guardian ([https://www.theguardian.com/world/2023/feb/07/turkey-earthquake-man-photo-dead-daughter-hand](https://www.theguardian.com/world/2023/feb/07/turkey-earthquake-man-photo-dead-daughter-hand)), BuzzFeed News ([https://www.buzzfeednews.com/article/davidmack/earthquake-turkey-syria-photo-father-daughter-hand](https://www.buzzfeednews.com/article/davidmack/earthquake-turkey-syria-photo-father-daughter-hand)), and CNN ([https://www.cnn.com/2023/02/13/middleeast/turkey-quake-man-daughter-hand-photo-intl](https://www.cnn.com/2023/02/13/middleeast/turkey-quake-man-daughter-hand-photo-intl)) all published articles about the image.
+
+
+## Elaboration
+The claim is false. The image depicts Mesut Hancer in Turkey holding the hand of his deceased daughter, Irmak, who died in an earthquake in February 2023. The event occurred in Turkey, not Gaza, and the date was February 2023, not July 2024.
+
+
+## Final Judgement
+The image shows a man in Turkey holding the hand of his deceased daughter after an earthquake in February 2023, not in Gaza in July 2024. The claim misrepresents the location, date, and context of the image. `false`
+
+## Summary
+
+
+
+===== > RESPONSE:  < =====
+The claim is false. The image depicts Mesut Hancer in Turkey holding the hand of his deceased daughter, Irmak, who died in an earthquake in February 2023, not in Gaza in July 2024. The event occurred in Turkey, not Gaza, and the date was February 2023, not July 2024. The image has been widely reported by news outlets such as The Guardian ([https://www.theguardian.com/world/2023/feb/07/turkey-earthquake-man-photo-dead-daughter-hand](https://www.theguardian.com/world/2023/feb/07/turkey-earthquake-man-photo-dead-daughter-hand)).
+
+_________________________
+
+
+
+PlanPrompt - QUERY:
+
+# Instructions
+The available knowledge is insufficient to assess the Claim. Therefore, **propose a set of actions** to retrieve new and helpful evidence. Adhere to the following rules:
+* The actions available are listed under Valid Actions, including a short description for each action. No other actions are possible at this moment. 
+* For each action, use the formatting as specified in Valid Actions.
+* Include all actions in a single Markdown code block at the end of your answer.
+* Propose as few actions as possible, but as much as needed. Do not propose similar or previously used actions.
+
+
+
+## Valid Actions
+* `geolocate`
+   * Description: Performs geolocation to determine the country where an image was taken.
+   * How to use: Provide an image and the model will determine the most likely countries where it was taken.
+   * Format: geolocate(<image:k>), where `k` is the image's ID
+
+* `web_search`
+   * Description: Run an open web search on Google or DuckDuckGO to retrieve any related webpage.
+   * How to use: Do not use this with a previously used or similar query from previous web searches. If a previous web search did not yield any results, use a very different query.
+   * Format: web_search("your web search query goes here")
+
+* `reverse_search`
+   * Description: Performs a reverse image search to find similar images on the web.
+   * How to use: Provide an image and the model will perform a reverse search to find similar images.
+   * Format: reverse_search(<image:k>), where `k` is the image's ID
+
+# Example: geolocate()
+
+## Claim
+Text: "<image:k> shows a nuclear weapons facility in Usbekistan."
+
+...
+
+## Actions
+```
+geolocate(<image:k>)
+```
+
+# Example: web_search()
+
+## Claim
+Text: "New Zealand’s new Food Bill bans gardening"
+Claim date: October 29, 2020
+
+...
+
+## Actions
+```
+web_search("New Zealand Food Bill 2020")
+web_search("New Zealand Food Bill gardening ban")
+```
+
+# Example: reverse_search()
+
+## Claim
+Text: "<image:k> shows a rare event of a solar eclipse with a double ring."
+
+...
+
+## Actions
+```
+reverse_search(<image:k>)
+```
+
+# Record
+## Claim
+Claim: "<image:10259> This is an authentic image of Dwayne Johnson waring the Israeli flag in support of Israel."
+
+# Your Actions
+
+
+
+===== > RESPONSE:  < =====
+```
+reverse_search(<image:10259>)
+web_search("Dwayne Johnson Israel support")
+```
+_________________________
+
+
+
+SummarizeResultPrompt - QUERY:
+
+# Instructions
+In order to find evidence that helps your fact-check, you just ran a web search which yielded a Search Result. **Your task right now is to summarize the Search Result.** What to include:
+* information that might be useful for the fact-check (see Record)
+* relevant images (refer to images by inserting their reference <image:k>)
+* if available: the release date as well as the author or the publisher (e.g. the media company) of the search result.
+
+Do NOT include:
+* advertisements
+* any other information not related to the Record or the Claim
+
+Additional rules:
+* Do not add any additional information besides the information in the Search Result.
+* If the Search Result doesn't contain any relevant information for the fact-checking work, simply print one word in capital letters: "NONE".
+* Keep your writing style like in the Examples 1, 2 and 3 provided to you.
+* Try to filter out relevant information even if the search result is in a different language.
+
+# Example 1
+The search result from America Today provides several photographs of the Notre-Dame Cathedral fire on April 15, 2019. <image:i>, <image:j>, <image:k>. None of the images show the Eiffel Tower in the background. 
+
+# Example 2
+NONE
+
+# Example 3
+The Guardian discusses a report blaming the Syrian government for a toxic gas attack and condemning their use of chemical weapons. The Guardian mentions the Chemical Weapons Convention and the responsibilities of Syria under the convention. According to The Guardian, The White House condemned the Assad regime for defying the norm against chemical weapons use.
+
+# Record
+## Claim
+Claim: "<image:10259> This is an authentic image of Dwayne Johnson waring the Israeli flag in support of Israel."
+
+## Actions
+```
+reverse_search(<image:10259>)
+web_search("Dwayne Johnson Israel support")
+```
+
+# Search Result
+From [Source](https://music.apple.com/us/song/jewish-rock/1406634253): Found exact image on website with title: ‎Jewish Rock - Song by Shawn Pelofsky - Apple Music
+Content: "  ![](/assets/artwork/1x1.gif)
+
+  ![Jewish Rock song by Shawn Pelofsky](/assets/artwork/1x1.gif)
+
+Jewish Rock
+===========
+
+[Stretch It Out](https://music.apple.com/us/album/stretch-it-out/1406633803)
+ [Shawn Pelofsky](https://music.apple.com/us/artist/shawn-pelofsky/410747316)
+ August 24, 2018
+
+Preview
+
+*     ![Stretch It Out](/assets/artwork/1x1.gif)
+    
+    [Stretch It Out](https://music.apple.com/us/album/stretch-it-out/1406633803)
+    
+    [Stretch It Out](https://music.apple.com/us/album/stretch-it-out/1406633803)
+    
+
+Select a country or region
+
+Africa, Middle East, and India
+------------------------------
+
+See All
+
+*   [Algeria](/dz/new)
+    
+*   [Angola](/ao/new)
+    
+*   [Armenia](/am/new)
+    
+*   [Azerbaijan](/az/new)
+    
+*   [Bahrain](/bh/new)
+    
+*   [Benin](/bj/new)
+    
+*   [Botswana](/bw/new)
+    
+*   [Cameroun](/cm/new)
+    
+*   [Cape Verde](/cv/new)
+    
+*   [Chad](/td/new)
+    
+*   [Côte d’Ivoire](/ci/new)
+    
+*   [Congo, The Democratic Republic Of The](/cd/new)
+    
+*   [Egypt](/eg/new)
+    
+*   [Eswatini](/sz/new)
+    
+*   [Gabon](/ga/new)
+    
+*   [Gambia](/gm/new)
+    
+*   [Ghana](/gh/new)
+    
+*   [Guinea-Bissau](/gw/new)
+    
+*   [India](/in/new)
+    
+*   [Iraq](/iq/new)
+    
+*   [Israel](/il/new)
+    
+*   [Jordan](/jo/new)
+    
+*   [Kenya](/ke/new)
+    
+*   [Kuwait](/kw/new)
+    
+*   [Lebanon](/lb/new)
+    
+*   [Liberia](/lr/new)
+    
+*   [Libya](/ly/new)
+    
+*   [Madagascar](/mg/new)
+    
+*   [Malawi](/mw/new)
+    
+*   [Mali](/ml/new)
+    
+*   [Mauritania](/mr/new)
+    
+*   [Mauritius](/mu/new)
+    
+*   [Morocco](/ma/new)
+    
+*   [Mozambique](/mz/new)
+    
+*   [Namibia](/na/new)
+    
+*   [Niger (English)](/ne/new)
+    
+*   [Nigeria](/ng/new)
+    
+*   [Oman](/om/new)
+    
+*   [Qatar](/qa/new)
+    
+*   [Congo, Republic of](/cg/new)
+    
+*   [Rwanda](/rw/new)
+    
+*   [Saudi Arabia](/sa/new)
+    
+*   [Senegal](/sn/new)
+    
+*   [Seychelles](/sc/new)
+    
+*   [Sierra Leone](/sl/new)
+    
+*   [South Africa](/za/new)
+    
+*   [Sri Lanka](/lk/new)
+    
+*   [Tajikistan](/tj/new)
+    
+*   [Tanzania, United Republic Of](/tz/new)
+    
+*   [Tunisia](/tn/new)
+    
+*   [Turkmenistan](/tm/new)
+    
+*   [United Arab Emirates](/ae/new)
+    
+*   [Uganda](/ug/new)
+    
+*   [Yemen](/ye/new)
+    
+*   [Zambia](/zm/new)
+    
+*   [Zimbabwe](/zw/new)
+    
+
+Asia Pacific
+------------
+
+See All
+
+*   [Australia](/au/new)
+    
+*   [Bhutan](/bt/new)
+    
+*   [Cambodia](/kh/new)
+    
+*   [中国大陆](/cn/new)
+    
+*   [Fiji](/fj/new)
+    
+*   [香港](/hk/new)
+    
+*   [Indonesia (English)](/id/new)
+    
+*   [日本](/jp/new)
+    
+*   [Kazakhstan](/kz/new)
+    
+*   [대한민국](/kr/new)
+    
+*   [Kyrgyzstan](/kg/new)
+    
+*   [Lao People's Democratic Republic](/la/new)
+    
+*   [澳門](/mo/new)
+    
+*   [Malaysia (English)](/my/new)
+    
+*   [Maldives](/mv/new)
+    
+*   [Micronesia, Federated States of](/fm/new)
+    
+*   [Mongolia](/mn/new)
+    
+*   [Myanmar](/mm/new)
+    
+*   [Nepal](/np/new)
+    
+*   [New Zealand](/nz/new)
+    
+*   [Papua New Guinea](/pg/new)
+    
+*   [Philippines](/ph/new)
+    
+*   [Singapore](/sg/new)
+    
+*   [Solomon Islands](/sb/new)
+    
+*   [台灣](/tw/new)
+    
+*   [Thailand](/th/new)
+    
+*   [Tonga](/to/new)
+    
+*   [Turkmenistan](/tm/new)
+    
+*   [Uzbekistan](/uz/new)
+    
+*   [Vanuatu](/vu/new)
+    
+*   [Vietnam](/vn/new)
+    
+
+Europe
+------
+
+See All
+
+*   [Armenia](/am/new)
+    
+*   [Österreich](/at/new)
+    
+*   [Belarus](/by/new)
+    
+*   [Belgium](/be/new)
+    
+*   [Bosnia and Herzegovina](/ba/new)
+    
+*   [Bulgaria](/bg/new)
+    
+*   [Croatia](/hr/new)
+    
+*   [Cyprus](/cy/new)
+    
+*   [Czechia](/cz/new)
+    
+*   [Denmark](/dk/new)
+    
+*   [Estonia](/ee/new)
+    
+*   [Finland](/fi/new)
+    
+*   [France (Français)](/fr/new)
+    
+*   [Georgia](/ge/new)
+    
+*   [Deutschland](/de/new)
+    
+*   [Greece](/gr/new)
+    
+*   [Hungary](/hu/new)
+    
+*   [Iceland](/is/new)
+    
+*   [Ireland](/ie/new)
+    
+*   [Italia](/it/new)
+    
+*   [Kosovo](/xk/new)
+    
+*   [Latvia](/lv/new)
+    
+*   [Lithuania](/lt/new)
+    
+*   [Luxembourg (English)](/lu/new)
+    
+*   [Malta](/mt/new)
+    
+*   [Moldova, Republic Of](/md/new)
+    
+*   [Montenegro](/me/new)
+    
+*   [Nederland](/nl/new)
+    
+*   [North Macedonia](/mk/new)
+    
+*   [Norway](/no/new)
+    
+*   [Poland](/pl/new)
+    
+*   [Portugal (Português)](/pt/new)
+    
+*   [Romania](/ro/new)
+    
+*   [Россия](/ru/new)
+    
+*   [Serbia](/rs/new)
+    
+*   [Slovakia](/sk/new)
+    
+*   [Slovenia](/si/new)
+    
+*   [España](/es/new)
+    
+*   [Sverige](/se/new)
+    
+*   [Schweiz](/ch/new)
+    
+*   [Türkiye (English)](/tr/new)
+    
+*   [Ukraine](/ua/new)
+    
+*   [United Kingdom](/gb/new)
+    
+
+Latin America and the Caribbean
+-------------------------------
+
+See All
+
+*   [Anguilla](/ai/new)
+    
+*   [Antigua and Barbuda](/ag/new)
+    
+*   [Argentina (Español)](/ar/new)
+    
+*   [Bahamas](/bs/new)
+    
+*   [Barbados](/bb/new)
+    
+*   [Belize](/bz/new)
+    
+*   [Bermuda](/bm/new)
+    
+*   [Bolivia (Español)](/bo/new)
+    
+*   [Brasil](/br/new)
+    
+*   [Virgin Islands, British](/vg/new)
+    
+*   [Cayman Islands](/ky/new)
+    
+*   [Chile (Español)](/cl/new)
+    
+*   [Colombia (Español)](/co/new)
+    
+*   [Costa Rica (Español)](/cr/new)
+    
+*   [Dominica](/dm/new)
+    
+*   [República Dominicana](/do/new)
+    
+*   [Ecuador (Español)](/ec/new)
+    
+*   [El Salvador (Español)](/sv/new)
+    
+*   [Grenada](/gd/new)
+    
+*   [Guatemala (Español)](/gt/new)
+    
+*   [Guyana](/gy/new)
+    
+*   [Honduras (Español)](/hn/new)
+    
+*   [Jamaica](/jm/new)
+    
+*   [México](/mx/new)
+    
+*   [Montserrat](/ms/new)
+    
+*   [Nicaragua (Español)](/ni/new)
+    
+*   [Panamá](/pa/new)
+    
+*   [Paraguay (Español)](/py/new)
+    
+*   [Perú](/pe/new)
+    
+*   [St. Kitts and Nevis](/kn/new)
+    
+*   [Saint Lucia](/lc/new)
+    
+*   [St. Vincent and The Grenadines](/vc/new)
+    
+*   [Suriname](/sr/new)
+    
+*   [Trinidad and Tobago](/tt/new)
+    
+*   [Turks and Caicos](/tc/new)
+    
+*   [Uruguay (English)](/uy/new)
+    
+*   [Venezuela (Español)](/ve/new)
+    
+
+The United States and Canada
+----------------------------
+
+See All
+
+*   [Canada (English)](/ca/new)
+    
+*   [Canada (Français)](/ca/new?l=fr-CA)
+    
+*   [United States](/us/new)
+    
+*   [Estados Unidos (Español México)](/us/new?l=es-MX)
+    
+*   [الولايات المتحدة](/us/new?l=ar)
+    
+*   [США](/us/new?l=ru)
+    
+*   [美国 (简体中文)](/us/new?l=zh-Hans-CN)
+    
+*   [États-Unis (Français France)](/us/new?l=fr-FR)
+    
+*   [미국](/us/new?l=ko)
+    
+*   [Estados Unidos (Português Brasil)](/us/new?l=pt-BR)
+    
+*   [Hoa Kỳ](/us/new?l=vi)
+    
+*   [美國 (繁體中文台灣)](/us/new?l=zh-Hant-TW)"
+
+# Your Summary
+
+
+
+===== > RESPONSE:  < =====
+The search result is from Apple Music and features the image in the claim. The image is used as the cover art for the song "Jewish Rock" by Shawn Pelofsky, released on August 24, 2018. <image:10259>
+
+_________________________
+
+
+
+SummarizeResultPrompt - QUERY:
+
+# Instructions
+In order to find evidence that helps your fact-check, you just ran a web search which yielded a Search Result. **Your task right now is to summarize the Search Result.** What to include:
+* information that might be useful for the fact-check (see Record)
+* relevant images (refer to images by inserting their reference <image:k>)
+* if available: the release date as well as the author or the publisher (e.g. the media company) of the search result.
+
+Do NOT include:
+* advertisements
+* any other information not related to the Record or the Claim
+
+Additional rules:
+* Do not add any additional information besides the information in the Search Result.
+* If the Search Result doesn't contain any relevant information for the fact-checking work, simply print one word in capital letters: "NONE".
+* Keep your writing style like in the Examples 1, 2 and 3 provided to you.
+* Try to filter out relevant information even if the search result is in a different language.
+
+# Example 1
+The search result from America Today provides several photographs of the Notre-Dame Cathedral fire on April 15, 2019. <image:i>, <image:j>, <image:k>. None of the images show the Eiffel Tower in the background. 
+
+# Example 2
+NONE
+
+# Example 3
+The Guardian discusses a report blaming the Syrian government for a toxic gas attack and condemning their use of chemical weapons. The Guardian mentions the Chemical Weapons Convention and the responsibilities of Syria under the convention. According to The Guardian, The White House condemned the Assad regime for defying the norm against chemical weapons use.
+
+# Record
+## Claim
+Claim: "<image:10259> This is an authentic image of Dwayne Johnson waring the Israeli flag in support of Israel."
+
+## Actions
+```
+reverse_search(<image:10259>)
+web_search("Dwayne Johnson Israel support")
+```
+
+# Search Result
+From [Source](https://mythdetector.com/en/dwayne-johnson-about-israel/): 
+Content: "<image:12516>](#)
+
+*   [Home](https://mythdetector.com/en/)
+    
+*   [Updates](https://mythdetector.com/en/category/update/)
+    
+*   [FACT-CHECKING](https://mythdetector.com/en/factchecker-db/)
+    
+*   [Infodemic](https://mythdetector.com/en/category/infodemic/)
+    
+*   [Un-troll](https://mythdetector.com/en/category/un-troll/)
+    
+    [![fact Checker, დეზინფორმაცია, ფაქტჩეკერი, მითების დეტექტორი](https://mythdetector.com/wp-content/uploads/2025/06/Untitled-1l-360x180.jpg "Untitled 1l | mythdetector.com")](https://mythdetector.com/en/discreditation-of-mate-devidze/)
+    
+    ### [13 Trolls Involved in the Discreditation of Mate Devidze](https://mythdetector.com/en/discreditation-of-mate-devidze/)
+    
+    [![Mzia](https://mythdetector.com/wp-content/uploads/2025/02/Untitled-1-2-360x180.png "Untitled 1 2 | mythdetector.com")](https://mythdetector.com/en/mzia-amaghlobeli-target-of-georgian-dream-pro-government-media-and-other-anti-western-actors/)
+    
+    ### [Mzia Amaghlobeli – Target of Georgian Dream, Pro-Government Media, and Other Anti-Western Actors](https://mythdetector.com/en/mzia-amaghlobeli-target-of-georgian-dream-pro-government-media-and-other-anti-western-actors/)
+    
+    [![Khareba](https://mythdetector.com/wp-content/uploads/2024/12/Gvantsa-from-New-York-Nana-from-Arizona-and-other-trolls-in-support-of-Khareba-360x180.jpg "Gvantsa from New York Nana from Arizona and other trolls in support of Khareba | mythdetector.com")](https://mythdetector.com/en/in-support-of-khareba/)
+    
+    ### [Gvantsa from New York, Nana from Arizona, and other trolls “in support” of Khareba](https://mythdetector.com/en/in-support-of-khareba/)
+    
+*   [Opinion](https://mythdetector.com/en/category/opinion-en/ "#")
+    
+    *   [All](https://mythdetector.com/en/category/opinion-en1/)
+        
+    *   [Analysis](https://mythdetector.com/en/category/opinion-en1/analysis/)
+        
+    *   [Blog](https://mythdetector.com/en/category/opinion-en1/blog/)
+        
+    *   [Guide](https://mythdetector.com/en/category/opinion-en1/guide/)
+        
+    *   [Investigation](https://mythdetector.com/en/category/opinion-en1/investigation/)
+        
+    *   [overview](https://mythdetector.com/en/category/opinion-en1/overview/)
+        
+    
+    [![Zelenskyy-of-corruption](https://mythdetector.com/wp-content/uploads/2025/08/What-does-the-Georgian-pro-government-and-Kremlin-aligned-media-rely-on-when-accusing-Zelenskyy-of-corruption-360x180.jpg "What does the Georgian pro government and Kremlin aligned media rely on when accusing Zelenskyy of corruption | mythdetector.com")](https://mythdetector.com/en/when-accusing-zelenskyy-of-corruption/)
+    
+    ### [What does the Georgian pro-government and Kremlin-aligned media rely on when accusing Zelenskyy of corruption?](https://mythdetector.com/en/when-accusing-zelenskyy-of-corruption/)
+    
+    [![fact Checker, დეზინფორმაცია, ფაქტჩეკერი, მითების დეტექტორი](https://mythdetector.com/wp-content/uploads/2025/07/Insults-on-Social-Media-A-Comparison-of-Legislation-in-Georgia-and-the-European-Union-360x180.jpg "Insults on Social Media A Comparison of Legislation in Georgia and the European Union | mythdetector.com")](https://mythdetector.com/en/a-comparison-of-legislation-in-georgia/)
+    
+    ### [Insults on Social Media – A Comparison of Legislation in Georgia and the European Union](https://mythdetector.com/en/a-comparison-of-legislation-in-georgia/)
+    
+    [![Black Sea trategy](https://mythdetector.com/wp-content/uploads/2025/07/Does-Armenia-Need-Access-to-the-Sea-to-Participate-in-the-Black-Sea-Strategy-360x180.jpg "Does Armenia Need Access to the Sea to Participate in the Black Sea Strategy | mythdetector.com")](https://mythdetector.com/en/black-sea-strategy/)
+    
+    ### [Does Armenia Need Access to the Sea to Participate in the “Black Sea Strategy”?](https://mythdetector.com/en/black-sea-strategy/)
+    
+    *   [Analysis](https://mythdetector.com/en/category/opinion-en1/analysis/)
+        
+    *   [Blog](https://mythdetector.com/en/category/opinion-en1/blog/)
+        
+    *   [Investigation](https://mythdetector.com/en/category/opinion-en1/investigation/)
+        
+    *   [overview](https://mythdetector.com/en/category/opinion-en1/overview/)
+        
+    *   [Guide](https://mythdetector.com/en/category/opinion-en1/guide/)
+        
+*   [Multimedia](https://mythdetector.com/en/category/multimedia-en/)
+    
+    *   [All](https://mythdetector.com/en/category/multimedia-en/)
+        
+    *   [Caricature](https://mythdetector.com/en/category/multimedia-en/caricature/)
+        
+    *   [Infographics](https://mythdetector.com/en/category/multimedia-en/infographics/)
+        
+    *   [Video](https://mythdetector.com/en/category/multimedia-en/video-en/)
+        
+    
+    [![ფოტომანიპულცია](https://mythdetector.com/wp-content/uploads/2024/09/461282853_827302276281610_6885978139467139525_n-360x180.jpg "461282853 827302276281610 6885978139467139525 n | mythdetector.com")](https://mythdetector.com/en/pre-electoral-disinformation-1-17-september-2024/)
+    
+    ### [Pre-Electoral Disinformation – 1-17 September, 2024](https://mythdetector.com/en/pre-electoral-disinformation-1-17-september-2024/)
+    
+    [![ფაქტების გადამოწმება, ფაქტჩექი, კოორდინირებული არაავთენტური ქცევა](https://mythdetector.com/wp-content/uploads/2023/02/ukrainian-women-8211-targets-of-russian-information-warfare1.webp "ukrainian women 8211 targets of russian information warfare1 | mythdetector.com")](https://mythdetector.com/en/ukrainian-women-targets-of-russian-information-warfare/)
+    
+    ### [Ukrainian Women – Targets of Russian Information Warfare!](https://mythdetector.com/en/ukrainian-women-targets-of-russian-information-warfare/)
+    
+    [![დეზინფორმაციის იდენტიფიცირება; მედიაწიგნიერება; ფაქტების გადამოწმება](https://mythdetector.com/wp-content/uploads/2022/09/ukrainis-tsinaaghmdeg-23-30-Augustl-360x180.png "ukrainis tsinaaghmdeg 23 30 Augustl | mythdetector.com")](https://mythdetector.com/en/russian-information-warfare-against-ukraine-disinformation-digest-23-30-august/)
+    
+    ### [RUSSIAN INFORMATION WARFARE AGAINST UKRAINE – DISINFORMATION DIGEST 23-30 AUGUST](https://mythdetector.com/en/russian-information-warfare-against-ukraine-disinformation-digest-23-30-august/)
+    
+
+[](#)
+
+No Result
+
+View All Result
+
+*   [Home](https://mythdetector.com/en/)
+    
+*   [Updates](https://mythdetector.com/en/category/update/)
+    
+*   [FACT-CHECKING](https://mythdetector.com/en/factchecker-db/)
+    
+*   [Infodemic](https://mythdetector.com/en/category/infodemic/)
+    
+*   [Un-troll](https://mythdetector.com/en/category/un-troll/)
+    
+    [![fact Checker, დეზინფორმაცია, ფაქტჩეკერი, მითების დეტექტორი](https://mythdetector.com/wp-content/uploads/2025/06/Untitled-1l-360x180.jpg "Untitled 1l | mythdetector.com")](https://mythdetector.com/en/discreditation-of-mate-devidze/)
+    
+    ### [13 Trolls Involved in the Discreditation of Mate Devidze](https://mythdetector.com/en/discreditation-of-mate-devidze/)
+    
+    [![Mzia](https://mythdetector.com/wp-content/uploads/2025/02/Untitled-1-2-360x180.png "Untitled 1 2 | mythdetector.com")](https://mythdetector.com/en/mzia-amaghlobeli-target-of-georgian-dream-pro-government-media-and-other-anti-western-actors/)
+    
+    ### [Mzia Amaghlobeli – Target of Georgian Dream, Pro-Government Media, and Other Anti-Western Actors](https://mythdetector.com/en/mzia-amaghlobeli-target-of-georgian-dream-pro-government-media-and-other-anti-western-actors/)
+    
+    [![Khareba](https://mythdetector.com/wp-content/uploads/2024/12/Gvantsa-from-New-York-Nana-from-Arizona-and-other-trolls-in-support-of-Khareba-360x180.jpg "Gvantsa from New York Nana from Arizona and other trolls in support of Khareba | mythdetector.com")](https://mythdetector.com/en/in-support-of-khareba/)
+    
+    ### [Gvantsa from New York, Nana from Arizona, and other trolls “in support” of Khareba](https://mythdetector.com/en/in-support-of-khareba/)
+    
+*   [Opinion](https://mythdetector.com/en/category/opinion-en/ "#")
+    
+    *   [All](https://mythdetector.com/en/category/opinion-en1/)
+        
+    *   [Analysis](https://mythdetector.com/en/category/opinion-en1/analysis/)
+        
+    *   [Blog](https://mythdetector.com/en/category/opinion-en1/blog/)
+        
+    *   [Guide](https://mythdetector.com/en/category/opinion-en1/guide/)
+        
+    *   [Investigation](https://mythdetector.com/en/category/opinion-en1/investigation/)
+        
+    *   [overview](https://mythdetector.com/en/category/opinion-en1/overview/)
+        
+    
+    [![Zelenskyy-of-corruption](https://mythdetector.com/wp-content/uploads/2025/08/What-does-the-Georgian-pro-government-and-Kremlin-aligned-media-rely-on-when-accusing-Zelenskyy-of-corruption-360x180.jpg "What does the Georgian pro government and Kremlin aligned media rely on when accusing Zelenskyy of corruption | mythdetector.com")](https://mythdetector.com/en/when-accusing-zelenskyy-of-corruption/)
+    
+    ### [What does the Georgian pro-government and Kremlin-aligned media rely on when accusing Zelenskyy of corruption?](https://mythdetector.com/en/when-accusing-zelenskyy-of-corruption/)
+    
+    [![fact Checker, დეზინფორმაცია, ფაქტჩეკერი, მითების დეტექტორი](https://mythdetector.com/wp-content/uploads/2025/07/Insults-on-Social-Media-A-Comparison-of-Legislation-in-Georgia-and-the-European-Union-360x180.jpg "Insults on Social Media A Comparison of Legislation in Georgia and the European Union | mythdetector.com")](https://mythdetector.com/en/a-comparison-of-legislation-in-georgia/)
+    
+    ### [Insults on Social Media – A Comparison of Legislation in Georgia and the European Union](https://mythdetector.com/en/a-comparison-of-legislation-in-georgia/)
+    
+    [![Black Sea trategy](https://mythdetector.com/wp-content/uploads/2025/07/Does-Armenia-Need-Access-to-the-Sea-to-Participate-in-the-Black-Sea-Strategy-360x180.jpg "Does Armenia Need Access to the Sea to Participate in the Black Sea Strategy | mythdetector.com")](https://mythdetector.com/en/black-sea-strategy/)
+    
+    ### [Does Armenia Need Access to the Sea to Participate in the “Black Sea Strategy”?](https://mythdetector.com/en/black-sea-strategy/)
+    
+    *   [Analysis](https://mythdetector.com/en/category/opinion-en1/analysis/)
+        
+    *   [Blog](https://mythdetector.com/en/category/opinion-en1/blog/)
+        
+    *   [Investigation](https://mythdetector.com/en/category/opinion-en1/investigation/)
+        
+    *   [overview](https://mythdetector.com/en/category/opinion-en1/overview/)
+        
+    *   [Guide](https://mythdetector.com/en/category/opinion-en1/guide/)
+        
+*   [Multimedia](https://mythdetector.com/en/category/multimedia-en/)
+    
+    *   [All](https://mythdetector.com/en/category/multimedia-en/)
+        
+    *   [Caricature](https://mythdetector.com/en/category/multimedia-en/caricature/)
+        
+    *   [Infographics](https://mythdetector.com/en/category/multimedia-en/infographics/)
+        
+    *   [Video](https://mythdetector.com/en/category/multimedia-en/video-en/)
+        
+    
+    [![ფოტომანიპულცია](https://mythdetector.com/wp-content/uploads/2024/09/461282853_827302276281610_6885978139467139525_n-360x180.jpg "461282853 827302276281610 6885978139467139525 n | mythdetector.com")](https://mythdetector.com/en/pre-electoral-disinformation-1-17-september-2024/)
+    
+    ### [Pre-Electoral Disinformation – 1-17 September, 2024](https://mythdetector.com/en/pre-electoral-disinformation-1-17-september-2024/)
+    
+    [![ფაქტების გადამოწმება, ფაქტჩექი, კოორდინირებული არაავთენტური ქცევა](https://mythdetector.com/wp-content/uploads/2023/02/ukrainian-women-8211-targets-of-russian-information-warfare1.webp "ukrainian women 8211 targets of russian information warfare1 | mythdetector.com")](https://mythdetector.com/en/ukrainian-women-targets-of-russian-information-warfare/)
+    
+    ### [Ukrainian Women – Targets of Russian Information Warfare!](https://mythdetector.com/en/ukrainian-women-targets-of-russian-information-warfare/)
+    
+    [![დეზინფორმაციის იდენტიფიცირება; მედიაწიგნიერება; ფაქტების გადამოწმება](https://mythdetector.com/wp-content/uploads/2022/09/ukrainis-tsinaaghmdeg-23-30-Augustl-360x180.png "ukrainis tsinaaghmdeg 23 30 Augustl | mythdetector.com")](https://mythdetector.com/en/russian-information-warfare-against-ukraine-disinformation-digest-23-30-august/)
+    
+    ### [RUSSIAN INFORMATION WARFARE AGAINST UKRAINE – DISINFORMATION DIGEST 23-30 AUGUST](https://mythdetector.com/en/russian-information-warfare-against-ukraine-disinformation-digest-23-30-august/)
+    
+
+[](#)
+
+No Result
+
+View All Result
+
+[](#)
+
+[![mythdetector.com](/wp-content/uploads/2022/04/Logo_Eng-w.png)](https://mythdetector.com/en/)
+
+[](#)
+
+No Result
+
+View All Result
+
+A Fake Quote Attributed to Dwayne Johnson About Israel is Spreading on Social Media
+===================================================================================
+
+[Myth Detector](https://mythdetector.com/en/author/myth-detector/)
+
+[August 5, 2025 16:12](https://mythdetector.com/en/2025/08/)
+
+Reading Time: 3 minutes
+
+**Reading Time: 3 minutes**
+
+!Dwayne Johnson <image:12517>
+
+420
+
+VIEWS
+
+Between July 27 and August 3, [Georgian](https://www.facebook.com/zaal.mamatsashvili/posts/pfbid02ZV5icDdtmZzamBaPfkzkBa1LbrBuTVdevkkWGkfsuRSLoZVoFnzTAvrBqKq47j7l)
+– and Russian-language ([1](https://www.facebook.com/photo.php?fbid=1316556280016990&set=a.11153035)
+,[2](https://www.facebook.com/osama.jadallah.184056/posts/pfbid02wfRifniQVvvaEmuEiBQJyVCJE3fH15655LARTUwPFo7ZqHZ14WibH1yQibJKgySwl)
+,[3](https://www.facebook.com/uakhit.elmar/posts/pfbid0MXLeWSWofLqNzbs3BWwYsZRGyi3YjMSj3rAnEHHXmNt864otBm3bcWkoFUZhpJGbl)
+,[4](https://www.facebook.com/mahmoudshanaa/posts/pfbid0KsnUuTX1jdD6K2EUeMxy2SMtYgxg8MoGjDwS9M35ZXTbVtkDbgZyP8mdHx6jzT4Ll)
+,[5](https://www.facebook.com/murat.sutaly/posts/pfbid0RQKJ142SfL57y26domb6q8wroQ4K3qhCzfecs42gUwpEENMVRxwnfyoM915791Dhl)
+) Facebook accounts shared a quote attributed to actor Dwayne Johnson. *   [About Us](https://mythdetector.com/en/about-us/)
+    *   [About Myth Detector](https://mythdetector.com/en/about-us/)
+        
+    *   [Our Team](https://mythdetector.com/en/our-team/)
+        
+    *   [Methodology](https://mythdetector.com/en/methodology/)
+        
+    *   [Privacy Policy](https://mythdetector.com/en/privacy-policy/)
+        
+    *   [Projects](https://mythdetector.com/en/project/)
+        
+    *   [Financial reports](https://mythdetector.com/en/financial-reports/)
+        
+*   [Code of Conduct](https://mythdetector.com/en/myth-detector-code-of-conduct/)
+    
+*   [Correction / Complaints](https://mythdetector.com/en/complaints/)
+    
+*   [Contact](https://mythdetector.com/en/contact-information/)
+    
+*   [![](<Base64-Image-Removed>)English](/#pll_switcher/)
+    *   [![](<Base64-Image-Removed>)ქართული](https://mythdetector.com/ka/duein-jonsonis-gaqhalbebuli-tsitata/)
+        
+    *   [![](<Base64-Image-Removed>)English](https://mythdetector.com/en/dwayne-johnson-about-israel/)
+        
+    *   [![](<Base64-Image-Removed>)Русский](https://mythdetector.com/ru/dueina-dzhonsona-ob-izraile/)
+        
+    *   [![](<Base64-Image-Removed>)Deutsch](https://mythdetector.com/de/)
+        
+    *   [![](<Base64-Image-Removed>)Eesti](https://mythdetector.com/et/)
+        
+    *   [![](<Base64-Image-Removed>)Հայերեն](https://mythdetector.com/hy/)
+        
+    *   [![](<Base64-Image-Removed>)Azerbaijani](https://mythdetector.com/az/)
+        
+
+[![IFCN Signatory Badge](https://cdn.ifcncodeofprinciples.poynter.org/storage/badges/86DE5673-1881-C562-233A-E4076B817186.png)](https://ifcncodeofprinciples.poynter.org/profile/myth-detector "IFCN signatory")
+ [! The quote also says that the Israeli government and its Prime Minister Benjamin Netanyahu are “heartless criminals without a drop of humanity.” The same wording has been circulated on Russian-language [pages](https://www.facebook.com/permalink.php?story_fbid=pfbid0SRBRLHpy3yUgpPSRqKTJB2yPeDom8hSAuiBumfx2B1Xexvszh93Ete8hJHQfRWx3l&id=100070217693211)
+ and [groups](https://www.facebook.com/groups/252675102582946/posts/1484859119364532)
+.
+
+![Dwayne Johnson](https://mythdetector.com/wp-content/uploads/2025/08/sotsialur-qselshi-israelthan-dakavshirebith-duein-jonsonis-gaqhalbebuli-tsitata-vrtseldeba-.png "sotsialur qselshi israelthan dakavshirebith duein jonsonis gaqhalbebuli tsitata vrtseldeba | mythdetector.com")
+
+![Dwayne Johnson](https://mythdetector.com/wp-content/uploads/2025/08/sotsialur-qselshi-israelthan-dakavshirebith-duein-jonsonis-gaqhalbebuli-tsitata-vrtseldeba-1.png "sotsialur qselshi israelthan dakavshirebith duein jonsonis gaqhalbebuli tsitata vrtseldeba 1 | mythdetector.com")
+
+**The quote attributed to Dwayne Johnson is fake. No such statement appears on any of the actor’s official pages, nor has it been reported by any reputable media outlet.**
+
+The quote about the Gaza Strip and the Israeli government, allegedly made by Dwayne Johnson, is fabricated. Johnson expressed sympathy for the families of the victims.
+
+![Dwayne Johnson](https://mythdetector.com/wp-content/uploads/2025/08/sotsialur-qselshi-israelthan-dakavshirebith-duein-jonsonis-gaqhalbebuli-tsitata-vrtseldeba-2.png "sotsialur qselshi israelthan dakavshirebith duein jonsonis gaqhalbebuli tsitata vrtseldeba 2 | mythdetector.com")
+
+__Screenshot of Dwayne Johnson’s post__
+
+Alongside Georgian and Russian-speaking users, English-language accounts have also been [sharing](https://x.com/Global_Lens_New/status/1948547511427211477)
+ the fake quote. The fabricated statement has also been [fact-checked](https://www.snopes.com/fact-check/dwayne-johnson-israel-gaza-netanyahu/)
+ by the organization Snopes.
+
+The appearance of the fake quote may be directly connected to events that occurred at the end of July. The city had been considered a key hub for the delivery of humanitarian aid in Gaza.
+
+**About the Source:**
+
+Among others, the fake quote attributed to Dwayne Johnson is being spread by a Facebook account belonging to [Zaal Mamatsashvili](https://www.facebook.com/zaal.mamatsashvili/posts/pfbid02ZV5icDdtmZzamBaPfkzkBa1LbrBuTVdevkkWGkfsuRSLoZVoFnzTAvrBqKq47j7l)
+, who [regularly](https://www.facebook.com/photo.php?fbid=898839472463244&set=pb.100070115992975.-2207520000&type=3)
+ [posts](https://www.facebook.com/photo.php?fbid=925627096451148&set=pb.100070115992975.-2207520000&type=3)
+ anti-Western and anti-opposition content, including disinformation.
+
+![Dwayne Johnson](https://mythdetector.com/wp-content/uploads/2025/08/sotsialur-qselshi-israelthan-dakavshirebith-duein-jonsonis-gaqhalbebuli-tsitata-vrtseldeba-3.png "sotsialur qselshi israelthan dakavshirebith duein jonsonis gaqhalbebuli tsitata vrtseldeba 3 | mythdetector.com")
+
+* * *
+
+The article has been written in the framework of Facebook’s fact-checking [program](https://www.facebook.com/journalismproject/programs/third-party-fact-checking)
+. 
+Read detailed appeal [instructions.](https://mythdetector.com/en/page/dispute-rating)
+
+Topic: [Politics](https://mythdetector.com/en/topic/politics/)
+
+Violation: [Fabricated quote](https://mythdetector.com/en/violation/fabricated-quote/)
+
+Country: [Israel](https://mythdetector.com/en/country/israel/)
+
+Tags: [Dwayne Johnson](https://mythdetector.com/en/tag/dwayne-johnson/)
+[Gaza Strip](https://mythdetector.com/en/tag/gaza-strip/)
+[Israel-Hamas War](https://mythdetector.com/en/tag/israel-hamas-war/)
+
+Source
+
+### Last News
+
+[!Aleko-Elisashvili <image:12518>](https://mythdetector.com/en/aleko-elisashvilis-statements/)
+
+###### [Video Manipulation Spreads About Aleko Elisashvili’s Statements on the Russia-Ukraine and August Wars](https://mythdetector.com/en/aleko-elisashvilis-statements/)
+
+August 26, 2025
+
+[!Ursula-von-der-Leyen <image:12519>](https://mythdetector.com/en/ursula-von-der-leyen-was-expelled/)
+
+###### [Disinformation claiming Ursula von der Leyen was expelled from a meeting with Trump](https://mythdetector.com/en/ursula-von-der-leyen-was-expelled/)
+
+August 26, 2025
+
+[!Zelenskyy-of-corruption <image:12520>](https://mythdetector.com/en/when-accusing-zelenskyy-of-corruption/)
+
+###### [What does the Georgian pro-government and Kremlin-aligned media rely on when accusing Zelenskyy of corruption?](https://mythdetector.com/en/when-accusing-zelenskyy-of-corruption/)
+
+August 25, 2025
+
+[!Levan-Khabeishvili <image:12521>](https://mythdetector.com/en/levan-khabeishvili-and-gia-bugadze-circulating/)
+
+###### [Photo Fabrication of Levan Khabeishvili and Gia Bugadze Circulating on Facebook](https://mythdetector.com/en/levan-khabeishvili-and-gia-bugadze-circulating/)
+
+August 22, 2025
+
+### Popular Posts
+
+*   [![Social Media Posts](https://mythdetector.com/wp-content/uploads/2025/06/Are-Over-a-Thousand-People-Arrested-Each-Month-in-the-UK-for-Social-Media-Posts.jpg "Are Over a Thousand People Arrested Each Month in the UK for Social Media Posts | mythdetector.com")](https://mythdetector.com/en/uk-for-social-media-posts/)
+    
+    ### [Are Over a Thousand People Arrested Each Month in the UK for Social Media Posts?](https://mythdetector.com/en/uk-for-social-media-posts/)
+    
+    0 shares
+    
+    [Share 0](https://www.facebook.com/sharer.php?u=https%3A%2F%2Fmythdetector.com%2Fen%2Fuk-for-social-media-posts%2F)
+     [Tweet 0](https://twitter.com/intent/tweet?text=Are%20Over%20a%20Thousand%20People%20Arrested%20Each%20Month%20in%20the%20UK%20for%20Social%20Media%20Posts%3F%20via%20%40MythDetector&url=https%3A%2F%2Fmythdetector.com%2Fen%2Fuk-for-social-media-posts%2F)
+    
+*   ### [Which Territories did Ukraine Own in 1922 When Entering the Soviet Union?](https://mythdetector.com/en/which-territories-did-ukraine-own-in-1922-when-entering-the-soviet-union/)
+    
+    0 shares
+    
+    [Share 0](https://www.facebook.com/sharer.php?u=https%3A%2F%2Fmythdetector.com%2Fen%2Fwhich-territories-did-ukraine-own-in-1922-when-entering-the-soviet-union%2F)
+     [Tweet 0](https://twitter.com/intent/tweet?text=Which%20Territories%20did%20Ukraine%20Own%20in%201922%20When%20Entering%20the%20Soviet%20Union%3F%20via%20%40MythDetector&url=https%3A%2F%2Fmythdetector.com%2Fen%2Fwhich-territories-did-ukraine-own-in-1922-when-entering-the-soviet-union%2F)
+    
+*   ### [The Shot Presented as a War Crime Committed by the Ukrainian Soldiers is actually from a Pornographic Video](https://mythdetector.com/en/the-shot-presented-as-a-war-crime-committed-by-the-ukrainian-soldiers-is-actually-from-a-pornographic-video/)
+    
+    0 shares
+    
+    [Share 0](https://www.facebook.com/sharer.php?u=https%3A%2F%2Fmythdetector.com%2Fen%2Fthe-shot-presented-as-a-war-crime-committed-by-the-ukrainian-soldiers-is-actually-from-a-pornographic-video%2F)
+     [Tweet 0](https://twitter.com/intent/tweet?text=The%20Shot%20Presented%20as%20a%20War%20Crime%20Committed%20by%20the%20Ukrainian%20Soldiers%20is%20actually%20from%20a%20Pornographic%20Video%20via%20%40MythDetector&url=https%3A%2F%2Fmythdetector.com%2Fen%2Fthe-shot-presented-as-a-war-crime-committed-by-the-ukrainian-soldiers-is-actually-from-a-pornographic-video%2F)
+    
+
+### Welcome Back!
+
+Login to your account below
+
+ Remember Me
+
+  
+
+[Forgotten Password?](#jeg_forgotform)
+
+### Retrieve your password
+
+Please enter your username or email address to reset your password.
+
+  
+
+[Log In](#jeg_loginform)
+
+### Add New Playlist
+
+\- Select Visibility -PublicPrivate
+
+    
+
+[](#)
+
+[](#)
+
+No Result
+
+View All Result
+
+*   [Home](https://mythdetector.com/en/)
+    
+*   [Updates](https://mythdetector.com/en/category/update/)
+    
+*   [Fact Checking](https://mythdetector.com/en/factchecker-db/)
+    
+*   [Infodemic](https://mythdetector.com/en/category/infodemic/)
+    
+*   [Un-troll](https://mythdetector.com/en/category/un-troll/)
+    
+*   [Opinion](https://mythdetector.com/en/category/opinion-en/)
+    *   [Analysis](https://mythdetector.com/en/category/opinion-en1/analysis/)
+        
+    *   [Blog](https://mythdetector.com/en/category/opinion-en1/blog/)
+        
+    *   [Investigation](https://mythdetector.com/en/category/opinion-en1/investigation/)
+        
+    *   [overview](https://mythdetector.com/en/category/opinion-en1/overview/)
+        
+*   [Multimedia](https://mythdetector.com/en/category/multimedia-en/)
+    *   [Video](https://mythdetector.com/en/category/multimedia-en/video-en/)
+        
+    *   [Caricature](https://mythdetector.com/en/category/multimedia-en/caricature/)
+        
+    *   [Infographics](https://mythdetector.com/en/category/multimedia-en/infographics/)
+        
+*   [English](/#pll_switcher/)
+    *   [ქართული](https://mythdetector.com/ka/duein-jonsonis-gaqhalbebuli-tsitata/)
+        
+    *   [Русский](https://mythdetector.com/ru/dueina-dzhonsona-ob-izraile/)
+        
+    *   [Deutsch](https://mythdetector.com/de/)
+        
+    *   [Eesti](https://mythdetector.com/et/)
+        
+    *   [Հայերեն](https://mythdetector.com/hy/)
+        
+    *   [Azerbaijani](https://mythdetector.com/az/)
+        
+
+[](https://www.facebook.com/mythdetector/)
+[](https://twitter.com/MythDetector)
+[](https://www.youtube.com/channel/UCbZu0KuYlXE6UF3FzvjrFVQ)
+[](https://t.me/MythDetector_bot)
+[](https://www.tiktok.com/@myth_detector)
+[](https://bsky.app/profile/mythdetector.com)
+
+© 2025 [mythdetector.com](https://mythdetector.com "გაზომე სიმართლე მითების დეტექტორთან ერთად!")
+ — გაზომე სიმართლე მითების დეტექტორთან ერთად! In the alleged quote, Johnson claims that although he has witnessed much evil in Hollywood scripts, nothing compares to what Israel is doing in Gaza. It cannot be found on any of his official accounts ([1](https://www.instagram.com/therock/)
+, [2](https://www.facebook.com/DwayneJohnson/)
+, [3](https://x.com/therock?lang=en)
+)."
+
+# Your Summary
+
+
+
+===== > RESPONSE:  < =====
+The search result from Myth Detector, published on August 5, 2025, states that a quote attributed to Dwayne Johnson about Israel is fake. The quote, which criticizes the Israeli government and its actions in Gaza, is not found on any of Johnson's official pages. The article includes images of the fabricated quote and screenshots of social media posts sharing it. <image:12517> The article also mentions that the quote has been fact-checked by Snopes.
+
+_________________________
+
+
+
+SummarizeResultPrompt - QUERY:
+
+# Instructions
+In order to find evidence that helps your fact-check, you just ran a web search which yielded a Search Result. **Your task right now is to summarize the Search Result.** What to include:
+* information that might be useful for the fact-check (see Record)
+* relevant images (refer to images by inserting their reference <image:k>)
+* if available: the release date as well as the author or the publisher (e.g. the media company) of the search result.
+
+Do NOT include:
+* advertisements
+* any other information not related to the Record or the Claim
+
+Additional rules:
+* Do not add any additional information besides the information in the Search Result.
+* If the Search Result doesn't contain any relevant information for the fact-checking work, simply print one word in capital letters: "NONE".
+* Keep your writing style like in the Examples 1, 2 and 3 provided to you.
+* Try to filter out relevant information even if the search result is in a different language.
+
+# Example 1
+The search result from America Today provides several photographs of the Notre-Dame Cathedral fire on April 15, 2019. <image:i>, <image:j>, <image:k>. None of the images show the Eiffel Tower in the background. 
+
+# Example 2
+NONE
+
+# Example 3
+The Guardian discusses a report blaming the Syrian government for a toxic gas attack and condemning their use of chemical weapons. The Guardian mentions the Chemical Weapons Convention and the responsibilities of Syria under the convention. According to The Guardian, The White House condemned the Assad regime for defying the norm against chemical weapons use.
+
+# Record
+## Claim
+Claim: "<image:10259> This is an authentic image of Dwayne Johnson waring the Israeli flag in support of Israel."
+
+## Actions
+```
+reverse_search(<image:10259>)
+web_search("Dwayne Johnson Israel support")
+```
+
+# Search Result
+From [Source](https://www.yahoo.com/news/articles/fact-check-fake-dwayne-johnson-234700368.html): 
+Content: "Cook](https://finance.yahoo.com/news/judge-delays-decision-on-trumps-move-to-fire-fed-governor-lisa-cook-heres-whats-next-194532044.html)
+    
+*   [Court rules on Trump tariffs](https://finance.yahoo.com/news/appeals-court-invalidates-many-of-trumps-tariffs-next-stop-the-supreme-court-225951836.html)
+    
+*   [COVID vaccine guidelines](https://www.yahoo.com/news/article/confused-by-the-new-covid-vaccine-guidelines-heres-what-you-need-to-know-183705404.html)
+    
+*   [Labor Day weekend travel](https://www.yahoo.com/news/us/article/labor-day-weekend-travel-tsa-warns-of-crowded-airports-plus-the-best-times-to-travel-by-car-154511274.html)
+    
+*   [Minneapolis victims identified](https://www.yahoo.com/news/us/live/minneapolis-shooting-8-year-old-fletcher-merkel-and-10-year-old-harper-moyski-identified-as-children-killed-at-catholic-school-as-families-speak-out-144431616.html)
+    
+*   [Trump closes tariff loophole](https://finance.yahoo.com/news/us-shoppers-hit-tariff-exemption-040054778.html)
+    
+
+!Getty Images <image:12522>
+
+Getty Images
+
+**Claim:**
+
+Actor Dwayne "The Rock" Johnson said, "I've seen a lot of evil in Hollywood scripts — but nothing compares to what Israel is doing in Gaza. The Israeli government and its Prime Minister Netanyahu are heartless criminals with no shred of humanity."
+
+**Rating:**
+
+[![Rating: Incorrect Attribution](https://s.yimg.com/ny/api/res/1.2/869b6qpQh_Iok4.27dFdQA--/YXBwaWQ9aGlnaGxhbmRlcjt3PTk2MDtoPTgxO2NmPXdlYnA-/https://media.snopes.com/ratings_with_text/incorrect_attribution.png)](https://www.snopes.com/fact-check/rating/incorrect_attribution/)
+
+Rating: Incorrect Attribution
+
+A rumor that circulated online in July 2025 claimed actor Dwayne "The Rock" Johnson said, "I've seen a lot of evil in Hollywood scripts — but nothing compares to what Israel is doing in Gaza. The Israeli government and its Prime Minister Netanyahu are heartless criminals with no shred of humanity."
+
+Advertisement
+
+Advertisement
+
+Advertisement
+
+Advertisement
+
+For example, on July 26, an X user [posted](https://x.com/Middle_Eastern0/status/1949132260671729963)
+ ([archived](https://archive.is/qd7V9)
+) the quote along with an image of the Israeli flag and a photo of Johnson. <image:12523>
+
+**(@Middle\_Eastern0/X)**
+
+[Users](https://x.com/aldamu_jo/status/1949323330474913815)
+ also [shared](https://www.instagram.com/chicago_first/p/DMo8Bdcs45k/dwayne-johnson-ive-seen-a-lot-of-evil-in-hollywood-scenarios-but-nothing-compare/)
+ the same quote with Johnson's name, either as text or in memes, on [Bluesky](https://bsky.app/profile/manniequinn.bsky.social/post/3luwh5v4vzk26)
+ ([archived](https://archive.is/0x4DB)
+), [Facebook](https://www.facebook.com/permalink.php?story_fbid=pfbid02napKezfMaczP7SapyBmFuPNMQZKUjnymPJ1jNSPvFEqKxaZNRBNwQiESrxqGjgR5l&id=61578021665558)
+ ([archived](https://archive.is/HUEeK)
+), [Instagram](https://www.instagram.com/reel/DMnVc00Kwl5/)
+ ([archived](https://archive.is/x7fJC)
+), [Threads](https://www.threads.com/@khaled.abd.alrahman/post/DMpwfCnoS_d)
+, [TikTok](https://www.tiktok.com/@tayotimo/video/7530960717034409222)
+, [Tumblr](https://www.tumblr.com/frickyoumarrieofficial/790255087685713920/corvid-supremacy?source=detectivejohnkimble)
+ ([archived](https://archive.is/SvvCp)
+) [and X](https://x.com/DailyIranNews/status/1949421970186977380)
+ ([archived](https://archive.is/Fqemk)
+).
+
+However, searches of [Bing](https://archive.is/eH7Vk)
+, [DuckDuckGo](https://archive.is/CmQDP)
+, [Google](https://www.google.com/search?q=%22seen+a+lot+of+evil+in+Hollywood+scripts%22&newwindow=1&sca_esv=c48dc88e8766c10f&sxsrf=AE3TifMJang1vWXWUmpDm6wrCiN2e3tJwQ%3A1753911378374&source=lnt&tbs=cdr%3A1%2Ccd_min%3A1%2F1%2F2000%2Ccd_max%3A7%2F29%2F2025&tbm=)
+ and [Yahoo](https://archive.is/ocNl6)
+ found no credible record of Johnson ever making such a statement. Had Johnson publicly spoken out against Israel and Israeli Prime Minister Benjamin Netanyahu, news media outlets worldwide would have covered the matter.
+
+Advertisement
+
+Advertisement
+
+Advertisement
+
+Advertisement
+
+Snopes contacted by email several of Johnson's representatives to ask if they could speak on the fabricated quote, and will update this story if we receive further information.
+
+Tracking down the original post
+-------------------------------
+
+According to the aforementioned searches of search-engine websites, as well as social media platforms, an X account named Global Lens News (@Global\_Lens\_New) hosted the [oldest instance](https://x.com/Global_Lens_New/status/1948547511427211477)
+ ([archived](https://archive.is/30TKZ)
+) of the purported quote. Raise your voice!" Searches of [Bing](https://archive.is/1fTyZ)
+, [DuckDuckGo](https://archive.is/QwynH)
+, [Google](https://www.google.com/search?q=oprah+%22Humanity+bleeds+in+Palestine%22&newwindow=1&sca_esv=d0444d30016ff5d8&sxsrf=AE3TifNtcp57gtDmW_hH5mAN3Vej25d2Nw%3A1753914992982&source=lnt&tbs=cdr%3A1%2Ccd_min%3A1%2F1%2F2000%2Ccd_max%3A7%2F29%2F2025&tbm=)
+ and [Yahoo](https://archive.is/WMwrR)
+ found no record of Winfrey posting or saying any such remark.
+
+'Worst-case scenario' famine crisis in Gaza
+-------------------------------------------
+
+The quote attributed to Johnson began circulating online in late July, at around the same time the Integrated Food Security Phase Classification [said](https://www.ipcinfo.org/ipcinfo-website/countries-in-focus-archive/issue-133/en/)
+ on July 29 that, due to Israel's ongoing military offensive and [blockade](https://apnews.com/article/israel-palestinians-hamas-gaza-war-news-07-30-2025-9b9b516f22e61bd1dde879733fdd97aa)
+, about 2 million Palestinians in Gaza were living in the "worst-case scenario of famine."
+
+More in World
+-------------
+
+! Marjorie Taylor Greene, R-Ga., became the first Republican in Congress to label Israel's actions in the coastal strip as a "genocide."
+
+For further reading, a previous fact-check article [examined](https://www.yahoo.com/news/fact-check-tiktok-video-wrongly-192800744.html)
+ whether a video truly showed actor Harrison Ford calling pro-Palestinian supporters a "force of nature."
+
+#### Sources:
+
+"IPC ALERT: Worst-Case Scenario of Famine Unfolding in the Gaza Strip." _Integrated Food Security Phase Classification_, 29 Jul. In that user's July 24 post, the quote had a different ending, reading, "The Israeli government and its Prime Minister Netanyahu are sons of a b\*\*\*\*."
+
+! The user's oldest post showed a July 23, 2025, date, meaning they recently created all 13 available posts.
+
+Advertisement
+
+Advertisement
+
+Advertisement
+
+Advertisement
+
+In one example of another fake quote, the user falsely [claimed](https://x.com/Global_Lens_New/status/1949222094262169845)
+ ([archived](https://archive.is/waK3I)
+) entertainment icon Oprah Winfrey said, "Humanity bleeds in Palestine because of Israel. "Greene Calls Gaza Crisis a 'Genocide,' Hinting at Rift on the Right Over Israel." _The New York Times_, 29 Jul."
+
+# Your Summary
+
+
+
+===== > RESPONSE:  < =====
+The Yahoo News article fact-checks a claim that Dwayne "The Rock" Johnson said, "I've seen a lot of evil in Hollywood scripts — but nothing compares to what Israel is doing in Gaza. The Israeli government and its Prime Minister Netanyahu are heartless criminals with no shred of humanity." The article rates the claim as "Incorrect Attribution." The article states that there is no credible record of Johnson ever making such a statement. The article also includes an image of Dwayne Johnson <image:12522> and an image of the claim with Johnson's photo and the Israeli flag <image:12523>.
+
+_________________________
+
+
+
+SummarizeResultPrompt - QUERY:
+
+# Instructions
+In order to find evidence that helps your fact-check, you just ran a web search which yielded a Search Result. **Your task right now is to summarize the Search Result.** What to include:
+* information that might be useful for the fact-check (see Record)
+* relevant images (refer to images by inserting their reference <image:k>)
+* if available: the release date as well as the author or the publisher (e.g. the media company) of the search result.
+
+Do NOT include:
+* advertisements
+* any other information not related to the Record or the Claim
+
+Additional rules:
+* Do not add any additional information besides the information in the Search Result.
+* If the Search Result doesn't contain any relevant information for the fact-checking work, simply print one word in capital letters: "NONE".
+* Keep your writing style like in the Examples 1, 2 and 3 provided to you.
+* Try to filter out relevant information even if the search result is in a different language.
+
+# Example 1
+The search result from America Today provides several photographs of the Notre-Dame Cathedral fire on April 15, 2019. <image:i>, <image:j>, <image:k>. None of the images show the Eiffel Tower in the background. 
+
+# Example 2
+NONE
+
+# Example 3
+The Guardian discusses a report blaming the Syrian government for a toxic gas attack and condemning their use of chemical weapons. The Guardian mentions the Chemical Weapons Convention and the responsibilities of Syria under the convention. According to The Guardian, The White House condemned the Assad regime for defying the norm against chemical weapons use.
+
+# Record
+## Claim
+Claim: "<image:10259> This is an authentic image of Dwayne Johnson waring the Israeli flag in support of Israel."
+
+## Actions
+```
+reverse_search(<image:10259>)
+web_search("Dwayne Johnson Israel support")
+```
+
+# Search Result
+From [Source](https://variety.com/2023/film/news/hollywood-stars-support-israel-palestine-conflict-1235749537/): 
+Content: "Oct 9, 2023 12:56pm PT
+
+Gal Gadot, Madonna, Natalie Portman, The Rock And More Hollywood Stars Support Israel Amid Deadly Hamas Attacks
+===============================================================================================================
+
+By [Elizabeth Wagmeister](https://variety.com/author/elizabeth-wagmeister/)
+
+Plus Icon
+
+### [Elizabeth Wagmeister](https://variety.com/author/elizabeth-wagmeister/)
+
+Chief Correspondent
+
+[@EWagmeister](https://twitter.com/EWagmeister)
+
+#### Latest
+
+*   [Britney Spears Says She Had an Abortion With Justin Timberlake: ‘If It Had Been Left Up to Me Alone, I Never Would Have Done It’](https://variety.com/2023/music/news/britney-spears-abortion-justin-timberlake-1235759140/)
+     2 years ago
+*   [Taylor Swift’s Eras Tour Security Guard Leaves for Israel to Join the IDF](https://variety.com/2023/music/news/taylor-swift-security-guard-leaves-israel-war-idf-1235757850/)
+     2 years ago
+*   [Dana Walden Sends Staff-Wide Memo at Disney Reflecting on ‘Worst Attack On the Jewish People Since the Holocaust’](https://variety.com/2023/film/news/dana-walden-disney-israel-hamas-war-staff-memo-1235755463/)
+     2 years ago
+
+[See All](https://variety.com/author/elizabeth-wagmeister/)
+
+[](#article-comments)
+
+*   [](https://www.facebook.com/dialog/share?title=Gal%20Gadot,%20Madonna,%20Natalie%20Portman,%20The%20Rock%20And%20More%20Hollywood%20Stars%20Support%20Israel%20Amid%20Deadly%20Hamas%20Attacks&sdk=joey&display=popup&ref=plugin&src=share_button&app_id=278816682243900&href=https://variety.com/2023/film/news/hollywood-stars-support-israel-palestine-conflict-1235749537/)
+    
+*   [](https://twitter.com/intent/post?url=https://variety.com/2023/film/news/hollywood-stars-support-israel-palestine-conflict-1235749537/&text=Gal%20Gadot%2C%20Madonna%2C%20Natalie%20Portman%2C%20The%20Rock%20And%20More%20Hollywood%20Stars%20Support%20Israel%20Amid%20Deadly%20Hamas%20Attacks&via=variety)
+    
+*   [](https://share.flipboard.com/bookmarklet/popout?v=2&url=https://variety.com/2023/film/news/hollywood-stars-support-israel-palestine-conflict-1235749537/&title=Gal%20Gadot,%20Madonna,%20Natalie%20Portman,%20The%20Rock%20And%20More%20Hollywood%20Stars%20Support%20Israel%20Amid%20Deadly%20Hamas%20Attacks)
+    
+*   [](mailto:?subject=variety%20:%20Gal%20Gadot,%20Madonna,%20Natalie%20Portman,%20The%20Rock%20And%20More%20Hollywood%20Stars%20Support%20Israel%20Amid%20Deadly%20Hamas%20Attacks&body=https://variety.com/2023/film/news/hollywood-stars-support-israel-palestine-conflict-1235749537/%20-%20Gal%20Gadot,%20Madonna,%20Natalie%20Portman,%20The%20Rock%20And%20More%20Hollywood%20Stars%20Support%20Israel%20Amid%20Deadly%20Hamas%20Attacks)
+    
+*   [](#)
+    
+*   [](https://www.linkedin.com/shareArticle?mini=1&url=https://variety.com/2023/film/news/hollywood-stars-support-israel-palestine-conflict-1235749537/&title=Gal%20Gadot,%20Madonna,%20Natalie%20Portman,%20The%20Rock%20And%20More%20Hollywood%20Stars%20Support%20Israel%20Amid%20Deadly%20Hamas%20Attacks&summary&source=variety)
+    
+*   [](https://pinterest.com/pin/create/link/?url=https://variety.com/2023/film/news/hollywood-stars-support-israel-palestine-conflict-1235749537/&description=Gal%20Gadot,%20Madonna,%20Natalie%20Portman,%20The%20Rock%20And%20More%20Hollywood%20Stars%20Support%20Israel%20Amid%20Deadly%20Hamas%20Attacks)
+    
+*   [](https://www.reddit.com/submit?url=https://variety.com/2023/film/news/hollywood-stars-support-israel-palestine-conflict-1235749537/&title=Gal%20Gadot,%20Madonna,%20Natalie%20Portman,%20The%20Rock%20And%20More%20Hollywood%20Stars%20Support%20Israel%20Amid%20Deadly%20Hamas%20Attacks)
+    
+*   [](https://www.tumblr.com/widgets/share/tool/preview?shareSource=legacy&canonicalUrl&url=https://variety.com/2023/film/news/hollywood-stars-support-israel-palestine-conflict-1235749537/&posttype=link&title=Gal%20Gadot,%20Madonna,%20Natalie%20Portman,%20The%20Rock%20And%20More%20Hollywood%20Stars%20Support%20Israel%20Amid%20Deadly%20Hamas%20Attacks)
+    
+*   [](whatsapp://send?text=Gal%20Gadot,%20Madonna,%20Natalie%20Portman,%20The%20Rock%20And%20More%20Hollywood%20Stars%20Support%20Israel%20Amid%20Deadly%20Hamas%20Attacks%20-%20https://variety.com/2023/film/news/hollywood-stars-support-israel-palestine-conflict-1235749537/)
+    
+*   
+*   [](https://variety.com/2023/film/news/hollywood-stars-support-israel-palestine-conflict-1235749537/#comments)
+    
+
+!Gal Gadot, Dwayne Johnson, Natalie Portman <image:12534>
+
+Getty
+
+Hollywood stars are showing their support for Israel, after Hamas launched a surprise attack this past weekend, firing thousands of rockets from Gaza that have killed at least 900 people with more than 100 civilians kidnapped and held hostage.
+
+The attack, which occurred early Saturday morning on Shabbat and coincided with the Jewish high holiday of Simchat Torah, is being called “Israel’s 9/11” and is the deadliest day in Israel in 50 years. Gal Gadot, Madonna, Dwayne “The Rock” Johnson, Natalie Portman, Andy Cohen, Jamie Lee Curtis, Debra Messing, Amy Schumer, Sarah Silverman, Kris Jenner, Mindy Kaling and Meghan McCain are among the celebrities who have taken to social media to stand alongside Israel.
+
+Blake Lively and Ryan Reynolds have donated $1 million to help children in Israel and Gaza, sources tell _Variety_.
+
+“I stand with Israel you should too,” [Gadot posted](https://www.instagram.com/p/CyHF5n1t322/)
+. “The growing loss of innocent Israeli and Palestinian lives is heart wrenching as this war escalates to immense proportions.”
+
+> [View this post on Instagram](https://www.instagram.com/p/CyPX7z8L-Sz/?utm_source=ig_embed&utm_campaign=loading)
+> 
+> [A post shared by Dwayne Johnson (@therock)](https://www.instagram.com/p/CyPX7z8L-Sz/?utm_source=ig_embed&utm_campaign=loading)
+
+Madonna [posted a video](https://www.instagram.com/p/CyI29uYO0bh/?hl=en)
+ on her Instagram showing footage of rockets and slain bodies on the streets of Israel. Nine American citizens are among the climbing death toll.
+
+### Popular on Variety
+
+Over the weekend, President Joe Biden condemned the terrorist attack and supported Israel’s right to defend itself. “The United States unequivocally condemns this appalling assault against Israel by Hamas terrorists from Gaza, and I made clear to Prime Minister Netanyahu that we stand ready to offer all appropriate means of support to the Government and people of Israel. “My Administration’s support for Israel’s security is rock solid and unwavering.”
+
+Israel ordered a “complete siege” of Gaza on Monday, cutting off all electricity, food and water to the area. More than 500 Palestinians have been killed by Israel airstrikes, in response to the Hamas attack.
+
+Now, some of Hollywood’s biggest stars are speaking up to lend their support to Israel. What a horrific day.”
+
+Selma Blair, who is Jewish, commented on social media to offer her unwavering support to Israel and Jews around the world. I stand with Israel.”
+
+> [View this post on Instagram](https://www.instagram.com/p/CyLj3NoRpu4/?utm_source=ig_embed&utm_campaign=loading)
+> 
+> [A post shared by NFL (@nfl)](https://www.instagram.com/p/CyLj3NoRpu4/?utm_source=ig_embed&utm_campaign=loading)
+
+Both the [NBA](https://www.instagram.com/p/CyLj3NoRpu4/)
+ and [MLB](https://twitter.com/MLB/status/1711439508825157770?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Etweet)
+ have showed strong signs of support, posting statements from the leagues’ official accounts to condemn terrorism and mourn the loss of lives in Israel.
+
+Former New York Knicks star Amar’e Stoudemire — who converted to Judaism and is an Israeli-American citizen — [posted a video on Instagram](https://twitter.com/TheDunkCentral/status/1711152518045008120?ref_src=twsrc%5Etfw%7Ctwcamp%5Etweetembed%7Ctwterm%5E1711152518045008120%7Ctwgr%5E4c100637d6e5161037d549d6c23fa66d3555bc1b%7Ctwcon%5Es1_&ref_url=https%3A%2F%2Fnypost.com%2F2023%2F10%2F09%2Famare-stoudemire-rips-politicians-blm-over-israel-silence%2F)
+ to denounce those are staying silent amid Hamas’ attacks on Jews.
+
+“I woke up, man, this morning with some disturbing news out of Israel — that Hamas kidnapping children, putting them in cages, killing women, killing the elderly. I pray that all involved are able to find a resolution.”)
+
+> [View this post on Instagram](https://www.instagram.com/p/CyOZm4gpWRN/?utm_source=ig_embed&utm_campaign=loading)
+> 
+> [A post shared by UTA (@unitedtalent)](https://www.instagram.com/p/CyOZm4gpWRN/?utm_source=ig_embed&utm_campaign=loading)
+
+The major talent agencies in Hollywood — UTA, CAA and WME — have all taken public stances to stand with Israel and to support Jews.
+
+WME said it will [match employee donations](https://www.instagram.com/p/CyO3Tcqy1nm/?hl=en&img_index=1)
+ to organizations funding relief in Israel and Palestine.
+
+The Royals have also lent their support to Israel.
+
+Britain’s King Charles condemned the “barbaric acts of terrorism,” via a spokesperson from Buckingham Palace.
+
+A spokesperson for Prince William and Kate Middleton commented: “The Prince and Princess of Wales are profoundly distressed by the devastating events that have unfolded in the past days."
+
+# Your Summary
+
+
+
+===== > RESPONSE:  < =====
+The article from Variety, published on October 9, 2023, reports that Dwayne "The Rock" Johnson, along with other Hollywood stars, has shown support for Israel amid the conflict. <image:12534> The article includes a post from Dwayne Johnson on Instagram.
+
+_________________________
+
+
+
+SummarizeSummariesPrompt - QUERY:
+
+# Instructions
+You just retrieved web sources, each one summarized under "Web Sources". **Your task right now is to summarize the web source summaries.**
+
+Always adhere to the following rules:
+* Write only one to two paragraphs.
+* Include all URLs from the listed sources. Format them as Markdown hyperlinks.
+* Do not add any additional information besides the information in the summaries.
+* Include references (<image:k>) to all relevant images.
+
+# Record
+## Claim
+Claim: "<image:10259> This is an authentic image of Dwayne Johnson waring the Israeli flag in support of Israel."
+
+## Actions
+```
+reverse_search(<image:10259>)
+web_search("Dwayne Johnson Israel support")
+```
+
+## Web Sources
+**Web Search Result**
+
+From [Source](https://mythdetector.com/en/dwayne-johnson-about-israel/): 
+Content: The search result from Myth Detector, published on August 5, 2025, states that a quote attributed to Dwayne Johnson about Israel is fake. The quote, which criticizes the Israeli government and its actions in Gaza, is not found on any of Johnson's official pages. The article includes images of the fabricated quote and screenshots of social media posts sharing it. <image:12517> The article also mentions that the quote has been fact-checked by Snopes.
+
+
+From [Source](https://www.yahoo.com/news/articles/fact-check-fake-dwayne-johnson-234700368.html): 
+Content: The Yahoo News article fact-checks a claim that Dwayne "The Rock" Johnson said, "I've seen a lot of evil in Hollywood scripts — but nothing compares to what Israel is doing in Gaza. The Israeli government and its Prime Minister Netanyahu are heartless criminals with no shred of humanity." The article rates the claim as "Incorrect Attribution." The article states that there is no credible record of Johnson ever making such a statement. The article also includes an image of Dwayne Johnson <image:12522> and an image of the claim with Johnson's photo and the Israeli flag <image:12523>.
+
+
+From [Source](https://variety.com/2023/film/news/hollywood-stars-support-israel-palestine-conflict-1235749537/): 
+Content: The article from Variety, published on October 9, 2023, reports that Dwayne "The Rock" Johnson, along with other Hollywood stars, has shown support for Israel amid the conflict. <image:12534> The article includes a post from Dwayne Johnson on Instagram.
+
+
+## Your Summary
+
+
+
+===== > RESPONSE:  < =====
+Myth Detector ([https://mythdetector.com/en/dwayne-johnson-about-israel/](https://mythdetector.com/en/dwayne-johnson-about-israel/)) states that a quote attributed to Dwayne Johnson about Israel is fake, including images of the fabricated quote <image:12517>. Yahoo News ([https://www.yahoo.com/news/articles/fact-check-fake-dwayne-johnson-234700368.html](https://www.yahoo.com/news/articles/fact-check-fake-dwayne-johnson-234700368.html)) fact-checks a claim about Dwayne "The Rock" Johnson and rates it as "Incorrect Attribution," stating there is no credible record of Johnson making such a statement, and includes an image of Johnson <image:12522> and an image of the claim with Johnson's photo and the Israeli flag <image:12523>.
+
+Variety ([https://variety.com/2023/film/news/hollywood-stars-support-israel-palestine-conflict-1235749537/](https://variety.com/2023/film/news/hollywood-stars-support-israel-palestine-conflict-1235749537/)) reports that Dwayne "The Rock" Johnson, along with other Hollywood stars, has shown support for Israel amid the conflict <image:12534>.
+
+_________________________
+
+
+
+DevelopPrompt - QUERY:
+
+# Instructions
+You just retrieved new Evidence. Now, **analyze the Claim's veracity using the evidence**. Always adhere to the following rules:
+* Focus on developing new insights. Do not repeat larger parts from the Record. Do not restate the Claim.
+* Write down your thoughts step-by-step. Whenever necessary, you may elaborate in more detail.
+* Depending on the topic's complexity, invest one to three paragraphs. The fewer, the better.
+* If you find that there is insufficient information to verify the Claim, explicitly state what information is missing.
+* If you cite web sources, always refer to them by including their URL as a Markdown hyperlink.
+* **Use information only from the recorded evidence**: Avoid inserting information that is not implied by the evidence. You may use commonsense knowledge, though.
+
+# Record
+## Claim
+Claim: "<image:10259> This is an authentic image of Dwayne Johnson waring the Israeli flag in support of Israel."
+
+## Actions
+```
+reverse_search(<image:10259>)
+web_search("Dwayne Johnson Israel support")
+```
+
+## Evidence
+### Evidence from `reverse_search`
+From [Source](https://music.apple.com/us/song/jewish-rock/1406634253): Found exact image on website with title: ‎Jewish Rock - Song by Shawn Pelofsky - Apple Music
+Content: The search result is from Apple Music and features the image in the claim. The image is used as the cover art for the song "Jewish Rock" by Shawn Pelofsky, released on August 24, 2018. <image:10259>
+
+
+### Evidence from `web_search`
+Myth Detector ([https://mythdetector.com/en/dwayne-johnson-about-israel/](https://mythdetector.com/en/dwayne-johnson-about-israel/)) states that a quote attributed to Dwayne Johnson about Israel is fake, including images of the fabricated quote <image:12517>. Yahoo News ([https://www.yahoo.com/news/articles/fact-check-fake-dwayne-johnson-234700368.html](https://www.yahoo.com/news/articles/fact-check-fake-dwayne-johnson-234700368.html)) fact-checks a claim about Dwayne "The Rock" Johnson and rates it as "Incorrect Attribution," stating there is no credible record of Johnson making such a statement, and includes an image of Johnson <image:12522> and an image of the claim with Johnson's photo and the Israeli flag <image:12523>.
+
+Variety ([https://variety.com/2023/film/news/hollywood-stars-support-israel-palestine-conflict-1235749537/](https://variety.com/2023/film/news/hollywood-stars-support-israel-palestine-conflict-1235749537/)) reports that Dwayne "The Rock" Johnson, along with other Hollywood stars, has shown support for Israel amid the conflict <image:12534>.
+
+
+# Your Analysis
+
+
+
+===== > RESPONSE:  < =====
+The image in the claim is used as the cover art for the song "Jewish Rock" by Shawn Pelofsky. The image is not an authentic image of Dwayne Johnson wearing the Israeli flag in support of Israel. The evidence also shows that a quote attributed to Dwayne Johnson about Israel is fake. However, Dwayne Johnson has shown support for Israel.
+
+Therefore, the claim is not entirely accurate.
+
+_________________________
+
+
+
+JudgePrompt - QUERY:
+
+# Instructions
+**Determine the Claim's veracity** by following these steps:
+1. Briefly summarize the key insights from the fact-check (see Record) in at most one paragraph.
+2. Write one paragraph about which one of the Decision Options applies best. Include the most appropriate decision option at the end and enclose it in backticks like `this`.
+
+
+
+
+## Decision Options
+* `not enough information`: The fact-check does not contain sufficient information to come to an conclusion. For example,there is substantial lack of evidence or the evidence is inconclusive, conflicting or self-contradictory. In the case of a lack of evidence, state which information exactly is missing. In particular, if no RESULTS or sources are available, pick this decision.
+* `false`: The claim is not factually accurate. This is the case if one of the following three conditions is met:(1) The claim is demonstrably false when it is disproven by evidence from multiple and reliable sources,(2) The claim or image is taken out of context, i.e. the origin, content and/or meaning of a statement or an image is misrepresented. For example, an old claim or an old image is mispresented in a new context in a misleading way,(3) There is not enough evidence to verify the claim or the evidence is conflicting or self-contradictory.
+* `true`: The claim is factually accurate when it is confirmed by evidence from multiple and reliable sources.
+
+# Record
+## Claim
+Claim: "<image:10259> This is an authentic image of Dwayne Johnson waring the Israeli flag in support of Israel."
+
+## Actions
+```
+reverse_search(<image:10259>)
+web_search("Dwayne Johnson Israel support")
+```
+
+## Evidence
+### Evidence from `reverse_search`
+From [Source](https://music.apple.com/us/song/jewish-rock/1406634253): Found exact image on website with title: ‎Jewish Rock - Song by Shawn Pelofsky - Apple Music
+Content: The search result is from Apple Music and features the image in the claim. The image is used as the cover art for the song "Jewish Rock" by Shawn Pelofsky, released on August 24, 2018. <image:10259>
+
+
+### Evidence from `web_search`
+Myth Detector ([https://mythdetector.com/en/dwayne-johnson-about-israel/](https://mythdetector.com/en/dwayne-johnson-about-israel/)) states that a quote attributed to Dwayne Johnson about Israel is fake, including images of the fabricated quote <image:12517>. Yahoo News ([https://www.yahoo.com/news/articles/fact-check-fake-dwayne-johnson-234700368.html](https://www.yahoo.com/news/articles/fact-check-fake-dwayne-johnson-234700368.html)) fact-checks a claim about Dwayne "The Rock" Johnson and rates it as "Incorrect Attribution," stating there is no credible record of Johnson making such a statement, and includes an image of Johnson <image:12522> and an image of the claim with Johnson's photo and the Israeli flag <image:12523>.
+
+Variety ([https://variety.com/2023/film/news/hollywood-stars-support-israel-palestine-conflict-1235749537/](https://variety.com/2023/film/news/hollywood-stars-support-israel-palestine-conflict-1235749537/)) reports that Dwayne "The Rock" Johnson, along with other Hollywood stars, has shown support for Israel amid the conflict <image:12534>.
+
+
+## Elaboration
+The image in the claim is used as the cover art for the song "Jewish Rock" by Shawn Pelofsky. The image is not an authentic image of Dwayne Johnson wearing the Israeli flag in support of Israel. The evidence also shows that a quote attributed to Dwayne Johnson about Israel is fake. However, Dwayne Johnson has shown support for Israel.
+
+Therefore, the claim is not entirely accurate.
+
+
+# Your Judgement
+
+
+
+===== > RESPONSE:  < =====
+The image in the claim is used as cover art for a song and is not an authentic image of Dwayne Johnson wearing the Israeli flag in support of Israel. While Dwayne Johnson has shown support for Israel, the image is not authentic.
+
+`false`
+_________________________
+
+
+
+SummarizeDocPrompt - QUERY:
+
+# Instructions
+You are provided with the record of a fact-check. It contains the Claim to be verified and a documentation of all the fact-checking work along the gathered evidence. Your task is to **summarize the fact-check**. That is, you provide a concise, one-paragraph justification for the final VERDICT based on the knowledge from the Record. Note:
+* Be truthful, brief, do not add any additional information besides the information given in the Record. 
+* Link key sources in your summary. Use Markdown notation for that. You may link them in-line.
+* Don't state the Claim again. Rather focus on the key insights of the fact-check.
+* Simply print just the summary.
+
+# Record
+## Claim
+Claim: "<image:10259> This is an authentic image of Dwayne Johnson waring the Israeli flag in support of Israel."
+
+## Actions
+```
+reverse_search(<image:10259>)
+web_search("Dwayne Johnson Israel support")
+```
+
+## Evidence
+### Evidence from `reverse_search`
+From [Source](https://music.apple.com/us/song/jewish-rock/1406634253): Found exact image on website with title: ‎Jewish Rock - Song by Shawn Pelofsky - Apple Music
+Content: The search result is from Apple Music and features the image in the claim. The image is used as the cover art for the song "Jewish Rock" by Shawn Pelofsky, released on August 24, 2018. <image:10259>
+
+
+### Evidence from `web_search`
+Myth Detector ([https://mythdetector.com/en/dwayne-johnson-about-israel/](https://mythdetector.com/en/dwayne-johnson-about-israel/)) states that a quote attributed to Dwayne Johnson about Israel is fake, including images of the fabricated quote <image:12517>. Yahoo News ([https://www.yahoo.com/news/articles/fact-check-fake-dwayne-johnson-234700368.html](https://www.yahoo.com/news/articles/fact-check-fake-dwayne-johnson-234700368.html)) fact-checks a claim about Dwayne "The Rock" Johnson and rates it as "Incorrect Attribution," stating there is no credible record of Johnson making such a statement, and includes an image of Johnson <image:12522> and an image of the claim with Johnson's photo and the Israeli flag <image:12523>.
+
+Variety ([https://variety.com/2023/film/news/hollywood-stars-support-israel-palestine-conflict-1235749537/](https://variety.com/2023/film/news/hollywood-stars-support-israel-palestine-conflict-1235749537/)) reports that Dwayne "The Rock" Johnson, along with other Hollywood stars, has shown support for Israel amid the conflict <image:12534>.
+
+
+## Elaboration
+The image in the claim is used as the cover art for the song "Jewish Rock" by Shawn Pelofsky. The image is not an authentic image of Dwayne Johnson wearing the Israeli flag in support of Israel. The evidence also shows that a quote attributed to Dwayne Johnson about Israel is fake. However, Dwayne Johnson has shown support for Israel.
+
+Therefore, the claim is not entirely accurate.
+
+
+## Final Judgement
+The image in the claim is used as cover art for a song and is not an authentic image of Dwayne Johnson wearing the Israeli flag in support of Israel. While Dwayne Johnson has shown support for Israel, the image is not authentic.
+
+`false`
+
+## Summary
+
+
+
+===== > RESPONSE:  < =====
+The image in the claim is used as cover art for a song and is not an authentic image of Dwayne Johnson wearing the Israeli flag. While Dwayne Johnson has shown support for Israel, the image is not authentic, as confirmed by a reverse image search ([Source](https://music.apple.com/us/song/jewish-rock/1406634253)) and fact-check articles ([Myth Detector](https://mythdetector.com/en/dwayne-johnson-about-israel/) and [Yahoo News](https://www.yahoo.com/news/articles/fact-check-fake-dwayne-johnson-234700368.html)).
+
+_________________________
+
+
+

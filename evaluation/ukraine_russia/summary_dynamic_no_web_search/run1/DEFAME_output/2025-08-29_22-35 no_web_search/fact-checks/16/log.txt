@@ -1,0 +1,56 @@
+Extracting claims from Content: In a press conference on December 9, 2024 Ukrainian President Volodymyr Zelenskyy said: 'I will ask Biden to invite me to NATO ... there's no point in talking to Trump.'
+'Claim: "In a press conference on December 9, 2024 Ukrainian President Volodymyr Zelenskyy said: 'I will ask Biden to invite me to NATO ... there's no point in talking to Trump.'"'
+Verifying Claim: "In a press conference on December 9, 2024 Ukrainian President Volodymyr Zelenskyy said: 'I will ask Biden to invite me to NATO ... there's no point in talking to Trump.'"
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Volodymyr Zelenskyy press conference December 9 2024')
+Skipping unsupported website: https://ua.usembassy.gov/remarks-by-president-biden-and-president-volodymyr-zelenskyy-of-ukraine-in-joint-press-conference/
+Got 3 new web source(s):
+	1. https://www.voanews.com/a/zelenskyy-says-he-is-open-to-negotiated-end-to-war-with-russia-/7893258.html
+	2. https://united24media.com/latest-news/zelenskyy-at-least-6-ukrainian-mayors-held-in-russian-captivity-4247
+	3. https://www.theguardian.com/world/2025/jan/09/volodymyr-zelenskyy-urges-westen-allies-not-to-drop-the-ball-when-trump-returns-ukraine
+Useful result: From [Source](https://www.voanews.com/a/zelenskyy-says-he-is-open-to-negotiated-end-to-war-with-russia-/7893258.html): 
+Content: The Voice of America published an image of Volodymyr Zelenskyy. <image:6185>
+
+Useful result: From [Source](https://united24media.com/latest-news/zelenskyy-at-least-6-ukrainian-mayors-held-in-russian-captivity-4247): 
+Content: The search result contains an image of Volodymyr Zelenskyy at a press conference in Kyiv on December 2, 2024. <image:6186>
+
+Useful result: From [Source](https://www.theguardian.com/world/2025/jan/09/volodymyr-zelenskyy-urges-westen-allies-not-to-drop-the-ball-when-trump-returns-ukraine): 
+Content: The Guardian published an article on January 9, 2025, about Volodymyr Zelenskyy. The article includes an image of Zelenskyy. <image:6187>
+
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Volodymyr Zelenskyy Biden NATO Trump')
+Got 3 new web source(s):
+	1. https://www.cfr.org/article/trump-and-zelenskyy-meet-sidelines-nato-summit
+	2. https://www.pbs.org/newshour/politics/trump-calls-ukraines-zelenskyy-a-dictator-tensions-rise-over-russia-war
+	3. https://www.npr.org/2025/02/20/g-s1-49858/reversing-u-s-policy-trump-attacks-zelenskyy-blames-ukraine-for-war-with-russia
+Useful result: From [Source](https://www.cfr.org/article/trump-and-zelenskyy-meet-sidelines-nato-summit): 
+Content: The search result contains an image of Volodymyr Zelenskyy and Donald Trump shaking hands. <image:6191>
+
+Useful result: From [Source](https://www.pbs.org/newshour/politics/trump-calls-ukraines-zelenskyy-a-dictator-tensions-rise-over-russia-war): 
+Content: The PBS article includes an image of Volodymyr Zelenskyy and Donald Trump. <image:6192>
+
+Useful result: From [Source](https://www.npr.org/2025/02/20/g-s1-49858/reversing-u-s-policy-trump-attacks-zelenskyy-blames-ukraine-for-war-with-russia): 
+Content: The search result from NPR, published on February 20, 2025, contains an image of Volodymyr Zelenskyy and Donald Trump. <image:6193>
+
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Volodymyr Zelenskyy December 9 2024 press conference transcript')
+Skipping unsupported website: https://it.usembassy.gov/president-biden-and-president-volodymyr-zelenskyy-of-ukraine-in-joint-press-conference/
+Got 3 new web source(s):
+	1. https://www.nbcnews.com/politics/politics-news/read-full-transcript-ukrainian-president-volodymyr-zelenskyy-interview-rcna192389
+	2. https://www.cnn.com/world/europe/volodymyr-zelensky-fast-facts
+	3. https://abcnews.go.com/International/ukrainian-president-volodymyr-zelenskyy/story?id=83085078
+Useful result: From [Source](https://www.nbcnews.com/politics/politics-news/read-full-transcript-ukrainian-president-volodymyr-zelenskyy-interview-rcna192389): 
+Content: NBC News published a transcript of an interview with Volodymyr Zelenskyy. <image:6199>
+
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Volodymyr Zelenskyy NATO Trump Biden quotes')
+Skipping unsupported website: https://www.facebook.com/firstpostin/posts/world-leaders-reacted-strongly-after-a-tense-oval-office-exchange-between-ukrain/1118870733607246/
+Failed to download or open image: cannot identify image file <_io.BytesIO object at 0x7ffee17ca660>
+Got 3 new web source(s):
+	1. https://kansasreflector.com/2024/06/28/golf-abortion-jan-6-and-felonies-biden-and-trumps-memorable-debate-moments/
+	2. https://mythdetector.com/en/donald-trump-about-meeting/
+	3. https://www.politico.com/news/2025/02/19/trump-attacks-zelenskyy-as-a-dictator-without-elections-who-duped-us-00204881
+The claim 'In a press conference on December 9, 2024 Ukrainian President Volodymyr Zelenskyy said: 'I will ask Biden to invite me to NATO ... there's no point in talking to Trump.'' is false.
+Justification: The claim is not supported by the evidence. While images and transcripts of Volodymyr Zelenskyy's interviews and meetings with Biden and Trump exist, a search for the specific quote attributed to him on December 9, 2024, yielded no results. Therefore, the claim is unverified.
+
+So, the overall veracity is: false
+Fact-check took 0:53 min.

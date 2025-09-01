@@ -1,0 +1,26 @@
+Extracting claims from Content: <image:54> The image shows a screenshot of an authentic question from Israel's Channel 12 public opinion poll: 'Do you agree with the claim that a solder is allowed to rape a prisoner with his hands tied?'
+'Claim: "<image:54> The image shows a screenshot of an authentic question from Israel's Channel 12 public opinion poll: 'Do you agree with the claim that a solder is allowed to rape a prisoner with his hands tied?'"'
+Verifying Claim: "<image:54> The image shows a screenshot of an authentic question from Israel's Channel 12 public opinion poll: 'Do you agree with the claim that a solder is allowed to rape a prisoner with his hands tied?'"
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Channel 12 Israel public opinion poll soldier rape prisoner')
+Skipping fact-checking website: https://www.reuters.com/fact-check/israeli-opinion-poll-mistranslated-saying-soldiers-should-rape-prisoners-2024-08-30/
+Skipping fact-checking website: https://factcheck.afp.com/doc.afp.com.36F888X
+Skipping unsupported website: https://x.com/EyeonPalestine/status/1821283984397234616?lang=en
+Got 3 new web source(s):
+	1. September 04, 2024 https://cedmohub.eu/posts-share-doctored-prisoner-abuse-poll-from-israeli-tv-channel/
+	2. August 09, 2024 https://komonews.com/news/nation-world/squad-member-shares-fake-poll-claiming-most-israelis-support-rape-of-palestinians-rashida-tlaib-noura-erakat-alex-zeldin-ritchie-torres-israel-palestine-hamas-war-terrorism-gaza
+	3. August 19, 2024 https://mondoweiss.net/2024/08/65-of-israeli-jews-oppose-criminal-prosecution-for-soldiers-suspected-of-raping-palestinian-detainees/
+Useful result: From [Source](https://cedmohub.eu/posts-share-doctored-prisoner-abuse-poll-from-israeli-tv-channel/): 
+Content: The search result from AFP Malaysia states that the image is a doctored screenshot of a poll from Israel's Channel 12. The original video was published on May 27, 2022, and the altered image was shared on Facebook on August 11. The original question was about the government's reliance on supporters of terrorism. The altered image shows a question about whether a soldier is allowed to rape a prisoner. Channel 12 has debunked the false posts. <image:4637>, <image:4624>, <image:4622>. The article was published on September 4, 2024.
+
+Useful result: From [Source](https://komonews.com/news/nation-world/squad-member-shares-fake-poll-claiming-most-israelis-support-rape-of-palestinians-rashida-tlaib-noura-erakat-alex-zeldin-ritchie-torres-israel-palestine-hamas-war-terrorism-gaza): 
+Content: The search result from The National Desk states that a doctored image of a poll was shared on social media, falsely claiming that most Israelis support the rape of Palestinians. The original image was a poll from Channel 12, but the question was altered. The article mentions that the image was shared by Noura Erakat and Rashida Tlaib. The article was published on August 9, 2024.
+
+Useful result: From [Source](https://mondoweiss.net/2024/08/65-of-israeli-jews-oppose-criminal-prosecution-for-soldiers-suspected-of-raping-palestinian-detainees/): 
+Content: The search result from Mondoweiss.net, published on August 19, 2024, discusses a poll showing that 65% of Jewish Israelis oppose criminal prosecution for soldiers suspected of raping Palestinian detainees. The poll was published by the Israeli Institute for National Security Studies. The article also mentions a Channel 12 interview where an Israeli journalist lamented that gang rape is not an approved policy in Israeli detention centers.
+
+The claim '<image:54> The image shows a screenshot of an authentic question from Israel's Channel 12 public opinion poll: 'Do you agree with the claim that a solder is allowed to rape a prisoner with his hands tied?'' is false.
+Justification: The image is a manipulated screenshot of a poll from Israel's Channel 12, as reported by [AFP Malaysia](https://cedmohub.eu/posts-share-doctored-prisoner-abuse-poll-from-israeli-tv-channel/) and [The National Desk](https://komonews.com/news/nation-world/squad-member-shares-fake-poll-claiming-most-israelis-support-rape-of-palestinians-rashida-tlaib-noura-erakat-alex-zeldin-ritchie-torres-israel-palestine-hamas-war-terrorism-gaza). The original poll's subject was different, and the altered image falsely presents a question about soldier rape. Channel 12 has debunked the false posts.
+
+So, the overall veracity is: false
+Fact-check took 1:04 min.

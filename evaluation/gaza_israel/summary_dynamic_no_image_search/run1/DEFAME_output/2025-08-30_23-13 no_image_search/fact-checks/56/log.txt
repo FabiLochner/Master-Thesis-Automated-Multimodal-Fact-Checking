@@ -1,0 +1,41 @@
+Extracting claims from Content: <image:10226> This image shows an Iphone that exploded during the pager attacks on Hezbollah devices in Lebanon in September 2024, blowing up random people.
+'Claim: "<image:10226> This image shows an Iphone that exploded during the pager attacks on Hezbollah devices in Lebanon in September 2024, blowing up random people."'
+Verifying Claim: "<image:10226> This image shows an Iphone that exploded during the pager attacks on Hezbollah devices in Lebanon in September 2024, blowing up random people."
+Not enough information yet. Continuing fact-check...
+Searching google_vision with query: ImageQuery(limit=3, start_date=None, end_date=None, search_type='reverse', text='', image=<defame.common.medium.Image object at 0x7ffeca350790>)
+Skipping unsupported website: https://x.com/AFRICANDEMOC/status/1836447123425919234
+Got 6 new web source(s):
+	1. https://itc.ua/en/news/not-just-pagers-iphones-laptops-electronic-locks-and-other-devices-exploded-in-lebanon-today/
+	2. https://english.factcrescendo.com/international/viral-image-showing-explosion-of-iphone-is-unrelated-to-the-blasts-in-lebanon-619150/
+	3. https://www.shahrekhabar.com/news/172667172087865
+	4. https://iusnews.ir/fa/news-details/516899/-%D8%B9%DA%A9%D8%B3%7C-%D8%A2%DB%8C%D9%81%D9%88%D9%86-%D9%85%D9%86%D9%81%D8%AC%D8%B1-%D8%B4%D8%AF%D9%87-%D8%AF%D8%B1-%D8%A8%DB%8C%D8%B1%D9%88%D8%AA/
+	5. https://www.almashhad.news/290990
+	6. https://observers.rfi.fr/fa/%D8%B1%D8%A7%D8%B3%D8%AA%DB%8C-%D8%A2%D8%B2%D9%85%D8%A7%DB%8C%DB%8C/20240930-%D8%A2%DB%8C%D9%81%D9%88%D9%86-%D9%BE%D9%86%D9%84-%D8%AE%D9%88%D8%B1%D8%B4%DB%8C%D8%AF%DB%8C-%D8%AA%D8%A8%D9%84%D8%AA-%D9%86%D9%87-%D8%A7%DB%8C%D9%86-%D9%88%D8%B3%D8%A7%DB%8C%D9%84-%D8%A7%D9%84%DA%A9%D8%AA%D8%B1%D9%88%D9%86%DB%8C%DA%A9%DB%8C-%D8%AF%D8%B1-%D9%84%D8%A8%D9%86%D8%A7%D9%86-%D9%85%D9%86%D9%81%D8%AC%D8%B1-%D9%86%D8%B4%D8%AF%D9%86%D8%AF
+Useful result: From [Source](https://itc.ua/en/news/not-just-pagers-iphones-laptops-electronic-locks-and-other-devices-exploded-in-lebanon-today/): Found exact image on website with title: Not just pagers: iPhones, laptops, electronic locks and other devices ...
+Content: The search result from itc.ua, published on September 18, 2024, discusses explosions in Lebanon, primarily in Beirut, targeting Hezbollah members. The explosions involved various electronic devices, including iPhones, laptops, and electronic locks. The article includes the image <image:11494> of an exploded iPhone, which matches the image in the claim. The article mentions 14 dead and 450 injured, with the attacks targeting Hezbollah members.
+
+Useful result: From [Source](https://english.factcrescendo.com/international/viral-image-showing-explosion-of-iphone-is-unrelated-to-the-blasts-in-lebanon-619150/): Found exact image on website with title: Viral image showing explosion of iPhone is unrelated to the blasts in ...
+Content: The image <image:10226> is unrelated to the claim. The image shows an iPhone explosion that occurred in Maadi, Egypt, in 2021, not in Lebanon. <image:11531>, <image:11532>, <image:11533>, <image:11534>. The fact-check was published by Fact Crescendo.
+
+Useful result: From [Source](https://www.shahrekhabar.com/news/172667172087865): Found exact image on website with title: عکس/ آیفون منفجر شده در بیروت - شهر خبر
+Content: The search result from Shahr-e Khabar contains the exact image <image:10226> and the title "Photo/Exploded iPhone in Beirut".
+
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Hezbollah Lebanon September 2024 phone explosion')
+Got 3 new web source(s):
+	1. October 11, 2024 https://lieber.westpoint.edu/well-it-depends-explosive-pagers-attack-revisited/
+	2. https://en.wikipedia.org/wiki/2024_Lebanon_electronic_device_attacks
+	3. September 18, 2024 https://www.hrw.org/news/2024/09/18/lebanon-exploding-pagers-harmed-hezbollah-civilians
+Useful result: From [Source](https://lieber.westpoint.edu/well-it-depends-explosive-pagers-attack-revisited/): 
+Content: The search result from Lieber Institute of Law & Warfare discusses the explosive pager attacks on Hezbollah operatives in Lebanon and Syria on September 17, 2024. The article mentions that Israel is strongly suggested to be responsible for the explosions. The explosions resulted in injuries and deaths, with twelve people reportedly killed. The article was published on October 11, 2024.
+
+Useful result: From [Source](https://en.wikipedia.org/wiki/2024_Lebanon_electronic_device_attacks): 
+Content: The search result from Wikipedia discusses the 2024 Lebanon electronic device attacks, which occurred in September 2024. The attacks involved explosions of pagers and walkie-talkies, resulting in numerous casualties. The attacks were attributed to Israel and targeted Hezbollah members. The first wave of explosions on September 17, 2024, targeted pagers, killing at least 12 people and injuring over 2,750. The second wave on September 18, 2024, targeted walkie-talkies, killing at least 30 people and injuring over 750. <image:10226> is a picture of the remnants of a Hezbollah pager that exploded on September 17, 2024. The attacks were described as a major blow to Hezbollah, and Hezbollah retaliated by firing rockets at northern Israel.
+
+Useful result: From [Source](https://www.hrw.org/news/2024/09/18/lebanon-exploding-pagers-harmed-hezbollah-civilians): 
+Content: Human Rights Watch published an article on September 18, 2024, about exploding pagers in Lebanon on September 17, 2024, which resulted in at least 12 deaths and 2,800 injuries. <image:10226> is not present in the search result.
+
+The claim '<image:10226> This image shows an Iphone that exploded during the pager attacks on Hezbollah devices in Lebanon in September 2024, blowing up random people.' is false.
+Justification: The claim is false. While there were attacks in Lebanon in September 2024, they involved explosions of pagers and walkie-talkies, not iPhones. The image depicts an iPhone, but there is no evidence to support the claim that it exploded during the attacks.
+
+So, the overall veracity is: false
+Fact-check took 6:52 min.

@@ -1,0 +1,41 @@
+Extracting claims from Content: <image:10201> This image shows an Israeli helicopter shot down by Hezbollah amid clashes in Southern Lebanon on November 23, 2024.
+'Claim: "<image:10201> This image shows an Israeli helicopter shot down by Hezbollah amid clashes in Southern Lebanon on November 23, 2024."'
+Verifying Claim: "<image:10201> This image shows an Israeli helicopter shot down by Hezbollah amid clashes in Southern Lebanon on November 23, 2024."
+Not enough information yet. Continuing fact-check...
+Searching google_vision with query: ImageQuery(limit=3, start_date=None, end_date=None, search_type='reverse', text='', image=<defame.common.medium.Image object at 0x7ffed9648df0>)
+Got 4 new web source(s):
+	1. https://www.timesofisrael.com/hamas-tried-to-down-an-idf-helicopter-during-fighting-this-month-report/
+	2. https://www.assahifa.com/english/middle-east/hamas-armed-wing-targets-israeli-helicopter-in-eastern-gaza/
+	3. https://www.arabnews.pk/node/1472406/middle-east
+	4. https://srilanka.factcrescendo.com/english/al-bulayhi-did-not-ask-messi-to-embrace-islam/
+Useful result: From [Source](https://www.timesofisrael.com/hamas-tried-to-down-an-idf-helicopter-during-fighting-this-month-report/): Found exact image on website with title: Islamic Jihad tried to down an IDF chopper during fighting this month
+Content: The Times of Israel published an article about a Palestinian Islamic Jihad cell attempting to down an Israeli military helicopter near Gaza City in May 2019. The article includes an image of an Israeli helicopter shooting flares over the Gaza Strip <image:10340>. The article also mentions that an Israeli Yas’ur transport helicopter was downed by Hezbollah fire during the Second Lebanon War in the summer of 2006.
+
+Useful result: From [Source](https://www.assahifa.com/english/middle-east/hamas-armed-wing-targets-israeli-helicopter-in-eastern-gaza/): Found exact image on website with title: Hamas' armed wing targets Israeli helicopter in eastern Gaza
+Content: The search result from Assahifa.com, published on October 26, 2023, reports that Hamas' Al-Qassam Brigades announced they struck an Israeli helicopter with a missile in east central Gaza. <image:10201> is present in the article.
+
+Useful result: From [Source](https://www.arabnews.pk/node/1472406/middle-east): Found exact image on website with title: Gaza under fire: Israeli jets strike Hamas targets after Tel Aviv attack
+Content: The search result from Arab News PK contains an article about an Israeli helicopter shooting flares over the Gaza Strip on March 25, 2019. <image:10348>. The article also includes an image of an Israeli helicopter shooting flares over the Gaza Strip on March 25, 2019. <image:10201>. The article was updated on March 26, 2019.
+
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Israeli helicopter shot down Hezbollah November 23 2024')
+Skipping fact-checking website: https://factcheck.afp.com/doc.afp.com.36NF2UW
+Skipping unsupported website: https://www.facebook.com/StandWithUs/videos/breaking-dramatic-footage-of-israeli-air-force-helicopter-shooting-down-explosiv/1281038736403820/
+Skipping fact-checking website: https://newsmeter.in/fact-check/israeli-copter-shot-down-in-south-lebanon-no-viral-image-is-old-739516
+Got 3 new web source(s):
+	1. November 02, 2024 https://www.timesofisrael.com/130-rockets-10-drones-fired-at-israel-saturday-helicopter-downs-drone-south-of-haifa/
+	2. November 27, 2024 https://factly.in/an-old-2019-photo-of-hamass-attack-on-israeli-helicopter-shared-as-hezbollah-attack-on-israel/
+	3. November 03, 2024 https://www.aerotime.aero/articles/israeli-apache-helicopter-downs-kamikaze-drone-with-gunfire-video
+Useful result: From [Source](https://www.timesofisrael.com/130-rockets-10-drones-fired-at-israel-saturday-helicopter-downs-drone-south-of-haifa/): 
+Content: The Times of Israel reports that on November 2, 2024, an IDF helicopter intercepted a Hezbollah drone near Haifa. <image:10201> The article also mentions that over 130 rockets were fired at northern Israel from Lebanon on Saturday, and 10 drones targeted the country.
+
+Useful result: From [Source](https://factly.in/an-old-2019-photo-of-hamass-attack-on-israeli-helicopter-shared-as-hezbollah-attack-on-israel/): 
+Content: The search result from Factly states that the image in the claim is from 2019 and shows a Hamas attack on an Israeli helicopter. <image:10381>, <image:10383>. The article also mentions that there are no recent reports of Israeli helicopters being shot down by Hezbollah.
+
+Useful result: From [Source](https://www.aerotime.aero/articles/israeli-apache-helicopter-downs-kamikaze-drone-with-gunfire-video): 
+Content: Aerotime.aero published an article on November 3, 2024, about an Israeli AH-64 Apache helicopter shooting down a drone on November 2, 2024, south of Haifa, Israel. The drone was launched by Hezbollah. <image:10201> is not shown in the article.
+
+The claim '<image:10201> This image shows an Israeli helicopter shot down by Hezbollah amid clashes in Southern Lebanon on November 23, 2024.' is false.
+Justification: The claim is false. The image in the claim is from 2019 and shows an Israeli helicopter shooting flares, not being shot down by Hezbollah in November 2024, as reported by [Factly](https://factly.in/an-old-2019-photo-of-hamass-attack-on-israeli-helicopter-shared-as-hezbollah-attack-on-israel/). There are no recent reports of an Israeli helicopter being shot down by Hezbollah.
+
+So, the overall veracity is: false
+Fact-check took 1:52 min.

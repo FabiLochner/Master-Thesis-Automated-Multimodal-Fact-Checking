@@ -1,0 +1,22 @@
+Extracting claims from Content: <image:11> This image shows a screenshot of an authentic Fox News article with the title 'Psychological and Information Warfare Center of Ukraine received $140,000,000 per month from USAID'.
+'Claim: "<image:11> This image shows a screenshot of an authentic Fox News article with the title 'Psychological and Information Warfare Center of Ukraine received $140,000,000 per month from USAID'."'
+Verifying Claim: "<image:11> This image shows a screenshot of an authentic Fox News article with the title 'Psychological and Information Warfare Center of Ukraine received $140,000,000 per month from USAID'."
+Not enough information yet. Continuing fact-check...
+Searching google_vision with query: ImageQuery(limit=3, start_date=None, end_date=None, search_type='reverse', text='', image=<defame.common.medium.Image object at 0x7ffed17c4850>)
+Got 0 new web source(s):
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Fox News Aubrie Spady Ukraine USAID')
+Skipping fact-checking website: https://www.reuters.com/fact-check/fox-news-did-not-report-usaid-funded-information-warfare-ukraine-2025-02-27/
+Got 2 new web source(s):
+	1. https://gwaramedia.com/en/debunking-russian-fakes-no-fox-news-didnt-write-about-ukraines-center-for-information-operations-receiving-140m-per-month-from-the-usaid/
+	2. https://www.foxnews.com/person/s/aubrie-spady
+Useful result: From [Source](https://gwaramedia.com/en/debunking-russian-fakes-no-fox-news-didnt-write-about-ukraines-center-for-information-operations-receiving-140m-per-month-from-the-usaid/): 
+Content: The search result is from gwaramedia.com and debunks the claim that Fox News wrote an article about the Psychological and Information Warfare Center of Ukraine receiving $140,000,000 per month from USAID. The article was allegedly written by Aubrie Spady and published on February 10, 2025. <image:7063>
+
+Useful result: From [Source](https://www.foxnews.com/person/s/aubrie-spady): 
+Content: The search result is a Fox News article by Aubrie Spady. <image:7064>
+
+The claim '<image:11> This image shows a screenshot of an authentic Fox News article with the title 'Psychological and Information Warfare Center of Ukraine received $140,000,000 per month from USAID'.' is false.
+Justification: The claim is false. A source ([Source](https://gwaramedia.com/en/debunking-russian-fakes-no-fox-news-didnt-write-about-ukraines-center-for-information-operations-receiving-140m-per-month-from-the-usaid/)) debunks the assertion that Fox News published an article about the Psychological and Information Warfare Center of Ukraine receiving $140,000,000 per month from USAID.
+
+So, the overall veracity is: false
+Fact-check took 0:12 min.

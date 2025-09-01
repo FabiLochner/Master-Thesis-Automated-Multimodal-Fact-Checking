@@ -1,0 +1,57 @@
+Extracting claims from Content: <image:63> This image shows Mayar Hamida (9 years old) and Bilal Hamida (6 years old) who were killed by Israel along with their mother and grandmother at Al-Jaoni UN school in Al-Nuseirat refugee camp on July, 6 2024.
+'Claim: "<image:63> This image shows Mayar Hamida (9 years old) and Bilal Hamida (6 years old) who were killed by Israel along with their mother and grandmother at Al-Jaoni UN school in Al-Nuseirat refugee camp on July, 6 2024."'
+Verifying Claim: "<image:63> This image shows Mayar Hamida (9 years old) and Bilal Hamida (6 years old) who were killed by Israel along with their mother and grandmother at Al-Jaoni UN school in Al-Nuseirat refugee camp on July, 6 2024."
+Not enough information yet. Continuing fact-check...
+Most likely location: United Arab Emirates
+Top 10 locations: United Arab Emirates, Jordan, Pakistan, Tunisia, Palestine, Israel, Malta, India, Nigeria, Rwanda
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Mayar Hamida Bilal Hamida Al-Nuseirat refugee camp')
+Skipping unsupported website: https://m.facebook.com/story.php/?story_fbid=1026200285749760&id=100050793940186
+Skipping unsupported website: https://www.instagram.com/p/C9HiUfntUsZ/
+Skipping unsupported website: https://twitter.com/WAFANewsEnglish/status/1809833597525704994
+Skipping fact-checking website: https://www.misbar.com/en/factcheck/2024/07/15/israel-tragically-killed-the-hamida-siblings-in-october-2023-not-recently
+Skipping unsupported website: https://www.tiktok.com/@ibrahimihsaanmohamed/video/7388571769789025543
+Got 2 new web source(s):
+	1. https://www.cnn.com/2024/07/19/middleeast/gaza-neighborhood-israeli-hostages-intl-cmd
+	2. https://en.wikipedia.org/wiki/Nuseirat_rescue_and_massacre
+Useful result: From [Source](https://www.cnn.com/2024/07/19/middleeast/gaza-neighborhood-israeli-hostages-intl-cmd): 
+Content: The CNN article, published on July 19, 2024, discusses an Israeli operation in the Nuseirat refugee camp in Gaza on June 8, 2024, during which hostages were rescued. The article mentions that over 270 Palestinians were killed in Nuseirat on June 8, according to Gaza health ministry officials. <image:63> is not mentioned in the article.
+
+Useful result: From [Source](https://en.wikipedia.org/wiki/Nuseirat_rescue_and_massacre): 
+Content: The Wikipedia article discusses the 2024 Nuseirat rescue operation and massacre, which took place on June 8, 2024, in the Nuseirat refugee camp in the Gaza Strip. The operation, conducted by the Israel Defense Forces, aimed to rescue Israeli hostages. According to the Gaza Health Ministry, at least 276 Palestinians were killed and over 698 were injured. The article also mentions international reactions to the event, including condemnations from Cuba, Egypt, Indonesia, Jordan, Kuwait, Lebanon, and the EU. <image:63> is not mentioned in the search result.
+
+Not enough information yet. Continuing fact-check...
+INFO: Dropping action 'geolocate' as it was already performed.
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Mayar Hamida Bilal Hamida killed Israel Al-Jaoni UN school')
+Skipping unsupported website: https://www.facebook.com/story.php/?story_fbid=800663015588733&id=100069351265250
+Skipping unsupported website: https://www.instagram.com/p/C9HiUfntUsZ/
+Skipping unsupported website: https://twitter.com/WAFANewsEnglish/status/1809833597525704994
+Skipping fact-checking website: https://www.misbar.com/en/factcheck/2024/07/15/israel-tragically-killed-the-hamida-siblings-in-october-2023-not-recently
+Got 3 new web source(s):
+	1. https://countercurrents.org/2024/07/israel-bombs-un-school-in-nuseirat/
+	2. https://www.aljazeera.com/news/2021/8/24/global-outcry-over-israels-targeting-of-palestinian-children
+	3. November 18, 2023 https://english.palinfo.com/Zionist-Terrorism/2023/11/18/82751/
+Useful result: From [Source](https://countercurrents.org/2024/07/israel-bombs-un-school-in-nuseirat/): 
+Content: The search result from Countercurrents.org, published on July 7, 2024, discusses an Israeli bombing of a UN school in the Nuseirat refugee camp on July 6, 2024. The article states that Mayar Haidar (9 years old) and Bilal Hamida (6 years old) were killed in the bombing, along with their grandmother. <image:63> The article also mentions that the school was sheltering displaced people.
+
+Useful result: From [Source](https://www.aljazeera.com/news/2021/8/24/global-outcry-over-israels-targeting-of-palestinian-children): 
+Content: The Al Jazeera article, published on August 24, 2021, discusses the targeting of Palestinian children by Israeli forces. It mentions the deaths of Muhammad Abu Sara (11 years old) on July 28, and Imad Khaled Saleh Hashash (15 years old). The article also mentions the arrest and detention of Samer Tamimi (11 years old). <image:63> is not mentioned in the article.
+
+Useful result: From [Source](https://english.palinfo.com/Zionist-Terrorism/2023/11/18/82751/): 
+Content: The article from Palinfo, published on November 18, 2023, reports that Mayar and Bilal Hamida, children of Palestine TV correspondent Nidal Hamida, were killed along with their mother in October 2023 by Israeli airstrikes. <image:9987>, <image:9988>, <image:9989>, <image:9990>.
+
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Al-Nuseirat refugee camp July 6 2024 deaths')
+Got 2 new web source(s):
+	1. July 06, 2024 https://www.aljazeera.com/news/2024/7/6/israeli-attack-on-un-school-used-as-shelter-in-gaza-kills-at-least-16
+	2. June 09, 2024 https://news.un.org/en/story/2024/06/1150856
+Useful result: From [Source](https://www.aljazeera.com/news/2024/7/6/israeli-attack-on-un-school-used-as-shelter-in-gaza-kills-at-least-16): 
+Content: Al Jazeera reports that on July 6, 2024, an Israeli attack on a UN-run school sheltering displaced people in the Nuseirat refugee camp in central Gaza killed at least 16 Palestinians and injured over 75. <image:1>. The article mentions the attack occurred at al-Jaouni school. The Israeli army stated they struck "several terrorists" in the area. The article also mentions a previous attack in early June on an UN-linked school in Nuseirat refugee camp that killed at least 40 people. The article was published on July 6, 2024, by Al Jazeera Staff.
+
+Useful result: From [Source](https://news.un.org/en/story/2024/06/1150856): 
+Content: The UN News article, published on June 9, 2024, discusses the aftermath of an Israeli military operation in the Nuseirat refugee camp on June 8, 2024, where over 270 people, including children, were killed. The article also mentions an Israeli attack on a UN school-turned shelter in the same area on June 6, 2024, which resulted in the deaths of dozens, including 14 children. <image:k>
+
+The claim '<image:63> This image shows Mayar Hamida (9 years old) and Bilal Hamida (6 years old) who were killed by Israel along with their mother and grandmother at Al-Jaoni UN school in Al-Nuseirat refugee camp on July, 6 2024.' is false.
+Justification: The claim that Mayar and Bilal Hamida were killed by Israel on July 6, 2024, is partially supported by evidence. While some sources, like Countercurrents.org ([https://countercurrents.org/2024/07/israel-bombs-un-school-in-nuseirat/](https://countercurrents.org/2024/07/israel-bombs-un-school-in-nuseirat/)) and Al Jazeera ([https://www.aljazeera.com/news/2024/7/6/israeli-attack-on-un-school-used-as-shelter-in-gaza-kills-at-least-16](https://www.aljazeera.com/news/2024/7/6/israeli-attack-on-un-school-used-as-shelter-in-gaza-kills-at-least-16)), support the claim, other sources, such as Palinfo, report the children were killed in October 2023.
+
+So, the overall veracity is: false
+Fact-check took 7:20 min.
+Worker 0 is done and terminates gracefully.

@@ -1,0 +1,36 @@
+Extracting claims from Content: <image:58> This image shows the aftermath of a Houthi attack on Tel Aviv, Israel, in July 2024.
+'Claim: "<image:58> This image shows the aftermath of a Houthi attack on Tel Aviv, Israel, in July 2024."'
+Verifying Claim: "<image:58> This image shows the aftermath of a Houthi attack on Tel Aviv, Israel, in July 2024."
+Not enough information yet. Continuing fact-check...
+Searching google_vision with query: ImageQuery(limit=3, start_date=None, end_date=None, search_type='reverse', text='', image=<defame.common.medium.Image object at 0x7ffed02e71f0>)
+Skipping unsupported website: https://www.youtube.com/watch?v=1CxSPQyi-8Y
+Got 3 new web source(s):
+	1. https://www.lbcgroup.tv/news/middleeastnews/784660/explosion-in-tel-aviv-building-bomb-disposal-experts-on-site-israeli-p/en
+	2. https://www.timesofisrael.com/liveblog-october-7-2023/
+	3. https://www.india.com/news/israel-hezbollah-war-hezbollah-fires-20-rockets-at-israels-capital-tel-aviv-horrific-videos-go-viral-watch-7342129/
+Useful result: From [Source](https://www.lbcgroup.tv/news/middleeastnews/784660/explosion-in-tel-aviv-building-bomb-disposal-experts-on-site-israeli-p/en): Found exact image on website with title: Explosion in Tel Aviv building, bomb disposal experts on site
+Content: The search result from LBC Group states that an explosion occurred in a building in Tel Aviv, Israel, and that bomb disposal experts were on the scene. The article was published on July 19, 2024. <image:2339>
+
+Useful result: From [Source](https://www.timesofisrael.com/liveblog-october-7-2023/): Found exact image on website with title: Oct. 7: Hamas terrorists burst through border, slaughter Israelis in ...
+Content: The Times of Israel reports on a massive rocket attack from Gaza, with sirens in Jerusalem and other areas. <image:2375> The IDF declared a state of war, with 2,200 rockets fired and Hamas terrorists infiltrating Israel from land, sea, and air. The IDF is carrying out airstrikes, and there are reports of casualties, including a woman killed in Gderot. The IDF has ordered residents near the Gaza border to stay in their homes. The article also mentions a call for blood donations and the cancellation of school in central and southern Israel. The article was published on October 7, 2023.
+Useful result: From [Source](https://www.india.com/news/israel-hezbollah-war-hezbollah-fires-20-rockets-at-israels-capital-tel-aviv-horrific-videos-go-viral-watch-7342129/): Found exact image on website with title: Hezbollah fires 20 rockets at Israel's capital Tel Aviv, horrific videos ...
+Content: The search result from india.com, published on October 22, 2024, reports that Hezbollah fired 20 rockets at Tel Aviv. <image:58> is included in the article.
+
+Got 3 new web source(s):
+	1. https://en.wikipedia.org/wiki/2024_Houthi_drone_attack_on_Israel
+	2. July 19, 2024 https://www.reuters.com/world/middle-east/israeli-military-says-tel-aviv-blast-apparently-caused-by-drone-2024-07-19/
+	3. December 20, 2024 https://www.nytimes.com/2024/12/20/world/middleeast/israel-tel-aviv-missile-yemen.html
+Useful result: From [Source](https://en.wikipedia.org/wiki/2024_Houthi_drone_attack_on_Israel): 
+Content: The search result from Wikipedia discusses the 2024 Houthi drone attack on Tel Aviv, Israel, which occurred on July 19, 2024. <image:58> The attack targeted an apartment building and resulted in one death and ten injuries. The Houthis claimed responsibility, stating it was the beginning of the fifth phase of their conflict with Israel. Hezbollah hailed the event as a victory.
+
+Useful result: From [Source](https://www.reuters.com/world/middle-east/israeli-military-says-tel-aviv-blast-apparently-caused-by-drone-2024-07-19/): 
+Content: Reuters reports that a drone attack on Tel Aviv, Israel, on July 19, 2024, was claimed by the Yemen-based Houthi militia. The attack killed one man and wounded four others. <image:131> The article includes a photograph of a building damaged in the attack.
+
+Useful result: From [Source](https://www.nytimes.com/2024/12/20/world/middleeast/israel-tel-aviv-missile-yemen.html): 
+Content: The New York Times reports that Houthi militants launched a missile from Yemen that landed in Tel Aviv early Saturday morning. The attack, which occurred in December 2024, caused at least 16 injuries. The missile landed in a playground. <image:58>
+
+The claim '<image:58> This image shows the aftermath of a Houthi attack on Tel Aviv, Israel, in July 2024.' is true.
+Justification: The image depicts the aftermath of an explosion in Tel Aviv, which aligns with the claim of a Houthi attack. The image was used in an article about an explosion in Tel Aviv on July 19, 2024, and web searches confirm a Houthi drone attack on the same date ([https://en.wikipedia.org/wiki/2024_Houthi_drone_attack_on_Israel](https://en.wikipedia.org/wiki/2024_Houthi_drone_attack_on_Israel)).
+
+So, the overall veracity is: true
+Fact-check took 1:42 min.

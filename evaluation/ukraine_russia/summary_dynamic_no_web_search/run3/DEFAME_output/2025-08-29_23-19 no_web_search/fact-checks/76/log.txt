@@ -1,0 +1,24 @@
+Extracting claims from Content: While serving as US President in 2024, Joe Biden ordered the US forces to prepare for possible nuclear confrontations with Russia, China, and North Korea.
+'Claim: "While serving as US President in 2024, Joe Biden ordered the US forces to prepare for possible nuclear confrontations with Russia, China, and North Korea."'
+Verifying Claim: "While serving as US President in 2024, Joe Biden ordered the US forces to prepare for possible nuclear confrontations with Russia, China, and North Korea."
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Joe Biden nuclear confrontation Russia China North Korea')
+Skipping unsupported website: https://www.youtube.com/watch?v=zcUn7RJrDEE
+Got 3 new web source(s):
+	1. https://www.nytimes.com/2024/08/20/us/politics/biden-nuclear-china-russia.html
+	2. https://www.theguardian.com/us-news/article/2024/aug/20/biden-nuclear-strategy-china-threat
+	3. https://www.tasnimnews.com/en/news/2024/08/21/3145608/biden-approves-nuclear-strategy-focusing-on-china-report
+Useful result: From [Source](https://www.nytimes.com/2024/08/20/us/politics/biden-nuclear-china-russia.html): 
+Content: The New York Times published an article in 2024. <image:7351>
+
+Useful result: From [Source](https://www.theguardian.com/us-news/article/2024/aug/20/biden-nuclear-strategy-china-threat): 
+Content: The Guardian published an article on August 20, 2024, discussing Joe Biden and nuclear strategy with China. <image:7352>
+
+Useful result: From [Source](https://www.tasnimnews.com/en/news/2024/08/21/3145608/biden-approves-nuclear-strategy-focusing-on-china-report): 
+Content: Tasnim News published an article on August 21, 2024, about Biden approving a nuclear strategy focusing on China. <image:7353>
+
+The claim 'While serving as US President in 2024, Joe Biden ordered the US forces to prepare for possible nuclear confrontations with Russia, China, and North Korea.' is false.
+Justification: In August 2024, during Joe Biden's presidency, reports from sources like The New York Times ([https://www.nytimes.com/2024/08/20/us/politics/biden-nuclear-china-russia.html](https://www.nytimes.com/2024/08/20/us/politics/biden-nuclear-china-russia.html)) and The Guardian ([https://www.theguardian.com/us-news/article/2024/aug/20/biden-nuclear-strategy-china-threat](https://www.theguardian.com/us-news/article/2024/aug/20/biden-nuclear-strategy-china-threat)) indicated that the Biden administration was developing a nuclear strategy focused on China. However, the provided evidence does not mention Russia or North Korea in the context of preparing for nuclear confrontations.
+
+So, the overall veracity is: false
+Fact-check took 0:18 min.

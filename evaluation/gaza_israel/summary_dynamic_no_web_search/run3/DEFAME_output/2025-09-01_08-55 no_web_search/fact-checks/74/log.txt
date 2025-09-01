@@ -1,0 +1,45 @@
+Extracting claims from Content: Netanyahu’s son Yair was killed in a drone attack on October 19, 2024 that targeted the Israeli PM’s home in Caesarea, Israel.
+'Claim: "Netanyahu’s son Yair was killed in a drone attack on October 19, 2024 that targeted the Israeli PM’s home in Caesarea, Israel."'
+Verifying Claim: "Netanyahu’s son Yair was killed in a drone attack on October 19, 2024 that targeted the Israeli PM’s home in Caesarea, Israel."
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Yair Netanyahu drone attack October 19 2024')
+Skipping fact-checking website: https://newsmeter.in/fact-check/no-yair-netanyahu-was-not-assassinated-in-drone-attack-on-israeli-pms-home-737767
+Got 3 new web source(s):
+	1. https://www.timesofisrael.com/drones-moans-and-groans-hezbollah-attacks-pms-home-petty-politics-continue-unintercepted/
+	2. https://www.cnn.com/2024/07/19/middleeast/israel-tel-aviv-explosion-us-embassy-intl-hnk
+	3. https://www.aljazeera.com/news/2024/1/7/victory-photo-will-beirut-killings-help-embattled-netanyahu-politically
+Useful result: From [Source](https://www.timesofisrael.com/drones-moans-and-groans-hezbollah-attacks-pms-home-petty-politics-continue-unintercepted/): 
+Content: The Times of Israel provides an image of people standing behind a barrier. <image:14290>
+
+Useful result: From [Source](https://www.cnn.com/2024/07/19/middleeast/israel-tel-aviv-explosion-us-embassy-intl-hnk): 
+Content: The search result from CNN contains an image of a person in uniform looking out of a broken window. <image:14291>
+
+Not enough information yet. Continuing fact-check...
+Got 2 new web source(s):
+	1. https://www.timesofisrael.com/assailing-military-yair-netanyahu-claims-treason-in-leadup-to-october-7-attack/
+	2. https://www.theguardian.com/world/2020/aug/27/yair-netanyahu-israels-crown-prince-leads-fight-to-protect-father
+Useful result: From [Source](https://www.timesofisrael.com/assailing-military-yair-netanyahu-claims-treason-in-leadup-to-october-7-attack/): 
+Content: The Times of Israel provides an image of Yair Netanyahu <image:8180>.
+
+Useful result: From [Source](https://www.theguardian.com/world/2020/aug/27/yair-netanyahu-israels-crown-prince-leads-fight-to-protect-father): 
+Content: The Guardian published an article about Yair Netanyahu and his father, Benjamin Netanyahu, with an image of them together <image:8181>.
+
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='drone attack Caesarea Israel October 19 2024')
+Got 3 new web source(s):
+	1. https://www.nytimes.com/2024/10/19/world/middleeast/drone-netanyahu-israel-caesarea.html
+	2. https://www.aljazeera.com/news/2024/10/19/drone-hits-netanyahus-home-as-hezbollah-rockets-target-northern-israel
+	3. https://www.jns.org/hezbollah-drone-scored-direct-hit-on-netanyahu-home/
+Useful result: From [Source](https://www.nytimes.com/2024/10/19/world/middleeast/drone-netanyahu-israel-caesarea.html): 
+Content: The New York Times ([Source](https://www.nytimes.com/2024/10/19/world/middleeast/drone-netanyahu-israel-caesarea.html)) provides an image of armed police officers <image:14305>.
+
+Useful result: From [Source](https://www.aljazeera.com/news/2024/10/19/drone-hits-netanyahus-home-as-hezbollah-rockets-target-northern-israel): 
+Content: Al Jazeera reports that a drone hit Netanyahu's home on October 19, 2024. <image:14306>
+
+Useful result: From [Source](https://www.jns.org/hezbollah-drone-scored-direct-hit-on-netanyahu-home/): 
+Content: JNS ([Source](https://www.jns.org/hezbollah-drone-scored-direct-hit-on-netanyahu-home/)) provides an image of a building with broken windows <image:14307>.
+
+The claim 'Netanyahu’s son Yair was killed in a drone attack on October 19, 2024 that targeted the Israeli PM’s home in Caesarea, Israel.' is false.
+Justification: The fact-check confirms a drone attack on Netanyahu's home in Caesarea on October 19, 2024, as reported by Al Jazeera, but finds no evidence to support the claim that Yair Netanyahu was killed in the attack.
+
+So, the overall veracity is: false
+Fact-check took 2:44 min.

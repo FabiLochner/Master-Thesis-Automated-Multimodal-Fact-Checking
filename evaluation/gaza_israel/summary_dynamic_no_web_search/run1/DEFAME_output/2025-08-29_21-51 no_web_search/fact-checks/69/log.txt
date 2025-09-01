@@ -1,0 +1,64 @@
+Extracting claims from Content: <image:42> This image shows Israel military forces entering the town of Tasil in the countryside of Daraa on foot in February 2025.
+'Claim: "<image:42> This image shows Israel military forces entering the town of Tasil in the countryside of Daraa on foot in February 2025."'
+Verifying Claim: "<image:42> This image shows Israel military forces entering the town of Tasil in the countryside of Daraa on foot in February 2025."
+Not enough information yet. Continuing fact-check...
+Most likely location: Palestine
+Top 10 locations: Palestine, Israel, Jordan, United Arab Emirates, Albania, Andorra, Argentina, Australia, Austria, Bangladesh
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Israel military forces Tasil Daraa')
+Failed to download or open image: cannot identify image file <_io.BytesIO object at 0x7ffed95b18a0>
+Failed to download or open image: cannot identify image file <_io.BytesIO object at 0x7ffed95b3c40>
+Got 3 new web source(s):
+	1. https://www.france24.com/en/middle-east/20250403-syria-nine-killed-israel-bombardment-attack-daraa
+	2. https://english.aawsat.com/arab-world/5178173-israeli-forces-infiltrate-several-syrian-villages-quneitra-and-daraa
+	3. https://www.syriahr.com/en/359137/
+Useful result: From [Source](https://english.aawsat.com/arab-world/5178173-israeli-forces-infiltrate-several-syrian-villages-quneitra-and-daraa): 
+Content: The search result from Asharq Al-Awsat discusses Israeli forces infiltrating several Syrian villages in Quneitra and Daraa. <image:7729>
+
+Got 3 new web source(s):
+	1. https://www.nournews.ir/ar/tag/46494/%D8%B9%D9%86%DB%8C%D9%81%D8%A9
+	2. https://ansarollah.com.ye/archives/%D9%85%D9%86-%D9%81%D9%84%D8%B3%D8%B7%D9%8A%D9%86?page=1175
+	3. https://fa.alalam.ir/news/6728803/%D9%86%D9%85%D8%A7%DB%8C%D9%86%D8%AF%D9%87-%D9%84%DB%8C%D8%A8%DB%8C-%D8%AF%D8%B1-%D9%86%D8%B4%D8%B3%D8%AA-%D8%B3%D8%A7%D8%B2%D9%85%D8%A7%D9%86-%D9%87%D9%85%DA%A9%D8%A7%D8%B1%DB%8C-%D8%A7%D8%B3%D9%84%D8%A7%D9%85%DB%8C-%D9%85%D8%B1%D8%B2-%D8%A8%D8%A7%D8%B2-%D8%B4%D9%88%D8%AF-%D8%AF%D8%B1-%D8%BA%D8%B2%D9%87-%D8%A8%D8%A7-%D8%A7
+Useful result: From [Source](https://www.nournews.ir/ar/tag/46494/%D8%B9%D9%86%DB%8C%D9%81%D8%A9): Found exact image on website with title: عنیفة :: نورنیوز
+Content: The search result contains the exact image <image:42> and the title "عنيفة :: نورنیوز". The website also contains an image of Israeli soldiers <image:6580>. The article was published on 2021/7/28.
+
+Useful result: From [Source](https://ansarollah.com.ye/archives/%D9%85%D9%86-%D9%81%D9%84%D8%B3%D8%B7%D9%8A%D9%86?page=1175): Found exact image on website with title: فلسطين - أنصار الله
+Content: The search result is from the website "ansarollah.com.ye" and contains the exact image provided in the claim. The website is about Palestine and the articles are from March 2018. <image:42>
+
+Useful result: From [Source](https://fa.alalam.ir/news/6728803/%D9%86%D9%85%D8%A7%DB%8C%D9%86%D8%AF%D9%87-%D9%84%DB%8C%D8%A8%DB%8C-%D8%AF%D8%B1-%D9%86%D8%B4%D8%B3%D8%AA-%D8%B3%D8%A7%D8%B2%D9%85%D8%A7%D9%86-%D9%87%D9%85%DA%A9%D8%A7%D8%B1%DB%8C-%D8%A7%D8%B3%D9%84%D8%A7%D9%85%DB%8C-%D9%85%D8%B1%D8%B2-%D8%A8%D8%A7%D8%B2-%D8%B4%D9%88%D8%AF-%D8%AF%D8%B1-%D8%BA%D8%B2%D9%87-%D8%A8%D8%A7-%D8%A7): Found exact image on website with title: نماینده لیبی در نشست سازمان همکاری اسلامی: مرز باز شود در غزه با ...
+Content: The search result is from Alalam News, published on October 19, 2023. It contains an image <image:42> and discusses a statement by the Libyan representative at the Organization of Islamic Cooperation meeting. The representative stated that if the borders were opened, they would fight in Gaza with the weapons they have in Libya.
+
+Not enough information yet. Continuing fact-check...
+INFO: Dropping action 'geolocate' as it was already performed.
+INFO: Dropping action 'reverse_search' as it was already performed.
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Israel military forces Tasil Daraa February 2025')
+Failed to download or open image: cannot identify image file <_io.BytesIO object at 0x7ffed961ca40>
+Got 2 new web source(s):
+	1. https://syriadirect.org/israel-in-syria-permanent-fortifications-and-attempts-to-win-over-residents/
+	2. https://www.longwarjournal.org/archives/2025/03/israel-strikes-gunmen-in-southern-syria-damascus-says-civilians-killed.php
+Useful result: From [Source](https://syriadirect.org/israel-in-syria-permanent-fortifications-and-attempts-to-win-over-residents/): 
+Content: The search result from Syria Direct discusses Israeli military presence in Syria. <image:7735>
+
+Useful result: From [Source](https://www.longwarjournal.org/archives/2025/03/israel-strikes-gunmen-in-southern-syria-damascus-says-civilians-killed.php): 
+Content: The Long War Journal discusses Israeli strikes in southern Syria. <image:7736>
+
+Not enough information yet. Continuing fact-check...
+INFO: Dropping action 'geolocate' as it was already performed.
+INFO: Dropping action 'reverse_search' as it was already performed.
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Tasil Daraa February 2025')
+Skipping fact-checking website: https://www.misbar.com/en/factcheck/2025/02/27/photo-not-related-israeli-forces%E2%80%99-recent-incursion-southern-syria
+Failed to download or open image: cannot identify image file <_io.BytesIO object at 0x7ffed95522f0>
+Got 3 new web source(s):
+	1. https://www.memri.org/jttm/protesting-israeli-strikes-syria-actions-gaza-syrians-chant-nation-wants-jihad-declared
+	2. https://www.criticalthreats.org/analysis/iran-update-february-3-2025
+	3. https://etanasyria.org/syria-update-19-22-february-2025/
+Useful result: From [Source](https://www.memri.org/jttm/protesting-israeli-strikes-syria-actions-gaza-syrians-chant-nation-wants-jihad-declared): 
+Content: The search result from MEMRI discusses protests in Syria against Israeli strikes. <image:7745>
+
+Useful result: From [Source](https://etanasyria.org/syria-update-19-22-february-2025/): 
+Content: The search result from Etana Syria discusses security incidents and other developments in Syria from February 19-22, 2025. The map shows incidents in Daraa province. <image:7746>
+
+The claim '<image:42> This image shows Israel military forces entering the town of Tasil in the countryside of Daraa on foot in February 2025.' is false.
+Justification: The claim is unverified. While evidence confirms Israeli military presence in the region and incidents in Daraa province during the specified timeframe, there's no direct link to the image depicting Israeli forces entering Tasil. The provided sources, including reports from Asharq Al-Awsat and a map from Etana Syria ([https://etanasyria.org/syria-update-19-22-february-2025/](https://etanasyria.org/syria-update-19-22-february-2025/)), do not provide the necessary details to confirm the claim.
+
+So, the overall veracity is: false
+Fact-check took 1:00 min.

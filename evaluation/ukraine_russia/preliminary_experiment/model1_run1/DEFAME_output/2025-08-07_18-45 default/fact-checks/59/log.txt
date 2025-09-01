@@ -1,0 +1,42 @@
+Extracting claims from Content: <image:18> This image shows an authentic list realeased by Ukraine showing US politicians taking bribes from Ukraine. The highest bribe was 92 Million US-$ for Joe Biden.
+'Claim: "<image:18> This image shows an authentic list realeased by Ukraine showing US politicians taking bribes from Ukraine. The highest bribe was 92 Million US-$ for Joe Biden."'
+Verifying Claim: "<image:18> This image shows an authentic list realeased by Ukraine showing US politicians taking bribes from Ukraine. The highest bribe was 92 Million US-$ for Joe Biden."
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Joe Biden Mitch McConnell Nancy Pelosi Ukraine bribes')
+Skipping fact-checking website: https://www.politifact.com/factchecks/2025/feb/04/facebook-posts/claim-says-biden-others-took-millions-in-kickbacks/
+Skipping unsupported website: https://crawford.house.gov/posts/house-republicans-call-for-investigation-into-dem-senators-who-tried-to-get-ukraine-to-give-info-on-trump
+Skipping unsupported website: https://www.youtube.com/watch?v=SfTDVm1BHM0
+Skipping unsupported website: https://www.congress.gov/bill/117th-congress/house-resolution/57/text
+Got 3 new web source(s):
+	1. October 03, 2023 https://mynbc15.com/news/nation-world/corruption-concerns-cloud-ukraine-aid-commitments-congress-democrat-republican-democracy-authoritarian-mccarthy-mcconnell-putin-zelensky-oversight-graft
+	2. September 23, 2019 https://www.king5.com/article/news/nation-world/congress-wants-answers-on-trumps-dig-for-biden-dirt-ukraine/507-66cb4ea8-686a-44da-b304-3a7d70712d68
+	3. September 27, 2019 https://www.bbc.co.uk/news/world-us-canada-49842600
+Useful result: From [Source](https://mynbc15.com/news/nation-world/corruption-concerns-cloud-ukraine-aid-commitments-congress-democrat-republican-democracy-authoritarian-mccarthy-mcconnell-putin-zelensky-oversight-graft): 
+Content: The search result from mynbc15.com discusses concerns about corruption related to Ukraine aid commitments. It mentions a confidential document obtained by POLITICO that suggests Western support may hinge on efforts to crack down on corruption. The article also mentions Joe Biden and Mitch McConnell in the context of supporting aid to Ukraine. The article was published on October 3rd, 2023. <image:2345>
+
+Useful result: From [Source](https://www.bbc.co.uk/news/world-us-canada-49842600): 
+Content: The BBC News article discusses the impeachment inquiry into President Donald Trump, focusing on his contacts with Ukraine. It mentions Speaker Nancy Pelosi and Mitch McConnell. The article also discusses allegations against Joe Biden regarding his actions in Ukraine. <image:2347>, <image:2354>, <image:2346>, <image:2355>, <image:2352>, <image:2349>. The article was published on September 24, 2019.
+
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='US politicians Ukraine bribes list')
+Skipping unsupported website: https://oversightdemocrats.house.gov/fact-v-fiction-the-firing-of-ukraine-prosecutor-general-viktor-shokin
+Got 3 new web source(s):
+	1. https://www.amazon.com/All-Presidents-Money-Investigating-Foreign/dp/0063420015
+	2. https://kkc.com/corruption-index/corruption-in-ukraine/
+	3. https://www.aljazeera.com/news/2025/8/2/ukraine-says-defence-sector-corruption-scheme-uncovered
+Useful result: From [Source](https://www.amazon.com/All-Presidents-Money-Investigating-Foreign/dp/0063420015): 
+Content: The search result is the book "All the President's Money" by James Comer. <image:2356>
+
+Useful result: From [Source](https://kkc.com/corruption-index/corruption-in-ukraine/): 
+Content: The search result from kkc.com contains an image of a person in a suit with money in their pocket. <image:2357>
+
+Useful result: From [Source](https://www.aljazeera.com/news/2025/8/2/ukraine-says-defence-sector-corruption-scheme-uncovered): 
+Content: Al Jazeera reports on a corruption scheme uncovered in Ukraine's defense sector. <image:2358>
+
+Not enough information yet. Continuing fact-check...
+Searching google_vision with query: ImageQuery(limit=3, start_date=None, end_date=None, search_type='reverse', text='', image=<defame.common.medium.Image object at 0x7ffed2b64c40>)
+Got 0 new web source(s):
+The claim '<image:18> This image shows an authentic list realeased by Ukraine showing US politicians taking bribes from Ukraine. The highest bribe was 92 Million US-$ for Joe Biden.' is misleading.
+Justification: The claim is misleading. While there are discussions about corruption related to Ukraine and some US politicians, the provided evidence, including web and image searches, does not support the existence or authenticity of the list presented in the image. The search results mention corruption concerns and investigations related to Ukraine and some US politicians, but they do not provide any information about a list released by Ukraine detailing bribes.
+
+So, the overall veracity is: misleading
+Fact-check took 0:52 min.

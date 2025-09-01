@@ -1,0 +1,49 @@
+Extracting claims from Content: <image:60> This image shows Israelis fleeing the airport after the Houthis attack on July 19, 2024.
+'Claim: "<image:60> This image shows Israelis fleeing the airport after the Houthis attack on July 19, 2024."'
+Verifying Claim: "<image:60> This image shows Israelis fleeing the airport after the Houthis attack on July 19, 2024."
+Not enough information yet. Continuing fact-check...
+Most likely location: Israel
+Top 10 locations: Israel, Palestine, Jordan, United Arab Emirates, Albania, Andorra, Argentina, Australia, Austria, Bangladesh
+Got 3 new web source(s):
+	1. https://www.reuters.com/world/middle-east/israeli-military-says-tel-aviv-blast-apparently-caused-by-drone-2024-07-19/
+	2. July 19, 2024 https://www.theguardian.com/world/article/2024/jul/19/yemen-houthis-claim-deadly-drone-attack-on-tel-aviv-israel
+	3. July 19, 2024 https://www.nytimes.com/2024/07/19/world/middleeast/houthis-drone-strike-tel-aviv.html
+Useful result: From [Source](https://www.reuters.com/world/middle-east/israeli-military-says-tel-aviv-blast-apparently-caused-by-drone-2024-07-19/): 
+Content: Reuters reports that a long-range Iranian-made drone hit Tel Aviv on July 19, 2024, in an attack claimed by the Yemen-based Houthi militia. The attack killed one man and wounded four others. <image:2525>
+
+Useful result: From [Source](https://www.theguardian.com/world/article/2024/jul/19/yemen-houthis-claim-deadly-drone-attack-on-tel-aviv-israel): 
+Content: The Guardian reports on a Houthi drone attack on Tel Aviv on July 19, 2024. The Houthis claimed responsibility for the attack. <image:2533> shows the aftermath of the attack. The article mentions that police urged residents to "respect safety instructions and not to approach or touch debris or shrapnel that may contain explosives".
+
+Useful result: From [Source](https://www.nytimes.com/2024/07/19/world/middleeast/houthis-drone-strike-tel-aviv.html): 
+Content: The New York Times reports on a Houthi drone strike in Tel Aviv on July 19, 2024. The Houthis claimed responsibility for the strike. The article mentions an explosion and shrapnel.
+
+Not enough information yet. Continuing fact-check...
+INFO: Dropping action 'geolocate' as it was already performed.
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Israel airport after Houthi attack July 19 2024')
+Got 1 new web source(s):
+	1. https://en.wikipedia.org/wiki/2025_Houthi_attack_on_Tel_Aviv_airport
+Useful result: From [Source](https://en.wikipedia.org/wiki/2025_Houthi_attack_on_Tel_Aviv_airport): 
+Content: The Wikipedia article "2025 Houthi attack on Tel Aviv airport" states that on May 4, 2025, the Houthi movement fired a ballistic missile at Tel Aviv, Israel, hitting the perimeter of Ben Gurion Airport's main terminal. The attack caused air traffic to stop and several major airlines to cancel their flights for a few days. The article also mentions that the attack was the first time a missile landed so close to Israel's main airport.
+
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Israel airport crowds July 19 2024')
+Failed to download or open image: cannot identify image file <_io.BytesIO object at 0x7ffed9c9f290>
+Got 3 new web source(s):
+	1. https://www.timesofisrael.com/thousands-rally-nationwide-urge-pm-not-to-leave-for-us-before-finalizing-hostage-deal/
+	2. https://www.australianjewishnews.com/chaos-erupts-at-ben-gurion-airport/
+	3. https://www.cnn.com/2024/07/19/travel/the-airlines-impacted-by-the-global-tech-outage
+Useful result: From [Source](https://www.cnn.com/2024/07/19/travel/the-airlines-impacted-by-the-global-tech-outage): 
+Content: CNN shows an image of a crowded airport. <image:9940>
+
+Not enough information yet. Continuing fact-check...
+INFO: Dropping action 'geolocate' as it was already performed.
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Israel airport July 19 2024')
+Failed to download or open image: cannot identify image file <_io.BytesIO object at 0x7ffed9c8eb60>
+Got 3 new web source(s):
+	1. https://www.timesofisrael.com/united-delta-british-airways-cancel-flights-to-israel-amid-fears-of-attacks/
+	2. https://www.jpost.com/israel-news/article-820185
+	3. https://www.theguardian.com/world/2022/aug/21/palestinian-flight-plan-mired-confusion-eve-first-departure
+The claim '<image:60> This image shows Israelis fleeing the airport after the Houthis attack on July 19, 2024.' is false.
+Justification: The claim is unverified. While the image was likely taken in Israel, and a Houthi attack occurred in Tel Aviv on July 19, 2024, there is no evidence to confirm that the image depicts people fleeing the airport due to the attack. The initial evidence confirmed the attack ([Reuters](https://www.reuters.com/world/middle-east/israeli-military-says-tel-aviv-blast-apparently-caused-by-drone-2024-07-19/)), but subsequent searches did not provide a direct link between the attack and the image.
+
+So, the overall veracity is: false
+Fact-check took 1:23 min.

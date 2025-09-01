@@ -1,0 +1,48 @@
+Extracting claims from Content: <image:40> This image shows Ukrainian President Volodymyr Zelenskyy in March 2025 signing Israeli bombs intended for use against Palestinians in Gaza.
+'Claim: "<image:40> This image shows Ukrainian President Volodymyr Zelenskyy in March 2025 signing Israeli bombs intended for use against Palestinians in Gaza."'
+Verifying Claim: "<image:40> This image shows Ukrainian President Volodymyr Zelenskyy in March 2025 signing Israeli bombs intended for use against Palestinians in Gaza."
+Not enough information yet. Continuing fact-check...
+Got 3 new web source(s):
+	1. March 13, 2025 https://spotlight.ebu.ch/p/video-caption-falsely-claims-zelenskyy
+	2. September 24, 2024 https://www.foxnews.com/politics/josh-shapiro-blasted-signing-missile-alongside-zelenskyy-bidens-hometown-party-war
+	3. October 15, 2024 https://caliber.az/en/post/zelenskyy-s-glory-to-ukraine-inscription-on-us-bombs-in-pennsylvania-stirs-controversy
+Useful result: From [Source](https://spotlight.ebu.ch/p/video-caption-falsely-claims-zelenskyy): 
+Content: The search result from Eurovision News | Spotlight, published on March 13, 2025, addresses a claim that Volodymyr Zelenskyy signed artillery shells destined for use in Gaza. The video actually shows Zelenskyy at a U.S. munitions factory supporting Ukraine's defense needs. The video was shared by Governor Josh Shapiro on September 23, 2024, and Zelenskyy wrote "Glory to Ukraine" and "Thanks for Support" on the shells, referencing Ukraine's war with Russia. <image:40>
+
+Useful result: From [Source](https://www.foxnews.com/politics/josh-shapiro-blasted-signing-missile-alongside-zelenskyy-bidens-hometown-party-war): 
+Content: The search result from Fox News discusses Ukrainian President Volodymyr Zelenskyy signing a missile at the Scranton Army Ammunition Plant (SCAAP) in President Biden’s hometown. <image:11669>. Pennsylvania Governor Josh Shapiro was also present. The article mentions that Shapiro wrote a message on the missile. The article also mentions that the event took place in the context of the war in Ukraine. The article was written by Charles Creitz.
+
+Useful result: From [Source](https://caliber.az/en/post/zelenskyy-s-glory-to-ukraine-inscription-on-us-bombs-in-pennsylvania-stirs-controversy): 
+Content: The article from Caliber.Az, published on October 15, 2024, discusses Ukrainian President Volodymyr Zelenskyy's visit to the Scranton Army Ammunition Plant in Pennsylvania, where he signed munitions. The article mentions that Zelenskyy inscribed messages on US bombs, including the phrase "Glory to Ukraine." The visit stirred controversy and elicited mixed reactions.
+
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Volodymyr Zelenskyy Israeli bombs')
+Skipping fact-checking website: https://www.reuters.com/fact-check/video-does-not-show-zelenskiy-signing-bombs-be-dropped-gazans-2025-03-11/
+Skipping fact-checking website: https://www.misbar.com/en/factcheck/2025/03/05/image-does-not-show-zelenskyy-signing-bombs-gaza
+Got 2 new web source(s):
+	1. April 15, 2024 https://www.pbs.org/newshour/world/ukraines-foreign-minister-says-israels-thwarting-of-irans-attack-shows-what-kyiv-needs-from-allies
+	2. November 01, 2022 https://www.jstribune.com/shuker-rakov-the-reasoning-behind-israels-refusal-to-supply-weapons-to-ukraine/
+Useful result: From [Source](https://www.pbs.org/newshour/world/ukraines-foreign-minister-says-israels-thwarting-of-irans-attack-shows-what-kyiv-needs-from-allies): 
+Content: The PBS News article, published on April 15, 2024, discusses the Ukrainian Foreign Minister's statement that the success of Israel and its allies in thwarting an Iranian attack shows what Ukraine could achieve with more support from its partners. The article mentions that Russia fired nearly 130 exploding drones, more than 80 Russian missiles, and nearly 700 guided aerial bombs at Ukraine. <image:13848>
+
+Useful result: From [Source](https://www.jstribune.com/shuker-rakov-the-reasoning-behind-israels-refusal-to-supply-weapons-to-ukraine/): 
+Content: The search result from jstribune.com discusses the Israeli policy of not supplying weapons to Ukraine. It mentions that Volodymyr Zelenskyy stated that the decision by Israeli leaders not to support Kyiv has encouraged Russia’s military partnership with Iran. The article also mentions that Zelenskyy was upset that Israel refused to supply even non-lethal communications systems for the Ukrainian military. The article was published on October 24, 2022.
+
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Volodymyr Zelenskyy signing ammunition')
+Got 3 new web source(s):
+	1. https://www.theguardian.com/us-news/2024/sep/25/trump-zelenskyy-ukraine-feud-republicans-election-interference
+	2. https://penncapital-star.com/government-politics/shapiro-casey-meet-with-zelenskyy-at-scranton-pennsylvania-ammunitions-factory/
+	3. https://www.bbc.com/news/articles/c5y30244467o
+Useful result: From [Source](https://www.theguardian.com/us-news/2024/sep/25/trump-zelenskyy-ukraine-feud-republicans-election-interference): 
+Content: The Guardian published an image of Volodymyr Zelenskyy signing ammunition. <image:13852>
+
+Useful result: From [Source](https://penncapital-star.com/government-politics/shapiro-casey-meet-with-zelenskyy-at-scranton-pennsylvania-ammunitions-factory/): 
+Content: The Penn Capital-Star published an image of Volodymyr Zelenskyy. <image:13853>
+
+Useful result: From [Source](https://www.bbc.com/news/articles/c5y30244467o): 
+Content: The BBC News website shows an image of Volodymyr Zelenskyy signing ammunition. <image:13854>
+
+The claim '<image:40> This image shows Ukrainian President Volodymyr Zelenskyy in March 2025 signing Israeli bombs intended for use against Palestinians in Gaza.' is false.
+Justification: The image depicts Ukrainian President Volodymyr Zelenskyy signing artillery shells at a U.S. munitions factory in Pennsylvania, as confirmed by multiple sources, including the [Guardian](https://www.theguardian.com/us-news/2024/sep/25/trump-zelenskyy-ukraine-feud-republicans-election-interference) and the [BBC](https://www.bbc.com/news/articles/c5y30244467o). The event occurred in September 2024, and the shells were intended for use in the war in Ukraine, not Israeli bombs for use against Palestinians in Gaza.
+
+So, the overall veracity is: false
+Fact-check took 0:57 min.

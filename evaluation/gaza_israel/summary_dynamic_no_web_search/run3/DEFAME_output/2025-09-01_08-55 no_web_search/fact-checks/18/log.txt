@@ -1,0 +1,36 @@
+Extracting claims from Content: <image:15> This image shows Gal Gadot’s star on the Hollywood Walk of Fame being destroyed in March 2025 just hours after being placed.
+'Claim: "<image:15> This image shows Gal Gadot’s star on the Hollywood Walk of Fame being destroyed in March 2025 just hours after being placed."'
+Verifying Claim: "<image:15> This image shows Gal Gadot’s star on the Hollywood Walk of Fame being destroyed in March 2025 just hours after being placed."
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Gal Gadot star Hollywood Walk of Fame vandalism')
+Failed to download or open image: cannot identify image file <_io.BytesIO object at 0x7ffee158c860>
+Got 3 new web source(s):
+	1. https://www.telegraph.co.uk/news/2025/05/28/pro-palestinian-protesters-arrested-gal-gadot-film/
+	2. https://www.ndtv.com/world-news/gal-gadots-hollywood-walk-of-fame-star-smashed-amid-pro-palestinian-protests-photo-is-viral-7966341
+	3. https://www.foxla.com/video/1649649
+Useful result: From [Source](https://www.ndtv.com/world-news/gal-gadots-hollywood-walk-of-fame-star-smashed-amid-pro-palestinian-protests-photo-is-viral-7966341): 
+Content: The search result from NDTV shows an image of Gal Gadot's star on the Hollywood Walk of Fame being vandalized. <image:14080>
+
+Useful result: From [Source](https://www.foxla.com/video/1649649): 
+Content: The search result from Fox 11 Los Angeles shows Gal Gadot's star on the Hollywood Walk of Fame vandalized. <image:14081>
+
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Gal Gadot Hollywood Walk of Fame star placement date')
+Failed to download or open image: cannot identify image file <_io.BytesIO object at 0x7ffee15c1bc0>
+Got 3 new web source(s):
+	1. https://people.com/gal-gadot-receives-star-on-hollywood-walk-of-fame-alongside-her-four-daughters-11699087
+	2. https://www.ynetnews.com/culture/article/r1q58dfuh
+	3. https://www.timesofisrael.com/liveblog_entry/gal-gadot-receives-star-on-hollywood-walk-of-fame/
+Useful result: From [Source](https://www.timesofisrael.com/liveblog_entry/gal-gadot-receives-star-on-hollywood-walk-of-fame/): 
+Content: The Times of Israel reports that Gal Gadot received her star on the Hollywood Walk of Fame. <image:14087>
+
+Not enough information yet. Continuing fact-check...
+No new actions were found in this response:
+```
+image_search("Gal Gadot Hollywood Walk of Fame star placement date")
+``` and performed actions: image_search("Gal Gadot star Hollywood Walk of Fame vandalism"), image_search("Gal Gadot Hollywood Walk of Fame star placement date")
+The claim '<image:15> This image shows Gal Gadot’s star on the Hollywood Walk of Fame being destroyed in March 2025 just hours after being placed.' is false.
+Justification: The claim is not verifiable. While it is confirmed that Gal Gadot's star on the Hollywood Walk of Fame was vandalized, the exact date of the star placement and the vandalism are not specified in the provided evidence. Therefore, the claim that the vandalism occurred hours after the star was placed cannot be verified.
+
+So, the overall veracity is: false
+Fact-check took 0:47 min.

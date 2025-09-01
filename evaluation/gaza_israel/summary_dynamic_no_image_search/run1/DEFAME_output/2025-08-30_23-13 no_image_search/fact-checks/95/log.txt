@@ -1,0 +1,38 @@
+Extracting claims from Content: <image:10257> This image shows a man from Gaza holding the hand of his son killed in an Israeli bombing in July, 2024.
+'Claim: "<image:10257> This image shows a man from Gaza holding the hand of his son killed in an Israeli bombing in July, 2024."'
+Verifying Claim: "<image:10257> This image shows a man from Gaza holding the hand of his son killed in an Israeli bombing in July, 2024."
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='man orange jacket rubble')
+Got 3 new web source(s):
+	1. https://www.llbean.com/buy/mens-orange-jackets
+	2. https://www.patagonia.com/shop/mens/jackets-vests/orange
+	3. https://www.freepik.com/premium-ai-image/arafed-man-orange-black-jacket-walking-through-rubble-generative-ai_47607490.htm
+Useful result: From [Source](https://www.llbean.com/buy/mens-orange-jackets): 
+Content: The search result from LLBean.com features a collection of men's orange jackets, including rain jackets, hunting vests, and insulated options. <image:12396>, <image:12397>, <image:12398>, <image:12401>, <image:12402>, <image:12403>, <image:12404>, <image:12405>, <image:12407>, <image:12408>, <image:12409>, <image:12410>, <image:12412>, <image:12413>, <image:12415>, <image:12416>, <image:12418>, <image:12419>, <image:12421>. The jackets are described as versatile and suitable for various outdoor activities.
+
+Useful result: From [Source](https://www.freepik.com/premium-ai-image/arafed-man-orange-black-jacket-walking-through-rubble-generative-ai_47607490.htm): 
+Content: The search result from Freepik shows an AI-generated image of a man in an orange and black jacket walking through rubble. <image:12472>
+
+Searching google_vision with query: ImageQuery(limit=3, start_date=None, end_date=None, search_type='reverse', text='', image=<defame.common.medium.Image object at 0x7ffe4c2a4310>)
+Skipping unsupported website: https://www.instagram.com/p/CoXai96IDZ0/
+Got 6 new web source(s):
+	1. https://www.theguardian.com/world/2023/feb/07/turkey-earthquake-man-photo-dead-daughter-hand
+	2. https://www.buzzfeednews.com/article/davidmack/earthquake-turkey-syria-photo-father-daughter-hand
+	3. https://www.cnn.com/2023/02/13/middleeast/turkey-quake-man-daughter-hand-photo-intl
+	4. https://www.aljazeera.com/news/2023/2/8/hope-heartbreak-as-children-pulled-from-rubble-in-turkey-syria
+	5. https://turkishminute.com/2023/02/09/turkish-father-pain-symbolize-quake-tragedy/?noamp=mobile
+	6. https://insajderi.org/en/the-father-from-Turkey-reunites-with-his-daughter-for-the-first-time-after-the-devastating-earthquake/
+Useful result: From [Source](https://www.theguardian.com/world/2023/feb/07/turkey-earthquake-man-photo-dead-daughter-hand): Found exact image on website with title: Photo of Turkish man holding hand of dead daughter underlines ...
+Content: The Guardian published an article on February 7, 2023, about a photograph of a Turkish man, Mesut Hancer, holding the hand of his 15-year-old daughter, Irmak, who died in an earthquake in Kahramanmaras, Turkey. <image:12476> The article mentions the earthquake's impact in Turkey and Syria.
+
+Useful result: From [Source](https://www.buzzfeednews.com/article/davidmack/earthquake-turkey-syria-photo-father-daughter-hand): Found exact image on website with title: He Never Left The Hand Of His Daughter Who Died In The Earthquake
+Content: The article, published on February 9, 2023, by BuzzFeed News, discusses the aftermath of the earthquake in Turkey and Syria. It features a photograph <image:10257> of a man in an orange jacket, Mesut Hançer, holding the hand of his deceased daughter, Irmak, who died in the earthquake. The image was taken by Adem Altan / AFP via Getty Images. The article states that the earthquake occurred in Turkey and Syria, not Gaza, and the event took place in February 2023, not July 2024.
+
+Useful result: From [Source](https://www.cnn.com/2023/02/13/middleeast/turkey-quake-man-daughter-hand-photo-intl): Found exact image on website with title: Behind the defining image of the Turkey earthquake | CNN
+Content: The image shows Mesut Hancer holding the hand of his 15-year-old daughter, Irmak, who died in the earthquake in Kahramanmaras, Turkey, on February 7, 2023. <image:10257>. The article was published by CNN on February 13, 2023.
+
+The claim '<image:10257> This image shows a man from Gaza holding the hand of his son killed in an Israeli bombing in July, 2024.' is false.
+Justification: The claim is false. The image depicts Mesut Hancer in Turkey holding the hand of his deceased daughter, Irmak, who died in an earthquake in February 2023, not in Gaza in July 2024. The event occurred in Turkey, not Gaza, and the date was February 2023, not July 2024. The image has been widely reported by news outlets such as The Guardian ([https://www.theguardian.com/world/2023/feb/07/turkey-earthquake-man-photo-dead-daughter-hand](https://www.theguardian.com/world/2023/feb/07/turkey-earthquake-man-photo-dead-daughter-hand)).
+
+So, the overall veracity is: false
+Fact-check took 2:54 min.

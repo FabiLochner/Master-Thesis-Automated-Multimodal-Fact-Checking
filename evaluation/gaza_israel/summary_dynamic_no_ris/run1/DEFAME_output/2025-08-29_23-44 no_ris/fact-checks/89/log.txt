@@ -1,0 +1,37 @@
+Extracting claims from Content: For the assassination on July 31, 2024, Israeli intelligence tracked Hamas leader Ismail Haniyeh through WhatsApp.
+'Claim: "For the assassination on July 31, 2024, Israeli intelligence tracked Hamas leader Ismail Haniyeh through WhatsApp."'
+Verifying Claim: "For the assassination on July 31, 2024, Israeli intelligence tracked Hamas leader Ismail Haniyeh through WhatsApp."
+Not enough information yet. Continuing fact-check...
+Got 3 new web source(s):
+	1. https://en.wikipedia.org/wiki/Assassination_of_Ismail_Haniyeh
+	2. August 01, 2024 https://www.csis.org/analysis/ismail-haniyehs-assassination-escalation-or-ramp
+	3. August 01, 2024 https://www.cnn.com/world/live-news/hamas-political-leader-haniyeh-killed-iran-07-31-24
+Useful result: From [Source](https://en.wikipedia.org/wiki/Assassination_of_Ismail_Haniyeh): 
+Content: The Wikipedia article discusses the assassination of Ismail Haniyeh on July 31, 2024, in Tehran, Iran. The attack was carried out by Israel. The article does not mention any information about WhatsApp tracking.
+
+Useful result: From [Source](https://www.csis.org/analysis/ismail-haniyehs-assassination-escalation-or-ramp): 
+Content: The search result from CSIS, published on August 1, 2024, discusses the assassination of Ismail Haniyeh on July 31, 2024, in Tehran. <image:4045>. The article mentions that Haniyeh was killed by an explosion and that the assassination could complicate peace talks over Gaza. The author is Riley McCabe.
+
+Useful result: From [Source](https://www.cnn.com/world/live-news/hamas-political-leader-haniyeh-killed-iran-07-31-24): 
+Content: The CNN article, updated August 1, 2024, reports that Hamas political leader Ismail Haniyeh was killed in an Israeli strike in Tehran on July 31, 2024. <image:1>. Israel has neither confirmed nor denied being behind the assassination. The article mentions that Iran's Supreme Leader Ayatollah Ali Khamenei ordered a direct attack on Israel following the killing. The article also mentions that the US was not involved in the killing.
+
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Israeli intelligence Hamas leader WhatsApp tracking')
+Skipping unsupported website: https://www.reddit.com/r/privacy/comments/1eh9jlz/haniyeh_tracked_down_via_whatsapp/
+Got 3 new web source(s):
+	1. August 01, 2024 https://www.intellinews.com/did-whatsapp-give-away-hamas-leader-s-location-336529/
+	2. https://cufi.org/issue/hamas-using-whatsapp-to-collect-intelligence-on-idf-movements/
+	3. May 19, 2024 https://truthout.org/articles/report-indicates-israel-uses-whatsapp-data-in-targeted-killings-of-palestinians/
+Useful result: From [Source](https://www.intellinews.com/did-whatsapp-give-away-hamas-leader-s-location-336529/): 
+Content: bne Gulf bureau published an article on August 1, 2024, discussing the assassination of Ismail Haniyeh on July 31, 2024. The article suggests that WhatsApp may have given away Haniyeh's location, potentially through spyware. The article mentions that Haniyeh was killed in Tehran. <image:9020>
+
+Useful result: From [Source](https://cufi.org/issue/hamas-using-whatsapp-to-collect-intelligence-on-idf-movements/): 
+Content: The search result from CUFI discusses Hamas using WhatsApp to collect intelligence on IDF movements. <image:1>. The IDF is aware of Hamas's activity and has launched operations to counter it. The article mentions "Operation Heartbreaker" and the IDF's efforts to raise awareness among soldiers. The Jerusalem Post is also mentioned as a source.
+
+Useful result: From [Source](https://truthout.org/articles/report-indicates-israel-uses-whatsapp-data-in-targeted-killings-of-palestinians/): 
+Content: Truthout reports on the alleged use of WhatsApp data by Israeli intelligence for targeting Palestinians with an AI system called Lavender. The article mentions that the Israeli military may be tracking communications via WhatsApp to identify targets. The Palestinian digital rights group Sada Social called for an investigation into Israel’s alleged use of WhatsApp user data. The article also mentions that a current commander of an elite Israeli intelligence unit pushed for the use of AI to choose targets in Gaza. The article was published in May 2024. <image:k>
+
+The claim 'For the assassination on July 31, 2024, Israeli intelligence tracked Hamas leader Ismail Haniyeh through WhatsApp.' is true.
+Justification: The claim is supported by evidence suggesting that Israeli intelligence may have tracked Ismail Haniyeh through WhatsApp. An article from bne Gulf bureau ([https://www.intellinews.com/did-whatsapp-give-away-hamas-leader-s-location-336529/](https://www.intellinews.com/did-whatsapp-give-away-hamas-leader-s-location-336529/)) implies that WhatsApp may have revealed his location, and Truthout reports that Israel uses WhatsApp data in targeted killings ([https://truthout.org/articles/report-indicates-israel-uses-whatsapp-data-in-targeted-killings-of-palestinians/](https://truthout.org/articles/report-indicates-israel-uses-whatsapp-data-in-targeted-killings-of-palestinians/)).
+
+So, the overall veracity is: true
+Fact-check took 0:46 min.

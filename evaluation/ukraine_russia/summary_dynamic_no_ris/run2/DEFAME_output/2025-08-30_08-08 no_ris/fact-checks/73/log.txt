@@ -1,0 +1,50 @@
+Extracting claims from Content: <image:22> This image shows a Ukrainian F-16 fighter jet which was shot down by Russia as part of the large-scale Russian invasion in Ukraine.
+'Claim: "<image:22> This image shows a Ukrainian F-16 fighter jet which was shot down by Russia as part of the large-scale Russian invasion in Ukraine."'
+Verifying Claim: "<image:22> This image shows a Ukrainian F-16 fighter jet which was shot down by Russia as part of the large-scale Russian invasion in Ukraine."
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Ukrainian F-16 fighter jet crash')
+Got 3 new web source(s):
+	1. https://www.npr.org/2024/08/30/g-s1-20234/ukraine-f16-warplane-crash
+	2. https://www.cnn.com/2024/08/29/world/video/ukraine-f16-crashes-npw-nr-intl-digvid
+	3. https://www.bloomberg.com/news/articles/2024-08-29/ukraine-says-lost-f-16-jet-in-crash-during-russian-air-strike
+Useful result: From [Source](https://www.npr.org/2024/08/30/g-s1-20234/ukraine-f16-warplane-crash): 
+Content: NPR published an article about the Ukrainian F-16 warplane. <image:8302>
+
+Useful result: From [Source](https://www.cnn.com/2024/08/29/world/video/ukraine-f16-crashes-npw-nr-intl-digvid): 
+Content: CNN published an image of an F-16 fighter jet. <image:8303>
+
+Useful result: From [Source](https://www.bloomberg.com/news/articles/2024-08-29/ukraine-says-lost-f-16-jet-in-crash-during-russian-air-strike): 
+Content: Bloomberg reports that Ukraine lost an F-16 jet in a crash during a Russian air strike. <image:8304>
+
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='crashed Ukrainian F-16')
+Got 2 new web source(s):
+	1. https://www.bbc.com/news/articles/cd0532n9pdko
+	2. https://www.reuters.com/world/europe/ukrainian-f-16-jet-destroyed-crash-monday-wsj-reports-2024-08-29/
+Useful result: From [Source](https://www.bbc.com/news/articles/cd0532n9pdko): 
+Content: The BBC published an article about the Ukrainian F-16 jet. <image:8306>
+
+Useful result: From [Source](https://www.reuters.com/world/europe/ukrainian-f-16-jet-destroyed-crash-monday-wsj-reports-2024-08-29/): 
+Content: Reuters published an article about a Ukrainian F-16 jet crash. <image:8307>
+
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Ukrainian F-16 crash site')
+Skipping unsupported website: https://www.youtube.com/watch?v=M7NMlCFKZi4
+Got 3 new web source(s):
+	1. https://www.aljazeera.com/news/2025/8/28/pilot-killed-after-f-16-jet-crashes-during-preparations-for-polish-airshow
+	2. https://asn.flightsafety.org/wikibase/415138
+	3. June 29, 2025 https://www.cnn.com/2025/06/29/europe/ukraine-f-16-pilot-killed-russia
+Useful result: From [Source](https://www.aljazeera.com/news/2025/8/28/pilot-killed-after-f-16-jet-crashes-during-preparations-for-polish-airshow): 
+Content: Al Jazeera reports on an F-16 fighter jet crash during preparations for an airshow in Poland. The crash resulted in the death of a Polish pilot. The accident happened on August 28, 2025. <image:8306>
+
+Useful result: From [Source](https://asn.flightsafety.org/wikibase/415138): 
+Content: The search result from ASN (Aviation Safety Network) states that on August 26, 2024, a Ukrainian Air Force F-16A Block 20 MLU fighter aircraft (s/n 80-3600) crashed in Kurhany, Rivne Raion, Rivne Oblast, Ukraine, during a mission in response to a mass missile and drone strike conducted by forces of the Russian Federation. The pilot, Oleksiy "Moonfish" Mes, was killed. The aircraft was destroyed. The crash site was located using NASA Sentinel-2 satellite imagery.
+
+Useful result: From [Source](https://www.cnn.com/2025/06/29/europe/ukraine-f-16-pilot-killed-russia): 
+Content: CNN reports that a Ukrainian pilot was killed and his F-16 fighter jet crashed after Russia launched a huge aerial assault on June 29, 2025. The article mentions that the airman, 1st Class Lt. Maksym Ustymenko, was the third F-16 pilot killed since the Ukrainians began flying the jets last summer, and his plane was the fourth F-16 Ukraine has lost since then. <image:8308> The article was written by Kostya Gak, Helen Regan, Billy Stockwell and Ivana Kottasová and was updated on June 29, 2025.
+
+The claim '<image:22> This image shows a Ukrainian F-16 fighter jet which was shot down by Russia as part of the large-scale Russian invasion in Ukraine.' is false.
+Justification: The claim is unverified. While there is evidence of a Ukrainian F-16 crash, the provided search results do not include an image of the crash site, making it impossible to confirm if the image in the claim depicts the crashed Ukrainian F-16.
+
+So, the overall veracity is: false
+Fact-check took 1:22 min.

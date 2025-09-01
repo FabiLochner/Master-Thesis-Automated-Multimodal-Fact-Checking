@@ -1,0 +1,24 @@
+Extracting claims from Content: In remarks to reporters on September 29, 2024 US President Joe Biden announced that no more aid would be provided for the areas affected by Hurrican Helene, but 2.4 billion US-$ more for Ukraine.
+'Claim: "In remarks to reporters on September 29, 2024 US President Joe Biden announced that no more aid would be provided for the areas affected by Hurrican Helene, but 2.4 billion US-$ more for Ukraine."'
+Verifying Claim: "In remarks to reporters on September 29, 2024 US President Joe Biden announced that no more aid would be provided for the areas affected by Hurrican Helene, but 2.4 billion US-$ more for Ukraine."
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Joe Biden Hurricane Helene Ukraine aid September 29 2024')
+Skipping fact-checking website: https://factcheck.afp.com/doc.afp.com.36JM7LH
+Got 3 new web source(s):
+	1. October 09, 2024 https://www.bbc.com/news/articles/czd1q9q9gl9o
+	2. October 03, 2024 https://www.yahoo.com/news/no-biden-didnt-hes-done-153402427.html
+	3. September 30, 2024 https://www.lemonde.fr/en/united-states/article/2024/09/30/biden-pledges-to-aid-victims-of-hurrican-helene-as-long-as-it-takes_6727795_133.html
+Useful result: From [Source](https://www.bbc.com/news/articles/czd1q9q9gl9o): 
+Content: The BBC published an article on October 9, 2024, discussing misinformation about the government's response to Hurricane Helene. The article mentions that Donald Trump and his allies claimed that government money earmarked for disaster victims has been spent on migrants, which the BBC states is false. The article also mentions that the North Carolina National Guard completed 146 flight missions, resulting in the rescue of 538 people and 150 pets. <image:2154>, <image:2153>, <image:2158>, <image:2160>.
+
+Useful result: From [Source](https://www.yahoo.com/news/no-biden-didnt-hes-done-153402427.html): 
+Content: The Yahoo News article, published by USA TODAY, fact-checks the claim that Biden said no more aid would be provided for Hurricane Helene victims. The article states that Biden did not say no more aid would be provided. It references a White House transcript of Biden's remarks on September 30, 2024, where he stated that more aid would be forthcoming. The article also mentions that Biden announced a new $8 billion military aid package for Ukraine on September 30, 2024.
+
+Useful result: From [Source](https://www.lemonde.fr/en/united-states/article/2024/09/30/biden-pledges-to-aid-victims-of-hurrican-helene-as-long-as-it-takes_6727795_133.html): 
+Content: The article from Le Monde, published on September 30, 2024, reports on President Joe Biden's remarks regarding the response to Hurricane Helene. <image:2167> Biden announced he would travel to North Carolina to monitor rescue efforts. The article mentions the death toll from the storm and the political context, including criticism from Donald Trump.
+
+The claim 'In remarks to reporters on September 29, 2024 US President Joe Biden announced that no more aid would be provided for the areas affected by Hurrican Helene, but 2.4 billion US-$ more for Ukraine.' is false.
+Justification: The claim is false. According to a [Yahoo News article](https://www.yahoo.com/news/no-biden-didnt-hes-done-153402427.html) and a White House transcript, Biden did not announce a halt to aid for Hurricane Helene victims. Instead, he pledged further assistance. Additionally, the timing of the Ukraine aid announcement is misstated.
+
+So, the overall veracity is: false
+Fact-check took 0:48 min.

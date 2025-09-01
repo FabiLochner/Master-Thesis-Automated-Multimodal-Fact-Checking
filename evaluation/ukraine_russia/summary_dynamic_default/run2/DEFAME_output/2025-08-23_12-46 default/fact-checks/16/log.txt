@@ -1,0 +1,25 @@
+Extracting claims from Content: In a press conference on December 9, 2024 Ukrainian President Volodymyr Zelenskyy said: 'I will ask Biden to invite me to NATO ... there's no point in talking to Trump.'
+'Claim: "In a press conference on December 9, 2024 Ukrainian President Volodymyr Zelenskyy said: 'I will ask Biden to invite me to NATO ... there's no point in talking to Trump.'"'
+Verifying Claim: "In a press conference on December 9, 2024 Ukrainian President Volodymyr Zelenskyy said: 'I will ask Biden to invite me to NATO ... there's no point in talking to Trump.'"
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Zelenskyy Biden NATO Trump December 9 2024 press conference')
+Skipping unsupported website: https://ua.usembassy.gov/remarks-by-president-biden-and-president-zelenskyy-of-ukraine-in-joint-press-conference/
+Skipping unsupported website: https://bidenwhitehouse.archives.gov/briefing-room/speeches-remarks/2024/07/11/remarks-by-president-biden-in-press-conference-9/
+Got 3 new web source(s):
+	1. December 09, 2024 https://www.theguardian.com/world/live/2024/dec/09/russia-ukraine-war-live-donald-trump-ceasefire-call-volodymyr-zelenskyy
+	2. December 10, 2024 https://www.euractiv.com/section/politics/news/zelenskyy-seeks-diplomatic-end-to-russias-war-floats-role-for-foreign-troops/
+	3. December 09, 2024 https://www.voanews.com/a/zelenskyy-says-he-is-open-to-negotiated-end-to-war-with-russia-/7893258.html
+Useful result: From [Source](https://www.theguardian.com/world/live/2024/dec/09/russia-ukraine-war-live-donald-trump-ceasefire-call-volodymyr-zelenskyy): 
+Content: The Guardian published an article on December 9, 2024, reporting that Volodymyr Zelenskyy said he would discuss NATO membership with Joe Biden in the coming days. The article also mentions that Zelenskyy floated the idea of foreign troops being deployed to Ukraine until the country joins NATO. The article also mentions Donald Trump. <image:4668>
+
+Useful result: From [Source](https://www.euractiv.com/section/politics/news/zelenskyy-seeks-diplomatic-end-to-russias-war-floats-role-for-foreign-troops/): 
+Content: The article from Euractiv.com, updated on December 10, 2024, reports that during a press conference on December 9, 2024, Zelenskyy said he would call Biden to discuss NATO membership. The article also mentions a joint press conference with German opposition leader Friedrich Merz on December 9, 2024. <image:4688>
+
+Useful result: From [Source](https://www.voanews.com/a/zelenskyy-says-he-is-open-to-negotiated-end-to-war-with-russia-/7893258.html): 
+Content: VOA News published an article on December 9, 2024, stating that Zelenskyy said he would call Biden about Ukraine joining NATO. Zelenskyy also said, "there is no point in discussing with President Trump something that is not up to him today — while he is not yet in the White House.” <image:4700>
+
+The claim 'In a press conference on December 9, 2024 Ukrainian President Volodymyr Zelenskyy said: 'I will ask Biden to invite me to NATO ... there's no point in talking to Trump.'' is true.
+Justification: On December 9, 2024, Volodymyr Zelenskyy stated he would discuss NATO membership with Joe Biden, as reported by [The Guardian](https://www.theguardian.com/world/live/2024/dec/09/russia-ukraine-war-live-donald-trump-ceasefire-call-volodymyr-zelenskyy) and [Euractiv.com](https://www.euractiv.com/section/politics/news/zelenskyy-seeks-diplomatic-end-to-russias-war-floats-role-for-foreign-troops/). He also said there was no point in discussing matters with Trump "while he is not yet in the White House,” according to [VOA News](https://www.voanews.com/a/zelenskyy-says-he-is-open-to-negotiated-end-to-war-with-russia-/7893258.html).
+
+So, the overall veracity is: true
+Fact-check took 1:01 min.

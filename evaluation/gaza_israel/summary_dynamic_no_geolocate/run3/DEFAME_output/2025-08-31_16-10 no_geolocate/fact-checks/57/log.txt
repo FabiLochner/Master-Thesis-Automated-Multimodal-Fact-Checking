@@ -1,0 +1,33 @@
+Extracting claims from Content: <image:32> This image shows Palestinian baby Sham Imad Muhareb which did not lose her arm in an Israeli airstrike on the Shejaeya neighborhood, east of Gaza City, in April 2025.
+'Claim: "<image:32> This image shows Palestinian baby Sham Imad Muhareb which did not lose her arm in an Israeli airstrike on the Shejaeya neighborhood, east of Gaza City, in April 2025."'
+Verifying Claim: "<image:32> This image shows Palestinian baby Sham Imad Muhareb which did not lose her arm in an Israeli airstrike on the Shejaeya neighborhood, east of Gaza City, in April 2025."
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Palestinian baby Sham Imad Muhareb')
+Skipping unsupported website: https://www.facebook.com/imamomarsuleiman/posts/sham-imad-muhareb-who-lost-her-arm-yesterday-in-an-airstrike-has-diedevery-image/1235035921312675/
+Skipping unsupported website: https://www.instagram.com/p/DITq4hsgrLx/?hl=en
+Skipping unsupported website: https://x.com/doamuslims/status/1910794420917567809
+Skipping unsupported website: https://www.tiktok.com/@omarsuleimanofficial/photo/7492046917707336990?lang=en
+Got 1 new web source(s):
+	1. April 28, 2025 https://www.un.org/unispal/wp-content/uploads/2025/04/196-20250428-ora-01-00-bi.pdf
+Useful result: From [Source](https://www.un.org/unispal/wp-content/uploads/2025/04/196-20250428-ora-01-00-bi.pdf): 
+Content: The UN document mentions baby Sham Muhareb, whose arm was amputated following a strike on her home. The document is dated April 28, 2025.
+
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Shejaeya neighborhood Gaza City airstrike April 2025')
+Got 3 new web source(s):
+	1. https://en.wikipedia.org/wiki/April_2025_Shuja%27iyya_airstrike
+	2. April 09, 2025 https://www.bbc.com/news/articles/cy5rrnzw0kwo
+	3. https://abcnews.go.com/International/israel-expands-ground-operations-north-gaza-after-deadly/story?id=120481080
+Useful result: From [Source](https://en.wikipedia.org/wiki/April_2025_Shuja%27iyya_airstrike): 
+Content: The Wikipedia article discusses the April 9, 2025, airstrike by the Israel Defense Forces (IDF) in the Shuja'iyya neighborhood of Gaza City, which resulted in the deaths of over 35 Palestinians and injuries to at least 70 others. The strike targeted a four-story residential building, destroying eight homes and leading to mass evacuations. The article also mentions the context of the Gaza war and the 2025 Shuja'iyya offensive.
+
+Useful result: From [Source](https://www.bbc.com/news/articles/cy5rrnzw0kwo): 
+Content: The BBC News article, published on April 9, 2025, reports on an Israeli air strike on a residential building in the Shejaiya neighborhood of Gaza City, which resulted in the deaths of at least 29 Palestinians, including children. <image:13724>, <image:13726>. The article mentions that the strike occurred on April 9, 2025.
+
+Useful result: From [Source](https://abcnews.go.com/International/israel-expands-ground-operations-north-gaza-after-deadly/story?id=120481080): 
+Content: ABC News reports on the expansion of Israeli ground operations in the Shejaiya area of the northern Gaza Strip on April 4, 2025. <image:13727>, <image:13731>. The IDF stated that its troops eliminated terrorists and dismantled Hamas infrastructure. The article mentions an Israeli airstrike on a school-turned-shelter in the nearby Tuffah neighborhood on April 4, 2025. The article is authored by David Brennan and Morgan Winsor and was published on April 4, 2025.
+
+The claim '<image:32> This image shows Palestinian baby Sham Imad Muhareb which did not lose her arm in an Israeli airstrike on the Shejaeya neighborhood, east of Gaza City, in April 2025.' is false.
+Justification: The claim is false. According to a [UN document](https://www.un.org/unispal/wp-content/uploads/2025/04/196-20250428-ora-01-00-bi.pdf), baby Sham Muhareb's arm was amputated following a strike on her home.
+
+So, the overall veracity is: false
+Fact-check took 0:48 min.

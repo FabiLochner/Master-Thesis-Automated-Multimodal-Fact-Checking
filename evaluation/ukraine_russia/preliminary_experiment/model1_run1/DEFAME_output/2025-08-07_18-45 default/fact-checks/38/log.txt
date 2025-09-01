@@ -1,0 +1,60 @@
+Extracting claims from Content: Ukrainian President Volodymyr Zelenskyy engaged in election interference by campaigning in Pennsylvania for Kamala Harris ahead of the US presidential election in 2024.
+'Claim: "Ukrainian President Volodymyr Zelenskyy engaged in election interference by campaigning in Pennsylvania for Kamala Harris ahead of the US presidential election in 2024."'
+Verifying Claim: "Ukrainian President Volodymyr Zelenskyy engaged in election interference by campaigning in Pennsylvania for Kamala Harris ahead of the US presidential election in 2024."
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Volodymyr Zelenskyy Kamala Harris Pennsylvania 2024')
+Skipping unsupported website: https://oversight.house.gov/release/comer-probes-biden-harris-administrations-use-of-taxpayer-funded-resources-to-fly-zelensky-to-pennsylvania-to-campaign-for-harris/
+Skipping fact-checking website: https://www.politifact.com/factchecks/2025/mar/20/facebook-posts/was-zelenskyys-pennsylvania-visit-election-interfe/
+Skipping unsupported website: https://www.youtube.com/watch?v=gjl4a--K9C0
+Got 3 new web source(s):
+	1. March 01, 2025 https://www.newsweek.com/volodymyr-zelensky-jd-vance-campaign-kamala-harris-2024-election-2038060
+	2. September 26, 2024 https://www.nbcnews.com/politics/2024-election/zelenskyys-meeting-harris-spat-trump-reveal-growing-partisan-divide-uk-rcna172648
+	3. https://abcnews.go.com/Politics/harris-standing-zelenskyy-indirectly-jabs-trump-vance-ukraine/story?id=114219628
+Useful result: From [Source](https://www.newsweek.com/volodymyr-zelensky-jd-vance-campaign-kamala-harris-2024-election-2038060): 
+Content: Newsweek reports that during a meeting, JD Vance accused Volodymyr Zelenskyy of campaigning for Kamala Harris during the 2024 presidential race. Vance's criticism stems from Zelenskyy's September 2024 visit to a munitions plant in Scranton, Pennsylvania. The article mentions that Representative James Comer is investigating the matter. <image:2050>, <image:2051>, <image:2052>. The article was written by Andrew Stanton.
+
+Useful result: From [Source](https://www.nbcnews.com/politics/2024-election/zelenskyys-meeting-harris-spat-trump-reveal-growing-partisan-divide-uk-rcna172648): 
+Content: NBC News reports that Volodymyr Zelenskyy visited a munitions factory in Scranton, Pennsylvania, which some Republicans viewed as a signal of which way he wants the November election to go. The article mentions that Kamala Harris is scheduled to meet with Zelenskyy at the White House. The article was published on June 26, 2024, and was written by Alex Seitz-Wald and Katherine Doyle.
+
+Useful result: From [Source](https://abcnews.go.com/Politics/harris-standing-zelenskyy-indirectly-jabs-trump-vance-ukraine/story?id=114219628): 
+Content: The ABC News article, published on September 26, 2024, reports on Vice President Kamala Harris meeting with Ukrainian President Volodymyr Zelenskyy to discuss the war with Russia. The article mentions that Zelenskyy met with lawmakers at the Capitol. <image:2061> The article also mentions that Zelenskyy met with President Joe Biden. <image:1>
+
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Zelenskyy campaign activities Pennsylvania 2024')
+Failed to scrape https://www.post-gazette.com/news/politics-state/2025/02/28/trump-ukraine-vance-zelensky-russia-white-house/stories/202502280091
+Error 500: Server error.
+Skipping that URL.
+Got 3 new web source(s):
+	1. September 23, 2024 https://www.cnn.com/2024/09/23/europe/ukraine-zelensky-pennsylvania-us-visit-intl-hnk
+	2. September 22, 2024 https://www.nbcphiladelphia.com/news/national-international/ukraines-zelenskyy-visits-pennsylvania-ammunition-plant/3977332/
+	3. September 25, 2024 https://www.cnbc.com/2024/09/25/zelenskyy-insulted-him-house-gop-to-probe-ukraine-leaders-pa-trip-.html
+Useful result: From [Source](https://www.cnn.com/2024/09/23/europe/ukraine-zelensky-pennsylvania-us-visit-intl-hnk): 
+Content: CNN reports that Volodymyr Zelenskyy toured a Pennsylvania ammunition plant on September 22, 2024, as part of a visit to the United States. The article mentions that Zelenskyy will meet with Joe Biden and Kamala Harris. The article also states that Zelenskyy is expected to present his "victory plan" to defeat Russia. <image:2061>
+
+Useful result: From [Source](https://www.nbcphiladelphia.com/news/national-international/ukraines-zelenskyy-visits-pennsylvania-ammunition-plant/3977332/): 
+Content: NBC Philadelphia reports that Volodymyr Zelenskyy visited a Pennsylvania ammunition plant to thank workers. The visit was part of a busy week in the United States, which included talks with President Joe Biden and Vice President Kamala Harris in D.C. The article was published on September 22, 2024. <image:2067>
+
+Useful result: From [Source](https://www.cnbc.com/2024/09/25/zelenskyy-insulted-him-house-gop-to-probe-ukraine-leaders-pa-trip-.html): 
+Content: CNBC reports that House Oversight Chair James Comer opened an investigation into Ukrainian President Volodymyr Zelenskyy's visit to an ammunition factory in Scranton, Pennsylvania, on September 22, 2024. Comer claims the trip was a campaign event for Kamala Harris, using taxpayer-funded resources. Republican House Speaker Mike Johnson also sent a letter about the Pennsylvania trip, calling it a partisan campaign event and election interference. Zelenskyy met with three Pennsylvania Democrats during the visit. The article also mentions Zelenskyy's meeting with President Biden and Harris, and his visit to the UN General Assembly. <image:2061>
+
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Zelenskyy Pennsylvania ammunition plant')
+Skipping unsupported website: https://www.president.gov.ua/en/news/prezident-vidvidav-skrentonskij-armijskij-boyepripasnij-zavo-93389
+Got 3 new web source(s):
+	1. https://apnews.com/article/zelenskyy-ukraine-pennsylvania-ammunition-plant-c0e1fe5ebfa11ecfe92e842860e6440c
+	2. https://www.army.mil/article/279911/ukrainian_president_zelenskyy_tours_scranton_army_ammunition_plant
+	3. https://www.politico.com/news/2024/09/21/zelenskyy-will-visit-a-pennsylvania-ammunition-factory-to-thank-workers-00180373
+Useful result: From [Source](https://apnews.com/article/zelenskyy-ukraine-pennsylvania-ammunition-plant-c0e1fe5ebfa11ecfe92e842860e6440c): 
+Content: AP News reports that Volodymyr Zelenskyy visited a Pennsylvania ammunition plant. <image:2073>
+
+Useful result: From [Source](https://www.army.mil/article/279911/ukrainian_president_zelenskyy_tours_scranton_army_ammunition_plant): 
+Content: The U.S. Army website shows a photo of Volodymyr Zelenskyy with a group of people at the Scranton Army Ammunition Plant. <image:2074>
+
+Useful result: From [Source](https://www.politico.com/news/2024/09/21/zelenskyy-will-visit-a-pennsylvania-ammunition-factory-to-thank-workers-00180373): 
+Content: Politico reports that Zelenskyy visited a Pennsylvania ammunition factory. <image:2075>
+
+The claim 'Ukrainian President Volodymyr Zelenskyy engaged in election interference by campaigning in Pennsylvania for Kamala Harris ahead of the US presidential election in 2024.' is misleading.
+Justification: The claim is misleading. While Volodymyr Zelenskyy visited a Pennsylvania ammunition plant and met with Kamala Harris, leading to accusations of election interference, there is no direct evidence that he was campaigning for her. The claim relies on interpretations of his actions by political figures, as reported by sources like [CNN](https://www.cnn.com/2024/09/23/europe/ukraine-zelensky-pennsylvania-us-visit-intl-hnk) and [CNBC](https://www.cnbc.com/2024/09/25/zelenskyy-insulted-him-house-gop-to-probe-ukraine-leaders-pa-trip-.html).
+
+So, the overall veracity is: misleading
+Fact-check took 2:11 min.

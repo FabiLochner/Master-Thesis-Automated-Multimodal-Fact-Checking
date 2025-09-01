@@ -1,0 +1,37 @@
+Extracting claims from Content: In February 2025 German Chancellor Olaf Scholz declared a state of emergency in Germany due to US President Donald Trump's peace plan for Ukraine.
+'Claim: "In February 2025 German Chancellor Olaf Scholz declared a state of emergency in Germany due to US President Donald Trump's peace plan for Ukraine."'
+Verifying Claim: "In February 2025 German Chancellor Olaf Scholz declared a state of emergency in Germany due to US President Donald Trump's peace plan for Ukraine."
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Olaf Scholz state of emergency Germany February 2025')
+Got 3 new web source(s):
+	1. February 19, 2025 https://www.euronews.com/my-europe/2025/02/19/fact-check-scholz-did-not-call-for-german-state-of-emergency-over-russia-us-peace-talks
+	2. https://www.politico.eu/article/olaf-scholz-germany-donald-trump-war-in-ukraine-peace-plan/
+	3. https://newsukraine.rbc.ua/news/scholz-proposes-declaring-state-of-emergency-1739502855.html
+Useful result: From [Source](https://www.euronews.com/my-europe/2025/02/19/fact-check-scholz-did-not-call-for-german-state-of-emergency-over-russia-us-peace-talks): 
+Content: Euronews published a fact-check on February 19, 2025, stating that Olaf Scholz did not declare a state of emergency in Germany due to US-Russia peace talks. The article mentions that misleading claims were spreading online before the German elections. <image:i> The article also mentions that Scholz referred to "Notlage," which is not the same as a state of emergency.
+
+Useful result: From [Source](https://www.politico.eu/article/olaf-scholz-germany-donald-trump-war-in-ukraine-peace-plan/): 
+Content: POLITICO reports that Olaf Scholz was unaware of Donald Trump's peace plan for Ukraine. Scholz spoke to POLITICO hours before Trump's announcement. The article mentions that Trump would begin immediate negotiations with Russian President Vladimir Putin. The article also mentions that German Defense Minister Boris Pistorius criticized Trump’s stance on negotiations with Moscow. The article was published on [Source](https://www.politico.eu/article/olaf-scholz-germany-donald-trump-war-in-ukraine-peace-plan/).
+
+Useful result: From [Source](https://newsukraine.rbc.ua/news/scholz-proposes-declaring-state-of-emergency-1739502855.html): 
+Content: The article from RBC-Ukraine, published on August 30, discusses German Chancellor Olaf Scholz's proposal to declare a state of emergency in Germany due to the war in Ukraine. <image:9229> The article mentions recent statements from the Trump administration and a phone conversation between Trump and Putin on February 12. The article also mentions that the White House stated that there was a good opportunity to end the war.
+
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Donald Trump peace plan Ukraine February 2025')
+Got 3 new web source(s):
+	1. https://www.cfr.org/blog/presidents-inbox-recap-trumps-peace-plan-ukraine
+	2. June 02, 2025 https://www.npr.org/2025/06/02/nx-s1-5414522/ukraine-peace-talks-russia-trump-putin-istanbul
+	3. April 18, 2025 https://www.bbc.com/news/articles/c20x5xn1g92o
+Useful result: From [Source](https://www.cfr.org/blog/presidents-inbox-recap-trumps-peace-plan-ukraine): 
+Content: The Council on Foreign Relations (CFR) published a blog post and podcast episode on February 24, 2025, discussing Donald Trump's evolving policy toward Ukraine. The podcast features Liana Fix, CFR fellow for Europe, and Charles A. Kupchan, CFR senior fellow. The discussion includes Trump's approach to a peace deal, his differing views from the Biden administration and European allies, and his broader strategic goals to reset relations with Russia.
+
+Useful result: From [Source](https://www.npr.org/2025/06/02/nx-s1-5414522/ukraine-peace-talks-russia-trump-putin-istanbul): 
+Content: The NPR article discusses Donald Trump's efforts to bring about peace in Ukraine after his second-term inauguration. It mentions separate calls Trump made to Vladimir Putin and Volodymyr Zelenskyy in February 2025. The article also mentions that in March 2025, the White House announced it was suspending critical aid and intelligence sharing with Ukraine. The article was published on June 2, 2025. <image:9237>, <image:9233>, <image:9234>, <image:9239>.
+
+Useful result: From [Source](https://www.bbc.com/news/articles/c20x5xn1g92o): 
+Content: The BBC News article, published on April 19, 2025, discusses Donald Trump's stance on brokering further Russia-Ukraine talks. Trump stated the US would "take a pass" if progress isn't made quickly. The article mentions a potential minerals deal between the US and Ukraine. <image:9244>, <image:9246>.
+
+The claim 'In February 2025 German Chancellor Olaf Scholz declared a state of emergency in Germany due to US President Donald Trump's peace plan for Ukraine.' is false.
+Justification: The claim is false. According to a Euronews fact-check, Olaf Scholz did not declare a state of emergency in February 2025. Furthermore, POLITICO reports that Scholz was unaware of Donald Trump's peace plan for Ukraine.
+
+So, the overall veracity is: false
+Fact-check took 1:27 min.

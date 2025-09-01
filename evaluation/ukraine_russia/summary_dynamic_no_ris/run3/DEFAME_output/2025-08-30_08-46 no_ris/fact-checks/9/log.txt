@@ -1,0 +1,53 @@
+Extracting claims from Content: <image:7> This image shows Ukrainian President Volodymyr Zelensky arriving in August 2024 in the Sudzha of Kursk region, Russia, which had just been occupied by Ukrainian troops in the Kursk Offensive, and meeting with representatives of the people there.
+'Claim: "<image:7> This image shows Ukrainian President Volodymyr Zelensky arriving in August 2024 in the Sudzha of Kursk region, Russia, which had just been occupied by Ukrainian troops in the Kursk Offensive, and meeting with representatives of the people there."'
+Verifying Claim: "<image:7> This image shows Ukrainian President Volodymyr Zelensky arriving in August 2024 in the Sudzha of Kursk region, Russia, which had just been occupied by Ukrainian troops in the Kursk Offensive, and meeting with representatives of the people there."
+Not enough information yet. Continuing fact-check...
+Got 3 new web source(s):
+	1. November 11, 2024 https://www.bbc.com/news/articles/c9vn1x23x88o
+	2. April 27, 2025 https://www.themoscowtimes.com/2025/04/27/zelensky-says-ukraine-still-fighting-in-russias-kursk-a88884
+	3. January 07, 2025 https://abcnews.go.com/International/ukraine-bringing-war-back-russia-zelenskyy-after-new/story?id=117408954
+Useful result: From [Source](https://www.bbc.com/news/articles/c9vn1x23x88o): 
+Content: The BBC News article, published on November 12, 2024, discusses the situation in the Kursk region of Russia. It mentions that Ukrainian President Volodymyr Zelensky stated that the Ukrainian military's incursion into the Kursk region is holding down 50,000 Russian troops. The article also references a New York Times report suggesting that Russia has amassed troops in Kursk, potentially including North Korean troops, for a counter-offensive. <image:3083>, <image:3082>.
+
+Useful result: From [Source](https://www.themoscowtimes.com/2025/04/27/zelensky-says-ukraine-still-fighting-in-russias-kursk-a88884): 
+Content: The Moscow Times reports on the ongoing conflict in the Kursk region. The article mentions a shock offensive launched by Kyiv in August 2024. The article also mentions that Zelensky said Ukraine's army was still fighting in Russia's Kursk. <image:3087>, <image:3089>, <image:3090>.
+
+Useful result: From [Source](https://abcnews.go.com/International/ukraine-bringing-war-back-russia-zelenskyy-after-new/story?id=117408954): 
+Content: ABC News reports that Volodymyr Zelenskyy said that Ukraine launched a fresh offensive in the Kursk region in January 2025. The Institute for the Study of War reported "tactical advances" by Ukrainian troops in areas northeast of Sudzha. The article mentions that Ukrainian troops attacked villages north of Sudzha, the main administrative border town that Ukraine captured in August. The article was published on January 7, 2025. <image:3094>
+
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Volodymyr Zelensky Sudzha Russia')
+Got 3 new web source(s):
+	1. August 15, 2024 https://www.cnn.com/2024/08/15/europe/kursk-incursion-sudzha-captured-ukraine-intl
+	2. August 15, 2024 https://apnews.com/article/russia-belgorod-state-of-emergency-b7fb57c21a43f0f06bf79a4477eb62e9
+	3. March 15, 2025 https://www.polskieradio.pl/395/9766/artykul/3496996,ukrainian-forces-withdraw-from-sudzha-zelensky-denies-encirclement-in-kursk-region
+Useful result: From [Source](https://www.cnn.com/2024/08/15/europe/kursk-incursion-sudzha-captured-ukraine-intl): 
+Content: CNN reports that Volodymyr Zelensky said on August 15, 2024, that Ukrainian forces have taken control of the Russian town of Sudzha. The article mentions a cross-border incursion into Russia’s Kursk region. <image:1>. The article is written by Maria Kostenko, Caitlin Danaher and Sophie Tanno and was updated on August 15, 2024.
+
+Useful result: From [Source](https://apnews.com/article/russia-belgorod-state-of-emergency-b7fb57c21a43f0f06bf79a4477eb62e9): 
+Content: The Associated Press (AP) reports that Ukrainian President Volodymyr Zelenskyy said on Thursday that Ukrainian troops had taken full control of Sudzha, a town in Russia's Kursk region. The article mentions that Sudzha is the administrative center for the border area of Russia’s Kursk region. The article also mentions that Zelenskyy said Ukraine was setting up a military command office in Sudzha. <image:1>
+
+Useful result: From [Source](https://www.polskieradio.pl/395/9766/artykul/3496996,ukrainian-forces-withdraw-from-sudzha-zelensky-denies-encirclement-in-kursk-region): 
+Content: The article from Polskie Radio discusses the situation in the Kursk region, where Ukrainian forces have withdrawn from certain areas. It mentions that Ukrainian President Volodymyr Zelensky stated that Ukrainian forces continue to engage in operations in the Kursk region and are not facing encirclement. The article also mentions a press conference in Kyiv on March 12, 2025, where Zelensky spoke. <image:7>
+
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Zelensky Sudzha Kursk August 2024')
+Failed to download or open image: cannot identify image file <_io.BytesIO object at 0x7ffed17b4cc0>
+Got 2 new web source(s):
+	1. https://www.understandingwar.org/backgrounder/russian-offensive-campaign-assessment-august-23-2024
+	2. https://www.geopoliticalmonitor.com/ukraines-kursk-offensive-symbolic-gains-strategic-costs/
+Useful result: From [Source](https://www.understandingwar.org/backgrounder/russian-offensive-campaign-assessment-august-23-2024): 
+Content: The Institute for the Study of War and Critical Threats published a map showing the Ukrainian incursion into Kursk Oblast as of August 23, 2024, including the location of Sudzha. <image:8489>
+
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Zelensky Kursk region August 2024')
+Failed to download or open image: cannot identify image file <_io.BytesIO object at 0x7ffed163dd00>
+Got 1 new web source(s):
+	1. https://www.cnn.com/2024/11/11/europe/russia-ukraine-kursk-intl
+Useful result: From [Source](https://www.cnn.com/2024/11/11/europe/russia-ukraine-kursk-intl): 
+Content: CNN published an article about the situation in the Kursk region. The article includes an image of military vehicles. <image:8490>
+
+The claim '<image:7> This image shows Ukrainian President Volodymyr Zelensky arriving in August 2024 in the Sudzha of Kursk region, Russia, which had just been occupied by Ukrainian troops in the Kursk Offensive, and meeting with representatives of the people there.' is false.
+Justification: The claim is unverified. While evidence confirms the Kursk region and Sudzha were areas of conflict during the Kursk Offensive in August 2024, the provided evidence does not confirm that the image depicts Volodymyr Zelensky in Sudzha during that time.
+
+So, the overall veracity is: false
+Fact-check took 2:46 min.

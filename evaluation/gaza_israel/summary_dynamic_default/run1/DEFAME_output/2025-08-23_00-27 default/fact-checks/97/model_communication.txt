@@ -1,0 +1,818 @@
+PlanPrompt - QUERY:
+
+# Instructions
+The available knowledge is insufficient to assess the Claim. Therefore, **propose a set of actions** to retrieve new and helpful evidence. Adhere to the following rules:
+* The actions available are listed under Valid Actions, including a short description for each action. No other actions are possible at this moment. 
+* For each action, use the formatting as specified in Valid Actions.
+* Include all actions in a single Markdown code block at the end of your answer.
+* Propose as few actions as possible, but as much as needed. Do not propose similar or previously used actions.
+
+
+
+## Valid Actions
+* `image_search`
+   * Description: Run an image search on Google to retrieve related images for a given query.
+   * How to use: This is a helpful tool for fact-checking images. Use this to retrieve images associated with a specific keyword or phrase. Ensure that the query is clear and specific to improve search accuracy. If no relevant images are found, refine the query or use more descriptive terms.
+   * Format: image_search("your image search query goes here")
+
+* `web_search`
+   * Description: Run an open web search on Google or DuckDuckGO to retrieve any related webpage.
+   * How to use: Do not use this with a previously used or similar query from previous web searches. If a previous web search did not yield any results, use a very different query.
+   * Format: web_search("your web search query goes here")
+
+* `geolocate`
+   * Description: Performs geolocation to determine the country where an image was taken.
+   * How to use: Provide an image and the model will determine the most likely countries where it was taken.
+   * Format: geolocate(<image:k>), where `k` is the image's ID
+
+* `reverse_search`
+   * Description: Performs a reverse image search to find similar images on the web.
+   * How to use: Provide an image and the model will perform a reverse search to find similar images.
+   * Format: reverse_search(<image:k>), where `k` is the image's ID
+
+# Example: image_search()
+
+## Claim
+Text: "Chinese officials in white protective hazmat suits carried people down a hallway to be quarantined for having COVID-19 in November 2022."
+
+...
+
+ACTIONS:
+```
+image_search("China officials white suits carry people")
+image_search("China officials carry people COVID quarantine 2022")
+```
+
+# Example: web_search()
+
+## Claim
+Text: "New Zealand’s new Food Bill bans gardening"
+Claim date: October 29, 2020
+
+...
+
+## Actions
+```
+web_search("New Zealand Food Bill 2020")
+web_search("New Zealand Food Bill gardening ban")
+```
+
+# Example: geolocate()
+
+## Claim
+Text: "<image:k> shows a nuclear weapons facility in Usbekistan."
+
+...
+
+## Actions
+```
+geolocate(<image:k>)
+```
+
+# Example: reverse_search()
+
+## Claim
+Text: "<image:k> shows a rare event of a solar eclipse with a double ring."
+
+...
+
+## Actions
+```
+reverse_search(<image:k>)
+```
+
+# Record
+## Claim
+Claim: "The US reinstituted draft in 2024 for the Israel-Hamas war."
+
+# Your Actions
+
+
+
+===== > RESPONSE:  < =====
+```
+web_search("US draft reinstituted 2024")
+web_search("US military draft Israel-Hamas war")
+```
+_________________________
+
+
+
+SummarizeResultPrompt - QUERY:
+
+# Instructions
+In order to find evidence that helps your fact-check, you just ran a web search which yielded a Search Result. **Your task right now is to summarize the Search Result.** What to include:
+* information that might be useful for the fact-check (see Record)
+* relevant images (refer to images by inserting their reference <image:k>)
+* if available: the release date as well as the author or the publisher (e.g. the media company) of the search result.
+
+Do NOT include:
+* advertisements
+* any other information not related to the Record or the Claim
+
+Additional rules:
+* Do not add any additional information besides the information in the Search Result.
+* If the Search Result doesn't contain any relevant information for the fact-checking work, simply print one word in capital letters: "NONE".
+* Keep your writing style like in the Examples 1, 2 and 3 provided to you.
+* Try to filter out relevant information even if the search result is in a different language.
+
+# Example 1
+The search result from America Today provides several photographs of the Notre-Dame Cathedral fire on April 15, 2019. <image:i>, <image:j>, <image:k>. None of the images show the Eiffel Tower in the background. 
+
+# Example 2
+NONE
+
+# Example 3
+The Guardian discusses a report blaming the Syrian government for a toxic gas attack and condemning their use of chemical weapons. The Guardian mentions the Chemical Weapons Convention and the responsibilities of Syria under the convention. According to The Guardian, The White House condemned the Assad regime for defying the norm against chemical weapons use.
+
+# Record
+## Claim
+Claim: "The US reinstituted draft in 2024 for the Israel-Hamas war."
+
+## Actions
+```
+web_search("US draft reinstituted 2024")
+web_search("US military draft Israel-Hamas war")
+```
+
+# Search Result
+From [Source](https://www.rand.org/pubs/commentary/2024/07/the-return-of-the-military-draft.html): 
+Content: "
+If you provide content to customers through CloudFront, you can find steps to troubleshoot and help prevent this error by reviewing the CloudFront documentation."
+
+# Your Summary
+
+
+
+===== > RESPONSE:  < =====
+NONE
+
+_________________________
+
+
+
+SummarizeResultPrompt - QUERY:
+
+# Instructions
+In order to find evidence that helps your fact-check, you just ran a web search which yielded a Search Result. **Your task right now is to summarize the Search Result.** What to include:
+* information that might be useful for the fact-check (see Record)
+* relevant images (refer to images by inserting their reference <image:k>)
+* if available: the release date as well as the author or the publisher (e.g. the media company) of the search result.
+
+Do NOT include:
+* advertisements
+* any other information not related to the Record or the Claim
+
+Additional rules:
+* Do not add any additional information besides the information in the Search Result.
+* If the Search Result doesn't contain any relevant information for the fact-checking work, simply print one word in capital letters: "NONE".
+* Keep your writing style like in the Examples 1, 2 and 3 provided to you.
+* Try to filter out relevant information even if the search result is in a different language.
+
+# Example 1
+The search result from America Today provides several photographs of the Notre-Dame Cathedral fire on April 15, 2019. <image:i>, <image:j>, <image:k>. None of the images show the Eiffel Tower in the background. 
+
+# Example 2
+NONE
+
+# Example 3
+The Guardian discusses a report blaming the Syrian government for a toxic gas attack and condemning their use of chemical weapons. The Guardian mentions the Chemical Weapons Convention and the responsibilities of Syria under the convention. According to The Guardian, The White House condemned the Assad regime for defying the norm against chemical weapons use.
+
+# Record
+## Claim
+Claim: "The US reinstituted draft in 2024 for the Israel-Hamas war."
+
+## Actions
+```
+web_search("US draft reinstituted 2024")
+web_search("US military draft Israel-Hamas war")
+```
+
+# Search Result
+From [Source](https://warontherocks.com/2024/08/preparing-for-the-possibility-of-a-draft-without-panic/): 
+Content: "By insiders.
+---------------------------------------------
+
+Join War on the Rocks and gain access to content trusted by policymakers, military leaders, and strategic thinkers worldwide.
+
+[BECOME A MEMBER](https://warontherocks.com/membership/)
+
+[BECOME A MEMBER](https://warontherocks.com/membership/)
+
+Preparing for the Possibility of a Draft Without Panic
+------------------------------------------------------
+
+[Taren Sylvester](https://warontherocks.com/author/taren-sylvester/)
+ and [Katherine Kuzminski](https://warontherocks.com/author/katherine-kuzminski/)
+
+August 8, 2024
+
+![Preparing for the Possibility of a Draft Without Panic](https://warontherocks.com/wp-content/uploads/2024/08/Draft-e1722870922291-1024x682.jpg?v=1722870923&v=1755911441)
+
+![Preparing for the Possibility of a Draft Without Panic](https://warontherocks.com/wp-content/uploads/2024/08/Draft-e1722870922291-1024x682.jpg?v=1722870923&v=1755911441)
+
+[Commentary](https://warontherocks.com/category/commentary/)
+[](https://warontherocks.com/category/commentary/)
+
+Preparing for the Possibility of a Draft Without Panic
+------------------------------------------------------
+
+Taren Sylvester and Katherine Kuzminski
+
+August 8, 2024
+
+Conscription — a practice most Americans [believe should be](https://news.gallup.com/poll/28642/vast-majority-americans-opposed-reinstituting-military-draft.aspx)
+ relegated to the dustbin of history — has returned as an uncomfortable topic of conversation among U.S. This has generated [concern](https://theconversation.com/us-kicks-off-debate-on-conscription-as-other-nato-members-introduce-drafts-232458)
+ and even [conspiracy theories](https://www.usatoday.com/story/news/factcheck/2024/06/18/men-draft-selective-service-fact-check/74124846007/)
+ among American voters. [allies](https://www.politico.eu/article/germany-conscription-boris-pistorius-military-service-ukraine-war-bundeswehr/)
+ and [adversaries](https://www.reuters.com/world/europe/russias-putin-signs-decree-spring-military-conscription-2024-03-31/)
+ alike. In August 2016, [Norway](https://warontherocks.com/2016/06/norways-gender-neutral-draft/)
+ implemented a universal conscription model — including, for the first time, a requirement for women. [France](https://www.bloomberg.com/opinion/articles/2024-04-05/ukraine-conscription-military-service-panic-isn-t-what-europe-needs?embedded-checkout=true)
+, which ended conscription in 1996, and [Germany](https://www.politico.eu/article/germany-conscription-boris-pistorius-military-service-ukraine-war-bundeswehr/)
+, which ended conscription in 2011, have recently begun political debates about the potential for future conscription. What would that look like?
+
+A recent proposal to [automate](https://www.militarytimes.com/news/pentagon-congress/2024/05/23/lawmakers-move-to-automate-selective-service-registration-for-all-men/)
+ Selective Service System registration for men on their 18th birthdays coupled with debate that the current all-male registration should be [expanded](https://thehill.com/policy/defense/4730560-senate-democrats-require-women-draft/)
+ to include all Americans has generated [public rumors](https://thedispatch.com/article/mandatory-registration-for-the-draft-isnt-new-contrary-to-social-media-posts/)
+ that the nation is on a wartime footing. These concerns are unfounded, but Americans’ confusion and anxiety over the use of the draft is understandable. Was the threat existential to America’s existence, requiring the level of conflict necessary to use a draft? For many, the answer to both questions was “no.” Any use of a draft in a future conflict will require addressing the errors of Vietnam.
+
+For several reasons, the United States actively [decided](https://www.nixonfoundation.org/wp-content/uploads/2012/01/The-Report-Of-The-Presidents-Commission-On-An-All-Volunteer-Armed-Force.pdf)
+ to move from a mixed force of conscripts (draftees) and professional service members to the all-volunteer force in 1973. The all-volunteer force provides a smaller but [more professionalized](https://www.defense.gov/News/News-Stories/Article/Article/3316678/all-volunteer-force-proves-successful-for-us-military/)
+ force than its predecessor, increasing the standards of those who serve across [metrics](https://www.rand.org/pubs/research_briefs/RB9195.html)
+ including mental aptitude, physical strength, training, and unit cohesion.
+
+Yet just because the United States transitioned to volunteers does not mean that the nation would never need to call upon a draft in the future."
+
+# Your Summary
+
+
+
+===== > RESPONSE:  < =====
+War on the Rocks published an article on August 8, 2024, discussing the possibility of a draft in the U.S. The article mentions that conscription is being discussed among U.S. allies and adversaries. It also mentions recent proposals to automate Selective Service System registration and expand it to include all Americans, which has led to public rumors about the nation being on a wartime footing. <image:k>
+
+_________________________
+
+
+
+SummarizeResultPrompt - QUERY:
+
+# Instructions
+In order to find evidence that helps your fact-check, you just ran a web search which yielded a Search Result. **Your task right now is to summarize the Search Result.** What to include:
+* information that might be useful for the fact-check (see Record)
+* relevant images (refer to images by inserting their reference <image:k>)
+* if available: the release date as well as the author or the publisher (e.g. the media company) of the search result.
+
+Do NOT include:
+* advertisements
+* any other information not related to the Record or the Claim
+
+Additional rules:
+* Do not add any additional information besides the information in the Search Result.
+* If the Search Result doesn't contain any relevant information for the fact-checking work, simply print one word in capital letters: "NONE".
+* Keep your writing style like in the Examples 1, 2 and 3 provided to you.
+* Try to filter out relevant information even if the search result is in a different language.
+
+# Example 1
+The search result from America Today provides several photographs of the Notre-Dame Cathedral fire on April 15, 2019. <image:i>, <image:j>, <image:k>. None of the images show the Eiffel Tower in the background. 
+
+# Example 2
+NONE
+
+# Example 3
+The Guardian discusses a report blaming the Syrian government for a toxic gas attack and condemning their use of chemical weapons. The Guardian mentions the Chemical Weapons Convention and the responsibilities of Syria under the convention. According to The Guardian, The White House condemned the Assad regime for defying the norm against chemical weapons use.
+
+# Record
+## Claim
+Claim: "The US reinstituted draft in 2024 for the Israel-Hamas war."
+
+## Actions
+```
+web_search("US draft reinstituted 2024")
+web_search("US military draft Israel-Hamas war")
+```
+
+# Search Result
+From [Source](https://www.military.com/join-armed-forces/will-the-military-draft-come-back): 
+Content: "The system is designed to induct draftees within 193 days of authorization.
+
+### No Current Plans for Reactivation
+
+In 2024, [The Washington Post reported](https://www.washingtonpost.com/national-security/2024/06/10/trump-military-draft-mandatory-service/)
+ that "a cluster of influential former administration officials and GOP lawmakers ... have mused aloud about a national service mandate and other measures to remedy what they see as a 'crisis' facing the all-volunteer military." However, Donald Trump responded that it was a "ridiculous idea."
+
+The same year, in an analysis for [Foreign Policy](https://foreignpolicy.com/2024/07/10/military-draft-conscription-soldiers-technology-nato-europe-russia-ukraine/)
+, political scientist Raphael S. It would require formal legislation passed by both the House and Senate and signed by the president.
+
+There's no existing authority -- even for a sitting president -- to bring back the draft unilaterally without that legal action. Any attempt to bypass Congress would be unconstitutional and almost certainly trigger massive legal, political and public pushback, including court challenges.
+
+Until that happens, registering is a precaution, not a signal that anyone's about to get called up.
+
+**Read More:** [Everything You Need to Know About the Military Draft](https://www.military.com/join-armed-forces/everything-you-need-know-about-military-selective-service-system.html)
+
+### Legal Framework for Reinstating the Draft
+
+  
+Any attempt to bring back the draft would typically be in response to the declaration of a national emergency or a large-scale war that would overburden the U.S. Cohen wrote: "After decades of becoming increasingly rare, the military draft is back in the debate."
+
+Cohen noted that, despite the fact that modern warfare often emphasizes technology and drones, many countries are reintroducing or reconsidering the military draft, because large-scale conflicts still require a significant number of people. Despite occasional public anxiety during times of global tension or military escalation, there have been no formal moves by Congress or the executive branch to bring back the draft.
+
+**Related:** [6 Reasons You Probably Won't Be Conscripted, Even if We Bring Back the Draft](https://www.military.com/join-military/contact-recruiter/6-reasons-you-probably-wont-be-conscripted-even-if-we-bring-back-draft.html)
+
+What Could Trigger a Return to the Draft?
+-----------------------------------------
+
+Although returning to the draft wouldn't happen lightly or without significant cause, possible scenarios that might trigger it include:
+
+*   A large-scale ground war that requires a big increase in troop numbers
+*   Multiple military conflicts going on around the world simultaneously, stretching U.S. Simply put, people who are medically unfit, already serving, conscientious objectors (with approval) or otherwise legally exempt cannot be drafted.
+
+If a draft were to return, those selected would undergo a classification process to determine their eligibility and to see whether there are any deferments or exemptions. The process would look something like this:
+
+*   **Physical and Mental Assessments:** Registrants would be evaluated at Military Entrance Processing Stations (MEPS) to check their physical and mental fitness for military service.
+*   **Eligibility Verification:** Factors such as age, health and legal status would be reviewed to confirm eligibility.
+*   **Deferments and Exemptions:** Depending on the person, some may qualify for deferments (temporary postponements) or exemptions (permanent exclusions) from service.
+
+Again, classification would only occur if Congress and the president decide to resume a draft. At that time, those qualified for induction would have the opportunity to file claims for exemptions, deferments and postponements from military service.
+
+### Appeals and Conscientious Objection
+
+  
+Those who believe they should not be inducted due to personal beliefs or circumstances have avenues to appeal:
+
+*   **Local Draft Boards:** Registrants could present their case to a local board, which will decide whether to grant or deny their claim.
+*   **Appeal Process:** If the local board denies the claim, the individual could appeal to a district appeal board. If the district board were to deny the claim, and the vote wasn't unanimous, further appeal to the national appeal board would be possible.
+
+Those whose objections are based on moral or religious grounds -- aka conscientious objectors -- could (if approved) be assigned to noncombatant roles within the military or, in some cases, to civilian service contributing to the national health, safety or interest.
+
+For more information on conscientious objection, visit the [Conscientious Objectors](https://www.sss.gov/conscientious-objectors/)
+ page on the Selective Service System's website.
+
+You may be wondering, "What happens if you get drafted and refuse to go?" Refusing to comply with a draft order can lead to legal penalties, including fines and possible jail time.
+
+Why Are People Worried the Draft Might Come Back?
+-------------------------------------------------
+
+In recent years, a whole host of global events, political tensions and information spread online have stirred public concerns that the U.S."
+
+# Your Summary
+
+
+
+===== > RESPONSE:  < =====
+Military.com states that there are no current plans to reactivate the draft in 2024. The Washington Post reported that some officials have discussed a national service mandate, but Donald Trump called it a "ridiculous idea." Any attempt to bring back the draft would require legislation passed by Congress and signed by the president. The article mentions that a large-scale ground war or multiple military conflicts could trigger a return to the draft.
+
+_________________________
+
+
+
+SummarizeSummariesPrompt - QUERY:
+
+# Instructions
+You just retrieved web sources, each one summarized under "Web Sources". **Your task right now is to summarize the web source summaries.**
+
+Always adhere to the following rules:
+* Write only one to two paragraphs.
+* Include all URLs from the listed sources. Format them as Markdown hyperlinks.
+* Do not add any additional information besides the information in the summaries.
+* Include references (<image:k>) to all relevant images.
+
+# Record
+## Claim
+Claim: "The US reinstituted draft in 2024 for the Israel-Hamas war."
+
+## Actions
+```
+web_search("US draft reinstituted 2024")
+web_search("US military draft Israel-Hamas war")
+```
+
+## Web Sources
+**Web Search Result**
+
+From [Source](https://www.rand.org/pubs/commentary/2024/07/the-return-of-the-military-draft.html): 
+Content: NONE
+
+
+From [Source](https://warontherocks.com/2024/08/preparing-for-the-possibility-of-a-draft-without-panic/): 
+Content: War on the Rocks published an article on August 8, 2024, discussing the possibility of a draft in the U.S. The article mentions that conscription is being discussed among U.S. allies and adversaries. It also mentions recent proposals to automate Selective Service System registration and expand it to include all Americans, which has led to public rumors about the nation being on a wartime footing. <image:k>
+
+
+From [Source](https://www.military.com/join-armed-forces/will-the-military-draft-come-back): 
+Content: Military.com states that there are no current plans to reactivate the draft in 2024. The Washington Post reported that some officials have discussed a national service mandate, but Donald Trump called it a "ridiculous idea." Any attempt to bring back the draft would require legislation passed by Congress and signed by the president. The article mentions that a large-scale ground war or multiple military conflicts could trigger a return to the draft.
+
+
+## Your Summary
+
+
+
+===== > RESPONSE:  < =====
+The War on the Rocks published an article on August 8, 2024, discussing the possibility of a draft in the U.S., mentioning that conscription is being discussed among U.S. allies and adversaries. It also mentions recent proposals to automate Selective Service System registration and expand it to include all Americans, which has led to public rumors about the nation being on a wartime footing. (<image:k>) Military.com states that there are no current plans to reactivate the draft in 2024. Any attempt to bring back the draft would require legislation passed by Congress and signed by the president.
+
+Sources: [https://warontherocks.com/2024/08/preparing-for-the-possibility-of-a-draft-without-panic/](https://warontherocks.com/2024/08/preparing-for-the-possibility-of-a-draft-without-panic/), [https://www.military.com/join-armed-forces/will-the-military-draft-come-back](https://www.military.com/join-armed-forces/will-the-military-draft-come-back)
+
+_________________________
+
+
+
+SummarizeResultPrompt - QUERY:
+
+# Instructions
+In order to find evidence that helps your fact-check, you just ran a web search which yielded a Search Result. **Your task right now is to summarize the Search Result.** What to include:
+* information that might be useful for the fact-check (see Record)
+* relevant images (refer to images by inserting their reference <image:k>)
+* if available: the release date as well as the author or the publisher (e.g. the media company) of the search result.
+
+Do NOT include:
+* advertisements
+* any other information not related to the Record or the Claim
+
+Additional rules:
+* Do not add any additional information besides the information in the Search Result.
+* If the Search Result doesn't contain any relevant information for the fact-checking work, simply print one word in capital letters: "NONE".
+* Keep your writing style like in the Examples 1, 2 and 3 provided to you.
+* Try to filter out relevant information even if the search result is in a different language.
+
+# Example 1
+The search result from America Today provides several photographs of the Notre-Dame Cathedral fire on April 15, 2019. <image:i>, <image:j>, <image:k>. None of the images show the Eiffel Tower in the background. 
+
+# Example 2
+NONE
+
+# Example 3
+The Guardian discusses a report blaming the Syrian government for a toxic gas attack and condemning their use of chemical weapons. The Guardian mentions the Chemical Weapons Convention and the responsibilities of Syria under the convention. According to The Guardian, The White House condemned the Assad regime for defying the norm against chemical weapons use.
+
+# Record
+## Claim
+Claim: "The US reinstituted draft in 2024 for the Israel-Hamas war."
+
+## Actions
+```
+web_search("US draft reinstituted 2024")
+web_search("US military draft Israel-Hamas war")
+```
+
+# Search Result
+From [Source](https://www.securitycouncilreport.org/whatsinblue/2025/06/the-middle-east-including-the-palestinian-question-vote-on-a-draft-resolution-6.php): 
+Content: "This would be the fifth draft resolution on the Israel-Hamas war vetoed by the US since the conflict started on 7 October 2023. *   [Monthly  \
+    ForecastMonthly preview of issues in the Council](https://www.securitycouncilreport.org/monthly_forecast/2025-08)
+    
+*   [Country and  \
+    Regional IssuesPublications on country-specific and regional issues in the Council](https://www.securitycouncilreport.org/country-regional-issues)
+    
+*   [Thematic and  \
+    General IssuesCouncil thematic and structural issues and peace making, keeping and building](https://www.securitycouncilreport.org/thematic-general-issues)
+    
+*   [About the UN  \
+    Security CouncilBackground information on the Council, its subsidiary bodies and activities](https://www.securitycouncilreport.org/about-the-un-security-council)
+    
+*   [About SCR](https://www.securitycouncilreport.org/about-security-council-report)
+     [What's In Blue](https://www.securitycouncilreport.org/whatsinblue)
+     [Past Publications](https://www.securitycouncilreport.org/past-publications)
+     [Press Release](https://www.securitycouncilreport.org/atf/cf/{65BFCF9B-6D27-4E9C-8CD3-CF6E4FF96FF9}/Shamala-Kandiah-Thompson-Executive-Director.pdf)
+    
+*   [Home](https://www.securitycouncilreport.org)
+     [Contact](https://www.securitycouncilreport.org/contact)
+     [Resources](https://www.securitycouncilreport.org/resources)
+     [Donate](https://www.securitycouncilreport.org/donate?mtm_campaign=donate-landing&mtm_source=scr-web&mtm_medium=donate-interior-nav)
+    
+
+### [What's In Blue](https://www.securitycouncilreport.org/whatsinblue/)
+
+Posted Wed 4 Jun 2025
+
+*   [Print](https://www.securitycouncilreport.org/whatsinblue/2025/06/the-middle-east-including-the-palestinian-question-vote-on-a-draft-resolution-6.php?print=true)
+    
+*   [Share](https://www.addtoany.com/share)
+    
+
+The Middle East, including the Palestinian Question: Vote on a Draft Resolution\*
+=================================================================================
+
+This afternoon (4 June) at 4 pm EST, the Security Council is expected to vote on a draft resolution on the [war between Israel and Hamas](https://www.securitycouncilreport.org/middle-east-including-the-palestinian-question/)
+ that was initiated by the Council’s ten elected members (E10). The draft text in blue demands an immediate, unconditional, and permanent ceasefire in Gaza; the immediate, dignified, and unconditional release of all hostages held by Hamas and other groups; and the immediate and unconditional lifting of all restrictions on the entry of humanitarian aid into the territory.
+
+Conditions in Gaza have continued to deteriorate amid Israel’s escalating military operation following the expiry of its ceasefire agreement with Hamas in March and the country’s decision to prevent the entry of humanitarian aid into the territory. Alleging aid diversion by Hamas, Israel and the US have advanced a plan coordinated by a new private entity called the [Gaza Humanitarian Foundation](https://ynet-pic1.yit.co.il/picserver6/wcm_upload_files/2025/05/08/BJbxp4cgel/Gaza_Humanitarian_Foundation_Overview__1_.pdf)
+ (GHF) that would bypass the existing delivery architecture run by the UN and its humanitarian partners. While there was apparently some debate about the appropriate language to use in reference to certain elements—including Hamas and the release of hostages—it seems that the elected members agreed on the key provisions of a draft resolution. It seems that the US expressed reservations about the draft and made several proposals that it considered prerequisites for further engagement, including a condemnation of Hamas and expression of support for the GHF. Other P5 members apparently signalled overall support for the resolution but suggested certain revisions: France and the UK also sought language condemning Hamas, while Russia proposed several edits, including the deletion of references to the IPC report and to [resolution 2735](https://digitallibrary.un.org/record/4051310?ln=en&v=pdf)
+ of 10 June 2024—on which Russia abstained—that welcomed the 31 May 2024 ceasefire proposal announced by the US.
+
+As several of the proposed changes were unacceptable to other members, the E10 apparently viewed their initial draft as the most balanced reflection of positions. Despite the possibility of a US veto, however, it seems that the E10 chose to move forward with the vote as a political signal to emphasise the need for Council action as the ceasefire negotiations have so far failed to achieve a breakthrough and the humanitarian toll of the conflict continues to rise.
+
+\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+
+_\*\*Post-script:_ On 4 June, the Security Council voted on the draft resolution submitted by the Council’s ten elected members (E10). On 19 May, Israel [announced](https://www.kan.org.il/content/kan-news/politic/904878/)
+ that it would restore limited access to allow a “minimum” amount of humanitarian aid to enter the territory until a new aid delivery mechanism that Israel and the US have developed was operational.
+
+Most Council members remain concerned about that mechanism. The GHF has begun delivering aid at designated distribution sites secured by US contractors and the Israel Defense Forces (IDF)."
+
+# Your Summary
+
+
+
+===== > RESPONSE:  < =====
+The Security Council Report published on June 4, 2025, discusses a draft resolution on the war between Israel and Hamas. The US vetoed the resolution. The article mentions the expiry of the ceasefire agreement in March and the decision to prevent the entry of humanitarian aid into the territory.
+
+_________________________
+
+
+
+SummarizeResultPrompt - QUERY:
+
+# Instructions
+In order to find evidence that helps your fact-check, you just ran a web search which yielded a Search Result. **Your task right now is to summarize the Search Result.** What to include:
+* information that might be useful for the fact-check (see Record)
+* relevant images (refer to images by inserting their reference <image:k>)
+* if available: the release date as well as the author or the publisher (e.g. the media company) of the search result.
+
+Do NOT include:
+* advertisements
+* any other information not related to the Record or the Claim
+
+Additional rules:
+* Do not add any additional information besides the information in the Search Result.
+* If the Search Result doesn't contain any relevant information for the fact-checking work, simply print one word in capital letters: "NONE".
+* Keep your writing style like in the Examples 1, 2 and 3 provided to you.
+* Try to filter out relevant information even if the search result is in a different language.
+
+# Example 1
+The search result from America Today provides several photographs of the Notre-Dame Cathedral fire on April 15, 2019. <image:i>, <image:j>, <image:k>. None of the images show the Eiffel Tower in the background. 
+
+# Example 2
+NONE
+
+# Example 3
+The Guardian discusses a report blaming the Syrian government for a toxic gas attack and condemning their use of chemical weapons. The Guardian mentions the Chemical Weapons Convention and the responsibilities of Syria under the convention. According to The Guardian, The White House condemned the Assad regime for defying the norm against chemical weapons use.
+
+# Record
+## Claim
+Claim: "The US reinstituted draft in 2024 for the Israel-Hamas war."
+
+## Actions
+```
+web_search("US draft reinstituted 2024")
+web_search("US military draft Israel-Hamas war")
+```
+
+# Search Result
+From [Source](https://whyy.org/articles/draft-ceasefire-deal-israel-hamas-what-to-know/): 
+Content: "The draft deal specifies that equipment will be allowed in to build shelters for tens of thousands whose homes were destroyed and to rebuild infrastructure like electricity, sewage, communications and road systems.
+
+But here, too, implementation could bring problems.
+
+Even before the war, Israel has restricted entry of some equipment, arguing it could be used for military purposes by Hamas. 
+
+*   [Politics & Policy](https://whyy.org/categories/politics-policy/)
+    
+*   [International](https://whyy.org/secondary-categories/international/)
+    
+*   [Military](https://whyy.org/secondary-categories/military/)
+    
+
+*   [Facebook](http://www.facebook.com/sharer.php?u=https://whyy.org/articles/draft-ceasefire-deal-israel-hamas-what-to-know/ "Facebook")
+    
+*   [Twitter](http://twitter.com/share?url=https://whyy.org/articles/draft-ceasefire-deal-israel-hamas-what-to-know/&text=There is a draft ceasefire deal for the Israel-Hamas war. During the past year of negotiations, Israel has insisted it must control the movement of Palestinians to the north to ensure Hamas does not take weapons back into those areas.
+
+Throughout the war, the Israeli military has severed the north from the rest of Gaza by holding the so-called Netzarim Corridor, a belt across the strip where troops cleared out the Palestinian population and set up bases. Negotiations over it are to begin on Day 16 of the ceasefire.
+
+Phase two’s broad outlines are laid out in the draft: All remaining hostages are to be released in return for a complete Israeli withdrawal from Gaza and a “sustainable calm.”
+
+But that seemingly basic exchange opens up much bigger issues.
+
+Israel has said it will not agree to a complete withdrawal until Hamas’ military and political capabilities are eliminated and it cannot rearm — ensuring Hamas no longer runs Gaza. Here are the terms — and tensions "Twitter")
+    
+*   [Email](mailto:?Subject=There is a draft ceasefire deal for the Israel-Hamas war. Here are the terms — and tensions&Body=%20https://whyy.org/articles/draft-ceasefire-deal-israel-hamas-what-to-know/ "Email")
+    
+
+If [the Israel-Hamas ceasefire deal](https://apnews.com/article/israel-palestinians-hamas-war-news-01-14-2025-a1495c0f4f13102903ce31a862c49baa)
+ goes according to the current draft, then fighting will stop in Gaza for 42 days, and dozens of Israeli hostages and hundreds of Palestinian prisoners will be freed. In those talks, Israel, Hamas, and the U.S, Egyptian and Qatari mediators will have to tackle the tough issue of [how Gaza will be governed](https://apnews.com/article/palestinians-fatah-hamas-postwar-gaza-acc4da6042ed030f65d0cd0745b82217)
+, with Israel demanding the elimination of Hamas.
+
+Without a deal within those 42 days to begin the second phase, Israel could resume its campaign in Gaza to destroy Hamas – even as dozens of hostages remain in the militants’ hands.
+
+*   [WHYY thanks our sponsors — become a WHYY sponsor](https://whyy.org/corporate-underwriting/ "WHYY thanks our sponsors — become a WHYY sponsor")
+    
+
+Hamas has agreed to a draft of the ceasefire deal, two officials confirmed, but Israeli officials say details are still being worked out, meaning some terms could change, or the whole deal could even fall through. By the end of the phase, all living women, children and older people held by the militants should be freed.
+
+Some 100 hostages [remain captive inside Gaza](https://apnews.com/article/israel-hostages-gaza-war-hamas-winter-42b21cff477227a7d65bbc30c0bb83fd)
+, a mix of civilians and soldiers, and the military believes at least a third them are dead.
+
+On the first official day of the ceasefire, Hamas is to free three hostages, then another four on the seventh day. Protesters said they see little hope in a “hypocritical” U.S.–backed peace plan.
+
+1 year ago
+
+[![Penn Student Encampment with signs](https://whyy.org/wp-content/themes/whyy/images/loaders/placeholder.gif "Penn Student Encampment with signs")](https://whyy.org/articles/pa-nj-delaware-college-campus-protests-israel-hamas-war/ "Campus Gaza protests: Here’s what’s happening in Philly, N.J. and Delaware](https://whyy.org/articles/pa-nj-delaware-college-campus-protests-israel-hamas-war/ "Campus Gaza protests: Here’s what’s happening in Philly, N.J."
+
+# Your Summary
+
+
+
+===== > RESPONSE:  < =====
+The article discusses a draft ceasefire deal for the Israel-Hamas war, mentioning potential issues with implementation and the release of hostages. It also mentions that Israel could resume its campaign in Gaza if a deal isn't reached within 42 days. The article was published 1 year ago by WHYY.
+
+_________________________
+
+
+
+SummarizeSummariesPrompt - QUERY:
+
+# Instructions
+You just retrieved web sources, each one summarized under "Web Sources". **Your task right now is to summarize the web source summaries.**
+
+Always adhere to the following rules:
+* Write only one to two paragraphs.
+* Include all URLs from the listed sources. Format them as Markdown hyperlinks.
+* Do not add any additional information besides the information in the summaries.
+* Include references (<image:k>) to all relevant images.
+
+# Record
+## Claim
+Claim: "The US reinstituted draft in 2024 for the Israel-Hamas war."
+
+## Actions
+```
+web_search("US draft reinstituted 2024")
+web_search("US military draft Israel-Hamas war")
+```
+
+## Web Sources
+**Web Search Result**
+
+From [Source](https://www.securitycouncilreport.org/whatsinblue/2025/06/the-middle-east-including-the-palestinian-question-vote-on-a-draft-resolution-6.php): 
+Content: The Security Council Report published on June 4, 2025, discusses a draft resolution on the war between Israel and Hamas. The US vetoed the resolution. The article mentions the expiry of the ceasefire agreement in March and the decision to prevent the entry of humanitarian aid into the territory.
+
+
+From [Source](https://whyy.org/articles/draft-ceasefire-deal-israel-hamas-what-to-know/): 
+Content: The article discusses a draft ceasefire deal for the Israel-Hamas war, mentioning potential issues with implementation and the release of hostages. It also mentions that Israel could resume its campaign in Gaza if a deal isn't reached within 42 days. The article was published 1 year ago by WHYY.
+
+
+## Your Summary
+
+
+
+===== > RESPONSE:  < =====
+The Security Council Report from June 4, 2025, discusses a draft resolution on the Israel-Hamas war, which the US vetoed. The report also mentions the expiry of a ceasefire agreement and the prevention of humanitarian aid. (<image:k>) Another article discusses a draft ceasefire deal, potential implementation issues, and the release of hostages. (<image:k>) It also mentions that Israel could resume its campaign in Gaza if a deal isn't reached within 42 days.
+
+The first source is available at [https://www.securitycouncilreport.org/whatsinblue/2025/06/the-middle-east-including-the-palestinian-question-vote-on-a-draft-resolution-6.php](https://www.securitycouncilreport.org/whatsinblue/2025/06/the-middle-east-including-the-palestinian-question-vote-on-a-draft-resolution-6.php). The second source is available at [https://whyy.org/articles/draft-ceasefire-deal-israel-hamas-what-to-know/](https://whyy.org/articles/draft-ceasefire-deal-israel-hamas-what-to-know/).
+
+_________________________
+
+
+
+DevelopPrompt - QUERY:
+
+# Instructions
+You just retrieved new Evidence. Now, **analyze the Claim's veracity using the evidence**. Always adhere to the following rules:
+* Focus on developing new insights. Do not repeat larger parts from the Record. Do not restate the Claim.
+* Write down your thoughts step-by-step. Whenever necessary, you may elaborate in more detail.
+* Depending on the topic's complexity, invest one to three paragraphs. The fewer, the better.
+* If you find that there is insufficient information to verify the Claim, explicitly state what information is missing.
+* If you cite web sources, always refer to them by including their URL as a Markdown hyperlink.
+* **Use information only from the recorded evidence**: Avoid inserting information that is not implied by the evidence. You may use commonsense knowledge, though.
+
+# Record
+## Claim
+Claim: "The US reinstituted draft in 2024 for the Israel-Hamas war."
+
+## Actions
+```
+web_search("US draft reinstituted 2024")
+web_search("US military draft Israel-Hamas war")
+```
+
+## Evidence
+### Evidence from `web_search`
+The War on the Rocks published an article on August 8, 2024, discussing the possibility of a draft in the U.S., mentioning that conscription is being discussed among U.S. allies and adversaries. It also mentions recent proposals to automate Selective Service System registration and expand it to include all Americans, which has led to public rumors about the nation being on a wartime footing. (<image:k>) Military.com states that there are no current plans to reactivate the draft in 2024. Any attempt to bring back the draft would require legislation passed by Congress and signed by the president.
+
+Sources: [https://warontherocks.com/2024/08/preparing-for-the-possibility-of-a-draft-without-panic/](https://warontherocks.com/2024/08/preparing-for-the-possibility-of-a-draft-without-panic/), [https://www.military.com/join-armed-forces/will-the-military-draft-come-back](https://www.military.com/join-armed-forces/will-the-military-draft-come-back)
+
+
+### Evidence from `web_search`
+The Security Council Report from June 4, 2025, discusses a draft resolution on the Israel-Hamas war, which the US vetoed. The report also mentions the expiry of a ceasefire agreement and the prevention of humanitarian aid. (<image:k>) Another article discusses a draft ceasefire deal, potential implementation issues, and the release of hostages. (<image:k>) It also mentions that Israel could resume its campaign in Gaza if a deal isn't reached within 42 days.
+
+The first source is available at [https://www.securitycouncilreport.org/whatsinblue/2025/06/the-middle-east-including-the-palestinian-question-vote-on-a-draft-resolution-6.php](https://www.securitycouncilreport.org/whatsinblue/2025/06/the-middle-east-including-the-palestinian-question-vote-on-a-draft-resolution-6.php). The second source is available at [https://whyy.org/articles/draft-ceasefire-deal-israel-hamas-what-to-know/](https://whyy.org/articles/draft-ceasefire-deal-israel-hamas-what-to-know/).
+
+
+# Your Analysis
+
+
+
+===== > RESPONSE:  < =====
+The evidence indicates that there were discussions about the possibility of a draft in the U.S. in August 2024, but there were no plans to reactivate it. The evidence also mentions a draft resolution related to the Israel-Hamas war in June 2025.
+
+The claim that the U.S. reinstituted the draft in 2024 for the Israel-Hamas war is not supported by the evidence. While there were discussions and rumors, there is no evidence of the draft being reinstituted.
+
+_________________________
+
+
+
+JudgePrompt - QUERY:
+
+# Instructions
+**Determine the Claim's veracity** by following these steps:
+1. Briefly summarize the key insights from the fact-check (see Record) in at most one paragraph.
+2. Write one paragraph about which one of the Decision Options applies best. Include the most appropriate decision option at the end and enclose it in backticks like `this`.
+
+
+
+## Decision Options
+* `true`: The claim is factually accurate when it is confirmed by evidence from multiple and reliable sources.
+* `false`: The claim is not factually accurate. This is the case if one of the following three conditions is met:(1) The claim is demonstrably false when it is disproven by evidence from multiple and reliable sources,(2) The claim or image is taken out of context, i.e. the origin, content and/or meaning of a statement or an image is misrepresented. For example, an old claim or an old image is mispresented in a new context in a misleading way,(3) There is not enough evidence to verify the claim or the evidence is conflicting or self-contradictory.
+* `not enough information`: The fact-check does not contain sufficient information to come to an conclusion. For example,there is substantial lack of evidence or the evidence is inconclusive, conflicting or self-contradictory. In the case of a lack of evidence, state which information exactly is missing. In particular, if no RESULTS or sources are available, pick this decision.
+
+# Record
+## Claim
+Claim: "The US reinstituted draft in 2024 for the Israel-Hamas war."
+
+## Actions
+```
+web_search("US draft reinstituted 2024")
+web_search("US military draft Israel-Hamas war")
+```
+
+## Evidence
+### Evidence from `web_search`
+The War on the Rocks published an article on August 8, 2024, discussing the possibility of a draft in the U.S., mentioning that conscription is being discussed among U.S. allies and adversaries. It also mentions recent proposals to automate Selective Service System registration and expand it to include all Americans, which has led to public rumors about the nation being on a wartime footing. (<image:k>) Military.com states that there are no current plans to reactivate the draft in 2024. Any attempt to bring back the draft would require legislation passed by Congress and signed by the president.
+
+Sources: [https://warontherocks.com/2024/08/preparing-for-the-possibility-of-a-draft-without-panic/](https://warontherocks.com/2024/08/preparing-for-the-possibility-of-a-draft-without-panic/), [https://www.military.com/join-armed-forces/will-the-military-draft-come-back](https://www.military.com/join-armed-forces/will-the-military-draft-come-back)
+
+
+### Evidence from `web_search`
+The Security Council Report from June 4, 2025, discusses a draft resolution on the Israel-Hamas war, which the US vetoed. The report also mentions the expiry of a ceasefire agreement and the prevention of humanitarian aid. (<image:k>) Another article discusses a draft ceasefire deal, potential implementation issues, and the release of hostages. (<image:k>) It also mentions that Israel could resume its campaign in Gaza if a deal isn't reached within 42 days.
+
+The first source is available at [https://www.securitycouncilreport.org/whatsinblue/2025/06/the-middle-east-including-the-palestinian-question-vote-on-a-draft-resolution-6.php](https://www.securitycouncilreport.org/whatsinblue/2025/06/the-middle-east-including-the-palestinian-question-vote-on-a-draft-resolution-6.php). The second source is available at [https://whyy.org/articles/draft-ceasefire-deal-israel-hamas-what-to-know/](https://whyy.org/articles/draft-ceasefire-deal-israel-hamas-what-to-know/).
+
+
+## Elaboration
+The evidence indicates that there were discussions about the possibility of a draft in the U.S. in August 2024, but there were no plans to reactivate it. The evidence also mentions a draft resolution related to the Israel-Hamas war in June 2025.
+
+The claim that the U.S. reinstituted the draft in 2024 for the Israel-Hamas war is not supported by the evidence. While there were discussions and rumors, there is no evidence of the draft being reinstituted.
+
+
+# Your Judgement
+
+
+
+===== > RESPONSE:  < =====
+The search results show discussions about the possibility of a draft in the U.S. in August 2024, but no plans to reactivate it. The evidence also mentions a draft resolution related to the Israel-Hamas war in June 2025.
+
+The claim is demonstrably false as there is no evidence to support the claim that the US reinstituted the draft in 2024 for the Israel-Hamas war. `false`
+
+_________________________
+
+
+
+SummarizeDocPrompt - QUERY:
+
+# Instructions
+You are provided with the record of a fact-check. It contains the Claim to be verified and a documentation of all the fact-checking work along the gathered evidence. Your task is to **summarize the fact-check**. That is, you provide a concise, one-paragraph justification for the final VERDICT based on the knowledge from the Record. Note:
+* Be truthful, brief, do not add any additional information besides the information given in the Record. 
+* Link key sources in your summary. Use Markdown notation for that. You may link them in-line.
+* Don't state the Claim again. Rather focus on the key insights of the fact-check.
+* Simply print just the summary.
+
+# Record
+## Claim
+Claim: "The US reinstituted draft in 2024 for the Israel-Hamas war."
+
+## Actions
+```
+web_search("US draft reinstituted 2024")
+web_search("US military draft Israel-Hamas war")
+```
+
+## Evidence
+### Evidence from `web_search`
+The War on the Rocks published an article on August 8, 2024, discussing the possibility of a draft in the U.S., mentioning that conscription is being discussed among U.S. allies and adversaries. It also mentions recent proposals to automate Selective Service System registration and expand it to include all Americans, which has led to public rumors about the nation being on a wartime footing. (<image:k>) Military.com states that there are no current plans to reactivate the draft in 2024. Any attempt to bring back the draft would require legislation passed by Congress and signed by the president.
+
+Sources: [https://warontherocks.com/2024/08/preparing-for-the-possibility-of-a-draft-without-panic/](https://warontherocks.com/2024/08/preparing-for-the-possibility-of-a-draft-without-panic/), [https://www.military.com/join-armed-forces/will-the-military-draft-come-back](https://www.military.com/join-armed-forces/will-the-military-draft-come-back)
+
+
+### Evidence from `web_search`
+The Security Council Report from June 4, 2025, discusses a draft resolution on the Israel-Hamas war, which the US vetoed. The report also mentions the expiry of a ceasefire agreement and the prevention of humanitarian aid. (<image:k>) Another article discusses a draft ceasefire deal, potential implementation issues, and the release of hostages. (<image:k>) It also mentions that Israel could resume its campaign in Gaza if a deal isn't reached within 42 days.
+
+The first source is available at [https://www.securitycouncilreport.org/whatsinblue/2025/06/the-middle-east-including-the-palestinian-question-vote-on-a-draft-resolution-6.php](https://www.securitycouncilreport.org/whatsinblue/2025/06/the-middle-east-including-the-palestinian-question-vote-on-a-draft-resolution-6.php). The second source is available at [https://whyy.org/articles/draft-ceasefire-deal-israel-hamas-what-to-know/](https://whyy.org/articles/draft-ceasefire-deal-israel-hamas-what-to-know/).
+
+
+## Elaboration
+The evidence indicates that there were discussions about the possibility of a draft in the U.S. in August 2024, but there were no plans to reactivate it. The evidence also mentions a draft resolution related to the Israel-Hamas war in June 2025.
+
+The claim that the U.S. reinstituted the draft in 2024 for the Israel-Hamas war is not supported by the evidence. While there were discussions and rumors, there is no evidence of the draft being reinstituted.
+
+
+## Final Judgement
+The search results show discussions about the possibility of a draft in the U.S. in August 2024, but no plans to reactivate it. The evidence also mentions a draft resolution related to the Israel-Hamas war in June 2025.
+
+The claim is demonstrably false as there is no evidence to support the claim that the US reinstituted the draft in 2024 for the Israel-Hamas war. `false`
+
+
+## Summary
+
+
+
+===== > RESPONSE:  < =====
+The claim is false. While there were discussions about a potential draft in the U.S. in August 2024, as reported by [War on the Rocks](https://warontherocks.com/2024/08/preparing-for-the-possibility-of-a-draft-without-panic/), there were no actual plans to reinstate it. Furthermore, [Military.com](https://www.military.com/join-armed-forces/will-the-military-draft-come-back) confirms that there were no current plans to reactivate the draft in 2024.
+
+_________________________
+
+
+

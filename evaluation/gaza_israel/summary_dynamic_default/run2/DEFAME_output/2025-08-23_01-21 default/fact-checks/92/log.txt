@@ -1,0 +1,37 @@
+Extracting claims from Content: <image:59> This image shows a palestinian child stuck under the rubble in Gaza after an Israeli airstrike in July 2024.
+'Claim: "<image:59> This image shows a palestinian child stuck under the rubble in Gaza after an Israeli airstrike in July 2024."'
+Verifying Claim: "<image:59> This image shows a palestinian child stuck under the rubble in Gaza after an Israeli airstrike in July 2024."
+Not enough information yet. Continuing fact-check...
+Got 4 new web source(s):
+	1. https://english.enabbaladi.net/archives/2023/03/shams-journey-from-under-the-rubble-to-abu-dhabis-burjeel-hospital/
+	2. https://uaetimes.ae/shams-journey-from-under-the-rubble-to-abu-dhabis-burjeel-hospital/
+	3. https://english.elpais.com/international/2023-07-20/the-manual-of-repression-shared-by-modern-tyrants.html
+	4. https://elpais.com/planeta-futuro/2023-07-20/el-manual-de-represion-que-comparten-los-tiranos-modernos.html
+Useful result: From [Source](https://english.enabbaladi.net/archives/2023/03/shams-journey-from-under-the-rubble-to-abu-dhabis-burjeel-hospital/): Found exact image on website with title: Sham's journey from under the rubble to Abu Dhabi's Burjeel Hospital
+Content: The image is of a Syrian child, Sham, who was rescued from the rubble in Armanaz, Idlib, after an earthquake on February 7, 2023. The child was later transferred to hospitals in Turkey and Abu Dhabi for treatment. The article is from Enab Baladi, an independent Syrian media organization. <image:4663>, <image:4664>.
+
+Useful result: From [Source](https://uaetimes.ae/shams-journey-from-under-the-rubble-to-abu-dhabis-burjeel-hospital/): Found exact image on website with title: Sham's journey from under the rubble to Abu Dhabi's Burjeel Hospital
+Content: The image is of a child named Sham, who was rescued from the rubble in Armanaz, Syria, after an earthquake on February 6, 2023. The child was later transferred to Abu Dhabi's Burjeel Hospital. The article was published on March 14, 2023. <image:59>
+
+Useful result: From [Source](https://english.elpais.com/international/2023-07-20/the-manual-of-repression-shared-by-modern-tyrants.html): Found exact image on website with title: The 'manual of repression' shared by modern tyrants | International
+Content: The article from El País, published on July 20, 2023, discusses how modern tyrants share tactics of repression. The article includes an image <image:4699> of a screen showing a girl trapped in rubble and a video call with Asma al-Assad. The article also includes the image <image:59> of a child in rubble.
+
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Israeli airstrike Gaza July 2024')
+Got 3 new web source(s):
+	1. https://en.wikipedia.org/wiki/13_July_2024_al-Mawasi_attack
+	2. July 27, 2024 https://www.cnn.com/2024/07/27/middleeast/israel-gaza-deir-al-balah-school-intl
+	3. July 13, 2024 https://www.npr.org/2024/07/13/g-s1-10020/hamas-commander-mohammed-deif-targeted-gaza-israeli-airstrike
+Useful result: From [Source](https://en.wikipedia.org/wiki/13_July_2024_al-Mawasi_attack): 
+Content: The Wikipedia article discusses the 13 July 2024 al-Mawasi attack in the Gaza Strip, which resulted in at least 90 Palestinian deaths and over 300 injuries. <image:59> The attack, involving airstrikes by the Israeli Air Force, targeted an area where civilians had been told was safe. The article mentions international condemnations, including calls for investigation and accountability. The article also mentions that the IDF confirmed the death of Rafa Salama a day after the strike and reported that Mohammed Deif was also killed in the strike.
+
+Useful result: From [Source](https://www.cnn.com/2024/07/27/middleeast/israel-gaza-deir-al-balah-school-intl): 
+Content: The CNN article, published on July 27, 2024, reports on an Israeli airstrike on a school in Deir-al Balah, central Gaza, where at least 30 people were killed. <image:59> The article includes images of the aftermath, including bodies at a hospital and people fleeing. The article also mentions other attacks and displacement in Gaza.
+
+Useful result: From [Source](https://www.npr.org/2024/07/13/g-s1-10020/hamas-commander-mohammed-deif-targeted-gaza-israeli-airstrike): 
+Content: The NPR article, published on July 13, 2024, reports on Israeli airstrikes in Gaza that killed 90 Palestinians. The strikes targeted Hamas commander Mohammed Deif. <image:5778> shows Palestinians gathering near the bodies of their relatives killed in the Israeli bombardment of the Gaza Strip.
+
+The claim '<image:59> This image shows a palestinian child stuck under the rubble in Gaza after an Israeli airstrike in July 2024.' is false.
+Justification: The image in the claim depicts a Syrian child, Sham, rescued from the rubble after an earthquake in Syria in February 2023, as evidenced by multiple sources ([https://english.enabbaladi.net/archives/2023/03/shams-journey-from-under-the-rubble-to-abu-dhabis-burjeel-hospital/](https://english.enabbaladi.net/archives/2023/03/shams-journey-from-under-the-rubble-to-abu-dhabis-burjeel-hospital/), [https://uaetimes.ae/shams-journey-from-under-the-rubble-to-abu-dhabis-burjeel-hospital/](https://uaetimes.ae/shams-journey-from-under-the-rubble-to-abu-dhabis-burjeel-hospital/), and [https://english.elpais.com/international/2023-07-20/the-manual-of-repression-shared-by-modern-tyrants.html](https://english.elpais.com/international/2023-07-20/the-manual-of-repression-shared-by-modern-tyrants.html)). Therefore, the claim that the image shows a Palestinian child in Gaza after an Israeli airstrike in July 2024 is false.
+
+So, the overall veracity is: false
+Fact-check took 1:24 min.

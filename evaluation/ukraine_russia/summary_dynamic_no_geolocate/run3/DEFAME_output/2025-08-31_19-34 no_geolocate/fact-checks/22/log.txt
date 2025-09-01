@@ -1,0 +1,43 @@
+Extracting claims from Content: <image:12> This image shows a chemical attack by the Armed Forces of Ukraine during the Kursk offensive in August 2024.
+'Claim: "<image:12> This image shows a chemical attack by the Armed Forces of Ukraine during the Kursk offensive in August 2024."'
+Verifying Claim: "<image:12> This image shows a chemical attack by the Armed Forces of Ukraine during the Kursk offensive in August 2024."
+Not enough information yet. Continuing fact-check...
+Got 0 new web source(s):
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Kursk offensive August 2024 chemical attack')
+Got 3 new web source(s):
+	1. September 17, 2024 https://www.rand.org/pubs/commentary/2024/09/the-kursk-offensive-triumph-or-tragedy-in-the-making.html
+	2. https://en.wikipedia.org/wiki/Kursk_campaign
+	3. March 13, 2025 https://www.reuters.com/world/europe/ukraines-attack-russias-fightback-kursk-2025-03-12/
+Useful result: From [Source](https://en.wikipedia.org/wiki/Kursk_campaign): 
+Content: The search result is from Wikipedia and discusses the Kursk campaign, part of the Russian invasion of Ukraine, which took place from August 6, 2024, to March 2025. The campaign involved incursions by the Armed Forces of Ukraine into Russia's Kursk Oblast. The result includes details on the date, location, and belligerents (Ukraine, Russia, and North Korea). It also mentions commanders, units involved, and estimates of strength and casualties. The article also mentions the 2025 Sumy offensive. <image:12> is not present in the search result.
+
+Useful result: From [Source](https://www.reuters.com/world/europe/ukraines-attack-russias-fightback-kursk-2025-03-12/): 
+Content: Reuters published an article on March 12, 2025, detailing the Ukrainian invasion of Russia's Kursk region in August 2024. The article mentions key dates and events, including the initial invasion on August 6, 2024, and subsequent developments through November 2024. The article does not mention any chemical attacks.
+
+Not enough information yet. Continuing fact-check...
+INFO: Dropping action 'reverse_search' as it was already performed.
+Got 3 new web source(s):
+	1. https://abcnews.go.com/Politics/us-concerned-ukraines-kursk-assault-russia-prepares-counterattack/story?id=113022137
+	2. https://www.bbc.com/news/articles/crmnxznlmpko
+	3. https://www.voanews.com/a/zelenskyy-russia-using-korean-soldiers-in-kursk-/7901486.html
+Useful result: From [Source](https://abcnews.go.com/Politics/us-concerned-ukraines-kursk-assault-russia-prepares-counterattack/story?id=113022137): 
+Content: ABC News published an article discussing the Kursk offensive. The article includes an image <image:6266>.
+
+Useful result: From [Source](https://www.voanews.com/a/zelenskyy-russia-using-korean-soldiers-in-kursk-/7901486.html): 
+Content: The search result from VOA News includes an image of an explosion. <image:6268>
+
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='chemical attack during Kursk offensive')
+Got 2 new web source(s):
+	1. July 04, 2025 https://www.aljazeera.com/news/2025/7/4/russia-expanding-chemical-weapons-use-in-ukraine-say-european-spy-agencies
+	2. December 17, 2024 https://www.rferl.org/a/russia-bolstered-by-north-korean-troops-presses-attacks-in-kursk-region/33243288.html
+Useful result: From [Source](https://www.aljazeera.com/news/2025/7/4/russia-expanding-chemical-weapons-use-in-ukraine-say-european-spy-agencies): 
+Content: Al Jazeera published on July 4, 2025, an article stating that Dutch and German intelligence agencies reported Russia's intensified use of chemical weapons, including chloropicrin, against Ukrainian soldiers, violating international law. The article mentions the OPCW and the Chemical Weapons Convention. The article also mentions the Kursk offensive. <image:12>
+
+Useful result: From [Source](https://www.rferl.org/a/russia-bolstered-by-north-korean-troops-presses-attacks-in-kursk-region/33243288.html): 
+Content: The RFE/RL article, published on December 17, 2024, discusses the intensified offensive by Russian forces in the Kursk region, bolstered by North Korean troops. <image:13843> The article mentions that Ukrainian forces are attempting to resist the attacks. It also notes that a senior U.S. military official stated that North Korean forces have suffered casualties in the Kursk fighting. The article does not mention any chemical attacks.
+
+The claim '<image:12> This image shows a chemical attack by the Armed Forces of Ukraine during the Kursk offensive in August 2024.' is false.
+Justification: The claim is not supported by the evidence. While the Kursk offensive did occur in August 2024, and chemical weapons were used during the offensive, there is no evidence to confirm that the image in question depicts a chemical attack during the Kursk offensive. Therefore, the claim is rated as false.
+
+So, the overall veracity is: false
+Fact-check took 5:29 min.

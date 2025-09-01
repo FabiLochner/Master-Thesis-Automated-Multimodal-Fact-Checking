@@ -1,0 +1,76 @@
+Extracting claims from Content: <image:10252> This is an authentic image of Esmail Qaani, the commander of the Iranian Revolutionary Guards, disguised in a hijab in fear of Israeli bombing.
+'Claim: "<image:10252> This is an authentic image of Esmail Qaani, the commander of the Iranian Revolutionary Guards, disguised in a hijab in fear of Israeli bombing."'
+Verifying Claim: "<image:10252> This is an authentic image of Esmail Qaani, the commander of the Iranian Revolutionary Guards, disguised in a hijab in fear of Israeli bombing."
+Not enough information yet. Continuing fact-check...
+Searching google_vision with query: ImageQuery(limit=3, start_date=None, end_date=None, search_type='reverse', text='', image=<defame.common.medium.Image object at 0x7ffed0125660>)
+Skipping unsupported website: https://twitter.com/search?q=%23%C3%8Esma%C3%AElQaan%C3%AE&src=hashtag_click
+Skipping unsupported website: https://x.com/hashtag/IsmailQaani?src=hashtag_click
+Skipping fact-checking website: https://www.misbar.com/en/factcheck/2024/08/05/image-of-irgc-general-esmail-qaani-disguised-as-a-woman-is-photoshopped
+Skipping unsupported website: https://www.instagram.com/reel/C-N6RSWCXUd/
+Skipping fact-checking website: https://www.reuters.com/fact-check/arabic/PLMYPIR6DJJ5XGRXWL7QFHUPHY-2024-10-15/
+Skipping unsupported website: https://www.facebook.com/SaheehMasr/posts/-%D8%BA%D8%B1%D8%AF%D8%AA-%D8%B9%D8%AF%D8%A9-%D8%AD%D8%B3%D8%A7%D8%A8%D8%A7%D8%AA-%D8%B9%D8%A8%D8%B1-%D9%85%D9%88%D9%82%D8%B9-x-%D8%AA%D9%88%D9%8A%D8%AA%D8%B1-%D8%B3%D8%A7%D8%A8%D9%82%D9%8B%D8%A7-%D8%A8%D8%B5%D9%88%D8%B1%D8%A9-%D8%AA%D9%8F%D8%B8%D9%87%D8%B1-%D9%82%D8%A7%D8%A6%D8%AF-%D9%81%D9%8A%D9%84%D9%82-%D8%A7%D9%84%D9%82%D8%AF%D8%B3-%D9%81%D9%8A-%D8%A7%D9%84%D8%AD%D8%B1%D8%B3-%D8%A7%D9%84/1076762547147563/
+Got 2 new web source(s):
+	1. https://www.nairaland.com/8460455/commander-ghost-qaanis-great-escape
+	2. https://www.balatarin.com/permlink/2024/8/1/6198488
+Useful result: From [Source](https://www.nairaland.com/8460455/commander-ghost-qaanis-great-escape): Found exact image on website with title: "From Commander To Ghost: Qaani's Great Escape?" - Foreign Affairs
+Content: The search result is from Nairaland, a Nigerian forum. It discusses an article titled "From Commander To Ghost: Qaani’s Great Escape?" which references an image of Esmail Qaani in civilian disguise. The article suggests this was a survival tactic following reported Israeli airstrikes. The post links to a tweet by @MOSSADil. The forum post includes multiple replies with various opinions on the situation. <image:10252> is included in the post.
+
+Useful result: From [Source](https://www.balatarin.com/permlink/2024/8/1/6198488): Found exact image on website with title: اسراییل با انتشار این تصویر نوشت - Balatarin
+Content: The search result from Balatarin.com contains the image <image:10252>. The title of the post is "Israel published this image". The post is categorized as "funny photo". The text accompanying the image says, "Even if Esmail Qaani hides in a women's chador, we can eliminate him." The post was published approximately one year ago.
+
+Most likely location: Palestine
+Top 10 locations: Palestine, Jordan, Israel, Russia, Pakistan, Turkey, Canada, Germany, China, France
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Esmail Qaani hijab disguise')
+Unable to reach Serper API: Connection timed out. Retrying after 2.4018435667736693 seconds.
+Skipping fact-checking website: https://www.misbar.com/en/factcheck/2024/08/05/image-of-irgc-general-esmail-qaani-disguised-as-a-woman-is-photoshopped
+Skipping unsupported website: https://www.facebook.com/photo.php?fbid=23889196820707003&set=a.835155633204448&type=3
+Skipping unsupported website: https://twitter.com/Bejaelma/status/1819445525562773706
+Skipping unsupported website: https://www.reddit.com/r/MadeMeSmile/comments/yazovu/hamed_esmaeilion_lost_his_daughter_wife_in_flight/
+Skipping unsupported website: https://www.instagram.com/p/DLTWSF_x6Ly/
+Got 3 new web source(s):
+	1. https://iranwire.com/en/politics/134733-irans-quds-force-chief-esmail-qaani-missing-after-beirut-airstrikes/
+	2. https://en.wikipedia.org/wiki/Esmail_Qaani
+	3. https://www.newarab.com/news/iran-quds-forces-qaani-good-health-following-death-claims
+Useful result: From [Source](https://iranwire.com/en/politics/134733-irans-quds-force-chief-esmail-qaani-missing-after-beirut-airstrikes/): 
+Content: The search result from IranWire, published on October 7, 2024, discusses the disappearance of Esmail Qaani, the commander of the Quds Force. The article mentions that Qaani was last seen on September 29 at Hezbollah’s office in Tehran. According to The Times of Israel and The Jerusalem Post, Qaani was last seen in Beirut. The article also mentions that there has been no news regarding Qaani's whereabouts in recent days. <image:10252> is not present in the search result.
+
+Useful result: From [Source](https://en.wikipedia.org/wiki/Esmail_Qaani): 
+Content: The search result is from Wikipedia and provides information about Esmail Qaani, the commander of the IRGC Quds Force. It includes a picture of Qaani <image:1>. According to The Sun, Qaani was allegedly placed under house arrest and interrogated on accusations of being an Israeli spy.
+
+Useful result: From [Source](https://www.newarab.com/news/iran-quds-forces-qaani-good-health-following-death-claims): 
+Content: The New Arab published an article on October 7, 2024, stating that Esmail Qaani, the commander of Iran's Quds Force, is in good health. The article mentions claims of a possible assassination by Israel. <image:10252> shows Esmail Qaani.
+
+Not enough information yet. Continuing fact-check...
+INFO: Dropping action 'reverse_search' as it was already performed.
+INFO: Dropping action 'geolocate' as it was already performed.
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Esmail Qaani image analysis')
+Got 2 new web source(s):
+	1. June 25, 2025 https://www.jpost.com/middle-east/iran-news/article-858988
+	2. May 01, 2024 https://www.washingtoninstitute.org/policy-analysis/qaanis-growing-leadership-struggles-post-soleimani-world
+Useful result: From [Source](https://www.jpost.com/middle-east/iran-news/article-858988): 
+Content: The Jerusalem Post published an article discussing Esmail Qaani, the head of the IRGC's Quds Force. The article includes a picture of Qaani <image:1>. The article mentions that Qaani is wary of assassination.
+
+Useful result: From [Source](https://www.washingtoninstitute.org/policy-analysis/qaanis-growing-leadership-struggles-post-soleimani-world): 
+Content: The Washington Institute published an article on May 1, 2024, discussing Esmail Qaani's leadership struggles after taking over the Qods Force. The article includes a picture of Esmail Qaani <image:1>. The article mentions Qaani's role before becoming the commander and his focus on internal affairs.
+
+Not enough information yet. Continuing fact-check...
+INFO: Dropping action 'reverse_search' as it was already performed.
+INFO: Dropping action 'geolocate' as it was already performed.
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Esmail Qaani image debunk')
+Got 3 new web source(s):
+	1. October 16, 2024 https://www.tehrantimes.com/news/505094/Esmail-Qaani-target-of-a-Zionist-disinformation-campaign-amid
+	2. October 15, 2024 https://wanaen.com/from-rumor-to-reality-general-esmail-qaani-remains-on-the-scene/
+	3. June 25, 2025 https://en.minanews.net/iranian-commander-esmail-qaani-refutes-death-rumors-with-public-appearance/
+Useful result: From [Source](https://www.tehrantimes.com/news/505094/Esmail-Qaani-target-of-a-Zionist-disinformation-campaign-amid): 
+Content: The Tehran Times published an article on October 16, 2024, discussing a disinformation campaign targeting Esmail Qaani. The article mentions rumors about Qaani's whereabouts and health, which were debunked by his appearance at a funeral procession. The article suggests that these rumors are part of a Zionist disinformation campaign. The article includes a picture of Qaani. <image:1>
+
+Useful result: From [Source](https://wanaen.com/from-rumor-to-reality-general-esmail-qaani-remains-on-the-scene/): 
+Content: The WANA News article from October 15, 2024, debunks rumors about Esmail Qaani, the commander of the Quds Force. The article states that the rumors were part of Israel's psychological operations. It mentions claims of Qaani's death and disappearance, which were debunked when Qaani attended a funeral. The article includes images of Qaani.
+
+Useful result: From [Source](https://en.minanews.net/iranian-commander-esmail-qaani-refutes-death-rumors-with-public-appearance/): 
+Content: The Mi’raj News Agency (MINA) published an article on June 25, 2025, reporting that Esmail Qaani made a public appearance in Tehran to refute rumors of his death. The article mentions that Qaani attended a rally and that footage was released by Tasnim News Agency and Press TV. The article includes a picture of Qaani <image:12386>
+The claim '<image:10252> This is an authentic image of Esmail Qaani, the commander of the Iranian Revolutionary Guards, disguised in a hijab in fear of Israeli bombing.' is false.
+Justification: The claim is false. While Esmail Qaani is a real person, and there are reports of disinformation campaigns targeting him, there is no evidence to support the claim that the image depicts him in disguise. The search results indicate that the image is likely a misrepresentation and part of a disinformation campaign, as reported by sources like the [Tehran Times](https://www.tehrantimes.com/news/505094-Esmail-Qaani-target-of-a-Zionist-disinformation-campaign-amid).
+
+So, the overall veracity is: false
+Fact-check took 4:35 min.

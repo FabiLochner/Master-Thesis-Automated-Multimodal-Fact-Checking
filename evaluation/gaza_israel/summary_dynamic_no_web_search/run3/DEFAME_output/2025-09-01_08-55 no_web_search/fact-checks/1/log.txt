@@ -1,0 +1,40 @@
+Extracting claims from Content: <image:2> This image shows the ruins after a 7.9-magnitude earthquake in Myanmar on March 28, 2025.
+'Claim: "<image:2> This image shows the ruins after a 7.9-magnitude earthquake in Myanmar on March 28, 2025."'
+Verifying Claim: "<image:2> This image shows the ruins after a 7.9-magnitude earthquake in Myanmar on March 28, 2025."
+Not enough information yet. Continuing fact-check...
+Got 3 new web source(s):
+	1. https://hakkanews.tw/2025/04/02/errora-79-magnitude/
+	2. https://tw.news.yahoo.com/%E9%8C%AF%E8%AA%A4-%E7%B6%B2%E5%82%B3%E7%B7%AC%E7%94%B87-9%E7%B4%9A%E5%9C%B0%E9%9C%87-%E6%BB%BF%E7%9B%AE%E7%98%A1%E7%97%8D%E7%9A%84%E5%A4%9A%E5%BC%B5%E7%85%A7%E7%89%87-%E6%97%A9%E6%96%BC%E7%B7%AC%E7%94%B8%E5%9C%B0%E9%9C%87%E7%81%BD%E6%83%85%E5%89%8D%E5%87%BA%E7%8F%BE-050500537.html
+	3. https://www.sinchew.com.my/news/20250404/nation/6425552
+Useful result: From [Source](https://hakkanews.tw/2025/04/02/errora-79-magnitude/): Found exact image on website with title: 【錯誤】網傳緬甸7.9級地震？滿目瘡痍的多張照片？早於 ... - 客新聞
+Content: The search result from 客新聞 (Hakka News) on April 2, 2025, addresses the claim that the image <image:2> shows the aftermath of a 7.9-magnitude earthquake in Myanmar on March 28, 2025. The article states that the image is a screenshot from a video that was circulating on Facebook and TikTok as early as March 20, 2025, and was falsely claimed to be from the Gaza region. The article concludes that the image is unrelated to the Myanmar earthquake. <image:225>, <image:226>, <image:228>.
+
+Useful result: From [Source](https://tw.news.yahoo.com/%E9%8C%AF%E8%AA%A4-%E7%B6%B2%E5%82%B3%E7%B7%AC%E7%94%B87-9%E7%B4%9A%E5%9C%B0%E9%9C%87-%E6%BB%BF%E7%9B%AE%E7%98%A1%E7%97%8D%E7%9A%84%E5%A4%9A%E5%BC%B5%E7%85%A7%E7%89%87-%E6%97%A9%E6%96%BC%E7%B7%AC%E7%94%B8%E5%9C%B0%E9%9C%87%E7%81%BD%E6%83%85%E5%89%8D%E5%87%BA%E7%8F%BE-050500537.html): Found exact image on website with title: 【錯誤】網傳緬甸7.9級地震？滿目瘡痍的多張照片？早於緬甸地震 ...
+Content: The search result from Yahoo News, published on April 2, 2025, states that the image in the claim is a screenshot from a video that circulated on Facebook and TikTok on March 20, 2025, and was claimed to be from the Gaza region. The search result confirms that the image is unrelated to the Myanmar earthquake of March 28, 2025. <image:253>, <image:254>, <image:255>.
+
+Useful result: From [Source](https://www.sinchew.com.my/news/20250404/nation/6425552): Found exact image on website with title: 网上不实照片真多加沙旧图变缅地震照- 国内 - 星洲日报
+Content: The article from Sin Chew Daily, published on April 4, 2025, addresses the spread of a photo online falsely depicting the aftermath of the Myanmar earthquake. The image <image:2> was circulating on social media, claiming to show the destruction in Mandalay after the 7.9-magnitude earthquake on March 28, 2025. However, the article states that the image actually originated from the Gaza region and was already circulating on social media platforms like Facebook and Douyin by March 20, 2025, before the earthquake. The article concludes that the image is unrelated to the Myanmar earthquake.
+
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='earthquake Myanmar 2025')
+Got 3 new web source(s):
+	1. https://www.britannica.com/event/Myanmar-earthquake-of-2025
+	2. https://www.eurekalert.org/news-releases/1084117
+	3. https://www.nytimes.com/2025/03/28/world/asia/earthquake-myanmar-thailand-death-toll.html
+Useful result: From [Source](https://www.britannica.com/event/Myanmar-earthquake-of-2025): 
+Content: Britannica provides an image of the aftermath of the Myanmar earthquake of 2025. <image:14037>
+
+Useful result: From [Source](https://www.eurekalert.org/news-releases/1084117): 
+Content: The search result from EurekAlert.org contains an image of a damaged building with rescue workers, which is related to an earthquake in Myanmar. <image:14038>
+
+Useful result: From [Source](https://www.nytimes.com/2025/03/28/world/asia/earthquake-myanmar-thailand-death-toll.html): 
+Content: The New York Times published an article on March 28, 2025, about an earthquake in Myanmar. <image:14039>
+
+Not enough information yet. Continuing fact-check...
+INFO: Dropping action 'reverse_search' as it was already performed.
+Most likely location: China
+Top 10 locations: China, Bangladesh, Indonesia, Japan, Palestine, Philippines, Taiwan, Jordan, Nigeria, Pakistan
+The claim '<image:2> This image shows the ruins after a 7.9-magnitude earthquake in Myanmar on March 28, 2025.' is false.
+Justification: The claim is false. While there was an earthquake in Myanmar on March 28, 2025, the image provided in the claim does not match the images of the event, and geolocation analysis suggests the image is most likely from China.
+
+So, the overall veracity is: false
+Fact-check took 0:53 min.

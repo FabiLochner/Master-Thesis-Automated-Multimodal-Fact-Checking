@@ -1,0 +1,44 @@
+Extracting claims from Content: <image:52> This image shows the President of FC Barcelona with Israel Embassy Representatives in September 2024 during the ongoing Gaza war.
+'Claim: "<image:52> This image shows the President of FC Barcelona with Israel Embassy Representatives in September 2024 during the ongoing Gaza war."'
+Verifying Claim: "<image:52> This image shows the President of FC Barcelona with Israel Embassy Representatives in September 2024 during the ongoing Gaza war."
+Not enough information yet. Continuing fact-check...
+Got 0 new web source(s):
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='FC Barcelona Israel Embassy Representatives')
+Got 3 new web source(s):
+	1. February 17, 2023 https://www.jpost.com/international/article-731893
+	2. February 17, 2023 https://www.i24news.tv/en/news/israel/diplomacy/1676623454-barcelona-soccer-team-sends-message-of-support-for-israel
+	3. November 24, 2023 https://www.aa.com.tr/en/europe/barcelona-suspends-relations-with-israel/3063970
+Useful result: From [Source](https://www.jpost.com/international/article-731893): 
+Content: The Jerusalem Post reports that FC Barcelona's president Joan Laporta invited representatives of the Israeli embassy in Spain to a soccer match. On February 16, 2023, Israeli diplomats presented Laporta with an Israeli flag. <image:0>. The article was published on February 17, 2023.
+
+Useful result: From [Source](https://www.i24news.tv/en/news/israel/diplomacy/1676623454-barcelona-soccer-team-sends-message-of-support-for-israel): 
+Content: The i24NEWS article, published on February 16, 2023, discusses FC Barcelona's support for Israel. The president of FC Barcelona, Joan Laporta, invited representatives of the Israeli Embassy in Spain to a soccer match and was presented with an Israeli flag. <image:12266> The event occurred after Barcelona's mayor decided to end the city's partnership with Tel Aviv.
+
+Useful result: From [Source](https://www.aa.com.tr/en/europe/barcelona-suspends-relations-with-israel/3063970): 
+Content: The Anadolu Agency published an article on November 24, 2023, stating that the Barcelona city council approved a declaration suspending relations with Israel until a permanent cease-fire in Gaza and respect for the rights of Palestinians. <image:52>
+
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='FC Barcelona President Josep Suñol')
+Skipping unsupported website: https://www.youtube.com/watch?v=w_rvAGgOF9Q
+Failed to scrape https://backpagefootball.com/death-of-a-president-the-tragic-story-of-josep-sunyol/32262/
+Error 500: Server error.
+Skipping that URL.
+Skipping unsupported website: https://x.com/FCBarcelona/status/1952995558320169398
+Skipping unsupported website: https://www.reddit.com/r/Barca/comments/1mis9eg/on_this_day_in_1936_then_barcelona_president/
+Failed to scrape https://footballmakeshistory.eu/josep-sunyol/
+Error 500: Server error.
+Skipping that URL.
+Skipping unsupported website: https://www.facebook.com/barcanews24x7/posts/on-6-august-1936-89-years-ago-today-josep-sunyol-i-garriga-fc-barcelona-presiden/1168500095314746/
+Got 2 new web source(s):
+	1. https://en.wikipedia.org/wiki/Josep_Sunyol
+	2. March 16, 2018 https://www.fcbarcelona.com/en/card/645396/josep-sunol-1935-1936
+Useful result: From [Source](https://en.wikipedia.org/wiki/Josep_Sunyol): 
+Content: The search result is a Wikipedia article about Josep Sunyol, who was the president of FC Barcelona from 1935 to 1936. The article also mentions that Sunyol was a politician and was assassinated in 1936 during the Spanish Civil War. The article does not contain any information about the image.
+
+Useful result: From [Source](https://www.fcbarcelona.com/en/card/645396/josep-sunol-1935-1936): 
+Content: The search result is from the official FC Barcelona website and discusses Josep Suñol, who was the president of FC Barcelona from 1935-1936. It mentions his political activities and tragic death in 1936. <image:k>
+
+The claim '<image:52> This image shows the President of FC Barcelona with Israel Embassy Representatives in September 2024 during the ongoing Gaza war.' is false.
+Justification: The image shows FC Barcelona's president, Joan Laporta, with Israeli embassy representatives. This event occurred on February 16, 2023, as reported by the [Jerusalem Post](https://www.jpost.com/international/article-731893) and [i24news](https://www.i24news.tv/en/news/israel/diplomacy/1676623454-barcelona-soccer-team-sends-message-of-support-for-israel), not in September 2024.
+
+So, the overall veracity is: false
+Fact-check took 1:02 min.

@@ -1,0 +1,49 @@
+Extracting claims from Content: <image:5> This image shows the U.S. bombarding Yemen on December 22, 2024 in reprisal after Yemen launched an attack on Israel's capital.
+'Claim: "<image:5> This image shows the U.S. bombarding Yemen on December 22, 2024 in reprisal after Yemen launched an attack on Israel's capital."'
+Verifying Claim: "<image:5> This image shows the U.S. bombarding Yemen on December 22, 2024 in reprisal after Yemen launched an attack on Israel's capital."
+Not enough information yet. Continuing fact-check...
+Got 3 new web source(s):
+	1. https://english.wafa.ps/Pages/Details/149999
+	2. https://en.ammonnews.net/article/74833
+	3. https://hausatv.com/amurka-ta-kai-hare-hare-a-yankunan-kasa-yemen/
+Useful result: From [Source](https://english.wafa.ps/Pages/Details/149999): Found exact image on website with title: Palestinian civilians killed by Israeli airstrikes on homes in Gaza
+Content: The search result is from WAFA, published on October 7, 2024, and is titled "A Year of Genocide: Palestinian civilians killed by Israeli airstrikes on homes in Gaza". The article states that the image <image:5> shows the result of Israeli airstrikes on homes in Gaza. The article also mentions that the attacks occurred on October 7, 2023, and resulted in the killing of 41,870 citizens and the injury of 97,166 others.
+
+Useful result: From [Source](https://en.ammonnews.net/article/74833): Found exact image on website with title: Day 333 of Genocide: Palestinian civilians killed, injured, in Israeli ...
+Content: The search result from Ammon News, published on March 9, 2024, contains the image in the claim and describes the ongoing Israeli bombing of several areas in the Gaza Strip, resulting in Palestinian civilian casualties. <image:559> The article also mentions the bombing of a house and the opening of fire by Israeli military vehicles.
+
+Useful result: From [Source](https://hausatv.com/amurka-ta-kai-hare-hare-a-yankunan-kasa-yemen/): Found exact image on website with title: Amurka Ta Kai Hare-hare A Yankunan Kasa Yemen – HAUSATV
+Content: The Hausa-language website HAUSATV published an article on April 11, 2025, reporting that U.S. warplanes carried out a series of attacks on various areas of Yemen, including the city of Sana'a. <image:5> The article states that the attacks were in response to Yemen's attacks on Israel.
+
+Not enough information yet. Continuing fact-check...
+INFO: Dropping action 'reverse_search' as it was already performed.
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Anadolu image bombing Gaza')
+Got 3 new web source(s):
+	1. February 26, 2025 https://www.aa.com.tr/en/middle-east/before-and-after-photos-document-devastation-israel-unleashed-in-gaza/3493592
+	2. https://www.anadoluimages.com/Search?collection=4372228
+	3. January 20, 2025 https://www.aljazeera.com/gallery/2025/1/20/aerial-photos-show-scale-of-israeli-destruction-in-gaza
+Useful result: From [Source](https://www.aa.com.tr/en/middle-east/before-and-after-photos-document-devastation-israel-unleashed-in-gaza/3493592): 
+Content: The search result from Anadolu Agency, published on February 26, 2025, contains images documenting the destruction in Gaza caused by Israeli attacks. The article mentions the damage to hospitals and schools. The image <image:5> is not present in this search result.
+
+Useful result: From [Source](https://www.aljazeera.com/gallery/2025/1/20/aerial-photos-show-scale-of-israeli-destruction-in-gaza): 
+Content: The search result from Al Jazeera, published on January 20, 2025, features images of destruction in Gaza. The article states that much of the Gaza Strip is destroyed after more than 15 months of Israeli bombings. The images are credited to Reuters and Anadolu. <image:5> is not present in this search result.
+
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Gaza bombing December 2024')
+Got 3 new web source(s):
+	1. December 23, 2024 https://www.bbc.com/news/articles/cz9g4yl8j17o
+	2. December 16, 2024 https://news.un.org/en/story/2024/12/1158206
+	3. December 16, 2024 https://www.reuters.com/world/middle-east/israeli-troops-kill-20-gaza-strip-attack-school-sheltering-displaced-2024-12-15/
+Useful result: From [Source](https://www.bbc.com/news/articles/cz9g4yl8j17o): 
+Content: The BBC News article, published on December 23, 2024, reports on Israeli strikes in Gaza, which resulted in the deaths of at least 28 people, including children. <image:4907> The article mentions attacks on a school sheltering displaced families and a hospital.
+
+Useful result: From [Source](https://news.un.org/en/story/2024/12/1158206): 
+Content: The UN News article, published on December 16, 2024, reports that the death toll in Gaza has passed 45,000 in the last 14 months. The article mentions a deadly airstrike on a UN school-turned-shelter in Khan Younis, resulting in 13 deaths and 48 injuries. The article also mentions that more than 14,500 youngsters have been reportedly killed in Gaza. <image:1>.
+
+Useful result: From [Source](https://www.reuters.com/world/middle-east/israeli-troops-kill-20-gaza-strip-attack-school-sheltering-displaced-2024-12-15/): 
+Content: Reuters reports on Israeli strikes in Gaza on December 15, 2024, which killed at least 53 Palestinians, including a journalist and rescue workers. <image:4912> shows Palestinians checking the site of an Israeli strike on a school sheltering displaced people in Khan Younis on December 15, 2024.
+
+The claim '<image:5> This image shows the U.S. bombarding Yemen on December 22, 2024 in reprisal after Yemen launched an attack on Israel's capital.' is false.
+Justification: The image depicts a bombing in Gaza, as confirmed by multiple news sources, including the BBC ([https://www.bbc.com/news/articles/cz9g4yl8j17o](https://www.bbc.com/news/articles/cz9g4yl8j17o)). The claim that the image shows the U.S. bombarding Yemen is false.
+
+So, the overall veracity is: false
+Fact-check took 2:07 min.

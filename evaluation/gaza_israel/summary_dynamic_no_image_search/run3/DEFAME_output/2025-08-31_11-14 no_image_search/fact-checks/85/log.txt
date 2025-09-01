@@ -1,0 +1,44 @@
+Extracting claims from Content: <image:54> The image shows a screenshot of an authentic question from Israel's Channel 12 public opinion poll: 'Do you agree with the claim that a solder is allowed to rape a prisoner with his hands tied?'
+'Claim: "<image:54> The image shows a screenshot of an authentic question from Israel's Channel 12 public opinion poll: 'Do you agree with the claim that a solder is allowed to rape a prisoner with his hands tied?'"'
+Verifying Claim: "<image:54> The image shows a screenshot of an authentic question from Israel's Channel 12 public opinion poll: 'Do you agree with the claim that a solder is allowed to rape a prisoner with his hands tied?'"
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Channel 12 Israel public opinion poll rape prisoner')
+Skipping fact-checking website: https://www.reuters.com/fact-check/israeli-opinion-poll-mistranslated-saying-soldiers-should-rape-prisoners-2024-08-30/
+Skipping fact-checking website: https://factcheck.afp.com/doc.afp.com.36F888X
+Skipping unsupported website: https://x.com/EyeonPalestine/status/1821283984397234616?lang=en
+Got 3 new web source(s):
+	1. September 04, 2024 https://cedmohub.eu/posts-share-doctored-prisoner-abuse-poll-from-israeli-tv-channel/
+	2. August 09, 2024 https://cbsaustin.com/news/nation-world/squad-member-shares-fake-poll-claiming-most-israelis-support-rape-of-palestinians-rashida-tlaib-noura-erakat-alex-zeldin-ritchie-torres-israel-palestine-hamas-war-terrorism-gaza
+	3. August 19, 2024 https://mondoweiss.net/2024/08/65-of-israeli-jews-oppose-criminal-prosecution-for-soldiers-suspected-of-raping-palestinian-detainees/
+Useful result: From [Source](https://cedmohub.eu/posts-share-doctored-prisoner-abuse-poll-from-israeli-tv-channel/): 
+Content: The search result from cedmohub.eu discusses a doctored image of a poll from Israel's Channel 12. The original poll, which aired on May 27, 2022, asked about the government's reliance on supporters of terrorism. The altered image, which circulated online in August 2024, replaced the original question with "Do you agree that a soldier is allowed to rape a prisoner with his hands tied?". Channel 12 stated that they did not broadcast the poll. <image:12278>, <image:12274>, <image:12275>. The article was published on September 4, 2024, by AFP Malaysia.
+
+Useful result: From [Source](https://cbsaustin.com/news/nation-world/squad-member-shares-fake-poll-claiming-most-israelis-support-rape-of-palestinians-rashida-tlaib-noura-erakat-alex-zeldin-ritchie-torres-israel-palestine-hamas-war-terrorism-gaza): 
+Content: The National Desk (TND) reports that the image in the claim is a doctored version of a 2022 Channel 12 poll. The original poll asked about the Israeli government's relationship with "terrorist supporters." The article was published on August 9, 2024. <image:54>
+
+Useful result: From [Source](https://mondoweiss.net/2024/08/65-of-israeli-jews-oppose-criminal-prosecution-for-soldiers-suspected-of-raping-palestinian-detainees/): 
+Content: The search result from Mondoweiss.net, published on August 19, 2024, discusses a poll showing that 65% of Israeli Jews oppose criminal prosecution for soldiers suspected of raping Palestinian detainees. The article mentions a poll published by the Israeli Institute for National Security Studies. The article also references a Channel 12 report.
+
+Searching google_vision with query: ImageQuery(limit=3, start_date=None, end_date=None, search_type='reverse', text='', image=<defame.common.medium.Image object at 0x7ffed1697010>)
+Skipping unsupported website: https://www.facebook.com/haaretzcom/posts/a-poll-released-by-israels-channel-12-news-after-the-assassination-of-hezbollah-/926010026228344/
+Skipping unsupported website: https://x.com/EyeonPalestine/status/1821283984397234616?lang=en
+Skipping fact-checking website: https://www.reuters.com/fact-check/edited-image-falsely-suggests-israelis-polled-about-raping-handcuffed-terrorist-2024-08-14/
+Skipping unsupported website: https://www.reddit.com/r/NewsAndPolitics/comments/1enu4h3/in_israel_a_rightwing_protest_in_support_of_idf/
+Got 3 new web source(s):
+	1. https://www.timesofisrael.com/liveblog_entry/channel-12-poll-shows-liberman-still-holds-the-key-to-netanyahus-next-coalition/
+	2. https://www.aap.com.au/factcheck/digital-manipulation-distorts-israeli-tv-poll/
+	3. https://www.haaretz.com/ty-tag/yigal-amir-0000017f-da25-d718-a5ff-faa5f9030000
+Useful result: From [Source](https://www.timesofisrael.com/liveblog_entry/channel-12-poll-shows-liberman-still-holds-the-key-to-netanyahus-next-coalition/): Found exact image on website with title: Channel 12 poll shows Liberman still holds the key to Netanyahu's ...
+Content: The Times of Israel website contains the image in the claim. The article discusses a Channel 12 election poll. <image:12291>
+
+Useful result: From [Source](https://www.aap.com.au/factcheck/digital-manipulation-distorts-israeli-tv-poll/): Found exact image on website with title: Digital manipulation distorts Israeli TV poll - AAP
+Content: The search result from AAP FactCheck, published on August 08, 2024, states that the image in the claim has been digitally manipulated. <image:12292> The original image is from a News 12 broadcast in May 2022. The original question was: "Do you agree with the claim that the government relies on terrorist supporters?". The manipulated image includes the question: "Do you agree with the claim that a soldier is allowed to rape a prisoner with his hands tied?". The AAP FactCheck concludes that the claim is false. <image:12295>
+
+Useful result: From [Source](https://www.haaretz.com/ty-tag/yigal-amir-0000017f-da25-d718-a5ff-faa5f9030000): Found exact image on website with title: Yigal Amir - Haaretz
+Content: The search result contains the exact image from the claim. The image is a screenshot from Channel 12. <image:54>
+
+The claim '<image:54> The image shows a screenshot of an authentic question from Israel's Channel 12 public opinion poll: 'Do you agree with the claim that a solder is allowed to rape a prisoner with his hands tied?'' is false.
+Justification: The image presented in the claim is a digitally altered version of a poll from Israel's Channel 12. The original poll, which aired on May 27, 2022, addressed the government's reliance on supporters of terrorism, but the image was manipulated to include a fabricated question about soldiers and rape, as confirmed by multiple sources, including the [AAP FactCheck](https://www.aap.com.au/factcheck/digital-manipulation-distorts-israeli-tv-poll/).
+
+So, the overall veracity is: false
+Fact-check took 1:50 min.

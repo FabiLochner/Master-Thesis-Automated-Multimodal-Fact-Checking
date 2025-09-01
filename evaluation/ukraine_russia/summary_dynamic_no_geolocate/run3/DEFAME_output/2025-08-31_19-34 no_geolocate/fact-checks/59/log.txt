@@ -1,0 +1,37 @@
+Extracting claims from Content: <image:18> This image shows an authentic list realeased by Ukraine showing US politicians taking bribes from Ukraine. The highest bribe was 92 Million US-$ for Joe Biden.
+'Claim: "<image:18> This image shows an authentic list realeased by Ukraine showing US politicians taking bribes from Ukraine. The highest bribe was 92 Million US-$ for Joe Biden."'
+Verifying Claim: "<image:18> This image shows an authentic list realeased by Ukraine showing US politicians taking bribes from Ukraine. The highest bribe was 92 Million US-$ for Joe Biden."
+Not enough information yet. Continuing fact-check...
+Got 3 new web source(s):
+	1. February 13, 2025 https://finance.yahoo.com/news/elon-musk-questions-congress-members-190016734.html
+	2. March 17, 2021 https://www.yahoo.com/news/fact-check-no-house-speaker-172533305.html
+	3. November 06, 2023 https://theconversation.com/why-are-us-politicians-so-old-and-why-do-they-want-to-stay-in-office-217024
+Useful result: From [Source](https://finance.yahoo.com/news/elon-musk-questions-congress-members-190016734.html): 
+Content: The Yahoo Finance article, published on February 13, 2025, discusses Elon Musk's questioning of the wealth of members of Congress. The article mentions Joe Biden, Nancy Pelosi, and Mitch McConnell, and their net worths. It also mentions that members of Congress can buy and sell stocks, options, and cryptocurrency as long as they disclose the transactions. <image:1230>
+
+Useful result: From [Source](https://www.yahoo.com/news/fact-check-no-house-speaker-172533305.html): 
+Content: The Yahoo News article discusses the wealth of Nancy Pelosi, mentioning her real estate investments, business partnerships, and stock holdings. <image:1239>, <image:1241>, <image:1238>, <image:1240>. It also mentions that Pelosi's salary from her congressional career doesn't fully explain her wealth. The article does not mention any bribes from Ukraine.
+
+Useful result: From [Source](https://theconversation.com/why-are-us-politicians-so-old-and-why-do-they-want-to-stay-in-office-217024): 
+Content: The Conversation published an article on July 21, 2023, discussing the age of US politicians. The article mentions Joe Biden, Mitch McConnell, and Nancy Pelosi. <image:1243> shows Donald Trump and Joe Biden. A Gallup Poll released in June 2024 found that about 67% of Americans say Biden is too old to be president.
+
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='US politicians Ukraine bribes')
+Skipping unsupported website: https://oversight.house.gov/the-bidens-influence-peddling-timeline/
+Got 3 new web source(s):
+	1. January 15, 2025 https://www.euronews.com/my-europe/2025/01/15/old-false-claims-resurface-about-ukrainian-kickbacks-to-us-politicians
+	2. July 21, 2023 https://www.bbc.com/news/world-us-canada-66272217
+	3. https://en.wikipedia.org/wiki/Biden%E2%80%93Ukraine_conspiracy_theory
+Useful result: From [Source](https://www.euronews.com/my-europe/2025/01/15/old-false-claims-resurface-about-ukrainian-kickbacks-to-us-politicians): 
+Content: The Euronews article, published on January 15, 2025, debunks a claim circulating on social media that lists US politicians, including Joe Biden, who allegedly received bribes from Ukraine. The article states that there is no evidence to support these claims and that the image has been circulating since at least 2023. <image:18>
+
+Useful result: From [Source](https://www.bbc.com/news/world-us-canada-66272217): 
+Content: The BBC News article from July 21, 2023, discusses an FBI document released by a top Senate Republican, detailing an allegation that Joe Biden and his son accepted bribes from a Ukrainian firm. The document is an internal FBI report outlining claims by a foreign informant. The article mentions that there is no evidence that Joe Biden received any payments from Ukraine. <image:13937>, <image:13939>, <image:13941>.
+
+Useful result: From [Source](https://en.wikipedia.org/wiki/Biden%E2%80%93Ukraine_conspiracy_theory): 
+Content: The search result is from Wikipedia and discusses the Biden–Ukraine conspiracy theory, which alleges that Joe Biden improperly withheld a loan guarantee and took a bribe to pressure Ukraine into firing a prosecutor to protect his son. The article mentions that this theory was promoted by Russian intelligence and spread by various individuals and media outlets, including Peter Schweizer, John Solomon, and Fox News, as part of efforts to damage Joe Biden's reputation. The article also states that a joint investigation by two Republican Senate committees found no evidence of wrongdoing by Joe Biden. <image:18>
+
+The claim '<image:18> This image shows an authentic list realeased by Ukraine showing US politicians taking bribes from Ukraine. The highest bribe was 92 Million US-$ for Joe Biden.' is false.
+Justification: The claim is false. Multiple sources, including Euronews ([https://www.euronews.com/my-europe/2025/01/15/old-false-claims-resurface-about-ukrainian-kickbacks-to-us-politicians](https://www.euronews.com/my-europe/2025/01/15/old-false-claims-resurface-about-ukrainian-kickbacks-to-us-politicians)), debunk the assertion that the image is an authentic list of US politicians taking bribes from Ukraine, stating there is no evidence to support the claim. Additionally, the BBC News ([https://www.bbc.com/news/world-us-canada-66272217](https://www.bbc.com/news/world-us-canada-66272217)) and Wikipedia ([https://en.wikipedia.org/wiki/Biden%E2%80%93Ukraine_conspiracy_theory](https://en.wikipedia.org/wiki/Biden%E2%80%93Ukraine_conspiracy_theory)) confirm that there is no evidence of wrongdoing by Joe Biden.
+
+So, the overall veracity is: false
+Fact-check took 2:37 min.

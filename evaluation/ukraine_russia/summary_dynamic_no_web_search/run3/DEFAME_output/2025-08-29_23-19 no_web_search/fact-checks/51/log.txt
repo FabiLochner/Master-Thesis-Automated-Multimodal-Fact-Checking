@@ -1,0 +1,23 @@
+Extracting claims from Content: In February 2025 German Chancellor Olaf Scholz declared a state of emergency in Germany due to US President Donald Trump's peace plan for Ukraine.
+'Claim: "In February 2025 German Chancellor Olaf Scholz declared a state of emergency in Germany due to US President Donald Trump's peace plan for Ukraine."'
+Verifying Claim: "In February 2025 German Chancellor Olaf Scholz declared a state of emergency in Germany due to US President Donald Trump's peace plan for Ukraine."
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Olaf Scholz state of emergency Germany Trump Ukraine peace plan')
+Got 3 new web source(s):
+	1. https://www.euronews.com/my-europe/2025/02/19/fact-check-scholz-did-not-call-for-german-state-of-emergency-over-russia-us-peace-talks
+	2. https://www.politico.eu/article/olaf-scholz-germany-donald-trump-war-in-ukraine-peace-plan/
+	3. https://www.aljazeera.com/news/2024/12/2/germanys-scholz-pledges-680m-in-military-aid-on-surprise-ukraine-visit
+Useful result: From [Source](https://www.euronews.com/my-europe/2025/02/19/fact-check-scholz-did-not-call-for-german-state-of-emergency-over-russia-us-peace-talks): 
+Content: Euronews published a fact-check on February 19, 2025, stating that Scholz did not call for a German state of emergency over Russia-US peace talks. <image:7238>
+
+Useful result: From [Source](https://www.politico.eu/article/olaf-scholz-germany-donald-trump-war-in-ukraine-peace-plan/): 
+Content: The search result from Politico.eu contains an image of Olaf Scholz. <image:7239>
+
+Useful result: From [Source](https://www.aljazeera.com/news/2024/12/2/germanys-scholz-pledges-680m-in-military-aid-on-surprise-ukraine-visit): 
+Content: The search result from Al Jazeera shows a picture of Olaf Scholz. <image:7240>
+
+The claim 'In February 2025 German Chancellor Olaf Scholz declared a state of emergency in Germany due to US President Donald Trump's peace plan for Ukraine.' is false.
+Justification: The claim is false. A fact-check by Euronews on February 19, 2025, explicitly states that Olaf Scholz did not declare a state of emergency in Germany, contradicting the claim.
+
+So, the overall veracity is: false
+Fact-check took 0:14 min.

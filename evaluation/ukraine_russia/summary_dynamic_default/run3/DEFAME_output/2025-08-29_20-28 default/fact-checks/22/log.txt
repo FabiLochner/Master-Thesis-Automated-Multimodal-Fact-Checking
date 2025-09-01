@@ -1,0 +1,40 @@
+Extracting claims from Content: <image:12> This image shows a chemical attack by the Armed Forces of Ukraine during the Kursk offensive in August 2024.
+'Claim: "<image:12> This image shows a chemical attack by the Armed Forces of Ukraine during the Kursk offensive in August 2024."'
+Verifying Claim: "<image:12> This image shows a chemical attack by the Armed Forces of Ukraine during the Kursk offensive in August 2024."
+Not enough information yet. Continuing fact-check...
+Got 0 new web source(s):
+Not enough information yet. Continuing fact-check...
+INFO: Dropping action 'reverse_search' as it was already performed.
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='chemical explosion road')
+Failed to download or open image: cannot identify image file <_io.BytesIO object at 0x7ffee81b5670>
+Got 3 new web source(s):
+	1. https://abcnews.go.com/US/explosion-louisiana-business-evacuation/story?id=124900678
+	2. https://www.waaytv.com/news/nation-world/a-fire-at-a-georgia-chemical-plant-is-forcing-evacuations-and-road-closures/article_b3eadcfc-f36d-55a1-9194-2962b68f2b46.html
+	3. https://www.gwclaw.com/blog/waukegan-chemical-explosion-video-released/
+Useful result: From [Source](https://abcnews.go.com/US/explosion-louisiana-business-evacuation/story?id=124900678): 
+Content: The ABC News article contains an image of a large fire and explosion. <image:5639>
+
+Useful result: From [Source](https://www.waaytv.com/news/nation-world/a-fire-at-a-georgia-chemical-plant-is-forcing-evacuations-and-road-closures/article_b3eadcfc-f36d-55a1-9194-2962b68f2b46.html): 
+Content: The search result from WAAYTV shows a fire at a Georgia chemical plant. <image:5641>
+
+Most likely location: Palestine
+Top 10 locations: Palestine, Jordan, Ukraine, Israel, Argentina, Kyrgyzstan, Lesotho, Mexico, Pakistan, Russia
+Not enough information yet. Continuing fact-check...
+INFO: Dropping action 'reverse_search' as it was already performed.
+INFO: Dropping action 'geolocate' as it was already performed.
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Kursk offensive August 2024 chemical attack')
+Got 3 new web source(s):
+	1. September 17, 2024 https://www.rand.org/pubs/commentary/2024/09/the-kursk-offensive-triumph-or-tragedy-in-the-making.html
+	2. https://en.wikipedia.org/wiki/Kursk_campaign
+	3. https://www.aljazeera.com/news/2024/8/8/whats-behind-ukraines-surprise-incursion-into-russias-kursk-region
+Useful result: From [Source](https://en.wikipedia.org/wiki/Kursk_campaign): 
+Content: The Wikipedia article discusses the Kursk campaign, which took place during the Russian invasion of Ukraine. The campaign began on August 6, 2024, when Ukrainian forces launched an incursion into Russia's Kursk Oblast. The article mentions the involvement of Ukrainian and Russian forces, as well as North Korean forces. The article also discusses the impact of the campaign, including the displacement of civilians, damage to infrastructure, and the reaction of the international community. The article also mentions the 2025 Sumy offensive.
+
+Useful result: From [Source](https://www.aljazeera.com/news/2024/8/8/whats-behind-ukraines-surprise-incursion-into-russias-kursk-region): 
+Content: The Al Jazeera article, published on August 8, 2024, discusses a Ukrainian incursion into Russia's Kursk region. The article mentions that Ukrainian forces entered the Kursk region on Tuesday, backed by armored vehicles, artillery, and drones. The article also mentions that the raid follows several incursions by Russian nationals fighting for Ukraine. The article includes images of the meeting about the incursion and a damaged house after shelling by the Ukrainian side in the city of Sudzha, Kursk region. <image:1>
+
+The claim '<image:12> This image shows a chemical attack by the Armed Forces of Ukraine during the Kursk offensive in August 2024.' is false.
+Justification: The claim is unsubstantiated. While the Kursk offensive in August 2024 is confirmed by sources like the [Al Jazeera article](https://www.aljazeera.com/news/2024/8/8/whats-behind-ukraines-surprise-incursion-into-russias-kursk-region) and [Wikipedia](https://en.wikipedia.org/wiki/Kursk_campaign), there is no evidence from image searches or web searches to support the assertion of a chemical attack by Ukrainian forces.
+
+So, the overall veracity is: false
+Fact-check took 6:19 min.

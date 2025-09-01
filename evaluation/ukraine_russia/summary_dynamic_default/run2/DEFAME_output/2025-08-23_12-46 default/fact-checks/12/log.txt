@@ -1,0 +1,49 @@
+Extracting claims from Content: <image:9> This is an authentic image of world leaders taking off their suits to symbolically support Ukraine at the London summit on Ukraine on March 2, 2025.
+'Claim: "<image:9> This is an authentic image of world leaders taking off their suits to symbolically support Ukraine at the London summit on Ukraine on March 2, 2025."'
+Verifying Claim: "<image:9> This is an authentic image of world leaders taking off their suits to symbolically support Ukraine at the London summit on Ukraine on March 2, 2025."
+Not enough information yet. Continuing fact-check...
+Got 0 new web source(s):
+Got 3 new web source(s):
+	1. https://en.wikipedia.org/wiki/2025_London_Summit_on_Ukraine
+	2. March 03, 2025 https://www.lemonde.fr/en/international/article/2025/03/03/at-london-summit-starmer-defends-french-british-peace-plan-for-ukraine_6738743_4.html
+	3. March 02, 2025 https://www.reuters.com/world/europe/russian-lawmaker-says-ukraine-can-only-count-improved-moscow-washington-ties-2025-03-02/
+Useful result: From [Source](https://en.wikipedia.org/wiki/2025_London_Summit_on_Ukraine): 
+Content: The Wikipedia article discusses the 2025 London Summit on Ukraine, held on March 2, 2025, in London. <image:9> The summit was organized by British Prime Minister Keir Starmer to create a peace plan for the Russian invasion of Ukraine. Participants included leaders from 16 states, the EU, and NATO. The summit's outcomes included a four-point plan and commitments from Starmer, including financial aid and the purchase of air defense missiles for Ukraine. The article also mentions the participants, including Volodymyr Zelenskyy, and the summit's aim to facilitate peace negotiations and ensure Ukraine's security.
+
+Useful result: From [Source](https://www.lemonde.fr/en/international/article/2025/03/03/at-london-summit-starmer-defends-french-british-peace-plan-for-ukraine_6738743_4.html): 
+Content: Le Monde reports on a summit in London on March 2, 2025, attended by leaders including Keir Starmer, Emmanuel Macron, and Volodymyr Zelensky. <image:3110> The article mentions a peace plan for Ukraine.
+
+Useful result: From [Source](https://www.reuters.com/world/europe/russian-lawmaker-says-ukraine-can-only-count-improved-moscow-washington-ties-2025-03-02/): 
+Content: Reuters published an article on March 2, 2025, discussing a summit of European leaders in London. The article mentions that Russian parliamentarians dismissed the summit, stating it produced no plan to settle the war in Ukraine. The article also mentions a peace plan to take to the United States. <image:3111>
+
+Not enough information yet. Continuing fact-check...
+INFO: Dropping action 'reverse_search' as it was already performed.
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='leaders take off suits Ukraine summit')
+Got 3 new web source(s):
+	1. https://www.nbcnews.com/world/ukraine/trump-zelenskyy-ukraine-europe-putin-summit-suit-golf-rcna225759
+	2. https://www.cbsnews.com/live-updates/trump-zelenskyy-meeting-white-house-ukraine/
+	3. https://www.axios.com/2025/08/20/why-the-putin-zelensky-summit-trump-wants-will-be-hard-to-pull-off
+Useful result: From [Source](https://www.nbcnews.com/world/ukraine/trump-zelenskyy-ukraine-europe-putin-summit-suit-golf-rcna225759): 
+Content: The NBC News article contains an image of leaders, including Zelenskyy, in suits. <image:4638>
+
+Useful result: From [Source](https://www.cbsnews.com/live-updates/trump-zelenskyy-meeting-white-house-ukraine/): 
+Content: The search result from CBS News includes an image of leaders, including Zelensky, Macron, and others, standing together. <image:4639>
+
+Not enough information yet. Continuing fact-check...
+INFO: Dropping action 'reverse_search' as it was already performed.
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='leaders take off suits Ukraine')
+Skipping fact-checking website: https://www.reuters.com/fact-check/photo-world-leaders-removing-suit-jackets-ukraine-is-altered-2025-03-25/
+Got 2 new web source(s):
+	1. March 01, 2025 https://www.bbc.com/news/articles/c1d4r9yvqzpo
+	2. https://www.theguardian.com/world/2025/aug/20/european-leaders-scramble-to-shield-ukraine-in-high-stakes-trump-talks-but-did-they
+Useful result: From [Source](https://www.bbc.com/news/articles/c1d4r9yvqzpo): 
+Content: The BBC article, published on March 1, 2025, discusses the criticism of Zelensky's clothing choices, specifically his preference for military-style attire over suits, and how it became a point of contention during a White House meeting with Donald Trump and JD Vance. <image:4662>, <image:4665>. The article mentions that Zelensky has avoided wearing suits since the start of the full-scale Russian invasion in 2022.
+
+Useful result: From [Source](https://www.theguardian.com/world/2025/aug/20/european-leaders-scramble-to-shield-ukraine-in-high-stakes-trump-talks-but-did-they): 
+Content: The Guardian published an article on August 20, 2025, discussing a meeting between European leaders, Zelenskyy, and Trump. The article mentions a meeting in Washington and includes a photograph of Trump and Zelenskyy. <image:4667> The article does not mention leaders taking off their suits.
+
+The claim '<image:9> This is an authentic image of world leaders taking off their suits to symbolically support Ukraine at the London summit on Ukraine on March 2, 2025.' is false.
+Justification: The claim is unsupported. While the existence of the London Summit on Ukraine on March 2, 2025, is confirmed by multiple sources, including Wikipedia ([https://en.wikipedia.org/wiki/2025_London_Summit_on_Ukraine](https://en.wikipedia.org/wiki/2025_London_Summit_on_Ukraine)), there is no evidence to support the assertion that leaders took off their suits at the summit.
+
+So, the overall veracity is: false
+Fact-check took 1:15 min.

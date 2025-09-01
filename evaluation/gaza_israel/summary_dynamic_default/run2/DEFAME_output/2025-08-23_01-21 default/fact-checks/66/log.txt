@@ -1,0 +1,38 @@
+Extracting claims from Content: <image:40> This image shows Ukrainian President Volodymyr Zelenskyy in March 2025 signing Israeli bombs intended for use against Palestinians in Gaza.
+'Claim: "<image:40> This image shows Ukrainian President Volodymyr Zelenskyy in March 2025 signing Israeli bombs intended for use against Palestinians in Gaza."'
+Verifying Claim: "<image:40> This image shows Ukrainian President Volodymyr Zelenskyy in March 2025 signing Israeli bombs intended for use against Palestinians in Gaza."
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Zelenskyy signing bombs March 2025')
+Skipping fact-checking website: https://www.reuters.com/fact-check/video-does-not-show-zelenskiy-signing-bombs-be-dropped-gazans-2025-03-11/
+Skipping unsupported website: https://x.com/ZelenskyyUa/status/1906447029024293344
+Got 3 new web source(s):
+	1. March 13, 2025 https://spotlight.ebu.ch/p/video-caption-falsely-claims-zelenskyy
+	2. https://en.wikipedia.org/wiki/2025_Trump%E2%80%93Zelenskyy_Oval_Office_meeting
+	3. March 19, 2025 https://apnews.com/article/ukraine-russia-war-ceasefire-talks-drones-65c00a0afd130731e0e0c054ac528b44
+Useful result: From [Source](https://spotlight.ebu.ch/p/video-caption-falsely-claims-zelenskyy): 
+Content: The search result from Spotlight by EBU states that a video and still images were shared online claiming that Ukrainian President Volodymyr Zelenskyy signed artillery shells destined for use in Gaza by Israel in March 2025. <image:40>. The video actually shows him at a U.S. munitions factory supporting Ukraine's defense needs. The video was shared on September 23, 2024, with a caption referencing Ukraine’s war with Russia.
+
+Useful result: From [Source](https://en.wikipedia.org/wiki/2025_Trump%E2%80%93Zelenskyy_Oval_Office_meeting): 
+Content: The Wikipedia article discusses a meeting between Donald Trump and Volodymyr Zelenskyy on February 28, 2025, in the Oval Office. The meeting was contentious. The article also mentions a summit with European leaders in March 2025. The article includes an image of the meeting <image:40>.
+
+Useful result: From [Source](https://apnews.com/article/ukraine-russia-war-ceasefire-talks-drones-65c00a0afd130731e0e0c054ac528b44): 
+Content: The search result from AP News includes multiple articles and images related to the war between Russia and Ukraine. The article mentions a joint press conference between Ukrainian President Volodymyr Zelenskyy and Finland's President Alexander Stubb on March 19, 2025. <image:40> is not present in the search result.
+
+Got 3 new web source(s):
+	1. https://www.bbc.co.uk/news/articles/c80rkv0k4j8o
+	2. https://www.bbc.com/news/articles/c80rkv0k4j8o
+	3. https://apnews.com/article/zelenskyy-johnson-ambassador-ukraine-biden-harris-trump-d81b0a055d99cfd4804b3f2c00915d09
+Useful result: From [Source](https://www.bbc.co.uk/news/articles/c80rkv0k4j8o): Found exact image on website with title: Republican anger clouds Zelensky-Biden 'victory plan' meeting - BBC
+Content: The image in the claim is from a visit by Volodymyr Zelensky to the Scranton Army Ammunition Plant in Pennsylvania on September 23, 2024, where he signed ammunition. <image:1958> The BBC published the article on September 26, 2024.
+
+Useful result: From [Source](https://www.bbc.com/news/articles/c80rkv0k4j8o): Found exact image on website with title: Republican anger clouds Zelensky's crunch Biden meeting - BBC
+Content: The BBC News article, published on September 26, 2024, features an image of Volodymyr Zelenskyy signing ammunition at the Scranton Army Ammunition Plant (SCAAP) in Scranton, Pennsylvania, on September 23, 2024. <image:1964> The article discusses Zelensky's meeting with Joe Biden and the political context surrounding it, including the upcoming US presidential election.
+
+Useful result: From [Source](https://apnews.com/article/zelenskyy-johnson-ambassador-ukraine-biden-harris-trump-d81b0a055d99cfd4804b3f2c00915d09): Found exact image on website with title: Speaker Johnson demands Zelenskyy remove Ukraine's ... - AP News
+Content: The Associated Press reports that on September 22, 2024, Ukrainian President Volodymyr Zelenskyy visited a Pennsylvania ammunition factory and signed military ordnance. <image:40> The article also mentions that House Speaker Mike Johnson demanded Zelenskyy remove Ukraine’s ambassador to the U.S. after the visit, calling it a partisan campaign event. The article was written by Lisa Mascaro and published on September 25, 2024.
+
+The claim '<image:40> This image shows Ukrainian President Volodymyr Zelenskyy in March 2025 signing Israeli bombs intended for use against Palestinians in Gaza.' is false.
+Justification: The image depicts Ukrainian President Volodymyr Zelenskyy signing ammunition at a U.S. munitions factory on September 23, 2024, as reported by the [BBC](https://www.bbc.co.uk/news/articles/c80rkv0k4j8o) and the [Associated Press](https://apnews.com/article/zelenskyy-johnson-ambassador-ukraine-biden-harris-trump-d81b0a055d99cfd4804b3f2c00915d09). The ammunition was intended for Ukraine's defense, not for use by Israel in Gaza, and the event occurred in 2024, not March 2025.
+
+So, the overall veracity is: false
+Fact-check took 4:11 min.

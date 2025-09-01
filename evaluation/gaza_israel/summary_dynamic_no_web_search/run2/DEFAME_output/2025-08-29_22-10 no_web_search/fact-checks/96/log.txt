@@ -1,0 +1,44 @@
+Extracting claims from Content: <image:63> This image shows Mayar Hamida (9 years old) and Bilal Hamida (6 years old) who were killed by Israel along with their mother and grandmother at Al-Jaoni UN school in Al-Nuseirat refugee camp on July, 6 2024.
+'Claim: "<image:63> This image shows Mayar Hamida (9 years old) and Bilal Hamida (6 years old) who were killed by Israel along with their mother and grandmother at Al-Jaoni UN school in Al-Nuseirat refugee camp on July, 6 2024."'
+Verifying Claim: "<image:63> This image shows Mayar Hamida (9 years old) and Bilal Hamida (6 years old) who were killed by Israel along with their mother and grandmother at Al-Jaoni UN school in Al-Nuseirat refugee camp on July, 6 2024."
+Not enough information yet. Continuing fact-check...
+Got 0 new web source(s):
+Not enough information yet. Continuing fact-check...
+INFO: Dropping action 'reverse_search' as it was already performed.
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Mayar Hamida Bilal Hamida killed Israel')
+Skipping unsupported website: https://www.facebook.com/photo.php?fbid=990740149366980&id=100052930128929&set=a.619803503127315
+Skipping unsupported website: https://www.instagram.com/p/C40zUFJIMjt/
+Skipping fact-checking website: https://www.misbar.com/en/factcheck/2024/07/15/israel-tragically-killed-the-hamida-siblings-in-october-2023-not-recently
+Got 2 new web source(s):
+	1. https://www.hrw.org/report/2007/09/05/why-they-died/civilian-casualties-lebanon-during-2006-war
+	2. https://english.palinfo.com/Zionist-Terrorism/2023/11/18/82751/
+Useful result: From [Source](https://www.hrw.org/report/2007/09/05/why-they-died/civilian-casualties-lebanon-during-2006-war): 
+Content: The Human Rights Watch report from September 5, 2007, includes an image of a man holding a framed photo. <image:8242>
+
+Useful result: From [Source](https://english.palinfo.com/Zionist-Terrorism/2023/11/18/82751/): 
+Content: The search result from Palinfo.com contains an image of two children. <image:8243>
+
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Al-Jaoni UN school Al-Nuseirat refugee camp July 6 2024')
+Failed to download or open image: cannot identify image file <_io.BytesIO object at 0x7ffed03373d0>
+Got 3 new web source(s):
+	1. https://www.aljazeera.com/news/2024/7/6/israeli-attack-on-un-school-used-as-shelter-in-gaza-kills-at-least-16
+	2. https://www.unrwa.org/newsroom/features/no-shelter-war-bombing-block-2-unrwa-nuseirat-school
+	3. https://www.lemonde.fr/en/international/article/2024/06/07/israeli-airstrike-in-central-gaza-wipes-out-shelter-in-unrwa-school_6674107_4.html
+Useful result: From [Source](https://www.aljazeera.com/news/2024/7/6/israeli-attack-on-un-school-used-as-shelter-in-gaza-kills-at-least-16): 
+Content: Al Jazeera reports that an Israeli attack on a UN school used as a shelter in Gaza killed at least 16 people on July 6, 2024. <image:8244>
+
+Useful result: From [Source](https://www.lemonde.fr/en/international/article/2024/06/07/israeli-airstrike-in-central-gaza-wipes-out-shelter-in-unrwa-school_6674107_4.html): 
+Content: Le Monde reports on an Israeli airstrike in central Gaza that wiped out a shelter in an UNRWA school. <image:8245>
+
+Not enough information yet. Continuing fact-check...
+INFO: Dropping action 'reverse_search' as it was already performed.
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Mayar Hamida Bilal Hamida Al-Jaoni UN school Al-Nuseirat')
+Skipping unsupported website: https://twitter.com/WAFANewsEnglish/status/1809833597525704994
+Skipping unsupported website: https://www.instagram.com/pbipalestine/p/C9HiUfntUsZ/
+Skipping fact-checking website: https://www.misbar.com/en/factcheck/2024/07/15/israel-tragically-killed-the-hamida-siblings-in-october-2023-not-recently
+Got 0 new web source(s):
+The claim '<image:63> This image shows Mayar Hamida (9 years old) and Bilal Hamida (6 years old) who were killed by Israel along with their mother and grandmother at Al-Jaoni UN school in Al-Nuseirat refugee camp on July, 6 2024.' is false.
+Justification: The claim cannot be verified. While an Israeli attack on a UN school in Gaza on July 6, 2024, is confirmed by sources like [Al Jazeera](https://www.aljazeera.com/news/2024/7/6/israeli-attack-on-un-school-used-as-shelter-in-gaza-kills-at-least-16) and [Le Monde](https://www.lemonde.fr/en/international/article/2024/06/07/israeli-airstrike-in-central-gaza-wipes-out-shelter-in-unrwa-school_6674107_4.html), the specific details about Mayar Hamida, Bilal Hamida, and the Al-Jaoni UN school in Al-Nuseirat refugee camp remain unverified.
+
+So, the overall veracity is: false
+Fact-check took 0:32 min.

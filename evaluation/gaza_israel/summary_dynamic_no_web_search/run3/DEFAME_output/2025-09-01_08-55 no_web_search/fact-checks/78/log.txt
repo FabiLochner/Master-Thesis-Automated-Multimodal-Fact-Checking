@@ -1,0 +1,38 @@
+Extracting claims from Content: Netanyahu left Israel and fled to Poland amid Iran's missile attack on Israel on October 1, 2024.
+'Claim: "Netanyahu left Israel and fled to Poland amid Iran's missile attack on Israel on October 1, 2024."'
+Verifying Claim: "Netanyahu left Israel and fled to Poland amid Iran's missile attack on Israel on October 1, 2024."
+Not enough information yet. Continuing fact-check...
+Got 3 new web source(s):
+	1. https://www.latimes.com/world-nation/story/2025-01-09/polish-president-seeks-protection-for-netanyahu-if-he-attends-auschwitz-anniversary-event
+	2. https://theintercept.com/2025/01/23/netanyahu-auschwitz-memorial-poland-icc-warrant/
+	3. https://www.reuters.com/world/polish-president-wants-icc-indictee-netanyahu-be-able-go-auschwitz-anniversary-2025-01-09/
+Useful result: From [Source](https://www.latimes.com/world-nation/story/2025-01-09/polish-president-seeks-protection-for-netanyahu-if-he-attends-auschwitz-anniversary-event): 
+Content: The Los Angeles Times published an article on January 9, 2025, about the Polish president seeking protection for Netanyahu if he attends an Auschwitz anniversary event. The article includes an image of Netanyahu <image:8187>.
+
+Useful result: From [Source](https://theintercept.com/2025/01/23/netanyahu-auschwitz-memorial-poland-icc-warrant/): 
+Content: The Intercept published an article on January 23, 2025, about Netanyahu. The article includes an image of Netanyahu. <image:8188>
+
+Useful result: From [Source](https://www.reuters.com/world/polish-president-wants-icc-indictee-netanyahu-be-able-go-auschwitz-anniversary-2025-01-09/): 
+Content: Reuters published an article about the Polish president and Netanyahu. <image:8189>
+
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Netanyahu October 1 2024 Iran missile attack')
+Failed to download or open image: cannot identify image file <_io.BytesIO object at 0x7ffee1341ad0>
+Got 3 new web source(s):
+	1. https://www.timesofisrael.com/liveblog_entry/netanyahu-says-iran-made-a-big-mistake-with-missile-attack-and-will-pay-for-it/
+	2. https://www.france24.com/en/middle-east/20241002-world-leaders-call-for-de-escalation-after-iran-s-missile-strikes-on-israel
+	3. https://www.theguardian.com/world/video/2024/oct/02/netanyahu-says-iran-will-pay-for-missile-strikes-while-tehran-warns-of-stronger-attacks-video
+Useful result: From [Source](https://www.timesofisrael.com/liveblog_entry/netanyahu-says-iran-made-a-big-mistake-with-missile-attack-and-will-pay-for-it/): 
+Content: The Times of Israel published an article with an image of Netanyahu. <image:14310>
+
+Useful result: From [Source](https://www.france24.com/en/middle-east/20241002-world-leaders-call-for-de-escalation-after-iran-s-missile-strikes-on-israel): 
+Content: France 24 published an article on October 2, 2024, about Iran's missile strikes on Israel. The article mentions world leaders calling for de-escalation.
+
+Useful result: From [Source](https://www.theguardian.com/world/video/2024/oct/02/netanyahu-says-iran-will-pay-for-missile-strikes-while-tehran-warns-of-stronger-attacks-video): 
+Content: The Guardian published a video on October 2, 2024, where Netanyahu says Iran will pay for missile strikes. <image:14311>
+
+The claim 'Netanyahu left Israel and fled to Poland amid Iran's missile attack on Israel on October 1, 2024.' is false.
+Justification: The claim is false. While Iran launched missile strikes on Israel around October 1, 2024, and Netanyahu responded, there is no evidence to support the assertion that he fled to Poland. In fact, a video from The Guardian ([https://www.theguardian.com/](https://www.theguardian.com/)) shows Netanyahu responding to the attacks, indicating he remained in Israel.
+
+So, the overall veracity is: false
+Fact-check took 0:36 min.

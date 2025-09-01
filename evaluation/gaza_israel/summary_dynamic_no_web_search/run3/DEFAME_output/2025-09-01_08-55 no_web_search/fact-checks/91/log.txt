@@ -1,0 +1,35 @@
+Extracting claims from Content: <image:58> This image shows the aftermath of a Houthi attack on Tel Aviv, Israel, in July 2024.
+'Claim: "<image:58> This image shows the aftermath of a Houthi attack on Tel Aviv, Israel, in July 2024."'
+Verifying Claim: "<image:58> This image shows the aftermath of a Houthi attack on Tel Aviv, Israel, in July 2024."
+Not enough information yet. Continuing fact-check...
+Got 3 new web source(s):
+	1. https://www.lbcgroup.tv/news/middleeastnews/784660/explosion-in-tel-aviv-building-bomb-disposal-experts-on-site-israeli-p/en
+	2. https://www.timesofisrael.com/liveblog-october-7-2023/
+	3. https://www.india.com/news/israel-hezbollah-war-hezbollah-fires-20-rockets-at-israels-capital-tel-aviv-horrific-videos-go-viral-watch-7342129/
+Useful result: From [Source](https://www.lbcgroup.tv/news/middleeastnews/784660/explosion-in-tel-aviv-building-bomb-disposal-experts-on-site-israeli-p/en): Found exact image on website with title: Explosion in Tel Aviv building, bomb disposal experts on site
+Content: The search result from LBCI News, published on July 19, 2024, reports an explosion in a Tel Aviv building. <image:2339> shows the aftermath of the explosion. The article mentions that Israeli police and bomb disposal experts were on the scene.
+
+Useful result: From [Source](https://www.timesofisrael.com/liveblog-october-7-2023/): Found exact image on website with title: Oct. 7: Hamas terrorists burst through border, slaughter Israelis in ...
+Content: The Times of Israel reports on a massive rocket attack from Gaza, with sirens sounding in central and southern Israel. <image:2375> The IDF has declared a state of readiness for war, with reports of infiltrations by Hamas terrorists into Israel. The IDF has ordered residents near the Gaza border to stay in their homes. There are reports of casualties, including a woman killed in a rocket attack. The article also mentions the cancellation of Bruno Mars's concert in Tel Aviv. The article was published on October 7, 2023.
+Useful result: From [Source](https://www.india.com/news/israel-hezbollah-war-hezbollah-fires-20-rockets-at-israels-capital-tel-aviv-horrific-videos-go-viral-watch-7342129/): Found exact image on website with title: Hezbollah fires 20 rockets at Israel's capital Tel Aviv, horrific videos ...
+Content: The search result from India.com, published on October 22, 2024, reports that Hezbollah fired 20 rockets at Tel Aviv. The article includes the image in the claim and a video of the attack. <image:58>
+
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Houthi attack Tel Aviv July 2024')
+Got 3 new web source(s):
+	1. https://www.lemonde.fr/en/international/article/2024/07/20/israeli-army-bombs-yemen-city-of-hodeida-after-drone-attack-on-tel-aviv_6691733_4.html
+	2. https://www.npr.org/2024/07/20/nx-s1-5047310/israel-strikes-houthi-targets-yemen
+	3. https://www.aljazeera.com/news/2024/7/19/drone-attack-on-israels-tel-aviv-leaves-one-dead-at-least-10-injured
+Useful result: From [Source](https://www.lemonde.fr/en/international/article/2024/07/20/israeli-army-bombs-yemen-city-of-hodeida-after-drone-attack-on-tel-aviv_6691733_4.html): 
+Content: Le Monde published an article about an Israeli army bombing of Hodeida, Yemen, after a drone attack on Tel Aviv. <image:14341>
+
+Useful result: From [Source](https://www.npr.org/2024/07/20/nx-s1-5047310/israel-strikes-houthi-targets-yemen): 
+Content: NPR published an article on July 20, 2024, about Israel striking Houthi targets in Yemen. The article includes an image of a fire. <image:14342>
+
+Useful result: From [Source](https://www.aljazeera.com/news/2024/7/19/drone-attack-on-israels-tel-aviv-leaves-one-dead-at-least-10-injured): 
+Content: Al Jazeera reports on a drone attack on Tel Aviv in July 2024. <image:14343>
+
+The claim '<image:58> This image shows the aftermath of a Houthi attack on Tel Aviv, Israel, in July 2024.' is true.
+Justification: The image depicts the aftermath of an explosion in Tel Aviv in July 2024, as confirmed by multiple sources, including LBCI News ([https://www.lbcgroup.tv/news/middleeastnews/784660/explosion-in-tel-aviv-building-bomb-disposal-experts-on-site-israeli-p/en](https://www.lbcgroup.tv/news/middleeastnews/784660/explosion-in-tel-aviv-building-bomb-disposal-experts-on-site-israeli-p/en)) and Al Jazeera ([https://www.aljazeera.com/news/2024/7/19/drone-attack-on-israels-tel-aviv-leaves-one-dead-at-least-10-injured](https://www.aljazeera.com/news/2024/7/19/drone-attack-on-israels-tel-aviv-leaves-one-dead-at-least-10-injured)), which reported a drone attack.
+
+So, the overall veracity is: true
+Fact-check took 0:27 min.

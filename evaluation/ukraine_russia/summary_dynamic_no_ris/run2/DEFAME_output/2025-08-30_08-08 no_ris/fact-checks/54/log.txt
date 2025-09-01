@@ -1,0 +1,59 @@
+Extracting claims from Content: Ukraine is selling half of the armaments it receives from the United States
+'Claim: "Ukraine is selling half of the armaments it receives from the United States"'
+Verifying Claim: "Ukraine is selling half of the armaments it receives from the United States"
+Not enough information yet. Continuing fact-check...
+Got 3 new web source(s):
+	1. https://www.aljazeera.com/news/2025/8/2/ukraine-says-defence-sector-corruption-scheme-uncovered
+	2. https://www.pbs.org/frontlineworld/stories/sierraleone/context.html
+	3. https://www.politico.eu/article/ukraine-uncovers-major-corruption-scheme-defense-procurment-days-after-restoring-anticorruption/
+Useful result: From [Source](https://www.aljazeera.com/news/2025/8/2/ukraine-says-defence-sector-corruption-scheme-uncovered): 
+Content: Al Jazeera published on August 2, 2025, an article about Ukrainian authorities detaining officials over a "large-scale corruption scheme" in the defense sector. <image:k> The scheme involved the procurement of military drones and signal jamming systems at inflated prices, with kickbacks up to 30 percent of contract amounts. The article mentions that Ukrainian President Volodymyr Zelenskyy faced criticism for attempting to curb the independence of anti-corruption agencies.
+
+Useful result: From [Source](https://www.pbs.org/frontlineworld/stories/sierraleone/context.html): 
+Content: PBS Frontline World discusses illicit weapons, high-level corruption, and organized crime centered in Ukraine. Ukraine inherited huge stockpiles after the Soviet Union collapsed in 1991. The Ukrainian government must do more to clean up its arms exports industry. Ukraine is notorious for its booming legal arms industry. Between 1992 and 1998, Ukraine lost $32 billion in military assets, in part through theft, discount arms sales, and lack of oversight. Theft and corruption in the military facilitated the flow of illegal weapons from Ukraine. <image:k>
+
+Useful result: From [Source](https://www.politico.eu/article/ukraine-uncovers-major-corruption-scheme-defense-procurment-days-after-restoring-anticorruption/): 
+Content: Politico reports that Ukraine's anti-corruption agencies exposed a corruption scheme involving the procurement of military equipment. The scheme involved purchasing equipment at inflated prices, with participants receiving 30 percent of the contract amount. Ukrainian President Volodymyr Zelenskyy called the scheme "absolutely immoral." The agencies involved include NABU and SABO. Zelenskyy reinstated the independence of the NABU and the SAPO.
+
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='US aid Ukraine arms tracking')
+Skipping unsupported website: https://www.state.gov/bureau-of-political-military-affairs/releases/2025/01/u-s-security-cooperation-with-ukraine
+Got 3 new web source(s):
+	1. August 21, 2025 https://www.aljazeera.com/news/2025/8/21/tracking-us-and-nato-support-for-ukraine-a-full-breakdown
+	2. https://www.forumarmstrade.org/ukrainearms.html
+	3. https://www.ifw-kiel.de/topics/war-against-ukraine/ukraine-support-tracker/
+Useful result: From [Source](https://www.aljazeera.com/news/2025/8/21/tracking-us-and-nato-support-for-ukraine-a-full-breakdown): 
+Content: Al Jazeera published on August 21, 2025, discusses US aid to Ukraine. The US has committed the largest amount of aid to Ukraine, providing 114.64 billion euros ($134bn) between January 24, 2022 and June 30, 2025. The article mentions military aid, financial aid, and humanitarian aid. <image:1>, <image:2>. The article also mentions that Ukraine has received various weapons systems from its allies.
+
+Useful result: From [Source](https://www.forumarmstrade.org/ukrainearms.html): 
+Content: The search result from forumarmstrade.org provides a timeline of military aid to Ukraine from 2021 to 2025. It mentions various countries, including the United States, France, Lithuania, Canada, Germany, the UK, Denmark, Finland, Latvia, and Australia, providing military assistance to Ukraine. The aid includes artillery shells, ammunition, air defense systems, drones, and other equipment.
+
+Useful result: From [Source](https://www.ifw-kiel.de/topics/war-against-ukraine/ukraine-support-tracker/): 
+Content: The search result is from the Kiel Institute for the World Economy and provides a "Ukraine Support Tracker" database. It quantifies military, financial, and humanitarian aid pledged to Ukraine since January 24, 2022. The database includes information from official government sources and news media reports. The tracker aims to provide a facts-based discussion about support to Ukraine. The latest update is from August 12, 2025, covering data up to June 2025. The result also mentions that Europe is now leading the US in terms of total volume of military aid provided. <image:1>, <image:2>.
+
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Ukraine arms sales US aid')
+Skipping unsupported website: https://www.state.gov/bureau-of-political-military-affairs/releases/2025/01/u-s-security-cooperation-with-ukraine
+Got 2 new web source(s):
+	1. https://www.dsca.mil/Press-Media/Major-Arms-Sales/Article-Display/Article/4289280/ukraine-air-delivered-munitions
+	2. https://apnews.com/article/ukraine-us-weapons-sale-trump-russia-74e01123c0067d5fc160141e0cabf207
+Useful result: From [Source](https://www.dsca.mil/Press-Media/Major-Arms-Sales/Article-Display/Article/4289280/ukraine-air-delivered-munitions): 
+Content: The U.S. State Department approved a Foreign Military Sale to Ukraine for Air Delivered Munitions and related equipment for an estimated cost of $825 million. Ukraine requested to buy up to 3,350 Extended Range Attack Munition (ERAM) missiles and 3,350 Embedded Global Positioning System (GPS)/Inertial Navigation Systems (INS). The purchase will be funded by Denmark, the Netherlands, Norway, and Foreign Military Financing from the United States. The release date is August 28, 2025. The publisher is the U.S. Department of Defense.
+
+Useful result: From [Source](https://apnews.com/article/ukraine-us-weapons-sale-trump-russia-74e01123c0067d5fc160141e0cabf207): 
+Content: The Associated Press reported on an $825 million arms sale to Ukraine approved by the Trump administration, including extended-range missiles and related equipment. The sale will cover 3,350 ERAM missiles, 3,350 GPS units, and other accessories. The article mentions that Ukraine would use funding from NATO allies and U.S. foreign military financing to pay for the equipment. The sale was announced as Russia continues to step up attacks on Ukraine.
+
+Got 2 new web source(s):
+	1. February 18, 2025 https://globalinitiative.net/analysis/future-trends-in-arms-trafficking-from-the-ukraine-conflict/
+	2. February 06, 2025 https://www.euam-ukraine.eu/news/moia-launches-the-coordination-centre-to-combat-illicit-arms-trafficking/
+Useful result: From [Source](https://globalinitiative.net/analysis/future-trends-in-arms-trafficking-from-the-ukraine-conflict/): 
+Content: The Global Initiative Against Transnational Organized Crime published a report on June 18, 2024, discussing future trends in arms trafficking from the Ukraine conflict. The report highlights concerns about the diversion of small arms and light weapons (SALW) and ammunition from Ukraine, with criminal groups establishing more organized arms trafficking markets. The report suggests that arms trafficking is likely to be multifaceted, involving both small-scale trade to European organized crime and larger-volume trade to other regions, potentially to conflict actors. The report also mentions that ex-military personnel may form a new class of 'brokers', using connections with other military and politicians to set up larger-scale operations. <image:1112>
+
+Useful result: From [Source](https://www.euam-ukraine.eu/news/moia-launches-the-coordination-centre-to-combat-illicit-arms-trafficking/): 
+Content: The EU Advisory Mission Ukraine (EUAM) reported on February 6, 2025, that the Ministry of Internal Affairs of Ukraine (MoIA) launched a Coordination Centre to Combat Illicit Arms Trafficking. <image:1115>, <image:1117>, <image:1118>, <image:1120>, <image:1125>. The center aims to counteract illegal arms trafficking, coordinate actions, and exchange information between Ukrainian authorities and partner countries. The UN Office on Drugs and Crime stated that no weapons were trafficked to the European Union due to the efforts of Ukrainian law enforcement agencies.
+
+The claim 'Ukraine is selling half of the armaments it receives from the United States' is false.
+Justification: The fact-check found no evidence to support the claim that Ukraine is selling half of the armaments it receives from the United States. While there is evidence of arms sales and concerns about arms trafficking and corruption within the Ukrainian defense sector, the provided sources do not contain any specific figures on the volume of arms sales or the proportion of U.S.-supplied armaments involved.
+
+So, the overall veracity is: false
+Fact-check took 19:40 min.
+Worker 1 is done and terminates gracefully.

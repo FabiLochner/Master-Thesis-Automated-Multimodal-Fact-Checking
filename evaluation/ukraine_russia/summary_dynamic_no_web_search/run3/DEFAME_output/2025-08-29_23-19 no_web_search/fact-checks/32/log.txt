@@ -1,0 +1,37 @@
+Extracting claims from Content: U.S. Vice President Kamala Harris once said, 'Ukraine is a country in Europe. It exists next to another country called Russia. Russia is a bigger country. Russia is a powerful country. Russia decided to invade a smaller country called Ukraine. So basically that's wrong.'
+'Claim: "U.S. Vice President Kamala Harris once said, 'Ukraine is a country in Europe. It exists next to another country called Russia. Russia is a bigger country. Russia is a powerful country. Russia decided to invade a smaller country called Ukraine. So basically that's wrong.'"'
+Verifying Claim: "U.S. Vice President Kamala Harris once said, 'Ukraine is a country in Europe. It exists next to another country called Russia. Russia is a bigger country. Russia is a powerful country. Russia decided to invade a smaller country called Ukraine. So basically that's wrong.'"
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Kamala Harris Ukraine Russia speech')
+Skipping unsupported website: https://www.defense.gov/News/News-Stories/Article/article/3302594/harris-emphasizes-moral-strategic-importance-of-support-to-ukraine/
+Skipping unsupported website: https://www.youtube.com/watch?v=7uTNv1NCn5g
+Got 3 new web source(s):
+	1. https://www.nbcnews.com/news/world/harris-warns-russia-unprecedented-sanctions-if-it-invades-ukraine-n1289387
+	2. https://www.npr.org/2023/02/18/1158129496/kamala-harris-russia-ukraine-crimes-against-humanity
+	3. https://www.aljazeera.com/news/2023/2/18/us-russia-committing-crimes-against-humanity-in-ukraine
+Useful result: From [Source](https://www.nbcnews.com/news/world/harris-warns-russia-unprecedented-sanctions-if-it-invades-ukraine-n1289387): 
+Content: NBC News published an article about Kamala Harris warning Russia about sanctions if it invades Ukraine. The article includes an image of Kamala Harris speaking <image:7159>.
+
+Useful result: From [Source](https://www.npr.org/2023/02/18/1158129496/kamala-harris-russia-ukraine-crimes-against-humanity): 
+Content: The NPR article from February 18, 2023, contains an image of Kamala Harris. <image:7160>
+
+Useful result: From [Source](https://www.aljazeera.com/news/2023/2/18/us-russia-committing-crimes-against-humanity-in-ukraine): 
+Content: The search result from Al Jazeera contains an image of Kamala Harris. <image:7161>
+
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Kamala Harris quote Ukraine Russia')
+Skipping unsupported website: https://ge.usembassy.gov/vice-president-harris-calls-u-s-commitment-to-nato-ironclad/
+Skipping fact-checking website: https://factcheck.afp.com/doc.afp.com.364M9QE
+Skipping unsupported website: https://www.defense.gov/News/News-Stories/Article/article/3302594/harris-emphasizes-moral-strategic-importance-of-support-to-ukraine/
+Skipping unsupported website: https://www.youtube.com/watch?v=7uTNv1NCn5g
+Got 2 new web source(s):
+	1. https://www.pbs.org/newshour/world/harris-on-ukraine-world-at-a-decisive-moment-in-history
+	2. https://www.lowyinstitute.org/the-interpreter/kamala-harris-ukraine-us-truly-committed-ukrainian-victory
+Useful result: From [Source](https://www.pbs.org/newshour/world/harris-on-ukraine-world-at-a-decisive-moment-in-history): 
+Content: PBS published an article about Kamala Harris and Ukraine, which includes an image of Kamala Harris with Volodymyr Zelensky <image:7165>.
+
+The claim 'U.S. Vice President Kamala Harris once said, 'Ukraine is a country in Europe. It exists next to another country called Russia. Russia is a bigger country. Russia is a powerful country. Russia decided to invade a smaller country called Ukraine. So basically that's wrong.'' is false.
+Justification: The provided search results, including articles from NBC News, NPR, Al Jazeera, and PBS, do not contain the quote attributed to Kamala Harris. Therefore, the claim cannot be verified.
+
+So, the overall veracity is: false
+Fact-check took 0:30 min.

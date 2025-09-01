@@ -1,0 +1,991 @@
+PlanPrompt - QUERY:
+
+# Instructions
+The available knowledge is insufficient to assess the Claim. Therefore, **propose a set of actions** to retrieve new and helpful evidence. Adhere to the following rules:
+* The actions available are listed under Valid Actions, including a short description for each action. No other actions are possible at this moment. 
+* For each action, use the formatting as specified in Valid Actions.
+* Include all actions in a single Markdown code block at the end of your answer.
+* Propose as few actions as possible, but as much as needed. Do not propose similar or previously used actions.
+
+
+
+## Valid Actions
+* `geolocate`
+   * Description: Performs geolocation to determine the country where an image was taken.
+   * How to use: Provide an image and the model will determine the most likely countries where it was taken.
+   * Format: geolocate(<image:k>), where `k` is the image's ID
+
+* `reverse_search`
+   * Description: Performs a reverse image search to find similar images on the web.
+   * How to use: Provide an image and the model will perform a reverse search to find similar images.
+   * Format: reverse_search(<image:k>), where `k` is the image's ID
+
+* `image_search`
+   * Description: Run an image search on Google to retrieve related images for a given query.
+   * How to use: This is a helpful tool for fact-checking images. Use this to retrieve images associated with a specific keyword or phrase. Ensure that the query is clear and specific to improve search accuracy. If no relevant images are found, refine the query or use more descriptive terms.
+   * Format: image_search("your image search query goes here")
+
+# Example: geolocate()
+
+## Claim
+Text: "<image:k> shows a nuclear weapons facility in Usbekistan."
+
+...
+
+## Actions
+```
+geolocate(<image:k>)
+```
+
+# Example: reverse_search()
+
+## Claim
+Text: "<image:k> shows a rare event of a solar eclipse with a double ring."
+
+...
+
+## Actions
+```
+reverse_search(<image:k>)
+```
+
+# Example: image_search()
+
+## Claim
+Text: "Chinese officials in white protective hazmat suits carried people down a hallway to be quarantined for having COVID-19 in November 2022."
+
+...
+
+ACTIONS:
+```
+image_search("China officials white suits carry people")
+image_search("China officials carry people COVID quarantine 2022")
+```
+
+# Record
+## Claim
+Claim: "While serving as US President in 2024, Joe Biden ordered the US forces to prepare for possible nuclear confrontations with Russia, China, and North Korea."
+
+# Your Actions
+
+
+
+===== > RESPONSE:  < =====
+```
+image_search("Joe Biden nuclear confrontation Russia China North Korea")
+```
+_________________________
+
+
+
+SummarizeResultPrompt - QUERY:
+
+# Instructions
+In order to find evidence that helps your fact-check, you just ran a web search which yielded a Search Result. **Your task right now is to summarize the Search Result.** What to include:
+* information that might be useful for the fact-check (see Record)
+* relevant images (refer to images by inserting their reference <image:k>)
+* if available: the release date as well as the author or the publisher (e.g. the media company) of the search result.
+
+Do NOT include:
+* advertisements
+* any other information not related to the Record or the Claim
+
+Additional rules:
+* Do not add any additional information besides the information in the Search Result.
+* If the Search Result doesn't contain any relevant information for the fact-checking work, simply print one word in capital letters: "NONE".
+* Keep your writing style like in the Examples 1, 2 and 3 provided to you.
+* Try to filter out relevant information even if the search result is in a different language.
+
+# Example 1
+The search result from America Today provides several photographs of the Notre-Dame Cathedral fire on April 15, 2019. <image:i>, <image:j>, <image:k>. None of the images show the Eiffel Tower in the background. 
+
+# Example 2
+NONE
+
+# Example 3
+The Guardian discusses a report blaming the Syrian government for a toxic gas attack and condemning their use of chemical weapons. The Guardian mentions the Chemical Weapons Convention and the responsibilities of Syria under the convention. According to The Guardian, The White House condemned the Assad regime for defying the norm against chemical weapons use.
+
+# Record
+## Claim
+Claim: "While serving as US President in 2024, Joe Biden ordered the US forces to prepare for possible nuclear confrontations with Russia, China, and North Korea."
+
+## Actions
+```
+image_search("Joe Biden nuclear confrontation Russia China North Korea")
+```
+
+# Search Result
+From [Source](https://www.nytimes.com/2024/08/20/us/politics/biden-nuclear-china-russia.html): 
+Content: "
+<image:7007>"
+
+# Your Summary
+
+
+
+===== > RESPONSE:  < =====
+The New York Times published an article in 2024. <image:7007>
+
+_________________________
+
+
+
+SummarizeResultPrompt - QUERY:
+
+# Instructions
+In order to find evidence that helps your fact-check, you just ran a web search which yielded a Search Result. **Your task right now is to summarize the Search Result.** What to include:
+* information that might be useful for the fact-check (see Record)
+* relevant images (refer to images by inserting their reference <image:k>)
+* if available: the release date as well as the author or the publisher (e.g. the media company) of the search result.
+
+Do NOT include:
+* advertisements
+* any other information not related to the Record or the Claim
+
+Additional rules:
+* Do not add any additional information besides the information in the Search Result.
+* If the Search Result doesn't contain any relevant information for the fact-checking work, simply print one word in capital letters: "NONE".
+* Keep your writing style like in the Examples 1, 2 and 3 provided to you.
+* Try to filter out relevant information even if the search result is in a different language.
+
+# Example 1
+The search result from America Today provides several photographs of the Notre-Dame Cathedral fire on April 15, 2019. <image:i>, <image:j>, <image:k>. None of the images show the Eiffel Tower in the background. 
+
+# Example 2
+NONE
+
+# Example 3
+The Guardian discusses a report blaming the Syrian government for a toxic gas attack and condemning their use of chemical weapons. The Guardian mentions the Chemical Weapons Convention and the responsibilities of Syria under the convention. According to The Guardian, The White House condemned the Assad regime for defying the norm against chemical weapons use.
+
+# Record
+## Claim
+Claim: "While serving as US President in 2024, Joe Biden ordered the US forces to prepare for possible nuclear confrontations with Russia, China, and North Korea."
+
+## Actions
+```
+image_search("Joe Biden nuclear confrontation Russia China North Korea")
+```
+
+# Search Result
+From [Source](https://www.theguardian.com/us-news/article/2024/aug/20/biden-nuclear-strategy-china-threat): 
+Content: "
+<image:7008>"
+
+# Your Summary
+
+
+
+===== > RESPONSE:  < =====
+The Guardian published an article on August 20, 2024, discussing Biden's nuclear strategy and the threat from China. <image:7008>
+
+_________________________
+
+
+
+SummarizeResultPrompt - QUERY:
+
+# Instructions
+In order to find evidence that helps your fact-check, you just ran a web search which yielded a Search Result. **Your task right now is to summarize the Search Result.** What to include:
+* information that might be useful for the fact-check (see Record)
+* relevant images (refer to images by inserting their reference <image:k>)
+* if available: the release date as well as the author or the publisher (e.g. the media company) of the search result.
+
+Do NOT include:
+* advertisements
+* any other information not related to the Record or the Claim
+
+Additional rules:
+* Do not add any additional information besides the information in the Search Result.
+* If the Search Result doesn't contain any relevant information for the fact-checking work, simply print one word in capital letters: "NONE".
+* Keep your writing style like in the Examples 1, 2 and 3 provided to you.
+* Try to filter out relevant information even if the search result is in a different language.
+
+# Example 1
+The search result from America Today provides several photographs of the Notre-Dame Cathedral fire on April 15, 2019. <image:i>, <image:j>, <image:k>. None of the images show the Eiffel Tower in the background. 
+
+# Example 2
+NONE
+
+# Example 3
+The Guardian discusses a report blaming the Syrian government for a toxic gas attack and condemning their use of chemical weapons. The Guardian mentions the Chemical Weapons Convention and the responsibilities of Syria under the convention. According to The Guardian, The White House condemned the Assad regime for defying the norm against chemical weapons use.
+
+# Record
+## Claim
+Claim: "While serving as US President in 2024, Joe Biden ordered the US forces to prepare for possible nuclear confrontations with Russia, China, and North Korea."
+
+## Actions
+```
+image_search("Joe Biden nuclear confrontation Russia China North Korea")
+```
+
+# Search Result
+From [Source](https://www.tasnimnews.com/en/news/2024/08/21/3145608/biden-approves-nuclear-strategy-focusing-on-china-report): 
+Content: "
+<image:7009>"
+
+# Your Summary
+
+
+
+===== > RESPONSE:  < =====
+Tasnim News published an article on August 21, 2024, about Joe Biden and nuclear strategy, focusing on China. <image:7009>.
+
+_________________________
+
+
+
+SummarizeSummariesPrompt - QUERY:
+
+# Instructions
+You just retrieved web sources, each one summarized under "Web Sources". **Your task right now is to summarize the web source summaries.**
+
+Always adhere to the following rules:
+* Write only one to two paragraphs.
+* Include all URLs from the listed sources. Format them as Markdown hyperlinks.
+* Do not add any additional information besides the information in the summaries.
+* Include references (<image:k>) to all relevant images.
+
+# Record
+## Claim
+Claim: "While serving as US President in 2024, Joe Biden ordered the US forces to prepare for possible nuclear confrontations with Russia, China, and North Korea."
+
+## Actions
+```
+image_search("Joe Biden nuclear confrontation Russia China North Korea")
+```
+
+## Web Sources
+**Web Search Result**
+
+From [Source](https://www.nytimes.com/2024/08/20/us/politics/biden-nuclear-china-russia.html): 
+Content: The New York Times published an article in 2024. <image:7007>
+
+
+From [Source](https://www.theguardian.com/us-news/article/2024/aug/20/biden-nuclear-strategy-china-threat): 
+Content: The Guardian published an article on August 20, 2024, discussing Biden's nuclear strategy and the threat from China. <image:7008>
+
+
+From [Source](https://www.tasnimnews.com/en/news/2024/08/21/3145608/biden-approves-nuclear-strategy-focusing-on-china-report): 
+Content: Tasnim News published an article on August 21, 2024, about Joe Biden and nuclear strategy, focusing on China. <image:7009>.
+
+
+## Your Summary
+
+
+
+===== > RESPONSE:  < =====
+The New York Times published an article in 2024 (<image:7007>). The Guardian published an article on August 20, 2024, discussing Biden's nuclear strategy and the threat from China (<image:7008>).
+
+Tasnim News published an article on August 21, 2024, about Joe Biden and nuclear strategy, focusing on China (<image:7009>).
+
+_________________________
+
+
+
+DevelopPrompt - QUERY:
+
+# Instructions
+You just retrieved new Evidence. Now, **analyze the Claim's veracity using the evidence**. Always adhere to the following rules:
+* Focus on developing new insights. Do not repeat larger parts from the Record. Do not restate the Claim.
+* Write down your thoughts step-by-step. Whenever necessary, you may elaborate in more detail.
+* Depending on the topic's complexity, invest one to three paragraphs. The fewer, the better.
+* If you find that there is insufficient information to verify the Claim, explicitly state what information is missing.
+* If you cite web sources, always refer to them by including their URL as a Markdown hyperlink.
+* **Use information only from the recorded evidence**: Avoid inserting information that is not implied by the evidence. You may use commonsense knowledge, though.
+
+# Record
+## Claim
+Claim: "While serving as US President in 2024, Joe Biden ordered the US forces to prepare for possible nuclear confrontations with Russia, China, and North Korea."
+
+## Actions
+```
+image_search("Joe Biden nuclear confrontation Russia China North Korea")
+```
+
+## Evidence
+### Evidence from `image_search`
+The New York Times published an article in 2024 (<image:7007>). The Guardian published an article on August 20, 2024, discussing Biden's nuclear strategy and the threat from China (<image:7008>).
+
+Tasnim News published an article on August 21, 2024, about Joe Biden and nuclear strategy, focusing on China (<image:7009>).
+
+
+# Your Analysis
+
+
+
+===== > RESPONSE:  < =====
+The evidence suggests that in 2024, during his presidency, Joe Biden's nuclear strategy was a topic of discussion. The Guardian and Tasnim News specifically mention China in relation to Biden's nuclear strategy. However, the evidence does not explicitly state that Biden ordered the US forces to prepare for nuclear confrontations with Russia, China, and North Korea.
+
+More information is needed to verify the claim fully. Specifically, the content of the articles from The New York Times, The Guardian, and Tasnim News needs to be examined to determine if they support the claim.
+
+_________________________
+
+
+
+JudgePrompt - QUERY:
+
+# Instructions
+**Determine the Claim's veracity** by following these steps:
+1. Briefly summarize the key insights from the fact-check (see Record) in at most one paragraph.
+2. Write one paragraph about which one of the Decision Options applies best. Include the most appropriate decision option at the end and enclose it in backticks like `this`.
+
+
+
+
+## Decision Options
+* `false`: The claim is not factually accurate. This is the case if one of the following three conditions is met:(1) The claim is demonstrably false when it is disproven by evidence from multiple and reliable sources,(2) The claim or image is taken out of context, i.e. the origin, content and/or meaning of a statement or an image is misrepresented. For example, an old claim or an old image is mispresented in a new context in a misleading way,(3) There is not enough evidence to verify the claim or the evidence is conflicting or self-contradictory.
+* `true`: The claim is factually accurate when it is confirmed by evidence from multiple and reliable sources.
+* `not enough information`: The fact-check does not contain sufficient information to come to an conclusion. For example,there is substantial lack of evidence or the evidence is inconclusive, conflicting or self-contradictory. In the case of a lack of evidence, state which information exactly is missing. In particular, if no RESULTS or sources are available, pick this decision.
+
+# Record
+## Claim
+Claim: "While serving as US President in 2024, Joe Biden ordered the US forces to prepare for possible nuclear confrontations with Russia, China, and North Korea."
+
+## Actions
+```
+image_search("Joe Biden nuclear confrontation Russia China North Korea")
+```
+
+## Evidence
+### Evidence from `image_search`
+The New York Times published an article in 2024 (<image:7007>). The Guardian published an article on August 20, 2024, discussing Biden's nuclear strategy and the threat from China (<image:7008>).
+
+Tasnim News published an article on August 21, 2024, about Joe Biden and nuclear strategy, focusing on China (<image:7009>).
+
+
+## Elaboration
+The evidence suggests that in 2024, during his presidency, Joe Biden's nuclear strategy was a topic of discussion. The Guardian and Tasnim News specifically mention China in relation to Biden's nuclear strategy. However, the evidence does not explicitly state that Biden ordered the US forces to prepare for nuclear confrontations with Russia, China, and North Korea.
+
+More information is needed to verify the claim fully. Specifically, the content of the articles from The New York Times, The Guardian, and Tasnim News needs to be examined to determine if they support the claim.
+
+
+# Your Judgement
+
+
+
+===== > RESPONSE:  < =====
+The provided evidence indicates that Joe Biden's nuclear strategy was discussed in 2024, with a focus on China. However, the evidence does not explicitly confirm that Biden ordered the US forces to prepare for nuclear confrontations with Russia, China, and North Korea.
+
+Since the evidence does not provide enough information to verify the claim, the most appropriate decision option is `not enough information`.
+
+_________________________
+
+
+
+PlanPrompt - QUERY:
+
+# Instructions
+The available knowledge is insufficient to assess the Claim. Therefore, **propose a set of actions** to retrieve new and helpful evidence. Adhere to the following rules:
+* The actions available are listed under Valid Actions, including a short description for each action. No other actions are possible at this moment. 
+* For each action, use the formatting as specified in Valid Actions.
+* Include all actions in a single Markdown code block at the end of your answer.
+* Propose as few actions as possible, but as much as needed. Do not propose similar or previously used actions.
+
+
+
+## Valid Actions
+* `geolocate`
+   * Description: Performs geolocation to determine the country where an image was taken.
+   * How to use: Provide an image and the model will determine the most likely countries where it was taken.
+   * Format: geolocate(<image:k>), where `k` is the image's ID
+
+* `reverse_search`
+   * Description: Performs a reverse image search to find similar images on the web.
+   * How to use: Provide an image and the model will perform a reverse search to find similar images.
+   * Format: reverse_search(<image:k>), where `k` is the image's ID
+
+* `image_search`
+   * Description: Run an image search on Google to retrieve related images for a given query.
+   * How to use: This is a helpful tool for fact-checking images. Use this to retrieve images associated with a specific keyword or phrase. Ensure that the query is clear and specific to improve search accuracy. If no relevant images are found, refine the query or use more descriptive terms.
+   * Format: image_search("your image search query goes here")
+
+# Example: geolocate()
+
+## Claim
+Text: "<image:k> shows a nuclear weapons facility in Usbekistan."
+
+...
+
+## Actions
+```
+geolocate(<image:k>)
+```
+
+# Example: reverse_search()
+
+## Claim
+Text: "<image:k> shows a rare event of a solar eclipse with a double ring."
+
+...
+
+## Actions
+```
+reverse_search(<image:k>)
+```
+
+# Example: image_search()
+
+## Claim
+Text: "Chinese officials in white protective hazmat suits carried people down a hallway to be quarantined for having COVID-19 in November 2022."
+
+...
+
+ACTIONS:
+```
+image_search("China officials white suits carry people")
+image_search("China officials carry people COVID quarantine 2022")
+```
+
+# Record
+## Claim
+Claim: "While serving as US President in 2024, Joe Biden ordered the US forces to prepare for possible nuclear confrontations with Russia, China, and North Korea."
+
+## Actions
+```
+image_search("Joe Biden nuclear confrontation Russia China North Korea")
+```
+
+## Evidence
+### Evidence from `image_search`
+The New York Times published an article in 2024 (<image:7007>). The Guardian published an article on August 20, 2024, discussing Biden's nuclear strategy and the threat from China (<image:7008>).
+
+Tasnim News published an article on August 21, 2024, about Joe Biden and nuclear strategy, focusing on China (<image:7009>).
+
+
+## Elaboration
+The evidence suggests that in 2024, during his presidency, Joe Biden's nuclear strategy was a topic of discussion. The Guardian and Tasnim News specifically mention China in relation to Biden's nuclear strategy. However, the evidence does not explicitly state that Biden ordered the US forces to prepare for nuclear confrontations with Russia, China, and North Korea.
+
+More information is needed to verify the claim fully. Specifically, the content of the articles from The New York Times, The Guardian, and Tasnim News needs to be examined to determine if they support the claim.
+
+
+# Your Actions
+
+
+
+===== > RESPONSE:  < =====
+```
+image_search("Biden nuclear strategy Russia China North Korea")
+```
+_________________________
+
+
+
+SummarizeResultPrompt - QUERY:
+
+# Instructions
+In order to find evidence that helps your fact-check, you just ran a web search which yielded a Search Result. **Your task right now is to summarize the Search Result.** What to include:
+* information that might be useful for the fact-check (see Record)
+* relevant images (refer to images by inserting their reference <image:k>)
+* if available: the release date as well as the author or the publisher (e.g. the media company) of the search result.
+
+Do NOT include:
+* advertisements
+* any other information not related to the Record or the Claim
+
+Additional rules:
+* Do not add any additional information besides the information in the Search Result.
+* If the Search Result doesn't contain any relevant information for the fact-checking work, simply print one word in capital letters: "NONE".
+* Keep your writing style like in the Examples 1, 2 and 3 provided to you.
+* Try to filter out relevant information even if the search result is in a different language.
+
+# Example 1
+The search result from America Today provides several photographs of the Notre-Dame Cathedral fire on April 15, 2019. <image:i>, <image:j>, <image:k>. None of the images show the Eiffel Tower in the background. 
+
+# Example 2
+NONE
+
+# Example 3
+The Guardian discusses a report blaming the Syrian government for a toxic gas attack and condemning their use of chemical weapons. The Guardian mentions the Chemical Weapons Convention and the responsibilities of Syria under the convention. According to The Guardian, The White House condemned the Assad regime for defying the norm against chemical weapons use.
+
+# Record
+## Claim
+Claim: "While serving as US President in 2024, Joe Biden ordered the US forces to prepare for possible nuclear confrontations with Russia, China, and North Korea."
+
+## Actions
+```
+image_search("Joe Biden nuclear confrontation Russia China North Korea")
+```
+
+## Evidence
+### Evidence from `image_search`
+The New York Times published an article in 2024 (<image:7007>). The Guardian published an article on August 20, 2024, discussing Biden's nuclear strategy and the threat from China (<image:7008>).
+
+Tasnim News published an article on August 21, 2024, about Joe Biden and nuclear strategy, focusing on China (<image:7009>).
+
+
+## Elaboration
+The evidence suggests that in 2024, during his presidency, Joe Biden's nuclear strategy was a topic of discussion. The Guardian and Tasnim News specifically mention China in relation to Biden's nuclear strategy. However, the evidence does not explicitly state that Biden ordered the US forces to prepare for nuclear confrontations with Russia, China, and North Korea.
+
+More information is needed to verify the claim fully. Specifically, the content of the articles from The New York Times, The Guardian, and Tasnim News needs to be examined to determine if they support the claim.
+
+
+## Actions
+```
+image_search("Biden nuclear strategy Russia China North Korea")
+```
+
+# Search Result
+From [Source](https://www.aa.com.tr/en/americas/biden-approved-nuclear-strategy-focusing-on-china-report/3308990): 
+Content: ""
+
+# Your Summary
+
+
+
+===== > RESPONSE:  < =====
+NONE
+
+_________________________
+
+
+
+DevelopPrompt - QUERY:
+
+# Instructions
+You just retrieved new Evidence. Now, **analyze the Claim's veracity using the evidence**. Always adhere to the following rules:
+* Focus on developing new insights. Do not repeat larger parts from the Record. Do not restate the Claim.
+* Write down your thoughts step-by-step. Whenever necessary, you may elaborate in more detail.
+* Depending on the topic's complexity, invest one to three paragraphs. The fewer, the better.
+* If you find that there is insufficient information to verify the Claim, explicitly state what information is missing.
+* If you cite web sources, always refer to them by including their URL as a Markdown hyperlink.
+* **Use information only from the recorded evidence**: Avoid inserting information that is not implied by the evidence. You may use commonsense knowledge, though.
+
+# Record
+## Claim
+Claim: "While serving as US President in 2024, Joe Biden ordered the US forces to prepare for possible nuclear confrontations with Russia, China, and North Korea."
+
+## Actions
+```
+image_search("Joe Biden nuclear confrontation Russia China North Korea")
+```
+
+## Evidence
+### Evidence from `image_search`
+The New York Times published an article in 2024 (<image:7007>). The Guardian published an article on August 20, 2024, discussing Biden's nuclear strategy and the threat from China (<image:7008>).
+
+Tasnim News published an article on August 21, 2024, about Joe Biden and nuclear strategy, focusing on China (<image:7009>).
+
+
+## Elaboration
+The evidence suggests that in 2024, during his presidency, Joe Biden's nuclear strategy was a topic of discussion. The Guardian and Tasnim News specifically mention China in relation to Biden's nuclear strategy. However, the evidence does not explicitly state that Biden ordered the US forces to prepare for nuclear confrontations with Russia, China, and North Korea.
+
+More information is needed to verify the claim fully. Specifically, the content of the articles from The New York Times, The Guardian, and Tasnim News needs to be examined to determine if they support the claim.
+
+
+## Actions
+```
+image_search("Biden nuclear strategy Russia China North Korea")
+```
+
+## Evidence
+No new evidence found.
+
+# Your Analysis
+
+
+
+===== > RESPONSE:  < =====
+The evidence confirms that Joe Biden's nuclear strategy was a subject of discussion in 2024, with China being a specific focus. However, the provided information does not confirm whether Biden ordered the US forces to prepare for nuclear confrontations with Russia, China, and North Korea.
+
+The articles from The New York Times, The Guardian, and Tasnim News need to be reviewed to verify the claim.
+
+_________________________
+
+
+
+JudgePrompt - QUERY:
+
+# Instructions
+**Determine the Claim's veracity** by following these steps:
+1. Briefly summarize the key insights from the fact-check (see Record) in at most one paragraph.
+2. Write one paragraph about which one of the Decision Options applies best. Include the most appropriate decision option at the end and enclose it in backticks like `this`.
+
+
+
+
+## Decision Options
+* `false`: The claim is not factually accurate. This is the case if one of the following three conditions is met:(1) The claim is demonstrably false when it is disproven by evidence from multiple and reliable sources,(2) The claim or image is taken out of context, i.e. the origin, content and/or meaning of a statement or an image is misrepresented. For example, an old claim or an old image is mispresented in a new context in a misleading way,(3) There is not enough evidence to verify the claim or the evidence is conflicting or self-contradictory.
+* `true`: The claim is factually accurate when it is confirmed by evidence from multiple and reliable sources.
+* `not enough information`: The fact-check does not contain sufficient information to come to an conclusion. For example,there is substantial lack of evidence or the evidence is inconclusive, conflicting or self-contradictory. In the case of a lack of evidence, state which information exactly is missing. In particular, if no RESULTS or sources are available, pick this decision.
+
+# Record
+## Claim
+Claim: "While serving as US President in 2024, Joe Biden ordered the US forces to prepare for possible nuclear confrontations with Russia, China, and North Korea."
+
+## Actions
+```
+image_search("Joe Biden nuclear confrontation Russia China North Korea")
+```
+
+## Evidence
+### Evidence from `image_search`
+The New York Times published an article in 2024 (<image:7007>). The Guardian published an article on August 20, 2024, discussing Biden's nuclear strategy and the threat from China (<image:7008>).
+
+Tasnim News published an article on August 21, 2024, about Joe Biden and nuclear strategy, focusing on China (<image:7009>).
+
+
+## Elaboration
+The evidence suggests that in 2024, during his presidency, Joe Biden's nuclear strategy was a topic of discussion. The Guardian and Tasnim News specifically mention China in relation to Biden's nuclear strategy. However, the evidence does not explicitly state that Biden ordered the US forces to prepare for nuclear confrontations with Russia, China, and North Korea.
+
+More information is needed to verify the claim fully. Specifically, the content of the articles from The New York Times, The Guardian, and Tasnim News needs to be examined to determine if they support the claim.
+
+
+## Actions
+```
+image_search("Biden nuclear strategy Russia China North Korea")
+```
+
+## Evidence
+No new evidence found.
+
+## Elaboration
+The evidence confirms that Joe Biden's nuclear strategy was a subject of discussion in 2024, with China being a specific focus. However, the provided information does not confirm whether Biden ordered the US forces to prepare for nuclear confrontations with Russia, China, and North Korea.
+
+The articles from The New York Times, The Guardian, and Tasnim News need to be reviewed to verify the claim.
+
+
+# Your Judgement
+
+
+
+===== > RESPONSE:  < =====
+The search results indicate that Joe Biden's nuclear strategy was discussed in 2024, with a focus on China. However, the provided evidence does not explicitly state that Biden ordered the US forces to prepare for nuclear confrontations with Russia, China, and North Korea. More information is needed to verify the claim.
+
+`not enough information`
+_________________________
+
+
+
+PlanPrompt - QUERY:
+
+# Instructions
+The available knowledge is insufficient to assess the Claim. Therefore, **propose a set of actions** to retrieve new and helpful evidence. Adhere to the following rules:
+* The actions available are listed under Valid Actions, including a short description for each action. No other actions are possible at this moment. 
+* For each action, use the formatting as specified in Valid Actions.
+* Include all actions in a single Markdown code block at the end of your answer.
+* Propose as few actions as possible, but as much as needed. Do not propose similar or previously used actions.
+
+
+
+## Valid Actions
+* `geolocate`
+   * Description: Performs geolocation to determine the country where an image was taken.
+   * How to use: Provide an image and the model will determine the most likely countries where it was taken.
+   * Format: geolocate(<image:k>), where `k` is the image's ID
+
+* `reverse_search`
+   * Description: Performs a reverse image search to find similar images on the web.
+   * How to use: Provide an image and the model will perform a reverse search to find similar images.
+   * Format: reverse_search(<image:k>), where `k` is the image's ID
+
+* `image_search`
+   * Description: Run an image search on Google to retrieve related images for a given query.
+   * How to use: This is a helpful tool for fact-checking images. Use this to retrieve images associated with a specific keyword or phrase. Ensure that the query is clear and specific to improve search accuracy. If no relevant images are found, refine the query or use more descriptive terms.
+   * Format: image_search("your image search query goes here")
+
+# Example: geolocate()
+
+## Claim
+Text: "<image:k> shows a nuclear weapons facility in Usbekistan."
+
+...
+
+## Actions
+```
+geolocate(<image:k>)
+```
+
+# Example: reverse_search()
+
+## Claim
+Text: "<image:k> shows a rare event of a solar eclipse with a double ring."
+
+...
+
+## Actions
+```
+reverse_search(<image:k>)
+```
+
+# Example: image_search()
+
+## Claim
+Text: "Chinese officials in white protective hazmat suits carried people down a hallway to be quarantined for having COVID-19 in November 2022."
+
+...
+
+ACTIONS:
+```
+image_search("China officials white suits carry people")
+image_search("China officials carry people COVID quarantine 2022")
+```
+
+# Record
+## Claim
+Claim: "While serving as US President in 2024, Joe Biden ordered the US forces to prepare for possible nuclear confrontations with Russia, China, and North Korea."
+
+## Actions
+```
+image_search("Joe Biden nuclear confrontation Russia China North Korea")
+```
+
+## Evidence
+### Evidence from `image_search`
+The New York Times published an article in 2024 (<image:7007>). The Guardian published an article on August 20, 2024, discussing Biden's nuclear strategy and the threat from China (<image:7008>).
+
+Tasnim News published an article on August 21, 2024, about Joe Biden and nuclear strategy, focusing on China (<image:7009>).
+
+
+## Elaboration
+The evidence suggests that in 2024, during his presidency, Joe Biden's nuclear strategy was a topic of discussion. The Guardian and Tasnim News specifically mention China in relation to Biden's nuclear strategy. However, the evidence does not explicitly state that Biden ordered the US forces to prepare for nuclear confrontations with Russia, China, and North Korea.
+
+More information is needed to verify the claim fully. Specifically, the content of the articles from The New York Times, The Guardian, and Tasnim News needs to be examined to determine if they support the claim.
+
+
+## Actions
+```
+image_search("Biden nuclear strategy Russia China North Korea")
+```
+
+## Evidence
+No new evidence found.
+
+## Elaboration
+The evidence confirms that Joe Biden's nuclear strategy was a subject of discussion in 2024, with China being a specific focus. However, the provided information does not confirm whether Biden ordered the US forces to prepare for nuclear confrontations with Russia, China, and North Korea.
+
+The articles from The New York Times, The Guardian, and Tasnim News need to be reviewed to verify the claim.
+
+
+# Your Actions
+
+
+
+===== > RESPONSE:  < =====
+```
+image_search("Biden nuclear order US forces prepare nuclear confrontation Russia China North Korea")
+```
+_________________________
+
+
+
+DevelopPrompt - QUERY:
+
+# Instructions
+You just retrieved new Evidence. Now, **analyze the Claim's veracity using the evidence**. Always adhere to the following rules:
+* Focus on developing new insights. Do not repeat larger parts from the Record. Do not restate the Claim.
+* Write down your thoughts step-by-step. Whenever necessary, you may elaborate in more detail.
+* Depending on the topic's complexity, invest one to three paragraphs. The fewer, the better.
+* If you find that there is insufficient information to verify the Claim, explicitly state what information is missing.
+* If you cite web sources, always refer to them by including their URL as a Markdown hyperlink.
+* **Use information only from the recorded evidence**: Avoid inserting information that is not implied by the evidence. You may use commonsense knowledge, though.
+
+# Record
+## Claim
+Claim: "While serving as US President in 2024, Joe Biden ordered the US forces to prepare for possible nuclear confrontations with Russia, China, and North Korea."
+
+## Actions
+```
+image_search("Joe Biden nuclear confrontation Russia China North Korea")
+```
+
+## Evidence
+### Evidence from `image_search`
+The New York Times published an article in 2024 (<image:7007>). The Guardian published an article on August 20, 2024, discussing Biden's nuclear strategy and the threat from China (<image:7008>).
+
+Tasnim News published an article on August 21, 2024, about Joe Biden and nuclear strategy, focusing on China (<image:7009>).
+
+
+## Elaboration
+The evidence suggests that in 2024, during his presidency, Joe Biden's nuclear strategy was a topic of discussion. The Guardian and Tasnim News specifically mention China in relation to Biden's nuclear strategy. However, the evidence does not explicitly state that Biden ordered the US forces to prepare for nuclear confrontations with Russia, China, and North Korea.
+
+More information is needed to verify the claim fully. Specifically, the content of the articles from The New York Times, The Guardian, and Tasnim News needs to be examined to determine if they support the claim.
+
+
+## Actions
+```
+image_search("Biden nuclear strategy Russia China North Korea")
+```
+
+## Evidence
+No new evidence found.
+
+## Elaboration
+The evidence confirms that Joe Biden's nuclear strategy was a subject of discussion in 2024, with China being a specific focus. However, the provided information does not confirm whether Biden ordered the US forces to prepare for nuclear confrontations with Russia, China, and North Korea.
+
+The articles from The New York Times, The Guardian, and Tasnim News need to be reviewed to verify the claim.
+
+
+## Actions
+```
+image_search("Biden nuclear order US forces prepare nuclear confrontation Russia China North Korea")
+```
+
+## Evidence
+No new evidence found.
+
+# Your Analysis
+
+
+
+===== > RESPONSE:  < =====
+The evidence indicates that Joe Biden's nuclear strategy was a topic of discussion in 2024, particularly concerning China. However, the evidence does not explicitly state that Biden ordered the US forces to prepare for nuclear confrontations with Russia, China, and North Korea.
+
+To verify the claim, the content of the articles from The New York Times, The Guardian, and Tasnim News needs to be examined.
+
+_________________________
+
+
+
+JudgePrompt - QUERY:
+
+# Instructions
+**Determine the Claim's veracity** by following these steps:
+1. Briefly summarize the key insights from the fact-check (see Record) in at most one paragraph.
+2. Write one paragraph about which one of the Decision Options applies best. Include the most appropriate decision option at the end and enclose it in backticks like `this`.
+
+
+
+
+## Decision Options
+* `false`: The claim is not factually accurate. This is the case if one of the following three conditions is met:(1) The claim is demonstrably false when it is disproven by evidence from multiple and reliable sources,(2) The claim or image is taken out of context, i.e. the origin, content and/or meaning of a statement or an image is misrepresented. For example, an old claim or an old image is mispresented in a new context in a misleading way,(3) There is not enough evidence to verify the claim or the evidence is conflicting or self-contradictory.
+* `true`: The claim is factually accurate when it is confirmed by evidence from multiple and reliable sources.
+
+# Record
+## Claim
+Claim: "While serving as US President in 2024, Joe Biden ordered the US forces to prepare for possible nuclear confrontations with Russia, China, and North Korea."
+
+## Actions
+```
+image_search("Joe Biden nuclear confrontation Russia China North Korea")
+```
+
+## Evidence
+### Evidence from `image_search`
+The New York Times published an article in 2024 (<image:7007>). The Guardian published an article on August 20, 2024, discussing Biden's nuclear strategy and the threat from China (<image:7008>).
+
+Tasnim News published an article on August 21, 2024, about Joe Biden and nuclear strategy, focusing on China (<image:7009>).
+
+
+## Elaboration
+The evidence suggests that in 2024, during his presidency, Joe Biden's nuclear strategy was a topic of discussion. The Guardian and Tasnim News specifically mention China in relation to Biden's nuclear strategy. However, the evidence does not explicitly state that Biden ordered the US forces to prepare for nuclear confrontations with Russia, China, and North Korea.
+
+More information is needed to verify the claim fully. Specifically, the content of the articles from The New York Times, The Guardian, and Tasnim News needs to be examined to determine if they support the claim.
+
+
+## Actions
+```
+image_search("Biden nuclear strategy Russia China North Korea")
+```
+
+## Evidence
+No new evidence found.
+
+## Elaboration
+The evidence confirms that Joe Biden's nuclear strategy was a subject of discussion in 2024, with China being a specific focus. However, the provided information does not confirm whether Biden ordered the US forces to prepare for nuclear confrontations with Russia, China, and North Korea.
+
+The articles from The New York Times, The Guardian, and Tasnim News need to be reviewed to verify the claim.
+
+
+## Actions
+```
+image_search("Biden nuclear order US forces prepare nuclear confrontation Russia China North Korea")
+```
+
+## Evidence
+No new evidence found.
+
+## Elaboration
+The evidence indicates that Joe Biden's nuclear strategy was a topic of discussion in 2024, particularly concerning China. However, the evidence does not explicitly state that Biden ordered the US forces to prepare for nuclear confrontations with Russia, China, and North Korea.
+
+To verify the claim, the content of the articles from The New York Times, The Guardian, and Tasnim News needs to be examined.
+
+
+# Your Judgement
+
+
+
+===== > RESPONSE:  < =====
+The search results show that Joe Biden's nuclear strategy was discussed in 2024, with a focus on China. However, the evidence does not confirm that Biden ordered US forces to prepare for nuclear confrontations with Russia, China, and North Korea. More information is needed to verify the claim.
+
+The claim is not fully supported by the evidence. The evidence does not explicitly state that Biden ordered the US forces to prepare for nuclear confrontations with the mentioned countries. Therefore, the claim is considered unverified. `false`
+
+_________________________
+
+
+
+SummarizeDocPrompt - QUERY:
+
+# Instructions
+You are provided with the record of a fact-check. It contains the Claim to be verified and a documentation of all the fact-checking work along the gathered evidence. Your task is to **summarize the fact-check**. That is, you provide a concise, one-paragraph justification for the final VERDICT based on the knowledge from the Record. Note:
+* Be truthful, brief, do not add any additional information besides the information given in the Record. 
+* Link key sources in your summary. Use Markdown notation for that. You may link them in-line.
+* Don't state the Claim again. Rather focus on the key insights of the fact-check.
+* Simply print just the summary.
+
+# Record
+## Claim
+Claim: "While serving as US President in 2024, Joe Biden ordered the US forces to prepare for possible nuclear confrontations with Russia, China, and North Korea."
+
+## Actions
+```
+image_search("Joe Biden nuclear confrontation Russia China North Korea")
+```
+
+## Evidence
+### Evidence from `image_search`
+The New York Times published an article in 2024 (<image:7007>). The Guardian published an article on August 20, 2024, discussing Biden's nuclear strategy and the threat from China (<image:7008>).
+
+Tasnim News published an article on August 21, 2024, about Joe Biden and nuclear strategy, focusing on China (<image:7009>).
+
+
+## Elaboration
+The evidence suggests that in 2024, during his presidency, Joe Biden's nuclear strategy was a topic of discussion. The Guardian and Tasnim News specifically mention China in relation to Biden's nuclear strategy. However, the evidence does not explicitly state that Biden ordered the US forces to prepare for nuclear confrontations with Russia, China, and North Korea.
+
+More information is needed to verify the claim fully. Specifically, the content of the articles from The New York Times, The Guardian, and Tasnim News needs to be examined to determine if they support the claim.
+
+
+## Actions
+```
+image_search("Biden nuclear strategy Russia China North Korea")
+```
+
+## Evidence
+No new evidence found.
+
+## Elaboration
+The evidence confirms that Joe Biden's nuclear strategy was a subject of discussion in 2024, with China being a specific focus. However, the provided information does not confirm whether Biden ordered the US forces to prepare for nuclear confrontations with Russia, China, and North Korea.
+
+The articles from The New York Times, The Guardian, and Tasnim News need to be reviewed to verify the claim.
+
+
+## Actions
+```
+image_search("Biden nuclear order US forces prepare nuclear confrontation Russia China North Korea")
+```
+
+## Evidence
+No new evidence found.
+
+## Elaboration
+The evidence indicates that Joe Biden's nuclear strategy was a topic of discussion in 2024, particularly concerning China. However, the evidence does not explicitly state that Biden ordered the US forces to prepare for nuclear confrontations with Russia, China, and North Korea.
+
+To verify the claim, the content of the articles from The New York Times, The Guardian, and Tasnim News needs to be examined.
+
+
+## Final Judgement
+The search results show that Joe Biden's nuclear strategy was discussed in 2024, with a focus on China. However, the evidence does not confirm that Biden ordered US forces to prepare for nuclear confrontations with Russia, China, and North Korea. More information is needed to verify the claim.
+
+The claim is not fully supported by the evidence. The evidence does not explicitly state that Biden ordered the US forces to prepare for nuclear confrontations with the mentioned countries. Therefore, the claim is considered unverified. `false`
+
+
+## Summary
+
+
+
+===== > RESPONSE:  < =====
+The evidence indicates that Joe Biden's nuclear strategy was a topic of discussion in 2024, with a focus on China, as reported by sources like The Guardian (<image:7008>) and Tasnim News (<image:7009>). However, the search results do not explicitly confirm that Biden ordered US forces to prepare for nuclear confrontations with Russia, China, and North Korea. Therefore, the claim is unverified.
+
+_________________________
+
+
+

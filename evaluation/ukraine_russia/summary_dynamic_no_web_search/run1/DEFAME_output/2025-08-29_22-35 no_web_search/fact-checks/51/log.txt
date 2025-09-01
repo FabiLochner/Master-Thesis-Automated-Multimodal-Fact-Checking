@@ -1,0 +1,37 @@
+Extracting claims from Content: In February 2025 German Chancellor Olaf Scholz declared a state of emergency in Germany due to US President Donald Trump's peace plan for Ukraine.
+'Claim: "In February 2025 German Chancellor Olaf Scholz declared a state of emergency in Germany due to US President Donald Trump's peace plan for Ukraine."'
+Verifying Claim: "In February 2025 German Chancellor Olaf Scholz declared a state of emergency in Germany due to US President Donald Trump's peace plan for Ukraine."
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Olaf Scholz state of emergency Germany February 2025')
+Got 3 new web source(s):
+	1. https://www.euronews.com/my-europe/2025/02/19/fact-check-scholz-did-not-call-for-german-state-of-emergency-over-russia-us-peace-talks
+	2. https://www.reuters.com/world/europe/germanys-scholz-sees-exemption-defence-debt-limits-2025-02-15/
+	3. https://www.1lurer.am/en/2025/02/15/Germany-may-declare-state-of-emergency-to-support-Ukraine-Scholz/1265719
+Useful result: From [Source](https://www.euronews.com/my-europe/2025/02/19/fact-check-scholz-did-not-call-for-german-state-of-emergency-over-russia-us-peace-talks): 
+Content: Euronews published a fact-check stating that Scholz did not call for a German state of emergency over Russia-US peace talks. <image:6414>
+
+Useful result: From [Source](https://www.reuters.com/world/europe/germanys-scholz-sees-exemption-defence-debt-limits-2025-02-15/): 
+Content: Reuters published an article on February 15, 2025, about Olaf Scholz. <image:6415>
+
+Useful result: From [Source](https://www.1lurer.am/en/2025/02/15/Germany-may-declare-state-of-emergency-to-support-Ukraine-Scholz/1265719): 
+Content: The article from 1lurer.am, published on February 15, 2025, discusses Germany potentially declaring a state of emergency to support Ukraine. It features an image of Olaf Scholz. <image:6417>
+
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Donald Trump peace plan Ukraine February 2025')
+Got 3 new web source(s):
+	1. https://www.bbc.com/news/articles/crlkypydyn6o
+	2. https://abcnews.go.com/Politics/vance-rubio-scramble-sell-trumps-half-formed-ukraine/story?id=118789863
+	3. https://www.cfr.org/blog/presidents-inbox-recap-trumps-peace-plan-ukraine
+Useful result: From [Source](https://www.bbc.com/news/articles/crlkypydyn6o): 
+Content: The BBC published a map showing the areas of Ukraine under Russian military control as of February 12. <image:6419>
+
+Useful result: From [Source](https://abcnews.go.com/Politics/vance-rubio-scramble-sell-trumps-half-formed-ukraine/story?id=118789863): 
+Content: The search result from ABC News contains an image of Donald Trump, Volodymyr Zelenskyy, and Vladimir Putin. <image:6422>
+
+Useful result: From [Source](https://www.cfr.org/blog/presidents-inbox-recap-trumps-peace-plan-ukraine): 
+Content: The search result from Council on Foreign Relations includes an image of Donald Trump and Volodymyr Zelenskyy. <image:6424>
+
+The claim 'In February 2025 German Chancellor Olaf Scholz declared a state of emergency in Germany due to US President Donald Trump's peace plan for Ukraine.' is false.
+Justification: The claim is false. A fact-check by Euronews indicates that Olaf Scholz did not declare a state of emergency in Germany. The search results do not provide any information about a peace plan by Donald Trump.
+
+So, the overall veracity is: false
+Fact-check took 0:27 min.

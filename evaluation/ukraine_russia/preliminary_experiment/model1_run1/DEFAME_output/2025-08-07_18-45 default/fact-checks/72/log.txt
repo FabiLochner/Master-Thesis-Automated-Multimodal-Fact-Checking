@@ -1,0 +1,24 @@
+Extracting claims from Content: US Secretary of Defense Pete Hegseth called Putin a 'war criminal'.
+'Claim: "US Secretary of Defense Pete Hegseth called Putin a 'war criminal'."'
+Verifying Claim: "US Secretary of Defense Pete Hegseth called Putin a 'war criminal'."
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Pete Hegseth Putin war criminal')
+Skipping unsupported website: https://www.youtube.com/watch?v=CTQkY9RhSD8
+Got 3 new web source(s):
+	1. November 13, 2024 https://www.newsweek.com/pete-hegseth-vladimir-putin-war-criminal-1985251
+	2. February 14, 2025 https://www.politico.eu/article/senate-armed-services-chair-roger-wicker-pete-hegseth-war-in-ukraine-russia/
+	3. June 12, 2025 https://kyivindependent.com/republicans-press-pentagon-chief-over-trumps-plan-to-end-russias-war-against-ukraine-politico-reports/
+Useful result: From [Source](https://www.newsweek.com/pete-hegseth-vladimir-putin-war-criminal-1985251): 
+Content: Newsweek published a fact check on whether Pete Hegseth called Putin a "war criminal". The article states that Hegseth did call Putin a "war criminal" on Fox News in March 2022. <image:2703>. The article also mentions that Hegseth has since been more cautious and critical of U.S. spending on the conflict. The article was written by Tom Norton.
+
+Useful result: From [Source](https://www.politico.eu/article/senate-armed-services-chair-roger-wicker-pete-hegseth-war-in-ukraine-russia/): 
+Content: According to POLITICO, Roger Wicker said that Pete Hegseth called Putin a “war criminal who needs to be in prison for the rest of his life.” The article was published on February 14, 2025.
+
+Useful result: From [Source](https://kyivindependent.com/republicans-press-pentagon-chief-over-trumps-plan-to-end-russias-war-against-ukraine-politico-reports/): 
+Content: The Kyiv Independent published an article on June 12, 2025, stating that Pete Hegseth, when asked who the aggressor in the war is, responded, "Russia is the aggressor." However, he avoided directly stating which side the U.S. wants to see win. <image:1>, <image:2>
+
+The claim 'US Secretary of Defense Pete Hegseth called Putin a 'war criminal'.' is false.
+Justification: Pete Hegseth, not the US Secretary of Defense, called Putin a "war criminal," as reported by [Newsweek](https://www.newsweek.com/pete-hegseth-vladimir-putin-war-criminal-1985251) and confirmed by POLITICO.
+
+So, the overall veracity is: false
+Fact-check took 0:42 min.

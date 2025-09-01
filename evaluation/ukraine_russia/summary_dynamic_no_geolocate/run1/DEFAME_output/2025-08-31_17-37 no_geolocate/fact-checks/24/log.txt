@@ -1,0 +1,27 @@
+Extracting claims from Content: Warren Buffett has given more than $500 million to Ukraine since 2022.
+'Claim: "Warren Buffett has given more than $500 million to Ukraine since 2022."'
+Verifying Claim: "Warren Buffett has given more than $500 million to Ukraine since 2022."
+Not enough information yet. Continuing fact-check...
+Got 1 new web source(s):
+	1. March 12, 2025 https://www.yahoo.com/news/fact-check-warren-buffett-did-130000882.html
+Useful result: From [Source](https://www.yahoo.com/news/fact-check-warren-buffett-did-130000882.html): 
+Content: The search result from Yahoo News, which references a Snopes fact check, rates the claim "Warren Buffett has given more than $500 million to Ukraine" as False. <image:511> It states that Howard Buffett, Warren Buffett's son, donated more than $800 million to Ukraine since 2022 through his foundation. The Howard G. Buffett Foundation's total grantmaking in support of mitigating the war's impact on Ukraine will exceed $1 billion by the end of 2025. The foundation spent $510,986,831 in Ukraine since the start of the war, according to its 2023 report.
+
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Warren Buffett donations Ukraine')
+Skipping unsupported website: https://www.youtube.com/watch?v=bddrNifvewU
+Skipping unsupported website: https://www.president.gov.ua/en/news/volodimir-zelenskij-i-govard-baffet-vidkrili-na-aleyi-smiliv-87821
+Got 3 new web source(s):
+	1. April 17, 2025 https://www.alliancemagazine.org/blog/howard-buffett-maintains-ukraine-philanthropy-despite-deteriorating-us-support/
+	2. April 07, 2025 https://fortune.com/2025/04/07/warren-buffetts-son-is-on-track-to-donate-1-billion-in-aid-to-ukraine-this-year-and-pledges-to-continue-despite-trumps-shaky-relations/
+	3. May 08, 2024 https://www.bloomberg.com/news/videos/2024-05-08/howard-g-buffett-foundation-to-support-ukraine-video
+Useful result: From [Source](https://www.alliancemagazine.org/blog/howard-buffett-maintains-ukraine-philanthropy-despite-deteriorating-us-support/): 
+Content: Alliance magazine reports that Howard Buffett's foundation has provided $800 million in aid and funding to Ukraine, with the aim to surpass $1 billion this year. The article mentions that Howard Buffett made his 18th visit to Ukraine in three years in April. The article was written by Shafi Musaddique.
+
+Useful result: From [Source](https://fortune.com/2025/04/07/warren-buffetts-son-is-on-track-to-donate-1-billion-in-aid-to-ukraine-this-year-and-pledges-to-continue-despite-trumps-shaky-relations/): 
+Content: Fortune.com published an article on April 7, 2025, stating that Howard G. Buffett, son of Warren Buffett, is on track to donate $1 billion in aid to Ukraine this year. The article mentions that Buffett's foundation has contributed about $800 million to Ukraine since the start of the full-scale invasion. <image:k>
+
+The claim 'Warren Buffett has given more than $500 million to Ukraine since 2022.' is false.
+Justification: The claim is false. Fact-checking from [Yahoo News](https://www.yahoo.com/news/fact-check-warren-buffett-did-130000882.html) indicates that the donations were made by Howard Buffett, Warren Buffett's son, not Warren Buffett.
+
+So, the overall veracity is: false
+Fact-check took 0:42 min.

@@ -1,0 +1,41 @@
+Extracting claims from Content: In early 2025, Ukraine and Russia had reached a peace deal in their years-long war.
+'Claim: "In early 2025, Ukraine and Russia had reached a peace deal in their years-long war."'
+Verifying Claim: "In early 2025, Ukraine and Russia had reached a peace deal in their years-long war."
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Ukraine Russia peace deal 2025')
+Got 3 new web source(s):
+	1. https://www.cnn.com/2025/06/02/europe/russia-ukraine-peace-talks-turkey-drone-attack-intl
+	2. https://www.atlanticcouncil.org/blogs/ukrainealert/a-putin-friendly-peace-deal-would-be-disastrous-for-global-security/
+	3. https://www.cfr.org/article/russia-and-ukraine-agree-prisoner-swap
+Useful result: From [Source](https://www.cnn.com/2025/06/02/europe/russia-ukraine-peace-talks-turkey-drone-attack-intl): 
+Content: CNN published an image from June 2, 2025, in Istanbul, showing a meeting with flags of Russia, Turkey, and Ukraine. <image:6285>
+
+Useful result: From [Source](https://www.atlanticcouncil.org/blogs/ukrainealert/a-putin-friendly-peace-deal-would-be-disastrous-for-global-security/): 
+Content: The Atlantic Council discusses a Putin-friendly peace deal. <image:6289>
+
+Useful result: From [Source](https://www.cfr.org/article/russia-and-ukraine-agree-prisoner-swap): 
+Content: The search result contains an image of a meeting in Istanbul on June 2, 2025, with flags of Russia, Turkey, and Ukraine. <image:6290>
+
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Ukraine Russia peace deal early 2025')
+Failed to download or open image: cannot identify image file <_io.BytesIO object at 0x7ffee81c1030>
+Got 1 new web source(s):
+	1. https://www.iiss.org/online-analysis/online-analysis/2025/08/russia-ukraine-peace-looks-more-remote-than-ever/
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Ukraine Russia war peace agreement timeline')
+Failed to download or open image: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+Got 3 new web source(s):
+	1. https://epthinktank.eu/2015/02/13/minsk-peace-agreement-still-to-be-consolidated-on-the-ground/eprs-briefing-548991-minsk-peace-summit-fig1-timeline/
+	2. https://www.aa.com.tr/en/russia-ukraine-war/ukraine-wants-countries-including-turkiye-as-security-guarantors/2549218
+	3. https://neweurope.org.ua/en/media-post/peregovorna-pastka-putina-chomu-zahid-maye-dosluhatysya-do-ukrayiny/
+Useful result: From [Source](https://epthinktank.eu/2015/02/13/minsk-peace-agreement-still-to-be-consolidated-on-the-ground/eprs-briefing-548991-minsk-peace-summit-fig1-timeline/): 
+Content: The search result from the European Parliament provides a timeline from November 2013 to February 2015, detailing events related to the conflict between Ukraine and Russia, including the Minsk peace agreement. <image:6296>
+
+Useful result: From [Source](https://neweurope.org.ua/en/media-post/peregovorna-pastka-putina-chomu-zahid-maye-dosluhatysya-do-ukrayiny/): 
+Content: The search result from New Europe provides an image showing the "Evolution of Russia's Lies" with statements from October 6, 2022, to January 28, 2022. <image:6297>
+
+The claim 'In early 2025, Ukraine and Russia had reached a peace deal in their years-long war.' is false.
+Justification: The fact-check revealed evidence of meetings between Russia, Turkey, and Ukraine in Istanbul in June 2025, as shown in a [CNN article](https://www.cnn.com/2025/06/02/europe/russia-ukraine-peace-talks-turkey-drone-attack-intl). However, the provided sources do not explicitly confirm that a peace deal was reached in early 2025, thus the claim remains unverified.
+
+So, the overall veracity is: false
+Fact-check took 0:41 min.

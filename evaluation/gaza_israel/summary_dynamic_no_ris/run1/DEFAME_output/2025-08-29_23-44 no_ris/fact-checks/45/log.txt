@@ -1,0 +1,59 @@
+Extracting claims from Content: <image:29> This is an authentic image of Greta Thunberg from November 2024 holding a sign reading, 'Fuck Israel'.
+'Claim: "<image:29> This is an authentic image of Greta Thunberg from November 2024 holding a sign reading, 'Fuck Israel'."'
+Verifying Claim: "<image:29> This is an authentic image of Greta Thunberg from November 2024 holding a sign reading, 'Fuck Israel'."
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Greta Thunberg sign fuck Israel')
+Failed to download or open image: cannot identify image file <_io.BytesIO object at 0x7ffed04693f0>
+Skipping unsupported website: https://www.facebook.com/AmmanCity/posts/on-october-20-greta-thunberg-posted-a-picture-of-herself-with-other-activists-in/1195003575523147/
+Skipping unsupported website: https://www.instagram.com/reel/DKu0jBcJOfg/
+Got 3 new web source(s):
+	1. https://www.telegraph.co.uk/world-news/2024/12/10/watch-greta-thunberg-declares-f-israel-german-demonstration/
+	2. https://en.wikipedia.org/wiki/Greta_Thunberg
+	3. https://www.theguardian.com/environment/2025/jun/01/greta-thunberg-joins-aid-ship-sailing-to-gaza-aimed-at-breaking-israels-blockade
+Useful result: From [Source](https://www.telegraph.co.uk/world-news/2024/12/10/watch-greta-thunberg-declares-f-israel-german-demonstration/): 
+Content: The Telegraph published a video of Greta Thunberg saying "f--- Israel" at a demonstration. <image:8615>
+
+Useful result: From [Source](https://www.theguardian.com/environment/2025/jun/01/greta-thunberg-joins-aid-ship-sailing-to-gaza-aimed-at-breaking-israels-blockade): 
+Content: The Guardian published an article on June 1, 2025, about Greta Thunberg joining an aid ship sailing to Gaza. <image:8616>
+
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Greta Thunberg controversy Israel')
+Got 3 new web source(s):
+	1. June 10, 2025 https://www.bbc.com/news/articles/c5y264x3nnno
+	2. June 10, 2025 https://www.pbs.org/newshour/world/israel-deports-greta-thunberg-after-seizing-of-gaza-bound-ship
+	3. June 11, 2025 https://www.theguardian.com/world/2025/jun/10/greta-thunberg-accuses-israel-of-kidnapping-yacht-crew-gaza
+Useful result: From [Source](https://www.bbc.com/news/articles/c5y264x3nnno): 
+Content: The BBC News article, published on June 10, 2025, reports that Greta Thunberg was deported by Israel after her Gaza-bound aid boat was intercepted. Thunberg accused Israel of kidnapping her and other activists. <image:8617>, <image:8618>, <image:8620>.
+
+Useful result: From [Source](https://www.pbs.org/newshour/world/israel-deports-greta-thunberg-after-seizing-of-gaza-bound-ship): 
+Content: PBS News published an article on June 10, 2025, reporting that Greta Thunberg was deported from Israel after the Gaza-bound ship she was on was seized by the Israeli military. <image:8621>, <image:8624>, <image:8625>. Thunberg called for an end to the occupation and the systemic oppression and violence that Palestinians are facing.
+
+Useful result: From [Source](https://www.theguardian.com/world/2025/jun/10/greta-thunberg-accuses-israel-of-kidnapping-yacht-crew-gaza): 
+Content: The Guardian published an article on June 10, 2025, reporting that Greta Thunberg accused Israel of kidnapping her and other activists. The activists were attempting to bring aid to Gaza. The article includes images of Thunberg at the airport <image:8626> and of the ship being intercepted <image:8627>.
+
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Greta Thunberg sign fuck Israel November 2024')
+Failed to download or open image: cannot identify image file <_io.BytesIO object at 0x7ffed0493100>
+Skipping unsupported website: https://x.com/manelmarquez/status/1856401779086201185
+Got 1 new web source(s):
+	1. https://www.theguardian.com/environment/greta-thunberg
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Greta Thunberg sign fuck Israel')
+Skipping unsupported website: https://www.instagram.com/reel/DDTTAIzu1dQ/-greta-thunberg-caught-on-video-with-controversial-remarks-about-israelformer-cl/
+Got 3 new web source(s):
+	1. https://www.bnaibrith.org/greta-thunberg-activism-discredited-after-shocking-anti-israel-chants/
+	2. March 29, 2025 https://www.ynetnews.com/environment/article/s1n8qjyt1x
+	3. December 10, 2024 https://timesofindia.indiatimes.com/world/rest-of-world/greta-thunberg-laughs-as-she-shouts-fk-israel-at-german-rally-video-goes-viral/articleshow/116164532.cms
+Useful result: From [Source](https://www.bnaibrith.org/greta-thunberg-activism-discredited-after-shocking-anti-israel-chants/): 
+Content: B'nai B'rith published an article on November 27, 2023, stating that Greta Thunberg's activism is discredited after she chanted "Crush Zionism." The article claims that Thunberg's social media posts have focused on the Israeli-Palestinian issue, supporting a "free Palestine."
+
+Useful result: From [Source](https://www.ynetnews.com/environment/article/s1n8qjyt1x): 
+Content: Ynet News published an article discussing Greta Thunberg's stance on the Middle East conflict, which has sparked division within the global climate movement. The article mentions Thunberg's participation in demonstrations where she called for a "Free Palestine" and held signs with anti-Israel messages. The article also mentions her arrest during a protest against the Maersk shipping company, which she accused of transporting weapons to Israel. The article includes images of Thunberg at demonstrations. The article was written by Yaron Drukman and Yogev Israeli.
+
+Useful result: From [Source](https://timesofindia.indiatimes.com/world/rest-of-world/greta-thunberg-laughs-as-she-shouts-fk-israel-at-german-rally-video-goes-viral/articleshow/116164532.cms): 
+Content: The Times of India reported on December 10, 2024, that Greta Thunberg said "f\*\*k Israel" at an anti-Israel rally in Mannheim, Germany. The article mentions criticism from pro-Israel communities and a conservative leader. <image:116165153>
+
+The claim '<image:29> This is an authentic image of Greta Thunberg from November 2024 holding a sign reading, 'Fuck Israel'.' is false.
+Justification: The evidence confirms that Greta Thunberg has expressed anti-Israel sentiments, including saying "f\*\*k Israel" at a rally in Germany in December 2024, as reported by the Times of India ([https://timesofindia.indiatimes.com/world/rest-of-world/greta-thunberg-laughs-as-she-shouts-fk-israel-at-german-rally-video-goes-viral/articleshow/116164532.cms](https://timesofindia.indiatimes.com/world/rest-of-world/greta-thunberg-laughs-as-she-shouts-fk-israel-at-german-rally-video-goes-viral/articleshow/116164532.cms)). However, the authenticity of the image in the claim cannot be verified.
+
+So, the overall veracity is: false
+Fact-check took 2:07 min.

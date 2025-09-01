@@ -1,0 +1,27 @@
+Extracting claims from Content: <image:10239> This image shows a screenshot of an authentic New York Times article from December, 12, 2024 with the title 'Why the Glorification of Luigi Mangione Is Inherently Anti-Israeli.
+'Claim: "<image:10239> This image shows a screenshot of an authentic New York Times article from December, 12, 2024 with the title 'Why the Glorification of Luigi Mangione Is Inherently Anti-Israeli."'
+Verifying Claim: "<image:10239> This image shows a screenshot of an authentic New York Times article from December, 12, 2024 with the title 'Why the Glorification of Luigi Mangione Is Inherently Anti-Israeli."
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='New York Times \\"Why the Glorification of Luigi Mangione Is Inherently Anti-Israeli\\"')
+Skipping fact-checking website: https://www.reuters.com/fact-check/fake-op-ed-says-glorification-luigi-mangione-is-anti-israeli-2024-12-20/
+Skipping fact-checking website: https://www.usatoday.com/story/news/factcheck/2024/12/13/new-york-times-headline-luigi-mangione-anti-israeli-fact-check/76965562007/
+Skipping fact-checking website: https://fullfact.org/online/new-york-times-fake-headline-luigi-mangione/
+Skipping unsupported website: https://www.instagram.com/reel/DDh9kMDS9hl/
+Got 3 new web source(s):
+	1. December 13, 2024 https://www.yahoo.com/news/york-times-didnt-publish-anti-232547549.html
+	2. December 16, 2024 https://www.aap.com.au/factcheck/nyt-headline-slamming-anti-israeli-glorification-of-luigi-mangione-is-fake/
+	3. December 17, 2024 https://mediabiasfactcheck.com/2024/12/17/mbfcs-daily-vetted-fact-checks-for-12-17-2024/
+Useful result: From [Source](https://www.yahoo.com/news/york-times-didnt-publish-anti-232547549.html): 
+Content: The search result from Yahoo News states that the New York Times did not publish an article with the headline "Why the Glorification of Luigi Mangione Is Inherently Anti-Israeli." The image is an edited version of a real article from December 12, 2024. <image:11877> The article's actual headline is "What the Glorification of Luigi Mangione Reveals About America." The New York Times confirmed the headline was fabricated.
+
+Useful result: From [Source](https://www.aap.com.au/factcheck/nyt-headline-slamming-anti-israeli-glorification-of-luigi-mangione-is-fake/): 
+Content: The search result from AAP FactCheck states that the New York Times did not publish an opinion article with the headline "Why the Glorification of Luigi Mangione Is Inherently Anti-Israeli." <image:11878>. The article is fake and has been debunked by multiple sources. The legitimate article with the same publish date and subheading is titled "What the Glorification of Luigi Mangione Reveals About America". The article is an edited transcript of an episode from New York Times podcast The Opinions.
+
+Useful result: From [Source](https://mediabiasfactcheck.com/2024/12/17/mbfcs-daily-vetted-fact-checks-for-12-17-2024/): 
+Content: The search result from Media Bias Fact Check (MBFC) includes a fact-check from the Australian Associated Press that rates as "BLATANT LIE" the claim that The New York Times published an opinion article titled "Why the Glorification of Luigi Mangione Is Inherently Anti-Israeli." The article did not publish an article with this headline.
+
+The claim '<image:10239> This image shows a screenshot of an authentic New York Times article from December, 12, 2024 with the title 'Why the Glorification of Luigi Mangione Is Inherently Anti-Israeli.' is false.
+Justification: The claim is false. The image shows a fabricated headline from The New York Times. Multiple sources, including Yahoo News ([Source](https://www.yahoo.com/news/york-times-didnt-publish-anti-232547549.html)), AAP FactCheck ([Source](https://www.aap.com.au/factcheck/nyt-headline-slamming-anti-israeli-glorification-of-luigi-mangione-is-fake/)), and Media Bias Fact Check ([Source](https://mediabiasfactcheck.com/2024/12/17/mbfcs-daily-vetted-fact-checks-for-12-17-2024/)), confirm that the headline is not authentic.
+
+So, the overall veracity is: false
+Fact-check took 2:09 min.

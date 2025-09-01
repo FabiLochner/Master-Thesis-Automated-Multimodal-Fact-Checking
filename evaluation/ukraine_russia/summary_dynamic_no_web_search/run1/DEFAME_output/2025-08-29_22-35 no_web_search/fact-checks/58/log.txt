@@ -1,0 +1,57 @@
+Extracting claims from Content: During the January 2025 wildfires, eight mansions belonging to Ukrainian military officials burned down in Los Angeles, California.
+'Claim: "During the January 2025 wildfires, eight mansions belonging to Ukrainian military officials burned down in Los Angeles, California."'
+Verifying Claim: "During the January 2025 wildfires, eight mansions belonging to Ukrainian military officials burned down in Los Angeles, California."
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='January 2025 wildfires Los Angeles')
+Got 3 new web source(s):
+	1. https://unu.edu/inweh/collection/january-2025-los-angeles-wildfires-once-generation-events-now-happen-frequently
+	2. https://www.reuters.com/pictures/scenes-los-angeles-wildfires-rage-2025-01-08/3TQRCJ3GGFNF5I6YEQ3524YLTE/
+	3. https://www.britannica.com/event/Los-Angeles-wildfires-of-2025
+Useful result: From [Source](https://unu.edu/inweh/collection/january-2025-los-angeles-wildfires-once-generation-events-now-happen-frequently): 
+Content: The search result contains an image of wildfires. <image:6506>
+
+Useful result: From [Source](https://www.reuters.com/pictures/scenes-los-angeles-wildfires-rage-2025-01-08/3TQRCJ3GGFNF5I6YEQ3524YLTE/): 
+Content: Reuters published images of wildfires in Los Angeles. <image:6507>.
+
+Useful result: From [Source](https://www.britannica.com/event/Los-Angeles-wildfires-of-2025): 
+Content: The search result from Britannica.com contains an image of a house on fire during the Los Angeles wildfires of 2025. <image:6508>
+
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Ukrainian military officials mansions burned Los Angeles')
+Skipping unsupported website: https://x.com/CforCD/status/1878381491056501245
+Got 3 new web source(s):
+	1. https://www.npr.org/transcripts/nx-s1-5259842
+	2. https://www.nytimes.com/2025/02/02/us/la-wildfires-palisades-eaton-preparations.html
+	3. https://www.cfr.org/expert-brief/after-fires-how-rebuild-los-angeles
+Useful result: From [Source](https://www.npr.org/transcripts/nx-s1-5259842): 
+Content: The search result from NPR contains an image of a burned-down building near a beach and a road. <image:6511>
+
+Useful result: From [Source](https://www.nytimes.com/2025/02/02/us/la-wildfires-palisades-eaton-preparations.html): 
+Content: The New York Times published an article on February 2, 2025, about wildfires in Los Angeles. <image:6512>.
+
+Useful result: From [Source](https://www.cfr.org/expert-brief/after-fires-how-rebuild-los-angeles): 
+Content: The search result contains an image of a neighborhood destroyed by fire. <image:6513>
+
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Los Angeles wildfires 2025 property owners')
+Got 3 new web source(s):
+	1. https://www.latimes.com/business/story/2025-01-09/la-fires-property-home-insurance-crisis-fair-plan-lara-state-farm-allstate-palisades-eaton-altadena-wildfires
+	2. https://www.qecad.com/cadblog/fireproof-homes-lessons-from-the-2025-los-angeles-wildfire-disaster/
+	3. https://www.npr.org/2025/01/17/nx-s1-5261859/los-angeles-wildfires-houses-survived-defensible-space
+Useful result: From [Source](https://www.latimes.com/business/story/2025-01-09/la-fires-property-home-insurance-crisis-fair-plan-lara-state-farm-allstate-palisades-eaton-altadena-wildfires): 
+Content: The Los Angeles Times published an article about the Los Angeles wildfires, including an image of a burning building <image:6517>.
+
+Useful result: From [Source](https://www.npr.org/2025/01/17/nx-s1-5261859/los-angeles-wildfires-houses-survived-defensible-space): 
+Content: NPR published an image of houses that survived the Los Angeles wildfires <image:6519>.
+
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Los Angeles wildfires 2025 Ukrainian military officials mansions')
+Got 1 new web source(s):
+	1. https://www.aljazeera.com/news/liveblog/2025/1/9/los-angeles-wildfires-live-news-130000-ordered-to-evacuate
+Useful result: From [Source](https://www.aljazeera.com/news/liveblog/2025/1/9/los-angeles-wildfires-live-news-130000-ordered-to-evacuate): 
+Content: Al Jazeera published an image of firefighters inspecting a burned house <image:6523>.
+
+The claim 'During the January 2025 wildfires, eight mansions belonging to Ukrainian military officials burned down in Los Angeles, California.' is false.
+Justification: The fact-check confirms the occurrence of wildfires in Los Angeles in January 2025, as evidenced by sources like [Reuters](https://www.reuters.com/pictures/scenes-los-angeles-wildfires-rage-2025-01-08/3TQRCJ3GGFNF5I6YEQ3524YLTE/) and [Britannica.com](https://www.britannica.com/event/Los-Angeles-wildfires-of-2025). However, the search results do not provide any information about the ownership of the destroyed properties or any connection to Ukrainian military officials. Therefore, the claim remains unverified.
+
+So, the overall veracity is: false
+Fact-check took 1:14 min.

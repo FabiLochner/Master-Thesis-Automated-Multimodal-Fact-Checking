@@ -1,0 +1,50 @@
+Extracting claims from Content: <image:22> This image shows a Ukrainian F-16 fighter jet which was shot down by Russia as part of the large-scale Russian invasion in Ukraine.
+'Claim: "<image:22> This image shows a Ukrainian F-16 fighter jet which was shot down by Russia as part of the large-scale Russian invasion in Ukraine."'
+Verifying Claim: "<image:22> This image shows a Ukrainian F-16 fighter jet which was shot down by Russia as part of the large-scale Russian invasion in Ukraine."
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Ukrainian F-16 destroyed')
+Skipping unsupported website: https://www.youtube.com/watch?v=E_7eEUnGNPk
+Got 3 new web source(s):
+	1. https://www.bbc.com/news/articles/cd0532n9pdko
+	2. https://www.npr.org/2024/08/30/g-s1-20234/ukraine-f16-warplane-crash
+	3. https://www.pravda.com.ua/eng/news/2024/08/29/7472543/
+Useful result: From [Source](https://www.bbc.com/news/articles/cd0532n9pdko): 
+Content: The BBC published an image of Volodymyr Zelenskyy in front of an F-16 fighter jet. <image:8747>
+
+Useful result: From [Source](https://www.npr.org/2024/08/30/g-s1-20234/ukraine-f16-warplane-crash): 
+Content: The search result from NPR contains an image of a Ukrainian F-16 fighter jet. <image:8748>
+
+Useful result: From [Source](https://www.pravda.com.ua/eng/news/2024/08/29/7472543/): 
+Content: The search result from Pravda.com.ua contains an image of a Ukrainian F-16 fighter jet. <image:8749>
+
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='destroyed F-16 Ukraine Russia')
+Skipping unsupported website: https://www.youtube.com/watch?v=79Ox4rkFB5Q
+Got 2 new web source(s):
+	1. June 29, 2025 https://www.cnn.com/2025/06/29/europe/ukraine-f-16-pilot-killed-russia
+	2. June 29, 2025 https://abcnews.go.com/International/ukraine-loses-16-fighter-amid-massed-russian-drone/story?id=123315001
+Useful result: From [Source](https://www.cnn.com/2025/06/29/europe/ukraine-f-16-pilot-killed-russia): 
+Content: CNN reports that a Ukrainian F-16 pilot was killed and his jet crashed after a Russian aerial assault on June 29, 2025. The article states that this was the fourth F-16 Ukraine has lost since the jets began flying last summer. The article includes images of explosions in the sky and a residential building hit by a drone. The article is written by Kostya Gak, Helen Regan, Billy Stockwell and Ivana Kottasová and was updated on June 29, 2025. <image:8750>
+
+Useful result: From [Source](https://abcnews.go.com/International/ukraine-loses-16-fighter-amid-massed-russian-drone/story?id=123315001): 
+Content: ABC News reports that a Ukrainian F-16 fighter jet was lost during a Russian drone and missile attack on June 29, 2025. The pilot, Maksym Ustimenko, was killed. <image:8750>, <image:8755>.
+
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='destroyed F-16 Ukraine')
+Skipping unsupported website: https://www.youtube.com/watch?v=E_7eEUnGNPk
+Got 0 new web source(s):
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='destroyed F-16 hangar')
+Failed to download or open image: cannot identify image file <_io.BytesIO object at 0x7ffed14653f0>
+Failed to download or open image: cannot identify image file <_io.BytesIO object at 0x7ffed1464cc0>
+Got 3 new web source(s):
+	1. https://commons.wikimedia.org/wiki/File:A_pair_of_F-16_Fighting_Falcons_which_were_left_in_the_alert_complex_lay_destroyed_after_the_hangar_they_were_stored_in_was_destroyed_by_Hurricane_Andrew_-_DPLA_-_f1568441185f34e2ead8098bcae0696d.jpeg
+	2. https://en.isna.ir/news/1403060502566/F-16s-may-have-been-hit-in-Russian-strike-on-hangar-in-Ivano-Frankovsk
+	3. https://picryl.com/media/an-f-16-fighting-falcon-left-in-the-alert-complex-lay-destroyed-after-the-hangar-2045dc
+Useful result: From [Source](https://en.isna.ir/news/1403060502566/F-16s-may-have-been-hit-in-Russian-strike-on-hangar-in-Ivano-Frankovsk): 
+Content: The search result from ISNA contains an image of a destroyed aircraft inside a hangar. The article suggests that F-16s may have been hit in a Russian strike on a hangar in Ivano-Frankovsk. <image:8765>
+
+The claim '<image:22> This image shows a Ukrainian F-16 fighter jet which was shot down by Russia as part of the large-scale Russian invasion in Ukraine.' is false.
+Justification: The claim cannot be verified. While evidence confirms that Ukraine has F-16 fighter jets and has lost some during the conflict with Russia, the image in the claim does not match any of the images found in the search results. Specifically, CNN ([https://www.cnn.com/2025/06/29/europe/ukraine-f-16-pilot-killed-russia](https://www.cnn.com/2025/06/29/europe/ukraine-f-16-pilot-killed-russia)) and ABC News ([https://abcnews.go.com/International/ukraine-loses-16-fighter-amid-massed-russian-drone/story?id=123315001](https://abcnews.go.com/International/ukraine-loses-16-fighter-amid-massed-russian-drone/story?id=123315001)) report on the loss of a Ukrainian F-16, but the provided evidence does not contain the image from the claim.
+
+So, the overall veracity is: false
+Fact-check took 1:16 min.

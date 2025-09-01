@@ -1,0 +1,40 @@
+Extracting claims from Content: <image:60> This image shows Israelis fleeing the airport after the Houthis attack on July 19, 2024.
+'Claim: "<image:60> This image shows Israelis fleeing the airport after the Houthis attack on July 19, 2024."'
+Verifying Claim: "<image:60> This image shows Israelis fleeing the airport after the Houthis attack on July 19, 2024."
+Not enough information yet. Continuing fact-check...
+Most likely location: Israel
+Top 10 locations: Israel, Palestine, Jordan, United Arab Emirates, Albania, Andorra, Argentina, Australia, Austria, Bangladesh
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='airport crowded israel')
+Skipping unsupported website: https://www.instagram.com/reel/C5yUJZXM-Ev/
+Skipping fact-checking website: https://fullfact.org/online/ben-gurion-airport-athens-flee-israel-miscaptioned-video/
+Skipping unsupported website: https://www.facebook.com/i24NEWSEN/videos/israel-busy-summer-travel-season-despite-rising-prices/1260526008944872/
+Skipping fact-checking website: https://www.usatoday.com/story/news/factcheck/2024/04/15/israel-mass-exodus-airport-2022/73328772007/
+Skipping unsupported website: https://www.youtube.com/watch?v=uXj4rZP63_0
+Skipping unsupported website: https://www.reddit.com/r/Israel/comments/167pdl1/ben_gurion_airport/
+Got 2 new web source(s):
+	1. August 06, 2025 https://www.ynetnews.com/travel/article/s1lzrclogx
+	2. August 14, 2025 https://www.timesofisrael.com/israel-sees-record-passenger-travel-since-oct-7-as-flight-prices-jump-by-up-to-119/
+Useful result: From [Source](https://www.ynetnews.com/travel/article/s1lzrclogx): 
+Content: The article from Ynetnews.com discusses the busiest day of summer at Ben Gurion Airport, with 78,000 passengers expected on Thursday. The article mentions that August 2025 is expected to be the busiest month since the Gaza war began in October 2023. The article includes a photo of a crowded Ben Gurion Airport <image:12355>. The photo is credited to Yariv Katz.
+
+Useful result: From [Source](https://www.timesofisrael.com/israel-sees-record-passenger-travel-since-oct-7-as-flight-prices-jump-by-up-to-119/): 
+Content: The Times of Israel reports that Ben Gurion Airport in Tel Aviv was expected to record the busiest day since the war with Hamas on October 7, 2023. The article mentions that the image shows passengers at Ben Gurion International airport near Tel Aviv, August 8, 2025. <image:60>
+
+Got 3 new web source(s):
+	1. https://www.gettyimages.com/photos/israel-airport
+	2. https://www.businessinsider.com/israel-flight-cancelations-ben-gurion-airport-2023-10
+	3. https://www.gettyimages.dk/photos/israel-airport
+Useful result: From [Source](https://www.gettyimages.com/photos/israel-airport): Found exact image on website with title: 17785 Israel Airport Stock Photos & High-Res Pictures - Getty Images
+Content: The search result from Getty Images contains 7,711 Israel Airport stock photos and high-res pictures. The search result includes images of Ben Gurion Airport, including images of crowded areas, flight cancellations, and military presence. <image:2413>, <image:2415>, <image:2417>, <image:2418>, <image:2419>, <image:2421>, <image:2425>, <image:2428>, <image:2431>, <image:2432>, <image:2434>, <image:2436>, <image:2440>, <image:2441>, <image:2443>, <image:2445>, <image:2447>, <image:2448>, <image:2450>, <image:2451>. Some images are dated from 2022, 2023, and 2024, and 2025. Some images show the airport after attacks or during times of tension.
+
+Useful result: From [Source](https://www.businessinsider.com/israel-flight-cancelations-ben-gurion-airport-2023-10): Found exact image on website with title: Travelers Face Canceled Flights, Chaos at Israel's Ben Gurion Airport
+Content: The Business Insider article, published on October 10, 2023, discusses the chaotic scenes at Israel's Ben Gurion Airport due to flight cancellations amid the war with Gaza. <image:2452> The article mentions long lines and canceled flights. The image in the article is the same as <image:60>.
+
+Useful result: From [Source](https://www.gettyimages.dk/photos/israel-airport): Found exact image on website with title: 6975 Israel Airport Stock Photos & High-Res Pictures - Getty Images
+Content: The search result from Getty Images contains 7,711 Israel Airport stock photos and high-resolution pictures. The search result includes images of Ben Gurion Airport, including images of crowded areas, flight cancellations, and security measures. <image:2454>, <image:2455>, <image:2456>, <image:2457>, <image:2461>, <image:2462>, <image:2465>, <image:2466>, <image:2467>, <image:2469>, <image:2471>, <image:2472>, <image:2473>, <image:2474>, <image:2475>. Some images show the airport during times of conflict or tension, such as after attacks or during airspace closures. The search result also includes images of military planes and aid.
+
+The claim '<image:60> This image shows Israelis fleeing the airport after the Houthis attack on July 19, 2024.' is false.
+Justification: The image depicts Ben Gurion Airport in Israel, but the claim that it shows Israelis fleeing after a Houthi attack on July 19, 2024, is false. The image was taken on August 8, 2025, and was also used in an article from October 10, 2023, and there is no evidence of a Houthi attack on the specified date.
+
+So, the overall veracity is: false
+Fact-check took 1:15 min.

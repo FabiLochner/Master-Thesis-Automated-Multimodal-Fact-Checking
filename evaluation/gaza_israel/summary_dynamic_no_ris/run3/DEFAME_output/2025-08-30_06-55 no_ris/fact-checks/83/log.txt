@@ -1,0 +1,56 @@
+Extracting claims from Content: <image:52> This image shows the President of FC Barcelona with Israel Embassy Representatives in September 2024 during the ongoing Gaza war.
+'Claim: "<image:52> This image shows the President of FC Barcelona with Israel Embassy Representatives in September 2024 during the ongoing Gaza war."'
+Verifying Claim: "<image:52> This image shows the President of FC Barcelona with Israel Embassy Representatives in September 2024 during the ongoing Gaza war."
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='FC Barcelona President Israel flag')
+Got 3 new web source(s):
+	1. February 17, 2023 https://www.jpost.com/international/article-731893
+	2. February 17, 2023 https://www.i24news.tv/en/news/israel/diplomacy/1676623454-barcelona-soccer-team-sends-message-of-support-for-israel
+	3. July 18, 2021 https://www.fcbarcelona.com/en/club/news/2192444/joan-laporta-meets-with-isaac-herzog-president-of-israel
+Useful result: From [Source](https://www.jpost.com/international/article-731893): 
+Content: The Jerusalem Post published an article on February 17, 2023, stating that FC Barcelona's president Joan Laporta was presented with an Israeli flag by Israeli diplomats on February 16, 2023. <image:1>.
+
+Useful result: From [Source](https://www.i24news.tv/en/news/israel/diplomacy/1676623454-barcelona-soccer-team-sends-message-of-support-for-israel): 
+Content: The i24NEWS article from February 2023 reports that FC Barcelona sent a message of support for Israel. The president of the Barcelona football club, Joan Laporte, was presented with an Israeli flag by Israeli diplomats. <image:10638> The event took place after Barcelona's twin-city partnership with Tel Aviv was ended. Laporte invited the representatives of the Israeli Embassy in Spain to a soccer match.
+
+Useful result: From [Source](https://www.fcbarcelona.com/en/club/news/2192444/joan-laporta-meets-with-isaac-herzog-president-of-israel): 
+Content: The FC Barcelona president Joan Laporta met with the president of Israel Isaac Herzog on July 18, 2021. <image:10640>, <image:10639>
+
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='FC Barcelona Israel Embassy September 2024')
+Skipping fact-checking website: https://www.misbar.com/en/factcheck/2024/09/19/photo-of-barcelona-president-with-israeli-representatives-predates-gaza-war
+Got 3 new web source(s):
+	1. May 31, 2025 https://themedialine.org/headlines/barcelona-cuts-ties-with-israeli-government-over-gaza-war/
+	2. https://www.ynetnews.com/article/hj3q42skex
+	3. August 22, 2025 https://caliber.az/en/post/barcelona-mayor-cancels-trip-to-israel-amid-entry-ban
+Useful result: From [Source](https://themedialine.org/headlines/barcelona-cuts-ties-with-israeli-government-over-gaza-war/): 
+Content: The Media Line published an article on May 31, 2025, discussing Barcelona's decision to cut ties with the Israeli government due to the ongoing war in Gaza. <image:10647>, <image:10648>. The article mentions a pro-Palestine march in Barcelona in February 2024. <image:10647>.
+
+Useful result: From [Source](https://www.ynetnews.com/article/hj3q42skex): 
+Content: The article from Ynet News discusses the Barcelona mayor's visit to Israel being denied due to his anti-Israel stance and the city council's decision to sever ties with the Israeli government. The article mentions that in late May, the council voted to cut ties with the Israeli government until human rights in Gaza are respected, reversing a September 2024 decision to restore Tel Aviv ties. The article also includes images of pro-Palestinian rallies in Barcelona and Spain. <image:10650>
+
+Useful result: From [Source](https://caliber.az/en/post/barcelona-mayor-cancels-trip-to-israel-amid-entry-ban): 
+Content: The article from Caliber.Az, published on August 22, 2025, reports that Israel denied entry to Barcelona Mayor Jaume Collboni due to his anti-Israel statements. The article mentions that in September 2024, Collboni's council reversed a decision to restore ties with Tel Aviv. The article also mentions the ongoing Gaza war.
+
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='FC Barcelona President Israel flag')
+Failed to download or open image: cannot identify image file <_io.BytesIO object at 0x7ffed1479300>
+Got 0 new web source(s):
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='FC Barcelona Israel flag September 2024 Gaza war')
+Got 3 new web source(s):
+	1. https://www.aol.com/fact-check-no-fc-barcelona-183038240.html
+	2. https://www.timesofisrael.com/barcelona-ends-friendship-agreement-with-tel-aviv-over-gaza-war/
+	3. https://www.aljazeera.com/sports/2024/9/27/barcelona-fans-banned-for-one-champions-league-game-for-nazi-style-flag-football
+Useful result: From [Source](https://www.aol.com/fact-check-no-fc-barcelona-183038240.html): 
+Content: AOL published a fact-check on November 25, 2024, stating that FC Barcelona did not cut ties with Israel. The fact-check mentions that the claim was circulating since September 2024. The city of Barcelona cut ties with Israel in November 2023, but restored a twin city agreement with Tel Aviv in September 2023. The article also mentions the ongoing Israeli-Hamas conflict. <image:10687>
+
+Useful result: From [Source](https://www.timesofisrael.com/barcelona-ends-friendship-agreement-with-tel-aviv-over-gaza-war/): 
+Content: The Times of Israel reports that Barcelona's city council voted to cut ties with the Israeli government and suspend its friendship agreement with Tel Aviv, citing the ongoing war in Gaza. The article mentions a pro-Palestinian rally in Barcelona on January 20, 2024 (<image:10725>). The article also mentions that in 2023, then-mayor Ada Colau took similar steps, which were later reversed when Collboni won local elections. The article was published in May 2025.
+
+Useful result: From [Source](https://www.aljazeera.com/sports/2024/9/27/barcelona-fans-banned-for-one-champions-league-game-for-nazi-style-flag-football): 
+Content: Al Jazeera published an article on September 27, 2024, reporting that FC Barcelona was banned from selling tickets to fans for their next away game in the Champions League due to a banner with Nazi overtones displayed during a match against Monaco. <image:1>.
+
+The claim '<image:52> This image shows the President of FC Barcelona with Israel Embassy Representatives in September 2024 during the ongoing Gaza war.' is false.
+Justification: The claim is **false**. While the image could be from February 2023, the claim's date of September 2024 is plausible, as Barcelona's actions regarding Israel were discussed around that time, and the Israeli-Hamas conflict was ongoing, as reported by [AOL](https://www.aol.com/fact-check-no-fc-barcelona-183038240.html).
+
+So, the overall veracity is: false
+Fact-check took 4:17 min.

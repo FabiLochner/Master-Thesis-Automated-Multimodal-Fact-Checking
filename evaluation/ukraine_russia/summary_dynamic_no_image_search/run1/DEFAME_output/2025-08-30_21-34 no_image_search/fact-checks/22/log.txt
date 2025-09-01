@@ -1,0 +1,49 @@
+Extracting claims from Content: <image:12> This image shows a chemical attack by the Armed Forces of Ukraine during the Kursk offensive in August 2024.
+'Claim: "<image:12> This image shows a chemical attack by the Armed Forces of Ukraine during the Kursk offensive in August 2024."'
+Verifying Claim: "<image:12> This image shows a chemical attack by the Armed Forces of Ukraine during the Kursk offensive in August 2024."
+Not enough information yet. Continuing fact-check...
+Got 0 new web source(s):
+Most likely location: Palestine
+Top 10 locations: Palestine, Jordan, Ukraine, Israel, Argentina, Kyrgyzstan, Lesotho, Mexico, Pakistan, Russia
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Kursk offensive August 2024 chemical attack')
+Got 3 new web source(s):
+	1. https://en.wikipedia.org/wiki/Kursk_campaign
+	2. August 12, 2024 https://www.newsweek.com/russia-says-ukraine-using-chemical-weapons-kursk-1937987
+	3. September 17, 2024 https://www.rand.org/pubs/commentary/2024/09/the-kursk-offensive-triumph-or-tragedy-in-the-making.html
+Useful result: From [Source](https://en.wikipedia.org/wiki/Kursk_campaign): 
+Content: The search result is from Wikipedia and discusses the Kursk campaign, which took place during the Russian invasion of Ukraine. The campaign started on August 6, 2024, and involved incursions by the Armed Forces of Ukraine into Russia's Kursk Oblast. <image:12> The article mentions the involvement of Ukrainian, Russian, and North Korean forces, as well as the territorial changes, casualties, and the impact of the campaign. The article also includes a timeline of the Russian invasion of Ukraine.
+
+Useful result: From [Source](https://www.newsweek.com/russia-says-ukraine-using-chemical-weapons-kursk-1937987): 
+Content: Newsweek reports that the acting governor of the Kursk Oblast accused Ukraine of using chemical weapons during the incursion into Russian territory. The article mentions a meeting between Vladimir Putin and Aleksey Smirnov, where Smirnov claimed that Ukrainian forces targeted workers with shells containing chemical weapons. The article also mentions that the U.S. Department of State accused Russia of using the chemical weapon chloropicrin against Ukrainian troops. The article was published on August 14, 2024. <image:9027>, <image:9029>.
+
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Ukraine chemical attack Kursk offensive')
+Got 2 new web source(s):
+	1. July 04, 2025 https://www.aljazeera.com/news/2025/7/4/russia-expanding-chemical-weapons-use-in-ukraine-say-european-spy-agencies
+	2. April 17, 2025 https://www.understandingwar.org/backgrounder/russian-offensive-campaign-assessment-april-17-2025
+Useful result: From [Source](https://www.aljazeera.com/news/2025/7/4/russia-expanding-chemical-weapons-use-in-ukraine-say-european-spy-agencies): 
+Content: Al Jazeera published an article on July 4, 2025, stating that Dutch and German intelligence agencies reported Russia has intensified its use of chemical weapons against Ukrainian soldiers. The article mentions the use of chloropicrin and that at least three Ukrainian deaths have been linked to Russian chemical weapons. <image:12> is not in the article.
+
+Useful result: From [Source](https://www.understandingwar.org/backgrounder/russian-offensive-campaign-assessment-april-17-2025): 
+Content: The Institute for the Study of War (ISW) published a report on April 17, 2025, discussing the Russian offensive campaign. The report mentions that Russia is adapting its drones to facilitate chemical weapons strikes against Ukraine, in violation of the Chemical Weapons Convention. The report also mentions that Russian forces recently advanced in Kursk Oblast. The report includes a map of the Kursk Oblast. <image:9046> <image:9040>
+
+Not enough information yet. Continuing fact-check...
+INFO: Dropping action 'reverse_search' as it was already performed.
+INFO: Dropping action 'geolocate' as it was already performed.
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='chemical attack Kursk offensive August 2024')
+Got 1 new web source(s):
+	1. August 28, 2024 https://www.understandingwar.org/backgrounder/russian-offensive-campaign-assessment-august-28-2024
+Useful result: From [Source](https://www.understandingwar.org/backgrounder/russian-offensive-campaign-assessment-august-28-2024): 
+Content: The Institute for the Study of War (ISW) published a report on August 28, 2024, discussing the Russian offensive campaign. The report mentions the Kursk Oblast and the Ukrainian incursion. <image:9148> The report does not contain the image in the claim.
+
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Armed Forces of Ukraine chemical weapons Kursk offensive')
+Skipping fact-checking website: https://www.reuters.com/fact-check/orange-smoke-cloud-photo-predates-kursk-assault-by-nearly-decade-2024-08-16/
+Got 1 new web source(s):
+	1. January 19, 2025 https://understandingwar.org/backgrounder/russian-offensive-campaign-assessment-january-19-2025
+Useful result: From [Source](https://understandingwar.org/backgrounder/russian-offensive-campaign-assessment-january-19-2025): 
+Content: The Institute for the Study of War (ISW) published a report on January 19, 2025, stating that the Ukrainian General Staff reported that Russian forces used ammunition equipped with chemical agents banned by the Chemical Weapons Convention (CWC) 434 times in Ukraine in December 2024, contributing to a total of 5,389 documented cases since February 2023. The report also mentions the Kursk Oblast and the Russian offensive campaign. <image:9046>
+
+The claim '<image:12> This image shows a chemical attack by the Armed Forces of Ukraine during the Kursk offensive in August 2024.' is false.
+Justification: The claim is not supported by the evidence. While the image's location is uncertain, the search results confirm the Kursk offensive occurred in August 2024. However, there is no evidence to confirm that the image depicts a chemical attack by the Armed Forces of Ukraine during the Kursk offensive. The provided sources discuss the offensive and the use of chemical weapons, but they do not include the image or link it to a chemical attack.
+
+So, the overall veracity is: false
+Fact-check took 12:03 min.

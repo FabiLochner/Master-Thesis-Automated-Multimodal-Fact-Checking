@@ -1,0 +1,28 @@
+Extracting claims from Content: Ukrainian President Volodymyr Zelenskyy purchased an 88 million euro hotel in the Courchevel ski resort in France.
+'Claim: "Ukrainian President Volodymyr Zelenskyy purchased an 88 million euro hotel in the Courchevel ski resort in France."'
+Verifying Claim: "Ukrainian President Volodymyr Zelenskyy purchased an 88 million euro hotel in the Courchevel ski resort in France."
+Not enough information yet. Continuing fact-check...
+Got 3 new web source(s):
+	1. December 06, 2024 https://mythdetector.com/en/that-volodymyr-zelenskyy/
+	2. December 09, 2024 https://www.ukrinform.net/rubric-factcheck/3935929-russian-propaganda-falsely-claims-zelensky-bought-french-hotel-kulebas-son-acquired-iron-throne.html
+	3. https://inshorts.com/en/news/posts-falsely-claim-zelenskyy-bought-88-mn-euro-hotel-in-france----1734106048310
+Useful result: From [Source](https://mythdetector.com/en/that-volodymyr-zelenskyy/): 
+Content: The Myth Detector fact-checks the claim that Volodymyr Zelenskyy purchased an 88 million euro hotel in Courchevel, France. The article states that the claim is false and that it originated from anonymous Russian-language accounts. The article mentions that the claim was also published on a French-language website, Les Echos de la France, which is not a reputable source. The article also mentions that the claim is part of a disinformation campaign to discredit Zelenskyy. <image:5661> <image:5661>
+The article was published on December 6, 2024.
+
+Useful result: From [Source](https://www.ukrinform.net/rubric-factcheck/3935929-russian-propaganda-falsely-claims-zelensky-bought-french-hotel-kulebas-son-acquired-iron-throne.html): 
+Content: Ukrinform.net reports that Russian media falsely claimed that Volodymyr Zelenskyy purchased the Palace des Neiges hotel in Courchevel, France, for 88 million euros. The report states that the video was fabricated and that a cloned website for the hotel was created. <image:5669>, <image:5671>, <image:5682>. The original website does not include any information about the hotel's ownership.
+
+Useful result: From [Source](https://inshorts.com/en/news/posts-falsely-claim-zelenskyy-bought-88-mn-euro-hotel-in-france----1734106048310): 
+Content: Inshorts reports that posts falsely claim Zelenskyy bought an 88-mn euro hotel in France. The article states that Zelenskyy did not buy a luxury hotel in the French ski resort of Courchevel in October, contrary to online claims. The article was written by Udit Gupta on December 13, 2024. The source is Reuters.
+
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Volodymyr Zelenskyy hotel purchase France')
+Skipping fact-checking website: https://www.reuters.com/fact-check/ukraines-president-zelenskiy-did-not-buy-palace-des-neiges-hotel-french-ski-2024-12-13/
+Skipping unsupported website: https://cpd.gov.ua/en/international-threats-en/europe/fake-about-president-zelenskyys-purchase-of-a-hotel-in-france/
+Skipping fact-checking website: https://factcheck.afp.com/doc.afp.com.36PG6EC
+Got 0 new web source(s):
+The claim 'Ukrainian President Volodymyr Zelenskyy purchased an 88 million euro hotel in the Courchevel ski resort in France.' is false.
+Justification: The claim that Volodymyr Zelenskyy purchased an 88 million euro hotel in Courchevel, France, is false. Fact-checkers, such as [Myth Detector](https://mythdetector.com/en/that-volodymyr-zelenskyy/), have debunked the claim, identifying it as disinformation originating from Russian-language sources.
+
+So, the overall veracity is: false
+Fact-check took 2:14 min.

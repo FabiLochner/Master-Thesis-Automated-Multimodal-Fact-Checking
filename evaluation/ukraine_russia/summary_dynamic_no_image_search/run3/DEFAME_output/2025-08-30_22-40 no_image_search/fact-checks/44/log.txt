@@ -1,0 +1,37 @@
+Extracting claims from Content: In remarks to reporters on September 29, 2024 US President Joe Biden announced that no more aid would be provided for the areas affected by Hurrican Helene, but 2.4 billion US-$ more for Ukraine.
+'Claim: "In remarks to reporters on September 29, 2024 US President Joe Biden announced that no more aid would be provided for the areas affected by Hurrican Helene, but 2.4 billion US-$ more for Ukraine."'
+Verifying Claim: "In remarks to reporters on September 29, 2024 US President Joe Biden announced that no more aid would be provided for the areas affected by Hurrican Helene, but 2.4 billion US-$ more for Ukraine."
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Joe Biden remarks September 29 2024 Hurricane Helene Ukraine aid')
+Skipping unsupported website: https://bidenwhitehouse.archives.gov/briefing-room/statements-releases/2024/09/28/statement-from-president-joe-biden-on-hurricane-helene/
+Skipping fact-checking website: https://www.politifact.com/factchecks/2024/sep/30/social-media/no-link-between-ukraine-and-helene-aid-and-joe-bid/
+Skipping unsupported website: https://www.youtube.com/watch?v=BzjC7AeeKqQ
+Got 3 new web source(s):
+	1. October 01, 2024 https://www.france24.com/en/americas/20241001-biden-defends-government-response-as-hurricane-helene-death-toll-reaches-118
+	2. October 09, 2024 https://www.bbc.com/news/articles/czd1q9q9gl9o
+	3. September 30, 2024 https://apnews.com/article/hurricane-helene-recover-biden-visit-823be75adbed4fa1d7c108a207dbb3e3
+Useful result: From [Source](https://www.france24.com/en/americas/20241001-biden-defends-government-response-as-hurricane-helene-death-toll-reaches-118): 
+Content: The article from France 24, published on October 1, 2024, reports on President Biden's response to Hurricane Helene. <image:k> Biden visited North Carolina to assess rescue efforts. The article mentions the death toll reached 130. Biden refuted claims that the government was slow to respond. The article also mentions that Trump accused Biden of "sleeping" instead of dealing with the storm damage.
+
+Useful result: From [Source](https://www.bbc.com/news/articles/czd1q9q9gl9o): 
+Content: The BBC published an article on October 9, 2024, discussing misinformation about the government's response to Hurricane Helene. <image:9985>, <image:9984>, <image:9990>, <image:9995>. The article mentions that Donald Trump and his allies have claimed that government money earmarked for disaster victims has been spent on migrants. The article also mentions that Trump and JD Vance have highlighted a $750 payment from Fema to hurricane victims. The article states that President Biden approved the state governor’s request for military personnel and equipment to support rescue operations in North Carolina.
+
+Useful result: From [Source](https://apnews.com/article/hurricane-helene-recover-biden-visit-823be75adbed4fa1d7c108a207dbb3e3): 
+Content: The Associated Press reports that on September 29, President Joe Biden said he will visit areas impacted by Hurricane Helene this week if it doesn't disrupt rescue and recovery operations. The article does not mention any aid for Ukraine.
+
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Joe Biden Ukraine aid Hurricane Helene')
+Got 2 new web source(s):
+	1. October 05, 2024 https://www.theguardian.com/us-news/2024/oct/05/biden-urges-congress-helene-relief-funds
+	2. September 30, 2024 https://www.lemonde.fr/en/united-states/article/2024/09/30/biden-pledges-to-aid-victims-of-hurrican-helene-as-long-as-it-takes_6727795_133.html
+Useful result: From [Source](https://www.theguardian.com/us-news/2024/oct/05/biden-urges-congress-helene-relief-funds): 
+Content: The Guardian, published on October 5, 2024, reports on the White House's response to misinformation regarding Hurricane Helene relief efforts. The article states that the White House refuted claims that emergency disaster money had been spent housing immigrants and that relief funds would be limited to $750 per claim. The article mentions that Biden urged Congress to pass a disaster-relief package, as the projected recovery and rebuilding costs related to Hurricane Helene are estimated to be as much as $200bn over 10 years. The article also mentions that Biden said that funding through the Small Business Administration (SBA) “will run out of funding in a matter of weeks and well before the Congress is planning to reconvene”. <image:10021>
+
+Useful result: From [Source](https://www.lemonde.fr/en/united-states/article/2024/09/30/biden-pledges-to-aid-victims-of-hurrican-helene-as-long-as-it-takes_6727795_133.html): 
+Content: Le Monde reported that on September 30, 2024, President Joe Biden delivered remarks on the response to Hurricane Helene at the White House <image:10022>. Biden announced he would travel to North Carolina to monitor rescue efforts. The article mentions the death toll reached at least 130.
+
+The claim 'In remarks to reporters on September 29, 2024 US President Joe Biden announced that no more aid would be provided for the areas affected by Hurrican Helene, but 2.4 billion US-$ more for Ukraine.' is false.
+Justification: The fact-check found no evidence to support the claim that President Biden announced a halt to aid for areas affected by Hurricane Helene and allocated $2.4 billion to Ukraine. News reports from sources like the [BBC](https://www.bbc.com/news/articles/czd1q9q9gl9o), [France 24](https://www.france24.com/en/americas/20241001-biden-defends-government-response-as-hurricane-helene-death-toll-reaches-118), [The Guardian](https://www.theguardian.com/us-news/2024/oct/05/biden-urges-congress-helene-relief-funds), and [Le Monde](https://www.lemonde.fr/en/united-states/article/2024/09/30/biden-pledges-to-aid-victims-of-hurrican-helene-as-long-as-it-takes_6727795_133.html) focused on Biden's response to the hurricane, including his visit to affected areas and calls for disaster relief, but did not mention the actions described in the claim.
+
+So, the overall veracity is: false
+Fact-check took 2:58 min.

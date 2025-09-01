@@ -1,0 +1,22 @@
+Extracting claims from Content: <image:5> This image shows a US F-16 fighter jet which was shot down in August 2024 in airspace over the Black Sea after refusing to obey Russian orders.
+'Claim: "<image:5> This image shows a US F-16 fighter jet which was shot down in August 2024 in airspace over the Black Sea after refusing to obey Russian orders."'
+Verifying Claim: "<image:5> This image shows a US F-16 fighter jet which was shot down in August 2024 in airspace over the Black Sea after refusing to obey Russian orders."
+Not enough information yet. Continuing fact-check...
+Got 3 new web source(s):
+	1. https://www.airteamimages.com/mikoyan-gurevich-mig-29_925_russia---russian-air-force_48672
+	2. https://www.peakpx.com/en/hd-wallpaper-desktop-oyvnm
+	3. https://factcheckkorea.afp.com/doc.afp.com.324U6AA
+Useful result: From [Source](https://www.airteamimages.com/mikoyan-gurevich-mig-29_925_russia---russian-air-force_48672): Found exact image on website with title: MiG-29S Fulcrum Russia - Russian Air Force 925
+Content: The image shows a Russian Air Force MiG-29S Fulcrum. The photo was taken on July 24, 1993, in Fairford, United Kingdom. The image is part of a sequence of photos of a mid-air collision between two Russian MiG 29s. <image:1614>. The pilot can be seen ejecting.
+
+Useful result: From [Source](https://www.peakpx.com/en/hd-wallpaper-desktop-oyvnm): Found exact image on website with title: Mikoyan-Gurevich MiG-29S Fulcrum (925), Eject, Fulcrum, Russian ...
+Content: The search result is from a website that provides HD wallpapers. The website contains an image of a Mikoyan-Gurevich MiG-29S Fulcrum (925) ejecting. <image:5> is an image of a MiG-29. The website also provides links to download the image in various resolutions.
+
+Useful result: From [Source](https://factcheckkorea.afp.com/doc.afp.com.324U6AA): Found exact image on website with title: 이 사진은 1993년 영국 에어쇼 도중 발생한 사고를 촬영한 것이다
+Content: The image is of a Russian MiG-29 fighter jet involved in an accident during a British air show in 1993. <image:5> The image was taken by Carl Ford on July 24, 1993, at Fairford, England. The article was published on March 11, 2022, by AFP 인도 and translated by SHIM Kyu-Seok.
+
+The claim '<image:5> This image shows a US F-16 fighter jet which was shot down in August 2024 in airspace over the Black Sea after refusing to obey Russian orders.' is false.
+Justification: The image depicts a Russian MiG-29S Fulcrum involved in a mid-air collision during a British air show in 1993, as confirmed by reverse image searches and sources like [Airteam Images](https://www.airteamimages.com/mikoyan-gurevich-mig-29_925_russia---russian-air-force_48672) and [Peakpx](https://www.peakpx.com/en/hd-wallpaper-desktop-oyvnm). The claim incorrectly identifies the aircraft as a US F-16 and misrepresents the event's location and date.
+
+So, the overall veracity is: false
+Fact-check took 0:14 min.

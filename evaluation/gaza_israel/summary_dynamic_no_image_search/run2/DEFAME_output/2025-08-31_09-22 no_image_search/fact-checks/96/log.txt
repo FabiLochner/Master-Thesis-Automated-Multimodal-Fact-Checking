@@ -1,0 +1,39 @@
+Extracting claims from Content: <image:63> This image shows Mayar Hamida (9 years old) and Bilal Hamida (6 years old) who were killed by Israel along with their mother and grandmother at Al-Jaoni UN school in Al-Nuseirat refugee camp on July, 6 2024.
+'Claim: "<image:63> This image shows Mayar Hamida (9 years old) and Bilal Hamida (6 years old) who were killed by Israel along with their mother and grandmother at Al-Jaoni UN school in Al-Nuseirat refugee camp on July, 6 2024."'
+Verifying Claim: "<image:63> This image shows Mayar Hamida (9 years old) and Bilal Hamida (6 years old) who were killed by Israel along with their mother and grandmother at Al-Jaoni UN school in Al-Nuseirat refugee camp on July, 6 2024."
+Not enough information yet. Continuing fact-check...
+Got 0 new web source(s):
+Not enough information yet. Continuing fact-check...
+INFO: Dropping action 'reverse_search' as it was already performed.
+Got 2 new web source(s):
+	1. https://www.cnn.com/2024/07/19/middleeast/gaza-neighborhood-israeli-hostages-intl-cmd
+	2. https://en.wikipedia.org/wiki/Nuseirat_rescue_and_massacre
+Useful result: From [Source](https://www.cnn.com/2024/07/19/middleeast/gaza-neighborhood-israeli-hostages-intl-cmd): 
+Content: The CNN article, published on July 19, 2024, discusses an Israeli operation in the Nuseirat refugee camp in Gaza on June 8, 2024, where hostages were rescued. <image:63> The article mentions that over 270 Palestinians were killed in Nuseirat on June 8, according to Gaza health ministry officials.
+
+Useful result: From [Source](https://en.wikipedia.org/wiki/Nuseirat_rescue_and_massacre): 
+Content: The Wikipedia article discusses the 2024 Nuseirat rescue operation and massacre, which took place on June 8, 2024, in the Nuseirat refugee camp in the Gaza Strip. The operation, conducted by the Israel Defense Forces (IDF), aimed to rescue Israeli hostages. According to the Gaza Health Ministry, at least 276 Palestinians were killed and over 698 injured. The article also mentions international reactions to the event, including condemnations from various countries and organizations. <image:i>
+
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Mayar Hamida Bilal Hamida killed Israel')
+Skipping unsupported website: https://www.facebook.com/photo.php?fbid=990740149366980&id=100052930128929&set=a.619803503127315
+Skipping unsupported website: https://www.instagram.com/p/C9HiUfntUsZ/
+Skipping unsupported website: https://twitter.com/WAFANewsEnglish/status/1809833597525704994
+Skipping unsupported website: https://x.com/GazaMartyrs/status/1811871488435175674
+Got 3 new web source(s):
+	1. January 25, 2024 https://interactive.aljazeera.com/aje/2024/israel-war-on-gaza-10000-children-killed/
+	2. November 25, 2023 https://www.presstv.ir/Detail/2023/11/25/715273/Humans-of-Gaza-Mayar-Bilal-inseparable-siblings
+	3. November 18, 2023 https://english.palinfo.com/Zionist-Terrorism/2023/11/18/82751/
+Useful result: From [Source](https://interactive.aljazeera.com/aje/2024/israel-war-on-gaza-10000-children-killed/): 
+Content: The search result from Al Jazeera states that since October 7, 2023, Israeli attacks have killed at least 16,800 children.
+
+Useful result: From [Source](https://www.presstv.ir/Detail/2023/11/25/715273/Humans-of-Gaza-Mayar-Bilal-inseparable-siblings): 
+Content: The search result from Press TV, published on November 25, 2023, discusses Mayar and Bilal Hamida, who were killed in an Israeli airstrike on October 23. The article states that the siblings were killed with their mother in their home in the Gaza Strip. <image:11838> shows the two children.
+
+Useful result: From [Source](https://english.palinfo.com/Zionist-Terrorism/2023/11/18/82751/): 
+Content: Palinfo.com published an article on November 18, 2023, stating that Mayar and Bilal Hamida, children of Palestine TV correspondent Nidal Hamida, were killed in Israeli airstrikes in October 2023. <image:11844>, <image:11842>.
+
+The claim '<image:63> This image shows Mayar Hamida (9 years old) and Bilal Hamida (6 years old) who were killed by Israel along with their mother and grandmother at Al-Jaoni UN school in Al-Nuseirat refugee camp on July, 6 2024.' is false.
+Justification: The claim is false. Evidence from multiple sources, including [Press TV](<image:11838>), indicates that Mayar and Bilal Hamida were killed in October 2023, not July 6, 2024, as stated in the claim. Additionally, the claim incorrectly states the location of their death.
+
+So, the overall veracity is: false
+Fact-check took 0:46 min.

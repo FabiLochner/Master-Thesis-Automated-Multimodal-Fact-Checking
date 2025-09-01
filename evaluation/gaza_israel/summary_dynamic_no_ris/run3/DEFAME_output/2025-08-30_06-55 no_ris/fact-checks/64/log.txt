@@ -1,0 +1,33 @@
+Extracting claims from Content: Iran's IRGC Quds Force commander Gen. Esmail Qaani has fled Iran in April 2025 and is confirmed safe in Israel.
+'Claim: "Iran's IRGC Quds Force commander Gen. Esmail Qaani has fled Iran in April 2025 and is confirmed safe in Israel."'
+Verifying Claim: "Iran's IRGC Quds Force commander Gen. Esmail Qaani has fled Iran in April 2025 and is confirmed safe in Israel."
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Esmail Qaani Israel April 2025')
+Got 3 new web source(s):
+	1. June 30, 2025 https://www.ynetnews.com/article/sytrh21hxe
+	2. June 30, 2025 https://www.jpost.com/israel-news/article-859504
+	3. June 25, 2025 https://www.aa.com.tr/en/middle-east/iran-s-quds-force-commander-appears-after-reports-of-his-assassination/3612018
+Useful result: From [Source](https://www.ynetnews.com/article/sytrh21hxe): 
+Content: Ynetnews.com published an article on June 24, 2025, stating that a social media account claiming to represent the Mossad denied that Esmail Qaani is an Israeli asset. The article mentions that Qaani appeared in Tehran after a ceasefire, and includes an image of Qaani. <image:10484> The article also references a previous report in The New York Times about Qaani's possible assassination.
+
+Useful result: From [Source](https://www.jpost.com/israel-news/article-859504): 
+Content: The Jerusalem Post published an article on June 30, 2025, about an X account linked to Mossad denying rumors of ties to Esmail Qaani. <image:1>
+
+Useful result: From [Source](https://www.aa.com.tr/en/middle-east/iran-s-quds-force-commander-appears-after-reports-of-his-assassination/3612018): 
+Content: The search result from Anadolu Agency, published on June 25, 2025, reports that Esmail Qaani, the commander of the IRGC Quds Force, was seen in Tehran, contradicting earlier reports of his death. <image:k> The article mentions airstrikes on Iran by Israel since June 13, 2025.
+
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='IRGC Quds Force commander Esmail Qaani whereabouts')
+Got 2 new web source(s):
+	1. June 25, 2025 https://www.jpost.com/middle-east/article-858902
+	2. https://en.wikipedia.org/wiki/Esmail_Qaani
+Useful result: From [Source](https://www.jpost.com/middle-east/article-858902): 
+Content: The Jerusalem Post reports on June 25, 2025, that Esmail Qaani was seen at a rally in Tehran. The New York Times reported that Qaani was killed during an Israeli strike in Iran, citing an Iranian source. <image:k>
+
+Useful result: From [Source](https://en.wikipedia.org/wiki/Esmail_Qaani): 
+Content: The Wikipedia article on Esmail Qaani states that he is the commander of the Quds Force, appointed in January 2020. The article mentions that in early October 2024, concerns emerged regarding his whereabouts. <image:k>
+
+The claim 'Iran's IRGC Quds Force commander Gen. Esmail Qaani has fled Iran in April 2025 and is confirmed safe in Israel.' is false.
+Justification: Multiple news sources, including Ynetnews.com ([https://www.ynetnews.com/article/sytrh21hxe](https://www.ynetnews.com/article/sytrh21hxe)), The Jerusalem Post ([https://www.jpost.com/israel-news/article-859504](https://www.jpost.com/israel-news/article-859504)) and Anadolu Agency ([https://www.aa.com.tr/en/middle-east/iran-s-quds-force-commander-appears-after-reports-of-his-assassination/3612018](https://www.aa.com.tr/en/middle-east/iran-s-quds-force-commander-appears-after-reports-of-his-assassination/3612018)), reported that Esmail Qaani was seen in Tehran in June 2025, contradicting the claim that he fled Iran in April 2025 and is safe in Israel. Furthermore, a social media account linked to Mossad denied rumors of ties to Qaani.
+
+So, the overall veracity is: false
+Fact-check took 3:06 min.

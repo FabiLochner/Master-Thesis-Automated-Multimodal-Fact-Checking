@@ -1,0 +1,381 @@
+Extracting claims from Content: <image:10217> This is an authentic image of Bono and Bob Geldof holding the Israeli flag outside the Israeli embassy in Dublin.
+'Claim: "<image:10217> This is an authentic image of Bono and Bob Geldof holding the Israeli flag outside the Israeli embassy in Dublin."'
+Verifying Claim: "<image:10217> This is an authentic image of Bono and Bob Geldof holding the Israeli flag outside the Israeli embassy in Dublin."
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Bono Bob Geldof Israeli Embassy Dublin')
+Skipping fact-checking website: https://www.reuters.com/fact-check/image-bono-bob-geldof-holding-israeli-flag-is-ai-generated-2024-12-24/
+Skipping fact-checking website: https://fullfact.org/online/bono-bob-geldof-israeli-flags-ai-generated/
+Failed to scrape https://www.aol.com/fact-check-image-bono-holding-173242187.html
+Error 500: Server error.
+Skipping that URL.
+Skipping unsupported website: https://www.facebook.com/100063441679237/posts/sharing-for-awarenessa-picture-which-supposedly-shows-the-singers-bono-and-bob-g/1010098694448177/
+Skipping fact-checking website: https://www.misbar.com/en/factcheck/2024/12/22/this-photo-of-bono-and-bob-geldof-is-ai-generated
+Skipping fact-checking website: https://leadstories.com/hoax-alert/2024/12/fact-check-fake-image-shows-bono-and-bob-geldof-waving-israeli-flags.html
+Failed to scrape https://www.independent.ie/life/bono-may-have-received-the-medal-of-freedom-but-younger-irish-artists-are-putting-him-to-shame-for-his-deafening-silence-on-gaza/a1388238523.html
+Error 500: Server error.
+Skipping that URL.
+Got 2 new web source(s):
+	1. December 19, 2024 https://www.thejournal.ie/ai-generated-photo-of-bono-and-bob-geldof-with-israeli-flags-is-it-real-6577454-Dec2024/
+	2. December 25, 2024 https://news.abplive.com/fact-check/fact-check-irish-rockstars-bono-bob-geldof-israel-flag-ai-1739811
+Error while calling the Gemini LLM! Continuing with empty response.
+Connection error.
+Prompt used:
+# Instructions
+In order to find evidence that helps your fact-check, you just ran a web search which yielded a Search Result. **Your task right now is to summarize the Search Result.** What to include:
+* information that might be useful for the fact-check (see Record)
+* relevant images (refer to images by inserting their reference <image:k>)
+* if available: the release date as well as the author or the publisher (e.g. the media company) of the search result.
+
+Do NOT include:
+* advertisements
+* any other information not related to the Record or the Claim
+
+Additional rules:
+* Do not add any additional information besides the information in the Search Result.
+* If the Search Result doesn't contain any relevant information for the fact-checking work, simply print one word in capital letters: "NONE".
+* Keep your writing style like in the Examples 1, 2 and 3 provided to you.
+* Try to filter out relevant information even if the search result is in a different language.
+
+# Example 1
+The search result from America Today provides several photographs of the Notre-Dame Cathedral fire on April 15, 2019. <image:i>, <image:j>, <image:k>. None of the images show the Eiffel Tower in the background. 
+
+# Example 2
+NONE
+
+# Example 3
+The Guardian discusses a report blaming the Syrian government for a toxic gas attack and condemning their use of chemical weapons. The Guardian mentions the Chemical Weapons Convention and the responsibilities of Syria under the convention. According to The Guardian, The White House condemned the Assad regime for defying the norm against chemical weapons use.
+
+# Record
+## Claim
+Claim: "<image:10217> This is an authentic image of Bono and Bob Geldof holding the Israeli flag outside the Israeli embassy in Dublin."
+
+## Actions
+```
+web_search("Bono Bob Geldof Israeli Embassy Dublin")
+reverse_search(<image:10217>)
+```
+
+# Search Result
+From [Source](https://www.thejournal.ie/ai-generated-photo-of-bono-and-bob-geldof-with-israeli-flags-is-it-real-6577454-Dec2024/): 
+Content: "<image:10853>
+
+AN IMAGE SHARED by Yanis Varoufakis, a former Greek finance minister, that purports to show Irish rock stars holding Israeli flags is AI-generated.
+
+The image, which is said to show Bono and Bob Geldof staging a “two-man vigil” outside the Israeli Embassy in Dublin, was first posted by a satirical social media account, which has confirmed to _The Journal_ that it was created by an Artificial Intelligence (AI) and was never meant to be taken seriously.
+
+“In the midst of a genocide, with thousands of maimed orphaned children going to bed without having eaten for days or water to wash their wounds, Bono and Geldof decided to show their solidarity with the rogue Apartheid state responsible,” wrote Yanis Varoufakis on X.
+
+Varoufakis’s 18 December X post includes a screenshot of another post by the account Dr Harold News, which showed an image of Bono and Geldof in a field holding Israeli flags.
+
+! <image:10854>
+
+“BREAKING: Bono and Bob Geldof stage two-man vigil outside Israeli Embassy in Dublin,” that post reads.
+
+Varoufakis’s post has been shared more than 600 times and was viewed on X more than 306,100 times. It was also shared further on other social media platforms, including multiple posts on Facebook that copied Varoufakis’s post word-for-word.
+
+Varoufakis was Greece’s minister for finance for much of 2015, gaining international recognition during the country’s debt crisis.
+
+Advertisement
+
+However, there are signs that the image he shared may not be real.
+
+The picture is set in a field surrounded by verdant hedges, unlike t[he area outside the Israeli embassy](https://www.google.com/maps/place/Embassy+of+Israel+to+Ireland/@53.3323915,-6.2317407,3a,75y,311.48h,82.18t/data=!3m7!1e1!3m5!1s5IbuSW6FiE9GXIaxKw2zEw!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D7.817675335494144%26panoid%3D5IbuSW6FiE9GXIaxKw2zEw%26yaw%3D311.48243025252697!7i16384!8i8192!4m7!3m6!1s0x48670ec099e519d1:0x8e1e9dcda8ab035e!8m2!3d53.3323109!4d-6.2323792!10e5!16s%2Fg%2F12qh79y9q?hl=en&entry=ttu&g_ep=EgoyMDI0MTIxMS4wIKXMDSoASAFQAw%3D%3D)
+, which, aside from some leafy residential gardens across the road, is located in a concrete-laden area of Dublin city.
+
+Last week, Israel announced it [is closing that embassy down](https://www.thejournal.ie/israel-closes-embassy-dublin-6572656-Dec2024/?jrnl_lg=1)
+, following Ireland’s decision to intervene in a case taken by South Africa against Israel for genocide that is currently before the International Court of Justice.
+
+The clothes worn by the two rock stars in the image are inconsistent, with Bono’s buttons being of various sizes (including one on the bottom of this suit jacket’s lapel), and a ridge appearing on one sleeve of Geldof’s jacket, but not the other.
+
+These are all indications that the image might be AI-generated.
+
+Reverse image searches for the image, or similar images that may have been manipulated, all indicate that the Dr Harold News account was the first to post the picture.
+
+“My page is clearly labelled ‘satire’ and ‘fake news’, so I wasn’t expecting anyone to assume the photo is real,” the person behind the account told _The Journal._
+
+“I can confirm the image was created by Grok AI and the tweet is satire.”
+
+Grok AI is an Artificial Intelligence platform that can create images based on image prompts. <image:10852>\
+\
+The 42FM\
+\
+Sport meets news, current affairs, society & pop culture](/the-42fm/news/?utm_source=thejournal&utm_medium=menu)
+
+_Sign in_ to  
+have your say
+
+Or create a free account to join the discussion
+
+FactCheck
+
+Debunked: Image of Bono and Bob Geldof holding Israeli flags is AI-generated
+============================================================================
+
+“I wasn’t expecting anyone to assume the photo is real,” the picture’s creator said.
+
+5.27pm, 19 Dec 2024
+
+24.4k
+
+Share options
+
+Copy link
+
+[Email](https://www.thejournal.ie/ai-generated-photo-of-bono-and-bob-geldof-with-israeli-flags-is-it-real-6577454-Dec2024/#EmailArticle "Email this article")
+[Facebook](https://www.facebook.com/dialog/feed?app_id=116141121768215&display=popup&link=https%3A%2F%2Fwww.thejournal.ie%2Fai-generated-photo-of-bono-and-bob-geldof-with-israeli-flags-is-it-real-6577454-Dec2024%2F&picture=https%3A%2F%2Fc0.thejournal.ie%2Fmedia%2F2024%2F12%2Fais-236ffc3f-79b3-4e12-8b71-22bf0ebadd19-197x197.jpg&name=Debunked%3A+Image+of+Bono+and+Bob+Geldof+holding+Israeli+flags+is+AI-generated&description=%E2%80%9CI+wasn%E2%80%99t+expecting+anyone+to+assume+the+photo+is+real%2C%E2%80%9D+the+picture%E2%80%99s+creator+said.&message=&redirect_uri=https%3A%2F%2Fthejournal.ie%2Futils%2Ffb_post.php%3Fp_id%3D6577454)
+[X](https://twitter.com/share?url=https%3A%2F%2Fjrnl.ie%2F6577454&text=Debunked%3A+Image+of+Bono+and+Bob+Geldof+holding+Israeli+flags+is+AI-generated+%28via+%40thejournal_ie%29&related=@thejournal_ie)
+
+! <image:10855>](https://www.thejournal.ie/author/shane-raymond/8011/)
+
+Author
+
+[Shane Raymond](https://www.thejournal.ie/author/shane-raymond/8011/)
+
+[](https://www.thejournal.ie/author/shane-raymond/8011/)
+
+[](mailto:shane.raymond@thejournal.ie)
+
+[](https://twitter.com/@ShaneARaymond)
+
+[Send Tip or Correction](mailto:corrections@thejournal.ie?subject=Correction%20from%20a%20reader&body=Debunked%3A+Image+of+Bono+and+Bob+Geldof+holding+Israeli+flags+is+AI-generated%0D%0Ahttps%3A%2F%2Fwww.thejournal.ie%2Fai-generated-photo-of-bono-and-bob-geldof-with-israeli-flags-is-it-real-6577454-Dec2024%2F)
+
+Embed this post
+
+To embed this post, copy the code below on your site
+
+600px wide <iframe width="600" height="460" frameborder="0" style="border:0px;" src="https://www.thejournal.ie/https://www.thejournal.ie/ai-generated-photo-of-bono-and-bob-geldof-with-israeli-flags-is-it-real-6577454-Dec2024/?embedpost=6577454&width=600&height=460" ></iframe>
+
+400px wide <iframe width="600" height="460" frameborder="0" style="border:0px;" src="https://www.thejournal.ie/https://www.thejournal.ie/ai-generated-photo-of-bono-and-bob-geldof-with-israeli-flags-is-it-real-6577454-Dec2024/?embedpost=6577454&width=400&height=460" ></iframe>
+
+300px wide <iframe width="600" height="460" frameborder="0" style="border:0px;" src="https://www.thejournal.ie/https://www.thejournal.ie/ai-generated-photo-of-bono-and-bob-geldof-with-israeli-flags-is-it-real-6577454-Dec2024/?embedpost=6577454&width=300&height=460" ></iframe>
+
+  
+
+Email “Debunked: Image of Bono and Bob Geldof holding Israeli flags is AI-generated”.
+
+Your Email 
+
+Recipient's Email 
+
+Submit ![One moment...](//b0.thejournal.ie/desktop/i/loading.gif)
+
+ 
+
+Feedback on “Debunked: Image of Bono and Bob Geldof holding Israeli flags is AI-generated”.
+
+Your Feedback
+
+Your Email (optional) 
+
+Submit 
+
+  
+
+Report a Comment
+
+Please select the reason for reporting this comment. It contains offensive language, is hateful or incites violence It contains a libellous/defamatory statement Some other reason...
+
+Please give full details of the problem with the comment...
+
+Submit ![One moment...](//b0.thejournal.ie/desktop/i/loading.gif)
+
+Close
+
+[AI-generated images](/ai-generated-images/news/)
+ [Artificial Intelligence](/artificial-intelligence/news/)
+ [Bob Geldof](/bob-geldof/news/)
+ [Bono](/bono/news/)
+ [debunked](/debunked/news/)
+ [FactCheck](/factcheck/news/)
+ [Israel](/israel/news/)
+ [U2](/u2/news/)
+
+![JournalTv](/tv/poster/news-in-60-seconds)
+
+[Close](#)
+
+[](https://www.thejournal.ie/tv)
+
+News in 60 seconds
+
+[](https://www.thejournal.ie/vacant-buildings-councils-ireland-cpo-august-6798459-Aug2025/)
+
+!"
+
+# Your Summary
+Error while summarizing! 'SummarizeResultPrompt' object has no attribute 'retry_instruction' - Skipping the summary for https://www.thejournal.ie/ai-generated-photo-of-bono-and-bob-geldof-with-israeli-flags-is-it-real-6577454-Dec2024/.
+Error while calling the Gemini LLM! Continuing with empty response.
+Connection error.
+Prompt used:
+# Instructions
+In order to find evidence that helps your fact-check, you just ran a web search which yielded a Search Result. **Your task right now is to summarize the Search Result.** What to include:
+* information that might be useful for the fact-check (see Record)
+* relevant images (refer to images by inserting their reference <image:k>)
+* if available: the release date as well as the author or the publisher (e.g. the media company) of the search result.
+
+Do NOT include:
+* advertisements
+* any other information not related to the Record or the Claim
+
+Additional rules:
+* Do not add any additional information besides the information in the Search Result.
+* If the Search Result doesn't contain any relevant information for the fact-checking work, simply print one word in capital letters: "NONE".
+* Keep your writing style like in the Examples 1, 2 and 3 provided to you.
+* Try to filter out relevant information even if the search result is in a different language.
+
+# Example 1
+The search result from America Today provides several photographs of the Notre-Dame Cathedral fire on April 15, 2019. <image:i>, <image:j>, <image:k>. None of the images show the Eiffel Tower in the background. 
+
+# Example 2
+NONE
+
+# Example 3
+The Guardian discusses a report blaming the Syrian government for a toxic gas attack and condemning their use of chemical weapons. The Guardian mentions the Chemical Weapons Convention and the responsibilities of Syria under the convention. According to The Guardian, The White House condemned the Assad regime for defying the norm against chemical weapons use.
+
+# Record
+## Claim
+Claim: "<image:10217> This is an authentic image of Bono and Bob Geldof holding the Israeli flag outside the Israeli embassy in Dublin."
+
+## Actions
+```
+web_search("Bono Bob Geldof Israeli Embassy Dublin")
+reverse_search(<image:10217>)
+```
+
+# Search Result
+From [Source](https://news.abplive.com/fact-check/fact-check-irish-rockstars-bono-bob-geldof-israel-flag-ai-1739811): 
+Content: "The caption shared with the image read, “BREAKING: Bono and Geldof stage two-man vigil outside Israeli Embassy in Dublin.” 
+
+On December 19, the user [acknowledged](https://x.com/DrHaroldNews/status/1869481406201827615)
+ the image was ‘fake’ (archived [here](https://perma.cc/G3QD-3BYQ)
+). Explorer
+
+[Live Now](https://news.abplive.com/live-tv "Live Now")
+[Premium](https://news.abplive.com/abplive-premium "Premium")
+[Video](https://news.abplive.com/videos "Video")
+[Reels](https://news.abplive.com/short-videos "Reels")
+[Web Stories](https://news.abplive.com/web-stories "Web Stories")
+[Photo Gallery](https://news.abplive.com/photo-gallery "Photo Gallery")
+[Podcast](https://news.abplive.com/podcasts "Podcast")
+[Movie Review](https://news.abplive.com/movie-review "Movie Review")
+[Opinion](https://news.abplive.com/blog "Opinion")
+
+Useful
+
+[IFSC Code Finder](https://news.abplive.com/ifsc/ifsc-bank-code.html "IFSC Code Finder")
+ [Pin Code Finder](https://news.abplive.com/pincode/pincode-finder.html "Pin Code Finder")
+ [Home Loan EMI Calculator](https://news.abplive.com/utility/home-loan-emi-calculator "Home Loan EMI Calculator")
+ [Personal Loan EMI Calculator](https://news.abplive.com/utility/personal-loan-emi-calculator "Personal Loan EMI Calculator")
+ [Car Loan EMI Calculator](https://news.abplive.com/utility/car-loan-emi-calculator "Car Loan EMI Calculator")
+ [Education Loan EMI Calculator](https://news.abplive.com/utility/education-loan-emi-calculator "Education Loan EMI Calculator")
+ [Age calculator](https://news.abplive.com/utility/age-calculator "Age calculator")
+ [BMI Calculator](https://news.abplive.com/utility/bmi-calculator "BMI Calculator")
+ [Petrol Prices](https://news.abplive.com/petrol-prices "Petrol Prices")
+ [Diesel Prices](https://news.abplive.com/diesel-prices "Diesel Prices")
+ [Gold Prices](https://news.abplive.com/gold-prices "Gold Prices")
+ [Silver Prices](https://news.abplive.com/silver-prices "Silver Prices")
+ [AQI](https://news.abplive.com/aqi "AQI")
+
+[Home](https://news.abplive.com "Home")
+[Fact Check](https://news.abplive.com/fact-check "Fact Check")
+Fact Check: Photo Of Irish Rockstars Bono & Bob Geldof Holding Israel Flag Is AI-Generated
+
+Fact Check: Photo Of Irish Rockstars Bono & Bob Geldof Holding Israel Flag Is AI-Generated
+==========================================================================================
+
+An image of Irish musicians Bono and Bob Geldof holding the Israeli national flag has circulated online, claiming that they are endorsing ‘apartheid’.
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+By : [Rajini KG](https://news.abplive.com/authors/rajini-kg "Rajini KG")
+, [Logically Facts](https://news.abplive.com/authors/logically-facts "Logically Facts")
+ | Updated at : 25 Dec 2024 06:04 PM (IST)
+
+[!Preferred Sources <image:10870>](https://google.com/preferences/source?q=https://news.abplive.com "Preferred Sources on Google")
+
+*   *   [](https://twitter.com/intent/tweet?text=Fact Check: Photo Of Irish Rockstars Bono & Bob Geldof Holding Israel Flag Is AI-Generated+https://news.abplive.com/fact-check/fact-check-irish-rockstars-bono-bob-geldof-israel-flag-ai-1739811 "share on x")
+        
+    *   [](https://www.facebook.com/share.php?u=https://news.abplive.com/fact-check/fact-check-irish-rockstars-bono-bob-geldof-israel-flag-ai-1739811&title=Fact Check: Photo Of Irish Rockstars Bono & Bob Geldof Holding Israel Flag Is AI-Generated "share on facebook")
+        
+    *   [](https://web.whatsapp.com/send?text=Fact Check: Photo Of Irish Rockstars Bono & Bob Geldof Holding Israel Flag Is AI-Generated+https://news.abplive.com/fact-check/fact-check-irish-rockstars-bono-bob-geldof-israel-flag-ai-1739811 "share on whatsapp")
+        
+
+![Fact Check Irish Rockstars Bono Bob Geldof Israel Flag AI Fact Check: Photo Of Irish Rockstars Bono & Bob Geldof Holding Israel Flag Is AI-Generated](https://feeds.abplive.com/onecms/images/uploaded-images/2024/12/25/c7992c05ca8bb27f23401943b0779d171735130052954997_original.jpg?impolicy=abp_cdn&imwidth=1200&height=675 "Fact Check: Photo Of Irish Rockstars Bono & Bob Geldof Holding Israel Flag Is AI-Generated")
+
+Social media users circulated the AI-generated image of Irish singers Bono and Bob Geldof holding the Israeli flag.
+
+Source : X/Modified by Logically Facts
+
+* * *
+
+The Verdict: Fake The image, first shared by a satirical account, is fake and was likely created using Artificial Intelligence.
+
+### **What is the claim?**
+
+An image of Irish musicians Bono and Bob Geldof holding the Israeli national flag has circulated online, claiming that they are endorsing “apartheid”. In 2023, Bono [condemned](https://www.i24news.tv/en/news/culture-stories/1708419663-u2-draft)
+ the October 7 Hamas attack on Israel and voiced support for peace between the two sides.
+
+### **The verdict**
+
+The viral image of Irish musicians Bono and Bob Geldof holding the Israeli national flag is a fabrication, most likely created using Artificial Intelligence.
+
+**_This report first appeared on_** [**_logicallyfacts.com_**](https://www.logicallyfacts.com/en/fact-check/image-of-bono-and-bob-geldof-holding-israeli-flags-is-fake)
+**_, and has been republished on ABP Live as part of a special arrangement. (Source: X/Modified by Logically Facts)](https://www.logicallyfacts.com/storage/img/TEAMPICS/Rajini/bobbonogeldof1.webp)
+
+A screenshot of the viral image of Bono and Geldof was shared online. (Source: TrueMedia/Hive Moderation/Screenshot)](https://www.logicallyfacts.com/storage/img/TEAMPICS/Rajini/bobbonogeldof2.webp)
+
+AI detection results by Hive Moderation and TrueMedia. Apart from the headline, no changes have been made in the report by ABP Live._**
+
+Published at : 25 Dec 2024 05:57 PM (IST)
+
+Tags :
+
+[Viral Sach](https://news.abplive.com/topic/viral-sach "Viral Sach")
+ [Bono](https://news.abplive.com/topic/bono "Bono")
+ [Israel Hamas War](https://news.abplive.com/topic/israel-hamas-war "Israel Hamas War")
+ [Gaza War](https://news.abplive.com/topic/gaza-war "Gaza War")
+ [Logically Facts](https://news.abplive.com/topic/logically-facts "Logically Facts")
+ [ABP Fact Check](https://news.abplive.com/topic/abp-fact-check "ABP Fact Check")
+
+*   *   [](https://twitter.com/intent/tweet?text=Fact Check: Photo Of Irish Rockstars Bono & Bob Geldof Holding Israel Flag Is AI-Generated+https://news.abplive.com/fact-check/fact-check-irish-rockstars-bono-bob-geldof-israel-flag-ai-1739811 "share on x")
+        
+    *   [](https://www.facebook.com/share.php?u=https://news.abplive.com/fact-check/fact-check-irish-rockstars-bono-bob-geldof-israel-flag-ai-1739811&title=Fact Check: Photo Of Irish Rockstars Bono & Bob Geldof Holding Israel Flag Is AI-Generated "share on facebook")
+        
+    *   [](https://web.whatsapp.com/send?text=Fact Check: Photo Of Irish Rockstars Bono & Bob Geldof Holding Israel Flag Is AI-Generated+https://news.abplive.com/fact-check/fact-check-irish-rockstars-bono-bob-geldof-israel-flag-ai-1739811 "share on whatsapp")
+        
+
+[!Preferred Sources <image:10871>](https://google.com/preferences/source?q=https://news.abplive.com "Preferred Sources on Google")
+
+**Follow [Fact Check News](https://news.abplive.com/fact-check)
+ on [ABP Live](https://news.abplive.com "ABP Live")
+ for more latest stories and trending topics. Bono is the lead vocalist of the rock band U2, and Geldof is the frontman of the Boomtown Rats.
+
+An X [user](https://perma.cc/TS3X-QPU6)
+ shared the image with the caption, “Make songs about fighting against apartheid... Archived versions of similar posts can be found [here](https://perma.cc/D7WY-WP48)
+ and [here](https://perma.cc/W7D4-ASXJ)
+.
+
+![A screenshot of the viral image of Bono and Geldof was shared online. (Source: X/Modified by Logically Facts)
+
+The image gained traction after Irish singer [Mary Coughlan](https://www.instagram.com/coughlan804/?hl=en)
+ criticised Bono and Geldof for not speaking out about the ongoing Israel-Hamas war. She remarked, “We all saved the world when Bob and Bono were talking about saving the world, and I couldn’t understand what was different about this situation in Gaza."
+
+# Your Summary
+Error while summarizing! 'SummarizeResultPrompt' object has no attribute 'retry_instruction' - Skipping the summary for https://news.abplive.com/fact-check/fact-check-irish-rockstars-bono-bob-geldof-israel-flag-ai-1739811.
+Searching google_vision with query: ImageQuery(limit=3, start_date=None, end_date=None, search_type='reverse', text='', image=<defame.common.medium.Image object at 0x7ffed14a58a0>)
+Skipping fact-checking website: https://www.reuters.com/fact-check/image-bono-bob-geldof-holding-israeli-flag-is-ai-generated-2024-12-24/
+Got 0 new web source(s):
+Not enough information yet. Continuing fact-check...
+INFO: Dropping action 'reverse_search' as it was already performed.
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Bono Bob Geldof Israeli flag')
+Skipping fact-checking website: https://www.reuters.com/fact-check/image-bono-bob-geldof-holding-israeli-flag-is-ai-generated-2024-12-24/
+Skipping fact-checking website: https://fullfact.org/online/bono-bob-geldof-israeli-flags-ai-generated/
+Got 1 new web source(s):
+	1. December 27, 2024 https://www.aol.com/fact-check-image-bono-holding-173242187.html
+Useful result: From [Source](https://www.aol.com/fact-check-image-bono-holding-173242187.html): 
+Content: The AOL article, published on December 27, 2024, states that the image of Bono and Bob Geldof holding Israeli flags is AI-generated. The article mentions that the image was first circulated by an X account known for fake news and satire. The article also notes that there is no proof of the supposed vigil. <image:10938>, <image:10939>.
+
+The claim '<image:10217> This is an authentic image of Bono and Bob Geldof holding the Israeli flag outside the Israeli embassy in Dublin.' is false.
+Justification: The image depicting Bono and Bob Geldof holding Israeli flags is AI-generated, as reported by an AOL article ([Source](https://www.aol.com/fact-check-image-bono-holding-173242187.html)). The image originated from an X account known for spreading fake news and satire, and there is no evidence to support the claim of a vigil.
+
+So, the overall veracity is: false
+Fact-check took 5:40 min.

@@ -1,0 +1,2275 @@
+PlanPrompt - QUERY:
+
+# Instructions
+The available knowledge is insufficient to assess the Claim. Therefore, **propose a set of actions** to retrieve new and helpful evidence. Adhere to the following rules:
+* The actions available are listed under Valid Actions, including a short description for each action. No other actions are possible at this moment. 
+* For each action, use the formatting as specified in Valid Actions.
+* Include all actions in a single Markdown code block at the end of your answer.
+* Propose as few actions as possible, but as much as needed. Do not propose similar or previously used actions.
+
+
+
+## Valid Actions
+* `reverse_search`
+   * Description: Performs a reverse image search to find similar images on the web.
+   * How to use: Provide an image and the model will perform a reverse search to find similar images.
+   * Format: reverse_search(<image:k>), where `k` is the image's ID
+
+* `image_search`
+   * Description: Run an image search on Google to retrieve related images for a given query.
+   * How to use: This is a helpful tool for fact-checking images. Use this to retrieve images associated with a specific keyword or phrase. Ensure that the query is clear and specific to improve search accuracy. If no relevant images are found, refine the query or use more descriptive terms.
+   * Format: image_search("your image search query goes here")
+
+* `geolocate`
+   * Description: Performs geolocation to determine the country where an image was taken.
+   * How to use: Provide an image and the model will determine the most likely countries where it was taken.
+   * Format: geolocate(<image:k>), where `k` is the image's ID
+
+# Example: reverse_search()
+
+## Claim
+Text: "<image:k> shows a rare event of a solar eclipse with a double ring."
+
+...
+
+## Actions
+```
+reverse_search(<image:k>)
+```
+
+# Example: image_search()
+
+## Claim
+Text: "Chinese officials in white protective hazmat suits carried people down a hallway to be quarantined for having COVID-19 in November 2022."
+
+...
+
+ACTIONS:
+```
+image_search("China officials white suits carry people")
+image_search("China officials carry people COVID quarantine 2022")
+```
+
+# Example: geolocate()
+
+## Claim
+Text: "<image:k> shows a nuclear weapons facility in Usbekistan."
+
+...
+
+## Actions
+```
+geolocate(<image:k>)
+```
+
+# Record
+## Claim
+Claim: "<image:26> This image shows destroyed Ukrainian tanks during Ukraine's incursion into Russia's Kursk Oblast in August 2024."
+
+# Your Actions
+
+
+
+===== > RESPONSE:  < =====
+```
+reverse_search(<image:26>)
+image_search("destroyed Ukrainian tanks Kursk Oblast August 2024")
+```
+_________________________
+
+
+
+SummarizeResultPrompt - QUERY:
+
+# Instructions
+In order to find evidence that helps your fact-check, you just ran a web search which yielded a Search Result. **Your task right now is to summarize the Search Result.** What to include:
+* information that might be useful for the fact-check (see Record)
+* relevant images (refer to images by inserting their reference <image:k>)
+* if available: the release date as well as the author or the publisher (e.g. the media company) of the search result.
+
+Do NOT include:
+* advertisements
+* any other information not related to the Record or the Claim
+
+Additional rules:
+* Do not add any additional information besides the information in the Search Result.
+* If the Search Result doesn't contain any relevant information for the fact-checking work, simply print one word in capital letters: "NONE".
+* Keep your writing style like in the Examples 1, 2 and 3 provided to you.
+* Try to filter out relevant information even if the search result is in a different language.
+
+# Example 1
+The search result from America Today provides several photographs of the Notre-Dame Cathedral fire on April 15, 2019. <image:i>, <image:j>, <image:k>. None of the images show the Eiffel Tower in the background. 
+
+# Example 2
+NONE
+
+# Example 3
+The Guardian discusses a report blaming the Syrian government for a toxic gas attack and condemning their use of chemical weapons. The Guardian mentions the Chemical Weapons Convention and the responsibilities of Syria under the convention. According to The Guardian, The White House condemned the Assad regime for defying the norm against chemical weapons use.
+
+# Record
+## Claim
+Claim: "<image:26> This image shows destroyed Ukrainian tanks during Ukraine's incursion into Russia's Kursk Oblast in August 2024."
+
+## Actions
+```
+reverse_search(<image:26>)
+image_search("destroyed Ukrainian tanks Kursk Oblast August 2024")
+```
+
+# Search Result
+From [Source](https://en.sputniknews.africa/20241017/ukraine-has-reportedly-lost-about-40-leopard-tanks-since-february-2022-1068726197.html): Found exact image on website with title: Ukraine Has Reportedly Lost About 40 Leopard Tanks Since ...
+Content: "[](https://en.sputniknews.africa "Sputnik Africa")
+
+*   [](https://en.sputniknews.africa "Sputnik Africa")
+    
+*   [](https://en.sputniknews.africa/20241017/ "News")
+    
+*   [](https://en.sputniknews.africa/20241017/ukraine-has-reportedly-lost-about-40-leopard-tanks-since-february-2022-1068726197.html "Ukraine Has Reportedly Lost About 40 Leopard Tanks Since February 2022")
+    
+
+[! - Sputnik Africa, 1920, 10.04.2023 <image:2766>\
+\
+Russia's Special Operation in Ukraine\
+\
+On February 24, 2022, Russia launched its special military operation in Ukraine, aiming to liberate and defend the inhabitants of the Donbass region, where people have been suffering from a blockade and regular attacks by the Kiev regime's forces since 2014.](/russias-special-operation-in-ukraine/ "Russia's Special Operation in Ukraine")
+
+https://en.sputniknews.africa/20241017/ukraine-has-reportedly-lost-about-40-leopard-tanks-since-february-2022-1068726197.html
+
+[](https://en.sputniknews.africa/20241017/ukraine-has-reportedly-lost-about-40-leopard-tanks-since-february-2022-1068726197.html "Ukraine Has Reportedly Lost About 40 Leopard Tanks Since February 2022")
+
+Ukraine Has Reportedly Lost About 40 Leopard Tanks Since February 2022
+
+Ukraine Has Reportedly Lost About 40 Leopard Tanks Since February 2022
+
+Sputnik Africa
+
+MOSCOW (Sputnik) - Ukraine has lost around 40 Leopard tanks since the beginning of Russia's special military operation in February 2022, the Business Insider... 17.10.2024, Sputnik Africa
+
+2024-10-17T10:12+0200
+
+2024-10-17T10:12+0200
+
+2024-10-17T13:02+0200
+
+russia's special operation in ukraine
+
+ukraine
+
+russia
+
+international
+
+leopard 2
+
+tank
+
+weapon
+
+conflict
+
+https://cdn1.img.sputniknews.africa/img/07e8/07/0d/1067487443\_0:0:3564:2004\_1920x0\_80\_0\_0\_7733207e8d6471ece40fd505c0b45362.jpg
+
+Some open-source estimates suggest that Ukraine had already lost nearly 40 Leopards, but those estimates are unconfirmed so far, according to the report. Russia repeatedly stated that arms supplies to Ukraine hinder the settlement and directly involve NATO countries in the conflict. Russian Foreign Minister Sergey Lavrov said that the United States and NATO were directly involved in the conflict not only by providing weapons but also by training Ukrainian personnel in European countries.
+
+https://en.sputniknews.africa/20231104/quarter-of-leopard-2-tanks-written-off-by-ukraine-just-over-week-1063322121.html
+
+ukraine
+
+russia
+
+Sputnik Africa
+
+[](https://en.sputniknews.africa "Sputnik Africa")
+
+feedback@sputniknews.com
+
++74956456601
+
+MIA „Rossiya Segodnya“
+
+[](https://t.me/sputnik_africa)
+[](https://t.me/sputnik_afrique)
+[](https://t.me/sputnik_ethiopia)
+[](https://x.com/sputnik_africa)
+[](https://x.com/sputnik_afrique)
+[](https://x.com/sputnik_ethio)
+[](https://x.com/sputnik_swahili)
+
+[](https://en.sputniknews.africa/i/logo/logo.png "Sputnik Africa")
+[](https://en.sputniknews.africa/i/logo/logo.png "Sputnik Africa")
+
+252
+
+60
+
+2024
+
+Sputnik Africa
+
+[](https://en.sputniknews.africa "Sputnik Africa")
+
+feedback@sputniknews.com
+
++74956456601
+
+MIA „Rossiya Segodnya“
+
+[](https://t.me/sputnik_africa)
+[](https://t.me/sputnik_afrique)
+[](https://t.me/sputnik_ethiopia)
+[](https://x.com/sputnik_africa)
+[](https://x.com/sputnik_afrique)
+[](https://x.com/sputnik_ethio)
+[](https://x.com/sputnik_swahili)
+
+[](https://en.sputniknews.africa/i/logo/logo.png "Sputnik Africa")
+[](https://en.sputniknews.africa/i/logo/logo.png "Sputnik Africa")
+
+252
+
+60
+
+News
+
+en\_EN
+
+Sputnik Africa
+
+[](https://en.sputniknews.africa "Sputnik Africa")
+
+feedback@sputniknews.com
+
++74956456601
+
+MIA „Rossiya Segodnya“
+
+[](https://t.me/sputnik_africa)
+[](https://t.me/sputnik_afrique)
+[](https://t.me/sputnik_ethiopia)
+[](https://x.com/sputnik_africa)
+[](https://x.com/sputnik_afrique)
+[](https://x.com/sputnik_ethio)
+[](https://x.com/sputnik_swahili)
+
+[](https://en.sputniknews.africa/i/logo/logo.png "Sputnik Africa")
+[](https://en.sputniknews.africa/i/logo/logo.png "Sputnik Africa")
+
+252
+
+60
+
+[](https://cdn1.img.sputniknews.africa/img/07e8/07/0d/1067487443_0:0:3564:2004_1920x0_80_0_0_7733207e8d6471ece40fd505c0b45362.jpg "A Leopard 2 tank as a part of weapons deliveries to Ukraine")
+[](https://cdn1.img.sputniknews.africa/img/07e8/07/0d/1067487443_0:0:3564:2004_1920x0_80_0_0_7733207e8d6471ece40fd505c0b45362.jpg "A Leopard 2 tank as a part of weapons deliveries to Ukraine")
+
+1920
+
+1080
+
+true
+
+ <image:2767>
+
+[](https://cdn1.img.sputniknews.africa/img/07e8/07/0d/1067487443_252:0:2983:2048_1920x0_80_0_0_444c3617e32e6e66d731b38fccd8b1cd.jpg "A Leopard 2 tank as a part of weapons deliveries to Ukraine")
+[](https://cdn1.img.sputniknews.africa/img/07e8/07/0d/1067487443_252:0:2983:2048_1920x0_80_0_0_444c3617e32e6e66d731b38fccd8b1cd.jpg "A Leopard 2 tank as a part of weapons deliveries to Ukraine")
+
+1920
+
+1440
+
+true
+
+https://cdn1.img.sputniknews.africa/img/07e8/07/0d/1067487443\_252:0:2983:2048\_1920x0\_80\_0\_0\_444c3617e32e6e66d731b38fccd8b1cd.jpg <image:2768>
+
+[](https://cdn1.img.sputniknews.africa/img/07e8/07/0d/1067487443_593:0:2641:2048_1920x0_80_0_0_641c21d50bc8ff59d5f188705019fc86.jpg "A Leopard 2 tank as a part of weapons deliveries to Ukraine")
+[](https://cdn1.img.sputniknews.africa/img/07e8/07/0d/1067487443_593:0:2641:2048_1920x0_80_0_0_641c21d50bc8ff59d5f188705019fc86.jpg "A Leopard 2 tank as a part of weapons deliveries to Ukraine")
+
+1920
+
+1920
+
+true
+
+[](https://cdn1.img.sputniknews.africa/img/07e8/07/0d/1067487443_593:0:2641:2048_1920x0_80_0_0_641c21d50bc8ff59d5f188705019fc86.jpg "A Leopard 2 tank as a part of weapons deliveries to Ukraine")
+
+Sputnik Africa
+
+[](https://en.sputniknews.africa "Sputnik Africa")
+
+feedback@sputniknews.com
+
++74956456601
+
+MIA „Rossiya Segodnya“
+
+[](https://t.me/sputnik_africa)
+[](https://t.me/sputnik_afrique)
+[](https://t.me/sputnik_ethiopia)
+[](https://x.com/sputnik_africa)
+[](https://x.com/sputnik_afrique)
+[](https://x.com/sputnik_ethio)
+[](https://x.com/sputnik_swahili)
+
+[](https://en.sputniknews.africa/i/logo/logo.png "Sputnik Africa")
+[](https://en.sputniknews.africa/i/logo/logo.png "Sputnik Africa")
+
+252
+
+60
+
+Sputnik Africa
+
+ukraine, russia, international, leopard 2, tank, weapon, conflict
+
+ukraine, russia, international, leopard 2, tank, weapon, conflict
+
+Ukraine Has Reportedly Lost About 40 Leopard Tanks Since February 2022
+======================================================================
+
+[10:12 17.10.2024](/20241017/ "News archive")
+ (Updated: 13:02 17.10.2024)
+
+© AP Photo / Michael SohnA Leopard 2 tank as a part of weapons deliveries to Ukraine
+
+![A Leopard 2 tank as a part of weapons deliveries to Ukraine - Sputnik Africa, 1920, 17.10.2024](https://cdn1.img.sputniknews.africa/img/07e8/07/0d/1067487443_0:0:3564:2004_1920x0_80_0_0_7733207e8d6471ece40fd505c0b45362.jpg "A Leopard 2 tank as a part of weapons deliveries to Ukraine")
+
+© AP Photo / Michael Sohn
+
+Subscribe
+
+MOSCOW (Sputnik) - Ukraine has lost around 40 Leopard tanks since the beginning of Russia's special military operation in February 2022, the Business Insider news outlet reported on Thursday.
+
+Some open-source estimates suggest that Ukraine had already [lost](https://en.sputniknews.africa/20241013/1068665538.html)
+ nearly 40 Leopards, but those estimates are unconfirmed so far, according to the report.
+
+Russia repeatedly stated that arms supplies to Ukraine hinder the settlement and directly involve NATO countries in the conflict. Russian Foreign Minister Sergey Lavrov said that the United States and [NATO](https://en.sputniknews.africa/20240512/1066501213.html)
+ were directly involved in the conflict not only by providing weapons but also by training Ukrainian personnel in European countries.
+
+[![Leopard 2 and Bradley pictured among destroyed and damaged Ukrainian vehicles. Screenshot of Russian Defense Ministry video. - Sputnik Africa, 1920, 04.11.2023](https://cdn1.img.sputniknews.africa/img/07e7/08/05/1061086329_0:221:1360:765_1920x0_80_0_0_e3c9d50c9e4682697a50f5d445b1b805.jpg "Leopard 2 and Bradley pictured among destroyed and damaged Ukrainian vehicles. Screenshot of Russian Defense Ministry video.")](/20231104/quarter-of-leopard-2-tanks-written-off-by-ukraine-just-over-week-1063322121.html "Quarter of Leopard 2 Tanks 'Written Off' by Ukraine Just Over Week")
+
+[Russia's Special Operation in Ukraine](/russias-special-operation-in-ukraine/ "Russia's Special Operation in Ukraine")
+
+[Quarter of Leopard 2 Tanks 'Written Off' by Ukraine Just Over Week](/20231104/quarter-of-leopard-2-tanks-written-off-by-ukraine-just-over-week-1063322121.html "Quarter of Leopard 2 Tanks 'Written Off' by Ukraine Just Over Week")
+
+4 November 2023, 15:10
+
+*   [Russia's Special Operation in Ukraine](/russias-special-operation-in-ukraine/ "Russia's Special Operation in Ukraine")
+    
+*   [Ukraine](/location_ukraine/ "Ukraine")
+    
+*   [Russia](/location_russia/ "Russia")
+    
+*   [International](/category_international/ "International")
+    
+*   [Leopard 2](/product_leopard-2/ "Leopard 2")
+    
+*   [tank](/category_tank/ "tank")
+    
+*   [weapon](/common_weapon/ "weapon")
+    
+*   [conflict](/category_conflict/ "conflict")
+    
+
+Newsfeed
+
+0
+
+![](https://cdn1.img.sputniknews.africa/i/loader.svg?)
+
+![](https://cdn1.img.sputniknews.africa/i/loader.svg?)
+
+![](https://cdn1.img.sputniknews.africa/i/loader.svg?)"
+
+# Your Summary
+
+
+
+===== > RESPONSE:  < =====
+The search result from Sputnik Africa, published on October 17, 2024, reports that Ukraine has lost around 40 Leopard tanks since the beginning of Russia's special military operation in February 2022. The article includes an image of a Leopard 2 tank <image:2767>, <image:2768>. The article also mentions that Russia repeatedly stated that arms supplies to Ukraine hinder the settlement and directly involve NATO countries in the conflict.
+
+_________________________
+
+
+
+SummarizeResultPrompt - QUERY:
+
+# Instructions
+In order to find evidence that helps your fact-check, you just ran a web search which yielded a Search Result. **Your task right now is to summarize the Search Result.** What to include:
+* information that might be useful for the fact-check (see Record)
+* relevant images (refer to images by inserting their reference <image:k>)
+* if available: the release date as well as the author or the publisher (e.g. the media company) of the search result.
+
+Do NOT include:
+* advertisements
+* any other information not related to the Record or the Claim
+
+Additional rules:
+* Do not add any additional information besides the information in the Search Result.
+* If the Search Result doesn't contain any relevant information for the fact-checking work, simply print one word in capital letters: "NONE".
+* Keep your writing style like in the Examples 1, 2 and 3 provided to you.
+* Try to filter out relevant information even if the search result is in a different language.
+
+# Example 1
+The search result from America Today provides several photographs of the Notre-Dame Cathedral fire on April 15, 2019. <image:i>, <image:j>, <image:k>. None of the images show the Eiffel Tower in the background. 
+
+# Example 2
+NONE
+
+# Example 3
+The Guardian discusses a report blaming the Syrian government for a toxic gas attack and condemning their use of chemical weapons. The Guardian mentions the Chemical Weapons Convention and the responsibilities of Syria under the convention. According to The Guardian, The White House condemned the Assad regime for defying the norm against chemical weapons use.
+
+# Record
+## Claim
+Claim: "<image:26> This image shows destroyed Ukrainian tanks during Ukraine's incursion into Russia's Kursk Oblast in August 2024."
+
+## Actions
+```
+reverse_search(<image:26>)
+image_search("destroyed Ukrainian tanks Kursk Oblast August 2024")
+```
+
+# Search Result
+From [Source](https://www.themoscowtimes.com/2023/06/13/russia-says-german-leopard-tanks-us-bradleys-captured-in-ukraine-a81492): Found exact image on website with title: Russia Says German Leopard Tanks, U.S. Bradleys Captured in ...
+Content: "[![The Moscow Times](https://static.themoscowtimes.com/img/logo_tmt_30_yo.svg)](https://www.themoscowtimes.com/ "The Moscow Times - Independent News from Russia")
+
+Support The Moscow Times!
+
+[Contribute today](https://www.themoscowtimes.com/contribute?utm_source=contribute&utm_medium=internal-header)
+
+[](https://www.themoscowtimes.com/account)
+
+[My account](https://www.themoscowtimes.com/account)
+ [Signout](https://www.themoscowtimes.com/account/signout)
+
+Support The Moscow Times!
+
+[Contribute today](https://www.themoscowtimes.com/contribute?utm_source=contribute&utm_medium=internal-header-mobile)
+
+By [AFP](https://www.themoscowtimes.com/author/afp "AFP")
+
+June 13, 2023
+
+! <image:2769>
+
+Ukrainian Armed Forces destroyed in the Zaporozhye direction. Russian Defence Ministry / TASS
+
+Moscow said Tuesday that it had captured several German Leopard tanks and U.S. Bradley infantry fighting vehicles, releasing footage showing Russian troops surveying the equipment supplied to Ukraine by Western countries.
+
+"Leopard tanks and Bradley infantry fighting vehicles. These are our trophies. Equipment of the Ukrainian armed forces in the Zaporizhzhia region," the Russian Defense Ministry said in a statement.
+
+"Servicemen of the Vostok group inspect enemy tanks and infantry fighting vehicles captured in battle."
+
+Kyiv has appealed to its allies in the West to deliver a broad range of modern military equipment to help Ukrainian forces recapture large swathes of territory controlled by Russian forces.
+
+The Defense Ministry said several of the captured vehicles had working engines, suggesting that the battles they were involved in had been short and that Ukrainian troops had "fled" their offensive positions.
+
+Read more about: [Ukraine war](https://www.themoscowtimes.com/tag/ukraine-war "Ukraine war")
+
+#### Sign up for our free weekly newsletter
+
+Our weekly newsletter contains a hand-picked selection of news, features, analysis and more from The Moscow Times. You will receive it in your mailbox every Friday. Never miss the latest news from Russia. [Preview](https://www.themoscowtimes.com/newsletterpreview/article)
+
+  Subscribe
+
+_Subscribers agree to the [Privacy Policy](https://www.themoscowtimes.com/page/privacy-policy)
+_
+
+We sent a confirmation to your email. Please confirm your subscription.
+
+**A Message from The Moscow Times:**
+
+Dear readers,
+
+We are facing unprecedented challenges. Russia's Prosecutor General's Office has designated The Moscow Times as an "undesirable" organization, criminalizing our work and putting our staff at risk of prosecution. This follows our earlier unjust labeling as a "foreign agent."
+
+These actions are direct attempts to silence independent journalism in Russia. The authorities claim our work "discredits the decisions of the Russian leadership." We see things differently: we strive to provide accurate, unbiased reporting on Russia.
+
+We, the journalists of The Moscow Times, refuse to be silenced. But to continue our work, [we need your help](https://www.themoscowtimes.com/contribute?utm_source=contribute&utm_medium=article "we need your help")
+.
+
+Your support, no matter how small, makes a world of difference. If you can, please support us monthly starting from just $2. It's quick to set up, and every contribution makes a significant impact.
+
+By supporting The Moscow Times, you're defending open, independent journalism in the face of repression. Thank you for standing with us.
+
+Once
+
+Monthly
+
+Annual
+
+Continue
+
+!paiment methods <image:2770>
+
+Not ready to support today?  
+Remind me later.
+
+×
+
+#### **Remind me next month**
+
+Remind me
+
+Thank you! Your reminder is set.
+
+We will send you one reminder email a month from now. For details on the personal data we collect and how it is used, please see our [Privacy Policy](https://www.themoscowtimes.com/page/privacy-policy "privacy policy")
+.
+
+Read more
+---------
+
+[! <image:2771>\
+\
+opinion Ionuț-Vlad Şutea\
+\
+### How to Understand Russia’s Shadow War Against the West\
+\
+Russia’s strategy of attacking the West without escalating to the level of open war is an evolving threat we cannot afford to ignore.\
+\
+5 Min read](https://www.themoscowtimes.com/2024/07/24/how-to-understand-russias-shadow-war-against-the-west-a85814 "How to Understand Russia’s Shadow War Against the West")
+
+[! <image:2772>\
+\
+### Two Killed in Overnight Strikes on Ukraine\
+\
+Around 50 buildings were damaged in the bombardment.\
+\
+1 Min read](https://www.themoscowtimes.com/2024/07/20/two-killed-in-overnight-strikes-on-ukraine-a85775 "Two Killed in Overnight Strikes on Ukraine")
+
+[! <image:2773>\
+\
+### Russian Attacks in Southern Ukraine Kill 2\
+\
+In the town of Bilozerka, "massive strikes by Russian rocket artillery" left two dead, the Kherson region Governor Oleksandr Prokudin said.\
+\
+1 Min read](https://www.themoscowtimes.com/2024/07/19/russian-attacks-in-southern-ukraine-kill-2-a85769 "Russian Attacks in Southern Ukraine Kill 2")
+
+[! <image:2774>\
+\
+### Russia Says Destroyed Dozens of Ukrainian Drones in Annexed Crimea\
+\
+Videos shared on social media showed what appeared to be Russian defense forces blowing up waterborne drones off the coast of Crimea.\
+\
+1 Min read](https://www.themoscowtimes.com/2024/07/18/russia-says-destroyed-dozens-of-ukrainian-drones-in-annexed-crimea-a85748 "Russia Says Destroyed Dozens of Ukrainian Drones in Annexed Crimea")"
+
+# Your Summary
+
+
+
+===== > RESPONSE:  < =====
+The Moscow Times published an article on June 13, 2023, stating that Russia had captured German Leopard tanks and U.S. Bradley infantry fighting vehicles in the Zaporizhzhia region. The article includes an image <image:2769> of destroyed tanks.
+
+_________________________
+
+
+
+SummarizeResultPrompt - QUERY:
+
+# Instructions
+In order to find evidence that helps your fact-check, you just ran a web search which yielded a Search Result. **Your task right now is to summarize the Search Result.** What to include:
+* information that might be useful for the fact-check (see Record)
+* relevant images (refer to images by inserting their reference <image:k>)
+* if available: the release date as well as the author or the publisher (e.g. the media company) of the search result.
+
+Do NOT include:
+* advertisements
+* any other information not related to the Record or the Claim
+
+Additional rules:
+* Do not add any additional information besides the information in the Search Result.
+* If the Search Result doesn't contain any relevant information for the fact-checking work, simply print one word in capital letters: "NONE".
+* Keep your writing style like in the Examples 1, 2 and 3 provided to you.
+* Try to filter out relevant information even if the search result is in a different language.
+
+# Example 1
+The search result from America Today provides several photographs of the Notre-Dame Cathedral fire on April 15, 2019. <image:i>, <image:j>, <image:k>. None of the images show the Eiffel Tower in the background. 
+
+# Example 2
+NONE
+
+# Example 3
+The Guardian discusses a report blaming the Syrian government for a toxic gas attack and condemning their use of chemical weapons. The Guardian mentions the Chemical Weapons Convention and the responsibilities of Syria under the convention. According to The Guardian, The White House condemned the Assad regime for defying the norm against chemical weapons use.
+
+# Record
+## Claim
+Claim: "<image:26> This image shows destroyed Ukrainian tanks during Ukraine's incursion into Russia's Kursk Oblast in August 2024."
+
+## Actions
+```
+reverse_search(<image:26>)
+image_search("destroyed Ukrainian tanks Kursk Oblast August 2024")
+```
+
+# Search Result
+From [Source](https://defencesecurityasia.com/en/german-made-leopard-tanks-bear-the-brunt-of-russian-forces-rejuvenation-in-ukraine/): Found exact image on website with title: German-Made Leopard Tanks Bear The Brunt of Russian Forces ...
+Content: "[!Defence Security Asia <image:2775>](https://defencesecurityasia.com/en/home-en/)
+
+German-Made Leopard Tanks Bear The Brunt of Russian Forces’ “Rejuvenation” in Ukraine”
+======================================================================================
+
+In addition to the Leopard tanks, the Russian Ministry of Defense also alleged that 13 armored vehicles, 55 various vehicles, "Grad" multiple rocket launcher systems, and 47 artillery units—22 of which were supplied by foreign countries—were destroyed during this period.
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+[Image](https://defencesecurityasia.com/en/type/image/)
+[News](https://defencesecurityasia.com/en/category/news/)
+[International](https://defencesecurityasia.com/en/category/news/international-en/)
+[Technology](https://defencesecurityasia.com/en/category/technology/)
+
+[By **admin**](https://defencesecurityasia.com/en/author/dsa-a/ "Browse Author Articles")
+ On **May 19, 2024**
+
+ <image:2776>
+
+The captured Ukrainian's Leopard 2A6 main battle tanks on its way to Moscow.
+
+**Share**[](https://www.facebook.com/sharer.php?u=https%3A%2F%2Fdefencesecurityasia.com%2Fen%2Fgerman-made-leopard-tanks-bear-the-brunt-of-russian-forces-rejuvenation-in-ukraine%2F)
+[](https://twitter.com/share?text=German-Made Leopard Tanks Bear The Brunt of Russian Forces’ “Rejuvenation” in Ukraine”&url=https%3A%2F%2Fdefencesecurityasia.com%2Fen%2Fgerman-made-leopard-tanks-bear-the-brunt-of-russian-forces-rejuvenation-in-ukraine%2F)
+[](https://plus.google.com/share?url=https%3A%2F%2Fdefencesecurityasia.com%2Fen%2Fgerman-made-leopard-tanks-bear-the-brunt-of-russian-forces-rejuvenation-in-ukraine%2F)
+[](https://reddit.com/submit?url=https%3A%2F%2Fdefencesecurityasia.com%2Fen%2Fgerman-made-leopard-tanks-bear-the-brunt-of-russian-forces-rejuvenation-in-ukraine%2F&title=German-Made Leopard Tanks Bear The Brunt of Russian Forces’ “Rejuvenation” in Ukraine”)
+[](whatsapp://send?text=German-Made Leopard Tanks Bear The Brunt of Russian Forces’ “Rejuvenation” in Ukraine” %0A%0A https%3A%2F%2Fdefencesecurityasia.com%2Fen%2Fgerman-made-leopard-tanks-bear-the-brunt-of-russian-forces-rejuvenation-in-ukraine%2F)
+[](https://pinterest.com/pin/create/button/?url=https%3A%2F%2Fdefencesecurityasia.com%2Fen%2Fgerman-made-leopard-tanks-bear-the-brunt-of-russian-forces-rejuvenation-in-ukraine%2F&media=https://i0.wp.com/defencesecurityasia.com/wp-content/uploads/2024/04/20240423_000828-1.jpg?fit=640%2C427&ssl=1&description=German-Made Leopard Tanks Bear The Brunt of Russian Forces’ “Rejuvenation” in Ukraine”)
+[](/cdn-cgi/l/email-protection#4b74383e29212e283f760c2e39262a2566062a2f2e6b072e243b2a392f6b1f2a2520386b092e2a396b1f232e6b09393e253f6b242d6b193e3838222a256b0d2439282e386d6873797a7c706b6d687379797b70192e213e3d2e252a3f2224256d687379797a706b22256b1e20392a22252e6d687379797a706d29242f3276233f3f3b386e780a6e790d6e790d2f2e2d2e25282e382e283e39223f322a38222a652824266e790d2e256e790d2c2e39262a2566262a2f2e66272e243b2a392f663f2a25203866292e2a39663f232e6629393e253f66242d66393e3838222a25662d2439282e3866392e213e3d2e252a3f222425662225663e20392a22252e6e790d)
+
+**(DEFENCE SECURITY ASIA) — During the week of May 11 to 17, Russian military claimed to have successfully destroyed five Leopard 2A1 tanks, manufactured by the German company Krauss-Maffei but donated to the Ukrainian Armed Forces to help the Eastern Europe country in its armed conflict with Russia.**
+
+**In addition to the Leopard tanks, the Russian Ministry of Defense also alleged that 13 armored vehicles, 55 various vehicles, “Grad” multiple rocket launcher systems, and 47 artillery units—22 of which were supplied by foreign countries—were destroyed during this period.**
+
+**Moreover, four Mi-24 helicopters and 40 unmanned boats belonging to the Ukrainian military were reportedly destroyed by Russia in the same timeframe.**
+
+**Among the foreign-supplied armored vehicles to Ukraine, the Leopard tanks have been the most frequently supplied to Kyiv compared to other models such as the American-made Abrams and the British-made Challengers.**
+
+**Since last year, countries such as Germany and several other European nations have supplied between 100-200 Leopard tanks to Ukraine for use in a spring counteroffensive against Russian positions.**
+
+**“Russian Soldiers Pose in Front of Captured Leopard 2A6 Tank”**
+
+**Line of Leopard tanks and Bradley armoured infantry fighting vehicle were destroyed in Zaphorizia, southern Ukraine.**
+
+**Although the Ukrainian counteroffensive in 2023 initially started well, it faced increasingly formidable opposition from Russian forces who began altering their tactics and strategies.**
+
+**These changes in strategy and tactics by the Russian forces led to the destruction of many of the Ukrainian tanks that had been supplied by donor countries like Germany, other European nations, the United States, and Britain.**
+
+**However, to date, no one knows exactly how many Leopard tanks have been destroyed by Russia.**
+
+**Nevertheless, Russian President Vladimir Putin has reportedly stated to his country’s war correspondents that Ukraine has lost more than 160 tanks supplied by foreign countries.**
+
+**Given the high volume of Leopard tanks supplied to Ukraine, it is logical to conclude that many of the tanks destroyed by Russia were Leopard models.**
+
+**Regarding the Abrams tanks, the Russian military stated that of the 31 American-made tanks supplied to Ukraine, more than five of the tanks have been destroyed by Russian forces.**
+
+**A charred M1A1 Abrams main battle tank being transported to Moscow to participate in an exhibition at Victory Park.**
+
+ **As a result of the destruction of five Abrams tanks, the United States has reportedly “withdrawn” these tanks from the Ukrainian battlefield, likely in an effort to “preserve its reputation.”**
+
+**Following the destruction experienced by Leopard tanks supplied by Germany and other European countries, Ukraine’s Deputy Foreign Minister Andii Melnyk has requested that Kiev be supplied with more Leopard tanks, including the latest variant, the Leopard 2A6.**
+
+ **However, the newest Leopard 2A6 variant supplied to Ukraine has met the same fate.**
+
+**The Russian military reported capturing the most powerful tank in the Ukrainian arsenal, the German-made Leopard 2A6, after intense fighting in Avdiivka, Ukraine, last April.**
+
+**It is believed that Ukraine possesses 21 Leopard 2A6 tanks, with 18 of these tanks developed by the companies Krauss-Maffei Wegmann and Rheinmetall being donated by Germany, while the remainder were provided by Portugal.**
+
+**However, most of these Leopard 2A6 tanks donated to the Ukrainian military could not be used after failing to be properly maintained and remained inoperable as claimed by a senior German politician last January.**
+
+**An Abrams tank caught fire after being struck by a Lancet kamikaze drone and an RPG from Russian forces.**
+
+**According to Russian military sources, after capturing and removing the tank from the combat area, Russian forces transported the tank and sent it to Moscow, possibly for research purposes.**
+
+**The Leopard 2A6 was successfully captured after a Russian platoon executed an ambush that caused the Ukrainian tank crew to abandon the German-made vehicle.**
+
+**The Leopard 2A6 represents an upgrade from the Leopard 2A5, incorporating enhanced armor protection, firepower, and electronic warfare capabilities.**
+
+**The tank measures 9.97 meters in length and weighs 62.3 tons, making it one of the heaviest main battle tanks ever deployed, with an engine power of 1,500 horsepower.**
+
+**Capable of speeds up to 75 km/h and with an operational range of 500 km, it is equipped with a Rheinmetall 120 mm L/55 cannon, allowing it to fire all standard NATO ammunition types, including APFSDS, HEAT, and multi-purpose shells.**
+
+**The Leopard 2A6 also features dual 7.62 mm MG3A1 machine guns and an advanced fire control system including a laser rangefinder, thermal imaging, and a ballistic computer. — DSA**
+
+[featured](https://defencesecurityasia.com/en/tag/featured-en/)
+[German](https://defencesecurityasia.com/en/tag/german/)
+[Leopard](https://defencesecurityasia.com/en/tag/leopard-en/)
+[Ukraine](https://defencesecurityasia.com/en/tag/ukraine-en/)
+
+**Share** [Facebook](https://www.facebook.com/sharer.php?u=https%3A%2F%2Fdefencesecurityasia.com%2Fen%2Fgerman-made-leopard-tanks-bear-the-brunt-of-russian-forces-rejuvenation-in-ukraine%2F)
+[Twitter](https://twitter.com/share?text=German-Made Leopard Tanks Bear The Brunt of Russian Forces’ “Rejuvenation” in Ukraine”&url=https%3A%2F%2Fdefencesecurityasia.com%2Fen%2Fgerman-made-leopard-tanks-bear-the-brunt-of-russian-forces-rejuvenation-in-ukraine%2F)
+[Google+](https://plus.google.com/share?url=https%3A%2F%2Fdefencesecurityasia.com%2Fen%2Fgerman-made-leopard-tanks-bear-the-brunt-of-russian-forces-rejuvenation-in-ukraine%2F)
+[ReddIt](https://reddit.com/submit?url=https%3A%2F%2Fdefencesecurityasia.com%2Fen%2Fgerman-made-leopard-tanks-bear-the-brunt-of-russian-forces-rejuvenation-in-ukraine%2F&title=German-Made Leopard Tanks Bear The Brunt of Russian Forces’ “Rejuvenation” in Ukraine”)
+[WhatsApp](whatsapp://send?text=German-Made Leopard Tanks Bear The Brunt of Russian Forces’ “Rejuvenation” in Ukraine” %0A%0A https%3A%2F%2Fdefencesecurityasia.com%2Fen%2Fgerman-made-leopard-tanks-bear-the-brunt-of-russian-forces-rejuvenation-in-ukraine%2F)
+[Pinterest](https://pinterest.com/pin/create/button/?url=https%3A%2F%2Fdefencesecurityasia.com%2Fen%2Fgerman-made-leopard-tanks-bear-the-brunt-of-russian-forces-rejuvenation-in-ukraine%2F&media=https://i0.wp.com/defencesecurityasia.com/wp-content/uploads/2024/04/20240423_000828-1.jpg?fit=640%2C427&ssl=1&description=German-Made Leopard Tanks Bear The Brunt of Russian Forces’ “Rejuvenation” in Ukraine”)
+[Email](/cdn-cgi/l/email-protection#e8d79b9d8a828d8b9cd5af8d9a858986c5a5898c8dc8a48d8798899a8cc8bc8986839bc8aa8d899ac8bc808dc8aa9a9d869cc8878ec8ba9d9b9b818986c8ae879a8b8d9bcecbd0dad9dfd3c8cecbd0dadad8d3ba8d829d9e8d86899c818786cecbd0dadad9d3c88186c8bd839a8981868dcecbd0dadad9d3ce8a878c91d5809c9c989bcddba9cddaaecddaae8c8d8e8d868b8d9b8d8b9d9a819c91899b8189c68b8785cddaae8d86cddaae8f8d9a858986c585898c8dc5848d8798899a8cc59c8986839bc58a8d899ac59c808dc58a9a9d869cc5878ec59a9d9b9b818986c58e879a8b8d9bc59a8d829d9e8d86899c818786c58186c59d839a8981868dcddaae)
+
+[](https://defencesecurityasia.com/en/author/dsa-a/ "Browse Author Articles")
+
+[admin](https://defencesecurityasia.com/en/author/dsa-a/)
+ 7479 posts 1 comments
+
+*   [](https://defencesecurityasia.com)
+    
+
+Prev Post
+
+[(VIDEO) Does Hezbollah Have Iran-Made “3rd Khordad” Advanced Air Defense System?](https://defencesecurityasia.com/en/video-does-hezbollah-have-iran-made-3rd-khordad-advanced-air-defense-system/)
+
+Next Post
+
+[“KAAN” to Continue as Planned Even If Turkey Allowed to Repurchase F-35s from the US](https://defencesecurityasia.com/en/kaan-to-continue-as-planned-even-if-turkey-allowed-to-repurchase-f-35s-from-the-us/)
+
+Comments are closed.
+
+You cannot print contents of this website."
+
+# Your Summary
+
+
+
+===== > RESPONSE:  < =====
+The article from Defence Security Asia, published on May 19, 2024, discusses the destruction of German-made Leopard tanks in Ukraine. The Russian Ministry of Defense claimed to have destroyed five Leopard 2A1 tanks. The article also mentions the destruction of other military equipment, including armored vehicles and helicopters. The article includes an image of a captured Leopard 2A6 tank <image:2776>.
+
+_________________________
+
+
+
+SummarizeSummariesPrompt - QUERY:
+
+# Instructions
+You just retrieved web sources, each one summarized under "Web Sources". **Your task right now is to summarize the web source summaries.**
+
+Always adhere to the following rules:
+* Write only one to two paragraphs.
+* Include all URLs from the listed sources. Format them as Markdown hyperlinks.
+* Do not add any additional information besides the information in the summaries.
+* Include references (<image:k>) to all relevant images.
+
+# Record
+## Claim
+Claim: "<image:26> This image shows destroyed Ukrainian tanks during Ukraine's incursion into Russia's Kursk Oblast in August 2024."
+
+## Actions
+```
+reverse_search(<image:26>)
+image_search("destroyed Ukrainian tanks Kursk Oblast August 2024")
+```
+
+## Web Sources
+**Reverse Search Result** The exact image was found in the following sources:
+
+From [Source](https://en.sputniknews.africa/20241017/ukraine-has-reportedly-lost-about-40-leopard-tanks-since-february-2022-1068726197.html): Found exact image on website with title: Ukraine Has Reportedly Lost About 40 Leopard Tanks Since ...
+Content: The search result from Sputnik Africa, published on October 17, 2024, reports that Ukraine has lost around 40 Leopard tanks since the beginning of Russia's special military operation in February 2022. The article includes an image of a Leopard 2 tank <image:2767>, <image:2768>. The article also mentions that Russia repeatedly stated that arms supplies to Ukraine hinder the settlement and directly involve NATO countries in the conflict.
+
+
+From [Source](https://www.themoscowtimes.com/2023/06/13/russia-says-german-leopard-tanks-us-bradleys-captured-in-ukraine-a81492): Found exact image on website with title: Russia Says German Leopard Tanks, U.S. Bradleys Captured in ...
+Content: The Moscow Times published an article on June 13, 2023, stating that Russia had captured German Leopard tanks and U.S. Bradley infantry fighting vehicles in the Zaporizhzhia region. The article includes an image <image:2769> of destroyed tanks.
+
+
+From [Source](https://defencesecurityasia.com/en/german-made-leopard-tanks-bear-the-brunt-of-russian-forces-rejuvenation-in-ukraine/): Found exact image on website with title: German-Made Leopard Tanks Bear The Brunt of Russian Forces ...
+Content: The article from Defence Security Asia, published on May 19, 2024, discusses the destruction of German-made Leopard tanks in Ukraine. The Russian Ministry of Defense claimed to have destroyed five Leopard 2A1 tanks. The article also mentions the destruction of other military equipment, including armored vehicles and helicopters. The article includes an image of a captured Leopard 2A6 tank <image:2776>.
+
+
+## Your Summary
+
+
+
+===== > RESPONSE:  < =====
+The image of destroyed tanks (<image:26>) appears in multiple articles. One article from Sputnik Africa, published on October 17, 2024, discusses Ukraine's loss of Leopard tanks since February 2022, including images of Leopard 2 tanks (<image:2767>, <image:2768>) ([https://en.sputniknews.africa/20241017/ukraine-has-reportedly-lost-about-40-leopard-tanks-since-february-2022-1068726197.html](https://en.sputniknews.africa/20241017/ukraine-has-reportedly-lost-about-40-leopard-tanks-since-february-2022-1068726197.html)).
+
+Another article from The Moscow Times, published on June 13, 2023, reports on Russia capturing German Leopard tanks and U.S. Bradley infantry fighting vehicles, also including the image of destroyed tanks (<image:2769>) ([https://www.themoscowtimes.com/2023/06/13/russia-says-german-leopard-tanks-us-bradleys-captured-in-ukraine-a81492](https://www.themoscowtimes.com/2023/06/13/russia-says-german-leopard-tanks-us-bradleys-captured-in-ukraine-a81492)). Defence Security Asia published an article on May 19, 2024, discussing the destruction of German-made Leopard tanks in Ukraine, including an image of a captured Leopard 2A6 tank (<image:2776>) ([https://defencesecurityasia.com/en/german-made-leopard-tanks-bear-the-brunt-of-russian-forces-rejuvenation-in-ukraine/](https://defencesecurityasia.com/en/german-made-leopard-tanks-bear-the-brunt-of-russian-forces-rejuvenation-in-ukraine/)).
+
+_________________________
+
+
+
+SummarizeResultPrompt - QUERY:
+
+# Instructions
+In order to find evidence that helps your fact-check, you just ran a web search which yielded a Search Result. **Your task right now is to summarize the Search Result.** What to include:
+* information that might be useful for the fact-check (see Record)
+* relevant images (refer to images by inserting their reference <image:k>)
+* if available: the release date as well as the author or the publisher (e.g. the media company) of the search result.
+
+Do NOT include:
+* advertisements
+* any other information not related to the Record or the Claim
+
+Additional rules:
+* Do not add any additional information besides the information in the Search Result.
+* If the Search Result doesn't contain any relevant information for the fact-checking work, simply print one word in capital letters: "NONE".
+* Keep your writing style like in the Examples 1, 2 and 3 provided to you.
+* Try to filter out relevant information even if the search result is in a different language.
+
+# Example 1
+The search result from America Today provides several photographs of the Notre-Dame Cathedral fire on April 15, 2019. <image:i>, <image:j>, <image:k>. None of the images show the Eiffel Tower in the background. 
+
+# Example 2
+NONE
+
+# Example 3
+The Guardian discusses a report blaming the Syrian government for a toxic gas attack and condemning their use of chemical weapons. The Guardian mentions the Chemical Weapons Convention and the responsibilities of Syria under the convention. According to The Guardian, The White House condemned the Assad regime for defying the norm against chemical weapons use.
+
+# Record
+## Claim
+Claim: "<image:26> This image shows destroyed Ukrainian tanks during Ukraine's incursion into Russia's Kursk Oblast in August 2024."
+
+## Actions
+```
+reverse_search(<image:26>)
+image_search("destroyed Ukrainian tanks Kursk Oblast August 2024")
+```
+
+# Search Result
+From [Source](https://cepa.org/article/the-second-battle-of-kursk-an-omen-of-doom/): 
+Content: "
+<image:6630>"
+
+# Your Summary
+
+
+
+===== > RESPONSE:  < =====
+The Center for European Policy Analysis (CEPA) published an article about the second battle of Kursk. The article contains an image of a Ukrainian tank. <image:6630>
+
+_________________________
+
+
+
+SummarizeResultPrompt - QUERY:
+
+# Instructions
+In order to find evidence that helps your fact-check, you just ran a web search which yielded a Search Result. **Your task right now is to summarize the Search Result.** What to include:
+* information that might be useful for the fact-check (see Record)
+* relevant images (refer to images by inserting their reference <image:k>)
+* if available: the release date as well as the author or the publisher (e.g. the media company) of the search result.
+
+Do NOT include:
+* advertisements
+* any other information not related to the Record or the Claim
+
+Additional rules:
+* Do not add any additional information besides the information in the Search Result.
+* If the Search Result doesn't contain any relevant information for the fact-checking work, simply print one word in capital letters: "NONE".
+* Keep your writing style like in the Examples 1, 2 and 3 provided to you.
+* Try to filter out relevant information even if the search result is in a different language.
+
+# Example 1
+The search result from America Today provides several photographs of the Notre-Dame Cathedral fire on April 15, 2019. <image:i>, <image:j>, <image:k>. None of the images show the Eiffel Tower in the background. 
+
+# Example 2
+NONE
+
+# Example 3
+The Guardian discusses a report blaming the Syrian government for a toxic gas attack and condemning their use of chemical weapons. The Guardian mentions the Chemical Weapons Convention and the responsibilities of Syria under the convention. According to The Guardian, The White House condemned the Assad regime for defying the norm against chemical weapons use.
+
+# Record
+## Claim
+Claim: "<image:26> This image shows destroyed Ukrainian tanks during Ukraine's incursion into Russia's Kursk Oblast in August 2024."
+
+## Actions
+```
+reverse_search(<image:26>)
+image_search("destroyed Ukrainian tanks Kursk Oblast August 2024")
+```
+
+# Search Result
+From [Source](https://www.aljazeera.com/news/2024/8/16/russia-says-it-eliminated-ukrainian-unit-as-kyiv-claims-advances-in-kursk): 
+Content: "
+<image:6631>"
+
+# Your Summary
+
+
+
+===== > RESPONSE:  < =====
+Al Jazeera published an article on August 16, 2024, about the conflict in Kursk. The article includes an image of a tank. <image:6631>
+
+_________________________
+
+
+
+SummarizeResultPrompt - QUERY:
+
+# Instructions
+In order to find evidence that helps your fact-check, you just ran a web search which yielded a Search Result. **Your task right now is to summarize the Search Result.** What to include:
+* information that might be useful for the fact-check (see Record)
+* relevant images (refer to images by inserting their reference <image:k>)
+* if available: the release date as well as the author or the publisher (e.g. the media company) of the search result.
+
+Do NOT include:
+* advertisements
+* any other information not related to the Record or the Claim
+
+Additional rules:
+* Do not add any additional information besides the information in the Search Result.
+* If the Search Result doesn't contain any relevant information for the fact-checking work, simply print one word in capital letters: "NONE".
+* Keep your writing style like in the Examples 1, 2 and 3 provided to you.
+* Try to filter out relevant information even if the search result is in a different language.
+
+# Example 1
+The search result from America Today provides several photographs of the Notre-Dame Cathedral fire on April 15, 2019. <image:i>, <image:j>, <image:k>. None of the images show the Eiffel Tower in the background. 
+
+# Example 2
+NONE
+
+# Example 3
+The Guardian discusses a report blaming the Syrian government for a toxic gas attack and condemning their use of chemical weapons. The Guardian mentions the Chemical Weapons Convention and the responsibilities of Syria under the convention. According to The Guardian, The White House condemned the Assad regime for defying the norm against chemical weapons use.
+
+# Record
+## Claim
+Claim: "<image:26> This image shows destroyed Ukrainian tanks during Ukraine's incursion into Russia's Kursk Oblast in August 2024."
+
+## Actions
+```
+reverse_search(<image:26>)
+image_search("destroyed Ukrainian tanks Kursk Oblast August 2024")
+```
+
+# Search Result
+From [Source](https://www.nbcnews.com/news/world/russia-evacuates-belgorod-kursk-incursion-fire-nuclear-plant-rcna166172): 
+Content: "
+<image:6632>"
+
+# Your Summary
+
+
+
+===== > RESPONSE:  < =====
+NBC News discusses the evacuation of Belgorod and Kursk. <image:6632>
+
+_________________________
+
+
+
+SummarizeSummariesPrompt - QUERY:
+
+# Instructions
+You just retrieved web sources, each one summarized under "Web Sources". **Your task right now is to summarize the web source summaries.**
+
+Always adhere to the following rules:
+* Write only one to two paragraphs.
+* Include all URLs from the listed sources. Format them as Markdown hyperlinks.
+* Do not add any additional information besides the information in the summaries.
+* Include references (<image:k>) to all relevant images.
+
+# Record
+## Claim
+Claim: "<image:26> This image shows destroyed Ukrainian tanks during Ukraine's incursion into Russia's Kursk Oblast in August 2024."
+
+## Actions
+```
+reverse_search(<image:26>)
+image_search("destroyed Ukrainian tanks Kursk Oblast August 2024")
+```
+
+## Web Sources
+**Web Search Result**
+
+From [Source](https://cepa.org/article/the-second-battle-of-kursk-an-omen-of-doom/): 
+Content: The Center for European Policy Analysis (CEPA) published an article about the second battle of Kursk. The article contains an image of a Ukrainian tank. <image:6630>
+
+
+From [Source](https://www.aljazeera.com/news/2024/8/16/russia-says-it-eliminated-ukrainian-unit-as-kyiv-claims-advances-in-kursk): 
+Content: Al Jazeera published an article on August 16, 2024, about the conflict in Kursk. The article includes an image of a tank. <image:6631>
+
+
+From [Source](https://www.nbcnews.com/news/world/russia-evacuates-belgorod-kursk-incursion-fire-nuclear-plant-rcna166172): 
+Content: NBC News discusses the evacuation of Belgorod and Kursk. <image:6632>
+
+
+## Your Summary
+
+
+
+===== > RESPONSE:  < =====
+The Center for European Policy Analysis (CEPA) published an article about the second battle of Kursk, which includes an image of a Ukrainian tank (<image:6630>). Al Jazeera published an article on August 16, 2024, about the conflict in Kursk, which includes an image of a tank (<image:6631>). NBC News discusses the evacuation of Belgorod and Kursk (<image:6632>).
+
+The provided sources do not contain the image in the claim (<image:26>).
+
+_________________________
+
+
+
+DevelopPrompt - QUERY:
+
+# Instructions
+You just retrieved new Evidence. Now, **analyze the Claim's veracity using the evidence**. Always adhere to the following rules:
+* Focus on developing new insights. Do not repeat larger parts from the Record. Do not restate the Claim.
+* Write down your thoughts step-by-step. Whenever necessary, you may elaborate in more detail.
+* Depending on the topic's complexity, invest one to three paragraphs. The fewer, the better.
+* If you find that there is insufficient information to verify the Claim, explicitly state what information is missing.
+* If you cite web sources, always refer to them by including their URL as a Markdown hyperlink.
+* **Use information only from the recorded evidence**: Avoid inserting information that is not implied by the evidence. You may use commonsense knowledge, though.
+
+# Record
+## Claim
+Claim: "<image:26> This image shows destroyed Ukrainian tanks during Ukraine's incursion into Russia's Kursk Oblast in August 2024."
+
+## Actions
+```
+reverse_search(<image:26>)
+image_search("destroyed Ukrainian tanks Kursk Oblast August 2024")
+```
+
+## Evidence
+### Evidence from `reverse_search`
+The image of destroyed tanks (<image:26>) appears in multiple articles. One article from Sputnik Africa, published on October 17, 2024, discusses Ukraine's loss of Leopard tanks since February 2022, including images of Leopard 2 tanks (<image:2767>, <image:2768>) ([https://en.sputniknews.africa/20241017/ukraine-has-reportedly-lost-about-40-leopard-tanks-since-february-2022-1068726197.html](https://en.sputniknews.africa/20241017/ukraine-has-reportedly-lost-about-40-leopard-tanks-since-february-2022-1068726197.html)).
+
+Another article from The Moscow Times, published on June 13, 2023, reports on Russia capturing German Leopard tanks and U.S. Bradley infantry fighting vehicles, also including the image of destroyed tanks (<image:2769>) ([https://www.themoscowtimes.com/2023/06/13/russia-says-german-leopard-tanks-us-bradleys-captured-in-ukraine-a81492](https://www.themoscowtimes.com/2023/06/13/russia-says-german-leopard-tanks-us-bradleys-captured-in-ukraine-a81492)). Defence Security Asia published an article on May 19, 2024, discussing the destruction of German-made Leopard tanks in Ukraine, including an image of a captured Leopard 2A6 tank (<image:2776>) ([https://defencesecurityasia.com/en/german-made-leopard-tanks-bear-the-brunt-of-russian-forces-rejuvenation-in-ukraine/](https://defencesecurityasia.com/en/german-made-leopard-tanks-bear-the-brunt-of-russian-forces-rejuvenation-in-ukraine/)).
+
+
+### Evidence from `image_search`
+The Center for European Policy Analysis (CEPA) published an article about the second battle of Kursk, which includes an image of a Ukrainian tank (<image:6630>). Al Jazeera published an article on August 16, 2024, about the conflict in Kursk, which includes an image of a tank (<image:6631>). NBC News discusses the evacuation of Belgorod and Kursk (<image:6632>).
+
+The provided sources do not contain the image in the claim (<image:26>).
+
+
+# Your Analysis
+
+
+
+===== > RESPONSE:  < =====
+The evidence does not confirm the claim. While the image of destroyed tanks (<image:26>
+_________________________
+
+
+
+JudgePrompt - QUERY:
+
+# Instructions
+**Determine the Claim's veracity** by following these steps:
+1. Briefly summarize the key insights from the fact-check (see Record) in at most one paragraph.
+2. Write one paragraph about which one of the Decision Options applies best. Include the most appropriate decision option at the end and enclose it in backticks like `this`.
+
+
+
+
+## Decision Options
+* `true`: The claim is factually accurate when it is confirmed by evidence from multiple and reliable sources.
+* `false`: The claim is not factually accurate. This is the case if one of the following three conditions is met:(1) The claim is demonstrably false when it is disproven by evidence from multiple and reliable sources,(2) The claim or image is taken out of context, i.e. the origin, content and/or meaning of a statement or an image is misrepresented. For example, an old claim or an old image is mispresented in a new context in a misleading way,(3) There is not enough evidence to verify the claim or the evidence is conflicting or self-contradictory.
+* `not enough information`: The fact-check does not contain sufficient information to come to an conclusion. For example,there is substantial lack of evidence or the evidence is inconclusive, conflicting or self-contradictory. In the case of a lack of evidence, state which information exactly is missing. In particular, if no RESULTS or sources are available, pick this decision.
+
+# Record
+## Claim
+Claim: "<image:26> This image shows destroyed Ukrainian tanks during Ukraine's incursion into Russia's Kursk Oblast in August 2024."
+
+## Actions
+```
+reverse_search(<image:26>)
+image_search("destroyed Ukrainian tanks Kursk Oblast August 2024")
+```
+
+## Evidence
+### Evidence from `reverse_search`
+The image of destroyed tanks (<image:26>) appears in multiple articles. One article from Sputnik Africa, published on October 17, 2024, discusses Ukraine's loss of Leopard tanks since February 2022, including images of Leopard 2 tanks (<image:2767>, <image:2768>) ([https://en.sputniknews.africa/20241017/ukraine-has-reportedly-lost-about-40-leopard-tanks-since-february-2022-1068726197.html](https://en.sputniknews.africa/20241017/ukraine-has-reportedly-lost-about-40-leopard-tanks-since-february-2022-1068726197.html)).
+
+Another article from The Moscow Times, published on June 13, 2023, reports on Russia capturing German Leopard tanks and U.S. Bradley infantry fighting vehicles, also including the image of destroyed tanks (<image:2769>) ([https://www.themoscowtimes.com/2023/06/13/russia-says-german-leopard-tanks-us-bradleys-captured-in-ukraine-a81492](https://www.themoscowtimes.com/2023/06/13/russia-says-german-leopard-tanks-us-bradleys-captured-in-ukraine-a81492)). Defence Security Asia published an article on May 19, 2024, discussing the destruction of German-made Leopard tanks in Ukraine, including an image of a captured Leopard 2A6 tank (<image:2776>) ([https://defencesecurityasia.com/en/german-made-leopard-tanks-bear-the-brunt-of-russian-forces-rejuvenation-in-ukraine/](https://defencesecurityasia.com/en/german-made-leopard-tanks-bear-the-brunt-of-russian-forces-rejuvenation-in-ukraine/)).
+
+
+### Evidence from `image_search`
+The Center for European Policy Analysis (CEPA) published an article about the second battle of Kursk, which includes an image of a Ukrainian tank (<image:6630>). Al Jazeera published an article on August 16, 2024, about the conflict in Kursk, which includes an image of a tank (<image:6631>). NBC News discusses the evacuation of Belgorod and Kursk (<image:6632>).
+
+The provided sources do not contain the image in the claim (<image:26>).
+
+
+## Elaboration
+The evidence does not confirm the claim. While the image of destroyed tanks (<image:26>
+
+# Your Judgement
+
+
+
+===== > RESPONSE:  < =====
+The image of destroyed tanks appears in multiple articles discussing the conflict in Ukraine, but the provided sources do not confirm the claim that the image shows destroyed Ukrainian tanks during Ukraine's incursion into Russia's Kursk Oblast in August 2024.
+
+`not enough information`
+_________________________
+
+
+
+PlanPrompt - QUERY:
+
+# Instructions
+The available knowledge is insufficient to assess the Claim. Therefore, **propose a set of actions** to retrieve new and helpful evidence. Adhere to the following rules:
+* The actions available are listed under Valid Actions, including a short description for each action. No other actions are possible at this moment. 
+* For each action, use the formatting as specified in Valid Actions.
+* Include all actions in a single Markdown code block at the end of your answer.
+* Propose as few actions as possible, but as much as needed. Do not propose similar or previously used actions.
+
+
+
+## Valid Actions
+* `image_search`
+   * Description: Run an image search on Google to retrieve related images for a given query.
+   * How to use: This is a helpful tool for fact-checking images. Use this to retrieve images associated with a specific keyword or phrase. Ensure that the query is clear and specific to improve search accuracy. If no relevant images are found, refine the query or use more descriptive terms.
+   * Format: image_search("your image search query goes here")
+
+* `geolocate`
+   * Description: Performs geolocation to determine the country where an image was taken.
+   * How to use: Provide an image and the model will determine the most likely countries where it was taken.
+   * Format: geolocate(<image:k>), where `k` is the image's ID
+
+# Example: image_search()
+
+## Claim
+Text: "Chinese officials in white protective hazmat suits carried people down a hallway to be quarantined for having COVID-19 in November 2022."
+
+...
+
+ACTIONS:
+```
+image_search("China officials white suits carry people")
+image_search("China officials carry people COVID quarantine 2022")
+```
+
+# Example: geolocate()
+
+## Claim
+Text: "<image:k> shows a nuclear weapons facility in Usbekistan."
+
+...
+
+## Actions
+```
+geolocate(<image:k>)
+```
+
+# Record
+## Claim
+Claim: "<image:26> This image shows destroyed Ukrainian tanks during Ukraine's incursion into Russia's Kursk Oblast in August 2024."
+
+## Actions
+```
+reverse_search(<image:26>)
+image_search("destroyed Ukrainian tanks Kursk Oblast August 2024")
+```
+
+## Evidence
+### Evidence from `reverse_search`
+The image of destroyed tanks (<image:26>) appears in multiple articles. One article from Sputnik Africa, published on October 17, 2024, discusses Ukraine's loss of Leopard tanks since February 2022, including images of Leopard 2 tanks (<image:2767>, <image:2768>) ([https://en.sputniknews.africa/20241017/ukraine-has-reportedly-lost-about-40-leopard-tanks-since-february-2022-1068726197.html](https://en.sputniknews.africa/20241017/ukraine-has-reportedly-lost-about-40-leopard-tanks-since-february-2022-1068726197.html)).
+
+Another article from The Moscow Times, published on June 13, 2023, reports on Russia capturing German Leopard tanks and U.S. Bradley infantry fighting vehicles, also including the image of destroyed tanks (<image:2769>) ([https://www.themoscowtimes.com/2023/06/13/russia-says-german-leopard-tanks-us-bradleys-captured-in-ukraine-a81492](https://www.themoscowtimes.com/2023/06/13/russia-says-german-leopard-tanks-us-bradleys-captured-in-ukraine-a81492)). Defence Security Asia published an article on May 19, 2024, discussing the destruction of German-made Leopard tanks in Ukraine, including an image of a captured Leopard 2A6 tank (<image:2776>) ([https://defencesecurityasia.com/en/german-made-leopard-tanks-bear-the-brunt-of-russian-forces-rejuvenation-in-ukraine/](https://defencesecurityasia.com/en/german-made-leopard-tanks-bear-the-brunt-of-russian-forces-rejuvenation-in-ukraine/)).
+
+
+### Evidence from `image_search`
+The Center for European Policy Analysis (CEPA) published an article about the second battle of Kursk, which includes an image of a Ukrainian tank (<image:6630>). Al Jazeera published an article on August 16, 2024, about the conflict in Kursk, which includes an image of a tank (<image:6631>). NBC News discusses the evacuation of Belgorod and Kursk (<image:6632>).
+
+The provided sources do not contain the image in the claim (<image:26>).
+
+
+## Elaboration
+The evidence does not confirm the claim. While the image of destroyed tanks (<image:26>
+
+# Your Actions
+
+
+
+===== > RESPONSE:  < =====
+```
+image_search("destroyed tanks Ukraine Russia war")
+```
+_________________________
+
+
+
+SummarizeResultPrompt - QUERY:
+
+# Instructions
+In order to find evidence that helps your fact-check, you just ran a web search which yielded a Search Result. **Your task right now is to summarize the Search Result.** What to include:
+* information that might be useful for the fact-check (see Record)
+* relevant images (refer to images by inserting their reference <image:k>)
+* if available: the release date as well as the author or the publisher (e.g. the media company) of the search result.
+
+Do NOT include:
+* advertisements
+* any other information not related to the Record or the Claim
+
+Additional rules:
+* Do not add any additional information besides the information in the Search Result.
+* If the Search Result doesn't contain any relevant information for the fact-checking work, simply print one word in capital letters: "NONE".
+* Keep your writing style like in the Examples 1, 2 and 3 provided to you.
+* Try to filter out relevant information even if the search result is in a different language.
+
+# Example 1
+The search result from America Today provides several photographs of the Notre-Dame Cathedral fire on April 15, 2019. <image:i>, <image:j>, <image:k>. None of the images show the Eiffel Tower in the background. 
+
+# Example 2
+NONE
+
+# Example 3
+The Guardian discusses a report blaming the Syrian government for a toxic gas attack and condemning their use of chemical weapons. The Guardian mentions the Chemical Weapons Convention and the responsibilities of Syria under the convention. According to The Guardian, The White House condemned the Assad regime for defying the norm against chemical weapons use.
+
+# Record
+## Claim
+Claim: "<image:26> This image shows destroyed Ukrainian tanks during Ukraine's incursion into Russia's Kursk Oblast in August 2024."
+
+## Actions
+```
+reverse_search(<image:26>)
+image_search("destroyed Ukrainian tanks Kursk Oblast August 2024")
+```
+
+## Evidence
+### Evidence from `reverse_search`
+The image of destroyed tanks (<image:26>) appears in multiple articles. One article from Sputnik Africa, published on October 17, 2024, discusses Ukraine's loss of Leopard tanks since February 2022, including images of Leopard 2 tanks (<image:2767>, <image:2768>) ([https://en.sputniknews.africa/20241017/ukraine-has-reportedly-lost-about-40-leopard-tanks-since-february-2022-1068726197.html](https://en.sputniknews.africa/20241017/ukraine-has-reportedly-lost-about-40-leopard-tanks-since-february-2022-1068726197.html)).
+
+Another article from The Moscow Times, published on June 13, 2023, reports on Russia capturing German Leopard tanks and U.S. Bradley infantry fighting vehicles, also including the image of destroyed tanks (<image:2769>) ([https://www.themoscowtimes.com/2023/06/13/russia-says-german-leopard-tanks-us-bradleys-captured-in-ukraine-a81492](https://www.themoscowtimes.com/2023/06/13/russia-says-german-leopard-tanks-us-bradleys-captured-in-ukraine-a81492)). Defence Security Asia published an article on May 19, 2024, discussing the destruction of German-made Leopard tanks in Ukraine, including an image of a captured Leopard 2A6 tank (<image:2776>) ([https://defencesecurityasia.com/en/german-made-leopard-tanks-bear-the-brunt-of-russian-forces-rejuvenation-in-ukraine/](https://defencesecurityasia.com/en/german-made-leopard-tanks-bear-the-brunt-of-russian-forces-rejuvenation-in-ukraine/)).
+
+
+### Evidence from `image_search`
+The Center for European Policy Analysis (CEPA) published an article about the second battle of Kursk, which includes an image of a Ukrainian tank (<image:6630>). Al Jazeera published an article on August 16, 2024, about the conflict in Kursk, which includes an image of a tank (<image:6631>). NBC News discusses the evacuation of Belgorod and Kursk (<image:6632>).
+
+The provided sources do not contain the image in the claim (<image:26>).
+
+
+## Elaboration
+The evidence does not confirm the claim. While the image of destroyed tanks (<image:26>
+
+## Actions
+```
+image_search("destroyed tanks Ukraine Russia war")
+```
+
+# Search Result
+From [Source](https://www.cnn.com/2022/04/27/europe/russia-tanks-blown-turrets-intl-hnk-ml): 
+Content: "
+<image:4885>"
+
+# Your Summary
+
+
+
+===== > RESPONSE:  < =====
+CNN published an article on April 27, 2022, about destroyed tanks in the Russia-Ukraine war, including an image of a destroyed tank <image:4885>.
+
+_________________________
+
+
+
+SummarizeResultPrompt - QUERY:
+
+# Instructions
+In order to find evidence that helps your fact-check, you just ran a web search which yielded a Search Result. **Your task right now is to summarize the Search Result.** What to include:
+* information that might be useful for the fact-check (see Record)
+* relevant images (refer to images by inserting their reference <image:k>)
+* if available: the release date as well as the author or the publisher (e.g. the media company) of the search result.
+
+Do NOT include:
+* advertisements
+* any other information not related to the Record or the Claim
+
+Additional rules:
+* Do not add any additional information besides the information in the Search Result.
+* If the Search Result doesn't contain any relevant information for the fact-checking work, simply print one word in capital letters: "NONE".
+* Keep your writing style like in the Examples 1, 2 and 3 provided to you.
+* Try to filter out relevant information even if the search result is in a different language.
+
+# Example 1
+The search result from America Today provides several photographs of the Notre-Dame Cathedral fire on April 15, 2019. <image:i>, <image:j>, <image:k>. None of the images show the Eiffel Tower in the background. 
+
+# Example 2
+NONE
+
+# Example 3
+The Guardian discusses a report blaming the Syrian government for a toxic gas attack and condemning their use of chemical weapons. The Guardian mentions the Chemical Weapons Convention and the responsibilities of Syria under the convention. According to The Guardian, The White House condemned the Assad regime for defying the norm against chemical weapons use.
+
+# Record
+## Claim
+Claim: "<image:26> This image shows destroyed Ukrainian tanks during Ukraine's incursion into Russia's Kursk Oblast in August 2024."
+
+## Actions
+```
+reverse_search(<image:26>)
+image_search("destroyed Ukrainian tanks Kursk Oblast August 2024")
+```
+
+## Evidence
+### Evidence from `reverse_search`
+The image of destroyed tanks (<image:26>) appears in multiple articles. One article from Sputnik Africa, published on October 17, 2024, discusses Ukraine's loss of Leopard tanks since February 2022, including images of Leopard 2 tanks (<image:2767>, <image:2768>) ([https://en.sputniknews.africa/20241017/ukraine-has-reportedly-lost-about-40-leopard-tanks-since-february-2022-1068726197.html](https://en.sputniknews.africa/20241017/ukraine-has-reportedly-lost-about-40-leopard-tanks-since-february-2022-1068726197.html)).
+
+Another article from The Moscow Times, published on June 13, 2023, reports on Russia capturing German Leopard tanks and U.S. Bradley infantry fighting vehicles, also including the image of destroyed tanks (<image:2769>) ([https://www.themoscowtimes.com/2023/06/13/russia-says-german-leopard-tanks-us-bradleys-captured-in-ukraine-a81492](https://www.themoscowtimes.com/2023/06/13/russia-says-german-leopard-tanks-us-bradleys-captured-in-ukraine-a81492)). Defence Security Asia published an article on May 19, 2024, discussing the destruction of German-made Leopard tanks in Ukraine, including an image of a captured Leopard 2A6 tank (<image:2776>) ([https://defencesecurityasia.com/en/german-made-leopard-tanks-bear-the-brunt-of-russian-forces-rejuvenation-in-ukraine/](https://defencesecurityasia.com/en/german-made-leopard-tanks-bear-the-brunt-of-russian-forces-rejuvenation-in-ukraine/)).
+
+
+### Evidence from `image_search`
+The Center for European Policy Analysis (CEPA) published an article about the second battle of Kursk, which includes an image of a Ukrainian tank (<image:6630>). Al Jazeera published an article on August 16, 2024, about the conflict in Kursk, which includes an image of a tank (<image:6631>). NBC News discusses the evacuation of Belgorod and Kursk (<image:6632>).
+
+The provided sources do not contain the image in the claim (<image:26>).
+
+
+## Elaboration
+The evidence does not confirm the claim. While the image of destroyed tanks (<image:26>
+
+## Actions
+```
+image_search("destroyed tanks Ukraine Russia war")
+```
+
+# Search Result
+From [Source](https://www.reuters.com/news/picture/destroyed-russian-military-vehicles-stre-idUSRTS6EQ4P): 
+Content: "
+<image:4886>"
+
+# Your Summary
+
+
+
+===== > RESPONSE:  < =====
+Reuters published an image of destroyed Russian military vehicles in Ukraine. <image:4886>
+
+_________________________
+
+
+
+SummarizeResultPrompt - QUERY:
+
+# Instructions
+In order to find evidence that helps your fact-check, you just ran a web search which yielded a Search Result. **Your task right now is to summarize the Search Result.** What to include:
+* information that might be useful for the fact-check (see Record)
+* relevant images (refer to images by inserting their reference <image:k>)
+* if available: the release date as well as the author or the publisher (e.g. the media company) of the search result.
+
+Do NOT include:
+* advertisements
+* any other information not related to the Record or the Claim
+
+Additional rules:
+* Do not add any additional information besides the information in the Search Result.
+* If the Search Result doesn't contain any relevant information for the fact-checking work, simply print one word in capital letters: "NONE".
+* Keep your writing style like in the Examples 1, 2 and 3 provided to you.
+* Try to filter out relevant information even if the search result is in a different language.
+
+# Example 1
+The search result from America Today provides several photographs of the Notre-Dame Cathedral fire on April 15, 2019. <image:i>, <image:j>, <image:k>. None of the images show the Eiffel Tower in the background. 
+
+# Example 2
+NONE
+
+# Example 3
+The Guardian discusses a report blaming the Syrian government for a toxic gas attack and condemning their use of chemical weapons. The Guardian mentions the Chemical Weapons Convention and the responsibilities of Syria under the convention. According to The Guardian, The White House condemned the Assad regime for defying the norm against chemical weapons use.
+
+# Record
+## Claim
+Claim: "<image:26> This image shows destroyed Ukrainian tanks during Ukraine's incursion into Russia's Kursk Oblast in August 2024."
+
+## Actions
+```
+reverse_search(<image:26>)
+image_search("destroyed Ukrainian tanks Kursk Oblast August 2024")
+```
+
+## Evidence
+### Evidence from `reverse_search`
+The image of destroyed tanks (<image:26>) appears in multiple articles. One article from Sputnik Africa, published on October 17, 2024, discusses Ukraine's loss of Leopard tanks since February 2022, including images of Leopard 2 tanks (<image:2767>, <image:2768>) ([https://en.sputniknews.africa/20241017/ukraine-has-reportedly-lost-about-40-leopard-tanks-since-february-2022-1068726197.html](https://en.sputniknews.africa/20241017/ukraine-has-reportedly-lost-about-40-leopard-tanks-since-february-2022-1068726197.html)).
+
+Another article from The Moscow Times, published on June 13, 2023, reports on Russia capturing German Leopard tanks and U.S. Bradley infantry fighting vehicles, also including the image of destroyed tanks (<image:2769>) ([https://www.themoscowtimes.com/2023/06/13/russia-says-german-leopard-tanks-us-bradleys-captured-in-ukraine-a81492](https://www.themoscowtimes.com/2023/06/13/russia-says-german-leopard-tanks-us-bradleys-captured-in-ukraine-a81492)). Defence Security Asia published an article on May 19, 2024, discussing the destruction of German-made Leopard tanks in Ukraine, including an image of a captured Leopard 2A6 tank (<image:2776>) ([https://defencesecurityasia.com/en/german-made-leopard-tanks-bear-the-brunt-of-russian-forces-rejuvenation-in-ukraine/](https://defencesecurityasia.com/en/german-made-leopard-tanks-bear-the-brunt-of-russian-forces-rejuvenation-in-ukraine/)).
+
+
+### Evidence from `image_search`
+The Center for European Policy Analysis (CEPA) published an article about the second battle of Kursk, which includes an image of a Ukrainian tank (<image:6630>). Al Jazeera published an article on August 16, 2024, about the conflict in Kursk, which includes an image of a tank (<image:6631>). NBC News discusses the evacuation of Belgorod and Kursk (<image:6632>).
+
+The provided sources do not contain the image in the claim (<image:26>).
+
+
+## Elaboration
+The evidence does not confirm the claim. While the image of destroyed tanks (<image:26>
+
+## Actions
+```
+image_search("destroyed tanks Ukraine Russia war")
+```
+
+# Search Result
+From [Source](https://www.nytimes.com/2023/02/16/world/europe/russia-tanks-ukraine-war.html): 
+Content: "
+<image:4887>"
+
+# Your Summary
+
+
+
+===== > RESPONSE:  < =====
+The New York Times published an article on February 16, 2023, about the war in Ukraine, which includes an image of a destroyed tank <image:4887>.
+
+_________________________
+
+
+
+SummarizeSummariesPrompt - QUERY:
+
+# Instructions
+You just retrieved web sources, each one summarized under "Web Sources". **Your task right now is to summarize the web source summaries.**
+
+Always adhere to the following rules:
+* Write only one to two paragraphs.
+* Include all URLs from the listed sources. Format them as Markdown hyperlinks.
+* Do not add any additional information besides the information in the summaries.
+* Include references (<image:k>) to all relevant images.
+
+# Record
+## Claim
+Claim: "<image:26> This image shows destroyed Ukrainian tanks during Ukraine's incursion into Russia's Kursk Oblast in August 2024."
+
+## Actions
+```
+reverse_search(<image:26>)
+image_search("destroyed Ukrainian tanks Kursk Oblast August 2024")
+```
+
+## Evidence
+### Evidence from `reverse_search`
+The image of destroyed tanks (<image:26>) appears in multiple articles. One article from Sputnik Africa, published on October 17, 2024, discusses Ukraine's loss of Leopard tanks since February 2022, including images of Leopard 2 tanks (<image:2767>, <image:2768>) ([https://en.sputniknews.africa/20241017/ukraine-has-reportedly-lost-about-40-leopard-tanks-since-february-2022-1068726197.html](https://en.sputniknews.africa/20241017/ukraine-has-reportedly-lost-about-40-leopard-tanks-since-february-2022-1068726197.html)).
+
+Another article from The Moscow Times, published on June 13, 2023, reports on Russia capturing German Leopard tanks and U.S. Bradley infantry fighting vehicles, also including the image of destroyed tanks (<image:2769>) ([https://www.themoscowtimes.com/2023/06/13/russia-says-german-leopard-tanks-us-bradleys-captured-in-ukraine-a81492](https://www.themoscowtimes.com/2023/06/13/russia-says-german-leopard-tanks-us-bradleys-captured-in-ukraine-a81492)). Defence Security Asia published an article on May 19, 2024, discussing the destruction of German-made Leopard tanks in Ukraine, including an image of a captured Leopard 2A6 tank (<image:2776>) ([https://defencesecurityasia.com/en/german-made-leopard-tanks-bear-the-brunt-of-russian-forces-rejuvenation-in-ukraine/](https://defencesecurityasia.com/en/german-made-leopard-tanks-bear-the-brunt-of-russian-forces-rejuvenation-in-ukraine/)).
+
+
+### Evidence from `image_search`
+The Center for European Policy Analysis (CEPA) published an article about the second battle of Kursk, which includes an image of a Ukrainian tank (<image:6630>). Al Jazeera published an article on August 16, 2024, about the conflict in Kursk, which includes an image of a tank (<image:6631>). NBC News discusses the evacuation of Belgorod and Kursk (<image:6632>).
+
+The provided sources do not contain the image in the claim (<image:26>).
+
+
+## Elaboration
+The evidence does not confirm the claim. While the image of destroyed tanks (<image:26>
+
+## Actions
+```
+image_search("destroyed tanks Ukraine Russia war")
+```
+
+## Web Sources
+**Web Search Result**
+
+From [Source](https://www.cnn.com/2022/04/27/europe/russia-tanks-blown-turrets-intl-hnk-ml): 
+Content: CNN published an article on April 27, 2022, about destroyed tanks in the Russia-Ukraine war, including an image of a destroyed tank <image:4885>.
+
+
+From [Source](https://www.reuters.com/news/picture/destroyed-russian-military-vehicles-stre-idUSRTS6EQ4P): 
+Content: Reuters published an image of destroyed Russian military vehicles in Ukraine. <image:4886>
+
+
+From [Source](https://www.nytimes.com/2023/02/16/world/europe/russia-tanks-ukraine-war.html): 
+Content: The New York Times published an article on February 16, 2023, about the war in Ukraine, which includes an image of a destroyed tank <image:4887>.
+
+
+## Your Summary
+
+
+
+===== > RESPONSE:  < =====
+CNN published an article on April 27, 2022, about destroyed tanks in the Russia-Ukraine war, including an image of a destroyed tank <image:4885>. Reuters published an image of destroyed Russian military vehicles in Ukraine <image:4886>. The New York Times published an article on February 16, 2023, about the war in Ukraine, which includes an image of a destroyed tank <image:4887>.
+
+_________________________
+
+
+
+DevelopPrompt - QUERY:
+
+# Instructions
+You just retrieved new Evidence. Now, **analyze the Claim's veracity using the evidence**. Always adhere to the following rules:
+* Focus on developing new insights. Do not repeat larger parts from the Record. Do not restate the Claim.
+* Write down your thoughts step-by-step. Whenever necessary, you may elaborate in more detail.
+* Depending on the topic's complexity, invest one to three paragraphs. The fewer, the better.
+* If you find that there is insufficient information to verify the Claim, explicitly state what information is missing.
+* If you cite web sources, always refer to them by including their URL as a Markdown hyperlink.
+* **Use information only from the recorded evidence**: Avoid inserting information that is not implied by the evidence. You may use commonsense knowledge, though.
+
+# Record
+## Claim
+Claim: "<image:26> This image shows destroyed Ukrainian tanks during Ukraine's incursion into Russia's Kursk Oblast in August 2024."
+
+## Actions
+```
+reverse_search(<image:26>)
+image_search("destroyed Ukrainian tanks Kursk Oblast August 2024")
+```
+
+## Evidence
+### Evidence from `reverse_search`
+The image of destroyed tanks (<image:26>) appears in multiple articles. One article from Sputnik Africa, published on October 17, 2024, discusses Ukraine's loss of Leopard tanks since February 2022, including images of Leopard 2 tanks (<image:2767>, <image:2768>) ([https://en.sputniknews.africa/20241017/ukraine-has-reportedly-lost-about-40-leopard-tanks-since-february-2022-1068726197.html](https://en.sputniknews.africa/20241017/ukraine-has-reportedly-lost-about-40-leopard-tanks-since-february-2022-1068726197.html)).
+
+Another article from The Moscow Times, published on June 13, 2023, reports on Russia capturing German Leopard tanks and U.S. Bradley infantry fighting vehicles, also including the image of destroyed tanks (<image:2769>) ([https://www.themoscowtimes.com/2023/06/13/russia-says-german-leopard-tanks-us-bradleys-captured-in-ukraine-a81492](https://www.themoscowtimes.com/2023/06/13/russia-says-german-leopard-tanks-us-bradleys-captured-in-ukraine-a81492)). Defence Security Asia published an article on May 19, 2024, discussing the destruction of German-made Leopard tanks in Ukraine, including an image of a captured Leopard 2A6 tank (<image:2776>) ([https://defencesecurityasia.com/en/german-made-leopard-tanks-bear-the-brunt-of-russian-forces-rejuvenation-in-ukraine/](https://defencesecurityasia.com/en/german-made-leopard-tanks-bear-the-brunt-of-russian-forces-rejuvenation-in-ukraine/)).
+
+
+### Evidence from `image_search`
+The Center for European Policy Analysis (CEPA) published an article about the second battle of Kursk, which includes an image of a Ukrainian tank (<image:6630>). Al Jazeera published an article on August 16, 2024, about the conflict in Kursk, which includes an image of a tank (<image:6631>). NBC News discusses the evacuation of Belgorod and Kursk (<image:6632>).
+
+The provided sources do not contain the image in the claim (<image:26>).
+
+
+## Elaboration
+The evidence does not confirm the claim. While the image of destroyed tanks (<image:26>
+
+## Actions
+```
+image_search("destroyed tanks Ukraine Russia war")
+```
+
+## Evidence
+### Evidence from `image_search`
+CNN published an article on April 27, 2022, about destroyed tanks in the Russia-Ukraine war, including an image of a destroyed tank <image:4885>. Reuters published an image of destroyed Russian military vehicles in Ukraine <image:4886>. The New York Times published an article on February 16, 2023, about the war in Ukraine, which includes an image of a destroyed tank <image:4887>.
+
+
+# Your Analysis
+
+
+
+===== > RESPONSE:  < =====
+The evidence does not confirm the claim. The image search results show destroyed tanks from the Russia-Ukraine war, but none of the provided sources contain the image in the claim. The claim's specifics about the location and date are not supported by the evidence.
+
+Insufficient information is available to verify the claim.
+
+_________________________
+
+
+
+JudgePrompt - QUERY:
+
+# Instructions
+**Determine the Claim's veracity** by following these steps:
+1. Briefly summarize the key insights from the fact-check (see Record) in at most one paragraph.
+2. Write one paragraph about which one of the Decision Options applies best. Include the most appropriate decision option at the end and enclose it in backticks like `this`.
+
+
+
+
+## Decision Options
+* `true`: The claim is factually accurate when it is confirmed by evidence from multiple and reliable sources.
+* `false`: The claim is not factually accurate. This is the case if one of the following three conditions is met:(1) The claim is demonstrably false when it is disproven by evidence from multiple and reliable sources,(2) The claim or image is taken out of context, i.e. the origin, content and/or meaning of a statement or an image is misrepresented. For example, an old claim or an old image is mispresented in a new context in a misleading way,(3) There is not enough evidence to verify the claim or the evidence is conflicting or self-contradictory.
+* `not enough information`: The fact-check does not contain sufficient information to come to an conclusion. For example,there is substantial lack of evidence or the evidence is inconclusive, conflicting or self-contradictory. In the case of a lack of evidence, state which information exactly is missing. In particular, if no RESULTS or sources are available, pick this decision.
+
+# Record
+## Claim
+Claim: "<image:26> This image shows destroyed Ukrainian tanks during Ukraine's incursion into Russia's Kursk Oblast in August 2024."
+
+## Actions
+```
+reverse_search(<image:26>)
+image_search("destroyed Ukrainian tanks Kursk Oblast August 2024")
+```
+
+## Evidence
+### Evidence from `reverse_search`
+The image of destroyed tanks (<image:26>) appears in multiple articles. One article from Sputnik Africa, published on October 17, 2024, discusses Ukraine's loss of Leopard tanks since February 2022, including images of Leopard 2 tanks (<image:2767>, <image:2768>) ([https://en.sputniknews.africa/20241017/ukraine-has-reportedly-lost-about-40-leopard-tanks-since-february-2022-1068726197.html](https://en.sputniknews.africa/20241017/ukraine-has-reportedly-lost-about-40-leopard-tanks-since-february-2022-1068726197.html)).
+
+Another article from The Moscow Times, published on June 13, 2023, reports on Russia capturing German Leopard tanks and U.S. Bradley infantry fighting vehicles, also including the image of destroyed tanks (<image:2769>) ([https://www.themoscowtimes.com/2023/06/13/russia-says-german-leopard-tanks-us-bradleys-captured-in-ukraine-a81492](https://www.themoscowtimes.com/2023/06/13/russia-says-german-leopard-tanks-us-bradleys-captured-in-ukraine-a81492)). Defence Security Asia published an article on May 19, 2024, discussing the destruction of German-made Leopard tanks in Ukraine, including an image of a captured Leopard 2A6 tank (<image:2776>) ([https://defencesecurityasia.com/en/german-made-leopard-tanks-bear-the-brunt-of-russian-forces-rejuvenation-in-ukraine/](https://defencesecurityasia.com/en/german-made-leopard-tanks-bear-the-brunt-of-russian-forces-rejuvenation-in-ukraine/)).
+
+
+### Evidence from `image_search`
+The Center for European Policy Analysis (CEPA) published an article about the second battle of Kursk, which includes an image of a Ukrainian tank (<image:6630>). Al Jazeera published an article on August 16, 2024, about the conflict in Kursk, which includes an image of a tank (<image:6631>). NBC News discusses the evacuation of Belgorod and Kursk (<image:6632>).
+
+The provided sources do not contain the image in the claim (<image:26>).
+
+
+## Elaboration
+The evidence does not confirm the claim. While the image of destroyed tanks (<image:26>
+
+## Actions
+```
+image_search("destroyed tanks Ukraine Russia war")
+```
+
+## Evidence
+### Evidence from `image_search`
+CNN published an article on April 27, 2022, about destroyed tanks in the Russia-Ukraine war, including an image of a destroyed tank <image:4885>. Reuters published an image of destroyed Russian military vehicles in Ukraine <image:4886>. The New York Times published an article on February 16, 2023, about the war in Ukraine, which includes an image of a destroyed tank <image:4887>.
+
+
+## Elaboration
+The evidence does not confirm the claim. The image search results show destroyed tanks from the Russia-Ukraine war, but none of the provided sources contain the image in the claim. The claim's specifics about the location and date are not supported by the evidence.
+
+Insufficient information is available to verify the claim.
+
+
+# Your Judgement
+
+
+
+===== > RESPONSE:  < =====
+The image search results show destroyed tanks from the Russia-Ukraine war, but none of the provided sources contain the image in the claim. The claim's specifics about the location and date are not supported by the evidence.
+
+`not enough information`
+_________________________
+
+
+
+PlanPrompt - QUERY:
+
+# Instructions
+The available knowledge is insufficient to assess the Claim. Therefore, **propose a set of actions** to retrieve new and helpful evidence. Adhere to the following rules:
+* The actions available are listed under Valid Actions, including a short description for each action. No other actions are possible at this moment. 
+* For each action, use the formatting as specified in Valid Actions.
+* Include all actions in a single Markdown code block at the end of your answer.
+* Propose as few actions as possible, but as much as needed. Do not propose similar or previously used actions.
+
+
+
+## Valid Actions
+* `image_search`
+   * Description: Run an image search on Google to retrieve related images for a given query.
+   * How to use: This is a helpful tool for fact-checking images. Use this to retrieve images associated with a specific keyword or phrase. Ensure that the query is clear and specific to improve search accuracy. If no relevant images are found, refine the query or use more descriptive terms.
+   * Format: image_search("your image search query goes here")
+
+* `geolocate`
+   * Description: Performs geolocation to determine the country where an image was taken.
+   * How to use: Provide an image and the model will determine the most likely countries where it was taken.
+   * Format: geolocate(<image:k>), where `k` is the image's ID
+
+# Example: image_search()
+
+## Claim
+Text: "Chinese officials in white protective hazmat suits carried people down a hallway to be quarantined for having COVID-19 in November 2022."
+
+...
+
+ACTIONS:
+```
+image_search("China officials white suits carry people")
+image_search("China officials carry people COVID quarantine 2022")
+```
+
+# Example: geolocate()
+
+## Claim
+Text: "<image:k> shows a nuclear weapons facility in Usbekistan."
+
+...
+
+## Actions
+```
+geolocate(<image:k>)
+```
+
+# Record
+## Claim
+Claim: "<image:26> This image shows destroyed Ukrainian tanks during Ukraine's incursion into Russia's Kursk Oblast in August 2024."
+
+## Actions
+```
+reverse_search(<image:26>)
+image_search("destroyed Ukrainian tanks Kursk Oblast August 2024")
+```
+
+## Evidence
+### Evidence from `reverse_search`
+The image of destroyed tanks (<image:26>) appears in multiple articles. One article from Sputnik Africa, published on October 17, 2024, discusses Ukraine's loss of Leopard tanks since February 2022, including images of Leopard 2 tanks (<image:2767>, <image:2768>) ([https://en.sputniknews.africa/20241017/ukraine-has-reportedly-lost-about-40-leopard-tanks-since-february-2022-1068726197.html](https://en.sputniknews.africa/20241017/ukraine-has-reportedly-lost-about-40-leopard-tanks-since-february-2022-1068726197.html)).
+
+Another article from The Moscow Times, published on June 13, 2023, reports on Russia capturing German Leopard tanks and U.S. Bradley infantry fighting vehicles, also including the image of destroyed tanks (<image:2769>) ([https://www.themoscowtimes.com/2023/06/13/russia-says-german-leopard-tanks-us-bradleys-captured-in-ukraine-a81492](https://www.themoscowtimes.com/2023/06/13/russia-says-german-leopard-tanks-us-bradleys-captured-in-ukraine-a81492)). Defence Security Asia published an article on May 19, 2024, discussing the destruction of German-made Leopard tanks in Ukraine, including an image of a captured Leopard 2A6 tank (<image:2776>) ([https://defencesecurityasia.com/en/german-made-leopard-tanks-bear-the-brunt-of-russian-forces-rejuvenation-in-ukraine/](https://defencesecurityasia.com/en/german-made-leopard-tanks-bear-the-brunt-of-russian-forces-rejuvenation-in-ukraine/)).
+
+
+### Evidence from `image_search`
+The Center for European Policy Analysis (CEPA) published an article about the second battle of Kursk, which includes an image of a Ukrainian tank (<image:6630>). Al Jazeera published an article on August 16, 2024, about the conflict in Kursk, which includes an image of a tank (<image:6631>). NBC News discusses the evacuation of Belgorod and Kursk (<image:6632>).
+
+The provided sources do not contain the image in the claim (<image:26>).
+
+
+## Elaboration
+The evidence does not confirm the claim. While the image of destroyed tanks (<image:26>
+
+## Actions
+```
+image_search("destroyed tanks Ukraine Russia war")
+```
+
+## Evidence
+### Evidence from `image_search`
+CNN published an article on April 27, 2022, about destroyed tanks in the Russia-Ukraine war, including an image of a destroyed tank <image:4885>. Reuters published an image of destroyed Russian military vehicles in Ukraine <image:4886>. The New York Times published an article on February 16, 2023, about the war in Ukraine, which includes an image of a destroyed tank <image:4887>.
+
+
+## Elaboration
+The evidence does not confirm the claim. The image search results show destroyed tanks from the Russia-Ukraine war, but none of the provided sources contain the image in the claim. The claim's specifics about the location and date are not supported by the evidence.
+
+Insufficient information is available to verify the claim.
+
+
+# Your Actions
+
+
+
+===== > RESPONSE:  < =====
+```
+image_search("destroyed tanks Ukraine war August 2024")
+```
+_________________________
+
+
+
+SummarizeResultPrompt - QUERY:
+
+# Instructions
+In order to find evidence that helps your fact-check, you just ran a web search which yielded a Search Result. **Your task right now is to summarize the Search Result.** What to include:
+* information that might be useful for the fact-check (see Record)
+* relevant images (refer to images by inserting their reference <image:k>)
+* if available: the release date as well as the author or the publisher (e.g. the media company) of the search result.
+
+Do NOT include:
+* advertisements
+* any other information not related to the Record or the Claim
+
+Additional rules:
+* Do not add any additional information besides the information in the Search Result.
+* If the Search Result doesn't contain any relevant information for the fact-checking work, simply print one word in capital letters: "NONE".
+* Keep your writing style like in the Examples 1, 2 and 3 provided to you.
+* Try to filter out relevant information even if the search result is in a different language.
+
+# Example 1
+The search result from America Today provides several photographs of the Notre-Dame Cathedral fire on April 15, 2019. <image:i>, <image:j>, <image:k>. None of the images show the Eiffel Tower in the background. 
+
+# Example 2
+NONE
+
+# Example 3
+The Guardian discusses a report blaming the Syrian government for a toxic gas attack and condemning their use of chemical weapons. The Guardian mentions the Chemical Weapons Convention and the responsibilities of Syria under the convention. According to The Guardian, The White House condemned the Assad regime for defying the norm against chemical weapons use.
+
+# Record
+## Claim
+Claim: "<image:26> This image shows destroyed Ukrainian tanks during Ukraine's incursion into Russia's Kursk Oblast in August 2024."
+
+## Actions
+```
+reverse_search(<image:26>)
+image_search("destroyed Ukrainian tanks Kursk Oblast August 2024")
+```
+
+## Evidence
+### Evidence from `reverse_search`
+The image of destroyed tanks (<image:26>) appears in multiple articles. One article from Sputnik Africa, published on October 17, 2024, discusses Ukraine's loss of Leopard tanks since February 2022, including images of Leopard 2 tanks (<image:2767>, <image:2768>) ([https://en.sputniknews.africa/20241017/ukraine-has-reportedly-lost-about-40-leopard-tanks-since-february-2022-1068726197.html](https://en.sputniknews.africa/20241017/ukraine-has-reportedly-lost-about-40-leopard-tanks-since-february-2022-1068726197.html)).
+
+Another article from The Moscow Times, published on June 13, 2023, reports on Russia capturing German Leopard tanks and U.S. Bradley infantry fighting vehicles, also including the image of destroyed tanks (<image:2769>) ([https://www.themoscowtimes.com/2023/06/13/russia-says-german-leopard-tanks-us-bradleys-captured-in-ukraine-a81492](https://www.themoscowtimes.com/2023/06/13/russia-says-german-leopard-tanks-us-bradleys-captured-in-ukraine-a81492)). Defence Security Asia published an article on May 19, 2024, discussing the destruction of German-made Leopard tanks in Ukraine, including an image of a captured Leopard 2A6 tank (<image:2776>) ([https://defencesecurityasia.com/en/german-made-leopard-tanks-bear-the-brunt-of-russian-forces-rejuvenation-in-ukraine/](https://defencesecurityasia.com/en/german-made-leopard-tanks-bear-the-brunt-of-russian-forces-rejuvenation-in-ukraine/)).
+
+
+### Evidence from `image_search`
+The Center for European Policy Analysis (CEPA) published an article about the second battle of Kursk, which includes an image of a Ukrainian tank (<image:6630>). Al Jazeera published an article on August 16, 2024, about the conflict in Kursk, which includes an image of a tank (<image:6631>). NBC News discusses the evacuation of Belgorod and Kursk (<image:6632>).
+
+The provided sources do not contain the image in the claim (<image:26>).
+
+
+## Elaboration
+The evidence does not confirm the claim. While the image of destroyed tanks (<image:26>
+
+## Actions
+```
+image_search("destroyed tanks Ukraine Russia war")
+```
+
+## Evidence
+### Evidence from `image_search`
+CNN published an article on April 27, 2022, about destroyed tanks in the Russia-Ukraine war, including an image of a destroyed tank <image:4885>. Reuters published an image of destroyed Russian military vehicles in Ukraine <image:4886>. The New York Times published an article on February 16, 2023, about the war in Ukraine, which includes an image of a destroyed tank <image:4887>.
+
+
+## Elaboration
+The evidence does not confirm the claim. The image search results show destroyed tanks from the Russia-Ukraine war, but none of the provided sources contain the image in the claim. The claim's specifics about the location and date are not supported by the evidence.
+
+Insufficient information is available to verify the claim.
+
+
+## Actions
+```
+image_search("destroyed tanks Ukraine war August 2024")
+```
+
+# Search Result
+From [Source](https://defensescoop.com/2025/04/03/ukraine-russian-tanks-destroyed-attack-drones-cavoli/): 
+Content: "
+<image:6633>"
+
+# Your Summary
+
+
+
+===== > RESPONSE:  < =====
+DefenseScoop published an article on April 3, 2025, about destroyed tanks in Ukraine, including an image of a destroyed tank <image:6633>.
+
+_________________________
+
+
+
+SummarizeResultPrompt - QUERY:
+
+# Instructions
+In order to find evidence that helps your fact-check, you just ran a web search which yielded a Search Result. **Your task right now is to summarize the Search Result.** What to include:
+* information that might be useful for the fact-check (see Record)
+* relevant images (refer to images by inserting their reference <image:k>)
+* if available: the release date as well as the author or the publisher (e.g. the media company) of the search result.
+
+Do NOT include:
+* advertisements
+* any other information not related to the Record or the Claim
+
+Additional rules:
+* Do not add any additional information besides the information in the Search Result.
+* If the Search Result doesn't contain any relevant information for the fact-checking work, simply print one word in capital letters: "NONE".
+* Keep your writing style like in the Examples 1, 2 and 3 provided to you.
+* Try to filter out relevant information even if the search result is in a different language.
+
+# Example 1
+The search result from America Today provides several photographs of the Notre-Dame Cathedral fire on April 15, 2019. <image:i>, <image:j>, <image:k>. None of the images show the Eiffel Tower in the background. 
+
+# Example 2
+NONE
+
+# Example 3
+The Guardian discusses a report blaming the Syrian government for a toxic gas attack and condemning their use of chemical weapons. The Guardian mentions the Chemical Weapons Convention and the responsibilities of Syria under the convention. According to The Guardian, The White House condemned the Assad regime for defying the norm against chemical weapons use.
+
+# Record
+## Claim
+Claim: "<image:26> This image shows destroyed Ukrainian tanks during Ukraine's incursion into Russia's Kursk Oblast in August 2024."
+
+## Actions
+```
+reverse_search(<image:26>)
+image_search("destroyed Ukrainian tanks Kursk Oblast August 2024")
+```
+
+## Evidence
+### Evidence from `reverse_search`
+The image of destroyed tanks (<image:26>) appears in multiple articles. One article from Sputnik Africa, published on October 17, 2024, discusses Ukraine's loss of Leopard tanks since February 2022, including images of Leopard 2 tanks (<image:2767>, <image:2768>) ([https://en.sputniknews.africa/20241017/ukraine-has-reportedly-lost-about-40-leopard-tanks-since-february-2022-1068726197.html](https://en.sputniknews.africa/20241017/ukraine-has-reportedly-lost-about-40-leopard-tanks-since-february-2022-1068726197.html)).
+
+Another article from The Moscow Times, published on June 13, 2023, reports on Russia capturing German Leopard tanks and U.S. Bradley infantry fighting vehicles, also including the image of destroyed tanks (<image:2769>) ([https://www.themoscowtimes.com/2023/06/13/russia-says-german-leopard-tanks-us-bradleys-captured-in-ukraine-a81492](https://www.themoscowtimes.com/2023/06/13/russia-says-german-leopard-tanks-us-bradleys-captured-in-ukraine-a81492)). Defence Security Asia published an article on May 19, 2024, discussing the destruction of German-made Leopard tanks in Ukraine, including an image of a captured Leopard 2A6 tank (<image:2776>) ([https://defencesecurityasia.com/en/german-made-leopard-tanks-bear-the-brunt-of-russian-forces-rejuvenation-in-ukraine/](https://defencesecurityasia.com/en/german-made-leopard-tanks-bear-the-brunt-of-russian-forces-rejuvenation-in-ukraine/)).
+
+
+### Evidence from `image_search`
+The Center for European Policy Analysis (CEPA) published an article about the second battle of Kursk, which includes an image of a Ukrainian tank (<image:6630>). Al Jazeera published an article on August 16, 2024, about the conflict in Kursk, which includes an image of a tank (<image:6631>). NBC News discusses the evacuation of Belgorod and Kursk (<image:6632>).
+
+The provided sources do not contain the image in the claim (<image:26>).
+
+
+## Elaboration
+The evidence does not confirm the claim. While the image of destroyed tanks (<image:26>
+
+## Actions
+```
+image_search("destroyed tanks Ukraine Russia war")
+```
+
+## Evidence
+### Evidence from `image_search`
+CNN published an article on April 27, 2022, about destroyed tanks in the Russia-Ukraine war, including an image of a destroyed tank <image:4885>. Reuters published an image of destroyed Russian military vehicles in Ukraine <image:4886>. The New York Times published an article on February 16, 2023, about the war in Ukraine, which includes an image of a destroyed tank <image:4887>.
+
+
+## Elaboration
+The evidence does not confirm the claim. The image search results show destroyed tanks from the Russia-Ukraine war, but none of the provided sources contain the image in the claim. The claim's specifics about the location and date are not supported by the evidence.
+
+Insufficient information is available to verify the claim.
+
+
+## Actions
+```
+image_search("destroyed tanks Ukraine war August 2024")
+```
+
+# Search Result
+From [Source](https://www.newsweek.com/russia-tank-losses-ukraine-general-staff-dire-milestone-1857673): 
+Content: "
+<image:6634>"
+
+# Your Summary
+
+
+
+===== > RESPONSE:  < =====
+Newsweek published an article about Russian tank losses in the Ukraine war, including an image of a destroyed tank <image:6634>.
+
+_________________________
+
+
+
+SummarizeResultPrompt - QUERY:
+
+# Instructions
+In order to find evidence that helps your fact-check, you just ran a web search which yielded a Search Result. **Your task right now is to summarize the Search Result.** What to include:
+* information that might be useful for the fact-check (see Record)
+* relevant images (refer to images by inserting their reference <image:k>)
+* if available: the release date as well as the author or the publisher (e.g. the media company) of the search result.
+
+Do NOT include:
+* advertisements
+* any other information not related to the Record or the Claim
+
+Additional rules:
+* Do not add any additional information besides the information in the Search Result.
+* If the Search Result doesn't contain any relevant information for the fact-checking work, simply print one word in capital letters: "NONE".
+* Keep your writing style like in the Examples 1, 2 and 3 provided to you.
+* Try to filter out relevant information even if the search result is in a different language.
+
+# Example 1
+The search result from America Today provides several photographs of the Notre-Dame Cathedral fire on April 15, 2019. <image:i>, <image:j>, <image:k>. None of the images show the Eiffel Tower in the background. 
+
+# Example 2
+NONE
+
+# Example 3
+The Guardian discusses a report blaming the Syrian government for a toxic gas attack and condemning their use of chemical weapons. The Guardian mentions the Chemical Weapons Convention and the responsibilities of Syria under the convention. According to The Guardian, The White House condemned the Assad regime for defying the norm against chemical weapons use.
+
+# Record
+## Claim
+Claim: "<image:26> This image shows destroyed Ukrainian tanks during Ukraine's incursion into Russia's Kursk Oblast in August 2024."
+
+## Actions
+```
+reverse_search(<image:26>)
+image_search("destroyed Ukrainian tanks Kursk Oblast August 2024")
+```
+
+## Evidence
+### Evidence from `reverse_search`
+The image of destroyed tanks (<image:26>) appears in multiple articles. One article from Sputnik Africa, published on October 17, 2024, discusses Ukraine's loss of Leopard tanks since February 2022, including images of Leopard 2 tanks (<image:2767>, <image:2768>) ([https://en.sputniknews.africa/20241017/ukraine-has-reportedly-lost-about-40-leopard-tanks-since-february-2022-1068726197.html](https://en.sputniknews.africa/20241017/ukraine-has-reportedly-lost-about-40-leopard-tanks-since-february-2022-1068726197.html)).
+
+Another article from The Moscow Times, published on June 13, 2023, reports on Russia capturing German Leopard tanks and U.S. Bradley infantry fighting vehicles, also including the image of destroyed tanks (<image:2769>) ([https://www.themoscowtimes.com/2023/06/13/russia-says-german-leopard-tanks-us-bradleys-captured-in-ukraine-a81492](https://www.themoscowtimes.com/2023/06/13/russia-says-german-leopard-tanks-us-bradleys-captured-in-ukraine-a81492)). Defence Security Asia published an article on May 19, 2024, discussing the destruction of German-made Leopard tanks in Ukraine, including an image of a captured Leopard 2A6 tank (<image:2776>) ([https://defencesecurityasia.com/en/german-made-leopard-tanks-bear-the-brunt-of-russian-forces-rejuvenation-in-ukraine/](https://defencesecurityasia.com/en/german-made-leopard-tanks-bear-the-brunt-of-russian-forces-rejuvenation-in-ukraine/)).
+
+
+### Evidence from `image_search`
+The Center for European Policy Analysis (CEPA) published an article about the second battle of Kursk, which includes an image of a Ukrainian tank (<image:6630>). Al Jazeera published an article on August 16, 2024, about the conflict in Kursk, which includes an image of a tank (<image:6631>). NBC News discusses the evacuation of Belgorod and Kursk (<image:6632>).
+
+The provided sources do not contain the image in the claim (<image:26>).
+
+
+## Elaboration
+The evidence does not confirm the claim. While the image of destroyed tanks (<image:26>
+
+## Actions
+```
+image_search("destroyed tanks Ukraine Russia war")
+```
+
+## Evidence
+### Evidence from `image_search`
+CNN published an article on April 27, 2022, about destroyed tanks in the Russia-Ukraine war, including an image of a destroyed tank <image:4885>. Reuters published an image of destroyed Russian military vehicles in Ukraine <image:4886>. The New York Times published an article on February 16, 2023, about the war in Ukraine, which includes an image of a destroyed tank <image:4887>.
+
+
+## Elaboration
+The evidence does not confirm the claim. The image search results show destroyed tanks from the Russia-Ukraine war, but none of the provided sources contain the image in the claim. The claim's specifics about the location and date are not supported by the evidence.
+
+Insufficient information is available to verify the claim.
+
+
+## Actions
+```
+image_search("destroyed tanks Ukraine war August 2024")
+```
+
+# Search Result
+From [Source](https://english.nv.ua/nation/russia-s-losses-in-the-war-against-ukraine-3-179-russian-tanks-since-the-beginning-of-the-year-50464063.html): 
+Content: "
+<image:6635>"
+
+# Your Summary
+
+
+
+===== > RESPONSE:  < =====
+The search result from NV.ua, published on August 2024, shows an image of a destroyed tank <image:6635>.
+
+_________________________
+
+
+
+SummarizeSummariesPrompt - QUERY:
+
+# Instructions
+You just retrieved web sources, each one summarized under "Web Sources". **Your task right now is to summarize the web source summaries.**
+
+Always adhere to the following rules:
+* Write only one to two paragraphs.
+* Include all URLs from the listed sources. Format them as Markdown hyperlinks.
+* Do not add any additional information besides the information in the summaries.
+* Include references (<image:k>) to all relevant images.
+
+# Record
+## Claim
+Claim: "<image:26> This image shows destroyed Ukrainian tanks during Ukraine's incursion into Russia's Kursk Oblast in August 2024."
+
+## Actions
+```
+reverse_search(<image:26>)
+image_search("destroyed Ukrainian tanks Kursk Oblast August 2024")
+```
+
+## Evidence
+### Evidence from `reverse_search`
+The image of destroyed tanks (<image:26>) appears in multiple articles. One article from Sputnik Africa, published on October 17, 2024, discusses Ukraine's loss of Leopard tanks since February 2022, including images of Leopard 2 tanks (<image:2767>, <image:2768>) ([https://en.sputniknews.africa/20241017/ukraine-has-reportedly-lost-about-40-leopard-tanks-since-february-2022-1068726197.html](https://en.sputniknews.africa/20241017/ukraine-has-reportedly-lost-about-40-leopard-tanks-since-february-2022-1068726197.html)).
+
+Another article from The Moscow Times, published on June 13, 2023, reports on Russia capturing German Leopard tanks and U.S. Bradley infantry fighting vehicles, also including the image of destroyed tanks (<image:2769>) ([https://www.themoscowtimes.com/2023/06/13/russia-says-german-leopard-tanks-us-bradleys-captured-in-ukraine-a81492](https://www.themoscowtimes.com/2023/06/13/russia-says-german-leopard-tanks-us-bradleys-captured-in-ukraine-a81492)). Defence Security Asia published an article on May 19, 2024, discussing the destruction of German-made Leopard tanks in Ukraine, including an image of a captured Leopard 2A6 tank (<image:2776>) ([https://defencesecurityasia.com/en/german-made-leopard-tanks-bear-the-brunt-of-russian-forces-rejuvenation-in-ukraine/](https://defencesecurityasia.com/en/german-made-leopard-tanks-bear-the-brunt-of-russian-forces-rejuvenation-in-ukraine/)).
+
+
+### Evidence from `image_search`
+The Center for European Policy Analysis (CEPA) published an article about the second battle of Kursk, which includes an image of a Ukrainian tank (<image:6630>). Al Jazeera published an article on August 16, 2024, about the conflict in Kursk, which includes an image of a tank (<image:6631>). NBC News discusses the evacuation of Belgorod and Kursk (<image:6632>).
+
+The provided sources do not contain the image in the claim (<image:26>).
+
+
+## Elaboration
+The evidence does not confirm the claim. While the image of destroyed tanks (<image:26>
+
+## Actions
+```
+image_search("destroyed tanks Ukraine Russia war")
+```
+
+## Evidence
+### Evidence from `image_search`
+CNN published an article on April 27, 2022, about destroyed tanks in the Russia-Ukraine war, including an image of a destroyed tank <image:4885>. Reuters published an image of destroyed Russian military vehicles in Ukraine <image:4886>. The New York Times published an article on February 16, 2023, about the war in Ukraine, which includes an image of a destroyed tank <image:4887>.
+
+
+## Elaboration
+The evidence does not confirm the claim. The image search results show destroyed tanks from the Russia-Ukraine war, but none of the provided sources contain the image in the claim. The claim's specifics about the location and date are not supported by the evidence.
+
+Insufficient information is available to verify the claim.
+
+
+## Actions
+```
+image_search("destroyed tanks Ukraine war August 2024")
+```
+
+## Web Sources
+**Web Search Result**
+
+From [Source](https://defensescoop.com/2025/04/03/ukraine-russian-tanks-destroyed-attack-drones-cavoli/): 
+Content: DefenseScoop published an article on April 3, 2025, about destroyed tanks in Ukraine, including an image of a destroyed tank <image:6633>.
+
+
+From [Source](https://www.newsweek.com/russia-tank-losses-ukraine-general-staff-dire-milestone-1857673): 
+Content: Newsweek published an article about Russian tank losses in the Ukraine war, including an image of a destroyed tank <image:6634>.
+
+
+From [Source](https://english.nv.ua/nation/russia-s-losses-in-the-war-against-ukraine-3-179-russian-tanks-since-the-beginning-of-the-year-50464063.html): 
+Content: The search result from NV.ua, published on August 2024, shows an image of a destroyed tank <image:6635>.
+
+
+## Your Summary
+
+
+
+===== > RESPONSE:  < =====
+DefenseScoop published an article on April 3, 2025, about destroyed tanks in Ukraine, including an image of a destroyed tank (<image:6633>). Newsweek published an article about Russian tank losses in the Ukraine war, including an image of a destroyed tank (<image:6634>). NV.ua, published in August 2024, shows an image of a destroyed tank (<image:6635>).
+
+_________________________
+
+
+
+DevelopPrompt - QUERY:
+
+# Instructions
+You just retrieved new Evidence. Now, **analyze the Claim's veracity using the evidence**. Always adhere to the following rules:
+* Focus on developing new insights. Do not repeat larger parts from the Record. Do not restate the Claim.
+* Write down your thoughts step-by-step. Whenever necessary, you may elaborate in more detail.
+* Depending on the topic's complexity, invest one to three paragraphs. The fewer, the better.
+* If you find that there is insufficient information to verify the Claim, explicitly state what information is missing.
+* If you cite web sources, always refer to them by including their URL as a Markdown hyperlink.
+* **Use information only from the recorded evidence**: Avoid inserting information that is not implied by the evidence. You may use commonsense knowledge, though.
+
+# Record
+## Claim
+Claim: "<image:26> This image shows destroyed Ukrainian tanks during Ukraine's incursion into Russia's Kursk Oblast in August 2024."
+
+## Actions
+```
+reverse_search(<image:26>)
+image_search("destroyed Ukrainian tanks Kursk Oblast August 2024")
+```
+
+## Evidence
+### Evidence from `reverse_search`
+The image of destroyed tanks (<image:26>) appears in multiple articles. One article from Sputnik Africa, published on October 17, 2024, discusses Ukraine's loss of Leopard tanks since February 2022, including images of Leopard 2 tanks (<image:2767>, <image:2768>) ([https://en.sputniknews.africa/20241017/ukraine-has-reportedly-lost-about-40-leopard-tanks-since-february-2022-1068726197.html](https://en.sputniknews.africa/20241017/ukraine-has-reportedly-lost-about-40-leopard-tanks-since-february-2022-1068726197.html)).
+
+Another article from The Moscow Times, published on June 13, 2023, reports on Russia capturing German Leopard tanks and U.S. Bradley infantry fighting vehicles, also including the image of destroyed tanks (<image:2769>) ([https://www.themoscowtimes.com/2023/06/13/russia-says-german-leopard-tanks-us-bradleys-captured-in-ukraine-a81492](https://www.themoscowtimes.com/2023/06/13/russia-says-german-leopard-tanks-us-bradleys-captured-in-ukraine-a81492)). Defence Security Asia published an article on May 19, 2024, discussing the destruction of German-made Leopard tanks in Ukraine, including an image of a captured Leopard 2A6 tank (<image:2776>) ([https://defencesecurityasia.com/en/german-made-leopard-tanks-bear-the-brunt-of-russian-forces-rejuvenation-in-ukraine/](https://defencesecurityasia.com/en/german-made-leopard-tanks-bear-the-brunt-of-russian-forces-rejuvenation-in-ukraine/)).
+
+
+### Evidence from `image_search`
+The Center for European Policy Analysis (CEPA) published an article about the second battle of Kursk, which includes an image of a Ukrainian tank (<image:6630>). Al Jazeera published an article on August 16, 2024, about the conflict in Kursk, which includes an image of a tank (<image:6631>). NBC News discusses the evacuation of Belgorod and Kursk (<image:6632>).
+
+The provided sources do not contain the image in the claim (<image:26>).
+
+
+## Elaboration
+The evidence does not confirm the claim. While the image of destroyed tanks (<image:26>
+
+## Actions
+```
+image_search("destroyed tanks Ukraine Russia war")
+```
+
+## Evidence
+### Evidence from `image_search`
+CNN published an article on April 27, 2022, about destroyed tanks in the Russia-Ukraine war, including an image of a destroyed tank <image:4885>. Reuters published an image of destroyed Russian military vehicles in Ukraine <image:4886>. The New York Times published an article on February 16, 2023, about the war in Ukraine, which includes an image of a destroyed tank <image:4887>.
+
+
+## Elaboration
+The evidence does not confirm the claim. The image search results show destroyed tanks from the Russia-Ukraine war, but none of the provided sources contain the image in the claim. The claim's specifics about the location and date are not supported by the evidence.
+
+Insufficient information is available to verify the claim.
+
+
+## Actions
+```
+image_search("destroyed tanks Ukraine war August 2024")
+```
+
+## Evidence
+### Evidence from `image_search`
+DefenseScoop published an article on April 3, 2025, about destroyed tanks in Ukraine, including an image of a destroyed tank (<image:6633>). Newsweek published an article about Russian tank losses in the Ukraine war, including an image of a destroyed tank (<image:6634>). NV.ua, published in August 2024, shows an image of a destroyed tank (<image:6635>).
+
+
+# Your Analysis
+
+
+
+===== > RESPONSE:  < =====
+The evidence does not confirm the claim. The image search results show destroyed tanks from the Russia-Ukraine war, but none of the provided sources contain the image in the claim. The claim's specifics about the location and date are not supported by the evidence.
+
+_________________________
+
+
+
+JudgePrompt - QUERY:
+
+# Instructions
+**Determine the Claim's veracity** by following these steps:
+1. Briefly summarize the key insights from the fact-check (see Record) in at most one paragraph.
+2. Write one paragraph about which one of the Decision Options applies best. Include the most appropriate decision option at the end and enclose it in backticks like `this`.
+
+
+
+
+## Decision Options
+* `true`: The claim is factually accurate when it is confirmed by evidence from multiple and reliable sources.
+* `false`: The claim is not factually accurate. This is the case if one of the following three conditions is met:(1) The claim is demonstrably false when it is disproven by evidence from multiple and reliable sources,(2) The claim or image is taken out of context, i.e. the origin, content and/or meaning of a statement or an image is misrepresented. For example, an old claim or an old image is mispresented in a new context in a misleading way,(3) There is not enough evidence to verify the claim or the evidence is conflicting or self-contradictory.
+
+# Record
+## Claim
+Claim: "<image:26> This image shows destroyed Ukrainian tanks during Ukraine's incursion into Russia's Kursk Oblast in August 2024."
+
+## Actions
+```
+reverse_search(<image:26>)
+image_search("destroyed Ukrainian tanks Kursk Oblast August 2024")
+```
+
+## Evidence
+### Evidence from `reverse_search`
+The image of destroyed tanks (<image:26>) appears in multiple articles. One article from Sputnik Africa, published on October 17, 2024, discusses Ukraine's loss of Leopard tanks since February 2022, including images of Leopard 2 tanks (<image:2767>, <image:2768>) ([https://en.sputniknews.africa/20241017/ukraine-has-reportedly-lost-about-40-leopard-tanks-since-february-2022-1068726197.html](https://en.sputniknews.africa/20241017/ukraine-has-reportedly-lost-about-40-leopard-tanks-since-february-2022-1068726197.html)).
+
+Another article from The Moscow Times, published on June 13, 2023, reports on Russia capturing German Leopard tanks and U.S. Bradley infantry fighting vehicles, also including the image of destroyed tanks (<image:2769>) ([https://www.themoscowtimes.com/2023/06/13/russia-says-german-leopard-tanks-us-bradleys-captured-in-ukraine-a81492](https://www.themoscowtimes.com/2023/06/13/russia-says-german-leopard-tanks-us-bradleys-captured-in-ukraine-a81492)). Defence Security Asia published an article on May 19, 2024, discussing the destruction of German-made Leopard tanks in Ukraine, including an image of a captured Leopard 2A6 tank (<image:2776>) ([https://defencesecurityasia.com/en/german-made-leopard-tanks-bear-the-brunt-of-russian-forces-rejuvenation-in-ukraine/](https://defencesecurityasia.com/en/german-made-leopard-tanks-bear-the-brunt-of-russian-forces-rejuvenation-in-ukraine/)).
+
+
+### Evidence from `image_search`
+The Center for European Policy Analysis (CEPA) published an article about the second battle of Kursk, which includes an image of a Ukrainian tank (<image:6630>). Al Jazeera published an article on August 16, 2024, about the conflict in Kursk, which includes an image of a tank (<image:6631>). NBC News discusses the evacuation of Belgorod and Kursk (<image:6632>).
+
+The provided sources do not contain the image in the claim (<image:26>).
+
+
+## Elaboration
+The evidence does not confirm the claim. While the image of destroyed tanks (<image:26>
+
+## Actions
+```
+image_search("destroyed tanks Ukraine Russia war")
+```
+
+## Evidence
+### Evidence from `image_search`
+CNN published an article on April 27, 2022, about destroyed tanks in the Russia-Ukraine war, including an image of a destroyed tank <image:4885>. Reuters published an image of destroyed Russian military vehicles in Ukraine <image:4886>. The New York Times published an article on February 16, 2023, about the war in Ukraine, which includes an image of a destroyed tank <image:4887>.
+
+
+## Elaboration
+The evidence does not confirm the claim. The image search results show destroyed tanks from the Russia-Ukraine war, but none of the provided sources contain the image in the claim. The claim's specifics about the location and date are not supported by the evidence.
+
+Insufficient information is available to verify the claim.
+
+
+## Actions
+```
+image_search("destroyed tanks Ukraine war August 2024")
+```
+
+## Evidence
+### Evidence from `image_search`
+DefenseScoop published an article on April 3, 2025, about destroyed tanks in Ukraine, including an image of a destroyed tank (<image:6633>). Newsweek published an article about Russian tank losses in the Ukraine war, including an image of a destroyed tank (<image:6634>). NV.ua, published in August 2024, shows an image of a destroyed tank (<image:6635>).
+
+
+## Elaboration
+The evidence does not confirm the claim. The image search results show destroyed tanks from the Russia-Ukraine war, but none of the provided sources contain the image in the claim. The claim's specifics about the location and date are not supported by the evidence.
+
+
+# Your Judgement
+
+
+
+===== > RESPONSE:  < =====
+The image in the claim depicts destroyed tanks, but the provided evidence does not confirm the specific context of the claim, including the location (Kursk Oblast) and the date (August 2024). The search results show images of destroyed tanks from the Russia-Ukraine war, but not the one in the claim. Therefore, the claim cannot be verified. `false`
+_________________________
+
+
+
+SummarizeDocPrompt - QUERY:
+
+# Instructions
+You are provided with the record of a fact-check. It contains the Claim to be verified and a documentation of all the fact-checking work along the gathered evidence. Your task is to **summarize the fact-check**. That is, you provide a concise, one-paragraph justification for the final VERDICT based on the knowledge from the Record. Note:
+* Be truthful, brief, do not add any additional information besides the information given in the Record. 
+* Link key sources in your summary. Use Markdown notation for that. You may link them in-line.
+* Don't state the Claim again. Rather focus on the key insights of the fact-check.
+* Simply print just the summary.
+
+# Record
+## Claim
+Claim: "<image:26> This image shows destroyed Ukrainian tanks during Ukraine's incursion into Russia's Kursk Oblast in August 2024."
+
+## Actions
+```
+reverse_search(<image:26>)
+image_search("destroyed Ukrainian tanks Kursk Oblast August 2024")
+```
+
+## Evidence
+### Evidence from `reverse_search`
+The image of destroyed tanks (<image:26>) appears in multiple articles. One article from Sputnik Africa, published on October 17, 2024, discusses Ukraine's loss of Leopard tanks since February 2022, including images of Leopard 2 tanks (<image:2767>, <image:2768>) ([https://en.sputniknews.africa/20241017/ukraine-has-reportedly-lost-about-40-leopard-tanks-since-february-2022-1068726197.html](https://en.sputniknews.africa/20241017/ukraine-has-reportedly-lost-about-40-leopard-tanks-since-february-2022-1068726197.html)).
+
+Another article from The Moscow Times, published on June 13, 2023, reports on Russia capturing German Leopard tanks and U.S. Bradley infantry fighting vehicles, also including the image of destroyed tanks (<image:2769>) ([https://www.themoscowtimes.com/2023/06/13/russia-says-german-leopard-tanks-us-bradleys-captured-in-ukraine-a81492](https://www.themoscowtimes.com/2023/06/13/russia-says-german-leopard-tanks-us-bradleys-captured-in-ukraine-a81492)). Defence Security Asia published an article on May 19, 2024, discussing the destruction of German-made Leopard tanks in Ukraine, including an image of a captured Leopard 2A6 tank (<image:2776>) ([https://defencesecurityasia.com/en/german-made-leopard-tanks-bear-the-brunt-of-russian-forces-rejuvenation-in-ukraine/](https://defencesecurityasia.com/en/german-made-leopard-tanks-bear-the-brunt-of-russian-forces-rejuvenation-in-ukraine/)).
+
+
+### Evidence from `image_search`
+The Center for European Policy Analysis (CEPA) published an article about the second battle of Kursk, which includes an image of a Ukrainian tank (<image:6630>). Al Jazeera published an article on August 16, 2024, about the conflict in Kursk, which includes an image of a tank (<image:6631>). NBC News discusses the evacuation of Belgorod and Kursk (<image:6632>).
+
+The provided sources do not contain the image in the claim (<image:26>).
+
+
+## Elaboration
+The evidence does not confirm the claim. While the image of destroyed tanks (<image:26>
+
+## Actions
+```
+image_search("destroyed tanks Ukraine Russia war")
+```
+
+## Evidence
+### Evidence from `image_search`
+CNN published an article on April 27, 2022, about destroyed tanks in the Russia-Ukraine war, including an image of a destroyed tank <image:4885>. Reuters published an image of destroyed Russian military vehicles in Ukraine <image:4886>. The New York Times published an article on February 16, 2023, about the war in Ukraine, which includes an image of a destroyed tank <image:4887>.
+
+
+## Elaboration
+The evidence does not confirm the claim. The image search results show destroyed tanks from the Russia-Ukraine war, but none of the provided sources contain the image in the claim. The claim's specifics about the location and date are not supported by the evidence.
+
+Insufficient information is available to verify the claim.
+
+
+## Actions
+```
+image_search("destroyed tanks Ukraine war August 2024")
+```
+
+## Evidence
+### Evidence from `image_search`
+DefenseScoop published an article on April 3, 2025, about destroyed tanks in Ukraine, including an image of a destroyed tank (<image:6633>). Newsweek published an article about Russian tank losses in the Ukraine war, including an image of a destroyed tank (<image:6634>). NV.ua, published in August 2024, shows an image of a destroyed tank (<image:6635>).
+
+
+## Elaboration
+The evidence does not confirm the claim. The image search results show destroyed tanks from the Russia-Ukraine war, but none of the provided sources contain the image in the claim. The claim's specifics about the location and date are not supported by the evidence.
+
+
+## Final Judgement
+The image in the claim depicts destroyed tanks, but the provided evidence does not confirm the specific context of the claim, including the location (Kursk Oblast) and the date (August 2024). The search results show images of destroyed tanks from the Russia-Ukraine war, but not the one in the claim. Therefore, the claim cannot be verified. `false`
+
+## Summary
+
+
+
+===== > RESPONSE:  < =====
+The claim is not supported by the evidence. While the image shows destroyed tanks, the provided sources do not confirm the specific context of the claim, including the location (Kursk Oblast) and the date (August 2024). The search results show images of destroyed tanks from the Russia-Ukraine war, but not the one in the claim.
+
+_________________________
+
+
+

@@ -1,0 +1,63 @@
+Extracting claims from Content: In an interview with podcaster Theo Von in August 2024, Donald Trump criticized British Prime Minister Keir Starmer over a 100-year deal between the U.K. and Ukraine.
+'Claim: "In an interview with podcaster Theo Von in August 2024, Donald Trump criticized British Prime Minister Keir Starmer over a 100-year deal between the U.K. and Ukraine."'
+Verifying Claim: "In an interview with podcaster Theo Von in August 2024, Donald Trump criticized British Prime Minister Keir Starmer over a 100-year deal between the U.K. and Ukraine."
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Donald Trump Theo Von interview August 2024')
+Got 3 new web source(s):
+	1. https://www.nsnews.com/local-news/theo-von-vancouver-donald-trump-interview-2024-9379843
+	2. https://www.independent.co.uk/news/world/americas/us-politics/donald-trump-cocaine-theo-von-podcast-b2599472.html
+	3. https://www.foxnews.com/politics/trump-talks-cocaine-biden-health-care-interview-comedian-theo-von
+Useful result: From [Source](https://www.nsnews.com/local-news/theo-von-vancouver-donald-trump-interview-2024-9379843): 
+Content: The search result contains an image of Donald Trump being interviewed by Theo Von. <image:6907>
+
+Useful result: From [Source](https://www.independent.co.uk/news/world/americas/us-politics/donald-trump-cocaine-theo-von-podcast-b2599472.html): 
+Content: The Independent published an article that includes an image of Donald Trump in an interview with Theo Von. <image:6908>
+
+Useful result: From [Source](https://www.foxnews.com/politics/trump-talks-cocaine-biden-health-care-interview-comedian-theo-von): 
+Content: Fox News reports on an interview with Donald Trump and comedian Theo Von. <image:6909>
+
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Donald Trump Keir Starmer Ukraine deal')
+Got 3 new web source(s):
+	1. https://www.reuters.com/world/uks-starmer-discussed-tough-fair-ukraine-peace-deal-with-trump-2025-02-27/
+	2. https://www.cnn.com/2025/02/27/politics/trump-starmer-security-guarantees-analysis
+	3. https://www.nbcnews.com/politics/white-house/keir-starmer-sees-value-trumps-pursuit-ukrainian-mineral-rights-deal-rcna194047
+Useful result: From [Source](https://www.reuters.com/world/uks-starmer-discussed-tough-fair-ukraine-peace-deal-with-trump-2025-02-27/): 
+Content: Reuters published an article about Keir Starmer and Donald Trump. <image:6911>
+
+Useful result: From [Source](https://www.cnn.com/2025/02/27/politics/trump-starmer-security-guarantees-analysis): 
+Content: CNN published an article on February 27, 2025, discussing Donald Trump and Keir Starmer. <image:6913>
+
+Useful result: From [Source](https://www.nbcnews.com/politics/white-house/keir-starmer-sees-value-trumps-pursuit-ukrainian-mineral-rights-deal-rcna194047): 
+Content: The search result from NBC News contains an image of Donald Trump. <image:6914>
+
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Donald Trump Theo Von interview Ukraine Keir Starmer')
+Skipping unsupported website: https://www.tiktok.com/@c4news/video/7532131618136395030
+Got 3 new web source(s):
+	1. https://dailyprogress.com/news/nation-world/article_87628c6d-c55d-5a79-9c3c-5ee5001dc716.html
+	2. https://www.bostonglobe.com/2025/08/17/world/european-leader-ukraine-trump-meeting/
+	3. https://tucson.com/news/nation-world/government-politics/article_59807f85-88f9-56d4-a492-23ea493e77c6.html
+Useful result: From [Source](https://dailyprogress.com/news/nation-world/article_87628c6d-c55d-5a79-9c3c-5ee5001dc716.html): 
+Content: The Daily Progress published an article that includes an image of Donald Trump and Keir Starmer. <image:6925>
+
+Useful result: From [Source](https://www.bostonglobe.com/2025/08/17/world/european-leader-ukraine-trump-meeting/): 
+Content: The Boston Globe published an article on August 17, 2025, about a meeting between Donald Trump and a European leader regarding Ukraine. <image:6926>
+
+Useful result: From [Source](https://tucson.com/news/nation-world/government-politics/article_59807f85-88f9-56d4-a492-23ea493e77c6.html): 
+Content: The search result from Tucson.com includes an image of Donald Trump, Keir Starmer, and another person. <image:6927>
+
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Theo Von interview Donald Trump Keir Starmer Ukraine deal')
+Failed to download or open image: cannot identify image file <_io.BytesIO object at 0x7ffed15aa840>
+Skipping unsupported website: https://www.tiktok.com/@msnbc/video/7526981992722746638
+Got 2 new web source(s):
+	1. https://www.politico.com/newsletters/playbook/2025/07/25/running-against-history-00476657
+	2. https://nptelegraph.com/news/nation-world/article_58fe593a-0470-55b2-9020-28c9d514b4d8.html
+Useful result: From [Source](https://nptelegraph.com/news/nation-world/article_58fe593a-0470-55b2-9020-28c9d514b4d8.html): 
+Content: The search result from nptelegraph.com includes an image of Donald Trump and Keir Starmer. <image:6935>
+
+The claim 'In an interview with podcaster Theo Von in August 2024, Donald Trump criticized British Prime Minister Keir Starmer over a 100-year deal between the U.K. and Ukraine.' is false.
+Justification: The fact-check revealed that while Donald Trump was interviewed by Theo Von, and there are articles discussing Trump and Keir Starmer, the search results do not provide any information about the content of the interview, specifically whether Trump criticized Keir Starmer over a deal between the U.K. and Ukraine. Therefore, the claim is unverified.
+
+So, the overall veracity is: false
+Fact-check took 1:10 min.

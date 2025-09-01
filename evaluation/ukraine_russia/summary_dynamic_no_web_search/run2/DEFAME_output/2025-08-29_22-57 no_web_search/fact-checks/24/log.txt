@@ -1,0 +1,27 @@
+Extracting claims from Content: Warren Buffett has given more than $500 million to Ukraine since 2022.
+'Claim: "Warren Buffett has given more than $500 million to Ukraine since 2022."'
+Verifying Claim: "Warren Buffett has given more than $500 million to Ukraine since 2022."
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Warren Buffett Ukraine donations')
+Skipping unsupported website: https://www.instagram.com/p/Cew5I05uhu0/
+Failed to download or open image: cannot identify image file <_io.BytesIO object at 0x7ffed1d47010>
+Got 3 new web source(s):
+	1. https://www.businessinsider.com/howard-buffett-gives-500-million-to-ukraine
+	2. https://www.cnbc.com/2022/06/13/buffetts-son-donates-2point7-million-to-ukraine-after-zelenskyy-meeting.html
+	3. https://philanthropynewsdigest.org/news/other-sources/article/?id=14667666&title=US-philanthropist-pledges-$300-million-for-Ukraine-in-2024
+Useful result: From [Source](https://www.businessinsider.com/howard-buffett-gives-500-million-to-ukraine): 
+Content: The search result from Business Insider shows an image of Howard Buffett with Volodymyr Zelenskyy. <image:6731>
+
+Useful result: From [Source](https://philanthropynewsdigest.org/news/other-sources/article/?id=14667666&title=US-philanthropist-pledges-$300-million-for-Ukraine-in-2024): 
+Content: The search result from Philanthropy News Digest mentions a US philanthropist pledging $300 million for Ukraine in 2024. <image:6732>
+
+Not enough information yet. Continuing fact-check...
+No new actions were found in this response:
+```
+image_search("Warren Buffett Ukraine donations")
+``` and performed actions: image_search("Warren Buffett Ukraine donations")
+The claim 'Warren Buffett has given more than $500 million to Ukraine since 2022.' is false.
+Justification: The claim is false. The evidence indicates that Howard Buffett, not Warren Buffett, has donated to Ukraine. A [Business Insider](https://www.businessinsider.com/howard-buffett-gives-500-million-to-ukraine) article and image show Howard Buffett with Volodymyr Zelenskyy, and another source mentions a US philanthropist pledging funds for Ukraine.
+
+So, the overall veracity is: false
+Fact-check took 0:14 min.

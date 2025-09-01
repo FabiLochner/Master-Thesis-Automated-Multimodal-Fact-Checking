@@ -1,0 +1,50 @@
+Extracting claims from Content: <image:13> This image shows a traffic sign in Montreal in July 2024 which displays a 'Free Palestine. Escalate now' message and was authorized by Montreal's Mayor Valérie Plante.
+'Claim: "<image:13> This image shows a traffic sign in Montreal in July 2024 which displays a 'Free Palestine. Escalate now' message and was authorized by Montreal's Mayor Valérie Plante."'
+Verifying Claim: "<image:13> This image shows a traffic sign in Montreal in July 2024 which displays a 'Free Palestine. Escalate now' message and was authorized by Montreal's Mayor Valérie Plante."
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='traffic sign Free Palestine Montreal')
+Failed to download or open image: HTTPSConnectionPool(host='i.cbc.ca', port=443): Read timed out. (read timeout=10)
+Failed to download or open image: HTTPSConnectionPool(host='www.montrealgazette.com', port=443): Read timed out. (read timeout=10)
+Skipping unsupported website: https://www.facebook.com/photo.php?fbid=403138926955393&id=118445348758087&set=a.132412804028008
+Got 3 new web source(s):
+	1. https://www.cbc.ca/news/canada/montreal/montreal-traffic-signs-pro-palestinian-slogans-1.7274809
+	2. https://www.montrealgazette.com/news/article416906.html
+	3. https://www.dreamstime.com/montreal-canada-june-palestine-flag-free-palestine-palestine-libre-slogan-french-painted-brick-walls-building-image134965380
+Useful result: From [Source](https://www.dreamstime.com/montreal-canada-june-palestine-flag-free-palestine-palestine-libre-slogan-french-painted-brick-walls-building-image134965380): 
+Content: The search result contains an image of a building in Montreal with a Palestine flag and the words "PALESTINE LIBRE". <image:7890>
+
+Most likely location: Palestine
+Top 10 locations: Palestine, Canada, Germany, Austria, Israel, Poland, Slovenia, South Korea, Albania, Andorra
+Not enough information yet. Continuing fact-check...
+INFO: Dropping action 'geolocate' as it was already performed.
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Montreal traffic sign Free Palestine')
+Failed to download or open image: HTTPSConnectionPool(host='www.montrealgazette.com', port=443): Read timed out. (read timeout=10)
+Got 2 new web source(s):
+	1. https://www.theglobeandmail.com/canada/article-montreal-traffic-signs-apparently-hacked-to-display-pro-palestinian/
+	2. https://www.thecanadianpressnews.ca/quebec/montreal-electronic-traffic-signs-altered-to-display-pro-palestinian-slogans/article_20202caf-5885-5c90-a4ff-eda9db2799be.html
+Useful result: From [Source](https://www.theglobeandmail.com/canada/article-montreal-traffic-signs-apparently-hacked-to-display-pro-palestinian/): 
+Content: The Globe and Mail published an article about Montreal traffic signs displaying a "Free Palestine. Escalate now" message. <image:7906>
+
+Useful result: From [Source](https://www.thecanadianpressnews.ca/quebec/montreal-electronic-traffic-signs-altered-to-display-pro-palestinian-slogans/article_20202caf-5885-5c90-a4ff-eda9db2799be.html): 
+Content: The Canadian Press News published an article about electronic traffic signs in Montreal being altered to display pro-Palestinian slogans. The article includes an image of a traffic sign with the message "FREE PALESTINE. ESCALATE NOW". <image:7909>
+
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Valérie Plante Free Palestine Montreal')
+Skipping unsupported website: https://www.reddit.com/r/montreal/comments/1996vfd/montreal_mayor_val%C3%A9rie_plante_faces_accusations/
+Skipping unsupported website: https://www.facebook.com/MTL.ValeriePlante/posts/comm%C3%A9morons-les-%C3%A9v%C3%A9nements-du-7-octobre-2023-de-mani%C3%A8re-pacifique-et-continuons-/1108975513922821/
+Failed to download or open image: HTTPSConnectionPool(host='i.cbc.ca', port=443): Read timed out. (read timeout=10)
+Skipping fact-checking website: https://factcheck.afp.com/doc.afp.com.367P9XU
+Got 3 new web source(s):
+	1. https://nationalpost.com/news/montreal-anti-israel-road-sign-messages
+	2. https://www.cbc.ca/news/canada/montreal/plante-anti-nato-protest-1.7392719
+	3. https://www.ijvcanada.org/open-letter-to-montreals-city-council-say-no-to-the-ihra-again/
+Useful result: From [Source](https://nationalpost.com/news/montreal-anti-israel-road-sign-messages): 
+Content: The National Post published an article about anti-Israel road sign messages in Montreal. The article includes an image of a traffic sign that reads "FREE PALESTINE. ESCALATE NOW." <image:7912>
+
+Useful result: From [Source](https://www.ijvcanada.org/open-letter-to-montreals-city-council-say-no-to-the-ihra-again/): 
+Content: The search result from Independent Jewish Voices Canada contains an image with the text "FIGHT ANTISEMITISM, NOT PALESTINE SOLIDARITY!" and "NO IHRA IN MONTREAL!" <image:7916>.
+
+The claim '<image:13> This image shows a traffic sign in Montreal in July 2024 which displays a 'Free Palestine. Escalate now' message and was authorized by Montreal's Mayor Valérie Plante.' is false.
+Justification: The claim is false. While traffic signs in Montreal did display the message "FREE PALESTINE. ESCALATE NOW," according to reports from sources like the [Globe and Mail](https://www.theglobeandmail.com/canada/article-montreal-traffic-signs-apparently-hacked-to-display-pro-palestinian/) and The Canadian Press News, the signs were apparently hacked, and there is no evidence to support the claim that the message was authorized by Montreal's Mayor Valérie Plante.
+
+So, the overall veracity is: false
+Fact-check took 1:47 min.

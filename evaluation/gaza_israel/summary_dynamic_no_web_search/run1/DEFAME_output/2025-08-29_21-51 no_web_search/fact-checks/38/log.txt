@@ -1,0 +1,36 @@
+Extracting claims from Content: <image:26> This image shows the assassination of Hamas leader Ismail Haniyeh on July 31st, 2024. This is how a precision strike looks like: a single missile through the window, and only Haniyeh and his bodyguard are dead. Nobody else in the building is even injured.
+'Claim: "<image:26> This image shows the assassination of Hamas leader Ismail Haniyeh on July 31st, 2024. This is how a precision strike looks like: a single missile through the window, and only Haniyeh and his bodyguard are dead. Nobody else in the building is even injured."'
+Verifying Claim: "<image:26> This image shows the assassination of Hamas leader Ismail Haniyeh on July 31st, 2024. This is how a precision strike looks like: a single missile through the window, and only Haniyeh and his bodyguard are dead. Nobody else in the building is even injured."
+Not enough information yet. Continuing fact-check...
+Got 3 new web source(s):
+	1. https://nypost.com/2022/08/01/biden-to-speak-after-us-takes-out-al-qaeda-target-in-afghanistan/
+	2. https://www.news18.com/news/world/al-zawahiri-liked-sitting-outside-on-his-balcony-the-cia-watched-for-months-before-killing-him-5671915.html
+	3. https://www.kyleorton.com/p/ayman-al-zawahiri-life-in-jihad
+Useful result: From [Source](https://nypost.com/2022/08/01/biden-to-speak-after-us-takes-out-al-qaeda-target-in-afghanistan/): Found exact image on website with title: US takes out al Qaeda leader Ayman al-Zawahiri in Afghanistan
+Content: The New York Post reports that Ayman al-Zawahiri, the leader of al Qaeda, was killed in a drone strike in Kabul, Afghanistan. <image:7051>. The strike was confirmed by President Biden. The article includes a map of the drone strike <image:7049> and an image of the Hellfire missile used <image:7055>. The article also mentions that the image <image:26> is believed to be the residence of al Qaeda leader Ayman al-Zawahiri. The article was published on August 1, 2022.
+
+Useful result: From [Source](https://www.news18.com/news/world/al-zawahiri-liked-sitting-outside-on-his-balcony-the-cia-watched-for-months-before-killing-him-5671915.html): Found exact image on website with title: Al-Zawahiri Liked Sitting Outside on His Balcony. The CIA Watched ...
+Content: The search result from News18.com, published on August 2, 2022, discusses the killing of al-Qaeda leader Ayman al-Zawahiri in Kabul on July 31, 2022, by a US drone strike. The article mentions that the CIA monitored al-Zawahiri for months, and the strike was carried out while he was on his balcony. The article includes an image of the building hit by the missile <image:7068>, <image:7069>. The article also includes a map showing the location of the strike <image:7070>.
+
+Useful result: From [Source](https://www.kyleorton.com/p/ayman-al-zawahiri-life-in-jihad): Found exact image on website with title: Ayman al-Zawahiri's Life in Jihad and Al-Qaeda After His Death
+Content: The article, published on July 31, 2023, by Kyle Orton, discusses the life of Ayman al-Zawahiri, the former leader of Al-Qaeda, who was killed in Kabul on July 31, 2022. The article mentions that the house where al-Zawahiri was killed is located in the Sherpur area of Kabul. <image:26> The article also discusses the potential successors to al-Zawahiri, with Sayf al-Adel being a likely candidate. The article also mentions the relationship between Al-Qaeda and Iran.
+
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Ismail Haniyeh assassination July 31 2024')
+Got 3 new web source(s):
+	1. https://www.lemonde.fr/en/international/article/2024/07/31/hamas-chief-ismail-haniyeh-assassinated-in-tehran_6705742_4.html
+	2. https://www.aljazeera.com/news/2024/7/31/hamas-chief-ismail-haniyeh-killed-in-iran-what-to-know-whats-next
+	3. https://abcnews.go.com/International/ismail-haniyeh-assassinated-hamas-political-bureau-history/story?id=112430229
+Useful result: From [Source](https://www.lemonde.fr/en/international/article/2024/07/31/hamas-chief-ismail-haniyeh-assassinated-in-tehran_6705742_4.html): 
+Content: Le Monde published an article on July 31, 2024, about the assassination of Hamas leader Ismail Haniyeh. <image:7554>
+
+Useful result: From [Source](https://www.aljazeera.com/news/2024/7/31/hamas-chief-ismail-haniyeh-killed-in-iran-what-to-know-whats-next): 
+Content: Al Jazeera reports that Hamas chief Ismail Haniyeh was assassinated along with a bodyguard when his residence in Tehran, Iran, was attacked. <image:7555> The source is Al Jazeera, and the date is July 31, 2024.
+
+Useful result: From [Source](https://abcnews.go.com/International/ismail-haniyeh-assassinated-hamas-political-bureau-history/story?id=112430229): 
+Content: ABC News published an article about Ismail Haniyeh. <image:7556>
+
+The claim '<image:26> This image shows the assassination of Hamas leader Ismail Haniyeh on July 31st, 2024. This is how a precision strike looks like: a single missile through the window, and only Haniyeh and his bodyguard are dead. Nobody else in the building is even injured.' is false.
+Justification: The image provided in the claim is associated with the killing of al-Qaeda leader Ayman al-Zawahiri in Kabul, Afghanistan, on July 31, 2022, as evidenced by sources like the New York Post ([https://nypost.com/2022/08/01/biden-to-speak-after-us-takes-out-al-qaeda-target-in-afghanistan/](https://nypost.com/2022/08/01/biden-to-speak-after-us-takes-out-al-qaeda-target-in-afghanistan/)) and News18.com ([https://www.news18.com/news/world/al-zawahiri-liked-sitting-outside-on-his-balcony-the-cia-watched-for-months-before-killing-him-5671915.html](https://www.news18.com/news/world/al-zawahiri-liked-sitting-outside-on-his-balcony-the-cia-watched-for-months-before-killing-him-5671915.html)). The claim incorrectly attributes the image to the assassination of Hamas leader Ismail Haniyeh.
+
+So, the overall veracity is: false
+Fact-check took 0:28 min.

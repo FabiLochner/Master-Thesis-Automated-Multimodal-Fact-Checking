@@ -1,0 +1,32 @@
+Extracting claims from Content: <image:10232> This image shows thousands gathering at Sohrawardi Park in Kolkata, India, in April 2025 to show solidarity with the Palestinian people amid the ongoing Israeli assault on Gaza.
+'Claim: "<image:10232> This image shows thousands gathering at Sohrawardi Park in Kolkata, India, in April 2025 to show solidarity with the Palestinian people amid the ongoing Israeli assault on Gaza."'
+Verifying Claim: "<image:10232> This image shows thousands gathering at Sohrawardi Park in Kolkata, India, in April 2025 to show solidarity with the Palestinian people amid the ongoing Israeli assault on Gaza."
+Not enough information yet. Continuing fact-check...
+Most likely location: Bangladesh
+Top 10 locations: Bangladesh, Pakistan, India, Palestine, Albania, Andorra, Argentina, Australia, Austria, Belgium
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Sohrawardi Park Kolkata protest Palestine')
+Skipping fact-checking website: https://www.thequint.com/news/webqoof/sohrawardi-park-bangladesh-protest-pro-palestine-not-kolkata-rally-fact-check
+Skipping unsupported website: https://www.facebook.com/photo.php?fbid=1071242921713319&id=100064828627349&set=a.549374710566812
+Skipping unsupported website: https://www.instagram.com/p/DIW31CNNZHw/
+Skipping fact-checking website: https://www.misbar.com/en/factcheck/2025/04/15/photos-show-recent-pro-palestine-protests-bangladesh-not-india
+Got 3 new web source(s):
+	1. April 23, 2025 https://factly.in/photos-of-a-protest-held-in-solidarity-with-palestine-in-dhaka-bangladesh-are-falsely-shared-as-those-from-kolkata/
+	2. April 20, 2025 https://www.newsmobile.in/nm-fact-checker/fact-check-images-of-pro-palestine-protest-in-bangladeshs-dhaka-falsely-linked-to-india/
+	3. April 12, 2025 https://tezzfeed.com/latest-news/palestinian-media-shares-bangladeshs-pro-gaza-protest-photos-mistakenly-labels-them-as-kolkata-1744522142539
+Useful result: From [Source](https://factly.in/photos-of-a-protest-held-in-solidarity-with-palestine-in-dhaka-bangladesh-are-falsely-shared-as-those-from-kolkata/): 
+Content: The search result from Factly.in states that the photos in the claim are from a protest held in Suhrawardy Udyan in Dhaka, Bangladesh, on April 12, 2025, and not in Kolkata, India. <image:11602>, <image:11617>. The event was a "March for Gaza" to show solidarity with Palestinians, with approximately 100,000 participants.
+
+Useful result: From [Source](https://www.newsmobile.in/nm-fact-checker/fact-check-images-of-pro-palestine-protest-in-bangladeshs-dhaka-falsely-linked-to-india/): 
+Content: The search result from NewsMobile states that the images in the claim are falsely linked to Kolkata, India. The images are from a pro-Palestine protest in Dhaka, Bangladesh. The article was published on April 20, 2025. <image:10232>
+
+Useful result: From [Source](https://tezzfeed.com/latest-news/palestinian-media-shares-bangladeshs-pro-gaza-protest-photos-mistakenly-labels-them-as-kolkata-1744522142539): 
+Content: The article from Tezzfeed discusses how Palestinian media mistakenly labeled photos of a pro-Gaza protest in Bangladesh as being in Kolkata. The article was published in 2025.
+
+Searching google_vision with query: ImageQuery(limit=3, start_date=None, end_date=None, search_type='reverse', text='', image=<defame.common.medium.Image object at 0x7ffe4c250fd0>)
+Skipping fact-checking website: https://www.misbar.com/en/factcheck/2025/04/15/photos-show-recent-pro-palestine-protests-bangladesh-not-india
+Got 0 new web source(s):
+The claim '<image:10232> This image shows thousands gathering at Sohrawardi Park in Kolkata, India, in April 2025 to show solidarity with the Palestinian people amid the ongoing Israeli assault on Gaza.' is false.
+Justification: The images in the claim are from a pro-Palestine protest held in Suhrawardy Udyan in Dhaka, Bangladesh, on April 12, 2025, not in Kolkata, India, as indicated by the [web search results](https://factly.in/photos-of-a-protest-held-in-solidarity-with-palestine-in-dhaka-bangladesh-are-falsely-shared-as-those-from-kolkata/), [NewsMobile](https://www.newsmobile.in/nm-fact-checker/fact-check-images-of-pro-palestine-protest-in-bangladeshs-dhaka-falsely-linked-to-india/), and [Tezzfeed](https://tezzfeed.com/latest-news/palestinian-media-shares-bangladeshs-pro-gaza-protest-photos-mistakenly-labels-them-as-kolkata-1744522142539).
+
+So, the overall veracity is: false
+Fact-check took 2:42 min.

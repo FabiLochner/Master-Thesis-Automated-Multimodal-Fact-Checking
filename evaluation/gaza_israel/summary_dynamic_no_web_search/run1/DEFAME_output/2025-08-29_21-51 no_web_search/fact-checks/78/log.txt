@@ -1,0 +1,23 @@
+Extracting claims from Content: Netanyahu left Israel and fled to Poland amid Iran's missile attack on Israel on October 1, 2024.
+'Claim: "Netanyahu left Israel and fled to Poland amid Iran's missile attack on Israel on October 1, 2024."'
+Verifying Claim: "Netanyahu left Israel and fled to Poland amid Iran's missile attack on Israel on October 1, 2024."
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Netanyahu Poland October 1 2024')
+Got 3 new web source(s):
+	1. https://www.latimes.com/world-nation/story/2025-01-09/polish-president-seeks-protection-for-netanyahu-if-he-attends-auschwitz-anniversary-event
+	2. https://theintercept.com/2025/01/23/netanyahu-auschwitz-memorial-poland-icc-warrant/
+	3. https://www.scmp.com/news/world/europe/article/3294135/poland-says-wont-arrest-israel-pm-netanyahu-if-he-visits-auschwitz-commemoration
+Useful result: From [Source](https://www.latimes.com/world-nation/story/2025-01-09/polish-president-seeks-protection-for-netanyahu-if-he-attends-auschwitz-anniversary-event): 
+Content: The Los Angeles Times published an article on January 9, 2025, about the Polish president seeking protection for Netanyahu if he attends an Auschwitz anniversary event. The article includes an image of Netanyahu <image:7767>.
+
+Useful result: From [Source](https://theintercept.com/2025/01/23/netanyahu-auschwitz-memorial-poland-icc-warrant/): 
+Content: The Intercept published an article on January 23, 2025, about Netanyahu. The article includes an image of Netanyahu. <image:7768>
+
+Useful result: From [Source](https://www.scmp.com/news/world/europe/article/3294135/poland-says-wont-arrest-israel-pm-netanyahu-if-he-visits-auschwitz-commemoration): 
+Content: The search result from SCMP.com contains an image of Netanyahu. <image:7769>
+
+The claim 'Netanyahu left Israel and fled to Poland amid Iran's missile attack on Israel on October 1, 2024.' is false.
+Justification: The claim is demonstrably false. The image search results show Netanyahu active in January 2025, contradicting the claim that he fled to Poland on October 1, 2024. The evidence does not mention any missile attacks or fleeing to Poland.
+
+So, the overall veracity is: false
+Fact-check took 0:17 min.

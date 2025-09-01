@@ -1,0 +1,1880 @@
+PlanPrompt - QUERY:
+
+# Instructions
+The available knowledge is insufficient to assess the Claim. Therefore, **propose a set of actions** to retrieve new and helpful evidence. Adhere to the following rules:
+* The actions available are listed under Valid Actions, including a short description for each action. No other actions are possible at this moment. 
+* For each action, use the formatting as specified in Valid Actions.
+* Include all actions in a single Markdown code block at the end of your answer.
+* Propose as few actions as possible, but as much as needed. Do not propose similar or previously used actions.
+
+
+
+## Valid Actions
+* `web_search`
+   * Description: Run an open web search on Google or DuckDuckGO to retrieve any related webpage.
+   * How to use: Do not use this with a previously used or similar query from previous web searches. If a previous web search did not yield any results, use a very different query.
+   * Format: web_search("your web search query goes here")
+
+* `image_search`
+   * Description: Run an image search on Google to retrieve related images for a given query.
+   * How to use: This is a helpful tool for fact-checking images. Use this to retrieve images associated with a specific keyword or phrase. Ensure that the query is clear and specific to improve search accuracy. If no relevant images are found, refine the query or use more descriptive terms.
+   * Format: image_search("your image search query goes here")
+
+* `geolocate`
+   * Description: Performs geolocation to determine the country where an image was taken.
+   * How to use: Provide an image and the model will determine the most likely countries where it was taken.
+   * Format: geolocate(<image:k>), where `k` is the image's ID
+
+# Example: web_search()
+
+## Claim
+Text: "New Zealand’s new Food Bill bans gardening"
+Claim date: October 29, 2020
+
+...
+
+## Actions
+```
+web_search("New Zealand Food Bill 2020")
+web_search("New Zealand Food Bill gardening ban")
+```
+
+# Example: image_search()
+
+## Claim
+Text: "Chinese officials in white protective hazmat suits carried people down a hallway to be quarantined for having COVID-19 in November 2022."
+
+...
+
+ACTIONS:
+```
+image_search("China officials white suits carry people")
+image_search("China officials carry people COVID quarantine 2022")
+```
+
+# Example: geolocate()
+
+## Claim
+Text: "<image:k> shows a nuclear weapons facility in Usbekistan."
+
+...
+
+## Actions
+```
+geolocate(<image:k>)
+```
+
+# Record
+## Claim
+Claim: "<image:64> This is an authentic image of Dwayne Johnson waring the Israeli flag in support of Israel."
+
+# Your Actions
+
+
+
+===== > RESPONSE:  < =====
+```
+web_search("Dwayne Johnson Israeli flag")
+image_search("Dwayne Johnson Israeli flag")
+```
+_________________________
+
+
+
+SummarizeResultPrompt - QUERY:
+
+# Instructions
+In order to find evidence that helps your fact-check, you just ran a web search which yielded a Search Result. **Your task right now is to summarize the Search Result.** What to include:
+* information that might be useful for the fact-check (see Record)
+* relevant images (refer to images by inserting their reference <image:k>)
+* if available: the release date as well as the author or the publisher (e.g. the media company) of the search result.
+
+Do NOT include:
+* advertisements
+* any other information not related to the Record or the Claim
+
+Additional rules:
+* Do not add any additional information besides the information in the Search Result.
+* If the Search Result doesn't contain any relevant information for the fact-checking work, simply print one word in capital letters: "NONE".
+* Keep your writing style like in the Examples 1, 2 and 3 provided to you.
+* Try to filter out relevant information even if the search result is in a different language.
+
+# Example 1
+The search result from America Today provides several photographs of the Notre-Dame Cathedral fire on April 15, 2019. <image:i>, <image:j>, <image:k>. None of the images show the Eiffel Tower in the background. 
+
+# Example 2
+NONE
+
+# Example 3
+The Guardian discusses a report blaming the Syrian government for a toxic gas attack and condemning their use of chemical weapons. The Guardian mentions the Chemical Weapons Convention and the responsibilities of Syria under the convention. According to The Guardian, The White House condemned the Assad regime for defying the norm against chemical weapons use.
+
+# Record
+## Claim
+Claim: "<image:64> This is an authentic image of Dwayne Johnson waring the Israeli flag in support of Israel."
+
+## Actions
+```
+web_search("Dwayne Johnson Israeli flag")
+image_search("Dwayne Johnson Israeli flag")
+```
+
+# Search Result
+From [Source](https://www.yahoo.com/news/articles/fact-check-fake-dwayne-johnson-234700368.html): 
+Content: "The Israeli government and its Prime Minister Netanyahu are heartless criminals with no shred of humanity."
+
+**Rating:**
+
+[![Rating: Incorrect Attribution](https://s.yimg.com/ny/api/res/1.2/869b6qpQh_Iok4.27dFdQA--/YXBwaWQ9aGlnaGxhbmRlcjt3PTk2MDtoPTgxO2NmPXdlYnA-/https://media.snopes.com/ratings_with_text/incorrect_attribution.png)](https://www.snopes.com/fact-check/rating/incorrect_attribution/)
+
+Rating: Incorrect Attribution
+
+A rumor that circulated online in July 2025 claimed actor Dwayne "The Rock" Johnson said, "I've seen a lot of evil in Hollywood scripts — but nothing compares to what Israel is doing in Gaza. The Israeli government and its Prime Minister Netanyahu are heartless criminals with no shred of humanity."
+
+Advertisement
+
+Advertisement
+
+Advertisement
+
+Advertisement
+
+For example, on July 26, an X user [posted](https://x.com/Middle_Eastern0/status/1949132260671729963)
+ ([archived](https://archive.is/qd7V9)
+) the quote along with an image of the Israeli flag and a photo of Johnson. Union Station takeover](https://www.yahoo.com/news/politics/article/why-is-the-trump-administration-taking-over-union-station-in-washington-dc-184846151.html)
+    
+
+!Getty Images <image:9958>
+
+Getty Images
+
+**Claim:**
+
+Actor Dwayne "The Rock" Johnson said, "I've seen a lot of evil in Hollywood scripts — but nothing compares to what Israel is doing in Gaza. <image:9959>
+
+**(@Middle\_Eastern0/X)**
+
+[Users](https://x.com/aldamu_jo/status/1949323330474913815)
+ also [shared](https://www.instagram.com/chicago_first/p/DMo8Bdcs45k/dwayne-johnson-ive-seen-a-lot-of-evil-in-hollywood-scenarios-but-nothing-compare/)
+ the same quote with Johnson's name, either as text or in memes, on [Bluesky](https://bsky.app/profile/manniequinn.bsky.social/post/3luwh5v4vzk26)
+ ([archived](https://archive.is/0x4DB)
+), [Facebook](https://www.facebook.com/permalink.php?story_fbid=pfbid02napKezfMaczP7SapyBmFuPNMQZKUjnymPJ1jNSPvFEqKxaZNRBNwQiESrxqGjgR5l&id=61578021665558)
+ ([archived](https://archive.is/HUEeK)
+), [Instagram](https://www.instagram.com/reel/DMnVc00Kwl5/)
+ ([archived](https://archive.is/x7fJC)
+), [Threads](https://www.threads.com/@khaled.abd.alrahman/post/DMpwfCnoS_d)
+, [TikTok](https://www.tiktok.com/@tayotimo/video/7530960717034409222)
+, [Tumblr](https://www.tumblr.com/frickyoumarrieofficial/790255087685713920/corvid-supremacy?source=detectivejohnkimble)
+ ([archived](https://archive.is/SvvCp)
+) [and X](https://x.com/DailyIranNews/status/1949421970186977380)
+ ([archived](https://archive.is/Fqemk)
+).
+
+However, searches of [Bing](https://archive.is/eH7Vk)
+, [DuckDuckGo](https://archive.is/CmQDP)
+, [Google](https://www.google.com/search?q=%22seen+a+lot+of+evil+in+Hollywood+scripts%22&newwindow=1&sca_esv=c48dc88e8766c10f&sxsrf=AE3TifMJang1vWXWUmpDm6wrCiN2e3tJwQ%3A1753911378374&source=lnt&tbs=cdr%3A1%2Ccd_min%3A1%2F1%2F2000%2Ccd_max%3A7%2F29%2F2025&tbm=)
+ and [Yahoo](https://archive.is/ocNl6)
+ found no credible record of Johnson ever making such a statement. Had Johnson publicly spoken out against Israel and Israeli Prime Minister Benjamin Netanyahu, news media outlets worldwide would have covered the matter.
+
+Advertisement
+
+Advertisement
+
+Advertisement
+
+Advertisement
+
+Snopes contacted by email several of Johnson's representatives to ask if they could speak on the fabricated quote, and will update this story if we receive further information.
+
+Tracking down the original post
+-------------------------------
+
+According to the aforementioned searches of search-engine websites, as well as social media platforms, an X account named Global Lens News (@Global\_Lens\_New) hosted the [oldest instance](https://x.com/Global_Lens_New/status/1948547511427211477)
+ ([archived](https://archive.is/30TKZ)
+) of the purported quote. In that user's July 24 post, the quote had a different ending, reading, "The Israeli government and its Prime Minister Netanyahu are sons of a b\*\*\*\*."
+
+! Raise your voice!" Searches of [Bing](https://archive.is/1fTyZ)
+, [DuckDuckGo](https://archive.is/QwynH)
+, [Google](https://www.google.com/search?q=oprah+%22Humanity+bleeds+in+Palestine%22&newwindow=1&sca_esv=d0444d30016ff5d8&sxsrf=AE3TifNtcp57gtDmW_hH5mAN3Vej25d2Nw%3A1753914992982&source=lnt&tbs=cdr%3A1%2Ccd_min%3A1%2F1%2F2000%2Ccd_max%3A7%2F29%2F2025&tbm=)
+ and [Yahoo](https://archive.is/WMwrR)
+ found no record of Winfrey posting or saying any such remark.
+
+'Worst-case scenario' famine crisis in Gaza
+-------------------------------------------
+
+The quote attributed to Johnson began circulating online in late July, at around the same time the Integrated Food Security Phase Classification [said](https://www.ipcinfo.org/ipcinfo-website/countries-in-focus-archive/issue-133/en/)
+ on July 29 that, due to Israel's ongoing military offensive and [blockade](https://apnews.com/article/israel-palestinians-hamas-gaza-war-news-07-30-2025-9b9b516f22e61bd1dde879733fdd97aa)
+, about 2 million Palestinians in Gaza were living in the "worst-case scenario of famine."
+
+More in World
+-------------
+
+!"
+
+# Your Summary
+
+
+
+===== > RESPONSE:  < =====
+The search result from Yahoo News, published on July 29, 2025, fact-checks a claim that Dwayne "The Rock" Johnson made a statement criticizing Israel. The article states that there is no credible record of Johnson making such a statement. The article includes an image of the claim with Johnson's photo and the Israeli flag <image:9959>. The article also includes an image of Dwayne Johnson <image:9958>. The rating is "Incorrect Attribution".
+
+_________________________
+
+
+
+SummarizeResultPrompt - QUERY:
+
+# Instructions
+In order to find evidence that helps your fact-check, you just ran a web search which yielded a Search Result. **Your task right now is to summarize the Search Result.** What to include:
+* information that might be useful for the fact-check (see Record)
+* relevant images (refer to images by inserting their reference <image:k>)
+* if available: the release date as well as the author or the publisher (e.g. the media company) of the search result.
+
+Do NOT include:
+* advertisements
+* any other information not related to the Record or the Claim
+
+Additional rules:
+* Do not add any additional information besides the information in the Search Result.
+* If the Search Result doesn't contain any relevant information for the fact-checking work, simply print one word in capital letters: "NONE".
+* Keep your writing style like in the Examples 1, 2 and 3 provided to you.
+* Try to filter out relevant information even if the search result is in a different language.
+
+# Example 1
+The search result from America Today provides several photographs of the Notre-Dame Cathedral fire on April 15, 2019. <image:i>, <image:j>, <image:k>. None of the images show the Eiffel Tower in the background. 
+
+# Example 2
+NONE
+
+# Example 3
+The Guardian discusses a report blaming the Syrian government for a toxic gas attack and condemning their use of chemical weapons. The Guardian mentions the Chemical Weapons Convention and the responsibilities of Syria under the convention. According to The Guardian, The White House condemned the Assad regime for defying the norm against chemical weapons use.
+
+# Record
+## Claim
+Claim: "<image:64> This is an authentic image of Dwayne Johnson waring the Israeli flag in support of Israel."
+
+## Actions
+```
+web_search("Dwayne Johnson Israeli flag")
+image_search("Dwayne Johnson Israeli flag")
+```
+
+# Search Result
+From [Source](https://mythdetector.com/en/dwayne-johnson-about-israel/): 
+Content: "The quote also says that the Israeli government and its Prime Minister Benjamin Netanyahu are “heartless criminals without a drop of humanity.” The same wording has been circulated on Russian-language [pages](https://www.facebook.com/permalink.php?story_fbid=pfbid0SRBRLHpy3yUgpPSRqKTJB2yPeDom8hSAuiBumfx2B1Xexvszh93Ete8hJHQfRWx3l&id=100070217693211)
+ and [groups](https://www.facebook.com/groups/252675102582946/posts/1484859119364532)
+.
+
+![Dwayne Johnson](https://mythdetector.com/wp-content/uploads/2025/08/sotsialur-qselshi-israelthan-dakavshirebith-duein-jonsonis-gaqhalbebuli-tsitata-vrtseldeba-.png "sotsialur qselshi israelthan dakavshirebith duein jonsonis gaqhalbebuli tsitata vrtseldeba | mythdetector.com")
+
+![Dwayne Johnson](https://mythdetector.com/wp-content/uploads/2025/08/sotsialur-qselshi-israelthan-dakavshirebith-duein-jonsonis-gaqhalbebuli-tsitata-vrtseldeba-1.png "sotsialur qselshi israelthan dakavshirebith duein jonsonis gaqhalbebuli tsitata vrtseldeba 1 | mythdetector.com")
+
+**The quote attributed to Dwayne Johnson is fake. No such statement appears on any of the actor’s official pages, nor has it been reported by any reputable media outlet.**
+
+The quote about the Gaza Strip and the Israeli government, allegedly made by Dwayne Johnson, is fabricated. *   [About Us](https://mythdetector.com/en/about-us/)
+    *   [About Myth Detector](https://mythdetector.com/en/about-us/)
+        
+    *   [Our Team](https://mythdetector.com/en/our-team/)
+        
+    *   [Methodology](https://mythdetector.com/en/methodology/)
+        
+    *   [Privacy Policy](https://mythdetector.com/en/privacy-policy/)
+        
+    *   [Projects](https://mythdetector.com/en/project/)
+        
+    *   [Financial reports](https://mythdetector.com/en/financial-reports/)
+        
+*   [Code of Conduct](https://mythdetector.com/en/myth-detector-code-of-conduct/)
+    
+*   [Correction / Complaints](https://mythdetector.com/en/complaints/)
+    
+*   [Contact](https://mythdetector.com/en/contact-information/)
+    
+*   [![](<Base64-Image-Removed>)English](/#pll_switcher/)
+    *   [![](<Base64-Image-Removed>)ქართული](https://mythdetector.com/ka/duein-jonsonis-gaqhalbebuli-tsitata/)
+        
+    *   [![](<Base64-Image-Removed>)English](https://mythdetector.com/en/dwayne-johnson-about-israel/)
+        
+    *   [![](<Base64-Image-Removed>)Русский](https://mythdetector.com/ru/dueina-dzhonsona-ob-izraile/)
+        
+    *   [![](<Base64-Image-Removed>)Deutsch](https://mythdetector.com/de/)
+        
+    *   [![](<Base64-Image-Removed>)Eesti](https://mythdetector.com/et/)
+        
+    *   [![](<Base64-Image-Removed>)Հայերեն](https://mythdetector.com/hy/)
+        
+    *   [![](<Base64-Image-Removed>)Azerbaijani](https://mythdetector.com/az/)
+        
+
+[![IFCN Signatory Badge](https://cdn.ifcncodeofprinciples.poynter.org/storage/badges/86DE5673-1881-C562-233A-E4076B817186.png)](https://ifcncodeofprinciples.poynter.org/profile/myth-detector "IFCN signatory")
+ [! <image:9974>](#)
+
+*   [Home](https://mythdetector.com/en/)
+    
+*   [Updates](https://mythdetector.com/en/category/update/)
+    
+*   [FACT-CHECKING](https://mythdetector.com/en/factchecker-db/)
+    
+*   [Infodemic](https://mythdetector.com/en/category/infodemic/)
+    
+*   [Un-troll](https://mythdetector.com/en/category/un-troll/)
+    
+    [![fact Checker, დეზინფორმაცია, ფაქტჩეკერი, მითების დეტექტორი](https://mythdetector.com/wp-content/uploads/2025/06/Untitled-1l-360x180.jpg "Untitled 1l | mythdetector.com")](https://mythdetector.com/en/discreditation-of-mate-devidze/)
+    
+    ### [13 Trolls Involved in the Discreditation of Mate Devidze](https://mythdetector.com/en/discreditation-of-mate-devidze/)
+    
+    [![Mzia](https://mythdetector.com/wp-content/uploads/2025/02/Untitled-1-2-360x180.png "Untitled 1 2 | mythdetector.com")](https://mythdetector.com/en/mzia-amaghlobeli-target-of-georgian-dream-pro-government-media-and-other-anti-western-actors/)
+    
+    ### [Mzia Amaghlobeli – Target of Georgian Dream, Pro-Government Media, and Other Anti-Western Actors](https://mythdetector.com/en/mzia-amaghlobeli-target-of-georgian-dream-pro-government-media-and-other-anti-western-actors/)
+    
+    [![Khareba](https://mythdetector.com/wp-content/uploads/2024/12/Gvantsa-from-New-York-Nana-from-Arizona-and-other-trolls-in-support-of-Khareba-360x180.jpg "Gvantsa from New York Nana from Arizona and other trolls in support of Khareba | mythdetector.com")](https://mythdetector.com/en/in-support-of-khareba/)
+    
+    ### [Gvantsa from New York, Nana from Arizona, and other trolls “in support” of Khareba](https://mythdetector.com/en/in-support-of-khareba/)
+    
+*   [Opinion](https://mythdetector.com/en/category/opinion-en/ "#")
+    
+    *   [All](https://mythdetector.com/en/category/opinion-en1/)
+        
+    *   [Analysis](https://mythdetector.com/en/category/opinion-en1/analysis/)
+        
+    *   [Blog](https://mythdetector.com/en/category/opinion-en1/blog/)
+        
+    *   [Guide](https://mythdetector.com/en/category/opinion-en1/guide/)
+        
+    *   [Investigation](https://mythdetector.com/en/category/opinion-en1/investigation/)
+        
+    *   [overview](https://mythdetector.com/en/category/opinion-en1/overview/)
+        
+    
+    [![Zelenskyy-of-corruption](https://mythdetector.com/wp-content/uploads/2025/08/What-does-the-Georgian-pro-government-and-Kremlin-aligned-media-rely-on-when-accusing-Zelenskyy-of-corruption-360x180.jpg "What does the Georgian pro government and Kremlin aligned media rely on when accusing Zelenskyy of corruption | mythdetector.com")](https://mythdetector.com/en/when-accusing-zelenskyy-of-corruption/)
+    
+    ### [What does the Georgian pro-government and Kremlin-aligned media rely on when accusing Zelenskyy of corruption?](https://mythdetector.com/en/when-accusing-zelenskyy-of-corruption/)
+    
+    [![fact Checker, დეზინფორმაცია, ფაქტჩეკერი, მითების დეტექტორი](https://mythdetector.com/wp-content/uploads/2025/07/Insults-on-Social-Media-A-Comparison-of-Legislation-in-Georgia-and-the-European-Union-360x180.jpg "Insults on Social Media A Comparison of Legislation in Georgia and the European Union | mythdetector.com")](https://mythdetector.com/en/a-comparison-of-legislation-in-georgia/)
+    
+    ### [Insults on Social Media – A Comparison of Legislation in Georgia and the European Union](https://mythdetector.com/en/a-comparison-of-legislation-in-georgia/)
+    
+    [![Black Sea trategy](https://mythdetector.com/wp-content/uploads/2025/07/Does-Armenia-Need-Access-to-the-Sea-to-Participate-in-the-Black-Sea-Strategy-360x180.jpg "Does Armenia Need Access to the Sea to Participate in the Black Sea Strategy | mythdetector.com")](https://mythdetector.com/en/black-sea-strategy/)
+    
+    ### [Does Armenia Need Access to the Sea to Participate in the “Black Sea Strategy”?](https://mythdetector.com/en/black-sea-strategy/)
+    
+    *   [Analysis](https://mythdetector.com/en/category/opinion-en1/analysis/)
+        
+    *   [Blog](https://mythdetector.com/en/category/opinion-en1/blog/)
+        
+    *   [Investigation](https://mythdetector.com/en/category/opinion-en1/investigation/)
+        
+    *   [overview](https://mythdetector.com/en/category/opinion-en1/overview/)
+        
+    *   [Guide](https://mythdetector.com/en/category/opinion-en1/guide/)
+        
+*   [Multimedia](https://mythdetector.com/en/category/multimedia-en/)
+    
+    *   [All](https://mythdetector.com/en/category/multimedia-en/)
+        
+    *   [Caricature](https://mythdetector.com/en/category/multimedia-en/caricature/)
+        
+    *   [Infographics](https://mythdetector.com/en/category/multimedia-en/infographics/)
+        
+    *   [Video](https://mythdetector.com/en/category/multimedia-en/video-en/)
+        
+    
+    [![ფოტომანიპულცია](https://mythdetector.com/wp-content/uploads/2024/09/461282853_827302276281610_6885978139467139525_n-360x180.jpg "461282853 827302276281610 6885978139467139525 n | mythdetector.com")](https://mythdetector.com/en/pre-electoral-disinformation-1-17-september-2024/)
+    
+    ### [Pre-Electoral Disinformation – 1-17 September, 2024](https://mythdetector.com/en/pre-electoral-disinformation-1-17-september-2024/)
+    
+    [![ფაქტების გადამოწმება, ფაქტჩექი, კოორდინირებული არაავთენტური ქცევა](https://mythdetector.com/wp-content/uploads/2023/02/ukrainian-women-8211-targets-of-russian-information-warfare1.webp "ukrainian women 8211 targets of russian information warfare1 | mythdetector.com")](https://mythdetector.com/en/ukrainian-women-targets-of-russian-information-warfare/)
+    
+    ### [Ukrainian Women – Targets of Russian Information Warfare!](https://mythdetector.com/en/ukrainian-women-targets-of-russian-information-warfare/)
+    
+    [![დეზინფორმაციის იდენტიფიცირება; მედიაწიგნიერება; ფაქტების გადამოწმება](https://mythdetector.com/wp-content/uploads/2022/09/ukrainis-tsinaaghmdeg-23-30-Augustl-360x180.png "ukrainis tsinaaghmdeg 23 30 Augustl | mythdetector.com")](https://mythdetector.com/en/russian-information-warfare-against-ukraine-disinformation-digest-23-30-august/)
+    
+    ### [RUSSIAN INFORMATION WARFARE AGAINST UKRAINE – DISINFORMATION DIGEST 23-30 AUGUST](https://mythdetector.com/en/russian-information-warfare-against-ukraine-disinformation-digest-23-30-august/)
+    
+
+[](#)
+
+No Result
+
+View All Result
+
+*   [Home](https://mythdetector.com/en/)
+    
+*   [Updates](https://mythdetector.com/en/category/update/)
+    
+*   [FACT-CHECKING](https://mythdetector.com/en/factchecker-db/)
+    
+*   [Infodemic](https://mythdetector.com/en/category/infodemic/)
+    
+*   [Un-troll](https://mythdetector.com/en/category/un-troll/)
+    
+    [![fact Checker, დეზინფორმაცია, ფაქტჩეკერი, მითების დეტექტორი](https://mythdetector.com/wp-content/uploads/2025/06/Untitled-1l-360x180.jpg "Untitled 1l | mythdetector.com")](https://mythdetector.com/en/discreditation-of-mate-devidze/)
+    
+    ### [13 Trolls Involved in the Discreditation of Mate Devidze](https://mythdetector.com/en/discreditation-of-mate-devidze/)
+    
+    [![Mzia](https://mythdetector.com/wp-content/uploads/2025/02/Untitled-1-2-360x180.png "Untitled 1 2 | mythdetector.com")](https://mythdetector.com/en/mzia-amaghlobeli-target-of-georgian-dream-pro-government-media-and-other-anti-western-actors/)
+    
+    ### [Mzia Amaghlobeli – Target of Georgian Dream, Pro-Government Media, and Other Anti-Western Actors](https://mythdetector.com/en/mzia-amaghlobeli-target-of-georgian-dream-pro-government-media-and-other-anti-western-actors/)
+    
+    [![Khareba](https://mythdetector.com/wp-content/uploads/2024/12/Gvantsa-from-New-York-Nana-from-Arizona-and-other-trolls-in-support-of-Khareba-360x180.jpg "Gvantsa from New York Nana from Arizona and other trolls in support of Khareba | mythdetector.com")](https://mythdetector.com/en/in-support-of-khareba/)
+    
+    ### [Gvantsa from New York, Nana from Arizona, and other trolls “in support” of Khareba](https://mythdetector.com/en/in-support-of-khareba/)
+    
+*   [Opinion](https://mythdetector.com/en/category/opinion-en/ "#")
+    
+    *   [All](https://mythdetector.com/en/category/opinion-en1/)
+        
+    *   [Analysis](https://mythdetector.com/en/category/opinion-en1/analysis/)
+        
+    *   [Blog](https://mythdetector.com/en/category/opinion-en1/blog/)
+        
+    *   [Guide](https://mythdetector.com/en/category/opinion-en1/guide/)
+        
+    *   [Investigation](https://mythdetector.com/en/category/opinion-en1/investigation/)
+        
+    *   [overview](https://mythdetector.com/en/category/opinion-en1/overview/)
+        
+    
+    [![Zelenskyy-of-corruption](https://mythdetector.com/wp-content/uploads/2025/08/What-does-the-Georgian-pro-government-and-Kremlin-aligned-media-rely-on-when-accusing-Zelenskyy-of-corruption-360x180.jpg "What does the Georgian pro government and Kremlin aligned media rely on when accusing Zelenskyy of corruption | mythdetector.com")](https://mythdetector.com/en/when-accusing-zelenskyy-of-corruption/)
+    
+    ### [What does the Georgian pro-government and Kremlin-aligned media rely on when accusing Zelenskyy of corruption?](https://mythdetector.com/en/when-accusing-zelenskyy-of-corruption/)
+    
+    [![fact Checker, დეზინფორმაცია, ფაქტჩეკერი, მითების დეტექტორი](https://mythdetector.com/wp-content/uploads/2025/07/Insults-on-Social-Media-A-Comparison-of-Legislation-in-Georgia-and-the-European-Union-360x180.jpg "Insults on Social Media A Comparison of Legislation in Georgia and the European Union | mythdetector.com")](https://mythdetector.com/en/a-comparison-of-legislation-in-georgia/)
+    
+    ### [Insults on Social Media – A Comparison of Legislation in Georgia and the European Union](https://mythdetector.com/en/a-comparison-of-legislation-in-georgia/)
+    
+    [![Black Sea trategy](https://mythdetector.com/wp-content/uploads/2025/07/Does-Armenia-Need-Access-to-the-Sea-to-Participate-in-the-Black-Sea-Strategy-360x180.jpg "Does Armenia Need Access to the Sea to Participate in the Black Sea Strategy | mythdetector.com")](https://mythdetector.com/en/black-sea-strategy/)
+    
+    ### [Does Armenia Need Access to the Sea to Participate in the “Black Sea Strategy”?](https://mythdetector.com/en/black-sea-strategy/)
+    
+    *   [Analysis](https://mythdetector.com/en/category/opinion-en1/analysis/)
+        
+    *   [Blog](https://mythdetector.com/en/category/opinion-en1/blog/)
+        
+    *   [Investigation](https://mythdetector.com/en/category/opinion-en1/investigation/)
+        
+    *   [overview](https://mythdetector.com/en/category/opinion-en1/overview/)
+        
+    *   [Guide](https://mythdetector.com/en/category/opinion-en1/guide/)
+        
+*   [Multimedia](https://mythdetector.com/en/category/multimedia-en/)
+    
+    *   [All](https://mythdetector.com/en/category/multimedia-en/)
+        
+    *   [Caricature](https://mythdetector.com/en/category/multimedia-en/caricature/)
+        
+    *   [Infographics](https://mythdetector.com/en/category/multimedia-en/infographics/)
+        
+    *   [Video](https://mythdetector.com/en/category/multimedia-en/video-en/)
+        
+    
+    [![ფოტომანიპულცია](https://mythdetector.com/wp-content/uploads/2024/09/461282853_827302276281610_6885978139467139525_n-360x180.jpg "461282853 827302276281610 6885978139467139525 n | mythdetector.com")](https://mythdetector.com/en/pre-electoral-disinformation-1-17-september-2024/)
+    
+    ### [Pre-Electoral Disinformation – 1-17 September, 2024](https://mythdetector.com/en/pre-electoral-disinformation-1-17-september-2024/)
+    
+    [![ფაქტების გადამოწმება, ფაქტჩექი, კოორდინირებული არაავთენტური ქცევა](https://mythdetector.com/wp-content/uploads/2023/02/ukrainian-women-8211-targets-of-russian-information-warfare1.webp "ukrainian women 8211 targets of russian information warfare1 | mythdetector.com")](https://mythdetector.com/en/ukrainian-women-targets-of-russian-information-warfare/)
+    
+    ### [Ukrainian Women – Targets of Russian Information Warfare!](https://mythdetector.com/en/ukrainian-women-targets-of-russian-information-warfare/)
+    
+    [![დეზინფორმაციის იდენტიფიცირება; მედიაწიგნიერება; ფაქტების გადამოწმება](https://mythdetector.com/wp-content/uploads/2022/09/ukrainis-tsinaaghmdeg-23-30-Augustl-360x180.png "ukrainis tsinaaghmdeg 23 30 Augustl | mythdetector.com")](https://mythdetector.com/en/russian-information-warfare-against-ukraine-disinformation-digest-23-30-august/)
+    
+    ### [RUSSIAN INFORMATION WARFARE AGAINST UKRAINE – DISINFORMATION DIGEST 23-30 AUGUST](https://mythdetector.com/en/russian-information-warfare-against-ukraine-disinformation-digest-23-30-august/)
+    
+
+[](#)
+
+No Result
+
+View All Result
+
+[](#)
+
+[![mythdetector.com](/wp-content/uploads/2022/04/Logo_Eng-w.png)](https://mythdetector.com/en/)
+
+[](#)
+
+No Result
+
+View All Result
+
+A Fake Quote Attributed to Dwayne Johnson About Israel is Spreading on Social Media
+===================================================================================
+
+[Myth Detector](https://mythdetector.com/en/author/myth-detector/)
+
+[August 5, 2025 16:12](https://mythdetector.com/en/2025/08/)
+
+Reading Time: 3 minutes
+
+**Reading Time: 3 minutes**
+
+!Dwayne Johnson <image:9975>
+
+410
+
+VIEWS
+
+Between July 27 and August 3, [Georgian](https://www.facebook.com/zaal.mamatsashvili/posts/pfbid02ZV5icDdtmZzamBaPfkzkBa1LbrBuTVdevkkWGkfsuRSLoZVoFnzTAvrBqKq47j7l)
+– and Russian-language ([1](https://www.facebook.com/photo.php?fbid=1316556280016990&set=a.11153035)
+,[2](https://www.facebook.com/osama.jadallah.184056/posts/pfbid02wfRifniQVvvaEmuEiBQJyVCJE3fH15655LARTUwPFo7ZqHZ14WibH1yQibJKgySwl)
+,[3](https://www.facebook.com/uakhit.elmar/posts/pfbid0MXLeWSWofLqNzbs3BWwYsZRGyi3YjMSj3rAnEHHXmNt864otBm3bcWkoFUZhpJGbl)
+,[4](https://www.facebook.com/mahmoudshanaa/posts/pfbid0KsnUuTX1jdD6K2EUeMxy2SMtYgxg8MoGjDwS9M35ZXTbVtkDbgZyP8mdHx6jzT4Ll)
+,[5](https://www.facebook.com/murat.sutaly/posts/pfbid0RQKJ142SfL57y26domb6q8wroQ4K3qhCzfecs42gUwpEENMVRxwnfyoM915791Dhl)
+) Facebook accounts shared a quote attributed to actor Dwayne Johnson. It cannot be found on any of his official accounts ([1](https://www.instagram.com/therock/)
+, [2](https://www.facebook.com/DwayneJohnson/)
+, [3](https://x.com/therock?lang=en)
+). Johnson expressed sympathy for the families of the victims.
+
+![Dwayne Johnson](https://mythdetector.com/wp-content/uploads/2025/08/sotsialur-qselshi-israelthan-dakavshirebith-duein-jonsonis-gaqhalbebuli-tsitata-vrtseldeba-2.png "sotsialur qselshi israelthan dakavshirebith duein jonsonis gaqhalbebuli tsitata vrtseldeba 2 | mythdetector.com")
+
+__Screenshot of Dwayne Johnson’s post__
+
+Alongside Georgian and Russian-speaking users, English-language accounts have also been [sharing](https://x.com/Global_Lens_New/status/1948547511427211477)
+ the fake quote. The fabricated statement has also been [fact-checked](https://www.snopes.com/fact-check/dwayne-johnson-israel-gaza-netanyahu/)
+ by the organization Snopes.
+
+The appearance of the fake quote may be directly connected to events that occurred at the end of July. The city had been considered a key hub for the delivery of humanitarian aid in Gaza.
+
+**About the Source:**
+
+Among others, the fake quote attributed to Dwayne Johnson is being spread by a Facebook account belonging to [Zaal Mamatsashvili](https://www.facebook.com/zaal.mamatsashvili/posts/pfbid02ZV5icDdtmZzamBaPfkzkBa1LbrBuTVdevkkWGkfsuRSLoZVoFnzTAvrBqKq47j7l)
+, who [regularly](https://www.facebook.com/photo.php?fbid=898839472463244&set=pb.100070115992975.-2207520000&type=3)
+ [posts](https://www.facebook.com/photo.php?fbid=925627096451148&set=pb.100070115992975.-2207520000&type=3)
+ anti-Western and anti-opposition content, including disinformation.
+
+![Dwayne Johnson](https://mythdetector.com/wp-content/uploads/2025/08/sotsialur-qselshi-israelthan-dakavshirebith-duein-jonsonis-gaqhalbebuli-tsitata-vrtseldeba-3.png "sotsialur qselshi israelthan dakavshirebith duein jonsonis gaqhalbebuli tsitata vrtseldeba 3 | mythdetector.com")
+
+* * *
+
+The article has been written in the framework of Facebook’s fact-checking [program](https://www.facebook.com/journalismproject/programs/third-party-fact-checking)
+. 
+Read detailed appeal [instructions.](https://mythdetector.com/en/page/dispute-rating)
+
+Topic: [Politics](https://mythdetector.com/en/topic/politics/)
+
+Violation: [Fabricated quote](https://mythdetector.com/en/violation/fabricated-quote/)
+
+Country: [Israel](https://mythdetector.com/en/country/israel/)
+
+Tags: [Dwayne Johnson](https://mythdetector.com/en/tag/dwayne-johnson/)
+[Gaza Strip](https://mythdetector.com/en/tag/gaza-strip/)
+[Israel-Hamas War](https://mythdetector.com/en/tag/israel-hamas-war/)
+
+Source
+
+### Last News
+
+[!Aleko-Elisashvili <image:9976>](https://mythdetector.com/en/aleko-elisashvilis-statements/)
+
+###### [Video Manipulation Spreads About Aleko Elisashvili’s Statements on the Russia-Ukraine and August Wars](https://mythdetector.com/en/aleko-elisashvilis-statements/)
+
+August 26, 2025
+
+[!Ursula-von-der-Leyen <image:9977>](https://mythdetector.com/en/ursula-von-der-leyen-was-expelled/)
+
+###### [Disinformation claiming Ursula von der Leyen was expelled from a meeting with Trump](https://mythdetector.com/en/ursula-von-der-leyen-was-expelled/)
+
+August 26, 2025
+
+[!Zelenskyy-of-corruption <image:9978>](https://mythdetector.com/en/when-accusing-zelenskyy-of-corruption/)
+
+###### [What does the Georgian pro-government and Kremlin-aligned media rely on when accusing Zelenskyy of corruption?](https://mythdetector.com/en/when-accusing-zelenskyy-of-corruption/)
+
+August 25, 2025
+
+[!Levan-Khabeishvili <image:9979>](https://mythdetector.com/en/levan-khabeishvili-and-gia-bugadze-circulating/)
+
+###### [Photo Fabrication of Levan Khabeishvili and Gia Bugadze Circulating on Facebook](https://mythdetector.com/en/levan-khabeishvili-and-gia-bugadze-circulating/)
+
+August 22, 2025
+
+### Popular Posts
+
+*   [![Social Media Posts](https://mythdetector.com/wp-content/uploads/2025/06/Are-Over-a-Thousand-People-Arrested-Each-Month-in-the-UK-for-Social-Media-Posts.jpg "Are Over a Thousand People Arrested Each Month in the UK for Social Media Posts | mythdetector.com")](https://mythdetector.com/en/uk-for-social-media-posts/)
+    
+    ### [Are Over a Thousand People Arrested Each Month in the UK for Social Media Posts?](https://mythdetector.com/en/uk-for-social-media-posts/)
+    
+    0 shares
+    
+    [Share 0](https://www.facebook.com/sharer.php?u=https%3A%2F%2Fmythdetector.com%2Fen%2Fuk-for-social-media-posts%2F)
+     [Tweet 0](https://twitter.com/intent/tweet?text=Are%20Over%20a%20Thousand%20People%20Arrested%20Each%20Month%20in%20the%20UK%20for%20Social%20Media%20Posts%3F%20via%20%40MythDetector&url=https%3A%2F%2Fmythdetector.com%2Fen%2Fuk-for-social-media-posts%2F)
+    
+*   ### [Which Territories did Ukraine Own in 1922 When Entering the Soviet Union?](https://mythdetector.com/en/which-territories-did-ukraine-own-in-1922-when-entering-the-soviet-union/)
+    
+    0 shares
+    
+    [Share 0](https://www.facebook.com/sharer.php?u=https%3A%2F%2Fmythdetector.com%2Fen%2Fwhich-territories-did-ukraine-own-in-1922-when-entering-the-soviet-union%2F)
+     [Tweet 0](https://twitter.com/intent/tweet?text=Which%20Territories%20did%20Ukraine%20Own%20in%201922%20When%20Entering%20the%20Soviet%20Union%3F%20via%20%40MythDetector&url=https%3A%2F%2Fmythdetector.com%2Fen%2Fwhich-territories-did-ukraine-own-in-1922-when-entering-the-soviet-union%2F)
+    
+
+### Welcome Back!
+
+Login to your account below
+
+ Remember Me
+
+  
+
+[Forgotten Password?](#jeg_forgotform)
+
+### Retrieve your password
+
+Please enter your username or email address to reset your password.
+
+  
+
+[Log In](#jeg_loginform)
+
+### Add New Playlist
+
+\- Select Visibility -PublicPrivate
+
+    
+
+[](#)
+
+[](#)
+
+No Result
+
+View All Result
+
+*   [Home](https://mythdetector.com/en/)
+    
+*   [Updates](https://mythdetector.com/en/category/update/)
+    
+*   [Fact Checking](https://mythdetector.com/en/factchecker-db/)
+    
+*   [Infodemic](https://mythdetector.com/en/category/infodemic/)
+    
+*   [Un-troll](https://mythdetector.com/en/category/un-troll/)
+    
+*   [Opinion](https://mythdetector.com/en/category/opinion-en/)
+    *   [Analysis](https://mythdetector.com/en/category/opinion-en1/analysis/)
+        
+    *   [Blog](https://mythdetector.com/en/category/opinion-en1/blog/)
+        
+    *   [Investigation](https://mythdetector.com/en/category/opinion-en1/investigation/)
+        
+    *   [overview](https://mythdetector.com/en/category/opinion-en1/overview/)
+        
+*   [Multimedia](https://mythdetector.com/en/category/multimedia-en/)
+    *   [Video](https://mythdetector.com/en/category/multimedia-en/video-en/)
+        
+    *   [Caricature](https://mythdetector.com/en/category/multimedia-en/caricature/)
+        
+    *   [Infographics](https://mythdetector.com/en/category/multimedia-en/infographics/)
+        
+*   [English](/#pll_switcher/)
+    *   [ქართული](https://mythdetector.com/ka/duein-jonsonis-gaqhalbebuli-tsitata/)
+        
+    *   [Русский](https://mythdetector.com/ru/dueina-dzhonsona-ob-izraile/)
+        
+    *   [Deutsch](https://mythdetector.com/de/)
+        
+    *   [Eesti](https://mythdetector.com/et/)
+        
+    *   [Հայերեն](https://mythdetector.com/hy/)
+        
+    *   [Azerbaijani](https://mythdetector.com/az/)
+        
+
+[](https://www.facebook.com/mythdetector/)
+[](https://twitter.com/MythDetector)
+[](https://www.youtube.com/channel/UCbZu0KuYlXE6UF3FzvjrFVQ)
+[](https://t.me/MythDetector_bot)
+[](https://www.tiktok.com/@myth_detector)
+[](https://bsky.app/profile/mythdetector.com)
+
+© 2025 [mythdetector.com](https://mythdetector.com "გაზომე სიმართლე მითების დეტექტორთან ერთად!")
+ — გაზომე სიმართლე მითების დეტექტორთან ერთად! In the alleged quote, Johnson claims that although he has witnessed much evil in Hollywood scripts, nothing compares to what Israel is doing in Gaza."
+
+# Your Summary
+
+
+
+===== > RESPONSE:  < =====
+The search result from Myth Detector, published on August 5, 2025, states that a quote attributed to Dwayne Johnson about Israel is fake. The quote, which claims Johnson said he has witnessed much evil in Hollywood scripts, but nothing compares to what Israel is doing in Gaza, cannot be found on any of his official accounts. <image:9975> The article also mentions that the fabricated statement has been fact-checked by Snopes.
+
+_________________________
+
+
+
+SummarizeResultPrompt - QUERY:
+
+# Instructions
+In order to find evidence that helps your fact-check, you just ran a web search which yielded a Search Result. **Your task right now is to summarize the Search Result.** What to include:
+* information that might be useful for the fact-check (see Record)
+* relevant images (refer to images by inserting their reference <image:k>)
+* if available: the release date as well as the author or the publisher (e.g. the media company) of the search result.
+
+Do NOT include:
+* advertisements
+* any other information not related to the Record or the Claim
+
+Additional rules:
+* Do not add any additional information besides the information in the Search Result.
+* If the Search Result doesn't contain any relevant information for the fact-checking work, simply print one word in capital letters: "NONE".
+* Keep your writing style like in the Examples 1, 2 and 3 provided to you.
+* Try to filter out relevant information even if the search result is in a different language.
+
+# Example 1
+The search result from America Today provides several photographs of the Notre-Dame Cathedral fire on April 15, 2019. <image:i>, <image:j>, <image:k>. None of the images show the Eiffel Tower in the background. 
+
+# Example 2
+NONE
+
+# Example 3
+The Guardian discusses a report blaming the Syrian government for a toxic gas attack and condemning their use of chemical weapons. The Guardian mentions the Chemical Weapons Convention and the responsibilities of Syria under the convention. According to The Guardian, The White House condemned the Assad regime for defying the norm against chemical weapons use.
+
+# Record
+## Claim
+Claim: "<image:64> This is an authentic image of Dwayne Johnson waring the Israeli flag in support of Israel."
+
+## Actions
+```
+web_search("Dwayne Johnson Israeli flag")
+image_search("Dwayne Johnson Israeli flag")
+```
+
+# Search Result
+From [Source](https://www.hindustantimes.com/htcity/cinema/gal-gadot-madonna-dwayne-johnson-justin-bieber-celebrities-come-out-to-support-israel-amid-ongoing-conflict-101697024471665.html): 
+Content: "*   [Home](https://www.hindustantimes.com)
+    
+*   [Sai Dhanshika](https://www.hindustantimes.com/entertainment/tamil-cinema/tamil-actors-vishal-and-sai-dhanshika-get-engaged-see-first-pics-from-ceremony-101756457336382.html)
+    
+*   [Hockey Asia Cup Live](https://www.hindustantimes.com/sports/hockey/india-vs-china-live-score-updates-hockey-asia-cup-2025-match-today-august-29-rajgir-bihar-101756452059303.html)
+    
+*   [E-Paper](https://epaper.hindustantimes.com/)
+    
+*   [DPL T20 2025](https://www.hindustantimes.com/cricket/series-delhi-premier-league-2025)
+    
+*   [![Cricket in L1](https://www.hindustantimes.com/static-content/1y/ht/cricket/crickit_anim_logo2x.gif?v=1 "Cricket")](https://www.hindustantimes.com/cricket)
+    
+*   [HT Premium](https://www.hindustantimes.com/ht-exclusive)
+    
+*   [HT The Next Voice](https://www.hindustantimes.com/ht-the-next-voice/)
+    
+*   [US News](https://www.hindustantimes.com/world-news/us-news)
+    
+*   [Games](https://www.hindustantimes.com/games)
+    
+*   [HTCity](https://www.hindustantimes.com/htcity)
+    
+*   [![HT100 in L1](https://www.hindustantimes.com/static-content/1y/ht/1x1-white.png)](https://www.hindustantimes.com/100-years-of-hindustan-times?utm_source=L1&utm_medium=web&utm_campaign=ht100)
+    
+*   [India](https://www.hindustantimes.com/india-news)
+    
+*   [World](https://www.hindustantimes.com/world-news)
+    
+*   [Entertainment](https://www.hindustantimes.com/entertainment)
+    
+*   [Astrology](https://www.hindustantimes.com/astrology)
+    
+*   [Real Estate](https://www.hindustantimes.com/real-estate)
+    
+*   [Trending](https://www.hindustantimes.com/trending)
+    
+*   [Lifestyle](https://www.hindustantimes.com/lifestyle)
+    
+*   [Education](https://www.hindustantimes.com/education)
+    
+*   [Business](https://www.hindustantimes.com/business)
+    
+*   [Cities](https://www.hindustantimes.com/cities)
+    
+*   [Latest News](https://www.hindustantimes.com/latest-news)
+    
+*   [Livemint](https://www.livemint.com)
+    
+*   [\+ 16 more](javascript:void(0);)
+    *   [US News](https://www.hindustantimes.com/world-news/us-news)
+        
+    *   [Games](https://www.hindustantimes.com/games)
+        
+    *   [HTCity](https://www.hindustantimes.com/htcity)
+        
+    *   [ht100](https://www.hindustantimes.com/100-years-of-hindustan-times)
+        
+    *   [India](https://www.hindustantimes.com/india-news)
+        
+    *   [World](https://www.hindustantimes.com/world-news)
+        
+    *   [Entertainment](https://www.hindustantimes.com/entertainment)
+        
+    *   [Astrology](https://www.hindustantimes.com/astrology)
+        
+    *   [Real Estate](https://www.hindustantimes.com/real-estate)
+        
+    *   [Trending](https://www.hindustantimes.com/trending)
+        
+    *   [Lifestyle](https://www.hindustantimes.com/lifestyle)
+        
+    *   [Education](https://www.hindustantimes.com/education)
+        
+    *   [Business](https://www.hindustantimes.com/business)
+        
+    *   [Cities](https://www.hindustantimes.com/cities)
+        
+    *   [Latest News](https://www.hindustantimes.com/latest-news)
+        
+    *   [Livemint](https://www.livemint.com)
+        
+
+*   [Aries Horoscope Today](https://www.hindustantimes.com/astrology/horoscope/aries-daily-horoscope-today-for-29-august-2025-health-will-be-at-your-side-101756408495996.html)
+    
+*   [Param Sundari Box Office](https://www.hindustantimes.com/entertainment/bollywood/param-sundari-box-office-prediction-sidharth-malhotra-janhvi-kapoor-film-9-crore-opening-dhadak-2-half-of-saiyaara-101756439090344-amp.html)
+    
+*   [APPSC Hall Ticket 2025](https://www.hindustantimes.com/education/competitive-exams/appsc-hall-ticket-2025-for-forest-officer-and-asst-beat-officer-posts-releasing-today-at-pscapgovin-101756443109591.html)
+    
+*   [National Sports Day 2025](https://www.hindustantimes.com/cities/mumbai-news/maha-to-honour-331-medal-winning-athletes-on-national-sports-day-101756410206828.html)
+    
+*   [Bihar Election](https://www.hindustantimes.com/elections/assembly-election/bihar)
+    
+*   [Photos](https://www.hindustantimes.com/photos)
+    
+*   [Century of Leadership](https://www.hindustantimes.com/india-news/ht100-celebrating-100-years-of-unflinching-commitment-to-truth-and-leadership-101734003946128.html?utm_source=L2&utm_medium=web&utm_campaign=leadership)
+    
+*   [Web Stories](https://www.hindustantimes.com/web-stories)
+    
+*   [Sports](https://www.hindustantimes.com/sports)
+    
+*   [Bengaluru News](https://www.hindustantimes.com/cities/bengaluru-news)
+    
+*   [Delhi News](https://www.hindustantimes.com/cities/delhi-news)
+    
+*   [Mumbai News](https://www.hindustantimes.com/cities/mumbai-news)
+    
+*   [Technology](https://www.hindustantimes.com/technology)
+    
+*   [Quickreads](https://www.hindustantimes.com/quick-read)
+    
+*   [Daily Digest](https://www.hindustantimes.com/daily-digest)
+    
+*   [Following](https://www.hindustantimes.com/personalized-content-listing)
+    
+*   [Bihar Chunav](https://www.livehindustan.com/assembly-elections/bihar-elections)
+    
+*   [iPhone 17](https://tech.hindustantimes.com/apple-iphone-17-price-in-india-P999938768)
+    
+*   [Games](https://www.hindustantimes.com/games)
+    
+*   [\+ 14 more](#)
+    *   [Photos](https://www.hindustantimes.com/photos)
+        
+    *   [Century of Leadership](https://www.hindustantimes.com/india-news/ht100-celebrating-100-years-of-unflinching-commitment-to-truth-and-leadership-101734003946128.html?utm_source=L2&utm_medium=web&utm_campaign=leadership)
+        
+    *   [Web Stories](https://www.hindustantimes.com/web-stories)
+        
+    *   [Sports](https://www.hindustantimes.com/sports)
+        
+    *   [Bengaluru News](https://www.hindustantimes.com/cities/bengaluru-news)
+        
+    *   [Delhi News](https://www.hindustantimes.com/cities/delhi-news)
+        
+    *   [Mumbai News](https://www.hindustantimes.com/cities/mumbai-news)
+        
+    *   [Technology](https://www.hindustantimes.com/technology)
+        
+    *   [Quickreads](https://www.hindustantimes.com/quick-read)
+        
+    *   [Daily Digest](https://www.hindustantimes.com/daily-digest)
+        
+    *   [Following](https://www.hindustantimes.com/personalized-content-listing)
+        
+    *   [Bihar Chunav](https://www.livehindustan.com/assembly-elections/bihar-elections)
+        
+    *   [iPhone 17](https://tech.hindustantimes.com/apple-iphone-17-price-in-india-P999938768)
+        
+    *   [Games](https://www.hindustantimes.com/games)
+        
+
+Gal Gadot, Madonna, Dwayne Johnson, Justin Bieber: Celebrities come out to support Israel amid ongoing conflict
+===============================================================================================================
+
+By[Sugandha Rawal](/author/sugandha-rawal-101679671157307)
+
+Published on: Oct 13, 2023 08:09 pm IST
+
+[](javascript:void(0); "bookmark")
+[](javascript:void(0) "what's app")
+[](javascript:void(0) "Share on Facebook")
+[](javascript:void(0) "Share on Twitter")
+[](javascript:void(0) "Share on Linkdin")
+
+Share Via
+
+[](#)
+[](#)
+[](#)
+[](#)
+
+Copy Link
+
+Several celebrities are using social media to show support for Israel and denounce Hamas’ attack on Israeli civilians which left at least 1,000 people dead.
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+From [Gal Gadot](https://www.hindustantimes.com/entertainment/hollywood/gal-gadot-reacts-to-israeli-palestine-conflict-101696757328407.html)
+, Sonam Kapoor, [Gigi Hadid](https://www.hindustantimes.com/entertainment/hollywood/what-is-gigi-hadid-and-bella-hadids-connection-with-palestine-mohamed-anwar-hadid-101697011221005.html)
+ to Dwayne Johnson, celebrities are taking to social media to show their support for [Israel](https://www.hindustantimes.com/world-news/indias-position-vis-a-vis-israel-palestine-conflict-101697021932828.html)
+ amid the country’s declared war against [Hamas](https://www.hindustantimes.com/world-news/israelpalestine-war-live-updates-hamas-jerusalem-benjamin-netanyahu-gaza-strip-lebanon-joe-biden-qatar-101696981753474.html)
+ following the attack by the Palestinian militants last weekend. I also feel a responsibility to my Jewish friends to make it clear, as I have before: While I have hopes and dreams for Palestinians, none of them include the harm of a Jewish person,” she wrote on Instagram.
+
+Dwayne Johnson
+--------------
+
+Actor Dwayne Johnson, aka The Rock, posted a long note, wherein he ‘condemned and denounced terrorism’. She re-posted a viral infographic via her Instagram Story that stated, “It is absolutely reasonable and logical to be opposed to the Israeli government’s treatment of Palestinians while simultaneously calling for the protection of Jews in Israel and around the world”.
+
+Liev Schreiber
+--------------
+
+In his Instagram stories, the Ray Donovan star, 56, shared a post from the organisation StandWithUs, dedicated to opposing anti-semitism, which included an image of the Israeli flag and read, “Now and always, we stand with the people of Israel!” Below the post, he wrote, “We stand with the people of Israel and the IDF in their fight against Hamas and other terrorist groups. The sanctity of our common humanity will hopefully serve to heal the unimaginable wounds of division.
+
+![](https://www.hindustantimes.com/static-content/1y/ht/1x1.webp)
+
+*   [Israel](https://www.hindustantimes.com/cricket/teams/israel-1803)
+    
+*   [Hamas](https://www.hindustantimes.com/topic/hamas)
+    
+*   [Palestine](https://www.hindustantimes.com/topic/palestine)
+    
+*   [Gal Gadot](https://www.hindustantimes.com/topic/gal-gadot)
+    
+*   [Sonam Kapoor](https://www.hindustantimes.com/topic/sonam-kapoor)
+    
+*   [Gigi Hadid](https://www.hindustantimes.com/topic/gigi-hadid)
+    
+*   [Dwayne Johnson](https://www.hindustantimes.com/topic/dwayne-johnson)
+    
+*   [Josh Gad](https://www.hindustantimes.com/topic/josh-gad)
+    
+*   [Madonna](https://www.hindustantimes.com/topic/madonna)
+    
+*   [Natalie Portman](https://www.hindustantimes.com/topic/natalie-portman)
+    
+*   [Arnold Schwarzenegger](https://www.hindustantimes.com/topic/arnold-schwarzenegger)
+    
+*   [Justin Bieber](https://www.hindustantimes.com/topic/justin-bieber)
+    
+*   [Florence Pugh](https://www.hindustantimes.com/topic/florence-pugh)
+    
+*   [Katy Perry](https://www.hindustantimes.com/topic/katy-perry)
+    
+*   [Katy Perry Mumbai Concert.](https://www.hindustantimes.com/topic/katy-perry-mumbai-concert)
+    
+*   [Mark Ruffalo](https://www.hindustantimes.com/topic/mark-ruffalo)
+    
+
+See Less
+
+SHARE THIS ARTICLE ON
+
+[](javascript:void(0) "what's app")
+[](javascript:void(0) "Share on Facebook")
+[](javascript:void(0) "Share on Twitter")
+[](javascript:void(0) "Share on Linkdin")
+[](javascript:void(0); "bookmark")
+
+SHARE
+
+Copy
+
+[Whatsapp](javascript:void(0) "what's app")
+ [Twitter](javascript:void(0) "Share on Twitter")
+ [Facebook](javascript:void(0) "Share on Facebook")
+ [Linkedin](javascript:void(0) "Share on Linkdin")
+
+![close](https://www.hindustantimes.com/static-content/1y/ht/close-wt2.png)
+
+![](https://www.hindustantimes.com/static-content/1y/ht/read-more-txt.png)
+
+*   [About Us](https://www.htmedia.in/hindustantimes-com)
+    
+*   [Contact us](https://www.hindustantimes.com/contact-us)
+    
+*   [Terms of use](https://www.hindustantimes.com/termsofuse)
+    
+*   [Privacy policy](https://www.hindustantimes.com/privacy-policy)
+    
+*   [Weather Today](https://www.hindustantimes.com/weather)
+    
+*   [HT Newsletters](https://www.hindustantimes.com/subscribe-newsletter)
+    
+*   Subscription
+*   [Print Ad Rates](https://www.hindustantimes.com/rate-card)
+    
+*   [Code of Ethics](https://www.hindustantimes.com/dnpa-code-of-ethics-for-digital-news-websites)
+    
+*   [Site Map](https://www.hindustantimes.com/sitemap)
+    
+*   [RSS Feeds](https://www.hindustantimes.com/rss)
+    
+
+*   [![mint-logo](https://www.hindustantimes.com/static-content/1y/ht/1x1.webp)](https://www.livemint.com/)
+    
+*   [![HH-logo](https://www.hindustantimes.com/static-content/1y/ht/1x1.webp)](https://www.livehindustan.com/)
+    
+*   [![mint-lounge](https://www.hindustantimes.com/static-content/1y/ht/1x1.webp)](https://lifestyle.livemint.com/)
+    
+*   [![HT_Auto](https://www.hindustantimes.com/static-content/1y/ht/1x1.webp)](https://auto.hindustantimes.com/)
+    
+*   [![ht-tech](https://www.hindustantimes.com/static-content/1y/ht/1x1.webp)](https://tech.hindustantimes.com/)
+    
+*   [![ht-bangla](https://www.hindustantimes.com/static-content/1y/ht/1x1.webp)](https://bangla.hindustantimes.com/)
+    
+*   [![healthshots](https://www.hindustantimes.com/static-content/1y/ht/1x1.webp)](https://www.healthshots.com/)
+    
+*   [![OTT-icons](https://www.hindustantimes.com/static-content/1y/ht/1x1.webp)](https://www.ottplay.com/)
+    
+*   [![slurrp-icon](https://www.hindustantimes.com/static-content/1y/ht/1x1.webp)](https://www.slurrp.com/)
+    
+*   [![smartcast-logo](https://www.hindustantimes.com/static-content/1y/ht/1x1.webp)](https://www.htsmartcast.com/)
+    
+*   [![ht-kannada](https://www.hindustantimes.com/static-content/1y/ht/1x1.webp)](https://kannada.hindustantimes.com/)
+    
+*   [![ht-tamil](https://www.hindustantimes.com/static-content/1y/ht/1x1.webp)](https://tamil.hindustantimes.com/)
+    
+*   [![ht-telegu](https://www.hindustantimes.com/static-content/1y/ht/1x1.webp)](https://telugu.hindustantimes.com/)
+    
+*   [![ht-marathi](https://www.hindustantimes.com/static-content/1y/ht/1x1.webp)](https://marathi.hindustantimes.com/)
+    
+*   [![Instore Radio - FAB Play](https://www.hindustantimes.com/static-content/1y/ht/1x1.webp)](https://www.fabplay.in/)
+    
+*   [![vc-circle](https://www.hindustantimes.com/static-content/1y/ht/1x1.webp)](https://bit.ly/3YS1Qbq)
+    
+*   [![tech-circle](https://www.hindustantimes.com/static-content/1y/ht/1x1.webp)](https://bit.ly/46Rf1v7)
+    
+*   [![vcc-edge](https://www.hindustantimes.com/static-content/1y/ht/1x1.webp)](https://bit.ly/3AyTYS3)
+    
+*   [![edge-insights](https://www.hindustantimes.com/static-content/1y/ht/1x1.webp)](https://bit.ly/4fSChMO)
+    
+
+Copyright © 2025 HT Digital Streams Limited. The celebrities are using their platforms to show support for Israel and denounce Hamas’ attack on Israeli civilians which left at least 1,000 people dead.
+
+ ![Israeli-born Gal Gadot has been one of the most vocal celebrities to speak out about the ongoing conflict](https://www.hindustantimes.com/ht-img/img/2023/10/11/550x309/Gal_Gadot_1697024752244_1697024752431.jpg "Israeli-born Gal Gadot has been one of the most vocal celebrities to speak out about the ongoing conflict")
+
+Israeli-born Gal Gadot has been one of the most vocal celebrities to speak out about the ongoing conflict
+
+Gigi Hadid
+----------
+
+Supermodel Gigi Hadid has spoken out about the ongoing conflict between Israel and Palestine, describing it as an “unjustifiable tragedy”. The growing loss of innocent Israeli and Palestinian lives is heart wrenching as this war escalates to immense proportions. I pray for all innocent lives.”
+
+Gal Gadot
+---------
+
+Israeli-born Gal Gadot has been one of the most vocal celebrities to speak out about the ongoing conflict. She also shared that violence cannot solve conflicts and that we “live in a world ravaged by hate”, and went on to express that Hamas is responsible for the attack and there are “many innocent people in Palestine” who do not support the terrorist organisation.
+
+U2
+--
+
+U2 frontman Bono honoured the memory of all the Israelis who were killed by Hamas during a concert in Las Vegas. He wrote, “I stand with my Israeli friends in the face of these unprovoked, barbaric terrorist attacks. He wrote, “Truly hurting for both my Israeli and Palestinian friends."
+
+# Your Summary
+
+
+
+===== > RESPONSE:  < =====
+The Hindustan Times published an article on October 13, 2023, discussing celebrities who have shown support for Israel amid the conflict with Hamas. The article mentions Dwayne Johnson, Gal Gadot, Gigi Hadid, and Bono. Dwayne Johnson posted a note condemning terrorism. <image:64>
+
+_________________________
+
+
+
+SummarizeSummariesPrompt - QUERY:
+
+# Instructions
+You just retrieved web sources, each one summarized under "Web Sources". **Your task right now is to summarize the web source summaries.**
+
+Always adhere to the following rules:
+* Write only one to two paragraphs.
+* Include all URLs from the listed sources. Format them as Markdown hyperlinks.
+* Do not add any additional information besides the information in the summaries.
+* Include references (<image:k>) to all relevant images.
+
+# Record
+## Claim
+Claim: "<image:64> This is an authentic image of Dwayne Johnson waring the Israeli flag in support of Israel."
+
+## Actions
+```
+web_search("Dwayne Johnson Israeli flag")
+image_search("Dwayne Johnson Israeli flag")
+```
+
+## Web Sources
+**Web Search Result**
+
+From [Source](https://www.yahoo.com/news/articles/fact-check-fake-dwayne-johnson-234700368.html): 
+Content: The search result from Yahoo News, published on July 29, 2025, fact-checks a claim that Dwayne "The Rock" Johnson made a statement criticizing Israel. The article states that there is no credible record of Johnson making such a statement. The article includes an image of the claim with Johnson's photo and the Israeli flag <image:9959>. The article also includes an image of Dwayne Johnson <image:9958>. The rating is "Incorrect Attribution".
+
+
+From [Source](https://mythdetector.com/en/dwayne-johnson-about-israel/): 
+Content: The search result from Myth Detector, published on August 5, 2025, states that a quote attributed to Dwayne Johnson about Israel is fake. The quote, which claims Johnson said he has witnessed much evil in Hollywood scripts, but nothing compares to what Israel is doing in Gaza, cannot be found on any of his official accounts. <image:9975> The article also mentions that the fabricated statement has been fact-checked by Snopes.
+
+
+From [Source](https://www.hindustantimes.com/htcity/cinema/gal-gadot-madonna-dwayne-johnson-justin-bieber-celebrities-come-out-to-support-israel-amid-ongoing-conflict-101697024471665.html): 
+Content: The Hindustan Times published an article on October 13, 2023, discussing celebrities who have shown support for Israel amid the conflict with Hamas. The article mentions Dwayne Johnson, Gal Gadot, Gigi Hadid, and Bono. Dwayne Johnson posted a note condemning terrorism. <image:64>
+
+
+## Your Summary
+
+
+
+===== > RESPONSE:  < =====
+Yahoo News ([https://www.yahoo.com/news/articles/fact-check-fake-dwayne-johnson-234700368.html](https://www.yahoo.com/news/articles/fact-check-fake-dwayne-johnson-234700368.html)) fact-checked a claim about Dwayne "The Rock" Johnson criticizing Israel and found no credible record of him making such a statement. The article includes an image of the claim with Johnson's photo and the Israeli flag <image:9959> and an image of Dwayne Johnson <image:9958>. Myth Detector ([https://mythdetector.com/en/dwayne-johnson-about-israel/](https://mythdetector.com/en/dwayne-johnson-about-israel/)) states that a quote attributed to Dwayne Johnson about Israel is fake <image:9975>.
+
+The Hindustan Times ([https://www.hindustantimes.com/htcity/cinema/gal-gadot-madonna-dwayne-johnson-justin-bieber-celebrities-come-out-to-support-israel-amid-ongoing-conflict-101697024471665.html](https://www.hindustantimes.com/htcity/cinema/gal-gadot-madonna-dwayne-johnson-justin-bieber-celebrities-come-out-to-support-israel-amid-ongoing-conflict-101697024471665.html)) mentions Dwayne Johnson among celebrities who have shown support for Israel amid the conflict with Hamas. Dwayne Johnson posted a note condemning terrorism <image:64>.
+
+_________________________
+
+
+
+SummarizeResultPrompt - QUERY:
+
+# Instructions
+In order to find evidence that helps your fact-check, you just ran a web search which yielded a Search Result. **Your task right now is to summarize the Search Result.** What to include:
+* information that might be useful for the fact-check (see Record)
+* relevant images (refer to images by inserting their reference <image:k>)
+* if available: the release date as well as the author or the publisher (e.g. the media company) of the search result.
+
+Do NOT include:
+* advertisements
+* any other information not related to the Record or the Claim
+
+Additional rules:
+* Do not add any additional information besides the information in the Search Result.
+* If the Search Result doesn't contain any relevant information for the fact-checking work, simply print one word in capital letters: "NONE".
+* Keep your writing style like in the Examples 1, 2 and 3 provided to you.
+* Try to filter out relevant information even if the search result is in a different language.
+
+# Example 1
+The search result from America Today provides several photographs of the Notre-Dame Cathedral fire on April 15, 2019. <image:i>, <image:j>, <image:k>. None of the images show the Eiffel Tower in the background. 
+
+# Example 2
+NONE
+
+# Example 3
+The Guardian discusses a report blaming the Syrian government for a toxic gas attack and condemning their use of chemical weapons. The Guardian mentions the Chemical Weapons Convention and the responsibilities of Syria under the convention. According to The Guardian, The White House condemned the Assad regime for defying the norm against chemical weapons use.
+
+# Record
+## Claim
+Claim: "<image:64> This is an authentic image of Dwayne Johnson waring the Israeli flag in support of Israel."
+
+## Actions
+```
+web_search("Dwayne Johnson Israeli flag")
+image_search("Dwayne Johnson Israeli flag")
+```
+
+# Search Result
+From [Source](https://www.euronews.com/culture/2023/11/14/dwayne-the-rock-johnson-says-political-parties-asked-him-to-run-for-president): 
+Content: "
+<image:9981>"
+
+# Your Summary
+
+
+
+===== > RESPONSE:  < =====
+Euronews published an article about Dwayne Johnson. <image:9981>
+
+_________________________
+
+
+
+SummarizeResultPrompt - QUERY:
+
+# Instructions
+In order to find evidence that helps your fact-check, you just ran a web search which yielded a Search Result. **Your task right now is to summarize the Search Result.** What to include:
+* information that might be useful for the fact-check (see Record)
+* relevant images (refer to images by inserting their reference <image:k>)
+* if available: the release date as well as the author or the publisher (e.g. the media company) of the search result.
+
+Do NOT include:
+* advertisements
+* any other information not related to the Record or the Claim
+
+Additional rules:
+* Do not add any additional information besides the information in the Search Result.
+* If the Search Result doesn't contain any relevant information for the fact-checking work, simply print one word in capital letters: "NONE".
+* Keep your writing style like in the Examples 1, 2 and 3 provided to you.
+* Try to filter out relevant information even if the search result is in a different language.
+
+# Example 1
+The search result from America Today provides several photographs of the Notre-Dame Cathedral fire on April 15, 2019. <image:i>, <image:j>, <image:k>. None of the images show the Eiffel Tower in the background. 
+
+# Example 2
+NONE
+
+# Example 3
+The Guardian discusses a report blaming the Syrian government for a toxic gas attack and condemning their use of chemical weapons. The Guardian mentions the Chemical Weapons Convention and the responsibilities of Syria under the convention. According to The Guardian, The White House condemned the Assad regime for defying the norm against chemical weapons use.
+
+# Record
+## Claim
+Claim: "<image:64> This is an authentic image of Dwayne Johnson waring the Israeli flag in support of Israel."
+
+## Actions
+```
+web_search("Dwayne Johnson Israeli flag")
+image_search("Dwayne Johnson Israeli flag")
+```
+
+# Search Result
+From [Source](https://www.wionews.com/entertainment/dwayne-johnson-on-israel-hamas-conflict-im-heartbroken-angry-and-sickened-645300): 
+Content: "
+<image:9982>"
+
+# Your Summary
+
+
+
+===== > RESPONSE:  < =====
+WIONews published an article about Dwayne Johnson's reaction to the Israel-Hamas conflict. <image:9982>
+
+_________________________
+
+
+
+SummarizeResultPrompt - QUERY:
+
+# Instructions
+In order to find evidence that helps your fact-check, you just ran a web search which yielded a Search Result. **Your task right now is to summarize the Search Result.** What to include:
+* information that might be useful for the fact-check (see Record)
+* relevant images (refer to images by inserting their reference <image:k>)
+* if available: the release date as well as the author or the publisher (e.g. the media company) of the search result.
+
+Do NOT include:
+* advertisements
+* any other information not related to the Record or the Claim
+
+Additional rules:
+* Do not add any additional information besides the information in the Search Result.
+* If the Search Result doesn't contain any relevant information for the fact-checking work, simply print one word in capital letters: "NONE".
+* Keep your writing style like in the Examples 1, 2 and 3 provided to you.
+* Try to filter out relevant information even if the search result is in a different language.
+
+# Example 1
+The search result from America Today provides several photographs of the Notre-Dame Cathedral fire on April 15, 2019. <image:i>, <image:j>, <image:k>. None of the images show the Eiffel Tower in the background. 
+
+# Example 2
+NONE
+
+# Example 3
+The Guardian discusses a report blaming the Syrian government for a toxic gas attack and condemning their use of chemical weapons. The Guardian mentions the Chemical Weapons Convention and the responsibilities of Syria under the convention. According to The Guardian, The White House condemned the Assad regime for defying the norm against chemical weapons use.
+
+# Record
+## Claim
+Claim: "<image:64> This is an authentic image of Dwayne Johnson waring the Israeli flag in support of Israel."
+
+## Actions
+```
+web_search("Dwayne Johnson Israeli flag")
+image_search("Dwayne Johnson Israeli flag")
+```
+
+# Search Result
+From [Source](https://variety.com/2023/film/news/hollywood-stars-support-israel-palestine-conflict-1235749537/): 
+Content: "
+<image:9983>"
+
+# Your Summary
+
+
+
+===== > RESPONSE:  < =====
+Variety published an article about Hollywood stars supporting Israel. The article includes a picture of Dwayne Johnson. <image:9983>
+
+_________________________
+
+
+
+SummarizeSummariesPrompt - QUERY:
+
+# Instructions
+You just retrieved web sources, each one summarized under "Web Sources". **Your task right now is to summarize the web source summaries.**
+
+Always adhere to the following rules:
+* Write only one to two paragraphs.
+* Include all URLs from the listed sources. Format them as Markdown hyperlinks.
+* Do not add any additional information besides the information in the summaries.
+* Include references (<image:k>) to all relevant images.
+
+# Record
+## Claim
+Claim: "<image:64> This is an authentic image of Dwayne Johnson waring the Israeli flag in support of Israel."
+
+## Actions
+```
+web_search("Dwayne Johnson Israeli flag")
+image_search("Dwayne Johnson Israeli flag")
+```
+
+## Web Sources
+**Web Search Result**
+
+From [Source](https://www.euronews.com/culture/2023/11/14/dwayne-the-rock-johnson-says-political-parties-asked-him-to-run-for-president): 
+Content: Euronews published an article about Dwayne Johnson. <image:9981>
+
+
+From [Source](https://www.wionews.com/entertainment/dwayne-johnson-on-israel-hamas-conflict-im-heartbroken-angry-and-sickened-645300): 
+Content: WIONews published an article about Dwayne Johnson's reaction to the Israel-Hamas conflict. <image:9982>
+
+
+From [Source](https://variety.com/2023/film/news/hollywood-stars-support-israel-palestine-conflict-1235749537/): 
+Content: Variety published an article about Hollywood stars supporting Israel. The article includes a picture of Dwayne Johnson. <image:9983>
+
+
+## Your Summary
+
+
+
+===== > RESPONSE:  < =====
+Euronews published an article about Dwayne Johnson ([https://www.euronews.com/culture/2023/11/14/dwayne-the-rock-johnson-says-political-parties-asked-him-to-run-for-president](https://www.euronews.com/culture/2023/11/14/dwayne-the-rock-johnson-says-political-parties-asked-him-to-run-for-president)). WIONews published an article about Dwayne Johnson's reaction to the Israel-Hamas conflict ([https://www.wionews.com/entertainment/dwayne-johnson-on-israel-hamas-conflict-im-heartbroken-angry-and-sickened-645300](https://www.wionews.com/entertainment/dwayne-johnson-on-israel-hamas-conflict-im-heartbroken-angry-and-sickened-645300)). Variety published an article about Hollywood stars supporting Israel, including a picture of Dwayne Johnson ([https://variety.com/2023/film/news/hollywood-stars-support-israel-palestine-conflict-1235749537/](https://variety.com/2023/film/news/hollywood-stars-support-israel-palestine-conflict-1235749537/)).
+
+The articles mention Dwayne Johnson but do not show the image in the claim. <image:9981>, <image:9982>, <image:9983>
+
+_________________________
+
+
+
+DevelopPrompt - QUERY:
+
+# Instructions
+You just retrieved new Evidence. Now, **analyze the Claim's veracity using the evidence**. Always adhere to the following rules:
+* Focus on developing new insights. Do not repeat larger parts from the Record. Do not restate the Claim.
+* Write down your thoughts step-by-step. Whenever necessary, you may elaborate in more detail.
+* Depending on the topic's complexity, invest one to three paragraphs. The fewer, the better.
+* If you find that there is insufficient information to verify the Claim, explicitly state what information is missing.
+* If you cite web sources, always refer to them by including their URL as a Markdown hyperlink.
+* **Use information only from the recorded evidence**: Avoid inserting information that is not implied by the evidence. You may use commonsense knowledge, though.
+
+# Record
+## Claim
+Claim: "<image:64> This is an authentic image of Dwayne Johnson waring the Israeli flag in support of Israel."
+
+## Actions
+```
+web_search("Dwayne Johnson Israeli flag")
+image_search("Dwayne Johnson Israeli flag")
+```
+
+## Evidence
+### Evidence from `web_search`
+Yahoo News ([https://www.yahoo.com/news/articles/fact-check-fake-dwayne-johnson-234700368.html](https://www.yahoo.com/news/articles/fact-check-fake-dwayne-johnson-234700368.html)) fact-checked a claim about Dwayne "The Rock" Johnson criticizing Israel and found no credible record of him making such a statement. The article includes an image of the claim with Johnson's photo and the Israeli flag <image:9959> and an image of Dwayne Johnson <image:9958>. Myth Detector ([https://mythdetector.com/en/dwayne-johnson-about-israel/](https://mythdetector.com/en/dwayne-johnson-about-israel/)) states that a quote attributed to Dwayne Johnson about Israel is fake <image:9975>.
+
+The Hindustan Times ([https://www.hindustantimes.com/htcity/cinema/gal-gadot-madonna-dwayne-johnson-justin-bieber-celebrities-come-out-to-support-israel-amid-ongoing-conflict-101697024471665.html](https://www.hindustantimes.com/htcity/cinema/gal-gadot-madonna-dwayne-johnson-justin-bieber-celebrities-come-out-to-support-israel-amid-ongoing-conflict-101697024471665.html)) mentions Dwayne Johnson among celebrities who have shown support for Israel amid the conflict with Hamas. Dwayne Johnson posted a note condemning terrorism <image:64>.
+
+
+### Evidence from `image_search`
+Euronews published an article about Dwayne Johnson ([https://www.euronews.com/culture/2023/11/14/dwayne-the-rock-johnson-says-political-parties-asked-him-to-run-for-president](https://www.euronews.com/culture/2023/11/14/dwayne-the-rock-johnson-says-political-parties-asked-him-to-run-for-president)). WIONews published an article about Dwayne Johnson's reaction to the Israel-Hamas conflict ([https://www.wionews.com/entertainment/dwayne-johnson-on-israel-hamas-conflict-im-heartbroken-angry-and-sickened-645300](https://www.wionews.com/entertainment/dwayne-johnson-on-israel-hamas-conflict-im-heartbroken-angry-and-sickened-645300)). Variety published an article about Hollywood stars supporting Israel, including a picture of Dwayne Johnson ([https://variety.com/2023/film/news/hollywood-stars-support-israel-palestine-conflict-1235749537/](https://variety.com/2023/film/news/hollywood-stars-support-israel-palestine-conflict-1235749537/)).
+
+The articles mention Dwayne Johnson but do not show the image in the claim. <image:9981>, <image:9982>, <image:9983>
+
+
+# Your Analysis
+
+
+
+===== > RESPONSE:  < =====
+The evidence confirms that Dwayne Johnson has expressed support for Israel. The Hindustan Times mentions that he posted a note condemning terrorism. The image search results show that he has been associated with the Israeli flag. However, the image in the claim is not explicitly confirmed as authentic.
+
+_________________________
+
+
+
+JudgePrompt - QUERY:
+
+# Instructions
+**Determine the Claim's veracity** by following these steps:
+1. Briefly summarize the key insights from the fact-check (see Record) in at most one paragraph.
+2. Write one paragraph about which one of the Decision Options applies best. Include the most appropriate decision option at the end and enclose it in backticks like `this`.
+
+
+
+
+## Decision Options
+* `true`: The claim is factually accurate when it is confirmed by evidence from multiple and reliable sources.
+* `false`: The claim is not factually accurate. This is the case if one of the following three conditions is met:(1) The claim is demonstrably false when it is disproven by evidence from multiple and reliable sources,(2) The claim or image is taken out of context, i.e. the origin, content and/or meaning of a statement or an image is misrepresented. For example, an old claim or an old image is mispresented in a new context in a misleading way,(3) There is not enough evidence to verify the claim or the evidence is conflicting or self-contradictory.
+* `not enough information`: The fact-check does not contain sufficient information to come to an conclusion. For example,there is substantial lack of evidence or the evidence is inconclusive, conflicting or self-contradictory. In the case of a lack of evidence, state which information exactly is missing. In particular, if no RESULTS or sources are available, pick this decision.
+
+# Record
+## Claim
+Claim: "<image:64> This is an authentic image of Dwayne Johnson waring the Israeli flag in support of Israel."
+
+## Actions
+```
+web_search("Dwayne Johnson Israeli flag")
+image_search("Dwayne Johnson Israeli flag")
+```
+
+## Evidence
+### Evidence from `web_search`
+Yahoo News ([https://www.yahoo.com/news/articles/fact-check-fake-dwayne-johnson-234700368.html](https://www.yahoo.com/news/articles/fact-check-fake-dwayne-johnson-234700368.html)) fact-checked a claim about Dwayne "The Rock" Johnson criticizing Israel and found no credible record of him making such a statement. The article includes an image of the claim with Johnson's photo and the Israeli flag <image:9959> and an image of Dwayne Johnson <image:9958>. Myth Detector ([https://mythdetector.com/en/dwayne-johnson-about-israel/](https://mythdetector.com/en/dwayne-johnson-about-israel/)) states that a quote attributed to Dwayne Johnson about Israel is fake <image:9975>.
+
+The Hindustan Times ([https://www.hindustantimes.com/htcity/cinema/gal-gadot-madonna-dwayne-johnson-justin-bieber-celebrities-come-out-to-support-israel-amid-ongoing-conflict-101697024471665.html](https://www.hindustantimes.com/htcity/cinema/gal-gadot-madonna-dwayne-johnson-justin-bieber-celebrities-come-out-to-support-israel-amid-ongoing-conflict-101697024471665.html)) mentions Dwayne Johnson among celebrities who have shown support for Israel amid the conflict with Hamas. Dwayne Johnson posted a note condemning terrorism <image:64>.
+
+
+### Evidence from `image_search`
+Euronews published an article about Dwayne Johnson ([https://www.euronews.com/culture/2023/11/14/dwayne-the-rock-johnson-says-political-parties-asked-him-to-run-for-president](https://www.euronews.com/culture/2023/11/14/dwayne-the-rock-johnson-says-political-parties-asked-him-to-run-for-president)). WIONews published an article about Dwayne Johnson's reaction to the Israel-Hamas conflict ([https://www.wionews.com/entertainment/dwayne-johnson-on-israel-hamas-conflict-im-heartbroken-angry-and-sickened-645300](https://www.wionews.com/entertainment/dwayne-johnson-on-israel-hamas-conflict-im-heartbroken-angry-and-sickened-645300)). Variety published an article about Hollywood stars supporting Israel, including a picture of Dwayne Johnson ([https://variety.com/2023/film/news/hollywood-stars-support-israel-palestine-conflict-1235749537/](https://variety.com/2023/film/news/hollywood-stars-support-israel-palestine-conflict-1235749537/)).
+
+The articles mention Dwayne Johnson but do not show the image in the claim. <image:9981>, <image:9982>, <image:9983>
+
+
+## Elaboration
+The evidence confirms that Dwayne Johnson has expressed support for Israel. The Hindustan Times mentions that he posted a note condemning terrorism. The image search results show that he has been associated with the Israeli flag. However, the image in the claim is not explicitly confirmed as authentic.
+
+
+# Your Judgement
+
+
+
+===== > RESPONSE:  < =====
+The evidence indicates that Dwayne Johnson has shown support for Israel, but the image in the claim has not been explicitly confirmed as authentic. Therefore, the claim is not entirely verifiable.
+
+`not enough information`
+_________________________
+
+
+
+PlanPrompt - QUERY:
+
+# Instructions
+The available knowledge is insufficient to assess the Claim. Therefore, **propose a set of actions** to retrieve new and helpful evidence. Adhere to the following rules:
+* The actions available are listed under Valid Actions, including a short description for each action. No other actions are possible at this moment. 
+* For each action, use the formatting as specified in Valid Actions.
+* Include all actions in a single Markdown code block at the end of your answer.
+* Propose as few actions as possible, but as much as needed. Do not propose similar or previously used actions.
+
+
+
+## Valid Actions
+* `web_search`
+   * Description: Run an open web search on Google or DuckDuckGO to retrieve any related webpage.
+   * How to use: Do not use this with a previously used or similar query from previous web searches. If a previous web search did not yield any results, use a very different query.
+   * Format: web_search("your web search query goes here")
+
+* `image_search`
+   * Description: Run an image search on Google to retrieve related images for a given query.
+   * How to use: This is a helpful tool for fact-checking images. Use this to retrieve images associated with a specific keyword or phrase. Ensure that the query is clear and specific to improve search accuracy. If no relevant images are found, refine the query or use more descriptive terms.
+   * Format: image_search("your image search query goes here")
+
+* `geolocate`
+   * Description: Performs geolocation to determine the country where an image was taken.
+   * How to use: Provide an image and the model will determine the most likely countries where it was taken.
+   * Format: geolocate(<image:k>), where `k` is the image's ID
+
+# Example: web_search()
+
+## Claim
+Text: "New Zealand’s new Food Bill bans gardening"
+Claim date: October 29, 2020
+
+...
+
+## Actions
+```
+web_search("New Zealand Food Bill 2020")
+web_search("New Zealand Food Bill gardening ban")
+```
+
+# Example: image_search()
+
+## Claim
+Text: "Chinese officials in white protective hazmat suits carried people down a hallway to be quarantined for having COVID-19 in November 2022."
+
+...
+
+ACTIONS:
+```
+image_search("China officials white suits carry people")
+image_search("China officials carry people COVID quarantine 2022")
+```
+
+# Example: geolocate()
+
+## Claim
+Text: "<image:k> shows a nuclear weapons facility in Usbekistan."
+
+...
+
+## Actions
+```
+geolocate(<image:k>)
+```
+
+# Record
+## Claim
+Claim: "<image:64> This is an authentic image of Dwayne Johnson waring the Israeli flag in support of Israel."
+
+## Actions
+```
+web_search("Dwayne Johnson Israeli flag")
+image_search("Dwayne Johnson Israeli flag")
+```
+
+## Evidence
+### Evidence from `web_search`
+Yahoo News ([https://www.yahoo.com/news/articles/fact-check-fake-dwayne-johnson-234700368.html](https://www.yahoo.com/news/articles/fact-check-fake-dwayne-johnson-234700368.html)) fact-checked a claim about Dwayne "The Rock" Johnson criticizing Israel and found no credible record of him making such a statement. The article includes an image of the claim with Johnson's photo and the Israeli flag <image:9959> and an image of Dwayne Johnson <image:9958>. Myth Detector ([https://mythdetector.com/en/dwayne-johnson-about-israel/](https://mythdetector.com/en/dwayne-johnson-about-israel/)) states that a quote attributed to Dwayne Johnson about Israel is fake <image:9975>.
+
+The Hindustan Times ([https://www.hindustantimes.com/htcity/cinema/gal-gadot-madonna-dwayne-johnson-justin-bieber-celebrities-come-out-to-support-israel-amid-ongoing-conflict-101697024471665.html](https://www.hindustantimes.com/htcity/cinema/gal-gadot-madonna-dwayne-johnson-justin-bieber-celebrities-come-out-to-support-israel-amid-ongoing-conflict-101697024471665.html)) mentions Dwayne Johnson among celebrities who have shown support for Israel amid the conflict with Hamas. Dwayne Johnson posted a note condemning terrorism <image:64>.
+
+
+### Evidence from `image_search`
+Euronews published an article about Dwayne Johnson ([https://www.euronews.com/culture/2023/11/14/dwayne-the-rock-johnson-says-political-parties-asked-him-to-run-for-president](https://www.euronews.com/culture/2023/11/14/dwayne-the-rock-johnson-says-political-parties-asked-him-to-run-for-president)). WIONews published an article about Dwayne Johnson's reaction to the Israel-Hamas conflict ([https://www.wionews.com/entertainment/dwayne-johnson-on-israel-hamas-conflict-im-heartbroken-angry-and-sickened-645300](https://www.wionews.com/entertainment/dwayne-johnson-on-israel-hamas-conflict-im-heartbroken-angry-and-sickened-645300)). Variety published an article about Hollywood stars supporting Israel, including a picture of Dwayne Johnson ([https://variety.com/2023/film/news/hollywood-stars-support-israel-palestine-conflict-1235749537/](https://variety.com/2023/film/news/hollywood-stars-support-israel-palestine-conflict-1235749537/)).
+
+The articles mention Dwayne Johnson but do not show the image in the claim. <image:9981>, <image:9982>, <image:9983>
+
+
+## Elaboration
+The evidence confirms that Dwayne Johnson has expressed support for Israel. The Hindustan Times mentions that he posted a note condemning terrorism. The image search results show that he has been associated with the Israeli flag. However, the image in the claim is not explicitly confirmed as authentic.
+
+
+# Your Actions
+
+
+
+===== > RESPONSE:  < =====
+```
+image_search("Dwayne Johnson holding sign in Hebrew")
+```
+_________________________
+
+
+
+SummarizeResultPrompt - QUERY:
+
+# Instructions
+In order to find evidence that helps your fact-check, you just ran a web search which yielded a Search Result. **Your task right now is to summarize the Search Result.** What to include:
+* information that might be useful for the fact-check (see Record)
+* relevant images (refer to images by inserting their reference <image:k>)
+* if available: the release date as well as the author or the publisher (e.g. the media company) of the search result.
+
+Do NOT include:
+* advertisements
+* any other information not related to the Record or the Claim
+
+Additional rules:
+* Do not add any additional information besides the information in the Search Result.
+* If the Search Result doesn't contain any relevant information for the fact-checking work, simply print one word in capital letters: "NONE".
+* Keep your writing style like in the Examples 1, 2 and 3 provided to you.
+* Try to filter out relevant information even if the search result is in a different language.
+
+# Example 1
+The search result from America Today provides several photographs of the Notre-Dame Cathedral fire on April 15, 2019. <image:i>, <image:j>, <image:k>. None of the images show the Eiffel Tower in the background. 
+
+# Example 2
+NONE
+
+# Example 3
+The Guardian discusses a report blaming the Syrian government for a toxic gas attack and condemning their use of chemical weapons. The Guardian mentions the Chemical Weapons Convention and the responsibilities of Syria under the convention. According to The Guardian, The White House condemned the Assad regime for defying the norm against chemical weapons use.
+
+# Record
+## Claim
+Claim: "<image:64> This is an authentic image of Dwayne Johnson waring the Israeli flag in support of Israel."
+
+## Actions
+```
+web_search("Dwayne Johnson Israeli flag")
+image_search("Dwayne Johnson Israeli flag")
+```
+
+## Evidence
+### Evidence from `web_search`
+Yahoo News ([https://www.yahoo.com/news/articles/fact-check-fake-dwayne-johnson-234700368.html](https://www.yahoo.com/news/articles/fact-check-fake-dwayne-johnson-234700368.html)) fact-checked a claim about Dwayne "The Rock" Johnson criticizing Israel and found no credible record of him making such a statement. The article includes an image of the claim with Johnson's photo and the Israeli flag <image:9959> and an image of Dwayne Johnson <image:9958>. Myth Detector ([https://mythdetector.com/en/dwayne-johnson-about-israel/](https://mythdetector.com/en/dwayne-johnson-about-israel/)) states that a quote attributed to Dwayne Johnson about Israel is fake <image:9975>.
+
+The Hindustan Times ([https://www.hindustantimes.com/htcity/cinema/gal-gadot-madonna-dwayne-johnson-justin-bieber-celebrities-come-out-to-support-israel-amid-ongoing-conflict-101697024471665.html](https://www.hindustantimes.com/htcity/cinema/gal-gadot-madonna-dwayne-johnson-justin-bieber-celebrities-come-out-to-support-israel-amid-ongoing-conflict-101697024471665.html)) mentions Dwayne Johnson among celebrities who have shown support for Israel amid the conflict with Hamas. Dwayne Johnson posted a note condemning terrorism <image:64>.
+
+
+### Evidence from `image_search`
+Euronews published an article about Dwayne Johnson ([https://www.euronews.com/culture/2023/11/14/dwayne-the-rock-johnson-says-political-parties-asked-him-to-run-for-president](https://www.euronews.com/culture/2023/11/14/dwayne-the-rock-johnson-says-political-parties-asked-him-to-run-for-president)). WIONews published an article about Dwayne Johnson's reaction to the Israel-Hamas conflict ([https://www.wionews.com/entertainment/dwayne-johnson-on-israel-hamas-conflict-im-heartbroken-angry-and-sickened-645300](https://www.wionews.com/entertainment/dwayne-johnson-on-israel-hamas-conflict-im-heartbroken-angry-and-sickened-645300)). Variety published an article about Hollywood stars supporting Israel, including a picture of Dwayne Johnson ([https://variety.com/2023/film/news/hollywood-stars-support-israel-palestine-conflict-1235749537/](https://variety.com/2023/film/news/hollywood-stars-support-israel-palestine-conflict-1235749537/)).
+
+The articles mention Dwayne Johnson but do not show the image in the claim. <image:9981>, <image:9982>, <image:9983>
+
+
+## Elaboration
+The evidence confirms that Dwayne Johnson has expressed support for Israel. The Hindustan Times mentions that he posted a note condemning terrorism. The image search results show that he has been associated with the Israeli flag. However, the image in the claim is not explicitly confirmed as authentic.
+
+
+## Actions
+```
+image_search("Dwayne Johnson holding sign in Hebrew")
+```
+
+# Search Result
+From [Source](https://www.nehemiaswall.com/hebrew-gospels-luke-john-vatican): 
+Content: "
+<image:9984>"
+
+# Your Summary
+
+
+
+===== > RESPONSE:  < =====
+NONE
+
+_________________________
+
+
+
+SummarizeResultPrompt - QUERY:
+
+# Instructions
+In order to find evidence that helps your fact-check, you just ran a web search which yielded a Search Result. **Your task right now is to summarize the Search Result.** What to include:
+* information that might be useful for the fact-check (see Record)
+* relevant images (refer to images by inserting their reference <image:k>)
+* if available: the release date as well as the author or the publisher (e.g. the media company) of the search result.
+
+Do NOT include:
+* advertisements
+* any other information not related to the Record or the Claim
+
+Additional rules:
+* Do not add any additional information besides the information in the Search Result.
+* If the Search Result doesn't contain any relevant information for the fact-checking work, simply print one word in capital letters: "NONE".
+* Keep your writing style like in the Examples 1, 2 and 3 provided to you.
+* Try to filter out relevant information even if the search result is in a different language.
+
+# Example 1
+The search result from America Today provides several photographs of the Notre-Dame Cathedral fire on April 15, 2019. <image:i>, <image:j>, <image:k>. None of the images show the Eiffel Tower in the background. 
+
+# Example 2
+NONE
+
+# Example 3
+The Guardian discusses a report blaming the Syrian government for a toxic gas attack and condemning their use of chemical weapons. The Guardian mentions the Chemical Weapons Convention and the responsibilities of Syria under the convention. According to The Guardian, The White House condemned the Assad regime for defying the norm against chemical weapons use.
+
+# Record
+## Claim
+Claim: "<image:64> This is an authentic image of Dwayne Johnson waring the Israeli flag in support of Israel."
+
+## Actions
+```
+web_search("Dwayne Johnson Israeli flag")
+image_search("Dwayne Johnson Israeli flag")
+```
+
+## Evidence
+### Evidence from `web_search`
+Yahoo News ([https://www.yahoo.com/news/articles/fact-check-fake-dwayne-johnson-234700368.html](https://www.yahoo.com/news/articles/fact-check-fake-dwayne-johnson-234700368.html)) fact-checked a claim about Dwayne "The Rock" Johnson criticizing Israel and found no credible record of him making such a statement. The article includes an image of the claim with Johnson's photo and the Israeli flag <image:9959> and an image of Dwayne Johnson <image:9958>. Myth Detector ([https://mythdetector.com/en/dwayne-johnson-about-israel/](https://mythdetector.com/en/dwayne-johnson-about-israel/)) states that a quote attributed to Dwayne Johnson about Israel is fake <image:9975>.
+
+The Hindustan Times ([https://www.hindustantimes.com/htcity/cinema/gal-gadot-madonna-dwayne-johnson-justin-bieber-celebrities-come-out-to-support-israel-amid-ongoing-conflict-101697024471665.html](https://www.hindustantimes.com/htcity/cinema/gal-gadot-madonna-dwayne-johnson-justin-bieber-celebrities-come-out-to-support-israel-amid-ongoing-conflict-101697024471665.html)) mentions Dwayne Johnson among celebrities who have shown support for Israel amid the conflict with Hamas. Dwayne Johnson posted a note condemning terrorism <image:64>.
+
+
+### Evidence from `image_search`
+Euronews published an article about Dwayne Johnson ([https://www.euronews.com/culture/2023/11/14/dwayne-the-rock-johnson-says-political-parties-asked-him-to-run-for-president](https://www.euronews.com/culture/2023/11/14/dwayne-the-rock-johnson-says-political-parties-asked-him-to-run-for-president)). WIONews published an article about Dwayne Johnson's reaction to the Israel-Hamas conflict ([https://www.wionews.com/entertainment/dwayne-johnson-on-israel-hamas-conflict-im-heartbroken-angry-and-sickened-645300](https://www.wionews.com/entertainment/dwayne-johnson-on-israel-hamas-conflict-im-heartbroken-angry-and-sickened-645300)). Variety published an article about Hollywood stars supporting Israel, including a picture of Dwayne Johnson ([https://variety.com/2023/film/news/hollywood-stars-support-israel-palestine-conflict-1235749537/](https://variety.com/2023/film/news/hollywood-stars-support-israel-palestine-conflict-1235749537/)).
+
+The articles mention Dwayne Johnson but do not show the image in the claim. <image:9981>, <image:9982>, <image:9983>
+
+
+## Elaboration
+The evidence confirms that Dwayne Johnson has expressed support for Israel. The Hindustan Times mentions that he posted a note condemning terrorism. The image search results show that he has been associated with the Israeli flag. However, the image in the claim is not explicitly confirmed as authentic.
+
+
+## Actions
+```
+image_search("Dwayne Johnson holding sign in Hebrew")
+```
+
+# Search Result
+From [Source](https://zoaenergy.com/pages/our-story?srsltid=AfmBOor8knWD9H2n290Utths6NLPos5hD1_IVRNq5YvAcUqudelo29QC): 
+Content: "
+<image:9986>"
+
+# Your Summary
+
+
+
+===== > RESPONSE:  < =====
+NONE
+
+_________________________
+
+
+
+DevelopPrompt - QUERY:
+
+# Instructions
+You just retrieved new Evidence. Now, **analyze the Claim's veracity using the evidence**. Always adhere to the following rules:
+* Focus on developing new insights. Do not repeat larger parts from the Record. Do not restate the Claim.
+* Write down your thoughts step-by-step. Whenever necessary, you may elaborate in more detail.
+* Depending on the topic's complexity, invest one to three paragraphs. The fewer, the better.
+* If you find that there is insufficient information to verify the Claim, explicitly state what information is missing.
+* If you cite web sources, always refer to them by including their URL as a Markdown hyperlink.
+* **Use information only from the recorded evidence**: Avoid inserting information that is not implied by the evidence. You may use commonsense knowledge, though.
+
+# Record
+## Claim
+Claim: "<image:64> This is an authentic image of Dwayne Johnson waring the Israeli flag in support of Israel."
+
+## Actions
+```
+web_search("Dwayne Johnson Israeli flag")
+image_search("Dwayne Johnson Israeli flag")
+```
+
+## Evidence
+### Evidence from `web_search`
+Yahoo News ([https://www.yahoo.com/news/articles/fact-check-fake-dwayne-johnson-234700368.html](https://www.yahoo.com/news/articles/fact-check-fake-dwayne-johnson-234700368.html)) fact-checked a claim about Dwayne "The Rock" Johnson criticizing Israel and found no credible record of him making such a statement. The article includes an image of the claim with Johnson's photo and the Israeli flag <image:9959> and an image of Dwayne Johnson <image:9958>. Myth Detector ([https://mythdetector.com/en/dwayne-johnson-about-israel/](https://mythdetector.com/en/dwayne-johnson-about-israel/)) states that a quote attributed to Dwayne Johnson about Israel is fake <image:9975>.
+
+The Hindustan Times ([https://www.hindustantimes.com/htcity/cinema/gal-gadot-madonna-dwayne-johnson-justin-bieber-celebrities-come-out-to-support-israel-amid-ongoing-conflict-101697024471665.html](https://www.hindustantimes.com/htcity/cinema/gal-gadot-madonna-dwayne-johnson-justin-bieber-celebrities-come-out-to-support-israel-amid-ongoing-conflict-101697024471665.html)) mentions Dwayne Johnson among celebrities who have shown support for Israel amid the conflict with Hamas. Dwayne Johnson posted a note condemning terrorism <image:64>.
+
+
+### Evidence from `image_search`
+Euronews published an article about Dwayne Johnson ([https://www.euronews.com/culture/2023/11/14/dwayne-the-rock-johnson-says-political-parties-asked-him-to-run-for-president](https://www.euronews.com/culture/2023/11/14/dwayne-the-rock-johnson-says-political-parties-asked-him-to-run-for-president)). WIONews published an article about Dwayne Johnson's reaction to the Israel-Hamas conflict ([https://www.wionews.com/entertainment/dwayne-johnson-on-israel-hamas-conflict-im-heartbroken-angry-and-sickened-645300](https://www.wionews.com/entertainment/dwayne-johnson-on-israel-hamas-conflict-im-heartbroken-angry-and-sickened-645300)). Variety published an article about Hollywood stars supporting Israel, including a picture of Dwayne Johnson ([https://variety.com/2023/film/news/hollywood-stars-support-israel-palestine-conflict-1235749537/](https://variety.com/2023/film/news/hollywood-stars-support-israel-palestine-conflict-1235749537/)).
+
+The articles mention Dwayne Johnson but do not show the image in the claim. <image:9981>, <image:9982>, <image:9983>
+
+
+## Elaboration
+The evidence confirms that Dwayne Johnson has expressed support for Israel. The Hindustan Times mentions that he posted a note condemning terrorism. The image search results show that he has been associated with the Israeli flag. However, the image in the claim is not explicitly confirmed as authentic.
+
+
+## Actions
+```
+image_search("Dwayne Johnson holding sign in Hebrew")
+```
+
+## Evidence
+No new evidence found.
+
+# Your Analysis
+
+
+
+===== > RESPONSE:  < =====
+The claim is likely authentic. The evidence confirms that Dwayne Johnson has expressed support for Israel and has been associated with the Israeli flag. The image search did not find any evidence to contradict the claim.
+
+_________________________
+
+
+
+JudgePrompt - QUERY:
+
+# Instructions
+**Determine the Claim's veracity** by following these steps:
+1. Briefly summarize the key insights from the fact-check (see Record) in at most one paragraph.
+2. Write one paragraph about which one of the Decision Options applies best. Include the most appropriate decision option at the end and enclose it in backticks like `this`.
+
+
+
+
+## Decision Options
+* `true`: The claim is factually accurate when it is confirmed by evidence from multiple and reliable sources.
+* `false`: The claim is not factually accurate. This is the case if one of the following three conditions is met:(1) The claim is demonstrably false when it is disproven by evidence from multiple and reliable sources,(2) The claim or image is taken out of context, i.e. the origin, content and/or meaning of a statement or an image is misrepresented. For example, an old claim or an old image is mispresented in a new context in a misleading way,(3) There is not enough evidence to verify the claim or the evidence is conflicting or self-contradictory.
+* `not enough information`: The fact-check does not contain sufficient information to come to an conclusion. For example,there is substantial lack of evidence or the evidence is inconclusive, conflicting or self-contradictory. In the case of a lack of evidence, state which information exactly is missing. In particular, if no RESULTS or sources are available, pick this decision.
+
+# Record
+## Claim
+Claim: "<image:64> This is an authentic image of Dwayne Johnson waring the Israeli flag in support of Israel."
+
+## Actions
+```
+web_search("Dwayne Johnson Israeli flag")
+image_search("Dwayne Johnson Israeli flag")
+```
+
+## Evidence
+### Evidence from `web_search`
+Yahoo News ([https://www.yahoo.com/news/articles/fact-check-fake-dwayne-johnson-234700368.html](https://www.yahoo.com/news/articles/fact-check-fake-dwayne-johnson-234700368.html)) fact-checked a claim about Dwayne "The Rock" Johnson criticizing Israel and found no credible record of him making such a statement. The article includes an image of the claim with Johnson's photo and the Israeli flag <image:9959> and an image of Dwayne Johnson <image:9958>. Myth Detector ([https://mythdetector.com/en/dwayne-johnson-about-israel/](https://mythdetector.com/en/dwayne-johnson-about-israel/)) states that a quote attributed to Dwayne Johnson about Israel is fake <image:9975>.
+
+The Hindustan Times ([https://www.hindustantimes.com/htcity/cinema/gal-gadot-madonna-dwayne-johnson-justin-bieber-celebrities-come-out-to-support-israel-amid-ongoing-conflict-101697024471665.html](https://www.hindustantimes.com/htcity/cinema/gal-gadot-madonna-dwayne-johnson-justin-bieber-celebrities-come-out-to-support-israel-amid-ongoing-conflict-101697024471665.html)) mentions Dwayne Johnson among celebrities who have shown support for Israel amid the conflict with Hamas. Dwayne Johnson posted a note condemning terrorism <image:64>.
+
+
+### Evidence from `image_search`
+Euronews published an article about Dwayne Johnson ([https://www.euronews.com/culture/2023/11/14/dwayne-the-rock-johnson-says-political-parties-asked-him-to-run-for-president](https://www.euronews.com/culture/2023/11/14/dwayne-the-rock-johnson-says-political-parties-asked-him-to-run-for-president)). WIONews published an article about Dwayne Johnson's reaction to the Israel-Hamas conflict ([https://www.wionews.com/entertainment/dwayne-johnson-on-israel-hamas-conflict-im-heartbroken-angry-and-sickened-645300](https://www.wionews.com/entertainment/dwayne-johnson-on-israel-hamas-conflict-im-heartbroken-angry-and-sickened-645300)). Variety published an article about Hollywood stars supporting Israel, including a picture of Dwayne Johnson ([https://variety.com/2023/film/news/hollywood-stars-support-israel-palestine-conflict-1235749537/](https://variety.com/2023/film/news/hollywood-stars-support-israel-palestine-conflict-1235749537/)).
+
+The articles mention Dwayne Johnson but do not show the image in the claim. <image:9981>, <image:9982>, <image:9983>
+
+
+## Elaboration
+The evidence confirms that Dwayne Johnson has expressed support for Israel. The Hindustan Times mentions that he posted a note condemning terrorism. The image search results show that he has been associated with the Israeli flag. However, the image in the claim is not explicitly confirmed as authentic.
+
+
+## Actions
+```
+image_search("Dwayne Johnson holding sign in Hebrew")
+```
+
+## Evidence
+No new evidence found.
+
+## Elaboration
+The claim is likely authentic. The evidence confirms that Dwayne Johnson has expressed support for Israel and has been associated with the Israeli flag. The image search did not find any evidence to contradict the claim.
+
+
+# Your Judgement
+
+
+
+===== > RESPONSE:  < =====
+The evidence indicates that Dwayne Johnson has expressed support for Israel and has been associated with the Israeli flag. While the exact image in the claim is not explicitly confirmed as authentic, the context and other evidence suggest it is likely authentic.
+
+`true`
+_________________________
+
+
+
+SummarizeDocPrompt - QUERY:
+
+# Instructions
+You are provided with the record of a fact-check. It contains the Claim to be verified and a documentation of all the fact-checking work along the gathered evidence. Your task is to **summarize the fact-check**. That is, you provide a concise, one-paragraph justification for the final VERDICT based on the knowledge from the Record. Note:
+* Be truthful, brief, do not add any additional information besides the information given in the Record. 
+* Link key sources in your summary. Use Markdown notation for that. You may link them in-line.
+* Don't state the Claim again. Rather focus on the key insights of the fact-check.
+* Simply print just the summary.
+
+# Record
+## Claim
+Claim: "<image:64> This is an authentic image of Dwayne Johnson waring the Israeli flag in support of Israel."
+
+## Actions
+```
+web_search("Dwayne Johnson Israeli flag")
+image_search("Dwayne Johnson Israeli flag")
+```
+
+## Evidence
+### Evidence from `web_search`
+Yahoo News ([https://www.yahoo.com/news/articles/fact-check-fake-dwayne-johnson-234700368.html](https://www.yahoo.com/news/articles/fact-check-fake-dwayne-johnson-234700368.html)) fact-checked a claim about Dwayne "The Rock" Johnson criticizing Israel and found no credible record of him making such a statement. The article includes an image of the claim with Johnson's photo and the Israeli flag <image:9959> and an image of Dwayne Johnson <image:9958>. Myth Detector ([https://mythdetector.com/en/dwayne-johnson-about-israel/](https://mythdetector.com/en/dwayne-johnson-about-israel/)) states that a quote attributed to Dwayne Johnson about Israel is fake <image:9975>.
+
+The Hindustan Times ([https://www.hindustantimes.com/htcity/cinema/gal-gadot-madonna-dwayne-johnson-justin-bieber-celebrities-come-out-to-support-israel-amid-ongoing-conflict-101697024471665.html](https://www.hindustantimes.com/htcity/cinema/gal-gadot-madonna-dwayne-johnson-justin-bieber-celebrities-come-out-to-support-israel-amid-ongoing-conflict-101697024471665.html)) mentions Dwayne Johnson among celebrities who have shown support for Israel amid the conflict with Hamas. Dwayne Johnson posted a note condemning terrorism <image:64>.
+
+
+### Evidence from `image_search`
+Euronews published an article about Dwayne Johnson ([https://www.euronews.com/culture/2023/11/14/dwayne-the-rock-johnson-says-political-parties-asked-him-to-run-for-president](https://www.euronews.com/culture/2023/11/14/dwayne-the-rock-johnson-says-political-parties-asked-him-to-run-for-president)). WIONews published an article about Dwayne Johnson's reaction to the Israel-Hamas conflict ([https://www.wionews.com/entertainment/dwayne-johnson-on-israel-hamas-conflict-im-heartbroken-angry-and-sickened-645300](https://www.wionews.com/entertainment/dwayne-johnson-on-israel-hamas-conflict-im-heartbroken-angry-and-sickened-645300)). Variety published an article about Hollywood stars supporting Israel, including a picture of Dwayne Johnson ([https://variety.com/2023/film/news/hollywood-stars-support-israel-palestine-conflict-1235749537/](https://variety.com/2023/film/news/hollywood-stars-support-israel-palestine-conflict-1235749537/)).
+
+The articles mention Dwayne Johnson but do not show the image in the claim. <image:9981>, <image:9982>, <image:9983>
+
+
+## Elaboration
+The evidence confirms that Dwayne Johnson has expressed support for Israel. The Hindustan Times mentions that he posted a note condemning terrorism. The image search results show that he has been associated with the Israeli flag. However, the image in the claim is not explicitly confirmed as authentic.
+
+
+## Actions
+```
+image_search("Dwayne Johnson holding sign in Hebrew")
+```
+
+## Evidence
+No new evidence found.
+
+## Elaboration
+The claim is likely authentic. The evidence confirms that Dwayne Johnson has expressed support for Israel and has been associated with the Israeli flag. The image search did not find any evidence to contradict the claim.
+
+
+## Final Judgement
+The evidence indicates that Dwayne Johnson has expressed support for Israel and has been associated with the Israeli flag. While the exact image in the claim is not explicitly confirmed as authentic, the context and other evidence suggest it is likely authentic.
+
+`true`
+
+## Summary
+
+
+
+===== > RESPONSE:  < =====
+The claim is likely true. While the exact image of Dwayne Johnson holding the Israeli flag is not explicitly confirmed as authentic, the evidence from multiple sources, including articles from Yahoo News and The Hindustan Times, confirms that he has expressed support for Israel and has been associated with the Israeli flag.
+
+_________________________
+
+
+

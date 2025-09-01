@@ -1,0 +1,25 @@
+Extracting claims from Content: While serving as US President in 2024, Joe Biden ordered the US forces to prepare for possible nuclear confrontations with Russia, China, and North Korea.
+'Claim: "While serving as US President in 2024, Joe Biden ordered the US forces to prepare for possible nuclear confrontations with Russia, China, and North Korea."'
+Verifying Claim: "While serving as US President in 2024, Joe Biden ordered the US forces to prepare for possible nuclear confrontations with Russia, China, and North Korea."
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Joe Biden US President nuclear confrontation Russia China North Korea')
+Skipping unsupported website: https://www.youtube.com/watch?v=zcUn7RJrDEE
+Skipping unsupported website: https://www.congress.gov/crs_external_products/IF/HTML/IF10246.web.html
+Got 3 new web source(s):
+	1. August 20, 2024 https://www.theguardian.com/us-news/article/2024/aug/20/biden-nuclear-strategy-china-threat
+	2. July 08, 2024 https://www.brookings.edu/articles/how-would-trump-and-biden-handle-us-nuclear-policy-upon-reelection/
+	3. August 21, 2024 https://www.aa.com.tr/en/americas/biden-approved-nuclear-strategy-focusing-on-china-report/3308990
+Useful result: From [Source](https://www.theguardian.com/us-news/article/2024/aug/20/biden-nuclear-strategy-china-threat): 
+Content: The Guardian published an article on August 20, 2024, stating that Joe Biden approved a US nuclear strategy to prepare for possible nuclear confrontations with Russia, China, and North Korea. <image:13255> The White House said the plan was approved earlier this year and was not a response to a single country or threat. The article mentions that the US is prepared to shift from modernizing existing weapons to expanding its arsenal.
+
+Useful result: From [Source](https://www.brookings.edu/articles/how-would-trump-and-biden-handle-us-nuclear-policy-upon-reelection/): 
+Content: The Brookings article discusses Biden's nuclear policy while in office. It mentions that Biden successfully deterred Russian nuclear escalation in the war in Ukraine. The article also states that the Biden administration has worked to stabilize relations with China, whose nuclear arsenal is expanding. The article also mentions that Biden has taken steps to stabilize the overall strategic nuclear relationship with Russia. The article does not mention Biden ordering the US forces to prepare for possible nuclear confrontations with Russia, China, and North Korea.
+
+Useful result: From [Source](https://www.aa.com.tr/en/americas/biden-approved-nuclear-strategy-focusing-on-china-report/3308990): 
+Content: According to an article published on August 21, 2024, by Anadolu Agency, President Joe Biden approved a classified document in March directing US forces to prepare for potential "coordinated nuclear confrontations involving Russia, China and North Korea.” <image:0>
+
+The claim 'While serving as US President in 2024, Joe Biden ordered the US forces to prepare for possible nuclear confrontations with Russia, China, and North Korea.' is true.
+Justification: Based on reports from sources like *The Guardian* and *Anadolu Agency*, the claim is accurate. These sources indicate that President Joe Biden approved a US nuclear strategy to prepare for potential nuclear confrontations with Russia, China, and North Korea.
+
+So, the overall veracity is: true
+Fact-check took 1:50 min.

@@ -1,0 +1,59 @@
+Extracting claims from Content: <image:32> This image shows Palestinian baby Sham Imad Muhareb which did not lose her arm in an Israeli airstrike on the Shejaeya neighborhood, east of Gaza City, in April 2025.
+'Claim: "<image:32> This image shows Palestinian baby Sham Imad Muhareb which did not lose her arm in an Israeli airstrike on the Shejaeya neighborhood, east of Gaza City, in April 2025."'
+Verifying Claim: "<image:32> This image shows Palestinian baby Sham Imad Muhareb which did not lose her arm in an Israeli airstrike on the Shejaeya neighborhood, east of Gaza City, in April 2025."
+Not enough information yet. Continuing fact-check...
+Searching google_vision with query: ImageQuery(limit=3, start_date=None, end_date=None, search_type='reverse', text='', image=<defame.common.medium.Image object at 0x7ffed04d4400>)
+Skipping unsupported website: https://www.instagram.com/p/DITq4hsgrLx/
+Skipping unsupported website: https://x.com/omarsuleiman/status/1910681081184952590
+Skipping unsupported website: https://www.tiktok.com/discover/baby-amputee
+Skipping unsupported website: https://twitter.com/drbilal_20
+Got 0 new web source(s):
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Sham Imad Muhareb')
+Skipping unsupported website: https://www.instagram.com/p/DITq4hsgrLx/
+Skipping unsupported website: https://www.facebook.com/imamomarsuleiman/posts/sham-imad-muhareb-who-lost-her-arm-yesterday-in-an-airstrike-has-diedevery-image/1235035921312675/
+Skipping unsupported website: https://x.com/gazanotice/status/1910694177135829344
+Skipping unsupported website: https://www.tiktok.com/@omarsuleimanofficial/photo/7492046917707336990?lang=lt
+Got 1 new web source(s):
+	1. April 10, 2025 https://www.thedailyfile.org/post/sham-imad-muhareb
+Useful result: From [Source](https://www.thedailyfile.org/post/sham-imad-muhareb): 
+Content: The Daily File states that the image is of Sham Imad Muhareb, who was 5 months old. The image was taken in Shuja'iya on April 10, 2025. <image:32>
+
+Not enough information yet. Continuing fact-check...
+INFO: Dropping action 'reverse_search' as it was already performed.
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Sham Imad Muhareb arm injury')
+Skipping unsupported website: https://www.instagram.com/p/DITq4hsgrLx/
+Skipping unsupported website: https://www.facebook.com/photo.php?fbid=1235035554646045&id=100044188371462&set=a.327229968759946
+Skipping unsupported website: https://x.com/QudsNen/status/1910677653855613256
+Skipping unsupported website: https://www.tiktok.com/@omarsuleimanofficial/photo/7492046917707336990?lang=en
+Got 0 new web source(s):
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Israeli airstrike Shejaeya neighborhood April 2025')
+Got 3 new web source(s):
+	1. https://en.wikipedia.org/wiki/April_2025_Shuja%27iyya_airstrike
+	2. April 09, 2025 https://www.bbc.com/news/articles/cy5rrnzw0kwo
+	3. April 03, 2025 https://www.reuters.com/world/middle-east/hundreds-thousands-flee-israel-seizes-rafah-new-gaza-security-zone-2025-04-03/
+Useful result: From [Source](https://en.wikipedia.org/wiki/April_2025_Shuja%27iyya_airstrike): 
+Content: The Wikipedia article discusses the April 9, 2025, Israeli airstrike on a residential building in Shuja'iyya, Gaza City, which resulted in over 35 Palestinian deaths and at least 70 injuries. <image:32> The attack was part of the 2025 Shuja'iyya offensive during the Gaza war. The article also mentions the background of the attack, including the end of the 2025 Gaza war ceasefire and the surprise attack on the Gaza Strip on March 18, 2025.
+
+Useful result: From [Source](https://www.bbc.com/news/articles/cy5rrnzw0kwo): 
+Content: The BBC News article, published on April 9, 2025, reports on an Israeli air strike on a residential building in the Shejaiya neighborhood of Gaza City, which resulted in the deaths of at least 29 Palestinians, including children. <image:1707>, <image:1709>. The article mentions the strike occurred on April 9, 2025.
+
+Useful result: From [Source](https://www.reuters.com/world/middle-east/hundreds-thousands-flee-israel-seizes-rafah-new-gaza-security-zone-2025-04-03/): 
+Content: The Reuters article, published on April 3, 2025, reports on the displacement of Palestinians due to Israeli military actions in Gaza, particularly in the Shejaia neighborhood and Rafah. <image:1710> The article mentions an Israeli airstrike in Shejaia on April 3, 2025, and the evacuation orders issued by Israel.
+
+Not enough information yet. Continuing fact-check...
+INFO: Dropping action 'reverse_search' as it was already performed.
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Sham Imad Muhareb arm injury Israeli airstrike')
+Skipping unsupported website: https://m.facebook.com/imamomarsuleiman/photos/sham-imad-muhareb-who-lost-her-arm-yesterday-in-an-airstrike-has-diedevery-image/1235035554646045/
+Skipping unsupported website: https://x.com/QudsNen/status/1910677653855613256
+Skipping unsupported website: https://www.instagram.com/p/DITsy8ei_oH/
+Skipping unsupported website: https://www.tiktok.com/@omarsuleimanofficial/photo/7492046917707336990?lang=bn-IN
+Got 1 new web source(s):
+	1. https://www.ifj.org/es/actions/projects/africa/informa-formation-sur-les-phenomenes-migratoires-en-afrique-de-louest?tx_news_pi1%5Baction%5D=detail&tx_news_pi1%5Bcontroller%5D=News&tx_news_pi1%5Bnews%5D=21667&tx_news_pi1%5BoverwriteDemand%5D%5Bcategories%5D=47&cHash=7448603e6b0fa12844a83484b8707019
+Useful result: From [Source](https://www.ifj.org/es/actions/projects/africa/informa-formation-sur-les-phenomenes-migratoires-en-afrique-de-louest?tx_news_pi1%5Baction%5D=detail&tx_news_pi1%5Bcontroller%5D=News&tx_news_pi1%5Bnews%5D=21667&tx_news_pi1%5BoverwriteDemand%5D%5Bcategories%5D=47&cHash=7448603e6b0fa12844a83484b8707019): 
+Content: The search result from IFJ.org lists numerous journalists killed in Israeli airstrikes in Gaza. The list includes Ibrahim Muhareb, who was killed due to Israeli gunfire and shelling in western Khan Yunis on August 18, 2024. The source also mentions the killing of several other journalists in Israeli airstrikes in different locations and dates.
+
+The claim '<image:32> This image shows Palestinian baby Sham Imad Muhareb which did not lose her arm in an Israeli airstrike on the Shejaeya neighborhood, east of Gaza City, in April 2025.' is not enough information.
+Justification: The claim is partially verifiable. While the image is confirmed to be of Sham Imad Muhareb, and there were Israeli airstrikes in the Shejaia neighborhood in April 2025, the provided evidence does not confirm whether the baby lost her arm in an Israeli airstrike. Therefore, the claim is considered to have `not enough information`.
+
+So, the overall veracity is: not enough information
+Fact-check took 2:12 min.

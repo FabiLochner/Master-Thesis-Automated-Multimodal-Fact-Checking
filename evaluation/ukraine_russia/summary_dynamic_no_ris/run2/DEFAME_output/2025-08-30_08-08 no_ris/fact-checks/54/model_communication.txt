@@ -1,0 +1,2769 @@
+PlanPrompt - QUERY:
+
+# Instructions
+The available knowledge is insufficient to assess the Claim. Therefore, **propose a set of actions** to retrieve new and helpful evidence. Adhere to the following rules:
+* The actions available are listed under Valid Actions, including a short description for each action. No other actions are possible at this moment. 
+* For each action, use the formatting as specified in Valid Actions.
+* Include all actions in a single Markdown code block at the end of your answer.
+* Propose as few actions as possible, but as much as needed. Do not propose similar or previously used actions.
+
+
+
+## Valid Actions
+* `image_search`
+   * Description: Run an image search on Google to retrieve related images for a given query.
+   * How to use: This is a helpful tool for fact-checking images. Use this to retrieve images associated with a specific keyword or phrase. Ensure that the query is clear and specific to improve search accuracy. If no relevant images are found, refine the query or use more descriptive terms.
+   * Format: image_search("your image search query goes here")
+
+* `geolocate`
+   * Description: Performs geolocation to determine the country where an image was taken.
+   * How to use: Provide an image and the model will determine the most likely countries where it was taken.
+   * Format: geolocate(<image:k>), where `k` is the image's ID
+
+* `web_search`
+   * Description: Run an open web search on Google or DuckDuckGO to retrieve any related webpage.
+   * How to use: Do not use this with a previously used or similar query from previous web searches. If a previous web search did not yield any results, use a very different query.
+   * Format: web_search("your web search query goes here")
+
+# Example: image_search()
+
+## Claim
+Text: "Chinese officials in white protective hazmat suits carried people down a hallway to be quarantined for having COVID-19 in November 2022."
+
+...
+
+ACTIONS:
+```
+image_search("China officials white suits carry people")
+image_search("China officials carry people COVID quarantine 2022")
+```
+
+# Example: geolocate()
+
+## Claim
+Text: "<image:k> shows a nuclear weapons facility in Usbekistan."
+
+...
+
+## Actions
+```
+geolocate(<image:k>)
+```
+
+# Example: web_search()
+
+## Claim
+Text: "New Zealand’s new Food Bill bans gardening"
+Claim date: October 29, 2020
+
+...
+
+## Actions
+```
+web_search("New Zealand Food Bill 2020")
+web_search("New Zealand Food Bill gardening ban")
+```
+
+# Record
+## Claim
+Claim: "Ukraine is selling half of the armaments it receives from the United States"
+
+# Your Actions
+
+
+
+===== > RESPONSE:  < =====
+```
+web_search("Ukraine US arms sales corruption")
+web_search("US aid Ukraine arms tracking")
+```
+_________________________
+
+
+
+SummarizeResultPrompt - QUERY:
+
+# Instructions
+In order to find evidence that helps your fact-check, you just ran a web search which yielded a Search Result. **Your task right now is to summarize the Search Result.** What to include:
+* information that might be useful for the fact-check (see Record)
+* relevant images (refer to images by inserting their reference <image:k>)
+* if available: the release date as well as the author or the publisher (e.g. the media company) of the search result.
+
+Do NOT include:
+* advertisements
+* any other information not related to the Record or the Claim
+
+Additional rules:
+* Do not add any additional information besides the information in the Search Result.
+* If the Search Result doesn't contain any relevant information for the fact-checking work, simply print one word in capital letters: "NONE".
+* Keep your writing style like in the Examples 1, 2 and 3 provided to you.
+* Try to filter out relevant information even if the search result is in a different language.
+
+# Example 1
+The search result from America Today provides several photographs of the Notre-Dame Cathedral fire on April 15, 2019. <image:i>, <image:j>, <image:k>. None of the images show the Eiffel Tower in the background. 
+
+# Example 2
+NONE
+
+# Example 3
+The Guardian discusses a report blaming the Syrian government for a toxic gas attack and condemning their use of chemical weapons. The Guardian mentions the Chemical Weapons Convention and the responsibilities of Syria under the convention. According to The Guardian, The White House condemned the Assad regime for defying the norm against chemical weapons use.
+
+# Record
+## Claim
+Claim: "Ukraine is selling half of the armaments it receives from the United States"
+
+## Actions
+```
+web_search("Ukraine US arms sales corruption")
+web_search("US aid Ukraine arms tracking")
+```
+
+# Search Result
+From [Source](https://www.aljazeera.com/news/2025/8/2/ukraine-says-defence-sector-corruption-scheme-uncovered): 
+Content: "![Ukrainian lawmakers protest with placards as they vote on a bill to replace a law that curbed the powers of anti-graft bodies](/wp-content/uploads/2025/08/AFP__20250731__68EX3KE__v3__HighRes__TopshotUkraineRussiaConflictWarPolitics-1754156577.jpg?resize=770%2C513&quality=80)
+
+Ukrainian lawmakers protest with placards before a vote replacing a law that attempted to curb the powers of anticorruption bodies, in Kyiv, on July 31, 2025 \[Andrii Nesterenko/AFP\]
+
+Published On 2 Aug 20252 Aug 2025
+
+Ukrainian authorities have detained several officials over a “large-scale corruption scheme” in the defence sector, just days after lawmakers restored the independence of the country’s two main investigative bodies.
+
+The National Anti-Corruption Agency (NABU) and the Specialised Anti-Corruption Prosecutor’s Office (SAP) said in a joint statement on Saturday that they made four arrests in connection with the scheme, which involved the procurement of military drones and signal jamming systems.
+
+Recommended Stories
+-------------------
+
+list of 3 items
+
+list 1 of 3
+
+### [Ukraine parliament votes to restore anticorruption agencies after protests](/news/2025/7/31/ukraine-parliament-votes-to-restore-anti-corruption-agencies-after-protests)
+
+list 2 of 3
+
+### [Why did Zelenskyy try to curb autonomy of Ukraine’s anti-graft bodies?](/news/2025/7/29/why-zelenskyy-tried-to-curb-autonomy-of-ukraines-anticorruption-agencies)
+
+list 3 of 3
+
+### [Ukraine’s Zelenskyy introduces bill after anticorruption protests](/news/2025/7/24/ukraines-zelenskyy-introduces-new-draft-law-after-anticorruption-protests)
+
+end of list
+
+“The essence of the scheme was to conclude state contracts with supplier companies at deliberately inflated prices,” they said, adding that the suspects had received kickbacks of up to 30 percent of the contract amounts.
+
+NABU and SAPO said they had caught a sitting lawmaker, two local officials and an unspecified number of National Guard personnel taking bribes. The suspects were not identified in Saturday’s statement.
+
+The Ministry of Internal Affairs also said it had suspended the suspected National Guard members.
+
+The announcement comes after Ukrainian President Volodymyr Zelenskyy came under criticism last month for [trying to take away](/news/2025/7/29/why-zelenskyy-tried-to-curb-autonomy-of-ukraines-anticorruption-agencies)
+ the anticorruption agencies’ independence and place them under the control of his prosecutor-general.
+
+The agencies regained their autonomy after Zelenskyy’s move sparked the first antigovernment demonstrations in Ukraine since Russia invaded in 2022.
+
+Zelenskyy, who enjoys far-reaching wartime powers, initially said he needed to bring the agencies under his control because they were inefficient and under “Russian influence”.
+
+But he then said he had heard people’s anger and [submitted a bill](/news/2025/7/24/ukraines-zelenskyy-introduces-new-draft-law-after-anticorruption-protests)
+ restoring the agencies’ independence, which was [passed by lawmakers](/news/2025/7/31/ukraine-parliament-votes-to-restore-anti-corruption-agencies-after-protests)
+ on Thursday.
+
+“It is important that anticorruption institutions operate independently, and the law passed on Thursday guarantees them all the tools necessary for a real fight against corruption,” Zelenskyy said.
+
+Ukraine’s European allies praised the about-face, having voiced concerns about the original defanging of the agencies.
+
+Top officials had told Zelenskyy that Ukraine was jeopardising its bid for European Union membership by curbing the powers of its antigraft authorities.
+
+In a statement about Saturday’s arrests, Zelenskyy said he was “grateful to the anti-corruption agencies for their work”.
+
+Source: News Agencies
+
+* * *
+
+aj-logo
+
+aj-logo
+
+aj-logo"
+
+# Your Summary
+
+
+
+===== > RESPONSE:  < =====
+Al Jazeera published on August 2, 2025, an article about Ukrainian authorities detaining officials over a "large-scale corruption scheme" in the defense sector. <image:k> The scheme involved the procurement of military drones and signal jamming systems at inflated prices, with kickbacks up to 30 percent of contract amounts. The article mentions that Ukrainian President Volodymyr Zelenskyy faced criticism for attempting to curb the independence of anti-corruption agencies.
+
+_________________________
+
+
+
+SummarizeResultPrompt - QUERY:
+
+# Instructions
+In order to find evidence that helps your fact-check, you just ran a web search which yielded a Search Result. **Your task right now is to summarize the Search Result.** What to include:
+* information that might be useful for the fact-check (see Record)
+* relevant images (refer to images by inserting their reference <image:k>)
+* if available: the release date as well as the author or the publisher (e.g. the media company) of the search result.
+
+Do NOT include:
+* advertisements
+* any other information not related to the Record or the Claim
+
+Additional rules:
+* Do not add any additional information besides the information in the Search Result.
+* If the Search Result doesn't contain any relevant information for the fact-checking work, simply print one word in capital letters: "NONE".
+* Keep your writing style like in the Examples 1, 2 and 3 provided to you.
+* Try to filter out relevant information even if the search result is in a different language.
+
+# Example 1
+The search result from America Today provides several photographs of the Notre-Dame Cathedral fire on April 15, 2019. <image:i>, <image:j>, <image:k>. None of the images show the Eiffel Tower in the background. 
+
+# Example 2
+NONE
+
+# Example 3
+The Guardian discusses a report blaming the Syrian government for a toxic gas attack and condemning their use of chemical weapons. The Guardian mentions the Chemical Weapons Convention and the responsibilities of Syria under the convention. According to The Guardian, The White House condemned the Assad regime for defying the norm against chemical weapons use.
+
+# Record
+## Claim
+Claim: "Ukraine is selling half of the armaments it receives from the United States"
+
+## Actions
+```
+web_search("Ukraine US arms sales corruption")
+web_search("US aid Ukraine arms tracking")
+```
+
+# Search Result
+From [Source](https://www.pbs.org/frontlineworld/stories/sierraleone/context.html): 
+Content: "But his case is just one piece of a puzzle involving illicit weapons, high-level corruption and organized crime centered in Ukraine.<br><br>Ukraine does not manufacture small arms, but it inherited huge stockpiles after it broke away from the crumbling Soviet Union in 1991. But the Ukrainian government must do more to clean up its arms exports industry, writes Taras Kuzio in _The Christian Science Monitor_.<br><br>[**Ukraine Gunning for Arms Sales  Not So Picky About Customers, Though**](http://www.clw.org/atop/newswire/nw082001.html#Ukraine)<br>  <br>Ukraine is also notorious for its booming legal arms industry. Please join us on the FRONTLINE site for new content »](https://www.pbs.org/wgbh/frontline/)
+
+![](/frontlineworld/includes/images/blank.gif)[![Frontline World](/frontlineworld/includes/images/blank.gif)](/frontlineworld/)
+![](/frontlineworld/images/blank.gif)  
+
+|     |     |     |     |     |
+| --- | --- | --- | --- | --- |
+ ![](images/searchworld.gif) |     |     | ![](/frontlineworld/includes/images/blank.gif) |
+
+  
+![](/frontlineworld/includes/images/blank.gif)
+
+[![Sierra Leone - Gunrunners](images/strip_mainsierraleone.gif)](./)
+![](../../images/blank.gif)![](../../images/blank.gif)  
+![](../../images/blank.gif)![](../../images/blank.gif)![](../../images/sm_graysidenavbar.gif)  
+![](../../images/blank.gif)
+
+![](../navimages/relatedfeatures2.gif)  
+[INDEX](./)
+
+[THE STORY](thestory.html)
+  
+Synopsis of "Gunrunners"
+
+[GALLERY OF ARMS DEALERS](breakingnews.html)
+  
+Web-exclusive report on key players in the small arms trade
+
+[UKRAINE: CASHING IN ON ILLEGAL ARMS](context.html)
+  
+Source of Black Market Weapons
+
+[INTERVIEW WITH JOHAN PELEMAN](peleman.html)
+  
+U.N. While Ukraine's legal arms industry has boomed, the international small arms black market may have proved far more lucrative. Poorly paid soldiers "lost" their weapons, and some commanders were caught selling off entire military installations.<br><br>A Ukrainian parliamentary inquiry concluded that between 1992 and 1998, Ukraine lost $32 billion in military assets, in part through theft, discount arms sales and lack of oversight. And as these arms proliferated, so did evidence of international criminal networks that sold arms from Ukraine in flagrant violation of international sanctions and embargoes.<br><br>Theft and corruption in the military facilitated the flow of illegal weapons from Ukraine. Journalists who question the government routinely face censorship, harassment, and violence.<br><br>Leonid Kuchma, Ukraine's president since 1994, has been dogged by accusations of corruption and silencing his opponents. The head of Ukraine's arms export agency, who was said to be on the tape with Kuchma, died in a mysterious car crash earlier this year. As revelations of arms shipments to Sierra Leone and elsewhere have emerged, they have stressed that Ukraine is doing all it can to follow international agreements and prevent illicit arms sales. This _Deutsche Presse-Agentur_ article, reprinted by the Arms Trade Newswire, details recent weapons sales around the world.<br><br>[**Arming Rogue States**](http://www.rferl.org/corruptionwatch/2002/01/1-100102.asp)<br>  <br>Ukrainian officials claim ignorance of arms smuggling."
+
+# Your Summary
+
+
+
+===== > RESPONSE:  < =====
+PBS Frontline World discusses illicit weapons, high-level corruption, and organized crime centered in Ukraine. Ukraine inherited huge stockpiles after the Soviet Union collapsed in 1991. The Ukrainian government must do more to clean up its arms exports industry. Ukraine is notorious for its booming legal arms industry. Between 1992 and 1998, Ukraine lost $32 billion in military assets, in part through theft, discount arms sales, and lack of oversight. Theft and corruption in the military facilitated the flow of illegal weapons from Ukraine. <image:k>
+
+_________________________
+
+
+
+SummarizeResultPrompt - QUERY:
+
+# Instructions
+In order to find evidence that helps your fact-check, you just ran a web search which yielded a Search Result. **Your task right now is to summarize the Search Result.** What to include:
+* information that might be useful for the fact-check (see Record)
+* relevant images (refer to images by inserting their reference <image:k>)
+* if available: the release date as well as the author or the publisher (e.g. the media company) of the search result.
+
+Do NOT include:
+* advertisements
+* any other information not related to the Record or the Claim
+
+Additional rules:
+* Do not add any additional information besides the information in the Search Result.
+* If the Search Result doesn't contain any relevant information for the fact-checking work, simply print one word in capital letters: "NONE".
+* Keep your writing style like in the Examples 1, 2 and 3 provided to you.
+* Try to filter out relevant information even if the search result is in a different language.
+
+# Example 1
+The search result from America Today provides several photographs of the Notre-Dame Cathedral fire on April 15, 2019. <image:i>, <image:j>, <image:k>. None of the images show the Eiffel Tower in the background. 
+
+# Example 2
+NONE
+
+# Example 3
+The Guardian discusses a report blaming the Syrian government for a toxic gas attack and condemning their use of chemical weapons. The Guardian mentions the Chemical Weapons Convention and the responsibilities of Syria under the convention. According to The Guardian, The White House condemned the Assad regime for defying the norm against chemical weapons use.
+
+# Record
+## Claim
+Claim: "Ukraine is selling half of the armaments it receives from the United States"
+
+## Actions
+```
+web_search("Ukraine US arms sales corruption")
+web_search("US aid Ukraine arms tracking")
+```
+
+# Search Result
+From [Source](https://www.politico.eu/article/ukraine-uncovers-major-corruption-scheme-defense-procurment-days-after-restoring-anticorruption/): 
+Content: "[Skip to main content](#main)
+
+Ukraine’s anti-corruption agencies exposed a corruption scheme involving procurement of military equipment just two days after the parliament reinstated their independence following mass protests and pressure from Brussels.
+
+The National Anti-Corruption Bureau of Ukraine (NABU) and Special Anti-Corruption Prosecutor’s Office (SABO) discovered a “large-scale corruption scheme” that exploited budget funds allocated for defense forces, the agencies said [in a statement](https://t.me/nab_ukraine/3312)
+ on Saturday.
+
+Ukrainian President Volodymyr Zelenskyy called the scheme "absolutely immoral,” in a [Telegram post](https://t.me/s/V_Zelenskiy_official)
+. None of them were named in the statement.
+
+The corruption involved purchasing equipment [at knowingly inflated prices](https://www.reuters.com/business/aerospace-defense/ukraine-says-it-uncovers-major-drone-procurement-corruption-scheme-2025-08-02/)
+ for which the participants illegally received 30 percent of the contract amount, according to the agencies. A similar approach was used in FPV drone procurement, the agencies said.
+
+The revelation by the [anti-corruption agencies](https://edition.cnn.com/2025/08/02/europe/ukraine-corruption-drone-scheme-latam-intl)
+ comes after the Ukrainian leadership attempted to subject the oversight of the bodies to the politically appointed prosecutor general of Ukraine. Those involved "were exposed for taking bribes," he said.
+
+The NABU and the SABO said [the scheme included](https://www.france24.com/en/europe/20250802-ukraine-anti-corruption-agencies-uncover-major-drone-procurement-graft-scheme)
+ a serving member of parliament, regional officials, the head of a unit of the National Guard’s military unit and a director of a company supplying drones. Zelenskyy signed a bill into law on Thursday that [restored independence](https://www.politico.eu/article/ukraine-protests-volodymyr-zelenskyy-kyiv-power-politics-corruption/)
+ to the agencies.
+
+“There can only be zero tolerance for corruption, clear teamwork to expose corruption, and ultimately a fair sentence," Zelenskyy [wrote](https://t.me/V_Zelenskiy_official/15416)
+ on Telegram on Saturday. "It is important that anti-corruption institutions work independently, and [the law adopted on Thursday](https://www.bbc.com/news/articles/c4gq3xwr357o)
+ guarantees them all the opportunities for a real fight against corruption,” he said.
+
+He called for [full and fair accountability](https://www.telegraph.co.uk/world-news/2025/08/02/ukraine-uncovers-drone-procurement-corruption-scheme/)
+. 
+
+“We are counting on fair verdicts,” Zelenskyy said in an [official statement](https://www.president.gov.ua/en/news/rosiya-zatyaguye-vijnu-otzhe-bude-otrimuvati-spravedlivi-vid-99281)
+ late Saturday. He said only combat officers will hold leadership positions in all logistics units of the National Guard. 
+
+Zelenskyy reinstated the independence of the NABU and the SAPO after domestic protests and a [warning](https://www.politico.eu/article/ursula-von-der-leyen-volodymyr-zelenskyy-europe-ukraine-anti-corruption-watchdog-independence/)
+ from European Commission that Ukraine's EU bid was put at risk."
+
+# Your Summary
+
+
+
+===== > RESPONSE:  < =====
+Politico reports that Ukraine's anti-corruption agencies exposed a corruption scheme involving the procurement of military equipment. The scheme involved purchasing equipment at inflated prices, with participants receiving 30 percent of the contract amount. Ukrainian President Volodymyr Zelenskyy called the scheme "absolutely immoral." The agencies involved include NABU and SABO. Zelenskyy reinstated the independence of the NABU and the SAPO.
+
+_________________________
+
+
+
+SummarizeSummariesPrompt - QUERY:
+
+# Instructions
+You just retrieved web sources, each one summarized under "Web Sources". **Your task right now is to summarize the web source summaries.**
+
+Always adhere to the following rules:
+* Write only one to two paragraphs.
+* Include all URLs from the listed sources. Format them as Markdown hyperlinks.
+* Do not add any additional information besides the information in the summaries.
+* Include references (<image:k>) to all relevant images.
+
+# Record
+## Claim
+Claim: "Ukraine is selling half of the armaments it receives from the United States"
+
+## Actions
+```
+web_search("Ukraine US arms sales corruption")
+web_search("US aid Ukraine arms tracking")
+```
+
+## Web Sources
+**Web Search Result**
+
+From [Source](https://www.aljazeera.com/news/2025/8/2/ukraine-says-defence-sector-corruption-scheme-uncovered): 
+Content: Al Jazeera published on August 2, 2025, an article about Ukrainian authorities detaining officials over a "large-scale corruption scheme" in the defense sector. <image:k> The scheme involved the procurement of military drones and signal jamming systems at inflated prices, with kickbacks up to 30 percent of contract amounts. The article mentions that Ukrainian President Volodymyr Zelenskyy faced criticism for attempting to curb the independence of anti-corruption agencies.
+
+
+From [Source](https://www.pbs.org/frontlineworld/stories/sierraleone/context.html): 
+Content: PBS Frontline World discusses illicit weapons, high-level corruption, and organized crime centered in Ukraine. Ukraine inherited huge stockpiles after the Soviet Union collapsed in 1991. The Ukrainian government must do more to clean up its arms exports industry. Ukraine is notorious for its booming legal arms industry. Between 1992 and 1998, Ukraine lost $32 billion in military assets, in part through theft, discount arms sales, and lack of oversight. Theft and corruption in the military facilitated the flow of illegal weapons from Ukraine. <image:k>
+
+
+From [Source](https://www.politico.eu/article/ukraine-uncovers-major-corruption-scheme-defense-procurment-days-after-restoring-anticorruption/): 
+Content: Politico reports that Ukraine's anti-corruption agencies exposed a corruption scheme involving the procurement of military equipment. The scheme involved purchasing equipment at inflated prices, with participants receiving 30 percent of the contract amount. Ukrainian President Volodymyr Zelenskyy called the scheme "absolutely immoral." The agencies involved include NABU and SABO. Zelenskyy reinstated the independence of the NABU and the SAPO.
+
+
+## Your Summary
+
+
+
+===== > RESPONSE:  < =====
+Al Jazeera ([https://www.aljazeera.com/news/2025/8/2/ukraine-says-defence-sector-corruption-scheme-uncovered](https://www.aljazeera.com/news/2025/8/2/ukraine-says-defence-sector-corruption-scheme-uncovered)) reported that Ukrainian authorities detained officials over a large-scale corruption scheme in the defense sector involving inflated prices for military drones and signal jamming systems, with kickbacks up to 30 percent of contract amounts. <image:k> Politico ([https://www.politico.eu/article/ukraine-uncovers-major-corruption-scheme-defense-procurment-days-after-restoring-anticorruption/](https://www.politico.eu/article/ukraine-uncovers-major-corruption-scheme-defense-procurment-days-after-restoring-anticorruption/)) also reported on a corruption scheme involving the procurement of military equipment at inflated prices, with participants receiving 30 percent of the contract amount.
+
+PBS Frontline World ([https://www.pbs.org/frontlineworld/stories/sierraleone/context.html](https://www.pbs.org/frontlineworld/stories/sierraleone/context.html)) discusses illicit weapons, high-level corruption, and organized crime centered in Ukraine, highlighting the loss of $32 billion in military assets between 1992 and 1998 due to theft, discount arms sales, and lack of oversight. <image:k>
+
+_________________________
+
+
+
+SummarizeResultPrompt - QUERY:
+
+# Instructions
+In order to find evidence that helps your fact-check, you just ran a web search which yielded a Search Result. **Your task right now is to summarize the Search Result.** What to include:
+* information that might be useful for the fact-check (see Record)
+* relevant images (refer to images by inserting their reference <image:k>)
+* if available: the release date as well as the author or the publisher (e.g. the media company) of the search result.
+
+Do NOT include:
+* advertisements
+* any other information not related to the Record or the Claim
+
+Additional rules:
+* Do not add any additional information besides the information in the Search Result.
+* If the Search Result doesn't contain any relevant information for the fact-checking work, simply print one word in capital letters: "NONE".
+* Keep your writing style like in the Examples 1, 2 and 3 provided to you.
+* Try to filter out relevant information even if the search result is in a different language.
+
+# Example 1
+The search result from America Today provides several photographs of the Notre-Dame Cathedral fire on April 15, 2019. <image:i>, <image:j>, <image:k>. None of the images show the Eiffel Tower in the background. 
+
+# Example 2
+NONE
+
+# Example 3
+The Guardian discusses a report blaming the Syrian government for a toxic gas attack and condemning their use of chemical weapons. The Guardian mentions the Chemical Weapons Convention and the responsibilities of Syria under the convention. According to The Guardian, The White House condemned the Assad regime for defying the norm against chemical weapons use.
+
+# Record
+## Claim
+Claim: "Ukraine is selling half of the armaments it receives from the United States"
+
+## Actions
+```
+web_search("Ukraine US arms sales corruption")
+web_search("US aid Ukraine arms tracking")
+```
+
+# Search Result
+From [Source](https://www.aljazeera.com/news/2025/8/21/tracking-us-and-nato-support-for-ukraine-a-full-breakdown): 
+Content: "![INTERACTIVE-WEAPONS-TO-UKRAINE-Poster-1755769318](/wp-content/uploads/2025/08/INTERACTIVE-WEAPONS-TO-UKRAINE-Poster-1755769318.png?resize=770%2C513&quality=80)
+
+(Al Jazeera)
+
+By [Hanna Duggal](/author/duggalhaljazeera-net)
+
+Published On 21 Aug 202521 Aug 2025
+
+After a week of high-stakes diplomacy aimed at halting the war in Ukraine, United States President Donald Trump says he is set on arranging a summit between Russian President Vladimir Putin and Ukrainian President Volodymyr Zelenskyy.
+
+Following separate meetings with both leaders, Trump has ruled out sending US troops to Ukraine, but pledged security guarantees to Kyiv and indicated that Washington could provide air support to reinforce a potential deal.
+
+Ukraine, in turn, told reporters at the White House it would obtain US-made weapons purchased by Europeans for an estimated $90bn as part of the effort to bolster its defences.
+
+Which countries are aiding Ukraine?
+-----------------------------------
+
+At least 41 countries have contributed to Ukraine’s war efforts monetarily, either through military, humanitarian or financial assistance, according to the Kiel Institute for the World Economy, a German think tank.
+
+Military assistance includes weapons, equipment and financial aid for the Ukrainian military. These include Australia, Austria, Cyprus, the Republic of Ireland, Japan, Malta, New Zealand, South Korea, Switzerland, China, Taiwan, and India.
+
+The European Union, through the Commission and Council, has also delivered substantial aid to Ukraine.
+
+![INTERACTIVE - Which countries are aiding Ukraine?-1755767959](/wp-content/uploads/2025/08/INTERACTIVE-Which-countries-are-aiding-Ukraine-1755767959.png?quality=80)
+
+How much aid has Ukraine received so far?
+-----------------------------------------
+
+So far, Ukraine has received more than 309 billion euros ($360bn) in military, financial, and humanitarian aid, according to the Kiel Institute:
+
+*   **Military aid** – 149.26 billion euros ($174bn – using today’s exchange rate of €1 = $1.17)
+*   **Financial aid** – 139.34 billion euros ($163bn)
+*   **Humanitarian aid** – 21.04 billion euros ($24bn)
+
+Who are Ukraine’s largest donors?
+---------------------------------
+
+The US has committed the largest amount of aid to Ukraine, providing 114.64 billion euros ($134bn) between January 24, 2022 and June 30, 2025, of which:
+
+*   **Military aid** – 64.6 billion euros ($75bn)
+*   **Financial aid** – 46.6 billion euros ($54bn)
+*   **Humanitarian aid** – 3.4 billion euros ($4bn)
+
+The EU (Commission and Council) is the second biggest donor at 63.19 billion euros ($74bn), followed by Germany (21.29 billion euros or $25bn), the UK (18.6 billion euros or $21bn) and Japan (13.57 billion euros or $15bn).
+
+How much aid has been pledged v allocated?
+------------------------------------------
+
+According to the Kiel Institute, European countries have collectively allocated 167.4 billion euros ($195bn) to the war in Ukraine, more than the 114.6 billion euros ($134bn) allocated by the US.
+
+Allocated aid refers to funds or resources that have actually been set aside, delivered, or officially committed for use by Ukraine.
+
+It is different from pledged aid, which is money or equipment promised by a country but not yet delivered or officially set aside.
+
+In total, Europe as a whole has committed 257.4 billion euros ($300bn) and the US 119 billion euros ($139bn).
+
+US aid to Ukraine plummets under Trump
+--------------------------------------
+
+Days before Trump took office, the Biden administration gave one final injection of military support to Ukraine with a weapons package of $500m on January 9.
+
+Following the start of the Trump administration’s second term in office, aid to Ukraine has plummeted, with Washington suspending all support, including weapons, in March after a tense meeting with Zelenskyy at the White House.
+
+Trump made claims that the US has given Ukraine more than $300bn in wartime aid. That number has been contested by Ukraine and its supporters, despite the US being the single largest donor country.
+
+What weapons has Ukraine received?
+----------------------------------
+
+Ukraine has received various weapons systems from its allies, including armoured vehicles, artillery, aircraft, air defence systems, drones, missiles, and a wide range of support equipment.
+
+According to the Kiel Institute, Poland has supplied its neighbour with the largest number of tanks, totaling 354, while the US leads in providing infantry fighting vehicles (305), howitzers (201), air defence systems (18), and HIMARS rocket launchers (41).
+
+The HIMARS, capable of striking targets just a few metres (feet) wide from nearly 80km (50 miles) away, gave Ukraine a vital long-range precision strike capability that slowed Russian advances early in the war.
+
+NATO defence spending
+---------------------
+
+In a news briefing, the White House said the US could help coordinate a security guarantee for Ukraine. Humanitarian relief covers medical, food and other items for civilians, while financial assistance comes in the form of grants, loans and guarantees.
+
+Most contributions to Ukraine have come from NATO, with 29 of its 32 members providing monetary aid, according to the Kiel Institute.
+
+Additionally, 12 non-NATO countries and territories have sent monetary aid to Ukraine. However, Russia’s Ministry of Foreign Affairs has ruled out the deployment of troops from NATO countries to help secure a peace deal.
+
+In June, NATO leaders signed a deal to increase defence spending, which is to be achieved over the next 10 years, and is a jump worth hundreds of billions of dollars a year from the current goal of 2 percent of gross domestic product (GDP) to 5 percent.
+
+Currently, 23 of the 32 member countries have met this target, with the alliance as a whole spending 2.61 percent of its combined GDP on defence last year.
+
+NATO countries bordering Russia, such as Estonia and Lithuania, have significantly increased their defence spending – from less than 1 percent of their GDP just 10 years ago.
+
+![INTERACTIVE-NATO-DEFENCE-SPENDING-GDP-1750784626](/wp-content/uploads/2025/06/INTERACTIVE-NATO-DEFENCE-SPENDING-GDP-1750784626.png?quality=80)
+
+Source: Al Jazeera and news agencies
+
+* * *
+
+aj-logo
+
+aj-logo
+
+aj-logo"
+
+# Your Summary
+
+
+
+===== > RESPONSE:  < =====
+Al Jazeera published on August 21, 2025, discusses US aid to Ukraine. The US has committed the largest amount of aid to Ukraine, providing 114.64 billion euros ($134bn) between January 24, 2022 and June 30, 2025. The article mentions military aid, financial aid, and humanitarian aid. <image:1>, <image:2>. The article also mentions that Ukraine has received various weapons systems from its allies.
+
+_________________________
+
+
+
+SummarizeResultPrompt - QUERY:
+
+# Instructions
+In order to find evidence that helps your fact-check, you just ran a web search which yielded a Search Result. **Your task right now is to summarize the Search Result.** What to include:
+* information that might be useful for the fact-check (see Record)
+* relevant images (refer to images by inserting their reference <image:k>)
+* if available: the release date as well as the author or the publisher (e.g. the media company) of the search result.
+
+Do NOT include:
+* advertisements
+* any other information not related to the Record or the Claim
+
+Additional rules:
+* Do not add any additional information besides the information in the Search Result.
+* If the Search Result doesn't contain any relevant information for the fact-checking work, simply print one word in capital letters: "NONE".
+* Keep your writing style like in the Examples 1, 2 and 3 provided to you.
+* Try to filter out relevant information even if the search result is in a different language.
+
+# Example 1
+The search result from America Today provides several photographs of the Notre-Dame Cathedral fire on April 15, 2019. <image:i>, <image:j>, <image:k>. None of the images show the Eiffel Tower in the background. 
+
+# Example 2
+NONE
+
+# Example 3
+The Guardian discusses a report blaming the Syrian government for a toxic gas attack and condemning their use of chemical weapons. The Guardian mentions the Chemical Weapons Convention and the responsibilities of Syria under the convention. According to The Guardian, The White House condemned the Assad regime for defying the norm against chemical weapons use.
+
+# Record
+## Claim
+Claim: "Ukraine is selling half of the armaments it receives from the United States"
+
+## Actions
+```
+web_search("Ukraine US arms sales corruption")
+web_search("US aid Ukraine arms tracking")
+```
+
+# Search Result
+From [Source](https://www.forumarmstrade.org/ukrainearms.html): 
+Content: "Please contact experts directly for further comments.)
+
+* * *
+
+**Select Timeline - 2021-2025**    (jump to [2021](https://www.forumarmstrade.org/ukrainearms.html#2021)
+, [2022](https://www.forumarmstrade.org/ukrainearms.html#2022)
+, [2023](https://www.forumarmstrade.org/ukrainearms.html#2023)
+, [2024](https://www.forumarmstrade.org/ukrainearms.html#2024)
+)  
+  
+**2025**  
+  
+April  
+  
+On April 24, Denmark announced the allocation of DKK 317 million (approximately $45.5 million) for the purchase of artillery shells for Ukraine through Estonia, as part of its 25th military aid package, according to the Danish Ministry of Defence _(see [statement](https://www.fmn.dk/da/nyheder/2025/danmark-udmonter-over-300-mio.-kroner-til-artilleriammunition-til-ukraine/)
+)._  
+  
+On April 11, Norway announced it will allocate €822 million to train and equip the new Nordic-Baltic Brigade of the Ukrainian Armed Forces, with funds designated for personnel training, unit equipment, and the brigade’s material infrastructure, according to the official website of the Norwegian government _(see [statement](https://www.regjeringen.no/en/aktuelt/norway-will-contribute-ten-billion-norwegian-kroner-to-equipping-and-training-a-ukrainian-brigade/id3097272/)
+)._ Lithuanian Defense Minister Dovilė Šakalienė announced a €20 million pledge to Ukraine for ammunition purchases, emphasizing the urgency of accelerating aid and warning that “the summer could be very difficult.” _(see [media](https://www.lrt.lt/en/news-in-english/19/2534646/lithuania-to-push-forward-eur20m-military-aid-for-ukraine-summer-may-be-very-difficult)
+)._ Dutch Defence Minister Ruben Brekelmans announced that the Netherlands will allocate €150 million to strengthen Ukraine’s air defense and support the UK-Netherlands “Drone Line” project, according to a Suspilne TV correspondent at the Contact Group on Defense of Ukraine meeting _(see [media](https://suspilne.media/992605-posilenna-ppo-ukraini-niderlandi-vidilaut-150-mln/)
+)._ German Defence Minister Boris Pistorius announced in his opening remarks at NATO headquarters in Brussels that Germany will provide Ukraine with additional missiles for the Patriot air defense systems. The package includes artillery ammunition _(see_ [_media_](https://kyivindependent.com/finland-announces-over-200-million-military-aid-package-for-ukraine/)
+_)._  
+  
+On March 11, according to several media reports and public officials, **the United States** resumed the arms transfers to Ukraine _(see [media](https://www.pravda.com.ua/eng/news/2025/03/12/7502593/)
+)._   
+  
+On March 8, **France** announced that preparation of a new military aid package for Ukraine valued at €195 million and funded by proceeds from frozen Russian assets. Of this amount, 22.5 billion Norwegian kroner (nearly $2 billion) will go toward military support, and 12.5 billion Norwegian kroner (approximately $1.1 billion) will be allocated to humanitarian and civilian aid _(see [statement](https://www.regjeringen.no/no/aktuelt/okt-og-mer-langvarig-stotte-til-ukraina/id3076878/)
+ here)._  
+  
+On November 24, **Lithuania** delivered another military aid package to Ukraine, including generators, M113 spare parts, weapons, and ammunition _(see_ [_statement_](https://x.com/Lithuanian_MoD/status/1860662997837848660?ref_src=twsrc%5Etfw%7Ctwcamp%5Etweetembed%7Ctwterm%5E1860662997837848660%7Ctwgr%5E40849b11769750b643a3d7d5d8f7b7599ae68fea%7Ctwcon%5Es1_&ref_url=https%3A%2F%2Fsuspilne.media%2F887269-generatori-zbroa-i-boepripasi-litva-peredala-ukraini-cergovij-paket-dopomogi%2F)
+ _here)._  
+  
+On November 22, **Canada** announced that its donation of the new air defense system NASAMS had arrived in Ukraine _(see_ _[statement](https://www.canada.ca/en/department-national-defence/news/2024/11/canadas-donation-of-new-air-defence-system-arrives-in-ukraine.html)
+ here)._  
+  
+On November 20, **t****he US** Department of Defense (DoD) announced its 70th tranche of military assistance under the Presidential Drawdown Authority (PDA) valued at $275 million, which includes HIMARS ammunition; 155mm and 105mm artillery ammunition; 60mm and 81mm mortar rounds; drones; Tube-launched, Optically tracked, Wire-guided (TOW) missiles; Javelin and AT-4 anti-armor systems; small arms and ammunition; demolitions equipment; and Chemical, Biological, Radiological, Nuclear protective equipment. US Secretary of Defense Lloyd Austin confirmed that the United States is providing Ukraine with antipersonnel landmines with controlled detonations to help defend against Russian offensive operations in eastern Ukraine _(see_ [_statement_](https://www.defense.gov/News/Releases/Release/Article/3972421/biden-administration-announces-additional-security-assistance-for-ukraine/)
+ _and [factsheet](https://media.defense.gov/2024/Nov/20/2003590818/-1/-1/0/UKRAINE-FACT-SHEET-PDA-70.PDF)
+)._ **Germany** announced delivery of additional weapons and equipment to Ukraine, including ammunition for Mardar infantry fighting vehicles (IFV), 47 mine-resistant ambush-protected vehicles (MRAPs), one TRML-4D aerial radar system, four Panzerhaubitze 2000 self-propelled howitzers, 40,000 155mm artillery rounds, seven M109 155mm howitzer barrels, over 200 various reconnaissance drones, mine-clearing and logistics vehicles, and small arms ammunition _(see updated_ _[list](https://www.bundesregierung.de/breg-en/news/military-support-ukraine-2054992)
+_ _here)._ **The UK** announced a new military aid package of £7.5million for attack and surveillance drones to Ukraine. Additionally, the UK will donate £120 million ($155 million) toward the Maritime Capability Coalition and is seeking partners to co-fund delivery of hundreds more maritime drones (aerial and uncrewed boats) to Ukraine, as well as surveillance radars to protect the Grain Corridor (see [statement](https://www.gov.uk/government/news/prime-minister-warns-russian-threat-to-global-stability-is-accelerating-as-putin-ramps-up-attacks-on-black-sea)
+ here).   
+  
+On October 21, the **United States** announced a $400 million aid package using Presidential Drawdown Authority that included munitions for HIMARS; 155mm and 105mm artillery ammunition; Mortars; M113 armored vehicle; Tube-launched, Optically tracked, Wire-guided (TOW) missiles; Javelin missiles; AT-4 rockets; small arms, grenades, and training equipment. (_See State Department [press release](https://www.state.gov/united-states-announces-significant-new-military-assistance-for-ukraine-12/)
+, Defense Department [press release](https://www.defense.gov/News/Releases/Release/Article/3940873/biden-administration-announces-additional-security-assistance-for-ukraine/)
+, updated [factsheet](https://media.defense.gov/2024/Oct/21/2003567968/-1/-1/0/UKRAINE-FACT-SHEET-PDA-68.PDF)
+._)  
+  
+On October 18, **Denmark** announced a new 2.4 billion kroner ($350 million) military aid package for Ukraine that includes weapons from Denmark's stockpiles, funding for air defense systems with Germany, and contributions to the U.K.-led International Fund for Ukraine (IFU) _(see_ _[statement](https://www.fmn.dk/da/nyheder/2024/ny-donationspakke-pa-24-mia.-kroner-til-militar-stotte-til-ukraine/)_ _here)._ **Canada** announced 64.8 million CAD in military assistance to Ukraine. The country will allocate €271 million for artillery shells _(see_ [_statement_](https://www.defensie.nl/actueel/nieuws/2024/10/17/nederland-bestelt-in-tsjechie-meer-artilleriegranaten-en-pantserhouwitsers-voor-oekraine)
+ _here)._ **Australia** announced that it will give 49 of its aging M1A1 Abrams tanks to Ukraine as part of a $245 million military support package aimed at strengthening Ukraine’s defense against Russia _(see_ [_statement_](https://www.minister.defence.gov.au/media-releases/2024-10-17/australia-provide-abrams-tanks-ukraine)
+ _here)._  
+  
+On October 16, the **United States** announced a $425 million aid package using Presidential Drawdown Authority that included  NASAMS, RIM-7 missiles, Stinger anti-aircraft missiles; HIMARS ammunition; 155mm and 105mm artillery ammunition, Javelin, AT-4, and other anti-tank systems; TOW missiles, small arms, and other equipment. will allocate $5.5 billion through his presidential drawdown authority to fund equipment for Ukraine and another $2.4 billion in security assistance to provide the country with additional air defense, uncrewed aerial systems and air-to-ground munitions, among other equipment _(see_ [_statement_](https://www.politico.eu/article/joe-biden-pledges-billions-military-aid-ukraine-war-volodymyr-zelenskyy/)
+ _here)._  
+  
+On September 25, the **United States** announced a $375 million aid package using Presidential Drawdown Authority that included  HIMARS; 155mm and 105mm artillery ammunition; MRAPs, Javelin missiles, anti-tank rockets, small arms, and other equipment. The total support amounts to approximately €400 million, according to the federal government of Germany _(see [statement](https://www.bundesregierung.de/breg-de/aktuelles/pressemitteilungen/zweites-treffen-der-teilnehmer-des-ukraine-compact-in-new-york-2311578)
+ here)._  
+  
+On September 19, **Germany** updated its lists of military assistance to Ukraine with: 22 main battle tanks LEOPARD 1 A5 with spare parts (joint project with Denmark); 22 Mine Resistant Ambush Protected Vehicles (MRAP); 5 tracked all-terrain vehicles Bandvagn 206 (BV206); 1  All Terrain Tracked Carrier Warthog (command vehicle); 3 self-propelled anti-aircraft guns GEPARD with spare parts; 2 air surveillance radars TRML-4D; 61.000 rounds 155mm ammunition (from Bundeswehr and industry stocks); 30 reconnaissance drones VECTOR with spare parts; 20 reconnaissance drones RQ-35 HEIDRUN; 20 unmanned surface vessels; 12 reconnaissance drones SONGBIRD; 6 Hornet XR; 3 bridge-laying tanks BEAVER with spare parts; 1 armoured engineer vehicle DACHS with spare parts; 6 mine clearing tanks WISENT 1 with spare parts; material for explosive ordnance disposal (from Bundeswehr and industry stocks); 16 ground surveillance radars; 2 AMPS self-protection systems for helicopters; 2 border protection vehicles; 10 machine gun MG3 with 500 spare barrels and breechblock; 1 million rounds of ammunition for fire arms (from Bundeswehr and industry stocks _(see updated_ [_list_](https://www.bundesregierung.de/breg-en/news/military-support-ukraine-2054992?fbclid=IwY2xjawFY1vVleHRuA2FlbQIxMAABHYa7VGgrDdmzDtREfMNUR3eM8MYkqZK_3QCJl_B1osancgIZej9p3p8YpA_aem_BfoFAX_av_RBtTC5odc4bA)
+ _here)._  
+  
+On September 13, **Finland** announced the 25th military aid package for Ukraine valued at EUR 118 million. This Presidential Drawdown Authority (PDA) package, which has an estimated value of $125 million, will provide Ukraine with: counter-Unmanned Aerial Systems (c-UAS) equipment and munitions; ammunition for High Mobility Artillery Rocket Systems (HIMARS); 155mm and 105mm artillery ammunition; Tube-launched, Optically tracked, Wire-guided (TOW) missiles; Javelin and AT-4 anti-armor systems; High Mobility Multipurpose Wheeled Vehicle (HMMWV) ambulances; small arms ammunition; demolitions equipment and munitions; and spare parts, ancillary equipment, services, training, and transportation _(see_ _[announcement](https://www.defense.gov/News/Releases/Release/Article/3883533/biden-administration-announces-additional-security-assistance-for-ukraine/)
+ here)._  
+  
+On August 22, **Latvia** announced that it prepared the largest batch of 1.400 drones to be sent to Ukraine _(see [statement](https://x.com/AndrisSpruds/status/1826636743371522125)
+ here)._   
+  
+On August 19, **Germany** updated its lists of military aid to Ukraine with: 1 air defence system IRIS-T SLS; 14 000 rounds 155mm ammunition; 10 unmanned surface vessels; 26 reconnaissance drones VECTOR with spare parts; material for explosive ordnance disposal; 6 High Mobility Engineer Excavators; 1 armoured recovery vehicle Bergepanzer 2 with spare parts; 700 assault rifles MK 556; 10 precision rifles HLR 338 with 240,000 rounds ammunition; 50 rifles CR 308 _(see updated_ [_list_](https://www.bundesregierung.de/breg-en/news/military-support-ukraine-2054992)
+ _here)._ **Denmark** announced a new aid package worth about DKK 783 million ($116 million) to support Ukraine’s military needs. The capabilities in this announcement include: Stinger missiles; Ammunition for High Mobility Artillery Rocket Systems (HIMARS); 155mm and 105mm artillery ammunition; multi-mission radars; Tube-launched, Optically tracked, Wire-guided (TOW) missiles; Javelin and AT-4 anti-armor systems; High Mobility Multipurpose Wheeled Vehicle (HMMWV) ambulances; small arms ammunition; demolitions equipment and munitions; equipment to protect critical national infrastructure; and spare parts, ancillary equipment, services, training, and transportation (see [press-release](https://www.defense.gov/News/Releases/Release/Article/3868082/biden-administration-announces-additional-security-assistance-for-ukraine/)
+ here). **Lithuania** is preparing another significant support package for Ukraine, including combat equipment, anti-drone systems, transportation & logistical resources, also, other weaponry (see [statement](https://x.com/Lithuanian_MoD/status/1821913040796668038)
+ here).   
+  
+On August 8, the Bundestag's Defense Committee Chair Marcus Faber said that **German**\-supplied equipment may be used by Ukraine in Russia's Kursk Oblast (see [media](https://x.com/Lithuanian_MoD/status/1821913040796668038)
+ here)."
+
+# Your Summary
+
+
+
+===== > RESPONSE:  < =====
+The search result from forumarmstrade.org provides a timeline of military aid to Ukraine from 2021 to 2025. It mentions various countries, including the United States, France, Lithuania, Canada, Germany, the UK, Denmark, Finland, Latvia, and Australia, providing military assistance to Ukraine. The aid includes artillery shells, ammunition, air defense systems, drones, and other equipment.
+
+_________________________
+
+
+
+SummarizeResultPrompt - QUERY:
+
+# Instructions
+In order to find evidence that helps your fact-check, you just ran a web search which yielded a Search Result. **Your task right now is to summarize the Search Result.** What to include:
+* information that might be useful for the fact-check (see Record)
+* relevant images (refer to images by inserting their reference <image:k>)
+* if available: the release date as well as the author or the publisher (e.g. the media company) of the search result.
+
+Do NOT include:
+* advertisements
+* any other information not related to the Record or the Claim
+
+Additional rules:
+* Do not add any additional information besides the information in the Search Result.
+* If the Search Result doesn't contain any relevant information for the fact-checking work, simply print one word in capital letters: "NONE".
+* Keep your writing style like in the Examples 1, 2 and 3 provided to you.
+* Try to filter out relevant information even if the search result is in a different language.
+
+# Example 1
+The search result from America Today provides several photographs of the Notre-Dame Cathedral fire on April 15, 2019. <image:i>, <image:j>, <image:k>. None of the images show the Eiffel Tower in the background. 
+
+# Example 2
+NONE
+
+# Example 3
+The Guardian discusses a report blaming the Syrian government for a toxic gas attack and condemning their use of chemical weapons. The Guardian mentions the Chemical Weapons Convention and the responsibilities of Syria under the convention. According to The Guardian, The White House condemned the Assad regime for defying the norm against chemical weapons use.
+
+# Record
+## Claim
+Claim: "Ukraine is selling half of the armaments it receives from the United States"
+
+## Actions
+```
+web_search("Ukraine US arms sales corruption")
+web_search("US aid Ukraine arms tracking")
+```
+
+# Search Result
+From [Source](https://www.ifw-kiel.de/topics/war-against-ukraine/ukraine-support-tracker/): 
+Content: "You can contact us at [ukrainetracker@ifw-kiel.de](# "mailto:ukrainetracker@ifw-kiel.de")
+ or by using [our online feedback form.](/topics/war-against-ukraine/ukraine-support-tracker/feedback-for-the-ukraine-support-tracker/)
+
+Team: **Gabriele Ferretti, Giuseppe Irto, Federico Mellace, Taro Nishikawa, Jonas Schweigard, and Christoph Trebesch**
+
+Share this map on [X](https://twitter.com/intent/tweet?url=https%3A%2F%2Fapp.23degrees.io%2Fview%2Fx67vE7NsM3NeQu7z-atlas-slideshow_v4-atlantic&text=Ukraine%20Support%20Tracker%20by%20%40kielinstitute%20-%20Total%20bilateral%20aid:%20Government%20commitments.%20All%20charts%20on%20ifw-kiel.de/UkraineTracker)
+ or go to [chart](https://app.23degrees.io/view/x67vE7NsM3NeQu7z-atlas-slideshow_v4-atlantic/fY83zKIZpbLi3ll5-choro-ukraine-aid-tracker-final-data)
+
+Latest Press Release
+--------------------
+
+*   [![Production of military russian battle tank T 90 at the factory](<Base64-Image-Removed>)\
+    \
+    © stock.adobe.com | 3D motion](/publications/news/ukraine-support-tracker-europe-now-leading-spender-on-weapons-production-for-ukraine/)
+    
+
+Data Set
+--------
+
+*   [](/publications/ukraine-support-tracker-data-20758/)
+    
+
+Update August 12, 2025:
+-----------------------
+
+### Data until June 2025
+
+In May and June 2025, Europeans maintained a consistently high level of support to Ukraine, particularly with regard to military aid. The G7 has allocated recently around EUR 6.3 billion in financial aid—largely due to the ERA loan mechanism—according to the latest Ukraine Support Tracker update covering aid reported up to June 2025.
+
+[\> Read full press release](/publications/news/ukraine-support-tracker-europe-now-leading-spender-on-weapons-production-for-ukraine/)
+
+* * *
+
+**Main Documents & Dataset:**
+
+[Ukraine Aid: How Europe Can Replace US Support](/publications/ukraine-aid-how-europe-can-replace-us-support-33907/)
+(New Report March 2025)
+
+[3rd Anniversary Report](/fileadmin/Dateiverwaltung/Subject_Dossiers_Topics/Ukraine/Ukraine_Support_Tracker/3rd_Aniv_Report.pdf)
+[Go to Dataset](/publications/ukraine-support-tracker-data-20758/)
+ [Dataset Documentation](/fileadmin/Dateiverwaltung/Subject_Dossiers_Topics/Ukraine/Ukraine_Support_Tracker/Dataset_Documentation.pdf)
+
+**Past Papers:**
+
+[Research Note (June 2024)](/fileadmin/Dateiverwaltung/Subject_Dossiers_Topics/Ukraine/Ukraine_Support_Tracker/Ukraine_Support_Tracker_-_Research_Note.pdf)
+[Research Paper (February 2023)](/publications/the-ukraine-support-tracker-which-countries-help-ukraine-and-how-20852/)
+
+* * *
+
+[Download data (.xlsx)](/fileadmin/Dateiverwaltung/Subject_Dossiers_Topics/Ukraine/Ukraine_Support_Tracker/2024-06/df_tanks.xlsx)
+
+[Download data (.](/fileadmin/Dateiverwaltung/Subject_Dossiers_Topics/Ukraine/Ukraine_Support_Tracker/2024-06/df_ifv.xlsx)
+[xlsx](/fileadmin/Dateiverwaltung/Subject_Dossiers_Topics/Ukraine/Ukraine_Support_Tracker/2024-06/df_tanks.xlsx)
+[)](/fileadmin/Dateiverwaltung/Subject_Dossiers_Topics/Ukraine/Ukraine_Support_Tracker/2024-06/df_ifv.xlsx)
+
+[Download data (.](/fileadmin/Dateiverwaltung/Subject_Dossiers_Topics/Ukraine/Ukraine_Support_Tracker/2024-06/df_howitzers.xlsx)
+[xlsx](/fileadmin/Dateiverwaltung/Subject_Dossiers_Topics/Ukraine/Ukraine_Support_Tracker/2024-06/df_tanks.xlsx)
+[)](/fileadmin/Dateiverwaltung/Subject_Dossiers_Topics/Ukraine/Ukraine_Support_Tracker/2024-06/df_howitzers.xlsx)
+
+[Download data (.](/fileadmin/Dateiverwaltung/Subject_Dossiers_Topics/Ukraine/Ukraine_Support_Tracker/2024-06/df_mlrs.xlsx)
+[xlsx](/fileadmin/Dateiverwaltung/Subject_Dossiers_Topics/Ukraine/Ukraine_Support_Tracker/2024-06/df_tanks.xlsx)
+[)](/fileadmin/Dateiverwaltung/Subject_Dossiers_Topics/Ukraine/Ukraine_Support_Tracker/2024-06/df_mlrs.xlsx)
+
+[Download data (.](/fileadmin/Dateiverwaltung/Subject_Dossiers_Topics/Ukraine/Ukraine_Support_Tracker/2024-06/df_air.xlsx)
+[xlsx](/fileadmin/Dateiverwaltung/Subject_Dossiers_Topics/Ukraine/Ukraine_Support_Tracker/2024-06/df_tanks.xlsx)
+[)](/fileadmin/Dateiverwaltung/Subject_Dossiers_Topics/Ukraine/Ukraine_Support_Tracker/2024-06/df_air.xlsx)
+
+About the Ukraine Support Tracker
+---------------------------------
+
+![Woman holds up sign with words "Help Ukraine"](/fileadmin/_processed_/3/e/csm_Help_Ukraine_Frau_Demonstration__C_European_Union_f06a14f85d.jpg)
+
+© European Union
+
+A main aim of this database to quantify the scale of aid to Ukraine and to make the support measures comparable across donor countries. Much of the discussion on aid to Ukraine since the beginning of the war has been anecdotal, while a rigorous quantification has been missing. To value these, we draw on a broad range of sources to identify market prices, choosing an upper bound, when possible, e.g., by using the new purchase price even if much of the military equipment is probably used.
+
+The Ukraine Support Tracker lists and quantifies military, financial, and humanitarian aid pledged to Ukraine since January 24, 2022. *   [Go to main content.](#main "Go to main content.")
+    
+*   [Go to search.](#header-search "Go to search.")
+    
+
+![Demonstration, people holding banner saying "We stand with Ukraine"](/fileadmin/_processed_/9/1/csm_Ukraine_Support_Demonstration__C_European_Union_5a8edd4a5b.jpg)
+
+© European Union
+
+A Database of Military, Financial and Humanitarian Aid to Ukraine
+-----------------------------------------------------------------
+
+The Ukraine Support Tracker lists and quantifies military, financial and humanitarian support by governments to Ukraine since February 2022. The database is intended to support a facts-based discussion about support to Ukraine. 
+
+We focus on government-to-government transfers into Ukraine. This means that Europe now also leads the US in terms of total volume of military aid provided through industry since the start of the war. To do so, we set up a comprehensive database that brings together information from official, government sources, existing lists of Ukraine aid, and reports by renowned news media.
+
+An important challenge is to **quantify non-financial transfers**, such as in-kind shipments of military equipment, weapons, medicines or foodstuff. We have also not (yet) systematically collected support by international organizations like the Red Cross or the United Nations, mainly because a lack of systematic data and reporting by most such international organizations.
+
+The Ukraine Support Tracker is constantly being expanded, corrected and improved. Suggestions are very welcome and can be sent to [ukrainetracker@ifw-kiel.de](#)
+ or via [online feedback form](/topics/war-against-ukraine/ukraine-support-tracker/feedback-for-the-ukraine-support-tracker/)
+. 
+
+Methodology of the Ukraine Support Tracker
+------------------------------------------
+
+[![Cover image Methodology Ukraine Support Tracker](/fileadmin/_processed_/d/7/csm_UST_Working-Paper_e3615bf044.png "Methodology Ukraine Support Tracker")](/de/publikationen/kiel-focus/endspiel-um-das-klima/ "Methodology Ukraine Support Tracker")
+
+*   [Trebesch, C., Antezza, …](/publications/the-ukraine-support-tracker-which-countries-help-ukraine-and-how-20852/)
+    
+
+Experts
+-------
+
+*   [![](<Base64-Image-Removed>)\
+    \
+    Prof."
+
+# Your Summary
+
+
+
+===== > RESPONSE:  < =====
+The search result is from the Kiel Institute for the World Economy and provides a "Ukraine Support Tracker" database. It quantifies military, financial, and humanitarian aid pledged to Ukraine since January 24, 2022. The database includes information from official government sources and news media reports. The tracker aims to provide a facts-based discussion about support to Ukraine. The latest update is from August 12, 2025, covering data up to June 2025. The result also mentions that Europe is now leading the US in terms of total volume of military aid provided. <image:1>, <image:2>.
+
+_________________________
+
+
+
+SummarizeSummariesPrompt - QUERY:
+
+# Instructions
+You just retrieved web sources, each one summarized under "Web Sources". **Your task right now is to summarize the web source summaries.**
+
+Always adhere to the following rules:
+* Write only one to two paragraphs.
+* Include all URLs from the listed sources. Format them as Markdown hyperlinks.
+* Do not add any additional information besides the information in the summaries.
+* Include references (<image:k>) to all relevant images.
+
+# Record
+## Claim
+Claim: "Ukraine is selling half of the armaments it receives from the United States"
+
+## Actions
+```
+web_search("Ukraine US arms sales corruption")
+web_search("US aid Ukraine arms tracking")
+```
+
+## Web Sources
+**Web Search Result**
+
+From [Source](https://www.aljazeera.com/news/2025/8/21/tracking-us-and-nato-support-for-ukraine-a-full-breakdown): 
+Content: Al Jazeera published on August 21, 2025, discusses US aid to Ukraine. The US has committed the largest amount of aid to Ukraine, providing 114.64 billion euros ($134bn) between January 24, 2022 and June 30, 2025. The article mentions military aid, financial aid, and humanitarian aid. <image:1>, <image:2>. The article also mentions that Ukraine has received various weapons systems from its allies.
+
+
+From [Source](https://www.forumarmstrade.org/ukrainearms.html): 
+Content: The search result from forumarmstrade.org provides a timeline of military aid to Ukraine from 2021 to 2025. It mentions various countries, including the United States, France, Lithuania, Canada, Germany, the UK, Denmark, Finland, Latvia, and Australia, providing military assistance to Ukraine. The aid includes artillery shells, ammunition, air defense systems, drones, and other equipment.
+
+
+From [Source](https://www.ifw-kiel.de/topics/war-against-ukraine/ukraine-support-tracker/): 
+Content: The search result is from the Kiel Institute for the World Economy and provides a "Ukraine Support Tracker" database. It quantifies military, financial, and humanitarian aid pledged to Ukraine since January 24, 2022. The database includes information from official government sources and news media reports. The tracker aims to provide a facts-based discussion about support to Ukraine. The latest update is from August 12, 2025, covering data up to June 2025. The result also mentions that Europe is now leading the US in terms of total volume of military aid provided. <image:1>, <image:2>.
+
+
+## Your Summary
+
+
+
+===== > RESPONSE:  < =====
+The United States has provided the largest amount of aid to Ukraine, totaling 114.64 billion euros ($134bn) between January 24, 2022, and June 30, 2025, according to an Al Jazeera article from August 21, 2025, which also mentions military, financial, and humanitarian aid (<image:1>, <image:2>). The Kiel Institute for the World Economy's "Ukraine Support Tracker" database quantifies military, financial, and humanitarian aid pledged to Ukraine since January 24, 2022, with the latest update from August 12, 2025, covering data up to June 2025, and notes that Europe is now leading the US in terms of total volume of military aid provided (<image:1>, <image:2>). Forumarmstrade.org provides a timeline of military aid to Ukraine from 2021 to 2025, listing various countries providing military assistance, including artillery shells, ammunition, air defense systems, drones, and other equipment.
+
+The sources are: [https://www.aljazeera.com/news/2025/8/21/tracking-us-and-nato-support-for-ukraine-a-full-breakdown](https://www.aljazeera.com/news/2025/8/21/tracking-us-and-nato-support-for-ukraine-a-full-breakdown), [https://www.forumarmstrade.org/ukrainearms.html](https://www.forumarmstrade.org/ukrainearms.html), and [https://www.ifw-kiel.de/topics/war-against-ukraine/ukraine-support-tracker/](https://www.ifw-kiel.de/topics/war-against-ukraine/ukraine-support-tracker/).
+
+_________________________
+
+
+
+DevelopPrompt - QUERY:
+
+# Instructions
+You just retrieved new Evidence. Now, **analyze the Claim's veracity using the evidence**. Always adhere to the following rules:
+* Focus on developing new insights. Do not repeat larger parts from the Record. Do not restate the Claim.
+* Write down your thoughts step-by-step. Whenever necessary, you may elaborate in more detail.
+* Depending on the topic's complexity, invest one to three paragraphs. The fewer, the better.
+* If you find that there is insufficient information to verify the Claim, explicitly state what information is missing.
+* If you cite web sources, always refer to them by including their URL as a Markdown hyperlink.
+* **Use information only from the recorded evidence**: Avoid inserting information that is not implied by the evidence. You may use commonsense knowledge, though.
+
+# Record
+## Claim
+Claim: "Ukraine is selling half of the armaments it receives from the United States"
+
+## Actions
+```
+web_search("Ukraine US arms sales corruption")
+web_search("US aid Ukraine arms tracking")
+```
+
+## Evidence
+### Evidence from `web_search`
+Al Jazeera ([https://www.aljazeera.com/news/2025/8/2/ukraine-says-defence-sector-corruption-scheme-uncovered](https://www.aljazeera.com/news/2025/8/2/ukraine-says-defence-sector-corruption-scheme-uncovered)) reported that Ukrainian authorities detained officials over a large-scale corruption scheme in the defense sector involving inflated prices for military drones and signal jamming systems, with kickbacks up to 30 percent of contract amounts. <image:k> Politico ([https://www.politico.eu/article/ukraine-uncovers-major-corruption-scheme-defense-procurment-days-after-restoring-anticorruption/](https://www.politico.eu/article/ukraine-uncovers-major-corruption-scheme-defense-procurment-days-after-restoring-anticorruption/)) also reported on a corruption scheme involving the procurement of military equipment at inflated prices, with participants receiving 30 percent of the contract amount.
+
+PBS Frontline World ([https://www.pbs.org/frontlineworld/stories/sierraleone/context.html](https://www.pbs.org/frontlineworld/stories/sierraleone/context.html)) discusses illicit weapons, high-level corruption, and organized crime centered in Ukraine, highlighting the loss of $32 billion in military assets between 1992 and 1998 due to theft, discount arms sales, and lack of oversight. <image:k>
+
+
+### Evidence from `web_search`
+The United States has provided the largest amount of aid to Ukraine, totaling 114.64 billion euros ($134bn) between January 24, 2022, and June 30, 2025, according to an Al Jazeera article from August 21, 2025, which also mentions military, financial, and humanitarian aid (<image:1>, <image:2>). The Kiel Institute for the World Economy's "Ukraine Support Tracker" database quantifies military, financial, and humanitarian aid pledged to Ukraine since January 24, 2022, with the latest update from August 12, 2025, covering data up to June 2025, and notes that Europe is now leading the US in terms of total volume of military aid provided (<image:1>, <image:2>). Forumarmstrade.org provides a timeline of military aid to Ukraine from 2021 to 2025, listing various countries providing military assistance, including artillery shells, ammunition, air defense systems, drones, and other equipment.
+
+The sources are: [https://www.aljazeera.com/news/2025/8/21/tracking-us-and-nato-support-for-ukraine-a-full-breakdown](https://www.aljazeera.com/news/2025/8/21/tracking-us-and-nato-support-for-ukraine-a-full-breakdown), [https://www.forumarmstrade.org/ukrainearms.html](https://www.forumarmstrade.org/ukrainearms.html), and [https://www.ifw-kiel.de/topics/war-against-ukraine/ukraine-support-tracker/](https://www.ifw-kiel.de/topics/war-against-ukraine/ukraine-support-tracker/).
+
+
+# Your Analysis
+
+
+
+===== > RESPONSE:  < =====
+The evidence indicates that Ukraine has received significant military aid from the United States and other countries. There is also evidence of corruption within the Ukrainian defense sector, including inflated prices for military equipment and kickbacks. However, the provided evidence does not contain any information about Ukraine selling half of the armaments it receives from the United States.
+
+To verify the claim, information is missing regarding the volume of arms sales by Ukraine and the origin of those arms.
+
+_________________________
+
+
+
+JudgePrompt - QUERY:
+
+# Instructions
+**Determine the Claim's veracity** by following these steps:
+1. Briefly summarize the key insights from the fact-check (see Record) in at most one paragraph.
+2. Write one paragraph about which one of the Decision Options applies best. Include the most appropriate decision option at the end and enclose it in backticks like `this`.
+
+
+
+
+## Decision Options
+* `false`: The claim is not factually accurate. This is the case if one of the following three conditions is met:(1) The claim is demonstrably false when it is disproven by evidence from multiple and reliable sources,(2) The claim or image is taken out of context, i.e. the origin, content and/or meaning of a statement or an image is misrepresented. For example, an old claim or an old image is mispresented in a new context in a misleading way,(3) There is not enough evidence to verify the claim or the evidence is conflicting or self-contradictory.
+* `not enough information`: The fact-check does not contain sufficient information to come to an conclusion. For example,there is substantial lack of evidence or the evidence is inconclusive, conflicting or self-contradictory. In the case of a lack of evidence, state which information exactly is missing. In particular, if no RESULTS or sources are available, pick this decision.
+* `true`: The claim is factually accurate when it is confirmed by evidence from multiple and reliable sources.
+
+# Record
+## Claim
+Claim: "Ukraine is selling half of the armaments it receives from the United States"
+
+## Actions
+```
+web_search("Ukraine US arms sales corruption")
+web_search("US aid Ukraine arms tracking")
+```
+
+## Evidence
+### Evidence from `web_search`
+Al Jazeera ([https://www.aljazeera.com/news/2025/8/2/ukraine-says-defence-sector-corruption-scheme-uncovered](https://www.aljazeera.com/news/2025/8/2/ukraine-says-defence-sector-corruption-scheme-uncovered)) reported that Ukrainian authorities detained officials over a large-scale corruption scheme in the defense sector involving inflated prices for military drones and signal jamming systems, with kickbacks up to 30 percent of contract amounts. <image:k> Politico ([https://www.politico.eu/article/ukraine-uncovers-major-corruption-scheme-defense-procurment-days-after-restoring-anticorruption/](https://www.politico.eu/article/ukraine-uncovers-major-corruption-scheme-defense-procurment-days-after-restoring-anticorruption/)) also reported on a corruption scheme involving the procurement of military equipment at inflated prices, with participants receiving 30 percent of the contract amount.
+
+PBS Frontline World ([https://www.pbs.org/frontlineworld/stories/sierraleone/context.html](https://www.pbs.org/frontlineworld/stories/sierraleone/context.html)) discusses illicit weapons, high-level corruption, and organized crime centered in Ukraine, highlighting the loss of $32 billion in military assets between 1992 and 1998 due to theft, discount arms sales, and lack of oversight. <image:k>
+
+
+### Evidence from `web_search`
+The United States has provided the largest amount of aid to Ukraine, totaling 114.64 billion euros ($134bn) between January 24, 2022, and June 30, 2025, according to an Al Jazeera article from August 21, 2025, which also mentions military, financial, and humanitarian aid (<image:1>, <image:2>). The Kiel Institute for the World Economy's "Ukraine Support Tracker" database quantifies military, financial, and humanitarian aid pledged to Ukraine since January 24, 2022, with the latest update from August 12, 2025, covering data up to June 2025, and notes that Europe is now leading the US in terms of total volume of military aid provided (<image:1>, <image:2>). Forumarmstrade.org provides a timeline of military aid to Ukraine from 2021 to 2025, listing various countries providing military assistance, including artillery shells, ammunition, air defense systems, drones, and other equipment.
+
+The sources are: [https://www.aljazeera.com/news/2025/8/21/tracking-us-and-nato-support-for-ukraine-a-full-breakdown](https://www.aljazeera.com/news/2025/8/21/tracking-us-and-nato-support-for-ukraine-a-full-breakdown), [https://www.forumarmstrade.org/ukrainearms.html](https://www.forumarmstrade.org/ukrainearms.html), and [https://www.ifw-kiel.de/topics/war-against-ukraine/ukraine-support-tracker/](https://www.ifw-kiel.de/topics/war-against-ukraine/ukraine-support-tracker/).
+
+
+## Elaboration
+The evidence indicates that Ukraine has received significant military aid from the United States and other countries. There is also evidence of corruption within the Ukrainian defense sector, including inflated prices for military equipment and kickbacks. However, the provided evidence does not contain any information about Ukraine selling half of the armaments it receives from the United States.
+
+To verify the claim, information is missing regarding the volume of arms sales by Ukraine and the origin of those arms.
+
+
+# Your Judgement
+
+
+
+===== > RESPONSE:  < =====
+The fact-check reveals that Ukraine has received substantial military aid from the US and other countries, and there is evidence of corruption within the Ukrainian defense sector. However, the provided sources do not contain any information about Ukraine selling half of the armaments it receives from the United States.
+
+`not enough information`
+
+_________________________
+
+
+
+PlanPrompt - QUERY:
+
+# Instructions
+The available knowledge is insufficient to assess the Claim. Therefore, **propose a set of actions** to retrieve new and helpful evidence. Adhere to the following rules:
+* The actions available are listed under Valid Actions, including a short description for each action. No other actions are possible at this moment. 
+* For each action, use the formatting as specified in Valid Actions.
+* Include all actions in a single Markdown code block at the end of your answer.
+* Propose as few actions as possible, but as much as needed. Do not propose similar or previously used actions.
+
+
+
+## Valid Actions
+* `image_search`
+   * Description: Run an image search on Google to retrieve related images for a given query.
+   * How to use: This is a helpful tool for fact-checking images. Use this to retrieve images associated with a specific keyword or phrase. Ensure that the query is clear and specific to improve search accuracy. If no relevant images are found, refine the query or use more descriptive terms.
+   * Format: image_search("your image search query goes here")
+
+* `geolocate`
+   * Description: Performs geolocation to determine the country where an image was taken.
+   * How to use: Provide an image and the model will determine the most likely countries where it was taken.
+   * Format: geolocate(<image:k>), where `k` is the image's ID
+
+* `web_search`
+   * Description: Run an open web search on Google or DuckDuckGO to retrieve any related webpage.
+   * How to use: Do not use this with a previously used or similar query from previous web searches. If a previous web search did not yield any results, use a very different query.
+   * Format: web_search("your web search query goes here")
+
+# Example: image_search()
+
+## Claim
+Text: "Chinese officials in white protective hazmat suits carried people down a hallway to be quarantined for having COVID-19 in November 2022."
+
+...
+
+ACTIONS:
+```
+image_search("China officials white suits carry people")
+image_search("China officials carry people COVID quarantine 2022")
+```
+
+# Example: geolocate()
+
+## Claim
+Text: "<image:k> shows a nuclear weapons facility in Usbekistan."
+
+...
+
+## Actions
+```
+geolocate(<image:k>)
+```
+
+# Example: web_search()
+
+## Claim
+Text: "New Zealand’s new Food Bill bans gardening"
+Claim date: October 29, 2020
+
+...
+
+## Actions
+```
+web_search("New Zealand Food Bill 2020")
+web_search("New Zealand Food Bill gardening ban")
+```
+
+# Record
+## Claim
+Claim: "Ukraine is selling half of the armaments it receives from the United States"
+
+## Actions
+```
+web_search("Ukraine US arms sales corruption")
+web_search("US aid Ukraine arms tracking")
+```
+
+## Evidence
+### Evidence from `web_search`
+Al Jazeera ([https://www.aljazeera.com/news/2025/8/2/ukraine-says-defence-sector-corruption-scheme-uncovered](https://www.aljazeera.com/news/2025/8/2/ukraine-says-defence-sector-corruption-scheme-uncovered)) reported that Ukrainian authorities detained officials over a large-scale corruption scheme in the defense sector involving inflated prices for military drones and signal jamming systems, with kickbacks up to 30 percent of contract amounts. <image:k> Politico ([https://www.politico.eu/article/ukraine-uncovers-major-corruption-scheme-defense-procurment-days-after-restoring-anticorruption/](https://www.politico.eu/article/ukraine-uncovers-major-corruption-scheme-defense-procurment-days-after-restoring-anticorruption/)) also reported on a corruption scheme involving the procurement of military equipment at inflated prices, with participants receiving 30 percent of the contract amount.
+
+PBS Frontline World ([https://www.pbs.org/frontlineworld/stories/sierraleone/context.html](https://www.pbs.org/frontlineworld/stories/sierraleone/context.html)) discusses illicit weapons, high-level corruption, and organized crime centered in Ukraine, highlighting the loss of $32 billion in military assets between 1992 and 1998 due to theft, discount arms sales, and lack of oversight. <image:k>
+
+
+### Evidence from `web_search`
+The United States has provided the largest amount of aid to Ukraine, totaling 114.64 billion euros ($134bn) between January 24, 2022, and June 30, 2025, according to an Al Jazeera article from August 21, 2025, which also mentions military, financial, and humanitarian aid (<image:1>, <image:2>). The Kiel Institute for the World Economy's "Ukraine Support Tracker" database quantifies military, financial, and humanitarian aid pledged to Ukraine since January 24, 2022, with the latest update from August 12, 2025, covering data up to June 2025, and notes that Europe is now leading the US in terms of total volume of military aid provided (<image:1>, <image:2>). Forumarmstrade.org provides a timeline of military aid to Ukraine from 2021 to 2025, listing various countries providing military assistance, including artillery shells, ammunition, air defense systems, drones, and other equipment.
+
+The sources are: [https://www.aljazeera.com/news/2025/8/21/tracking-us-and-nato-support-for-ukraine-a-full-breakdown](https://www.aljazeera.com/news/2025/8/21/tracking-us-and-nato-support-for-ukraine-a-full-breakdown), [https://www.forumarmstrade.org/ukrainearms.html](https://www.forumarmstrade.org/ukrainearms.html), and [https://www.ifw-kiel.de/topics/war-against-ukraine/ukraine-support-tracker/](https://www.ifw-kiel.de/topics/war-against-ukraine/ukraine-support-tracker/).
+
+
+## Elaboration
+The evidence indicates that Ukraine has received significant military aid from the United States and other countries. There is also evidence of corruption within the Ukrainian defense sector, including inflated prices for military equipment and kickbacks. However, the provided evidence does not contain any information about Ukraine selling half of the armaments it receives from the United States.
+
+To verify the claim, information is missing regarding the volume of arms sales by Ukraine and the origin of those arms.
+
+
+# Your Actions
+
+
+
+===== > RESPONSE:  < =====
+```
+web_search("Ukraine arms sales US aid")
+web_search("Ukraine arms trafficking investigation")
+```
+_________________________
+
+
+
+SummarizeResultPrompt - QUERY:
+
+# Instructions
+In order to find evidence that helps your fact-check, you just ran a web search which yielded a Search Result. **Your task right now is to summarize the Search Result.** What to include:
+* information that might be useful for the fact-check (see Record)
+* relevant images (refer to images by inserting their reference <image:k>)
+* if available: the release date as well as the author or the publisher (e.g. the media company) of the search result.
+
+Do NOT include:
+* advertisements
+* any other information not related to the Record or the Claim
+
+Additional rules:
+* Do not add any additional information besides the information in the Search Result.
+* If the Search Result doesn't contain any relevant information for the fact-checking work, simply print one word in capital letters: "NONE".
+* Keep your writing style like in the Examples 1, 2 and 3 provided to you.
+* Try to filter out relevant information even if the search result is in a different language.
+
+# Example 1
+The search result from America Today provides several photographs of the Notre-Dame Cathedral fire on April 15, 2019. <image:i>, <image:j>, <image:k>. None of the images show the Eiffel Tower in the background. 
+
+# Example 2
+NONE
+
+# Example 3
+The Guardian discusses a report blaming the Syrian government for a toxic gas attack and condemning their use of chemical weapons. The Guardian mentions the Chemical Weapons Convention and the responsibilities of Syria under the convention. According to The Guardian, The White House condemned the Assad regime for defying the norm against chemical weapons use.
+
+# Record
+## Claim
+Claim: "Ukraine is selling half of the armaments it receives from the United States"
+
+## Actions
+```
+web_search("Ukraine US arms sales corruption")
+web_search("US aid Ukraine arms tracking")
+```
+
+## Evidence
+### Evidence from `web_search`
+Al Jazeera ([https://www.aljazeera.com/news/2025/8/2/ukraine-says-defence-sector-corruption-scheme-uncovered](https://www.aljazeera.com/news/2025/8/2/ukraine-says-defence-sector-corruption-scheme-uncovered)) reported that Ukrainian authorities detained officials over a large-scale corruption scheme in the defense sector involving inflated prices for military drones and signal jamming systems, with kickbacks up to 30 percent of contract amounts. <image:k> Politico ([https://www.politico.eu/article/ukraine-uncovers-major-corruption-scheme-defense-procurment-days-after-restoring-anticorruption/](https://www.politico.eu/article/ukraine-uncovers-major-corruption-scheme-defense-procurment-days-after-restoring-anticorruption/)) also reported on a corruption scheme involving the procurement of military equipment at inflated prices, with participants receiving 30 percent of the contract amount.
+
+PBS Frontline World ([https://www.pbs.org/frontlineworld/stories/sierraleone/context.html](https://www.pbs.org/frontlineworld/stories/sierraleone/context.html)) discusses illicit weapons, high-level corruption, and organized crime centered in Ukraine, highlighting the loss of $32 billion in military assets between 1992 and 1998 due to theft, discount arms sales, and lack of oversight. <image:k>
+
+
+### Evidence from `web_search`
+The United States has provided the largest amount of aid to Ukraine, totaling 114.64 billion euros ($134bn) between January 24, 2022, and June 30, 2025, according to an Al Jazeera article from August 21, 2025, which also mentions military, financial, and humanitarian aid (<image:1>, <image:2>). The Kiel Institute for the World Economy's "Ukraine Support Tracker" database quantifies military, financial, and humanitarian aid pledged to Ukraine since January 24, 2022, with the latest update from August 12, 2025, covering data up to June 2025, and notes that Europe is now leading the US in terms of total volume of military aid provided (<image:1>, <image:2>). Forumarmstrade.org provides a timeline of military aid to Ukraine from 2021 to 2025, listing various countries providing military assistance, including artillery shells, ammunition, air defense systems, drones, and other equipment.
+
+The sources are: [https://www.aljazeera.com/news/2025/8/21/tracking-us-and-nato-support-for-ukraine-a-full-breakdown](https://www.aljazeera.com/news/2025/8/21/tracking-us-and-nato-support-for-ukraine-a-full-breakdown), [https://www.forumarmstrade.org/ukrainearms.html](https://www.forumarmstrade.org/ukrainearms.html), and [https://www.ifw-kiel.de/topics/war-against-ukraine/ukraine-support-tracker/](https://www.ifw-kiel.de/topics/war-against-ukraine/ukraine-support-tracker/).
+
+
+## Elaboration
+The evidence indicates that Ukraine has received significant military aid from the United States and other countries. There is also evidence of corruption within the Ukrainian defense sector, including inflated prices for military equipment and kickbacks. However, the provided evidence does not contain any information about Ukraine selling half of the armaments it receives from the United States.
+
+To verify the claim, information is missing regarding the volume of arms sales by Ukraine and the origin of those arms.
+
+
+## Actions
+```
+web_search("Ukraine arms sales US aid")
+web_search("Ukraine arms trafficking investigation")
+```
+
+# Search Result
+From [Source](https://www.dsca.mil/Press-Media/Major-Arms-Sales/Article-Display/Article/4289280/ukraine-air-delivered-munitions): 
+Content: "
+  
+All questions regarding this proposed Foreign Military Sale should be directed to the State Department's Under Secretary of State for Arms Control and International Security, Political-Military Affairs Outreach, at T\_Outreach\_PM@state.gov.
+
+  
+SHARE
+
+[PRINT](https://www.dsca.mil/DesktopModules/ArticleCS/Print.aspx?PortalId=157&ModuleId=69123&Article=4289280)
+
+Related Documents
+-----------------
+
+[PRESS RELEASE - UKRAINE 25-46 CN.PDF](https://media.defense.gov/2025/Aug/28/2003789897/-1/-1/1/PRESS RELEASE - UKRAINE 25-46 CN.PDF)
+
+[Ukraine](https://www.dsca.mil/Press-Media/Major-Arms-Sales/Tag/55307/ukraine)
+ [Major Arms Sale](https://www.dsca.mil/Press-Media/Major-Arms-Sales/Tag/294852/major-arms-sale)
+ [Air Delivered Munitions](https://www.dsca.mil/Press-Media/Major-Arms-Sales/Tag/309019/air-delivered-munitions) 25-46  
+  
+WASHINGTON, August 28, 2025 - The State Department has made a determination approving a possible Foreign Military Sale to the Government of Ukraine of Air Delivered Munitions and related equipment for an estimated cost of $825 million. 
+  
+The Government of Ukraine has requested to buy up to three thousand three hundred fifty (3,350) Extended Range Attack Munition (ERAM) missiles and three thousand three hundred fifty (3,350) Embedded Global Positioning System (GPS)/Inertial Navigation Systems (INS) (EGI) with Selective Availability Anti-Spoofing Module (SAASM), Y-Code, or M-Code. 
+  
+Ukraine will use funding from Denmark, the Netherlands, and Norway and Foreign Military Financing from the United States for this purchase. 
+  
+This proposed sale will improve Ukraine’s capability to meet current and future threats by further equipping it to conduct self-defense and regional security missions. Ukraine will have no difficulty absorbing these articles and services into its armed forces. Government or contractor representatives to Ukraine. Actual dollar value will be lower depending on final requirements, budget authority, and signed sales agreement(s), if and when concluded."
+
+# Your Summary
+
+
+
+===== > RESPONSE:  < =====
+The U.S. State Department approved a Foreign Military Sale to Ukraine for Air Delivered Munitions and related equipment for an estimated cost of $825 million. Ukraine requested to buy up to 3,350 Extended Range Attack Munition (ERAM) missiles and 3,350 Embedded Global Positioning System (GPS)/Inertial Navigation Systems (INS). The purchase will be funded by Denmark, the Netherlands, Norway, and Foreign Military Financing from the United States. The release date is August 28, 2025. The publisher is the U.S. Department of Defense.
+
+_________________________
+
+
+
+SummarizeResultPrompt - QUERY:
+
+# Instructions
+In order to find evidence that helps your fact-check, you just ran a web search which yielded a Search Result. **Your task right now is to summarize the Search Result.** What to include:
+* information that might be useful for the fact-check (see Record)
+* relevant images (refer to images by inserting their reference <image:k>)
+* if available: the release date as well as the author or the publisher (e.g. the media company) of the search result.
+
+Do NOT include:
+* advertisements
+* any other information not related to the Record or the Claim
+
+Additional rules:
+* Do not add any additional information besides the information in the Search Result.
+* If the Search Result doesn't contain any relevant information for the fact-checking work, simply print one word in capital letters: "NONE".
+* Keep your writing style like in the Examples 1, 2 and 3 provided to you.
+* Try to filter out relevant information even if the search result is in a different language.
+
+# Example 1
+The search result from America Today provides several photographs of the Notre-Dame Cathedral fire on April 15, 2019. <image:i>, <image:j>, <image:k>. None of the images show the Eiffel Tower in the background. 
+
+# Example 2
+NONE
+
+# Example 3
+The Guardian discusses a report blaming the Syrian government for a toxic gas attack and condemning their use of chemical weapons. The Guardian mentions the Chemical Weapons Convention and the responsibilities of Syria under the convention. According to The Guardian, The White House condemned the Assad regime for defying the norm against chemical weapons use.
+
+# Record
+## Claim
+Claim: "Ukraine is selling half of the armaments it receives from the United States"
+
+## Actions
+```
+web_search("Ukraine US arms sales corruption")
+web_search("US aid Ukraine arms tracking")
+```
+
+## Evidence
+### Evidence from `web_search`
+Al Jazeera ([https://www.aljazeera.com/news/2025/8/2/ukraine-says-defence-sector-corruption-scheme-uncovered](https://www.aljazeera.com/news/2025/8/2/ukraine-says-defence-sector-corruption-scheme-uncovered)) reported that Ukrainian authorities detained officials over a large-scale corruption scheme in the defense sector involving inflated prices for military drones and signal jamming systems, with kickbacks up to 30 percent of contract amounts. <image:k> Politico ([https://www.politico.eu/article/ukraine-uncovers-major-corruption-scheme-defense-procurment-days-after-restoring-anticorruption/](https://www.politico.eu/article/ukraine-uncovers-major-corruption-scheme-defense-procurment-days-after-restoring-anticorruption/)) also reported on a corruption scheme involving the procurement of military equipment at inflated prices, with participants receiving 30 percent of the contract amount.
+
+PBS Frontline World ([https://www.pbs.org/frontlineworld/stories/sierraleone/context.html](https://www.pbs.org/frontlineworld/stories/sierraleone/context.html)) discusses illicit weapons, high-level corruption, and organized crime centered in Ukraine, highlighting the loss of $32 billion in military assets between 1992 and 1998 due to theft, discount arms sales, and lack of oversight. <image:k>
+
+
+### Evidence from `web_search`
+The United States has provided the largest amount of aid to Ukraine, totaling 114.64 billion euros ($134bn) between January 24, 2022, and June 30, 2025, according to an Al Jazeera article from August 21, 2025, which also mentions military, financial, and humanitarian aid (<image:1>, <image:2>). The Kiel Institute for the World Economy's "Ukraine Support Tracker" database quantifies military, financial, and humanitarian aid pledged to Ukraine since January 24, 2022, with the latest update from August 12, 2025, covering data up to June 2025, and notes that Europe is now leading the US in terms of total volume of military aid provided (<image:1>, <image:2>). Forumarmstrade.org provides a timeline of military aid to Ukraine from 2021 to 2025, listing various countries providing military assistance, including artillery shells, ammunition, air defense systems, drones, and other equipment.
+
+The sources are: [https://www.aljazeera.com/news/2025/8/21/tracking-us-and-nato-support-for-ukraine-a-full-breakdown](https://www.aljazeera.com/news/2025/8/21/tracking-us-and-nato-support-for-ukraine-a-full-breakdown), [https://www.forumarmstrade.org/ukrainearms.html](https://www.forumarmstrade.org/ukrainearms.html), and [https://www.ifw-kiel.de/topics/war-against-ukraine/ukraine-support-tracker/](https://www.ifw-kiel.de/topics/war-against-ukraine/ukraine-support-tracker/).
+
+
+## Elaboration
+The evidence indicates that Ukraine has received significant military aid from the United States and other countries. There is also evidence of corruption within the Ukrainian defense sector, including inflated prices for military equipment and kickbacks. However, the provided evidence does not contain any information about Ukraine selling half of the armaments it receives from the United States.
+
+To verify the claim, information is missing regarding the volume of arms sales by Ukraine and the origin of those arms.
+
+
+## Actions
+```
+web_search("Ukraine arms sales US aid")
+web_search("Ukraine arms trafficking investigation")
+```
+
+# Search Result
+From [Source](https://apnews.com/article/ukraine-us-weapons-sale-trump-russia-74e01123c0067d5fc160141e0cabf207): 
+Content: "Supreme Court](https://apnews.com/hub/us-supreme-court)
+            
+        *   [2025 Election Calendar](https://apnews.com/projects/election-results-2025/)
+            
+        *   [The latest AP-NORC polls](https://apnews.com/projects/polling-tracker/)
+            
+        *   [Ground Game](https://apnews.com/newsletter/ground-game/july-28-2025)
+            
+        
+    *   [Sports](https://apnews.com/sports)
+        
+        *   [AP Top 25](https://apnews.com/hub/ap-top-25-college-football-poll)
+            
+        *   [NFL](https://apnews.com/hub/nfl)
+            
+        *   [MLB](https://apnews.com/hub/mlb)
+            
+        *   [WNBA](https://apnews.com/hub/wnba-basketball)
+            
+        *   [Tennis Tennis](https://apnews.com/hub/tennis)
+            
+        *   [Golf](https://apnews.com/hub/golf)
+            
+        *   [NBA](https://apnews.com/hub/nba)
+            
+        *   [NHL](https://apnews.com/hub/nhl)
+            
+        *   [Auto Racing](https://apnews.com/hub/auto-racing)
+            
+        *   [Soccer](https://apnews.com/hub/soccer)
+            
+        
+    *   [Entertainment](https://apnews.com/entertainment)
+        
+        *   [Movies](https://apnews.com/hub/movies)
+            
+        *   [What to Stream](https://apnews.com/hub/the-stream)
+            
+        *   [Television](https://apnews.com/hub/television)
+            
+        *   [Celebrity Interviews](https://apnews.com/hub/celebrity-interviews/)
+            
+        *   [Music](https://apnews.com/hub/music)
+            
+        *   [Books](https://apnews.com/hub/books-and-literature)
+            
+        
+    *   [Business](https://apnews.com/business)
+        
+        *   [Tariffs](https://apnews.com/hub/tariffs)
+            
+        *   [Inflation](https://apnews.com/hub/inflation)
+            
+        *   [Financial Markets](https://apnews.com/hub/financial-markets)
+            
+        *   [Financial Wellness](https://apnews.com/hub/financial-wellness)
+            
+        *   [Technology](https://apnews.com/technology)
+            
+        
+    *   [Science](https://apnews.com/science)
+        
+        *   [Space](https://apnews.com/hub/space)
+            
+        *   [Animals](https://apnews.com/hub/animals)
+            
+        *   [The Ancient World](https://apnews.com/hub/archaeology-and-anthropology)
+            
+        *   [Climate](https://apnews.com/climate-and-environment)
+            
+        *   [Medicine](https://apnews.com/health)
+            
+        
+    *   [Fact Check](https://apnews.com/ap-fact-check)
+        
+    *   [Oddities](https://apnews.com/oddities)
+        
+    *   [Be Well](https://apnews.com/hub/be-well)
+        
+    *   [Newsletters](https://apnews.com/newsletters)
+        
+    *   [Photography](https://apnews.com/photography)
+        
+        *   [2024 YEAR END PHOTOS](https://apnews.com/photography/2024-year-end-photos)
+            
+        *   [Photo Essays](https://apnews.com/hub/photo-essays)
+            
+        *   [Photography](https://apnews.com/photography)
+            
+        
+    *   [AP Investigations](https://apnews.com/hub/ap-investigations/)
+        
+    *   [Climate](https://apnews.com/climate-and-environment)
+        
+        *   [**Indigenous peoples and climate**](https://apnews.com/climate-and-environment/indigenous-peoples-adapting-to-and-combatting-climate-change)
+            
+        *   [Climate Questions](https://apnews.com/hub/climate-questions)
+            
+        *   [Climate Migration](https://apnews.com/hub/climate-migration)
+            
+        *   [India Focus](https://apnews.com/hub/india-climate)
+            
+        
+    *   [Health](https://apnews.com/health)
+        
+    *   [Tech](https://apnews.com/technology)
+        
+        *   [Artificial Intelligence](https://apnews.com/hub/artificial-intelligence)
+            
+        *   [Social Media](https://apnews.com/hub/social-media)
+            
+        
+    *   [Lifestyle](https://apnews.com/lifestyle)
+        
+        *   [Food & Recipes](https://apnews.com/hub/recipes)
+            
+        *   [Gardening](https://apnews.com/hub/gardening)
+            
+        *   [Homes](https://apnews.com/hub/homes)
+            
+        *   [Travel](https://apnews.com/hub/travel)
+            
+        *   [Fashion](https://apnews.com/hub/fashion)
+            
+        *   [Pets](https://apnews.com/hub/pets)
+            
+        
+    *   [Religion](https://apnews.com/religion)
+        
+    *   [Español](https://apnews.com/hub/noticias)
+        
+    *   [Most watched videos](https://apnews.com/video)
+        
+    *   [Standards](https://apnews.com/projects/news-values-and-principles/)
+        
+    *   [Quizzes](https://apnews.com/quizzes)
+        
+    *   [Press Releases](https://apnews.com/press-releases)
+        
+    *   [My Account](https://apnews.com/login)
+        
+    *   [AP News Code of Conduct](https://apnews.com/community-guidelines)
+        
+    
+
+[Sign in](/login)
+[](/myaccount)
+
+ Search Query Submit Search
+
+Show Search Menu
+
+Submit Search 
+
+[Politics](https://apnews.com/politics)
+
+Trump administration announces a $825 million arms sale to Ukraine
+==================================================================
+
+Trump administration announces a $825 million arms sale to Ukraine
+------------------------------------------------------------------
+
+         ![In this photo provided by Ukraine's 93rd Kholodnyi Yar Separate Mechanized Brigade press service, soldiers fire a mortar towards positions of Russian troops near Kostyantynivka in Donetsk region, Ukraine, Tuesday, Aug. (Iryna Rybakova/Ukraine’s 93rd Mechanized Brigade via AP)
+
+Read More
+
+ Share
+
+Share
+
+*   [Facebook](https://www.facebook.com/dialog/share?app_id=870613919693099&display=popup&href=https%3A%2F%2Fapnews.com%2Farticle%2Fukraine-us-weapons-sale-trump-russia-74e01123c0067d5fc160141e0cabf207%3Futm_source%3DFacebook%26utm_medium%3Dshare)
+    
+*   Copy
+    
+    Link copied
+    
+*   [Print](javascript:window.print())
+    
+*   [Email](/cdn-cgi/l/email-protection#86b9e4e9e2ffbbd2f4f3ebf6a3b4b6e7e2ebefe8eff5f2f4e7f2efe9e8a3b4b6e7e8e8e9f3e8e5e3f5a3b4b6e7a3b4b6a3b4b2beb4b3a3b4b6ebefeaeaefe9e8a3b4b6e7f4ebf5a3b4b6f5e7eae3a3b4b6f2e9a3b4b6d3edf4e7efe8e3a3b6c7a3b6c7eef2f2f6f5a3b5c7a3b4c0a3b4c0e7f6e8e3f1f5a8e5e9eba3b4c0e7f4f2efe5eae3a3b4c0f3edf4e7efe8e3abf3f5abf1e3e7f6e9e8f5abf5e7eae3abf2f4f3ebf6abf4f3f5f5efe7abb1b2e3b6b7b7b4b5e5b6b6b0b1e2b3e0e5b7b0b6b7b2b7e3b6e5e7e4e0b4b6b1a3b5c0f3f2ebd9f5e9f3f4e5e3a3b5c2c3ebe7efeaa3b4b0f3f2ebd9ebe3e2eff3eba3b5c2f5eee7f4e3a3b6c7a3b6c7d2eee3a3b4b6d2f4f3ebf6a3b4b6e7e2ebefe8eff5f2f4e7f2efe9e8a3b4b6eee7f5a3b4b6e7f6f6f4e9f0e3e2a3b4b6e7a3b4b6a3b4b2beb4b3a3b4b6ebefeaeaefe9e8a3b4b6e7f4ebf5a3b4b6f5e7eae3a3b4b6f2e9a3b4b6d3edf4e7efe8e3a3b4c5a3b4b6f1eeefe5eea3b4b6f1efeaeaa3b4b6efe8e5eaf3e2e3a3b4b6e3fef2e3e8e2e3e2abf4e7e8e1e3a3b4b6ebeff5f5efeae3f5a3b4b6e7e8e2a3b4b6f4e3eae7f2e3e2a3b4b6e3f7f3eff6ebe3e8f2a3b4b6f2e9a3b4b6e4e9e9f5f2a3b4b6eff2f5a3b4b6e2e3e0e3e8f5eff0e3a3b4b6e5e7f6e7e4efeaeff2efe3f5a8)
+    
+*   [X](https://twitter.com/intent/tweet?url=https%3A%2F%2Fapnews.com%2Farticle%2Fukraine-us-weapons-sale-trump-russia-74e01123c0067d5fc160141e0cabf207%3Futm_source%3Dtwitter%26utm_medium%3Dshare&text=Trump%20administration%20announces%20a%20%24825%20million%20arms%20sale%20to%20Ukraine)
+    
+*   [LinkedIn](#)
+    
+*   [Bluesky](https://bsky.app/intent/compose?text=https%3A%2F%2Fapnews.com%2Farticle%2Fukraine-us-weapons-sale-trump-russia-74e01123c0067d5fc160141e0cabf207%3Futm_source%3Dbluesky%26utm_medium%3Dshare%26nbsp%3B%3Cbr%3ETrump%20administration%20announces%20a%20%24825%20million%20arms%20sale%20to%20Ukraine)
+    
+*   [Flipboard](https://share.flipboard.com/bookmarklet/popout?v=2&title=Trump%20administration%20announces%20a%20%24825%20million%20arms%20sale%20to%20Ukraine&url=https%3A%2F%2Fapnews.com%2Farticle%2Fukraine-us-weapons-sale-trump-russia-74e01123c0067d5fc160141e0cabf207%3Futm_source%3DFlipboard%20Share%26utm_medium%3Dshare)
+    
+*   [Pinterest](https://pinterest.com/pin/create/bookmarklet/?url=https%3A%2F%2Fapnews.com%2Farticle%2Fukraine-us-weapons-sale-trump-russia-74e01123c0067d5fc160141e0cabf207%3Futm_source%3DPinterest%26utm_medium%3Dshare&description=Trump%20administration%20announces%20a%20%24825%20million%20arms%20sale%20to%20Ukraine&media=https://assets.apnews.com/16/da/50a6c0f6f9da54f75bc18ca3059d/0fd475dcf60d4829a0df27f66a13a270)
+    
+*   [Reddit](https://www.reddit.com/submit?url=https%3A%2F%2Fapnews.com%2Farticle%2Fukraine-us-weapons-sale-trump-russia-74e01123c0067d5fc160141e0cabf207%3Futm_source%3Dreddit%26utm_medium%3Dshare&title=Reddit Share)
+    
+
+WASHINGTON (AP) — The Trump administration has approved a $825 million arms sale to Ukraine that will include extended-range missiles and related equipment to boost its defensive capabilities as [U.S. The sale will cover 3,350 ERAM missiles, 3,350 GPS units, along with components, spare parts and other accessories, as well as training and technical support.
+
+It said Ukraine would use [funding from NATO allies](https://apnews.com/article/russia-ukraine-war-zelenskyy-trump-drones-05ba74cd9fbefcd81cc90886d091af5a)
+ Denmark, the Netherlands and Norway in addition to U.S. foreign military financing to pay for the equipment.
+
+“This proposed sale will support the foreign policy and national security objectives of the United States by improving the security of a partner country that is a force for political stability and economic progress in Europe,” the department said in a statement.
+
+The sale was announced as Russia continues to [step up attacks on Ukraine](https://apnews.com/article/russia-ukraine-war-kyiv-attack-23e051f1b7e93308f99b6fdfdd8949f2)
+ even after President Donald Trump [met with Russian leader Vladimir Putin in Alaska](https://apnews.com/article/trump-putin-summit-alaska-russia-ukraine-a7b167f17a3e06fbce2f583c93f8bae1)
+ earlier this month to press for a negotiated settlement to the three-year-old conflict.
+
+Related Stories
+
+      [![Ukrainian President Volodymyr Zelenskyy reacts during his press conference in Kyiv, Ukraine, Friday, Aug.  [![AP Logo](https://assets.apnews.com/19/66/bc546486408c8595f01753a9fbeb/ap-logo-176-by-208.svg)](/)
+
+Menu
+
+*   [World](https://apnews.com/world-news)
+    
+    SECTIONS
+    
+    [Israel-Hamas war](https://apnews.com/hub/israel-hamas-war)
+     [Russia-Ukraine war](https://apnews.com/hub/russia-ukraine)
+     [Español](https://apnews.com/hub/noticias)
+     [China](https://apnews.com/hub/china)
+     [Asia Pacific](https://apnews.com/hub/asia-pacific)
+     [Latin America](https://apnews.com/hub/latin-america)
+     [Europe](https://apnews.com/hub/europe)
+     [Africa](https://apnews.com/hub/africa)
+    
+    TOP STORIES
+    
+    *   [What to know about the US warships sent to South America and the reaction in Venezuela](https://apnews.com/article/trump-venezuela-destroyers-maduro-drug-cartels-9649e8282c061d9dad41a5dfb54431d4)
+        
+    *   [Thai court dismisses prime minister over compromising phone call with Cambodian leader](https://apnews.com/article/thailand-politics-prime-minister-dismissed-7720be8eff0b9327fda88aa1285d86f7)
+        
+    *   [Israel declares Gaza’s largest city a combat zone as death toll surpasses 63,000](https://apnews.com/article/mideast-wars-gaza-08-29-25-da2b9fa41fc50b922b826343f7ce49ab)
+        
+    
+    Newsletters
+    
+    [The Morning Wire\
+    \
+    Our flagship newsletter breaks down the biggest headlines of the day.](/newsletters?id=Morning+Wire+Subscribers)
+    [The Afternoon Wire\
+    \
+    Get caught up on what you may have missed throughout the day.](/newsletters?id=Afternoon+Wire)
+    
+    [See All Newsletters](/newsletters)
+    
+*   [U.S.](https://apnews.com/us-news)
+    
+    SECTIONS
+    
+    [Immigration](https://apnews.com/hub/immigration)
+     [Weather](https://apnews.com/hub/weather)
+     [Education](https://apnews.com/education)
+     [Transportation](https://apnews.com/us-news/transportation)
+     [Abortion](https://apnews.com/hub/abortion)
+     [LGBTQ+](https://apnews.com/hub/lgbtq)
+     [Notable Deaths](https://apnews.com/hub/obituaries)
+    
+    TOP STORIES
+    
+    *   [Alabama town's first Black mayor, who had been locked out of office, wins election](https://apnews.com/article/alabama-newbern-first-black-mayor-4ee90489413deb40a8d302fc9457905b)
+        
+    *   [US offers military funeral honors to Capitol rioter Ashli Babbitt](https://apnews.com/article/ashli-babbitt-funeral-honors-trump-capitol-riot-743671da35c402b4db83f93cf46d46b3)
+        
+    *   [2 firefighters battling Washington state wildfire arrested by Border Patrol](https://apnews.com/article/immigration-wildfire-firefighters-8f7e2a55e61a824bfb88fefaf9bdb3fc)
+        
+    
+    Newsletters
+    
+    [The Morning Wire\
+    \
+    Our flagship newsletter breaks down the biggest headlines of the day.](/newsletters?id=Morning+Wire+Subscribers)
+    
+    [See All Newsletters](/newsletters)
+    
+    AP QUIZZES
+    
+    [Test Your News I.Q. Supreme Court](https://apnews.com/hub/us-supreme-court)
+     [2025 Election Calendar](https://apnews.com/projects/election-results-2025/)
+     [The latest AP-NORC polls](https://apnews.com/projects/polling-tracker/)
+     [Ground Game](https://apnews.com/newsletter/ground-game/july-28-2025)
+    
+    TOP STORIES
+    
+    *   [Trump blocks $4.9B in foreign aid Congress OK'd, using maneuver last seen nearly 50 years ago](https://apnews.com/article/trump-foreign-aid-pocket-rescission-374c63e6b4004e819a657e33b76f502e)
+        
+    *   [Trump ends ex-Vice President Harris' Secret Service protection early after Biden had extended it](https://apnews.com/article/trump-harris-secret-service-protection-894d6ca3f202c0a854390d653c101673)
+        
+    *   [LIVE Live updates: Trump blocks nearly $5 billion in foreign aid approved by Congress](https://apnews.com/live/donald-trump-news-updates-8-29-2025)
+        
+    
+    Newsletters
+    
+    [Ground Game\
+    \
+    Exclusive insights and key stories from the world of politics.](/newsletters?id=Ground_Game)
+    
+    [See All Newsletters](/newsletters)
+    
+*   [Sports](https://apnews.com/sports)
+    
+    SECTIONS
+    
+    [AP Top 25](https://apnews.com/hub/ap-top-25-college-football-poll)
+     [NFL](https://apnews.com/hub/nfl)
+     [MLB](https://apnews.com/hub/mlb)
+     [WNBA](https://apnews.com/hub/wnba-basketball)
+     [Tennis](https://apnews.com/hub/tennis)
+     [Golf](https://apnews.com/hub/golf)
+     [NBA](https://apnews.com/hub/nba)
+     [NHL](https://apnews.com/hub/nhl)
+    
+    TOP STORIES
+    
+    *   [Micah Parsons traded to the Green Bay Packers from the Cowboys after contract dispute](https://apnews.com/article/micah-parsons-trade-packers-cowboys-dae0fa122c83ecddaf1c38a93ce9d23e)
+        
+    *   [Messi's emotional farewell: Argentina star to play last home World Cup qualifier](https://apnews.com/article/lionel-messi-world-cup-argentina-venezuela-56f56926b73a40ddfbd995ac2822e744)
+        
+    *   [Travis Kelce and Taylor Swift attend Nebraska-Cincinnati game after engagement](https://apnews.com/article/travis-kelce-taylor-swift-nebraska-cincinnati-375c6f216299538c774b937b77869599)
+        
+    
+    Newsletters
+    
+    [AP Top 25 Poll Alerts\
+    \
+    Get email alerts for every college football Top 25 Poll release.](/newsletters?id=AP_CFB_Top_25_Poll_Alerts)
+    [The Sports Wire\
+    \
+    Your home base for in-depth reporting from the world of sports.](/newsletters?id=Sports+HQ)
+    
+    [See All Newsletters](/newsletters)
+    
+*   [Entertainment](https://apnews.com/entertainment)
+    
+    SECTIONS
+    
+    [Movies](https://apnews.com/hub/movies)
+     [What to Stream](https://apnews.com/hub/the-stream)
+     [Television](https://apnews.com/hub/television)
+     [Celebrity Interviews](https://apnews.com/hub/celebrity-interviews/)
+     [Music](https://apnews.com/hub/music)
+     [Books](https://apnews.com/hub/books-and-literature)
+    
+    TOP STORIES
+    
+    *   [Julia Roberts' 'After the Hunt' stirs #MeToo debate at Venice Film Festival](https://apnews.com/article/venice-film-festival-julia-roberts-8131117b45842443c0a7ad706e685f82)
+        
+    *   [A Broadway show asks a white actor to replace an Asian one. Why?' Ukraine's Mariupol descends into despair](https://apnews.com/article/russia-ukraine-war-mariupol-descends-into-despair-708cb8f4a171ce3f1c1b0b8d090e38e3)
+        
+    *   [Democrats are becoming a force in traditionally conservative The Villages](https://apnews.com/article/energized-democrats-conservative-villages-harris-emhoff-320a1cff9d66d806c41bc3dee9210975)
+        
+    
+    Newsletters
+    
+    [The World in Pictures\
+    \
+    Get The AP’s most compelling photographs sent directly to your inbox.](/newsletters?id=Photo+Gallery)
+    
+    [See All Newsletters](/newsletters)
+    
+*   [AP Investigations](https://apnews.com/hub/ap-investigations/)
+    
+*   [Climate](https://apnews.com/climate-and-environment)
+    
+    SECTIONS
+    
+    [**Indigenous peoples and climate**](https://apnews.com/climate-and-environment/indigenous-peoples-adapting-to-and-combatting-climate-change)
+     [Climate Questions](https://apnews.com/hub/climate-questions)
+     [Climate Migration](https://apnews.com/hub/climate-migration)
+     [India Focus](https://apnews.com/hub/india-climate)
+    
+    TOP STORIES
+    
+    *   [Isolated Amazon tribe seen near logging bridge site, alarming rights group](https://apnews.com/article/amazon-mashco-piro-tribe-logging-42597dcabbb697855d242f39af39c24a)
+        
+    *   [This air conditioning strategy is the sweet spot for saving energy and money, experts say](https://apnews.com/article/air-conditioning-energy-hot-weather-climate-a13140a58cce61806e086db9e68ef084)
+        
+    *   [Florida's once-pristine springs threatened by pollution, development and climate change](https://apnews.com/article/florida-springs-threat-pollution-water-climate-change-7452767c8041238c2a8b93fba0a01ef7)
+        
+    
+*   [Health](https://apnews.com/health)
+    
+    TOP STORIES
+    
+    *   [CDC gets new acting director as leadership turmoil leaves agency in chaos](https://apnews.com/article/cdc-monarez-fired-trump-kennedy-vaccines-science-17fd8a19064e39906bc0125fd81e3525)
+        
+    *   [Nonalcoholic beer and mocktails can help people stay sober or drink less, but are not for everyone](https://apnews.com/article/na-beer-alcohol-sober-drinking-mocktail-294a5de375fc7798c98a5b64691ed6f0)
+        
+    *   [FDA approves updated COVID-19 shots with limits for some kids and adults](https://apnews.com/article/vaccines-covid-shots-fda-kennedy-pfizer-children-9ce19908ae7afb354732aa162fd28532)
+        
+    *   [Doctors want women to know the nuanced reality of hormone therapy for menopause](https://apnews.com/article/hormone-therapy-estrogen-hot-flashes-fda-5b1f29a73553c142f67b1f88b6656428)
+        
+    *    [CDC departures pose new challenges for leadership. Some conservative Christians argue it can](https://apnews.com/article/conservative-christians-sin-of-toxic-empathy-c9ab96faf99605e010f487df61d92d8f)
+        
+    
+    Newsletters
+    
+    [World of Faith\
+    \
+    Comprehensive global coverage of how religion shapes our world.](/newsletters?id=World+of+Faith)
+    
+    [See All Newsletters](/newsletters)
+    
+*   [Español](https://apnews.com/hub/noticias)
+    
+    TOP STORIES
+    
+    *   [Misterio rodea contrato del Ejército para construir campamento de detención de inmigrantes en Texas](https://apnews.com/article/eeuu-ejercito-campamento-detencion-texas-20be93a2a08d82edd417d2d8dbfa71e1)
+        
+    *   [Qué saber sobre los buques de guerra de EEUU enviados a Sudamérica y la reacción en Venezuela](https://apnews.com/article/trump-venezuela-destructores-maduro-carteles-f24aebe6383dc1a4095aa6aeacaba106)
+        
+    *   [Gobierno de Trump solicita apoyo de base militar cerca de Chicago para operaciones migratorias](https://apnews.com/article/chicago-base-naval-crimen-guardia-nacional-trump-inmigracion-c56e3ca5a542198e17d5d621aec34c97)
+        
+    *   [Venezolanos luchan a diario para alimentar a sus hijos en medio de la crisis](https://apnews.com/article/venezuela-crisis-alimentos-escasez-desnutricion-ayuda-maduro-641a47ee26f9ddbe17cf7b22c15c1bbd)
+        
+    *   [Detienen en aeropuerto de Chile a dos mujeres estadounidenses que llevaban armas y municiones](https://apnews.com/article/chile-eeuu-mujeres-armas-aeropuerto-aduana-5371bf03956dc87538909dee6e89ce3b)
+        
+    *   [Rubio viaja a México y Ecuador para abordar migración y crimen organizado](https://apnews.com/article/eeuu-rubio-mexico-ecuador-trump-68f91fb7d6089f98121bce880089653f)
+        
+    
+*   [Most watched videos](https://apnews.com/video)
+    
+*   [Standards](https://apnews.com/projects/news-values-and-principles/)
+    
+*   [Quizzes](https://apnews.com/quizzes)
+    
+*   [Press Releases](https://apnews.com/press-releases)
+    
+*   [My Account](https://apnews.com/login)
+    
+*   [AP News Code of Conduct](https://apnews.com/community-guidelines)
+    
+*   MORE
+    
+    *   [World](https://apnews.com/world-news)
+        
+        *   [Israel-Hamas war](https://apnews.com/hub/israel-hamas-war)
+            
+        *   [Russia-Ukraine war](https://apnews.com/hub/russia-ukraine)
+            
+        *   [Español](https://apnews.com/hub/noticias)
+            
+        *   [China](https://apnews.com/hub/china)
+            
+        *   [Asia Pacific](https://apnews.com/hub/asia-pacific)
+            
+        *   [Latin America](https://apnews.com/hub/latin-america)
+            
+        *   [Europe](https://apnews.com/hub/europe)
+            
+        *   [Africa](https://apnews.com/hub/africa)
+            
+        *   [Australia](https://apnews.com/hub/australia)
+            
+        *   [Middle East](https://apnews.com/hub/middle-east)
+            
+        *   [Global Elections](https://apnews.com/hub/global-elections/)
+            
+        
+    *   [U.S.](https://apnews.com/us-news)
+        
+        *   [Immigration](https://apnews.com/hub/immigration)
+            
+        *   [Weather](https://apnews.com/hub/weather)
+            
+        *   [Education](https://apnews.com/education)
+            
+        *   [Transportation](https://apnews.com/us-news/transportation)
+            
+        *   [Abortion](https://apnews.com/hub/abortion)
+            
+        *   [LGBTQ+](https://apnews.com/hub/lgbtq)
+            
+        *   [Notable Deaths](https://apnews.com/hub/obituaries)
+            
+        
+    *   [Politics](https://apnews.com/politics)
+        
+        *   [White House](https://apnews.com/hub/donald-trump)
+            
+        *   [Congress](https://apnews.com/hub/congress)
+            
+        *   [U.S. Supreme Court](https://apnews.com/hub/us-supreme-court)
+            
+        *   [2025 Election Calendar](https://apnews.com/projects/election-results-2025/)
+            
+        *   [The latest AP-NORC polls](https://apnews.com/projects/polling-tracker/)
+            
+        *   [Ground Game](https://apnews.com/newsletter/ground-game/july-28-2025)
+            
+        
+    *   [Sports](https://apnews.com/sports)
+        
+        *   [AP Top 25](https://apnews.com/hub/ap-top-25-college-football-poll)
+            
+        *   [NFL](https://apnews.com/hub/nfl)
+            
+        *   [MLB](https://apnews.com/hub/mlb)
+            
+        *   [WNBA](https://apnews.com/hub/wnba-basketball)
+            
+        *   [Tennis Tennis](https://apnews.com/hub/tennis)
+            
+        *   [Golf](https://apnews.com/hub/golf)
+            
+        *   [NBA](https://apnews.com/hub/nba)
+            
+        *   [NHL](https://apnews.com/hub/nhl)
+            
+        *   [Auto Racing](https://apnews.com/hub/auto-racing)
+            
+        *   [Soccer](https://apnews.com/hub/soccer)
+            
+        
+    *   [Entertainment](https://apnews.com/entertainment)
+        
+        *   [Movies](https://apnews.com/hub/movies)
+            
+        *   [What to Stream](https://apnews.com/hub/the-stream)
+            
+        *   [Television](https://apnews.com/hub/television)
+            
+        *   [Celebrity Interviews](https://apnews.com/hub/celebrity-interviews/)
+            
+        *   [Music](https://apnews.com/hub/music)
+            
+        *   [Books](https://apnews.com/hub/books-and-literature)
+            
+        
+    *   [Business](https://apnews.com/business)
+        
+        *   [Tariffs](https://apnews.com/hub/tariffs)
+            
+        *   [Inflation](https://apnews.com/hub/inflation)
+            
+        *   [Financial Markets](https://apnews.com/hub/financial-markets)
+            
+        *   [Financial Wellness](https://apnews.com/hub/financial-wellness)
+            
+        *   [Technology](https://apnews.com/technology)
+            
+        
+    *   [Science](https://apnews.com/science)
+        
+        *   [Space](https://apnews.com/hub/space)
+            
+        *   [Animals](https://apnews.com/hub/animals)
+            
+        *   [The Ancient World](https://apnews.com/hub/archaeology-and-anthropology)
+            
+        *   [Climate](https://apnews.com/climate-and-environment)
+            
+        *   [Medicine](https://apnews.com/health)
+            
+        
+    *   [Fact Check](https://apnews.com/ap-fact-check)
+        
+    *   [Oddities](https://apnews.com/oddities)
+        
+    *   [Be Well](https://apnews.com/hub/be-well)
+        
+    *   [Newsletters](https://apnews.com/newsletters)
+        
+    *   [Photography](https://apnews.com/photography)
+        
+        *   [2024 YEAR END PHOTOS](https://apnews.com/photography/2024-year-end-photos)
+            
+        *   [Photo Essays](https://apnews.com/hub/photo-essays)
+            
+        *   [Photography](https://apnews.com/photography)
+            
+        
+    *   [AP Investigations](https://apnews.com/hub/ap-investigations/)
+        
+    *   [Climate](https://apnews.com/climate-and-environment)
+        
+        *   [**Indigenous peoples and climate**](https://apnews.com/climate-and-environment/indigenous-peoples-adapting-to-and-combatting-climate-change)
+            
+        *   [Climate Questions](https://apnews.com/hub/climate-questions)
+            
+        *   [Climate Migration](https://apnews.com/hub/climate-migration)
+            
+        *   [India Focus](https://apnews.com/hub/india-climate)
+            
+        
+    *   [Health](https://apnews.com/health)
+        
+    *   [Tech](https://apnews.com/technology)
+        
+        *   [Artificial Intelligence](https://apnews.com/hub/artificial-intelligence)
+            
+        *   [Social Media](https://apnews.com/hub/social-media)
+            
+        
+    *   [Lifestyle](https://apnews.com/lifestyle)
+        
+        *   [Food & Recipes](https://apnews.com/hub/recipes)
+            
+        *   [Gardening](https://apnews.com/hub/gardening)
+            
+        *   [Homes](https://apnews.com/hub/homes)
+            
+        *   [Travel](https://apnews.com/hub/travel)
+            
+        *   [Fashion](https://apnews.com/hub/fashion)
+            
+        *   [Pets](https://apnews.com/hub/pets)
+            
+        
+    *   [Religion](https://apnews.com/religion)
+        
+    *   [Español](https://apnews.com/hub/noticias)
+        
+    *   [Most watched videos](https://apnews.com/video)
+        
+    *   [Standards](https://apnews.com/projects/news-values-and-principles/)
+        
+    *   [Quizzes](https://apnews.com/quizzes)
+        
+    *   [Press Releases](https://apnews.com/press-releases)
+        
+    *   [My Account](https://apnews.com/login)
+        
+    *   [AP News Code of Conduct](https://apnews.com/community-guidelines)
+        
+    
+
+[Sign in](/login)
+[](/myaccount)
+
+ Search Query Submit Search
+
+Show Search Menu
+
+Submit Search 
+
+ [![AP Logo](https://assets.apnews.com/19/66/bc546486408c8595f01753a9fbeb/ap-logo-176-by-208.svg)](/)
+
+Menu
+
+*   [World](https://apnews.com/world-news)
+    
+    SECTIONS
+    
+    [Israel-Hamas war](https://apnews.com/hub/israel-hamas-war)
+     [Russia-Ukraine war](https://apnews.com/hub/russia-ukraine)
+     [Español](https://apnews.com/hub/noticias)
+     [China](https://apnews.com/hub/china)
+     [Asia Pacific](https://apnews.com/hub/asia-pacific)
+     [Latin America](https://apnews.com/hub/latin-america)
+     [Europe](https://apnews.com/hub/europe)
+     [Africa](https://apnews.com/hub/africa)
+    
+    TOP STORIES
+    
+    *   [What to know about the US warships sent to South America and the reaction in Venezuela](https://apnews.com/article/trump-venezuela-destroyers-maduro-drug-cartels-9649e8282c061d9dad41a5dfb54431d4)
+        
+    *   [Thai court dismisses prime minister over compromising phone call with Cambodian leader](https://apnews.com/article/thailand-politics-prime-minister-dismissed-7720be8eff0b9327fda88aa1285d86f7)
+        
+    *   [Israel declares Gaza’s largest city a combat zone as death toll surpasses 63,000](https://apnews.com/article/mideast-wars-gaza-08-29-25-da2b9fa41fc50b922b826343f7ce49ab)
+        
+    
+    Newsletters
+    
+    [The Morning Wire\
+    \
+    Our flagship newsletter breaks down the biggest headlines of the day.](/newsletters?id=Morning+Wire+Subscribers)
+    [The Afternoon Wire\
+    \
+    Get caught up on what you may have missed throughout the day.](/newsletters?id=Afternoon+Wire)
+    
+    [See All Newsletters](/newsletters)
+    
+*   [U.S.](https://apnews.com/us-news)
+    
+    SECTIONS
+    
+    [Immigration](https://apnews.com/hub/immigration)
+     [Weather](https://apnews.com/hub/weather)
+     [Education](https://apnews.com/education)
+     [Transportation](https://apnews.com/us-news/transportation)
+     [Abortion](https://apnews.com/hub/abortion)
+     [LGBTQ+](https://apnews.com/hub/lgbtq)
+     [Notable Deaths](https://apnews.com/hub/obituaries)
+    
+    TOP STORIES
+    
+    *   [Alabama town's first Black mayor, who had been locked out of office, wins election](https://apnews.com/article/alabama-newbern-first-black-mayor-4ee90489413deb40a8d302fc9457905b)
+        
+    *   [US offers military funeral honors to Capitol rioter Ashli Babbitt](https://apnews.com/article/ashli-babbitt-funeral-honors-trump-capitol-riot-743671da35c402b4db83f93cf46d46b3)
+        
+    *   [2 firefighters battling Washington state wildfire arrested by Border Patrol](https://apnews.com/article/immigration-wildfire-firefighters-8f7e2a55e61a824bfb88fefaf9bdb3fc)
+        
+    
+    Newsletters
+    
+    [The Morning Wire\
+    \
+    Our flagship newsletter breaks down the biggest headlines of the day.](/newsletters?id=Morning+Wire+Subscribers)
+    
+    [See All Newsletters](/newsletters)
+    
+    AP QUIZZES
+    
+    [Test Your News I.Q. Supreme Court](https://apnews.com/hub/us-supreme-court)
+     [2025 Election Calendar](https://apnews.com/projects/election-results-2025/)
+     [The latest AP-NORC polls](https://apnews.com/projects/polling-tracker/)
+     [Ground Game](https://apnews.com/newsletter/ground-game/july-28-2025)
+    
+    TOP STORIES
+    
+    *   [Trump blocks $4.9B in foreign aid Congress OK'd, using maneuver last seen nearly 50 years ago](https://apnews.com/article/trump-foreign-aid-pocket-rescission-374c63e6b4004e819a657e33b76f502e)
+        
+    *   [Trump ends ex-Vice President Harris' Secret Service protection early after Biden had extended it](https://apnews.com/article/trump-harris-secret-service-protection-894d6ca3f202c0a854390d653c101673)
+        
+    *   [LIVE Live updates: Trump blocks nearly $5 billion in foreign aid approved by Congress](https://apnews.com/live/donald-trump-news-updates-8-29-2025)
+        
+    
+    Newsletters
+    
+    [Ground Game\
+    \
+    Exclusive insights and key stories from the world of politics.](/newsletters?id=Ground_Game)
+    
+    [See All Newsletters](/newsletters)
+    
+*   [Sports](https://apnews.com/sports)
+    
+    SECTIONS
+    
+    [AP Top 25](https://apnews.com/hub/ap-top-25-college-football-poll)
+     [NFL](https://apnews.com/hub/nfl)
+     [MLB](https://apnews.com/hub/mlb)
+     [WNBA](https://apnews.com/hub/wnba-basketball)
+     [Tennis](https://apnews.com/hub/tennis)
+     [Golf](https://apnews.com/hub/golf)
+     [NBA](https://apnews.com/hub/nba)
+     [NHL](https://apnews.com/hub/nhl)
+    
+    TOP STORIES
+    
+    *   [Micah Parsons traded to the Green Bay Packers from the Cowboys after contract dispute](https://apnews.com/article/micah-parsons-trade-packers-cowboys-dae0fa122c83ecddaf1c38a93ce9d23e)
+        
+    *   [Messi's emotional farewell: Argentina star to play last home World Cup qualifier](https://apnews.com/article/lionel-messi-world-cup-argentina-venezuela-56f56926b73a40ddfbd995ac2822e744)
+        
+    *   [Travis Kelce and Taylor Swift attend Nebraska-Cincinnati game after engagement](https://apnews.com/article/travis-kelce-taylor-swift-nebraska-cincinnati-375c6f216299538c774b937b77869599)
+        
+    
+    Newsletters
+    
+    [AP Top 25 Poll Alerts\
+    \
+    Get email alerts for every college football Top 25 Poll release.](/newsletters?id=AP_CFB_Top_25_Poll_Alerts)
+    [The Sports Wire\
+    \
+    Your home base for in-depth reporting from the world of sports.](/newsletters?id=Sports+HQ)
+    
+    [See All Newsletters](/newsletters)
+    
+*   [Entertainment](https://apnews.com/entertainment)
+    
+    SECTIONS
+    
+    [Movies](https://apnews.com/hub/movies)
+     [What to Stream](https://apnews.com/hub/the-stream)
+     [Television](https://apnews.com/hub/television)
+     [Celebrity Interviews](https://apnews.com/hub/celebrity-interviews/)
+     [Music](https://apnews.com/hub/music)
+     [Books](https://apnews.com/hub/books-and-literature)
+    
+    TOP STORIES
+    
+    *   [Julia Roberts' 'After the Hunt' stirs #MeToo debate at Venice Film Festival](https://apnews.com/article/venice-film-festival-julia-roberts-8131117b45842443c0a7ad706e685f82)
+        
+    *   [A Broadway show asks a white actor to replace an Asian one."
+
+# Your Summary
+
+
+
+===== > RESPONSE:  < =====
+The Associated Press reported on an $825 million arms sale to Ukraine approved by the Trump administration, including extended-range missiles and related equipment. The sale will cover 3,350 ERAM missiles, 3,350 GPS units, and other accessories. The article mentions that Ukraine would use funding from NATO allies and U.S. foreign military financing to pay for the equipment. The sale was announced as Russia continues to step up attacks on Ukraine.
+
+_________________________
+
+
+
+SummarizeSummariesPrompt - QUERY:
+
+# Instructions
+You just retrieved web sources, each one summarized under "Web Sources". **Your task right now is to summarize the web source summaries.**
+
+Always adhere to the following rules:
+* Write only one to two paragraphs.
+* Include all URLs from the listed sources. Format them as Markdown hyperlinks.
+* Do not add any additional information besides the information in the summaries.
+* Include references (<image:k>) to all relevant images.
+
+# Record
+## Claim
+Claim: "Ukraine is selling half of the armaments it receives from the United States"
+
+## Actions
+```
+web_search("Ukraine US arms sales corruption")
+web_search("US aid Ukraine arms tracking")
+```
+
+## Evidence
+### Evidence from `web_search`
+Al Jazeera ([https://www.aljazeera.com/news/2025/8/2/ukraine-says-defence-sector-corruption-scheme-uncovered](https://www.aljazeera.com/news/2025/8/2/ukraine-says-defence-sector-corruption-scheme-uncovered)) reported that Ukrainian authorities detained officials over a large-scale corruption scheme in the defense sector involving inflated prices for military drones and signal jamming systems, with kickbacks up to 30 percent of contract amounts. <image:k> Politico ([https://www.politico.eu/article/ukraine-uncovers-major-corruption-scheme-defense-procurment-days-after-restoring-anticorruption/](https://www.politico.eu/article/ukraine-uncovers-major-corruption-scheme-defense-procurment-days-after-restoring-anticorruption/)) also reported on a corruption scheme involving the procurement of military equipment at inflated prices, with participants receiving 30 percent of the contract amount.
+
+PBS Frontline World ([https://www.pbs.org/frontlineworld/stories/sierraleone/context.html](https://www.pbs.org/frontlineworld/stories/sierraleone/context.html)) discusses illicit weapons, high-level corruption, and organized crime centered in Ukraine, highlighting the loss of $32 billion in military assets between 1992 and 1998 due to theft, discount arms sales, and lack of oversight. <image:k>
+
+
+### Evidence from `web_search`
+The United States has provided the largest amount of aid to Ukraine, totaling 114.64 billion euros ($134bn) between January 24, 2022, and June 30, 2025, according to an Al Jazeera article from August 21, 2025, which also mentions military, financial, and humanitarian aid (<image:1>, <image:2>). The Kiel Institute for the World Economy's "Ukraine Support Tracker" database quantifies military, financial, and humanitarian aid pledged to Ukraine since January 24, 2022, with the latest update from August 12, 2025, covering data up to June 2025, and notes that Europe is now leading the US in terms of total volume of military aid provided (<image:1>, <image:2>). Forumarmstrade.org provides a timeline of military aid to Ukraine from 2021 to 2025, listing various countries providing military assistance, including artillery shells, ammunition, air defense systems, drones, and other equipment.
+
+The sources are: [https://www.aljazeera.com/news/2025/8/21/tracking-us-and-nato-support-for-ukraine-a-full-breakdown](https://www.aljazeera.com/news/2025/8/21/tracking-us-and-nato-support-for-ukraine-a-full-breakdown), [https://www.forumarmstrade.org/ukrainearms.html](https://www.forumarmstrade.org/ukrainearms.html), and [https://www.ifw-kiel.de/topics/war-against-ukraine/ukraine-support-tracker/](https://www.ifw-kiel.de/topics/war-against-ukraine/ukraine-support-tracker/).
+
+
+## Elaboration
+The evidence indicates that Ukraine has received significant military aid from the United States and other countries. There is also evidence of corruption within the Ukrainian defense sector, including inflated prices for military equipment and kickbacks. However, the provided evidence does not contain any information about Ukraine selling half of the armaments it receives from the United States.
+
+To verify the claim, information is missing regarding the volume of arms sales by Ukraine and the origin of those arms.
+
+
+## Actions
+```
+web_search("Ukraine arms sales US aid")
+web_search("Ukraine arms trafficking investigation")
+```
+
+## Web Sources
+**Web Search Result**
+
+From [Source](https://www.dsca.mil/Press-Media/Major-Arms-Sales/Article-Display/Article/4289280/ukraine-air-delivered-munitions): 
+Content: The U.S. State Department approved a Foreign Military Sale to Ukraine for Air Delivered Munitions and related equipment for an estimated cost of $825 million. Ukraine requested to buy up to 3,350 Extended Range Attack Munition (ERAM) missiles and 3,350 Embedded Global Positioning System (GPS)/Inertial Navigation Systems (INS). The purchase will be funded by Denmark, the Netherlands, Norway, and Foreign Military Financing from the United States. The release date is August 28, 2025. The publisher is the U.S. Department of Defense.
+
+
+From [Source](https://apnews.com/article/ukraine-us-weapons-sale-trump-russia-74e01123c0067d5fc160141e0cabf207): 
+Content: The Associated Press reported on an $825 million arms sale to Ukraine approved by the Trump administration, including extended-range missiles and related equipment. The sale will cover 3,350 ERAM missiles, 3,350 GPS units, and other accessories. The article mentions that Ukraine would use funding from NATO allies and U.S. foreign military financing to pay for the equipment. The sale was announced as Russia continues to step up attacks on Ukraine.
+
+
+## Your Summary
+
+
+
+===== > RESPONSE:  < =====
+The U.S. State Department approved a Foreign Military Sale to Ukraine for Air Delivered Munitions and related equipment for an estimated cost of $825 million, including 3,350 Extended Range Attack Munition (ERAM) missiles and 3,350 Embedded Global Positioning System (GPS)/Inertial Navigation Systems (INS) (<image:k>). The sale will be funded by Denmark, the Netherlands, Norway, and Foreign Military Financing from the United States.
+
+Sources: [https://www.dsca.mil/Press-Media/Major-Arms-Sales/Article-Display/Article/4289280/ukraine-air-delivered-munitions](https://www.dsca.mil/Press-Media/Major-Arms-Sales/Article-Display/Article/4289280/ukraine-air-delivered-munitions) and [https://apnews.com/article/ukraine-us-weapons-sale-trump-russia-74e01123c0067d5fc160141e0cabf207](https://apnews.com/article/ukraine-us-weapons-sale-trump-russia-74e01123c0067d5fc160141e0cabf207).
+
+_________________________
+
+
+
+SummarizeResultPrompt - QUERY:
+
+# Instructions
+In order to find evidence that helps your fact-check, you just ran a web search which yielded a Search Result. **Your task right now is to summarize the Search Result.** What to include:
+* information that might be useful for the fact-check (see Record)
+* relevant images (refer to images by inserting their reference <image:k>)
+* if available: the release date as well as the author or the publisher (e.g. the media company) of the search result.
+
+Do NOT include:
+* advertisements
+* any other information not related to the Record or the Claim
+
+Additional rules:
+* Do not add any additional information besides the information in the Search Result.
+* If the Search Result doesn't contain any relevant information for the fact-checking work, simply print one word in capital letters: "NONE".
+* Keep your writing style like in the Examples 1, 2 and 3 provided to you.
+* Try to filter out relevant information even if the search result is in a different language.
+
+# Example 1
+The search result from America Today provides several photographs of the Notre-Dame Cathedral fire on April 15, 2019. <image:i>, <image:j>, <image:k>. None of the images show the Eiffel Tower in the background. 
+
+# Example 2
+NONE
+
+# Example 3
+The Guardian discusses a report blaming the Syrian government for a toxic gas attack and condemning their use of chemical weapons. The Guardian mentions the Chemical Weapons Convention and the responsibilities of Syria under the convention. According to The Guardian, The White House condemned the Assad regime for defying the norm against chemical weapons use.
+
+# Record
+## Claim
+Claim: "Ukraine is selling half of the armaments it receives from the United States"
+
+## Actions
+```
+web_search("Ukraine US arms sales corruption")
+web_search("US aid Ukraine arms tracking")
+```
+
+## Evidence
+### Evidence from `web_search`
+Al Jazeera ([https://www.aljazeera.com/news/2025/8/2/ukraine-says-defence-sector-corruption-scheme-uncovered](https://www.aljazeera.com/news/2025/8/2/ukraine-says-defence-sector-corruption-scheme-uncovered)) reported that Ukrainian authorities detained officials over a large-scale corruption scheme in the defense sector involving inflated prices for military drones and signal jamming systems, with kickbacks up to 30 percent of contract amounts. <image:k> Politico ([https://www.politico.eu/article/ukraine-uncovers-major-corruption-scheme-defense-procurment-days-after-restoring-anticorruption/](https://www.politico.eu/article/ukraine-uncovers-major-corruption-scheme-defense-procurment-days-after-restoring-anticorruption/)) also reported on a corruption scheme involving the procurement of military equipment at inflated prices, with participants receiving 30 percent of the contract amount.
+
+PBS Frontline World ([https://www.pbs.org/frontlineworld/stories/sierraleone/context.html](https://www.pbs.org/frontlineworld/stories/sierraleone/context.html)) discusses illicit weapons, high-level corruption, and organized crime centered in Ukraine, highlighting the loss of $32 billion in military assets between 1992 and 1998 due to theft, discount arms sales, and lack of oversight. <image:k>
+
+
+### Evidence from `web_search`
+The United States has provided the largest amount of aid to Ukraine, totaling 114.64 billion euros ($134bn) between January 24, 2022, and June 30, 2025, according to an Al Jazeera article from August 21, 2025, which also mentions military, financial, and humanitarian aid (<image:1>, <image:2>). The Kiel Institute for the World Economy's "Ukraine Support Tracker" database quantifies military, financial, and humanitarian aid pledged to Ukraine since January 24, 2022, with the latest update from August 12, 2025, covering data up to June 2025, and notes that Europe is now leading the US in terms of total volume of military aid provided (<image:1>, <image:2>). Forumarmstrade.org provides a timeline of military aid to Ukraine from 2021 to 2025, listing various countries providing military assistance, including artillery shells, ammunition, air defense systems, drones, and other equipment.
+
+The sources are: [https://www.aljazeera.com/news/2025/8/21/tracking-us-and-nato-support-for-ukraine-a-full-breakdown](https://www.aljazeera.com/news/2025/8/21/tracking-us-and-nato-support-for-ukraine-a-full-breakdown), [https://www.forumarmstrade.org/ukrainearms.html](https://www.forumarmstrade.org/ukrainearms.html), and [https://www.ifw-kiel.de/topics/war-against-ukraine/ukraine-support-tracker/](https://www.ifw-kiel.de/topics/war-against-ukraine/ukraine-support-tracker/).
+
+
+## Elaboration
+The evidence indicates that Ukraine has received significant military aid from the United States and other countries. There is also evidence of corruption within the Ukrainian defense sector, including inflated prices for military equipment and kickbacks. However, the provided evidence does not contain any information about Ukraine selling half of the armaments it receives from the United States.
+
+To verify the claim, information is missing regarding the volume of arms sales by Ukraine and the origin of those arms.
+
+
+## Actions
+```
+web_search("Ukraine arms sales US aid")
+web_search("Ukraine arms trafficking investigation")
+```
+
+# Search Result
+From [Source](https://globalinitiative.net/analysis/future-trends-in-arms-trafficking-from-the-ukraine-conflict/): 
+Content: "![](<Base64-Image-Removed>) 
+
+*   [analysis](https://globalinitiative.net/analysis)
+    
+*   [publication](https://globalinitiative.net/article_type/publication/)
+    
+
+*   [Crime & Conflict](https://globalinitiative.net/initiatives/crime-conflict/)
+    
+*   [EAS-Obs](https://globalinitiative.net/observatory/eas-obs/)
+    
+*   [EUR-Obs](https://globalinitiative.net/observatory/eur-obs/)
+    
+*   [europe](https://globalinitiative.net/region/europe/)
+    
+
+Tomorrow's fire
+---------------
+
+Future trends in arms trafficking from the Ukraine conflict
+
+*   [](https://globalinitiative.net/crime_type/arms-trafficking/)
+    
+*   [](https://globalinitiative.net/crime_type/violence-fragility/)
+    
+
+*   [! What this means for organized crime, and specifically the smuggling of weapons and ammunition into Europe is unclear, but by using scenario modelling we can divine insights and provide concrete recommendations.
+
+On 20–21 January 2025, the GI-TOC hosted a conference in Brussels to discuss three potential trajectories of the Russo-Ukrainian conflict and the ramifications of each on arms trafficking dynamics in Europe.
+
+The conference gamed three scenarios – a peace agreement, a stalemate conflict and a decisive victory for Ukraine or Russia. Some leakage must be expected, and understanding this reality should persuade policymakers to act sooner rather than wait for a trigger event in a European city.
+
+#### Key points
+
+*   Draft, support and implement policy measures that reduce arms trafficking risks in Ukraine, including (when it is formulated) Ukraine’s demobilization law, and its security sector reform and veteran policy.
+*   Improve Europe-wide operational capabilities in terms of information sharing, coordination and access to data.
+*   The arms trafficking trade is likely to be multifaceted: a small-scale trade to European organized crime, and a larger volume trade to other regions (Africa, Latin America, Middle East, Central Asia), potentially to conflict actors.
+*   ‘Traditional’ organized crime may be involved in arms trafficking alongside other more lucrative activities, like the drug trade, but ex-military personnel may form a new class of ‘brokers’, using connections with other military and politicians to set up larger-scale operations.
+*   Tailor responses that recognize demand is king: the right kit for the right customer. <image:1112>\
+\
+18 Jun 2024\
+\
+### Smoke on the horizon:\
+\
+Crime & Conflict, EAS-Obs\
+\
+Smoke on the horizon: Trends in arms trafficking from the conflict in Ukraine\
+-----------------------------------------------------------------------------](https://globalinitiative.net/analysis/trends-arms-trafficking-conflict-ukraine-russia-monitor/)
+
+[! Participants were asked to respond, from the perspective of organized crime, law enforcement and multilateral policymakers, to emergent arms trafficking dynamics, working through various turns to discover second- and third-order implications. Asking participants to step outside their role and think like a criminal is rewarding and illuminates the discussion, while building trust and personal connections.
+
+The purpose of this exercise was to provide policymakers with a forward-looking perspective that would map the potential risk of arms trafficking across a range of situations, point up gaps in responses and develop specific and measurable policy response options for national authorities to implement with the aim of reducing the risks of illicit firearms markets in Europe from the conflict.
+
+Fostering international cooperation and information-sharing was also a primary goal of the conference. More than 60 high-level stakeholders attended from a range of organizations focusing on arms trafficking.
+
+#### Understanding the risk
+
+Understanding of the risks of arms trafficking arising from the conflict has improved since the Russian invasion in February 2022. Yet recent research suggests criminal groups are establishing more organized arms trafficking markets, routes and supply chains, and the scale of the problem is much larger than past occurrences of large-scale diversion, such as the Balkans and Afghanistan. Experts and policymakers in neighbouring and other European countries continue to express their concerns about the threat of large-scale diversion of small arms and light weapons (SALW) and ammunition from Ukraine. An overarching conclusion was that policy responses must flexible and scalable from the start.
+
+**Use lessons learned (and learn new ones)**
+
+The conference highlighted the fact that many policy bodies in Europe have a deep and multilayered understanding of the legacy of the Balkans conflict on arms trafficking trends in Europe."
+
+# Your Summary
+
+
+
+===== > RESPONSE:  < =====
+The Global Initiative Against Transnational Organized Crime published a report on June 18, 2024, discussing future trends in arms trafficking from the Ukraine conflict. The report highlights concerns about the diversion of small arms and light weapons (SALW) and ammunition from Ukraine, with criminal groups establishing more organized arms trafficking markets. The report suggests that arms trafficking is likely to be multifaceted, involving both small-scale trade to European organized crime and larger-volume trade to other regions, potentially to conflict actors. The report also mentions that ex-military personnel may form a new class of 'brokers', using connections with other military and politicians to set up larger-scale operations. <image:1112>
+
+_________________________
+
+
+
+SummarizeResultPrompt - QUERY:
+
+# Instructions
+In order to find evidence that helps your fact-check, you just ran a web search which yielded a Search Result. **Your task right now is to summarize the Search Result.** What to include:
+* information that might be useful for the fact-check (see Record)
+* relevant images (refer to images by inserting their reference <image:k>)
+* if available: the release date as well as the author or the publisher (e.g. the media company) of the search result.
+
+Do NOT include:
+* advertisements
+* any other information not related to the Record or the Claim
+
+Additional rules:
+* Do not add any additional information besides the information in the Search Result.
+* If the Search Result doesn't contain any relevant information for the fact-checking work, simply print one word in capital letters: "NONE".
+* Keep your writing style like in the Examples 1, 2 and 3 provided to you.
+* Try to filter out relevant information even if the search result is in a different language.
+
+# Example 1
+The search result from America Today provides several photographs of the Notre-Dame Cathedral fire on April 15, 2019. <image:i>, <image:j>, <image:k>. None of the images show the Eiffel Tower in the background. 
+
+# Example 2
+NONE
+
+# Example 3
+The Guardian discusses a report blaming the Syrian government for a toxic gas attack and condemning their use of chemical weapons. The Guardian mentions the Chemical Weapons Convention and the responsibilities of Syria under the convention. According to The Guardian, The White House condemned the Assad regime for defying the norm against chemical weapons use.
+
+# Record
+## Claim
+Claim: "Ukraine is selling half of the armaments it receives from the United States"
+
+## Actions
+```
+web_search("Ukraine US arms sales corruption")
+web_search("US aid Ukraine arms tracking")
+```
+
+## Evidence
+### Evidence from `web_search`
+Al Jazeera ([https://www.aljazeera.com/news/2025/8/2/ukraine-says-defence-sector-corruption-scheme-uncovered](https://www.aljazeera.com/news/2025/8/2/ukraine-says-defence-sector-corruption-scheme-uncovered)) reported that Ukrainian authorities detained officials over a large-scale corruption scheme in the defense sector involving inflated prices for military drones and signal jamming systems, with kickbacks up to 30 percent of contract amounts. <image:k> Politico ([https://www.politico.eu/article/ukraine-uncovers-major-corruption-scheme-defense-procurment-days-after-restoring-anticorruption/](https://www.politico.eu/article/ukraine-uncovers-major-corruption-scheme-defense-procurment-days-after-restoring-anticorruption/)) also reported on a corruption scheme involving the procurement of military equipment at inflated prices, with participants receiving 30 percent of the contract amount.
+
+PBS Frontline World ([https://www.pbs.org/frontlineworld/stories/sierraleone/context.html](https://www.pbs.org/frontlineworld/stories/sierraleone/context.html)) discusses illicit weapons, high-level corruption, and organized crime centered in Ukraine, highlighting the loss of $32 billion in military assets between 1992 and 1998 due to theft, discount arms sales, and lack of oversight. <image:k>
+
+
+### Evidence from `web_search`
+The United States has provided the largest amount of aid to Ukraine, totaling 114.64 billion euros ($134bn) between January 24, 2022, and June 30, 2025, according to an Al Jazeera article from August 21, 2025, which also mentions military, financial, and humanitarian aid (<image:1>, <image:2>). The Kiel Institute for the World Economy's "Ukraine Support Tracker" database quantifies military, financial, and humanitarian aid pledged to Ukraine since January 24, 2022, with the latest update from August 12, 2025, covering data up to June 2025, and notes that Europe is now leading the US in terms of total volume of military aid provided (<image:1>, <image:2>). Forumarmstrade.org provides a timeline of military aid to Ukraine from 2021 to 2025, listing various countries providing military assistance, including artillery shells, ammunition, air defense systems, drones, and other equipment.
+
+The sources are: [https://www.aljazeera.com/news/2025/8/21/tracking-us-and-nato-support-for-ukraine-a-full-breakdown](https://www.aljazeera.com/news/2025/8/21/tracking-us-and-nato-support-for-ukraine-a-full-breakdown), [https://www.forumarmstrade.org/ukrainearms.html](https://www.forumarmstrade.org/ukrainearms.html), and [https://www.ifw-kiel.de/topics/war-against-ukraine/ukraine-support-tracker/](https://www.ifw-kiel.de/topics/war-against-ukraine/ukraine-support-tracker/).
+
+
+## Elaboration
+The evidence indicates that Ukraine has received significant military aid from the United States and other countries. There is also evidence of corruption within the Ukrainian defense sector, including inflated prices for military equipment and kickbacks. However, the provided evidence does not contain any information about Ukraine selling half of the armaments it receives from the United States.
+
+To verify the claim, information is missing regarding the volume of arms sales by Ukraine and the origin of those arms.
+
+
+## Actions
+```
+web_search("Ukraine arms sales US aid")
+web_search("Ukraine arms trafficking investigation")
+```
+
+# Search Result
+From [Source](https://www.euam-ukraine.eu/news/moia-launches-the-coordination-centre-to-combat-illicit-arms-trafficking/): 
+Content: "<image:1115>
+
+The inaugural meeting of the Coordination Centre for Combating Illicit Trafficking in Firearms, Their Parts and Components and Ammunition was held under the chairmanship of Ihor Klymenko, the Minister of Internal Affairs of Ukraine, [reports](https://mvs.gov.ua/en/news/igor-klimenko-zapusk-koordinaciinogo-centru-z-pitan-protidiyi-nezakonnomu-obigu-zbroyi-nas-vnesok-u-rozbudovu-jevropeiskoyi-arxitekturi-bezpeki)
+ the Communications Department of the Ministry of Internal Affairs of Ukraine.
+
+The event was also attended by Oleksii Serhieiev, the Deputy Minister of Internal Affairs of Ukraine, Ivan Vyhivskyi, the Head of the National Police of Ukraine, representatives of the Office of the Prosecutor General, the Ministry of Defence, the Security Service of Ukraine, the State Bureau of Investigation, the Ministry of Strategic Industries of Ukraine, international organisations such as the OSCE, the European Union Advisory Mission Ukraine, the United Nations Office on Drugs and Crime, the Delegation of the European Union, and a member of the Ukrainian Parliament.
+
+“Every day, law enforcement agencies seize weapons, explosives and ammunition from illicit trafficking, and border guards take exhaustive measures to prevent their trafficking across the state border. *   [Home](https://www.euam-ukraine.eu/)
+    
+*   [News](https://www.euam-ukraine.eu/news/)
+    
+*   MoIA Launches the Coordination Centre to Combat Illicit Arms Trafficking
+
+### MoIA Launches the Coordination Centre to Combat Illicit Arms Trafficking
+
+February 06, 2025
+
+! Taking into account the EU recommendations and ensuring the proper functioning of the Coordination Centre, we are making our contribution to the development of the European security architecture,” the Minister added.
+
+In his turn, Ambassador Petr Mareš, Special Representative of the OSCE Chairmanship and Project Co-ordinator in Ukraine, said that the issue of arms trafficking is becoming increasingly acute due to russia’s full-scale invasion, but the creation of the Coordination Centre will help to effectively counteract this problem. Achieving synergy in combating illicit arms trafficking is of great importance to us, as we are aware that the war is ongoing, and only through joint efforts can we ensure security in Ukraine and Europe,” he said.
+
+! <image:1117>
+
+In response, the Minister of Internal Affairs of Ukraine stressed that, with the assistance of international partners, the Ministry of Internal Affairs is implementing a number of joint projects aimed at building the institutional capacity of law enforcement agencies.
+
+Harshet Virk, the Head of the UN Office on Drugs and Crime Programme Office in Ukraine, stressed that owing to the coordinated and efficient efforts of Ukrainian law enforcement agencies, not a single weapon was trafficked to the European Union: “I sincerely congratulate you on the establishment of the Coordination Centre – this is an important step in the fight against crime and illicit arms trafficking. <image:1118>
+
+Harshet Virk noted that her team will continue to support the initiatives of the Ministry of Internal Affairs by providing software and organising relevant trainings.
+
+Maura O’Sullivan, the Acting Head of the EU Advisory Mission Ukraine, said that the Centre is a reliable solution for monitoring the situation in Ukraine, particularly in the area of combating illicit arms trafficking: “We are ready to continue to support you and facilitate the rapid exchange of information. The main tasks of the Centre are:
+
+– processing and systematisation of information received;
+
+– coordinating the actions of state authorities, institutions and organisations on combating illicit firearms trafficking;
+
+– ensuring the exchange of information between the authorities of Ukraine and partner countries;
+
+– obtaining complete information about weapons;
+
+– improving the legal framework for combating illicit firearms trafficking;
+
+– identifying ways and means of solving problematic issues.
+
+*   [coordination center](https://www.euam-ukraine.eu/tag/coordination-center/)
+    
+*   [illicit trafficking in firearms](https://www.euam-ukraine.eu/tag/illicit-trafficking-in-firearms/)
+    
+*   [MoIA](https://www.euam-ukraine.eu/tag/moia/)
+    
+
+Share this post:
+
+*   [](javascript:void(0))
+    
+*   [](javascript:void(0))
+    
+*   [](javascript:void(0))
+    
+*   [](javascript:void(0))
+    
+*   [](/feed/)
+    
+*   [](mailto:?subject=MoIA Launches the Coordination Centre to Combat Illicit Arms Trafficking&body=https://www.euam-ukraine.eu/news/moia-launches-the-coordination-centre-to-combat-illicit-arms-trafficking/)
+    
+
+### News
+
+*   [Latest News](https://www.euam-ukraine.eu/news/latest-news/)
+    
+*   [Press Releases](https://www.euam-ukraine.eu/news/press-releases/)
+    
+*   [Opinion & Interviews](https://www.euam-ukraine.eu/news/opinion/)
+    
+*   [Infographics & Photos](https://www.euam-ukraine.eu/news/infographics/)
+    
+*   [Video](https://www.euam-ukraine.eu/news/video/)
+    
+*   [Newsletters](https://www.euam-ukraine.eu/news/newsletters/)
+    
+*   [Press material](https://www.euam-ukraine.eu/news/press-material/)
+    
+
+### Related news
+
+[! <image:1125>\
+\
+How to Combat Illicit Firearms Trafficking Effectively\
+\
+November 09, 2023](https://www.euam-ukraine.eu/news/how-to-combat-firearms-trafficking-effectively/)
+
+### Archive
+
+*   [2025](/2025)
+    
+*   [2024](/2024)
+    
+*   [2023](/2023)
+    
+*   [2022](/2022)
+    
+*   [2021](/2021)
+    
+*   [2020](/2020)
+    
+*   [2019](/2019)
+    
+*   [2018](/2018)
+    
+*   [2017](/2017)
+    
+*   [2016](/2016)
+    
+*   [2015](/2015)
+    
+*   [2014](/2014)
+    
+
+[!Creative Commons License <image:1126>](http://creativecommons.org/licenses/by-sa/4.0/)
+  
+MoIA Launches the Coordination Centre to Combat Illicit Arms Trafficking is licensed under a [Creative Commons Attribution-Share Alike 4.0 License](http://creativecommons.org/licenses/by-sa/4.0/)
+. The launch of the Coordination Centre and ensuring proper control over arms trafficking was one of our top priorities, given its importance for the security system of the whole of Europe,” said Ihor Klymenko, addressing the audience.
+
+The Minister of Internal Affairs noted that within the framework of joint activities with the European Commission, the Ministry of Internal Affairs (MoIA) is implementing projects aimed at preventing the leakage of firearms.
+
+! <image:1120>
+
+In addition, the participants got acquainted with the work of the Focal Point at the Coordination Centre, where a permanent working group ensures information interaction between state bodies in the fight against illegal arms trafficking.
+
+!"
+
+# Your Summary
+
+
+
+===== > RESPONSE:  < =====
+The EU Advisory Mission Ukraine (EUAM) reported on February 6, 2025, that the Ministry of Internal Affairs of Ukraine (MoIA) launched a Coordination Centre to Combat Illicit Arms Trafficking. <image:1115>, <image:1117>, <image:1118>, <image:1120>, <image:1125>. The center aims to counteract illegal arms trafficking, coordinate actions, and exchange information between Ukrainian authorities and partner countries. The UN Office on Drugs and Crime stated that no weapons were trafficked to the European Union due to the efforts of Ukrainian law enforcement agencies.
+
+_________________________
+
+
+
+SummarizeSummariesPrompt - QUERY:
+
+# Instructions
+You just retrieved web sources, each one summarized under "Web Sources". **Your task right now is to summarize the web source summaries.**
+
+Always adhere to the following rules:
+* Write only one to two paragraphs.
+* Include all URLs from the listed sources. Format them as Markdown hyperlinks.
+* Do not add any additional information besides the information in the summaries.
+* Include references (<image:k>) to all relevant images.
+
+# Record
+## Claim
+Claim: "Ukraine is selling half of the armaments it receives from the United States"
+
+## Actions
+```
+web_search("Ukraine US arms sales corruption")
+web_search("US aid Ukraine arms tracking")
+```
+
+## Evidence
+### Evidence from `web_search`
+Al Jazeera ([https://www.aljazeera.com/news/2025/8/2/ukraine-says-defence-sector-corruption-scheme-uncovered](https://www.aljazeera.com/news/2025/8/2/ukraine-says-defence-sector-corruption-scheme-uncovered)) reported that Ukrainian authorities detained officials over a large-scale corruption scheme in the defense sector involving inflated prices for military drones and signal jamming systems, with kickbacks up to 30 percent of contract amounts. <image:k> Politico ([https://www.politico.eu/article/ukraine-uncovers-major-corruption-scheme-defense-procurment-days-after-restoring-anticorruption/](https://www.politico.eu/article/ukraine-uncovers-major-corruption-scheme-defense-procurment-days-after-restoring-anticorruption/)) also reported on a corruption scheme involving the procurement of military equipment at inflated prices, with participants receiving 30 percent of the contract amount.
+
+PBS Frontline World ([https://www.pbs.org/frontlineworld/stories/sierraleone/context.html](https://www.pbs.org/frontlineworld/stories/sierraleone/context.html)) discusses illicit weapons, high-level corruption, and organized crime centered in Ukraine, highlighting the loss of $32 billion in military assets between 1992 and 1998 due to theft, discount arms sales, and lack of oversight. <image:k>
+
+
+### Evidence from `web_search`
+The United States has provided the largest amount of aid to Ukraine, totaling 114.64 billion euros ($134bn) between January 24, 2022, and June 30, 2025, according to an Al Jazeera article from August 21, 2025, which also mentions military, financial, and humanitarian aid (<image:1>, <image:2>). The Kiel Institute for the World Economy's "Ukraine Support Tracker" database quantifies military, financial, and humanitarian aid pledged to Ukraine since January 24, 2022, with the latest update from August 12, 2025, covering data up to June 2025, and notes that Europe is now leading the US in terms of total volume of military aid provided (<image:1>, <image:2>). Forumarmstrade.org provides a timeline of military aid to Ukraine from 2021 to 2025, listing various countries providing military assistance, including artillery shells, ammunition, air defense systems, drones, and other equipment.
+
+The sources are: [https://www.aljazeera.com/news/2025/8/21/tracking-us-and-nato-support-for-ukraine-a-full-breakdown](https://www.aljazeera.com/news/2025/8/21/tracking-us-and-nato-support-for-ukraine-a-full-breakdown), [https://www.forumarmstrade.org/ukrainearms.html](https://www.forumarmstrade.org/ukrainearms.html), and [https://www.ifw-kiel.de/topics/war-against-ukraine/ukraine-support-tracker/](https://www.ifw-kiel.de/topics/war-against-ukraine/ukraine-support-tracker/).
+
+
+## Elaboration
+The evidence indicates that Ukraine has received significant military aid from the United States and other countries. There is also evidence of corruption within the Ukrainian defense sector, including inflated prices for military equipment and kickbacks. However, the provided evidence does not contain any information about Ukraine selling half of the armaments it receives from the United States.
+
+To verify the claim, information is missing regarding the volume of arms sales by Ukraine and the origin of those arms.
+
+
+## Actions
+```
+web_search("Ukraine arms sales US aid")
+web_search("Ukraine arms trafficking investigation")
+```
+
+## Web Sources
+**Web Search Result**
+
+From [Source](https://globalinitiative.net/analysis/future-trends-in-arms-trafficking-from-the-ukraine-conflict/): 
+Content: The Global Initiative Against Transnational Organized Crime published a report on June 18, 2024, discussing future trends in arms trafficking from the Ukraine conflict. The report highlights concerns about the diversion of small arms and light weapons (SALW) and ammunition from Ukraine, with criminal groups establishing more organized arms trafficking markets. The report suggests that arms trafficking is likely to be multifaceted, involving both small-scale trade to European organized crime and larger-volume trade to other regions, potentially to conflict actors. The report also mentions that ex-military personnel may form a new class of 'brokers', using connections with other military and politicians to set up larger-scale operations. <image:1112>
+
+
+From [Source](https://www.euam-ukraine.eu/news/moia-launches-the-coordination-centre-to-combat-illicit-arms-trafficking/): 
+Content: The EU Advisory Mission Ukraine (EUAM) reported on February 6, 2025, that the Ministry of Internal Affairs of Ukraine (MoIA) launched a Coordination Centre to Combat Illicit Arms Trafficking. <image:1115>, <image:1117>, <image:1118>, <image:1120>, <image:1125>. The center aims to counteract illegal arms trafficking, coordinate actions, and exchange information between Ukrainian authorities and partner countries. The UN Office on Drugs and Crime stated that no weapons were trafficked to the European Union due to the efforts of Ukrainian law enforcement agencies.
+
+
+## Your Summary
+
+
+
+===== > RESPONSE:  < =====
+The Global Initiative Against Transnational Organized Crime published a report on June 18, 2024, highlighting concerns about the diversion of small arms and light weapons (SALW) and ammunition from Ukraine, with criminal groups establishing more organized arms trafficking markets (<image:1112>). The EU Advisory Mission Ukraine (EUAM) reported on February 6, 2025, that the Ministry of Internal Affairs of Ukraine (MoIA) launched a Coordination Centre to Combat Illicit Arms Trafficking (<image:1115>, <image:1117>, <image:1118>, <image:1120>, <image:1125>). The UN Office on Drugs and Crime stated that no weapons were trafficked to the European Union due to the efforts of Ukrainian law enforcement agencies.
+
+_________________________
+
+
+
+DevelopPrompt - QUERY:
+
+# Instructions
+You just retrieved new Evidence. Now, **analyze the Claim's veracity using the evidence**. Always adhere to the following rules:
+* Focus on developing new insights. Do not repeat larger parts from the Record. Do not restate the Claim.
+* Write down your thoughts step-by-step. Whenever necessary, you may elaborate in more detail.
+* Depending on the topic's complexity, invest one to three paragraphs. The fewer, the better.
+* If you find that there is insufficient information to verify the Claim, explicitly state what information is missing.
+* If you cite web sources, always refer to them by including their URL as a Markdown hyperlink.
+* **Use information only from the recorded evidence**: Avoid inserting information that is not implied by the evidence. You may use commonsense knowledge, though.
+
+# Record
+## Claim
+Claim: "Ukraine is selling half of the armaments it receives from the United States"
+
+## Actions
+```
+web_search("Ukraine US arms sales corruption")
+web_search("US aid Ukraine arms tracking")
+```
+
+## Evidence
+### Evidence from `web_search`
+Al Jazeera ([https://www.aljazeera.com/news/2025/8/2/ukraine-says-defence-sector-corruption-scheme-uncovered](https://www.aljazeera.com/news/2025/8/2/ukraine-says-defence-sector-corruption-scheme-uncovered)) reported that Ukrainian authorities detained officials over a large-scale corruption scheme in the defense sector involving inflated prices for military drones and signal jamming systems, with kickbacks up to 30 percent of contract amounts. <image:k> Politico ([https://www.politico.eu/article/ukraine-uncovers-major-corruption-scheme-defense-procurment-days-after-restoring-anticorruption/](https://www.politico.eu/article/ukraine-uncovers-major-corruption-scheme-defense-procurment-days-after-restoring-anticorruption/)) also reported on a corruption scheme involving the procurement of military equipment at inflated prices, with participants receiving 30 percent of the contract amount.
+
+PBS Frontline World ([https://www.pbs.org/frontlineworld/stories/sierraleone/context.html](https://www.pbs.org/frontlineworld/stories/sierraleone/context.html)) discusses illicit weapons, high-level corruption, and organized crime centered in Ukraine, highlighting the loss of $32 billion in military assets between 1992 and 1998 due to theft, discount arms sales, and lack of oversight. <image:k>
+
+
+### Evidence from `web_search`
+The United States has provided the largest amount of aid to Ukraine, totaling 114.64 billion euros ($134bn) between January 24, 2022, and June 30, 2025, according to an Al Jazeera article from August 21, 2025, which also mentions military, financial, and humanitarian aid (<image:1>, <image:2>). The Kiel Institute for the World Economy's "Ukraine Support Tracker" database quantifies military, financial, and humanitarian aid pledged to Ukraine since January 24, 2022, with the latest update from August 12, 2025, covering data up to June 2025, and notes that Europe is now leading the US in terms of total volume of military aid provided (<image:1>, <image:2>). Forumarmstrade.org provides a timeline of military aid to Ukraine from 2021 to 2025, listing various countries providing military assistance, including artillery shells, ammunition, air defense systems, drones, and other equipment.
+
+The sources are: [https://www.aljazeera.com/news/2025/8/21/tracking-us-and-nato-support-for-ukraine-a-full-breakdown](https://www.aljazeera.com/news/2025/8/21/tracking-us-and-nato-support-for-ukraine-a-full-breakdown), [https://www.forumarmstrade.org/ukrainearms.html](https://www.forumarmstrade.org/ukrainearms.html), and [https://www.ifw-kiel.de/topics/war-against-ukraine/ukraine-support-tracker/](https://www.ifw-kiel.de/topics/war-against-ukraine/ukraine-support-tracker/).
+
+
+## Elaboration
+The evidence indicates that Ukraine has received significant military aid from the United States and other countries. There is also evidence of corruption within the Ukrainian defense sector, including inflated prices for military equipment and kickbacks. However, the provided evidence does not contain any information about Ukraine selling half of the armaments it receives from the United States.
+
+To verify the claim, information is missing regarding the volume of arms sales by Ukraine and the origin of those arms.
+
+
+## Actions
+```
+web_search("Ukraine arms sales US aid")
+web_search("Ukraine arms trafficking investigation")
+```
+
+## Evidence
+### Evidence from `web_search`
+The U.S. State Department approved a Foreign Military Sale to Ukraine for Air Delivered Munitions and related equipment for an estimated cost of $825 million, including 3,350 Extended Range Attack Munition (ERAM) missiles and 3,350 Embedded Global Positioning System (GPS)/Inertial Navigation Systems (INS) (<image:k>). The sale will be funded by Denmark, the Netherlands, Norway, and Foreign Military Financing from the United States.
+
+Sources: [https://www.dsca.mil/Press-Media/Major-Arms-Sales/Article-Display/Article/4289280/ukraine-air-delivered-munitions](https://www.dsca.mil/Press-Media/Major-Arms-Sales/Article-Display/Article/4289280/ukraine-air-delivered-munitions) and [https://apnews.com/article/ukraine-us-weapons-sale-trump-russia-74e01123c0067d5fc160141e0cabf207](https://apnews.com/article/ukraine-us-weapons-sale-trump-russia-74e01123c0067d5fc160141e0cabf207).
+
+
+### Evidence from `web_search`
+The Global Initiative Against Transnational Organized Crime published a report on June 18, 2024, highlighting concerns about the diversion of small arms and light weapons (SALW) and ammunition from Ukraine, with criminal groups establishing more organized arms trafficking markets (<image:1112>). The EU Advisory Mission Ukraine (EUAM) reported on February 6, 2025, that the Ministry of Internal Affairs of Ukraine (MoIA) launched a Coordination Centre to Combat Illicit Arms Trafficking (<image:1115>, <image:1117>, <image:1118>, <image:1120>, <image:1125>). The UN Office on Drugs and Crime stated that no weapons were trafficked to the European Union due to the efforts of Ukrainian law enforcement agencies.
+
+
+# Your Analysis
+
+
+
+===== > RESPONSE:  < =====
+The evidence reveals that Ukraine is involved in arms sales, including a Foreign Military Sale approved by the U.S. State Department. There are also concerns about arms trafficking and the diversion of weapons from Ukraine, leading to the establishment of a Coordination Centre to combat illicit arms trafficking. However, the evidence does not support the claim that Ukraine is selling half of the armaments it receives from the United States.
+
+The claim is not supported by the evidence. The evidence does not provide any specific figures on the volume of arms sales or the proportion of U.S.-supplied armaments involved.
+
+_________________________
+
+
+
+JudgePrompt - QUERY:
+
+# Instructions
+**Determine the Claim's veracity** by following these steps:
+1. Briefly summarize the key insights from the fact-check (see Record) in at most one paragraph.
+2. Write one paragraph about which one of the Decision Options applies best. Include the most appropriate decision option at the end and enclose it in backticks like `this`.
+
+
+
+
+## Decision Options
+* `false`: The claim is not factually accurate. This is the case if one of the following three conditions is met:(1) The claim is demonstrably false when it is disproven by evidence from multiple and reliable sources,(2) The claim or image is taken out of context, i.e. the origin, content and/or meaning of a statement or an image is misrepresented. For example, an old claim or an old image is mispresented in a new context in a misleading way,(3) There is not enough evidence to verify the claim or the evidence is conflicting or self-contradictory.
+* `not enough information`: The fact-check does not contain sufficient information to come to an conclusion. For example,there is substantial lack of evidence or the evidence is inconclusive, conflicting or self-contradictory. In the case of a lack of evidence, state which information exactly is missing. In particular, if no RESULTS or sources are available, pick this decision.
+* `true`: The claim is factually accurate when it is confirmed by evidence from multiple and reliable sources.
+
+# Record
+## Claim
+Claim: "Ukraine is selling half of the armaments it receives from the United States"
+
+## Actions
+```
+web_search("Ukraine US arms sales corruption")
+web_search("US aid Ukraine arms tracking")
+```
+
+## Evidence
+### Evidence from `web_search`
+Al Jazeera ([https://www.aljazeera.com/news/2025/8/2/ukraine-says-defence-sector-corruption-scheme-uncovered](https://www.aljazeera.com/news/2025/8/2/ukraine-says-defence-sector-corruption-scheme-uncovered)) reported that Ukrainian authorities detained officials over a large-scale corruption scheme in the defense sector involving inflated prices for military drones and signal jamming systems, with kickbacks up to 30 percent of contract amounts. <image:k> Politico ([https://www.politico.eu/article/ukraine-uncovers-major-corruption-scheme-defense-procurment-days-after-restoring-anticorruption/](https://www.politico.eu/article/ukraine-uncovers-major-corruption-scheme-defense-procurment-days-after-restoring-anticorruption/)) also reported on a corruption scheme involving the procurement of military equipment at inflated prices, with participants receiving 30 percent of the contract amount.
+
+PBS Frontline World ([https://www.pbs.org/frontlineworld/stories/sierraleone/context.html](https://www.pbs.org/frontlineworld/stories/sierraleone/context.html)) discusses illicit weapons, high-level corruption, and organized crime centered in Ukraine, highlighting the loss of $32 billion in military assets between 1992 and 1998 due to theft, discount arms sales, and lack of oversight. <image:k>
+
+
+### Evidence from `web_search`
+The United States has provided the largest amount of aid to Ukraine, totaling 114.64 billion euros ($134bn) between January 24, 2022, and June 30, 2025, according to an Al Jazeera article from August 21, 2025, which also mentions military, financial, and humanitarian aid (<image:1>, <image:2>). The Kiel Institute for the World Economy's "Ukraine Support Tracker" database quantifies military, financial, and humanitarian aid pledged to Ukraine since January 24, 2022, with the latest update from August 12, 2025, covering data up to June 2025, and notes that Europe is now leading the US in terms of total volume of military aid provided (<image:1>, <image:2>). Forumarmstrade.org provides a timeline of military aid to Ukraine from 2021 to 2025, listing various countries providing military assistance, including artillery shells, ammunition, air defense systems, drones, and other equipment.
+
+The sources are: [https://www.aljazeera.com/news/2025/8/21/tracking-us-and-nato-support-for-ukraine-a-full-breakdown](https://www.aljazeera.com/news/2025/8/21/tracking-us-and-nato-support-for-ukraine-a-full-breakdown), [https://www.forumarmstrade.org/ukrainearms.html](https://www.forumarmstrade.org/ukrainearms.html), and [https://www.ifw-kiel.de/topics/war-against-ukraine/ukraine-support-tracker/](https://www.ifw-kiel.de/topics/war-against-ukraine/ukraine-support-tracker/).
+
+
+## Elaboration
+The evidence indicates that Ukraine has received significant military aid from the United States and other countries. There is also evidence of corruption within the Ukrainian defense sector, including inflated prices for military equipment and kickbacks. However, the provided evidence does not contain any information about Ukraine selling half of the armaments it receives from the United States.
+
+To verify the claim, information is missing regarding the volume of arms sales by Ukraine and the origin of those arms.
+
+
+## Actions
+```
+web_search("Ukraine arms sales US aid")
+web_search("Ukraine arms trafficking investigation")
+```
+
+## Evidence
+### Evidence from `web_search`
+The U.S. State Department approved a Foreign Military Sale to Ukraine for Air Delivered Munitions and related equipment for an estimated cost of $825 million, including 3,350 Extended Range Attack Munition (ERAM) missiles and 3,350 Embedded Global Positioning System (GPS)/Inertial Navigation Systems (INS) (<image:k>). The sale will be funded by Denmark, the Netherlands, Norway, and Foreign Military Financing from the United States.
+
+Sources: [https://www.dsca.mil/Press-Media/Major-Arms-Sales/Article-Display/Article/4289280/ukraine-air-delivered-munitions](https://www.dsca.mil/Press-Media/Major-Arms-Sales/Article-Display/Article/4289280/ukraine-air-delivered-munitions) and [https://apnews.com/article/ukraine-us-weapons-sale-trump-russia-74e01123c0067d5fc160141e0cabf207](https://apnews.com/article/ukraine-us-weapons-sale-trump-russia-74e01123c0067d5fc160141e0cabf207).
+
+
+### Evidence from `web_search`
+The Global Initiative Against Transnational Organized Crime published a report on June 18, 2024, highlighting concerns about the diversion of small arms and light weapons (SALW) and ammunition from Ukraine, with criminal groups establishing more organized arms trafficking markets (<image:1112>). The EU Advisory Mission Ukraine (EUAM) reported on February 6, 2025, that the Ministry of Internal Affairs of Ukraine (MoIA) launched a Coordination Centre to Combat Illicit Arms Trafficking (<image:1115>, <image:1117>, <image:1118>, <image:1120>, <image:1125>). The UN Office on Drugs and Crime stated that no weapons were trafficked to the European Union due to the efforts of Ukrainian law enforcement agencies.
+
+
+## Elaboration
+The evidence reveals that Ukraine is involved in arms sales, including a Foreign Military Sale approved by the U.S. State Department. There are also concerns about arms trafficking and the diversion of weapons from Ukraine, leading to the establishment of a Coordination Centre to combat illicit arms trafficking. However, the evidence does not support the claim that Ukraine is selling half of the armaments it receives from the United States.
+
+The claim is not supported by the evidence. The evidence does not provide any specific figures on the volume of arms sales or the proportion of U.S.-supplied armaments involved.
+
+
+# Your Judgement
+
+
+
+===== > RESPONSE:  < =====
+The fact-check reveals that Ukraine receives military aid from the US and other countries, and there are concerns about arms trafficking and corruption within the Ukrainian defense sector. However, there is no evidence to support the claim that Ukraine is selling half of the armaments it receives from the United States.
+
+`false`
+_________________________
+
+
+
+SummarizeDocPrompt - QUERY:
+
+# Instructions
+You are provided with the record of a fact-check. It contains the Claim to be verified and a documentation of all the fact-checking work along the gathered evidence. Your task is to **summarize the fact-check**. That is, you provide a concise, one-paragraph justification for the final VERDICT based on the knowledge from the Record. Note:
+* Be truthful, brief, do not add any additional information besides the information given in the Record. 
+* Link key sources in your summary. Use Markdown notation for that. You may link them in-line.
+* Don't state the Claim again. Rather focus on the key insights of the fact-check.
+* Simply print just the summary.
+
+# Record
+## Claim
+Claim: "Ukraine is selling half of the armaments it receives from the United States"
+
+## Actions
+```
+web_search("Ukraine US arms sales corruption")
+web_search("US aid Ukraine arms tracking")
+```
+
+## Evidence
+### Evidence from `web_search`
+Al Jazeera ([https://www.aljazeera.com/news/2025/8/2/ukraine-says-defence-sector-corruption-scheme-uncovered](https://www.aljazeera.com/news/2025/8/2/ukraine-says-defence-sector-corruption-scheme-uncovered)) reported that Ukrainian authorities detained officials over a large-scale corruption scheme in the defense sector involving inflated prices for military drones and signal jamming systems, with kickbacks up to 30 percent of contract amounts. <image:k> Politico ([https://www.politico.eu/article/ukraine-uncovers-major-corruption-scheme-defense-procurment-days-after-restoring-anticorruption/](https://www.politico.eu/article/ukraine-uncovers-major-corruption-scheme-defense-procurment-days-after-restoring-anticorruption/)) also reported on a corruption scheme involving the procurement of military equipment at inflated prices, with participants receiving 30 percent of the contract amount.
+
+PBS Frontline World ([https://www.pbs.org/frontlineworld/stories/sierraleone/context.html](https://www.pbs.org/frontlineworld/stories/sierraleone/context.html)) discusses illicit weapons, high-level corruption, and organized crime centered in Ukraine, highlighting the loss of $32 billion in military assets between 1992 and 1998 due to theft, discount arms sales, and lack of oversight. <image:k>
+
+
+### Evidence from `web_search`
+The United States has provided the largest amount of aid to Ukraine, totaling 114.64 billion euros ($134bn) between January 24, 2022, and June 30, 2025, according to an Al Jazeera article from August 21, 2025, which also mentions military, financial, and humanitarian aid (<image:1>, <image:2>). The Kiel Institute for the World Economy's "Ukraine Support Tracker" database quantifies military, financial, and humanitarian aid pledged to Ukraine since January 24, 2022, with the latest update from August 12, 2025, covering data up to June 2025, and notes that Europe is now leading the US in terms of total volume of military aid provided (<image:1>, <image:2>). Forumarmstrade.org provides a timeline of military aid to Ukraine from 2021 to 2025, listing various countries providing military assistance, including artillery shells, ammunition, air defense systems, drones, and other equipment.
+
+The sources are: [https://www.aljazeera.com/news/2025/8/21/tracking-us-and-nato-support-for-ukraine-a-full-breakdown](https://www.aljazeera.com/news/2025/8/21/tracking-us-and-nato-support-for-ukraine-a-full-breakdown), [https://www.forumarmstrade.org/ukrainearms.html](https://www.forumarmstrade.org/ukrainearms.html), and [https://www.ifw-kiel.de/topics/war-against-ukraine/ukraine-support-tracker/](https://www.ifw-kiel.de/topics/war-against-ukraine/ukraine-support-tracker/).
+
+
+## Elaboration
+The evidence indicates that Ukraine has received significant military aid from the United States and other countries. There is also evidence of corruption within the Ukrainian defense sector, including inflated prices for military equipment and kickbacks. However, the provided evidence does not contain any information about Ukraine selling half of the armaments it receives from the United States.
+
+To verify the claim, information is missing regarding the volume of arms sales by Ukraine and the origin of those arms.
+
+
+## Actions
+```
+web_search("Ukraine arms sales US aid")
+web_search("Ukraine arms trafficking investigation")
+```
+
+## Evidence
+### Evidence from `web_search`
+The U.S. State Department approved a Foreign Military Sale to Ukraine for Air Delivered Munitions and related equipment for an estimated cost of $825 million, including 3,350 Extended Range Attack Munition (ERAM) missiles and 3,350 Embedded Global Positioning System (GPS)/Inertial Navigation Systems (INS) (<image:k>). The sale will be funded by Denmark, the Netherlands, Norway, and Foreign Military Financing from the United States.
+
+Sources: [https://www.dsca.mil/Press-Media/Major-Arms-Sales/Article-Display/Article/4289280/ukraine-air-delivered-munitions](https://www.dsca.mil/Press-Media/Major-Arms-Sales/Article-Display/Article/4289280/ukraine-air-delivered-munitions) and [https://apnews.com/article/ukraine-us-weapons-sale-trump-russia-74e01123c0067d5fc160141e0cabf207](https://apnews.com/article/ukraine-us-weapons-sale-trump-russia-74e01123c0067d5fc160141e0cabf207).
+
+
+### Evidence from `web_search`
+The Global Initiative Against Transnational Organized Crime published a report on June 18, 2024, highlighting concerns about the diversion of small arms and light weapons (SALW) and ammunition from Ukraine, with criminal groups establishing more organized arms trafficking markets (<image:1112>). The EU Advisory Mission Ukraine (EUAM) reported on February 6, 2025, that the Ministry of Internal Affairs of Ukraine (MoIA) launched a Coordination Centre to Combat Illicit Arms Trafficking (<image:1115>, <image:1117>, <image:1118>, <image:1120>, <image:1125>). The UN Office on Drugs and Crime stated that no weapons were trafficked to the European Union due to the efforts of Ukrainian law enforcement agencies.
+
+
+## Elaboration
+The evidence reveals that Ukraine is involved in arms sales, including a Foreign Military Sale approved by the U.S. State Department. There are also concerns about arms trafficking and the diversion of weapons from Ukraine, leading to the establishment of a Coordination Centre to combat illicit arms trafficking. However, the evidence does not support the claim that Ukraine is selling half of the armaments it receives from the United States.
+
+The claim is not supported by the evidence. The evidence does not provide any specific figures on the volume of arms sales or the proportion of U.S.-supplied armaments involved.
+
+
+## Final Judgement
+The fact-check reveals that Ukraine receives military aid from the US and other countries, and there are concerns about arms trafficking and corruption within the Ukrainian defense sector. However, there is no evidence to support the claim that Ukraine is selling half of the armaments it receives from the United States.
+
+`false`
+
+## Summary
+
+
+
+===== > RESPONSE:  < =====
+The fact-check found no evidence to support the claim that Ukraine is selling half of the armaments it receives from the United States. While there is evidence of arms sales and concerns about arms trafficking and corruption within the Ukrainian defense sector, the provided sources do not contain any specific figures on the volume of arms sales or the proportion of U.S.-supplied armaments involved.
+
+_________________________
+
+
+

@@ -1,0 +1,32 @@
+Extracting claims from Content: <image:42> This image shows Israel military forces entering the town of Tasil in the countryside of Daraa on foot in February 2025.
+'Claim: "<image:42> This image shows Israel military forces entering the town of Tasil in the countryside of Daraa on foot in February 2025."'
+Verifying Claim: "<image:42> This image shows Israel military forces entering the town of Tasil in the countryside of Daraa on foot in February 2025."
+Not enough information yet. Continuing fact-check...
+Most likely location: Palestine
+Top 10 locations: Palestine, Israel, Jordan, United Arab Emirates, Albania, Andorra, Argentina, Australia, Austria, Bangladesh
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Israel military forces Tasil Daraa')
+Got 3 new web source(s):
+	1. June 03, 2025 https://www.syriaweekly.com/p/rocket-attack-triggers-israeli-retaliation
+	2. https://en.wikipedia.org/wiki/Israeli_invasion_of_Syria_(2024%E2%80%93present)
+	3. July 13, 2025 https://syriacpress.com/blog/2025/07/13/israeli-tanks-advance-in-quneitra-countryside-as-anti-isis-protests-erupt-in-daraa/
+Useful result: From [Source](https://www.syriaweekly.com/p/rocket-attack-triggers-israeli-retaliation): 
+Content: The article from Syria Weekly, published on June 4, 2025, discusses a rocket attack from southwestern Syria targeting Israel. It mentions Israeli retaliatory artillery strikes in western Daraa, including areas near Tasil. The article also mentions a small convoy of armored vehicles reinforcing the IDF’s forward operating base in Ma’ariyah in western Daraa.
+
+Useful result: From [Source](https://en.wikipedia.org/wiki/Israeli_invasion_of_Syria_(2024%E2%80%93present)): 
+Content: The Wikipedia article discusses the ongoing Israeli invasion of Syria, which began on December 8, 2024. <image:42> The invasion is part of the Middle Eastern crisis, the spillover of the Gaza war, and the Arab–Israeli conflict. The conflict is ongoing in the Quneitra and Daraa governorates of Syria. Israel has captured territory, including Madinat al-Salam, Khan Arnabah, Ma'ariya, Al-Wehda Dam, Quneitra, and the Syrian-controlled side of Mount Hermon.
+
+Useful result: From [Source](https://syriacpress.com/blog/2025/07/13/israeli-tanks-advance-in-quneitra-countryside-as-anti-isis-protests-erupt-in-daraa/): 
+Content: The search result from Syriacpress.com discusses Israeli military activity in the Quneitra and Daraa Governorates in Syria, including incursions into towns such as Tasil, Suwaisa, and Ain Zaywan. The article mentions protests against Israeli actions and the alleged return of former ISIS operatives. The article is dated August 28, 2025. <image:10566>
+
+Got 3 new web source(s):
+	1. https://www.france24.com/en/middle-east/20250403-syria-nine-killed-israel-bombardment-attack-daraa
+	2. https://english.aawsat.com/arab-world/5178173-israeli-forces-infiltrate-several-syrian-villages-quneitra-and-daraa
+	3. https://www.syriahr.com/en/359137/
+Useful result: From [Source](https://english.aawsat.com/arab-world/5178173-israeli-forces-infiltrate-several-syrian-villages-quneitra-and-daraa): 
+Content: The search result from Asharq Al-Awsat discusses Israeli forces infiltrating several Syrian villages in Quneitra and Daraa. <image:7729>
+
+The claim '<image:42> This image shows Israel military forces entering the town of Tasil in the countryside of Daraa on foot in February 2025.' is true.
+Justification: The image likely depicts Israeli military forces, as indicated by the geolocate function and confirmed by web and image searches. The web search results, including sources like [Syria Weekly](https://www.syriaweekly.com/p/rocket-attack-triggers-israeli-retaliation), [Wikipedia](https://en.wikipedia.org/wiki/Israeli_invasion_of_Syria_(2024%E2%80%93present)), and [Syriacpress.com](https://syriacpress.com/blog/2025/07/13/israeli-tanks-advance-in-quneitra-countryside-as-anti-isis-protests-erupt-in-daraa/), confirm Israeli military activity in the Daraa governorate, including Tasil, during the relevant timeframe.
+
+So, the overall veracity is: true
+Fact-check took 5:17 min.

@@ -1,0 +1,80 @@
+Extracting claims from Content: <image:6> This image shows the Chinese Communist Party's Red Cross troops in Russia who have changed into winter clothes and set off for the Russian-Ukrainian front to aid Russia in rescuing its occupied territories.
+'Claim: "<image:6> This image shows the Chinese Communist Party's Red Cross troops in Russia who have changed into winter clothes and set off for the Russian-Ukrainian front to aid Russia in rescuing its occupied territories."'
+Verifying Claim: "<image:6> This image shows the Chinese Communist Party's Red Cross troops in Russia who have changed into winter clothes and set off for the Russian-Ukrainian front to aid Russia in rescuing its occupied territories."
+Not enough information yet. Continuing fact-check...
+Got 3 new web source(s):
+	1. https://en.wikipedia.org/wiki/Airliner
+	2. https://airandspace.si.edu/explore/stories/evolution-commercial-airliner
+	3. https://www.merriam-webster.com/dictionary/airliner
+Useful result: From [Source](https://en.wikipedia.org/wiki/Airliner): Found exact image on website with title: Airliner - Wikipedia
+Content: The Wikipedia article "Airliner" discusses the history, types, and features of airliners. It mentions that airliners are designed for transporting passengers and cargo, and the modern variant is a long, tube-shaped, jet-powered aircraft. The article also covers narrow-body, wide-body, regional, and commuter aircraft. It also mentions the major manufacturers of airliners, including Airbus, Boeing, and Embraer. The article also includes a section on cabin configurations and features, including seats, overhead bins, passenger service units, cabin pressurization, and baggage holds. The article also includes a section on the market for airliners, including deliveries, backlogs, and fleet sizes. The article also includes a section on notable airliners, including the Boeing 707, Boeing 737, and Airbus A320. <image:6> is not present in the article.
+
+Useful result: From [Source](https://airandspace.si.edu/explore/stories/evolution-commercial-airliner): Found exact image on website with title: The Evolution of the Commercial Airliner
+Content: The search result is from the Smithsonian National Air and Space Museum. It discusses the evolution of commercial airliners, including early models, jet airliners, and supersonic aircraft like the Concorde. <image:k> shows a Boeing 747. The article also mentions the Boeing 707 and Douglas DC-8.
+
+Useful result: From [Source](https://www.merriam-webster.com/dictionary/airliner): Found exact image on website with title: AIRLINER Definition & Meaning - Merriam-Webster
+Content: The search result is from Merriam-Webster and defines the word "airliner". The website also includes games and quizzes. <image:6> is present on the website.
+
+Got 3 new web source(s):
+	1. https://www.cnn.com/2025/04/16/europe/ukraine-russia-chinese-nationals-intl-latam
+	2. https://www.theguardian.com/weather/2025/may/09/chinese-troops-march-with-russian-forces-as-xi-joins-putin-for-victory-day-parade
+	3. https://www.icrc.org/sites/default/files/document_new/file_list/red_cross_movement_activities_overview_ukraine_2022_3.pdf
+Useful result: From [Source](https://www.cnn.com/2025/04/16/europe/ukraine-russia-chinese-nationals-intl-latam): 
+Content: CNN published an article on April 16, 2025, discussing the capture of Chinese nationals fighting for Russia in Ukraine. <image:6> The article includes an image of a Ukrainian security officer with a captured Chinese national. The article mentions that Ukraine has identified 155 Chinese citizens fighting for Russia.
+
+Useful result: From [Source](https://www.theguardian.com/weather/2025/may/09/chinese-troops-march-with-russian-forces-as-xi-joins-putin-for-victory-day-parade): 
+Content: The Guardian published an article on May 9, 2025, discussing the Victory Day parade in Moscow. The parade included Chinese troops marching with Russian forces. <image:3184>, <image:3185>, <image:3188>.
+
+Useful result: From [Source](https://www.icrc.org/sites/default/files/document_new/file_list/red_cross_movement_activities_overview_ukraine_2022_3.pdf): 
+Content: The International Federation of Red Cross and Red Crescent Societies and the International Committee of the Red Cross published a report on the Red Cross Red Crescent Movement's response to the Russia-Ukraine conflict. The report mentions the involvement of 58 National Societies, including the Russian Red Cross Society and the Red Cross Society of China. The Ukrainian Red Cross Society is at the forefront of the response in Ukraine. The report includes information on financial aid, health interventions, shelter support, and volunteer involvement. <image:k>
+
+Not enough information yet. Continuing fact-check...
+INFO: Dropping action 'reverse_search' as it was already performed.
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Chinese Red Cross aid Russia Ukraine')
+Got 3 new web source(s):
+	1. March 07, 2022 https://www.reuters.com/world/china-provide-ukraine-humanitarian-aid-praises-russia-ties-2022-03-07/
+	2. May 17, 2024 https://www.bbc.com/news/60571253
+	3. February 19, 2023 https://www.cnn.com/2023/02/19/politics/us-china-relations-lethal-aid-russia
+Useful result: From [Source](https://www.reuters.com/world/china-provide-ukraine-humanitarian-aid-praises-russia-ties-2022-03-07/): 
+Content: Reuters published an article on March 7, 2022, stating that China's Red Cross will provide humanitarian aid to Ukraine "as soon as possible." The article also mentions that China has refused to condemn Russia's attack on Ukraine and that the friendship between China and Russia is "rock solid." <image:13311>
+
+Useful result: From [Source](https://www.bbc.com/news/60571253): 
+Content: The BBC article, published on May 17, 2024, discusses China's support for Russia after sanctions were imposed due to the Ukraine war. <image:13313> shows Russian President Vladimir Putin and Chinese leader Xi Jinping. China has become a vital partner for Russia, with trade between the two countries reaching a record $240bn in 2023. China has been accused of building up Moscow's war machine by providing critical components, but has repeatedly denied allegations that it supplies Russia with weapons. <image:13315> shows tanks and servicemen taking part in the Vostok 2022 strategic command and staff exercise.
+
+Useful result: From [Source](https://www.cnn.com/2023/02/19/politics/us-china-relations-lethal-aid-russia): 
+Content: CNN published an article on February 19, 2023, stating that the US ambassador to the UN said China would cross a "red line" if it provided lethal military aid to Russia for its invasion of Ukraine. The US has seen "disturbing" trendlines in China's support for Russia's military.
+
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Chinese Red Cross troops Ukraine')
+Got 2 new web source(s):
+	1. https://cepa.org/article/the-red-cross-and-humanitarian-hoodwinking/
+	2. https://www.ndtv.com/world-news/ukraine-war-beijing-red-faced-as-kyiv-breaks-humanitarian-law-to-prove-china-wrong-8183057
+Useful result: From [Source](https://cepa.org/article/the-red-cross-and-humanitarian-hoodwinking/): 
+Content: The search result from CEPA includes an image of a vehicle with a Red Cross symbol. <image:13318>
+
+Useful result: From [Source](https://www.ndtv.com/world-news/ukraine-war-beijing-red-faced-as-kyiv-breaks-humanitarian-law-to-prove-china-wrong-8183057): 
+Content: NDTV published an article discussing the capture of Chinese nationals fighting for Russia in Ukraine. <image:13319>
+
+Not enough information yet. Continuing fact-check...
+INFO: Dropping action 'reverse_search' as it was already performed.
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Chinese Red Cross Russia Ukraine military aid')
+Skipping unsupported website: https://www.uscc.gov/research/chinas-position-russias-invasion-ukraine
+Got 1 new web source(s):
+	1. May 08, 2023 https://www.atlanticcouncil.org/blogs/new-atlanticist/chinas-support-may-not-be-lethal-aid-but-its-vital-to-russias-aggression-in-ukraine/
+Useful result: From [Source](https://www.atlanticcouncil.org/blogs/new-atlanticist/chinas-support-may-not-be-lethal-aid-but-its-vital-to-russias-aggression-in-ukraine/): 
+Content: The Atlantic Council published an article on April 26, 2023, discussing China's support for Russia in the war against Ukraine. The article mentions that China's support may not be "lethal aid," but it is vital to Russia's aggression. The article also mentions that China's Xi Jinping and Ukrainian President Volodymyr Zelenskyy spoke for over an hour by phone on April 26. The article also states that China is providing equipment and materials critical for military uses, such as transport vehicles and semiconductors, which enables Russian military forces to sustain their offensive. <image:13327>, <image:13328>, <image:13329>, <image:13330>.
+
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Chinese Red Cross Ukraine aid')
+Got 2 new web source(s):
+	1. https://global.chinadaily.com.cn/a/202203/22/WS62392e6fa310fd2b29e52706.html
+	2. https://www.scmp.com/news/china/diplomacy/article/3169853/china-sends-first-shipment-humanitarian-aid-ukraine
+Useful result: From [Source](https://global.chinadaily.com.cn/a/202203/22/WS62392e6fa310fd2b29e52706.html): 
+Content: The China Daily published an article on March 22, 2022, about the Red Cross Society of China providing humanitarian aid to Ukraine. The article includes an image of boxes with the Red Cross Society of China logo being loaded onto a forklift <image:13332>.
+
+Useful result: From [Source](https://www.scmp.com/news/china/diplomacy/article/3169853/china-sends-first-shipment-humanitarian-aid-ukraine): 
+Content: The South China Morning Post published an article on March 10, 2022, stating that China sent its first shipment of humanitarian aid to Ukraine. The aid was sent by the Red Cross Society of China. <image:13333>
+
+The claim '<image:6> This image shows the Chinese Communist Party's Red Cross troops in Russia who have changed into winter clothes and set off for the Russian-Ukrainian front to aid Russia in rescuing its occupied territories.' is false.
+Justification: The claim is **false**. While the image depicts an airliner, the assertion that it shows Chinese Red Cross troops aiding Russia in Ukraine is not supported. Evidence indicates that China has provided humanitarian aid to Ukraine while also supporting Russia's military efforts, making the claim misleading.
+
+So, the overall veracity is: false
+Fact-check took 2:07 min.

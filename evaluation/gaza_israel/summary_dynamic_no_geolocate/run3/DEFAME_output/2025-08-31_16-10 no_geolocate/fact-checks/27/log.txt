@@ -1,0 +1,51 @@
+Extracting claims from Content: <image:20> This image shows the 'French' Left who is rioting against Le Pen's victory in the first round of the French parliamentary elections in 2024.
+'Claim: "<image:20> This image shows the 'French' Left who is rioting against Le Pen's victory in the first round of the French parliamentary elections in 2024."'
+Verifying Claim: "<image:20> This image shows the 'French' Left who is rioting against Le Pen's victory in the first round of the French parliamentary elections in 2024."
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='French Left rioting Le Pen 2024')
+Got 3 new web source(s):
+	1. April 06, 2025 https://www.lemonde.fr/en/france/article/2025/04/06/french-left-protests-against-far-right-but-remains-divided_6739901_7.html
+	2. July 10, 2024 https://www.politico.eu/article/capitol-hill-marine-le-pen-far-right-accuse-french-left-insurrection-france/
+	3. https://en.wikipedia.org/wiki/2024_French_protests_against_the_National_Rally
+Useful result: From [Source](https://www.lemonde.fr/en/france/article/2025/04/06/french-left-protests-against-far-right-but-remains-divided_6739901_7.html): 
+Content: The article from Le Monde discusses a left-wing protest against the far-right in Paris on April 6, 2025, following Marine Le Pen's conviction of embezzlement. <image:13581> shows Green leader Marine Tondelier speaking at the rally. The article mentions that the rally was held in response to the far right's actions.
+
+Useful result: From [Source](https://www.politico.eu/article/capitol-hill-marine-le-pen-far-right-accuse-french-left-insurrection-france/): 
+Content: The article from Politico discusses Marine Le Pen's reaction to comments by Adrien Quatennens, a member of the far-left France Unbowed movement, regarding a "people's march" to the prime minister's office. Le Pen compared the situation to the January 6th Capitol attack. The article also mentions the context of the French parliamentary elections and the left-wing alliance's claims.
+
+Useful result: From [Source](https://en.wikipedia.org/wiki/2024_French_protests_against_the_National_Rally): 
+Content: The Wikipedia article discusses the 2024 French protests against the National Rally (RN) party's victory in the 2024 European Parliament election and the subsequent snap legislative elections. The protests, which began on June 9, 2024, were organized by various political organizations, unions, and human rights groups. The goals of the protests were to prevent the National Rally from achieving a majority in the French legislative elections and to form a left-wing coalition. The protests took place across France, with notable demonstrations in Paris, Toulouse, Marseille, and other cities. The article mentions that some protesters carried pro-Palestinian messages. <image:i> shows a protest in Besançon.
+
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Le Pen victory protest France')
+Got 3 new web source(s):
+	1. https://www.cnn.com/2025/04/06/europe/protesters-paris-support-marine-le-pen-intl
+	2. https://www.nytimes.com/2025/04/06/world/europe/france-marine-le-pen-rally.html
+	3. https://www.reuters.com/world/europe/opponents-french-far-right-plan-protests-election-campaign-enters-final-week-2022-04-16/
+Useful result: From [Source](https://www.cnn.com/2025/04/06/europe/protesters-paris-support-marine-le-pen-intl): 
+Content: CNN published an article about protesters in Paris supporting Marine Le Pen. <image:13582>
+
+Useful result: From [Source](https://www.nytimes.com/2025/04/06/world/europe/france-marine-le-pen-rally.html): 
+Content: The New York Times published an article on April 6, 2025, about Marine Le Pen. <image:13583>
+
+Useful result: From [Source](https://www.reuters.com/world/europe/opponents-french-far-right-plan-protests-election-campaign-enters-final-week-2022-04-16/): 
+Content: Reuters published an article on April 16, 2022, about opponents of the French far-right planning protests. <image:13584>
+
+Not enough information yet. Continuing fact-check...
+Got 3 new web source(s):
+	1. https://www.vanityfair.com/news/2015/07/anti-semitism-france-hostage-hyper-cacher-kosher-market
+	2. https://www.worldjewishcongress.org/en/news/german-tv-agrees-to-air-anti-semitism-documentary-following-cries-of-censorship-6-1-2017
+	3. https://www.jpost.com/tags/adam-milstein
+Useful result: From [Source](https://www.vanityfair.com/news/2015/07/anti-semitism-france-hostage-hyper-cacher-kosher-market): Found exact image on website with title: The Troubling Question in the French Jewish Community - Vanity Fair
+Content: The Vanity Fair article, published in July 2015, discusses rising antisemitism in France, focusing on events in 2014 and early 2015. It mentions a pro-Palestinian demonstration in Paris on July 26, 2014, where a swastika was painted on a statue and chants of "Death to the Jews" were heard. The article also covers the January 2015 Hyper Cacher attack and the broader context of increasing anti-Semitic incidents, including attacks on synagogues and schools. The article includes an image of a pro-Palestinian demonstration in Paris on July 26, 2014, where a swastika was painted on a statue.
+
+Useful result: From [Source](https://www.worldjewishcongress.org/en/news/german-tv-agrees-to-air-anti-semitism-documentary-following-cries-of-censorship-6-1-2017): Found exact image on website with title: German TV agrees to air anti-Semitism documentary following cries ...
+Content: The World Jewish Congress published an article on June 19, 2017, about a German TV documentary on European anti-Semitism. The article includes the image in the claim. <image:6999> The image shows a group of people with Palestinian flags and a swastika drawn on a monument.
+
+Useful result: From [Source](https://www.jpost.com/tags/adam-milstein): Found exact image on website with title: Adam Milstein | The Jerusalem Post
+Content: The Jerusalem Post published an article by Adam Milstein on July 27, 2023, discussing antisemitism in Europe. The article includes an image of a protest in Paris where a swastika was drawn on the base of the Statue de la République during a pro-Palestinian protest on July 26, 2014. <image:546154>
+
+The claim '<image:20> This image shows the 'French' Left who is rioting against Le Pen's victory in the first round of the French parliamentary elections in 2024.' is false.
+Justification: The image in the claim is from a pro-Palestinian demonstration in Paris on July 26, 2014, as confirmed by a reverse image search ([https://www.vanityfair.com/news/2015/07/anti-semitism-france-hostage-hyper-cacher-kosher-market](https://www.vanityfair.com/news/2015/07/anti-semitism-france-hostage-hyper-cacher-kosher-market)), and not a protest against Le Pen's victory in 2024.
+
+So, the overall veracity is: false
+Fact-check took 1:19 min.

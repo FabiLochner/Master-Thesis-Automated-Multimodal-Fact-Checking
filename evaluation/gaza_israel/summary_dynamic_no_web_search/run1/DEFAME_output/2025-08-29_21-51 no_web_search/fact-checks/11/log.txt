@@ -1,0 +1,23 @@
+Extracting claims from Content: The chief of the Israeli Defense Forces (IDF), Herzi Halevi, was assassinated in a Hezbollah drone attack on an Israeli military base on October 13, 2024.
+'Claim: "The chief of the Israeli Defense Forces (IDF), Herzi Halevi, was assassinated in a Hezbollah drone attack on an Israeli military base on October 13, 2024."'
+Verifying Claim: "The chief of the Israeli Defense Forces (IDF), Herzi Halevi, was assassinated in a Hezbollah drone attack on an Israeli military base on October 13, 2024."
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Herzi Halevi Hezbollah drone attack October 13 2024')
+Got 3 new web source(s):
+	1. https://www.cnn.com/2024/10/14/middleeast/hezbollah-attack-israel-weaknesses-drones-intl-cmd
+	2. https://abcnews.go.com/International/live-updates/israel-hamas-hezbollah?id=114770972&entryId=114771236
+	3. https://www.aljazeera.com/news/2024/10/13/more-than-60-wounded-in-hezbollah-drone-attack-on-israeli-military-site
+Useful result: From [Source](https://www.cnn.com/2024/10/14/middleeast/hezbollah-attack-israel-weaknesses-drones-intl-cmd): 
+Content: CNN published an article discussing Hezbollah attacks on Israel. The article includes an image of Herzi Halevi with other soldiers. <image:7458>
+
+Useful result: From [Source](https://abcnews.go.com/International/live-updates/israel-hamas-hezbollah?id=114770972&entryId=114771236): 
+Content: The search result from ABC News contains an image of a helicopter. <image:7459>
+
+Useful result: From [Source](https://www.aljazeera.com/news/2024/10/13/more-than-60-wounded-in-hezbollah-drone-attack-on-israeli-military-site): 
+Content: Al Jazeera reports on a Hezbollah drone attack on an Israeli military site on October 13, 2024, which wounded more than 60 people. <image:7460>
+
+The claim 'The chief of the Israeli Defense Forces (IDF), Herzi Halevi, was assassinated in a Hezbollah drone attack on an Israeli military base on October 13, 2024.' is false.
+Justification: The claim is false. While there is evidence of a Hezbollah drone attack on an Israeli military site on October 13, 2024, as reported by [Al Jazeera](https://www.aljazeera.com/news/2024/10/13/more-than-60-wounded-in-hezbollah-drone-attack-on-israeli-military-site), the provided sources, including [CNN](https://www.cnn.com/2024/10/14/middleeast/hezbollah-attack-israel-weaknesses-drones-intl-cmd) and [ABC News](https://abcnews.go.com/International/live-updates/israel-hamas-hezbollah?id=114770972&entryId=114771236), do not support the assertion that Herzi Halevi was assassinated in the attack.
+
+So, the overall veracity is: false
+Fact-check took 0:19 min.

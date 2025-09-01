@@ -1,0 +1,64 @@
+Extracting claims from Content: <image:60> This image shows Israelis fleeing the airport after the Houthis attack on July 19, 2024.
+'Claim: "<image:60> This image shows Israelis fleeing the airport after the Houthis attack on July 19, 2024."'
+Verifying Claim: "<image:60> This image shows Israelis fleeing the airport after the Houthis attack on July 19, 2024."
+Not enough information yet. Continuing fact-check...
+Got 3 new web source(s):
+	1. https://www.gettyimages.com/photos/israel-airport
+	2. https://www.businessinsider.com/israel-flight-cancelations-ben-gurion-airport-2023-10
+	3. https://www.gettyimages.dk/photos/israel-airport
+Useful result: From [Source](https://www.gettyimages.com/photos/israel-airport): Found exact image on website with title: 17785 Israel Airport Stock Photos & High-Res Pictures - Getty Images
+Content: The search result from Getty Images contains multiple images of Ben Gurion Airport in Israel. Some images show passengers waiting in the airport, flight cancellations, and security measures. Some images show the airport during attacks by Palestinian factions, Houthi missile strikes, and the aftermath of Iran's attack. <image:2413>, <image:2415>, <image:2417>, <image:2418>, <image:2419>, <image:2421>, <image:2425>, <image:2428>, <image:2431>, <image:2432>, <image:2434>, <image:2436>, <image:2441>, <image:2443>, <image:2445>, <image:2447>, <image:2448>, <image:2450>, <image:2451>. The images also show the airport during a nationwide strike and the arrival of military aid. The images are dated from 2022 to 2025.
+
+Useful result: From [Source](https://www.businessinsider.com/israel-flight-cancelations-ben-gurion-airport-2023-10): Found exact image on website with title: Travelers Face Canceled Flights, Chaos at Israel's Ben Gurion Airport
+Content: The image <image:60> appears in a Business Insider article from October 10, 2023, about the chaos at Ben Gurion Airport in Israel due to flight cancellations amid the war with Gaza. The article mentions long lines and canceled flights. <image:2452> shows people waiting in line at the airport.
+
+Useful result: From [Source](https://www.gettyimages.dk/photos/israel-airport): Found exact image on website with title: 6975 Israel Airport Stock Photos & High-Res Pictures - Getty Images
+Content: The search result from Getty Images contains 7,711 Israel Airport stock photos and high-res pictures. The search result includes images of Ben Gurion Airport, including images of passengers waiting in the airport, flight cancellations, and security measures. <image:2454>, <image:2455>, <image:2456>, <image:2457>, <image:2458>, <image:2459>, <image:2461>, <image:2462>, <image:2464>, <image:2465>, <image:2466>, <image:2467>, <image:2469>, <image:2471>, <image:2472>, <image:2473>, <image:2474>, <image:2475>. Some images are related to attacks by Palestinian factions, Houthi missile strikes, and the closure of airspace. The images also show passengers waiting in the airport and flight cancellations. The search result also includes images of the airport on October 9, 2023, and December 31, 2022, and June 13, 2025.
+
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='airport crowded israel')
+Failed to download or open image: cannot identify image file <_io.BytesIO object at 0x7ffee1376f70>
+Failed to download or open image: cannot identify image file <_io.BytesIO object at 0x7ffee1377240>
+Got 3 new web source(s):
+	1. https://en.globes.co.il/en/article-israels-crowded-airports-boost-iaa-results-1001458704
+	2. https://www.jpost.com/business-and-innovation/article-713195
+	3. https://www.australianjewishnews.com/chaos-erupts-at-ben-gurion-airport/
+Useful result: From [Source](https://en.globes.co.il/en/article-israels-crowded-airports-boost-iaa-results-1001458704): 
+Content: The search result from Globes.co.il shows a crowded airport in Israel. <image:14344>
+
+Not enough information yet. Continuing fact-check...
+INFO: Dropping action 'reverse_search' as it was already performed.
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Israel airport crowded July 19 2024')
+Skipping fact-checking website: https://www.misbar.com/en/factcheck/2024/04/14/this-photo-does-not-depict-a-jewish-exodus-amid-iran-israel-tensions
+Skipping fact-checking website: https://www.usatoday.com/story/news/factcheck/2024/04/15/israel-mass-exodus-airport-2022/73328772007/
+Got 3 new web source(s):
+	1. https://www.cnn.com/2024/07/19/travel/the-airlines-impacted-by-the-global-tech-outage
+	2. https://www.timesofisrael.com/thousands-rally-nationwide-urge-pm-not-to-leave-for-us-before-finalizing-hostage-deal/
+	3. https://www.middleeastmonitor.com/20241231-over-82000-israelis-left-country-in-2024-official-figures-show/
+Useful result: From [Source](https://www.cnn.com/2024/07/19/travel/the-airlines-impacted-by-the-global-tech-outage): 
+Content: CNN discusses the airlines impacted by the global tech outage. <image:14345>
+
+Useful result: From [Source](https://www.timesofisrael.com/thousands-rally-nationwide-urge-pm-not-to-leave-for-us-before-finalizing-hostage-deal/): 
+Content: The Times of Israel published an article about thousands of people rallying nationwide. <image:14346>
+
+Useful result: From [Source](https://www.middleeastmonitor.com/20241231-over-82000-israelis-left-country-in-2024-official-figures-show/): 
+Content: Middle East Monitor published an article stating that over 82,000 Israelis left the country in 2024. <image:14347>
+
+Not enough information yet. Continuing fact-check...
+INFO: Dropping action 'reverse_search' as it was already performed.
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Houthi attack Israel airport July 19 2024')
+Failed to download or open image: cannot identify image file <_io.BytesIO object at 0x7ffee131dee0>
+Got 3 new web source(s):
+	1. https://www.al-monitor.com/originals/2024/07/israel-strikes-houthi-targets-yemen-one-day-after-tel-aviv-drone-attack
+	2. https://www.jpost.com/breaking-news/article-855713
+	3. https://www.aljazeera.com/opinions/2024/7/21/us-foreign-policy-fails-again-this-time-against-the-houthis
+Useful result: From [Source](https://www.al-monitor.com/originals/2024/07/israel-strikes-houthi-targets-yemen-one-day-after-tel-aviv-drone-attack): 
+Content: Al-Monitor reports on an Israeli strike on Houthi targets in Yemen, one day after a drone attack on Tel Aviv. <image:14348>
+
+Useful result: From [Source](https://www.aljazeera.com/opinions/2024/7/21/us-foreign-policy-fails-again-this-time-against-the-houthis): 
+Content: Al Jazeera published an article on July 21, 2024, discussing the US foreign policy failures against the Houthis. The article includes an image of explosions. <image:14349>
+
+The claim '<image:60> This image shows Israelis fleeing the airport after the Houthis attack on July 19, 2024.' is false.
+Justification: The image depicts a crowded airport in Israel, but there is no evidence to support the claim that it shows Israelis fleeing after a Houthi attack on July 19, 2024. While there were attacks and explosions related to the Houthis around that time, the search results do not mention any attacks on the airport. Therefore, the claim is unverified.
+
+So, the overall veracity is: false
+Fact-check took 1:13 min.

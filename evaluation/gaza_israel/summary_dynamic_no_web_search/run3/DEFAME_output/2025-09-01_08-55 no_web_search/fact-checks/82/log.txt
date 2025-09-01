@@ -1,0 +1,46 @@
+Extracting claims from Content: <image:51> This image shows Israeli Finance Minister Smotrich, who previously threatened to invade Lebanon, taking shelter in an Israeli bomb shelter during Hezbollah's attack on Israel on August 25, 2024.
+'Claim: "<image:51> This image shows Israeli Finance Minister Smotrich, who previously threatened to invade Lebanon, taking shelter in an Israeli bomb shelter during Hezbollah's attack on Israel on August 25, 2024."'
+Verifying Claim: "<image:51> This image shows Israeli Finance Minister Smotrich, who previously threatened to invade Lebanon, taking shelter in an Israeli bomb shelter during Hezbollah's attack on Israel on August 25, 2024."
+Not enough information yet. Continuing fact-check...
+Got 0 new web source(s):
+Got 3 new web source(s):
+	1. https://www.lemonde.fr/en/international/article/2023/11/06/bezalel-smotrich-israel-s-agent-of-chaos_6231784_4.html
+	2. https://www.nytimes.com/2024/06/29/world/middleeast/israel-funds-palestinian-authority-smotrich.html
+	3. https://www.bloomberg.com/news/articles/2024-12-09/israel-s-smotrich-says-trump-offers-chance-to-overthrow-iran
+Useful result: From [Source](https://www.lemonde.fr/en/international/article/2023/11/06/bezalel-smotrich-israel-s-agent-of-chaos_6231784_4.html): 
+Content: The article from Le Monde features a photograph of Bezalel Smotrich. <image:7348>
+
+Useful result: From [Source](https://www.nytimes.com/2024/06/29/world/middleeast/israel-funds-palestinian-authority-smotrich.html): 
+Content: The New York Times published an article on June 29, 2024, about Israeli Finance Minister Smotrich. <image:7349>
+
+Useful result: From [Source](https://www.bloomberg.com/news/articles/2024-12-09/israel-s-smotrich-says-trump-offers-chance-to-overthrow-iran): 
+Content: The search result from Bloomberg shows a picture of Bezalel Smotrich, the Israeli Finance Minister. <image:7351>
+
+Not enough information yet. Continuing fact-check...
+INFO: Dropping action 'reverse_search' as it was already performed.
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Bezalel Smotrich bomb shelter Hezbollah attack August 25 2024')
+Failed to download or open image: cannot identify image file <_io.BytesIO object at 0x7ffed02ed670>
+Got 3 new web source(s):
+	1. https://www.972mag.com/hezbollah-rockets-palestinians-iron-dome-shelters/
+	2. https://www.nytimes.com/live/2024/09/27/world/israel-lebanon-hezbollah-hamas?gsid=2fc06ed2-ea5e-4dd2-a1ca-35b3757c209f
+	3. https://www.hrw.org/report/2024/11/14/hopeless-starving-and-besieged/israels-forced-displacement-palestinians-gaza
+Useful result: From [Source](https://www.nytimes.com/live/2024/09/27/world/israel-lebanon-hezbollah-hamas?gsid=2fc06ed2-ea5e-4dd2-a1ca-35b3757c209f): 
+Content: The New York Times published an article about the conflict between Israel and Lebanon, including an image of a building. <image:14319>
+
+Not enough information yet. Continuing fact-check...
+INFO: Dropping action 'reverse_search' as it was already performed.
+Got 3 new web source(s):
+	1. https://www.cnn.com/2024/06/21/middleeast/israel-west-bank-bezalel-smotrich-settlements-intl-latam
+	2. https://www.theguardian.com/world/article/2024/jun/24/israeli-far-right-minister-bezalel-smotrich-annex-west-bank
+	3. https://www.ft.com/content/b41c9f9c-23c5-4c9a-b6a3-11a61df46cae
+Useful result: From [Source](https://www.cnn.com/2024/06/21/middleeast/israel-west-bank-bezalel-smotrich-settlements-intl-latam): 
+Content: The CNN article features a photograph of Bezalel Smotrich. <image:8210>
+
+Useful result: From [Source](https://www.theguardian.com/world/article/2024/jun/24/israeli-far-right-minister-bezalel-smotrich-annex-west-bank): 
+Content: The Guardian published an article about Bezalel Smotrich, the Israeli far-right minister. <image:8211>
+
+The claim '<image:51> This image shows Israeli Finance Minister Smotrich, who previously threatened to invade Lebanon, taking shelter in an Israeli bomb shelter during Hezbollah's attack on Israel on August 25, 2024.' is false.
+Justification: The claim cannot be verified. While the evidence confirms that Bezalel Smotrich is the Israeli Finance Minister, the search results do not provide any information about the context of the image, specifically whether it depicts Smotrich in a bomb shelter during a Hezbollah attack on August 25, 2024. The available sources ([https://www.lemonde.fr/en/international/article/2023/11/06/bezalel-smotrich-israel-s-agent-of-chaos_6231784_4.html](https://www.lemonde.fr/en/international/article/2023/11/06/bezalel-smotrich-israel-s-agent-of-chaos_6231784_4.html), [https://www.nytimes.com/2024/06/29/world/middleeast/israel-funds-palestinian-authority-smotrich.html](https://www.nytimes.com/2024/06/29/world/middleeast/israel-funds-palestinian-authority-smotrich.html), [https://www.bloomberg.com/news/articles/2024-12-09/israel-s-smotrich-says-trump-offers-chance-to-overthrow-iran](https://www.bloomberg.com/news/articles/2024-12-09/israel-s-smotrich-says-trump-offers-chance-to-overthrow-iran), [https://www.cnn.com/2024/06/21/middleeast/israel-west-bank-bezalel-smotrich-settlements-intl-latam](https://www.cnn.com/2024/06/21/middleeast/israel-west-bank-bezalel-smotrich-settlements-intl-latam), [https://www.theguardian.com/world/article/2024/jun/24/israeli-far-right-minister-bezalel-smotrich-annex-west-bank](https://www.theguardian.com/world/article/2024/jun/24/israeli-far-right-minister-bezalel-smotrich-annex-west-bank)) do not provide any context related to the specific scenario described in the claim.
+
+So, the overall veracity is: false
+Fact-check took 0:47 min.

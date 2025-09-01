@@ -1,0 +1,25 @@
+Extracting claims from Content: Israel experienced an earthquake on October 5, 2024.
+'Claim: "Israel experienced an earthquake on October 5, 2024."'
+Verifying Claim: "Israel experienced an earthquake on October 5, 2024."
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='earthquake Israel October 5 2024')
+Skipping unsupported website: https://x.com/LastQuake/status/1842650048393330758
+Skipping unsupported website: https://m.facebook.com/firstpostin/photos/fpexplained-on-the-evening-of-october-5-2024-a-magnitude-46-earthquake-struck-ir/994806259347028/
+Got 3 new web source(s):
+	1. https://www.mirror.co.uk/news/world-news/iran-israel-rocked-earthquake-sparking-33851185
+	2. https://m.economictimes.com/news/defence/unusual-earthquake-raises-alarms-is-iran-testing-its-first-nuclear-bomb/articleshow/114043414.cms
+	3. https://www.ctbto.org/news-and-events/news/ctbto-detects-two-earthquakes-northern-iran-5-october
+Useful result: From [Source](https://www.mirror.co.uk/news/world-news/iran-israel-rocked-earthquake-sparking-33851185): 
+Content: The Mirror published an article on October 9, 2024, by Liam Buckler, reporting that an earthquake struck Iran on October 5, 2024, which sparked speculation about a nuclear test. The tremors were also reported in Israel. <image:5581>, <image:5585>, <image:5586>.
+
+Useful result: From [Source](https://m.economictimes.com/news/defence/unusual-earthquake-raises-alarms-is-iran-testing-its-first-nuclear-bomb/articleshow/114043414.cms): 
+Content: The Economic Times published an article on October 9, 2024, discussing a 4.6 magnitude earthquake that struck Iran on October 5, 2024. The article mentions that the earthquake occurred amid escalating military tensions between Israel and Iran-backed groups. It also mentions that Hezbollah launched rocket strikes into Israel on October 8, 2024. <image:5587>
+
+Useful result: From [Source](https://www.ctbto.org/news-and-events/news/ctbto-detects-two-earthquakes-northern-iran-5-october): 
+Content: The Comprehensive Nuclear-Test-Ban Treaty Organization (CTBTO) detected two earthquakes in northern Iran on October 5, 2024. <image:1>, <image:2>, <image:3>, <image:4>, <image:5>. The first event had a magnitude of 4.0, and the second had a magnitude of 4.2. The CTBTO will continue to monitor the situation. The article was published on October 9, 2024.
+
+The claim 'Israel experienced an earthquake on October 5, 2024.' is true.
+Justification: The claim is supported by evidence from multiple sources. The Mirror and The Economic Times both reported that an earthquake in Iran on October 5, 2024, was also felt in Israel. The Comprehensive Nuclear-Test-Ban Treaty Organization (CTBTO) also detected earthquakes in northern Iran on the same date.
+
+So, the overall veracity is: true
+Fact-check took 0:45 min.
