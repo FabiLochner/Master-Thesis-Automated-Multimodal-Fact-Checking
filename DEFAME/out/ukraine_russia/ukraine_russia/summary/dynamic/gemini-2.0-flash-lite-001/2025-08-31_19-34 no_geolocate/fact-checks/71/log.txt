@@ -1,0 +1,43 @@
+Extracting claims from Content: In October 2024 the International Monetary Fund (IMF) declared Russia the fourth-largest economy in the world.
+'Claim: "In October 2024 the International Monetary Fund (IMF) declared Russia the fourth-largest economy in the world."'
+Verifying Claim: "In October 2024 the International Monetary Fund (IMF) declared Russia the fourth-largest economy in the world."
+Not enough information yet. Continuing fact-check...
+Got 2 new web source(s):
+	1. https://www.imf.org/en/Countries/RUS
+	2. February 06, 2025 https://www.russiamatters.org/blog/russias-economy-collapsing
+Useful result: From [Source](https://www.imf.org/en/Countries/RUS): 
+Content: The IMF website provides information about Russia, including its membership date, quota, and Special Drawing Rights. It also includes a link to the July 2025 World Economic Outlook Update, which projects a 0.9% change in real GDP for 2025. <image:2695>
+
+Useful result: From [Source](https://www.russiamatters.org/blog/russias-economy-collapsing): 
+Content: According to the search result from russiamatters.org, the IMF ranks Russia as the world's 4th largest economy in terms of PPP. The article mentions that in December 2024, Russia's budget revenues reached more than 4 trillion rubles ($40 billion), the highest level recorded since January 2011. The article was published on February 06, 2025, and the author is Simon Saradzhyan.
+
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='IMF Russia economy ranking October 2024 declaration')
+Unable to reach Serper API: Connection timed out. Retrying after 6.398984958252903 seconds.
+Unable to reach Serper API: Connection timed out. Retrying after 12.797969916505807 seconds.
+Unable to reach Serper API: Connection timed out. Retrying after 25.595939833011613 seconds.
+Got 3 new web source(s):
+	1. October 22, 2024 https://www.imf.org/en/Publications/WEO/Issues/2024/10/22/world-economic-outlook-october-2024
+	2. October 22, 2024 https://www.themoscowtimes.com/2024/10/22/imf-raises-russias-growth-forecast-for-2024-2-a86777
+	3. February 01, 2024 https://www.newsweek.com/russia-imf-2024-economy-sanctions-1866071
+Useful result: From [Source](https://www.imf.org/en/Publications/WEO/Issues/2024/10/22/world-economic-outlook-october-2024): 
+Content: The IMF website provides the World Economic Outlook, October 2024, which includes projections and chapters on global prospects and policies. The website also provides the World Economic Outlook Update, July 2025. The search result does not explicitly state that the IMF declared Russia the fourth-largest economy in the world in October 2024. <image:2695>
+
+Useful result: From [Source](https://www.themoscowtimes.com/2024/10/22/imf-raises-russias-growth-forecast-for-2024-2-a86777): 
+Content: The Moscow Times published an article on October 22, 2024, stating that the IMF boosted its 2024 growth forecast for Russia. <image:13987>. The IMF expects the Russian economy to expand by 3.6% in 2024.
+
+Useful result: From [Source](https://www.newsweek.com/russia-imf-2024-economy-sanctions-1866071): 
+Content: Newsweek reports that the IMF predicted Russia's economy will grow by 2.6 percent in 2024. The article mentions the IMF's World Economic Outlook, released on Tuesday, and the World Bank's prediction of 1.3 percent growth in 2024. The article was written by Brendan Cole and published on February 5, 2024. <image:13993>
+
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='IMF Russia GDP ranking October 2024')
+Got 1 new web source(s):
+	1. https://statisticstimes.com/economy/country/russia-gdp.php
+Useful result: From [Source](https://statisticstimes.com/economy/country/russia-gdp.php): 
+Content: The search result from statisticstimes.com, published on November 16, 2024, states that according to the IMF World Economic Outlook (October 2024), Russia is the fourth-largest economy by GDP (PPP) in the world. <image:statisticstimes>.
+
+The claim 'In October 2024 the International Monetary Fund (IMF) declared Russia the fourth-largest economy in the world.' is true.
+Justification: The IMF's October 2024 World Economic Outlook ranked Russia as the fourth-largest economy by GDP (PPP) in the world, as reported by [statisticstimes.com](https://statisticstimes.com/economy/country/russia-gdp.php).
+
+So, the overall veracity is: true
+Fact-check took 3:29 min.

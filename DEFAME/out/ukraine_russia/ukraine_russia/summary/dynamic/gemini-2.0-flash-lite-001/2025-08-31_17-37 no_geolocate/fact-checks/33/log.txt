@@ -1,0 +1,30 @@
+Extracting claims from Content: <image:13> This image shows a Fox News broadcast from Easter 2025 where you can see the Patriarch Kirill in the center and Kyiv labeled as a Russian city in the top right corner of the image.
+'Claim: "<image:13> This image shows a Fox News broadcast from Easter 2025 where you can see the Patriarch Kirill in the center and Kyiv labeled as a Russian city in the top right corner of the image."'
+Verifying Claim: "<image:13> This image shows a Fox News broadcast from Easter 2025 where you can see the Patriarch Kirill in the center and Kyiv labeled as a Russian city in the top right corner of the image."
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Fox News Easter broadcast Moscow Kyiv')
+Skipping fact-checking website: https://www.yahoo.com/news/fact-check-fox-livestream-news-233600386.html
+Skipping unsupported website: https://www.instagram.com/p/DIqkcvkC6q3/
+Skipping unsupported website: https://www.reddit.com/r/interestingasfuck/comments/1k3k6xd/forex_news_marked_kyiv_as_part_of_russia_during/
+Skipping unsupported website: https://www.facebook.com/KyivPost/posts/fox-news-marked-kyiv-as-part-of-russia-during-the-first-minutes-of-its-easter-br/1252033570137902/
+Got 2 new web source(s):
+	1. April 20, 2025 https://www.aa.com.tr/en/russia-ukraine-war/ukraine-seeks-apology-from-fox-news-for-labeling-kyiv-russian-city-/3543703
+	2. April 20, 2025 https://www.newsweek.com/fox-channel-ukraine-kyiv-russia-labeling-orthodox-easter-2061891
+Useful result: From [Source](https://www.aa.com.tr/en/russia-ukraine-war/ukraine-seeks-apology-from-fox-news-for-labeling-kyiv-russian-city-/3543703): 
+Content: The Anadolu Agency reports that Ukraine requested an apology from Fox News for labeling Kyiv a "Russian city" during an Easter broadcast. The broadcast showed footage of Easter services, including one in Moscow attended by Vladimir Putin. The text on screen initially read "Kyiv, Ukraine" but later changed to "Kyiv, Russia" for about 20 minutes before being corrected. The article was published on April 20, 2025. <image:13>
+
+Useful result: From [Source](https://www.newsweek.com/fox-channel-ukraine-kyiv-russia-labeling-orthodox-easter-2061891): 
+Content: Newsweek reports that a Fox TV station was accused of labeling Kyiv as Russian territory during an Easter broadcast. The error reportedly remained on screen for 20 minutes. The Ukrainian Foreign Ministry called for an investigation. The article mentions that Putin attended an Easter service at Moscow's Cathedral of Christ the Savior, conducted by Patriarch Kirill. The article was published on April 20, 2025. <image:13>
+
+Got 3 new web source(s):
+	1. http://www.en.kremlin.ru/catalog/keywords/30/events/65522
+	2. https://www.politico.com/news/2022/06/22/patriarch-kirill-putin-russia-ukraine-00041388
+	3. https://foreignpolicy.com/2022/04/26/ukraine-war-russian-orthodox-church-support-patriarch-kirill-homophobia/
+Useful result: From [Source](https://www.politico.com/news/2022/06/22/patriarch-kirill-putin-russia-ukraine-00041388): 
+Content: Politico published an image of Patriarch Kirill. <image:8151>
+
+The claim '<image:13> This image shows a Fox News broadcast from Easter 2025 where you can see the Patriarch Kirill in the center and Kyiv labeled as a Russian city in the top right corner of the image.' is true.
+Justification: The claim is accurate. During an Easter broadcast, Fox News labeled Kyiv as a Russian city, as confirmed by multiple sources ([https://www.aa.com.tr/en/russia-ukraine-war/ukraine-seeks-apology-from-fox-news-for-labeling-kyiv-russian-city-/3543703](https://www.aa.com.tr/en/russia-ukraine-war/ukraine-seeks-apology-from-fox-news-for-labeling-kyiv-russian-city-/3543703), [https://www.newsweek.com/fox-channel-ukraine-kyiv-russia-labeling-orthodox-easter-2061891](https://www.newsweek.com/fox-channel-ukraine-kyiv-russia-labeling-orthodox-easter-2061891)). The image in the claim also depicts Patriarch Kirill, further supporting the claim's description.
+
+So, the overall veracity is: true
+Fact-check took 2:03 min.
