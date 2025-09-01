@@ -1,0 +1,32 @@
+Extracting claims from Content: Trump signed an executive order on January 20, 2025, to halt all funding to UNRWA.
+'Claim: "Trump signed an executive order on January 20, 2025, to halt all funding to UNRWA."'
+Verifying Claim: "Trump signed an executive order on January 20, 2025, to halt all funding to UNRWA."
+Not enough information yet. Continuing fact-check...
+Got 3 new web source(s):
+	1. https://www.nwaonline.com/news/2025/feb/06/us-to-pull-from-top-un-rights-council/
+	2. https://www.reuters.com/world/us/trump-signs-orders-iran-withdrawing-us-un-human-rights-council-unrwa-2025-02-04/
+	3. https://www.nytimes.com/2025/02/04/us/politics/trump-united-nations-unrwa.html
+Useful result: From [Source](https://www.nwaonline.com/news/2025/feb/06/us-to-pull-from-top-un-rights-council/): 
+Content: The search result from nwaonline.com contains an image of Trump holding an executive order. <image:7482>
+
+Useful result: From [Source](https://www.reuters.com/world/us/trump-signs-orders-iran-withdrawing-us-un-human-rights-council-unrwa-2025-02-04/): 
+Content: The search result from Reuters contains an image of Donald Trump signing an executive order. <image:7483>
+
+Useful result: From [Source](https://www.nytimes.com/2025/02/04/us/politics/trump-united-nations-unrwa.html): 
+Content: The New York Times published an article with an image of Trump holding an executive order. <image:7484> The text of the executive order is partially visible.
+
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Trump UNRWA executive order')
+Got 1 new web source(s):
+	1. https://apnews.com/article/trump-un-human-rights-palestinian-refugees-israel-05e1d57bbb41df38771d1ab69adb21a3
+Useful result: From [Source](https://apnews.com/article/trump-un-human-rights-palestinian-refugees-israel-05e1d57bbb41df38771d1ab69adb21a3): 
+Content: The Associated Press published an article with an image of Trump holding an executive order. <image:7920>
+
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Trump executive order UNRWA date')
+Got 0 new web source(s):
+The claim 'Trump signed an executive order on January 20, 2025, to halt all funding to UNRWA.' is false.
+Justification: The evidence indicates that Trump signed executive orders related to UNRWA, as reported by sources like Reuters and The New York Times ([Reuters](https://www.reuters.com/world/us/trump-signs-orders-iran-withdrawing-us-un-human-rights-council-unrwa-2025-02-04/), [The New York Times](https://www.nytimes.com/2025/02/04/us/politics/trump-united-nations-unrwa.html)). However, the exact date of the executive order, January 20, 2025, as stated in the claim, could not be verified.
+
+So, the overall veracity is: false
+Fact-check took 0:38 min.

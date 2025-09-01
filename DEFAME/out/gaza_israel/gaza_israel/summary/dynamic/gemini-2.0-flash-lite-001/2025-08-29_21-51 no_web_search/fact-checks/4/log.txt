@@ -1,0 +1,52 @@
+Extracting claims from Content: <image:5> This image shows the U.S. bombarding Yemen on December 22, 2024 in reprisal after Yemen launched an attack on Israel's capital.
+'Claim: "<image:5> This image shows the U.S. bombarding Yemen on December 22, 2024 in reprisal after Yemen launched an attack on Israel's capital."'
+Verifying Claim: "<image:5> This image shows the U.S. bombarding Yemen on December 22, 2024 in reprisal after Yemen launched an attack on Israel's capital."
+Not enough information yet. Continuing fact-check...
+Got 3 new web source(s):
+	1. https://english.wafa.ps/Pages/Details/149999
+	2. https://en.ammonnews.net/article/74833
+	3. https://hausatv.com/amurka-ta-kai-hare-hare-a-yankunan-kasa-yemen/
+Useful result: From [Source](https://english.wafa.ps/Pages/Details/149999): Found exact image on website with title: Palestinian civilians killed by Israeli airstrikes on homes in Gaza
+Content: The search result is from WAFA, published on October 7, 2024. It reports on Israeli airstrikes on Gaza, which resulted in the killing of Palestinian civilians. The article includes an image <image:5> and another image <image:557> showing the aftermath of the bombing.
+
+Useful result: From [Source](https://en.ammonnews.net/article/74833): Found exact image on website with title: Day 333 of Genocide: Palestinian civilians killed, injured, in Israeli ...
+Content: The image <image:5> is found on the website en.ammonnews.net, in an article titled "Day 333 of Genocide: Palestinian civilians killed, injured, in Israeli bombardment". The article was published on March 9, 2024. The article discusses the killing and injuring of Palestinian civilians in the Gaza Strip due to Israeli bombing.
+
+Useful result: From [Source](https://hausatv.com/amurka-ta-kai-hare-hare-a-yankunan-kasa-yemen/): Found exact image on website with title: Amurka Ta Kai Hare-hare A Yankunan Kasa Yemen – HAUSATV
+Content: The Hausa TV website published an article on April 11, 2025, reporting that U.S. warplanes carried out multiple attacks on various areas of Yemen, including Sana'a. The article includes the image <image:5>.
+
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='bombing in Yemen')
+Got 3 new web source(s):
+	1. https://www.stimson.org/2024/what-has-us-uk-bombing-campaign-in-yemen-accomplished/
+	2. https://www.theguardian.com/world/2025/apr/02/us-bombing-of-yemen-houthis
+	3. https://www.nbcnews.com/news/world/yemen-s-war-reaches-1-000-days-u-s-defends-n831386
+Useful result: From [Source](https://www.stimson.org/2024/what-has-us-uk-bombing-campaign-in-yemen-accomplished/): 
+Content: The search result from Stimson.org contains an image of a bombing in Yemen. <image:7442>
+
+Useful result: From [Source](https://www.theguardian.com/world/2025/apr/02/us-bombing-of-yemen-houthis): 
+Content: The Guardian published an article about the US bombing of Yemen. <image:7443>
+
+Useful result: From [Source](https://www.nbcnews.com/news/world/yemen-s-war-reaches-1-000-days-u-s-defends-n831386): 
+Content: NBC News published an article about the war in Yemen. The article includes an image of an explosion. <image:7444>
+
+Not enough information yet. Continuing fact-check...
+INFO: Dropping action 'reverse_search' as it was already performed.
+Most likely location: Palestine
+Top 10 locations: Palestine, Israel, United Arab Emirates, Jordan, Albania, Andorra, Argentina, Australia, Austria, Bangladesh
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Yemen bombing December 2024')
+Failed to download or open image: cannot identify image file <_io.BytesIO object at 0x7ffee812fa60>
+Got 3 new web source(s):
+	1. https://edition.cnn.com/2024/12/26/middleeast/israeli-strikes-yemen-sanaa-houthis-intl
+	2. https://en.wikipedia.org/wiki/26_December_2024_Israeli_attack_on_Yemen
+	3. https://www.nytimes.com/2024/12/26/world/middleeast/israel-yemen-bombs-houthis.html
+Useful result: From [Source](https://edition.cnn.com/2024/12/26/middleeast/israeli-strikes-yemen-sanaa-houthis-intl): 
+Content: CNN published an article on December 26, 2024, about Israeli strikes in Yemen. <image:7456>
+
+Useful result: From [Source](https://www.nytimes.com/2024/12/26/world/middleeast/israel-yemen-bombs-houthis.html): 
+Content: The New York Times published an article about the bombing of Yemen in December 2024. The article includes an image of a damaged building. <image:7457>
+
+The claim '<image:5> This image shows the U.S. bombarding Yemen on December 22, 2024 in reprisal after Yemen launched an attack on Israel's capital.' is false.
+Justification: The claim is false. The image's geolocation suggests it was taken in Palestine or Israel, not Yemen. Furthermore, the image search reveals that Israeli strikes, not U.S. strikes, occurred in Yemen in December 2024, as reported by [CNN](https://edition.cnn.com/2024/12/26/middleeast/israeli-strikes-yemen-sanaa-houthis-intl) and [The New York Times](https://www.nytimes.com/2024/12/26/world/middleeast/israel-yemen-bombs-houthis.html). The claim also incorrectly attributes the bombing's cause.
+
+So, the overall veracity is: false
+Fact-check took 0:54 min.

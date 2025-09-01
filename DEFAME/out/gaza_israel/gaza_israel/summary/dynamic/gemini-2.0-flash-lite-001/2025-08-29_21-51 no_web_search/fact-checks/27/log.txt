@@ -1,0 +1,36 @@
+Extracting claims from Content: <image:20> This image shows the 'French' Left who is rioting against Le Pen's victory in the first round of the French parliamentary elections in 2024.
+'Claim: "<image:20> This image shows the 'French' Left who is rioting against Le Pen's victory in the first round of the French parliamentary elections in 2024."'
+Verifying Claim: "<image:20> This image shows the 'French' Left who is rioting against Le Pen's victory in the first round of the French parliamentary elections in 2024."
+Not enough information yet. Continuing fact-check...
+Got 3 new web source(s):
+	1. https://www.vanityfair.com/news/2015/07/anti-semitism-france-hostage-hyper-cacher-kosher-market
+	2. https://www.worldjewishcongress.org/en/news/german-tv-agrees-to-air-anti-semitism-documentary-following-cries-of-censorship-6-1-2017
+	3. https://www.jpost.com/tags/adam-milstein
+Useful result: From [Source](https://www.vanityfair.com/news/2015/07/anti-semitism-france-hostage-hyper-cacher-kosher-market): Found exact image on website with title: The Troubling Question in the French Jewish Community - Vanity Fair
+Content: The Vanity Fair article discusses anti-Semitism in France, including a 2014 pro-Palestinian demonstration in Paris where a swastika was painted on a statue. The article mentions a rise in anti-Semitic incidents, including attacks on Jewish schools and synagogues. The article also mentions the rise of Marine Le Pen and the National Front. The article was published in July 2015. <image:20> shows a photo from the article.
+
+Useful result: From [Source](https://www.worldjewishcongress.org/en/news/german-tv-agrees-to-air-anti-semitism-documentary-following-cries-of-censorship-6-1-2017): Found exact image on website with title: German TV agrees to air anti-Semitism documentary following cries ...
+Content: The World Jewish Congress website published an article on June 19, 2017, about a German TV documentary on European anti-Semitism. The article includes the image <image:6999>, which is the same as the image in the claim. The image shows a group of people with Palestinian flags and a swastika drawn on a wall.
+
+Useful result: From [Source](https://www.jpost.com/tags/adam-milstein): Found exact image on website with title: Adam Milstein | The Jerusalem Post
+Content: The Jerusalem Post published an article by Adam Milstein on July 27, 2023, discussing antisemitism in Europe. The article includes an image of a protest in Paris where a swastika was drawn on the base of the Statue de la République. <image:k>
+
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='French protest Le Pen victory 2024')
+Got 3 new web source(s):
+	1. https://www.aljazeera.com/news/2024/7/6/france-braces-for-high-drama-run-offs-as-le-pens-far-right-eyes-power
+	2. https://www.reuters.com/world/europe/france-shifts-left-risk-policy-paralysis-looms-2024-07-08/
+	3. https://www.bloomberg.com/news/articles/2024-06-10/french-far-right-parties-edge-toward-coalition-against-macron
+Useful result: From [Source](https://www.aljazeera.com/news/2024/7/6/france-braces-for-high-drama-run-offs-as-le-pens-far-right-eyes-power): 
+Content: Al Jazeera published an article on July 6, 2024, about the French parliamentary elections. The article includes a photograph of a protest. <image:7511>
+
+Useful result: From [Source](https://www.reuters.com/world/europe/france-shifts-left-risk-policy-paralysis-looms-2024-07-08/): 
+Content: Reuters published an article on July 8, 2024, about the French parliamentary elections. The article includes an image of a protest. <image:7512>
+
+Useful result: From [Source](https://www.bloomberg.com/news/articles/2024-06-10/french-far-right-parties-edge-toward-coalition-against-macron): 
+Content: Bloomberg published an article on June 10, 2024, about the French far-right parties. The article includes an image of Marine Le Pen. <image:7513>
+
+The claim '<image:20> This image shows the 'French' Left who is rioting against Le Pen's victory in the first round of the French parliamentary elections in 2024.' is false.
+Justification: The image in the claim is from 2014 or earlier, as evidenced by articles from *Vanity Fair* and the *World Jewish Congress* ([https://www.vanityfair.com/news/2015/07/anti-semitism-france-hostage-hyper-cacher-kosher-market](https://www.vanityfair.com/news/2015/07/anti-semitism-france-hostage-hyper-cacher-kosher-market), [https://www.worldjewishcongress.org/en/news/german-tv-agrees-to-air-anti-semitism-documentary-following-cries-of-censorship-6-1-2017](https://www.worldjewishcongress.org/en/news/german-tv-agrees-to-air-anti-semitism-documentary-following-cries-of-censorship-6-1-2017)), and is unrelated to the 2024 French parliamentary elections.
+
+So, the overall veracity is: false
+Fact-check took 0:28 min.

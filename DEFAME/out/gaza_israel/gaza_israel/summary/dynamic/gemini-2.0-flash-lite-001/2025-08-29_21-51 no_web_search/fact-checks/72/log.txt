@@ -1,0 +1,24 @@
+Extracting claims from Content: <image:44> This image shows a screenshot of an authentic New York Times article from December, 12, 2024 with the title 'Why the Glorification of Luigi Mangione Is Inherently Anti-Israeli.
+'Claim: "<image:44> This image shows a screenshot of an authentic New York Times article from December, 12, 2024 with the title 'Why the Glorification of Luigi Mangione Is Inherently Anti-Israeli."'
+Verifying Claim: "<image:44> This image shows a screenshot of an authentic New York Times article from December, 12, 2024 with the title 'Why the Glorification of Luigi Mangione Is Inherently Anti-Israeli."
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='New York Times Luigi Mangione Anti-Israeli')
+Skipping fact-checking website: https://www.reuters.com/fact-check/fake-op-ed-says-glorification-luigi-mangione-is-anti-israeli-2024-12-20/
+Got 3 new web source(s):
+	1. https://www.nytco.com/press/tracking-misinformation-fabricated-opinion-headline/
+	2. https://www.yahoo.com/news/york-times-didnt-publish-anti-232547549.html
+	3. https://www.nytimes.com/2024/12/10/briefing/the-search-ends.html
+Useful result: From [Source](https://www.nytco.com/press/tracking-misinformation-fabricated-opinion-headline/): 
+Content: The New York Times did not publish a headline or story titled, "Why the Glorification of Luigi Mangione Is Inherently Anti-Israeli." <image:7732>
+
+Useful result: From [Source](https://www.yahoo.com/news/york-times-didnt-publish-anti-232547549.html): 
+Content: The search result from Yahoo News states that The New York Times did not publish an article with the title "Why the Glorification of Luigi Mangione Is Inherently Anti-Israeli." The article is fake. <image:7733>
+
+Useful result: From [Source](https://www.nytimes.com/2024/12/10/briefing/the-search-ends.html): 
+Content: The New York Times published an article on December 10, 2024. The article includes an image of a man being arrested by police officers. <image:7734>
+
+The claim '<image:44> This image shows a screenshot of an authentic New York Times article from December, 12, 2024 with the title 'Why the Glorification of Luigi Mangione Is Inherently Anti-Israeli.' is false.
+Justification: The image shows a fabricated New York Times article. A search revealed that the publication did not publish an article with the title "Why the Glorification of Luigi Mangione Is Inherently Anti-Israeli," confirming the image's inauthenticity.
+
+So, the overall veracity is: false
+Fact-check took 0:14 min.

@@ -1,0 +1,37 @@
+Extracting claims from Content: <image:35> This image shows an Israeli attack on Lebanon on October 21, 2024.
+'Claim: "<image:35> This image shows an Israeli attack on Lebanon on October 21, 2024."'
+Verifying Claim: "<image:35> This image shows an Israeli attack on Lebanon on October 21, 2024."
+Not enough information yet. Continuing fact-check...
+Got 3 new web source(s):
+	1. https://www.ynetnews.com/article/hknhoabzkg
+	2. https://www.bbc.com/pidgin/articles/cp9x0d1z8xro
+	3. https://www.amnesty.ie/author/srowe/page/5/
+Useful result: From [Source](https://www.ynetnews.com/article/hknhoabzkg): Found exact image on website with title: Gaza explosions rattle central Israel; scientist explains why - Ynetnews
+Content: The image <image:35> appears in an article from Ynetnews titled "Gaza explosions rattle central Israel; scientist explains why". The article discusses explosions in Gaza and how they are heard in central Israel. The article mentions that the sounds of explosions from Gaza are often louder at night. The image is credited to MAHMUD HAMS.
+
+Useful result: From [Source](https://www.bbc.com/pidgin/articles/cp9x0d1z8xro): Found exact image on website with title: 'Wia you fit hide wen death dey come from di sky?' - life for Gaza - BBC
+Content: The BBC Pidgin website published an article on October 11, 2023, titled "Wia you fit hide wen death dey come from di sky?' - life for Gaza - BBC". The article discusses the impact of Israeli airstrikes on Gaza, including the destruction of buildings and the displacement of residents. The article includes an image <image:1815> of a fire after an Israeli airstrike in Gaza City. The article also includes an image <image:35> of a fire burst after an Israeli air strike for Gaza City.
+
+Useful result: From [Source](https://www.amnesty.ie/author/srowe/page/5/): Found exact image on website with title: srowe, Author at Amnesty International Ireland - Page 5 of 20
+Content: The search result is from Amnesty International Ireland and contains an image of a fireball erupting from an Israeli airstrike in Gaza City on October 9, 2023. <image:1842> The website also contains other images related to the conflict between Israel and Palestine.
+
+Not enough information yet. Continuing fact-check...
+INFO: Dropping action 'reverse_search' as it was already performed.
+Got 3 new web source(s):
+	1. https://www.aljazeera.com/news/2024/10/21/us-says-it-is-seeking-lasting-end-to-war-in-lebanon-as-soon-as-possible
+	2. https://www.understandingwar.org/backgrounder/iran-update-october-21-2024
+	3. https://www.lemonde.fr/en/international/article/2024/10/21/israel-bombs-lebanese-company-suspected-of-financing-hezbollah_6729986_4.html
+Useful result: From [Source](https://www.aljazeera.com/news/2024/10/21/us-says-it-is-seeking-lasting-end-to-war-in-lebanon-as-soon-as-possible): 
+Content: Al Jazeera published an article on October 21, 2024, about the US seeking an end to the war in Lebanon. The article includes an image of an explosion over a city. <image:1948>
+
+Useful result: From [Source](https://www.understandingwar.org/backgrounder/iran-update-october-21-2024): 
+Content: The Institute for the Study of War published a map showing attacks into Northern Israel from Lebanon on October 21, 2024, at 2:00 PM ET. <image:1949>
+
+Useful result: From [Source](https://www.lemonde.fr/en/international/article/2024/10/21/israel-bombs-lebanese-company-suspected-of-financing-hezbollah_6729986_4.html): 
+Content: Le Monde reports on an Israeli bombing of a Lebanese company suspected of financing Hezbollah on October 21, 2024. <image:1950>
+
+The claim '<image:35> This image shows an Israeli attack on Lebanon on October 21, 2024.' is true.
+Justification: The claim is likely true. Evidence from an image search confirms that on October 21, 2024, there were reports of Israeli attacks in Lebanon, as reported by sources such as [Al Jazeera](https://www.aljazeera.com/news/2024/10/21/us-says-it-is-seeking-lasting-end-to-war-in-lebanon-as-soon-as-possible) and [Le Monde](https://www.lemonde.fr/en/international/article/2024/10/21/israel-bombs-lebanese-company-suspected-of-financing-hezbollah_6729986_4.html).
+
+So, the overall veracity is: true
+Fact-check took 0:29 min.

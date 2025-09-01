@@ -1,0 +1,50 @@
+Extracting claims from Content: A US-flagged vessel has been attacked in the Guld of Aden in July 2024. A Spokesperson at Denmark's shipping company Maersk said: 'There was an attack targeted on one of the company's US-flagged vessels at the northernmost part of the Gulf of Aden.'
+'Claim: "A US-flagged vessel has been attacked in the Guld of Aden in July 2024. A Spokesperson at Denmark's shipping company Maersk said: 'There was an attack targeted on one of the company's US-flagged vessels at the northernmost part of the Gulf of Aden.'"'
+Verifying Claim: "A US-flagged vessel has been attacked in the Guld of Aden in July 2024. A Spokesperson at Denmark's shipping company Maersk said: 'There was an attack targeted on one of the company's US-flagged vessels at the northernmost part of the Gulf of Aden.'"
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='US flagged vessel Gulf of Aden attack July 2024')
+Failed to download or open image: cannot identify image file <_io.BytesIO object at 0x7ffed17d6390>
+Got 3 new web source(s):
+	1. https://www.sochfactcheck.com/does-viral-image-show-us-flagged-ship-targeted-by-houthis-in-july-2024-gulf-of-aden/
+	2. https://apnews.com/article/houthis-us-yemen-israel-palestinians-gaza-fa2aefc86ae002e73081e6ac1b772610
+	3. https://gcaptain.com/houthis-claim-attack-targeting-us-flagged-ocean-jazz/
+Useful result: From [Source](https://www.sochfactcheck.com/does-viral-image-show-us-flagged-ship-targeted-by-houthis-in-july-2024-gulf-of-aden/): 
+Content: The search result from Soch Fact Check includes an image of a ship on fire with a US flag, reportedly targeted in the Gulf of Aden. The image was posted on July 9, 2024. <image:7891>
+
+Useful result: From [Source](https://apnews.com/article/houthis-us-yemen-israel-palestinians-gaza-fa2aefc86ae002e73081e6ac1b772610): 
+Content: The search result from AP News contains an image of a ship. <image:7894>
+
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Maersk US flagged vessel Gulf of Aden attack July 2024')
+Skipping fact-checking website: https://factcheck.afp.com/doc.afp.com.36496K2
+Got 3 new web source(s):
+	1. https://english.ahram.org.eg/News/527018.aspx
+	2. https://khabaragency.net/news214386.html
+	3. https://www.seatrade-maritime.com/containers/houthi-target-us-flagged-maersk-ship-in-failed-missile-strike
+Useful result: From [Source](https://english.ahram.org.eg/News/527018.aspx): 
+Content: Ahram Online published an article about the attack on a Maersk vessel. <image:7898>
+
+Useful result: From [Source](https://khabaragency.net/news214386.html): 
+Content: The search result includes an image of a Maersk Line ship. <image:7899>
+
+Useful result: From [Source](https://www.seatrade-maritime.com/containers/houthi-target-us-flagged-maersk-ship-in-failed-missile-strike): 
+Content: Seatrade Maritime reports that a Houthi attack targeted a US-flagged Maersk ship. <image:7900>
+
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Maersk spokesperson Gulf of Aden attack July 2024')
+Failed to download or open image: cannot identify image file <_io.BytesIO object at 0x7ffffecd4680>
+Got 3 new web source(s):
+	1. https://www.marineinsight.com/shipping-news/houthis-launch-multiple-missile-attack-on-container-ship-in-the-arabian-sea/
+	2. https://www.arabnews.com/node/2546696/middle-east
+	3. https://container-news.com/maersk-ship-unscathed-after-houthi-attack/
+Useful result: From [Source](https://www.marineinsight.com/shipping-news/houthis-launch-multiple-missile-attack-on-container-ship-in-the-arabian-sea/): 
+Content: Marine Insight reports on a missile attack on a container ship in the Arabian Sea. <image:7907>
+
+Useful result: From [Source](https://container-news.com/maersk-ship-unscathed-after-houthi-attack/): 
+Content: The search result from container-news.com includes an image of a Maersk ship.
+
+The claim 'A US-flagged vessel has been attacked in the Guld of Aden in July 2024. A Spokesperson at Denmark's shipping company Maersk said: 'There was an attack targeted on one of the company's US-flagged vessels at the northernmost part of the Gulf of Aden.'' is false.
+Justification: The claim is partially accurate. Multiple sources, including [Ahram Online](https://english.ahram.org.eg/News/527018.aspx) and [Seatrade Maritime](https://www.seatrade-maritime.com/containers/houthi-target-us-flagged-maersk-ship-in-failed-missile-strike), confirm that a US-flagged Maersk vessel was attacked in the Gulf of Aden in July 2024. However, the evidence does not include a statement from a Maersk spokesperson, making that part of the claim unverified.
+
+So, the overall veracity is: false
+Fact-check took 0:40 min.

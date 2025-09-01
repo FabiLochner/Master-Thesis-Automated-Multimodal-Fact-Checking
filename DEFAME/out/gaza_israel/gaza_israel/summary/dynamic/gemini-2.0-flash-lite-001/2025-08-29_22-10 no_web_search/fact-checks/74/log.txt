@@ -1,0 +1,46 @@
+Extracting claims from Content: Netanyahu’s son Yair was killed in a drone attack on October 19, 2024 that targeted the Israeli PM’s home in Caesarea, Israel.
+'Claim: "Netanyahu’s son Yair was killed in a drone attack on October 19, 2024 that targeted the Israeli PM’s home in Caesarea, Israel."'
+Verifying Claim: "Netanyahu’s son Yair was killed in a drone attack on October 19, 2024 that targeted the Israeli PM’s home in Caesarea, Israel."
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Yair Netanyahu drone attack Caesarea October 19 2024')
+Skipping fact-checking website: https://newsmeter.in/fact-check/no-yair-netanyahu-was-not-assassinated-in-drone-attack-on-israeli-pms-home-737767
+Failed to download or open image: cannot identify image file <_io.BytesIO object at 0x7ffed15ea610>
+Got 3 new web source(s):
+	1. https://www.timesofisrael.com/drones-moans-and-groans-hezbollah-attacks-pms-home-petty-politics-continue-unintercepted/
+	2. https://en.wikipedia.org/wiki/Benjamin_Netanyahu
+	3. https://www.newsmobile.in/nm-fact-checker/fact-check-israeli-pm-benjamin-netanyahus-son-yair-killed-in-hezbollah-drone-attack-heres-the-truth/
+Useful result: From [Source](https://www.timesofisrael.com/drones-moans-and-groans-hezbollah-attacks-pms-home-petty-politics-continue-unintercepted/): 
+Content: The Times of Israel published an article about drone attacks. The article includes an image of people standing behind a barrier. <image:8174>
+
+Useful result: From [Source](https://www.newsmobile.in/nm-fact-checker/fact-check-israeli-pm-benjamin-netanyahus-son-yair-killed-in-hezbollah-drone-attack-heres-the-truth/): 
+Content: The search result includes an image <image:8175> with text stating that Shin Bet confirms the assassination of Yair Netanyahu in Caesarea. The post was made 4 days ago.
+
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Yair Netanyahu death October 19 2024')
+Got 2 new web source(s):
+	1. https://www.timesofisrael.com/assailing-military-yair-netanyahu-claims-treason-in-leadup-to-october-7-attack/
+	2. https://www.theguardian.com/world/2020/aug/27/yair-netanyahu-israels-crown-prince-leads-fight-to-protect-father
+Useful result: From [Source](https://www.timesofisrael.com/assailing-military-yair-netanyahu-claims-treason-in-leadup-to-october-7-attack/): 
+Content: The Times of Israel published an article about Yair Netanyahu, including an image of him. <image:8180>
+
+Useful result: From [Source](https://www.theguardian.com/world/2020/aug/27/yair-netanyahu-israels-crown-prince-leads-fight-to-protect-father): 
+Content: The Guardian published an article about Yair Netanyahu, including an image of Yair Netanyahu with his father, Benjamin Netanyahu. <image:8181>
+
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='drone attack Caesarea October 19 2024')
+Failed to download or open image: cannot identify image file <_io.BytesIO object at 0x7ffed15f7bf0>
+Got 3 new web source(s):
+	1. https://www.nytimes.com/2024/10/19/world/middleeast/drone-netanyahu-israel-caesarea.html
+	2. https://www.aljazeera.com/news/2024/10/19/drone-hits-netanyahus-home-as-hezbollah-rockets-target-northern-israel
+	3. https://www.france24.com/en/middle-east/20241019-drone-attack-targets-netanyahu-residence-as-israeli-strikes-hammer-gaza
+Useful result: From [Source](https://www.nytimes.com/2024/10/19/world/middleeast/drone-netanyahu-israel-caesarea.html): 
+Content: The New York Times published an article about a drone attack in Caesarea on October 19, 2024. <image:8185>
+
+Useful result: From [Source](https://www.aljazeera.com/news/2024/10/19/drone-hits-netanyahus-home-as-hezbollah-rockets-target-northern-israel): 
+Content: Al Jazeera published an article about a drone attack on October 19, 2024, that targeted Netanyahu's home. <image:8186>
+
+The claim 'Netanyahu’s son Yair was killed in a drone attack on October 19, 2024 that targeted the Israeli PM’s home in Caesarea, Israel.' is false.
+Justification: The claim that Yair Netanyahu was killed in a drone attack on October 19, 2024, cannot be verified. While multiple sources, including the [New York Times](https://www.nytimes.com/2024/10/19/world/middleeast/drone-netanyahu-israel-caesarea.html) and [Al Jazeera](https://www.aljazeera.com/news/2024/10/19/drone-hits-netanyahus-home-as-hezbollah-rockets-target-northern-israel), reported a drone attack on that date in Caesarea targeting Netanyahu's home, none of the evidence mentions Yair Netanyahu's death.
+
+So, the overall veracity is: false
+Fact-check took 0:43 min.

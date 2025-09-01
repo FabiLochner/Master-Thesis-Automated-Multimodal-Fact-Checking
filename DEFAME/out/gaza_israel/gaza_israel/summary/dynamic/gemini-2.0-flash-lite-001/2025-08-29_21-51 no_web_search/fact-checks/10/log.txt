@@ -1,0 +1,30 @@
+Extracting claims from Content: <image:10> This is an authentic image of Israel bombing Beirut's International Airport in October 2024.
+'Claim: "<image:10> This is an authentic image of Israel bombing Beirut's International Airport in October 2024."'
+Verifying Claim: "<image:10> This is an authentic image of Israel bombing Beirut's International Airport in October 2024."
+Not enough information yet. Continuing fact-check...
+Got 2 new web source(s):
+	1. https://www.indiatoday.in/fact-check/story/fact-check-photo-middle-east-airlines-flight-israel-airstrikes-beirut-lebanon-ai-generated-2622766-2024-10-24
+	2. https://factly.in/an-ai-generated-image-of-a-plane-landing-at-beirut-international-airport-surrounded-by-fire-and-smoke-is-falsely-shared-as-real/
+Useful result: From [Source](https://www.indiatoday.in/fact-check/story/fact-check-photo-middle-east-airlines-flight-israel-airstrikes-beirut-lebanon-ai-generated-2622766-2024-10-24): Found exact image on website with title: Fact Check: What an explosive photo of the Lebanon sky! Pity it's AI ...
+Content: The search result from India Today, published on October 24, 2024, fact-checks a viral image of a Middle East Airlines (MEA) flight landing in Beirut amid explosions. The article states that the image is AI-generated. <image:318> The article mentions that the image was posted on Instagram and that AI detection tools confirm the image was generated using AI.
+
+Useful result: From [Source](https://factly.in/an-ai-generated-image-of-a-plane-landing-at-beirut-international-airport-surrounded-by-fire-and-smoke-is-falsely-shared-as-real/): Found exact image on website with title: AI-generated image of a plane landing at Beirut International Airport ...
+Content: The search result from Factly.in states that the image <image:10> is AI-generated and does not show a real incident. The image was posted on an Instagram account on October 21, 2024, with a caption confirming it as AI-generated. The article also includes images <image:321>, <image:322>, and <image:323> and mentions the use of AI detection tools, which confirmed the image was AI-generated. The article's author is Nitish Kumar Dhonge.
+
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Beirut airport explosion')
+Failed to download or open image: HTTPSConnectionPool(host='cdnuploads.aa.com.tr', port=443): Read timed out. (read timeout=10)
+Got 3 new web source(s):
+	1. https://www.aa.com.tr/en/middle-east/dozens-dead-as-massive-explosion-rocks-beirut/1931422
+	2. https://www.abc.net.au/news/2006-07-14/israel-planes-bomb-beirut-airport-for-fourth-time/1801960
+	3. https://www.aljazeera.com/news/2006/7/14/israel-bombs-beirut-airport-again
+Useful result: From [Source](https://www.abc.net.au/news/2006-07-14/israel-planes-bomb-beirut-airport-for-fourth-time/1801960): 
+Content: The ABC News website published an article on July 14, 2006, about Israel bombing Beirut airport. The article includes an image of an airplane with smoke and fire in the background. <image:7461>
+
+Useful result: From [Source](https://www.aljazeera.com/news/2006/7/14/israel-bombs-beirut-airport-again): 
+Content: Al Jazeera reports on Israel bombing Beirut airport. <image:7462>
+
+The claim '<image:10> This is an authentic image of Israel bombing Beirut's International Airport in October 2024.' is false.
+Justification: The image is AI-generated, as confirmed by fact-check articles from India Today ([https://www.indiatoday.in/fact-check/story/fact-check-photo-middle-east-airlines-flight-israel-airstrikes-beirut-lebanon-ai-generated-2622766-2024-10-24](https://www.indiatoday.in/fact-check/story/fact-check-photo-middle-east-airlines-flight-israel-airstrikes-beirut-lebanon-ai-generated-2622766-2024-10-24)) and Factly.in ([https://factly.in/an-ai-generated-image-of-a-plane-landing-at-beirut-international-airport-surrounded-by-fire-and-smoke-is-falsely-shared-as-real/](https://factly.in/an-ai-generated-image-of-a-plane-landing-at-beirut-international-airport-surrounded-by-fire-and-smoke-is-falsely-shared-as-real/)), making the claim that it is an authentic image false.
+
+So, the overall veracity is: false
+Fact-check took 0:40 min.

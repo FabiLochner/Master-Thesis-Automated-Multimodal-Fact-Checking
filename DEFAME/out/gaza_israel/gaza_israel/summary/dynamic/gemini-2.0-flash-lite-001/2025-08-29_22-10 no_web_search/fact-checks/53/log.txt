@@ -1,0 +1,49 @@
+Extracting claims from Content: President Donald Trump posted on Truth Social on July 25, 2024, as a reaction to the attempted assasination of him on July 13, 2024, 'I hope that America obliterates Israel.'
+'Claim: "President Donald Trump posted on Truth Social on July 25, 2024, as a reaction to the attempted assasination of him on July 13, 2024, 'I hope that America obliterates Israel.'"'
+Verifying Claim: "President Donald Trump posted on Truth Social on July 25, 2024, as a reaction to the attempted assasination of him on July 13, 2024, 'I hope that America obliterates Israel.'"
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Truth Social Donald Trump July 25 2024')
+Failed to download or open image: cannot identify image file <_io.BytesIO object at 0x7ffed15876a0>
+Got 3 new web source(s):
+	1. https://www.aljazeera.com/news/2025/3/4/trump-announces-us-crypto-reserve-what-it-is-and-why-it-matters
+	2. https://www.cnbc.com/video/2025/07/18/how-frequently-does-trump-post-on-social-media.html
+	3. https://www.yahoo.com/news/trump-aims-dig-obama-bizarre-171720658.html
+Useful result: From [Source](https://www.aljazeera.com/news/2025/3/4/trump-announces-us-crypto-reserve-what-it-is-and-why-it-matters): 
+Content: The search result from Al Jazeera contains an image of Donald Trump at the Bitcoin 2024 conference in Nashville, July 25-27, 2024. <image:8085>
+
+Useful result: From [Source](https://www.yahoo.com/news/trump-aims-dig-obama-bizarre-171720658.html): 
+Content: The search result from Yahoo News contains a Truth Social post by Donald J. Trump from December 25, 2024, at 10:48 AM. <image:8086>.
+
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Truth Social Donald Trump July 25 2024 assassination attempt')
+Failed to download or open image: cannot identify image file <_io.BytesIO object at 0x7ffed1587150>
+Got 3 new web source(s):
+	1. https://www.latimes.com/world-nation/story/2024-10-17/panel-looking-into-trump-assassination-attempt-says-secret-service-needs-fundamental-reform
+	2. https://www.desmoinesregister.com/story/news/2024/07/14/see-sunday-enewspaper-for-special-coverage-of-trump-rally-shooting/74401975007/
+	3. https://www.axios.com/2024/07/14/trump-assassination-truth-social-update
+Useful result: From [Source](https://www.latimes.com/world-nation/story/2024-10-17/panel-looking-into-trump-assassination-attempt-says-secret-service-needs-fundamental-reform): 
+Content: The Los Angeles Times published an article on October 17, 2024, about a panel investigating an assassination attempt on Donald Trump. <image:8091>
+
+Useful result: From [Source](https://www.axios.com/2024/07/14/trump-assassination-truth-social-update): 
+Content: Axios reports on an update on Truth Social regarding an assassination attempt on July 13, 2024. <image:8092>
+
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Donald Trump Truth Social July 25 2024 Israel')
+Got 3 new web source(s):
+	1. https://www.cnn.com/2024/07/26/politics/trump-netanyahu-meeting-mar-a-lago
+	2. https://tennesseelookout.com/2024/07/25/in-capitol-address-israeli-leader-calls-for-u-s-backing-to-defeat-hamas/
+	3. https://www.nytimes.com/2024/07/25/world/middleeast/trump-netanyahu-israel-gaza.html
+Useful result: From [Source](https://www.cnn.com/2024/07/26/politics/trump-netanyahu-meeting-mar-a-lago): 
+Content: CNN reports on a meeting between Trump and Netanyahu. <image:8096>
+
+Useful result: From [Source](https://tennesseelookout.com/2024/07/25/in-capitol-address-israeli-leader-calls-for-u-s-backing-to-defeat-hamas/): 
+Content: The Tennessee Lookout published an article on July 25, 2024, about an address by an Israeli leader. <image:8097>
+
+Useful result: From [Source](https://www.nytimes.com/2024/07/25/world/middleeast/trump-netanyahu-israel-gaza.html): 
+Content: The New York Times published an article on July 25, 2024, about Donald Trump and Netanyahu. <image:8098>
+
+The claim 'President Donald Trump posted on Truth Social on July 25, 2024, as a reaction to the attempted assasination of him on July 13, 2024, 'I hope that America obliterates Israel.'' is false.
+Justification: The claim is unsubstantiated. While there was an assassination attempt on Donald Trump and he was active on Truth Social, there is no evidence of a post on July 25, 2024, containing the specific quote. The search results show Trump was at a conference and involved in events related to Israel around that time, but no post with the mentioned quote was found.
+
+So, the overall veracity is: false
+Fact-check took 0:45 min.

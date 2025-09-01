@@ -1,0 +1,39 @@
+Extracting claims from Content: <image:7> This is an authentic image of Benjamin Netanyahu being hospitalized in Tel Aviv in November 2024 due to a serious health issue.
+'Claim: "<image:7> This is an authentic image of Benjamin Netanyahu being hospitalized in Tel Aviv in November 2024 due to a serious health issue."'
+Verifying Claim: "<image:7> This is an authentic image of Benjamin Netanyahu being hospitalized in Tel Aviv in November 2024 due to a serious health issue."
+Not enough information yet. Continuing fact-check...
+Got 3 new web source(s):
+	1. https://www.forbes.com/sites/mattnovak/2023/11/08/viral-photo-of-benjamin-netanyahu-hospitalized-is-actually-fake/
+	2. https://www.saba.ye/en/news3416306.htm
+	3. https://en.webangah.ir/2024-12-30/news=240102/
+Useful result: From [Source](https://www.forbes.com/sites/mattnovak/2023/11/08/viral-photo-of-benjamin-netanyahu-hospitalized-is-actually-fake/): Found exact image on website with title: Viral Photo Of Benjamin Netanyahu Hospitalized Is Actually Fake
+Content: The Forbes article, published on November 8, 2023, debunks a viral image of Benjamin Netanyahu in a hospital bed as fake, stating it was likely created using AI software. <image:610> The article mentions that there is no evidence of Netanyahu being hospitalized and that he was giving an interview on the same day the image went viral. The article also mentions that BBC fact-checker Shayan Sardarizadeh was the first to debunk the image.
+
+Useful result: From [Source](https://www.saba.ye/en/news3416306.htm): Found exact image on website with title: Netanyahu officially diagnosed with prostate cancer - SabaNet
+Content: The search result from SabaNet, Yemen News Agency, states that Benjamin Netanyahu was diagnosed with prostate cancer and underwent surgery on Sunday, December 29, 2024. <image:7> is shown in the article. The article was published on December 29, 2024.
+
+Useful result: From [Source](https://en.webangah.ir/2024-12-30/news=240102/): Found exact image on website with title: Transferring Netanyahu to an underground ward after surgery
+Content: The search result from en.webangah.ir, published on December 30, 2024, discusses the successful prostate surgery of Benjamin Netanyahu and his transfer to an underground ward. <image:7> The article mentions that the Israeli prime minister's office announced his good condition after the surgery.
+
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Benjamin Netanyahu hospitalized Tel Aviv')
+Skipping fact-checking website: https://factcheck.afp.com/doc.afp.com.36MV6KT
+Skipping unsupported website: https://www.gov.il/en/departments/news/epmhosp
+Skipping unsupported website: https://x.com/IsraeliPM/status/1723051212000440468
+Got 3 new web source(s):
+	1. https://www.politico.com/news/2023/07/16/israel-netanyahu-discharged-hospital-00106491
+	2. https://www.cnn.com/2023/07/15/middleeast/netanyahu-admitted-hospital-intl
+	3. https://www.thehindu.com/news/international/israels-prime-minister-netanyahu-rushed-to-hospital-his-office-says-he-is-in-good-condition/article67084595.ece
+Useful result: From [Source](https://www.politico.com/news/2023/07/16/israel-netanyahu-discharged-hospital-00106491): 
+Content: Politico reports that Benjamin Netanyahu was discharged from the hospital. <image:7447>
+
+Useful result: From [Source](https://www.cnn.com/2023/07/15/middleeast/netanyahu-admitted-hospital-intl): 
+Content: CNN reports that Benjamin Netanyahu was admitted to the hospital. <image:7448>
+
+Useful result: From [Source](https://www.thehindu.com/news/international/israels-prime-minister-netanyahu-rushed-to-hospital-his-office-says-he-is-in-good-condition/article67084595.ece): 
+Content: The Hindu reports that Benjamin Netanyahu was rushed to the hospital. <image:7452>
+
+The claim '<image:7> This is an authentic image of Benjamin Netanyahu being hospitalized in Tel Aviv in November 2024 due to a serious health issue.' is false.
+Justification: The image of Benjamin Netanyahu in a hospital bed is fake, as reported by Forbes ([https://www.forbes.com/sites/mattnovak/2023/11/08/viral-photo-of-benjamin-netanyahu-hospitalized-is-actually-fake/](https://www.forbes.com/sites/mattnovak/2023/11/08/viral-photo-of-benjamin-netanyahu-hospitalized-is-actually-fake/)).
+
+So, the overall veracity is: false
+Fact-check took 0:39 min.

@@ -1,0 +1,35 @@
+Extracting claims from Content: <image:23> This image shows Israel bombing Tehran on October 26, 2024.
+'Claim: "<image:23> This image shows Israel bombing Tehran on October 26, 2024."'
+Verifying Claim: "<image:23> This image shows Israel bombing Tehran on October 26, 2024."
+Not enough information yet. Continuing fact-check...
+Got 3 new web source(s):
+	1. https://www.timesofisrael.com/liveblog_entry/huge-fire-at-refinery-near-tehran-extinguished-after-20-hours-report/
+	2. https://www.theglobeandmail.com/world/article-massive-fire-breaks-out-at-oil-refinery-south-of-tehran/
+	3. https://www.newarab.com/news/massive-fire-breaks-out-oil-refinery-near-irans-capital
+Useful result: From [Source](https://www.timesofisrael.com/liveblog_entry/huge-fire-at-refinery-near-tehran-extinguished-after-20-hours-report/): Found exact image on website with title: Huge fire at refinery near Tehran extinguished after 20 hours -- report
+Content: The Times of Israel published an article on June 2, 2021, about a fire at a refinery near Tehran. <image:0> The image in the article matches the image in the claim.
+
+Useful result: From [Source](https://www.theglobeandmail.com/world/article-massive-fire-breaks-out-at-oil-refinery-south-of-tehran/): Found exact image on website with title: Massive fire breaks out at oil refinery south of Tehran
+Content: The search result from The Globe and Mail, published on June 2, 2021, shows the exact image <image:1235> of a fire at an oil refinery south of Tehran. The article states that the fire occurred on June 2, 2021. The image is credited to Atta Kenare/AFP/Getty Images.
+
+Useful result: From [Source](https://www.newarab.com/news/massive-fire-breaks-out-oil-refinery-near-irans-capital): Found exact image on website with title: Massive fire breaks out at oil refinery near Iran's capital
+Content: The image in the claim is of a fire at an oil refinery near Tehran. The New Arab reported on June 2, 2021, about a massive fire that broke out at the oil refinery serving Iran's capital. <image:23>
+
+Got 3 new web source(s):
+	1. https://www.cnn.com/2024/10/26/middleeast/israel-strikes-iran-explainer-intl-hnk
+	2. https://www.aljazeera.com/news/liveblog/2024/10/26/live-israel-attacks-targets-across-iran-warns-tehran-against-retaliation
+	3. https://www.understandingwar.org/backgrounder/iran-update-october-26-2024
+Useful result: From [Source](https://www.cnn.com/2024/10/26/middleeast/israel-strikes-iran-explainer-intl-hnk): 
+Content: CNN published an article on October 26, 2024, about Israel strikes in Iran. <image:7031>
+
+Useful result: From [Source](https://www.aljazeera.com/news/liveblog/2024/10/26/live-israel-attacks-targets-across-iran-warns-tehran-against-retaliation): 
+Content: Al Jazeera published an article on October 26, 2024, about Israel attacks. The article includes an image of a destroyed ambulance. <image:7032>
+
+Useful result: From [Source](https://www.understandingwar.org/backgrounder/iran-update-october-26-2024): 
+Content: The Institute for the Study of War and Critical Threats published a map showing IDF strikes around Tehran on October 26, 2024. <image:7033>
+
+The claim '<image:23> This image shows Israel bombing Tehran on October 26, 2024.' is false.
+Justification: The image in the claim, sourced from Atta Kenare/AFP/Getty Images, depicts a fire at an oil refinery near Tehran that occurred on June 2, 2021, as reported by sources like The Times of Israel ([https://www.timesofisrael.com/liveblog_entry/huge-fire-at-refinery-near-tehran-extinguished-after-20-hours-report/](https://www.timesofisrael.com/liveblog_entry/huge-fire-at-refinery-near-tehran-extinguished-after-20-hours-report/)). While there were reports of Israel strikes in Iran on October 26, 2024, the image is unrelated to those events.
+
+So, the overall veracity is: false
+Fact-check took 0:26 min.

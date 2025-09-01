@@ -1,0 +1,34 @@
+Extracting claims from Content: <image:28> This image authentically shows U.S. President Joe Boden in late November 2024 exiting a Nantucket bookstore holding a copy of writer Rashid Khalidi's book, 'The Hundred Years' War on Palestine: A History of Settler Colonialism and Resistance, 1917–2017.'
+'Claim: "<image:28> This image authentically shows U.S. President Joe Boden in late November 2024 exiting a Nantucket bookstore holding a copy of writer Rashid Khalidi's book, 'The Hundred Years' War on Palestine: A History of Settler Colonialism and Resistance, 1917–2017.'"'
+Verifying Claim: "<image:28> This image authentically shows U.S. President Joe Boden in late November 2024 exiting a Nantucket bookstore holding a copy of writer Rashid Khalidi's book, 'The Hundred Years' War on Palestine: A History of Settler Colonialism and Resistance, 1917–2017.'"
+Not enough information yet. Continuing fact-check...
+Got 0 new web source(s):
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Joe Biden Nantucket Bookworks')
+Failed to download or open image: cannot identify image file <_io.BytesIO object at 0x7ffeebfe9940>
+Skipping unsupported website: https://www.instagram.com/p/DC-6B36s5jf/
+Got 3 new web source(s):
+	1. https://americanisraelite.com/biden-photographed-exiting-nantucket-shop-with-anti-israel-book/
+	2. https://www.thenationalherald.com/biden-family-attend-christmas-tree-lighting-on-nantucket/
+	3. https://www.foxnews.com/politics/biden-seen-holding-anti-israel-book-black-friday-shopping-excursion
+Useful result: From [Source](https://www.thenationalherald.com/biden-family-attend-christmas-tree-lighting-on-nantucket/): 
+Content: The National Herald published an image of Joe Biden exiting Nantucket Bookworks. <image:7574>
+
+Useful result: From [Source](https://www.foxnews.com/politics/biden-seen-holding-anti-israel-book-black-friday-shopping-excursion): 
+Content: Fox News published an image of Joe Biden exiting Nantucket Bookworks. <image:7575>
+
+Not enough information yet. Continuing fact-check...
+INFO: Dropping action 'reverse_search' as it was already performed.
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Joe Biden Nantucket Bookworks Rashid Khalidi book')
+Skipping unsupported website: https://www.instagram.com/p/DC-6B36s5jf/
+Failed to download or open image: cannot identify image file <_io.BytesIO object at 0x7ffed1628c70>
+Skipping unsupported website: https://www.facebook.com/kuwaittimesdaily/posts/us-president-joe-biden-was-seen-holding-a-copy-of-the-book-the-hundred-years-war/995347642638971/
+Got 1 new web source(s):
+	1. https://nypost.com/2024/11/29/us-news/biden-picks-up-anti-israel-book-during-black-friday-shopping-4-years-too-late-says-author/
+Useful result: From [Source](https://nypost.com/2024/11/29/us-news/biden-picks-up-anti-israel-book-during-black-friday-shopping-4-years-too-late-says-author/): 
+Content: The New York Post published an article about Joe Biden picking up Rashid Khalidi's book, "The Hundred Years' War on Palestine: A History of Settler Colonialism and Resistance, 1917–2017." <image:7583>
+
+The claim '<image:28> This image authentically shows U.S. President Joe Boden in late November 2024 exiting a Nantucket bookstore holding a copy of writer Rashid Khalidi's book, 'The Hundred Years' War on Palestine: A History of Settler Colonialism and Resistance, 1917–2017.'' is true.
+Justification: The claim is true. Joe Biden was photographed exiting Nantucket Bookworks holding a copy of Rashid Khalidi's book, "The Hundred Years' War on Palestine: A History of Settler Colonialism and Resistance, 1917–2017," as reported by the New York Post ([https://nypost.com/2024/11/29/us-news/biden-picks-up-anti-israel-book-during-black-friday-shopping-4-years-too-late-says-author/](https://nypost.com/2024/11/29/us-news/biden-picks-up-anti-israel-book-during-black-friday-shopping-4-years-too-late-says-author/)).
+
+So, the overall veracity is: true
+Fact-check took 0:30 min.

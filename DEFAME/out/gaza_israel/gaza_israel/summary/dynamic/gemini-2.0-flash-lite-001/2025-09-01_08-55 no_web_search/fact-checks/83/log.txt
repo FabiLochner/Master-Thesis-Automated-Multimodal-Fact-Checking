@@ -1,0 +1,49 @@
+Extracting claims from Content: <image:52> This image shows the President of FC Barcelona with Israel Embassy Representatives in September 2024 during the ongoing Gaza war.
+'Claim: "<image:52> This image shows the President of FC Barcelona with Israel Embassy Representatives in September 2024 during the ongoing Gaza war."'
+Verifying Claim: "<image:52> This image shows the President of FC Barcelona with Israel Embassy Representatives in September 2024 during the ongoing Gaza war."
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='FC Barcelona Israel flag')
+Got 3 new web source(s):
+	1. https://www.i24news.tv/en/news/israel/diplomacy/1676623454-barcelona-soccer-team-sends-message-of-support-for-israel
+	2. https://www.shutterstock.com/image-photo/barcelona-aug-8-fans-israel-flag-2394390741
+	3. https://www.fcbarcelona.com/en/club/news/2192444/joan-laporta-meets-with-isaac-herzog-president-of-israel
+Useful result: From [Source](https://www.i24news.tv/en/news/israel/diplomacy/1676623454-barcelona-soccer-team-sends-message-of-support-for-israel): 
+Content: The image shows the President of FC Barcelona with Israel Embassy Representatives holding the Israeli flag. <image:14315>
+
+Useful result: From [Source](https://www.shutterstock.com/image-photo/barcelona-aug-8-fans-israel-flag-2394390741): 
+Content: The search result from Shutterstock shows a photo of fans holding an Israeli flag at a FC Barcelona event. <image:14316>
+
+Useful result: From [Source](https://www.fcbarcelona.com/en/club/news/2192444/joan-laporta-meets-with-isaac-herzog-president-of-israel): 
+Content: FC Barcelona's president, Joan Laporta, met with Isaac Herzog, the President of Israel. <image:14317>
+
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='FC Barcelona president Israel embassy')
+Failed to download or open image: cannot identify image file <_io.BytesIO object at 0x7ffee135db70>
+Got 1 new web source(s):
+	1. https://www.jpost.com/international/article-731893
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='FC Barcelona Israel meeting date')
+Failed to download or open image: cannot identify image file <_io.BytesIO object at 0x7ffee131f790>
+Failed to download or open image: cannot identify image file <_io.BytesIO object at 0x7ffee13421b0>
+Got 1 new web source(s):
+	1. https://www.sportsnet.ca/soccer/barcelona-players-meet-with-israeli-politicians/
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='FC Barcelona Gaza war support')
+Got 3 new web source(s):
+	1. https://www.aljazeera.com/news/2025/8/31/gaza-humanitarian-flotilla-departs-barcelona-to-break-israeli-siege
+	2. https://www.fcbarcelona.fr/fr/actualites/1136738/palestine-goes-wild-for-barca
+	3. https://www.cnn.com/2025/08/31/europe/gaza-flotilla-israel-blockade-gaza-latam-intl
+Useful result: From [Source](https://www.aljazeera.com/news/2025/8/31/gaza-humanitarian-flotilla-departs-barcelona-to-break-israeli-siege): 
+Content: Al Jazeera published an article about a Gaza humanitarian flotilla departing from Barcelona. <image:14323>
+
+Useful result: From [Source](https://www.fcbarcelona.fr/fr/actualites/1136738/palestine-goes-wild-for-barca): 
+Content: The search result from fcbarcelona.fr shows a photo of FC Barcelona players with Palestinian officials. <image:14324>
+
+Useful result: From [Source](https://www.cnn.com/2025/08/31/europe/gaza-flotilla-israel-blockade-gaza-latam-intl): 
+Content: The search result from CNN shows a photo of people waving Palestinian flags. <image:14325>
+
+Not enough information yet. Continuing fact-check...
+Got 0 new web source(s):
+The claim '<image:52> This image shows the President of FC Barcelona with Israel Embassy Representatives in September 2024 during the ongoing Gaza war.' is false.
+Justification: The image depicts the President of FC Barcelona with Israel Embassy Representatives holding the Israeli flag. However, the provided evidence does not confirm the date of the meeting or that it occurred during the ongoing Gaza war, making the claim unverified.
+
+So, the overall veracity is: false
+Fact-check took 0:52 min.

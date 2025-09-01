@@ -1,0 +1,21 @@
+Extracting claims from Content: <image:18> This image shows a screenshot of the X profile of UNRWA which has placed a black band over its profile photo in mourning for the death of Yahya Sinwar, Hamas leader in the Gaza Strip, in October 2024.
+'Claim: "<image:18> This image shows a screenshot of the X profile of UNRWA which has placed a black band over its profile photo in mourning for the death of Yahya Sinwar, Hamas leader in the Gaza Strip, in October 2024."'
+Verifying Claim: "<image:18> This image shows a screenshot of the X profile of UNRWA which has placed a black band over its profile photo in mourning for the death of Yahya Sinwar, Hamas leader in the Gaza Strip, in October 2024."
+Not enough information yet. Continuing fact-check...
+Got 3 new web source(s):
+	1. https://www.voanews.com/a/unrwa-head-defends-agency-amid-recent-criticism-cuts-to-funding/7668341.html
+	2. https://en.wikipedia.org/wiki/UNRWA
+	3. https://www.cnn.com/2024/08/05/middleeast/un-probe-unwra-gaza-israel-intl-latam
+Useful result: From [Source](https://www.voanews.com/a/unrwa-head-defends-agency-amid-recent-criticism-cuts-to-funding/7668341.html): 
+Content: The Voice of America published an article about UNRWA. The article includes an image of UNRWA bags of wheat flour. <image:6977>
+
+Useful result: From [Source](https://www.cnn.com/2024/08/05/middleeast/un-probe-unwra-gaza-israel-intl-latam): 
+Content: The CNN article includes an image of the UNRWA logo. <image:6978>
+
+Searching google_vision with query: ImageQuery(limit=3, start_date=None, end_date=None, search_type='reverse', text='', image=<defame.common.medium.Image object at 0x7ffed03fd0c0>)
+Got 0 new web source(s):
+The claim '<image:18> This image shows a screenshot of the X profile of UNRWA which has placed a black band over its profile photo in mourning for the death of Yahya Sinwar, Hamas leader in the Gaza Strip, in October 2024.' is false.
+Justification: The claim is false. While the search results confirm the existence of UNRWA and its logo, they do not provide any evidence to support the assertion that UNRWA's X profile displayed a black band in mourning for Yahya Sinwar.
+
+So, the overall veracity is: false
+Fact-check took 0:13 min.

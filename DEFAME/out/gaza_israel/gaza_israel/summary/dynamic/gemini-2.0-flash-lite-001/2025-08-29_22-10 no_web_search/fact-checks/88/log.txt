@@ -1,0 +1,35 @@
+Extracting claims from Content: <image:57> This is an authentic image of Esmail Qaani, the commander of the Iranian Revolutionary Guards, disguised in a hijab in fear of Israeli bombing.
+'Claim: "<image:57> This is an authentic image of Esmail Qaani, the commander of the Iranian Revolutionary Guards, disguised in a hijab in fear of Israeli bombing."'
+Verifying Claim: "<image:57> This is an authentic image of Esmail Qaani, the commander of the Iranian Revolutionary Guards, disguised in a hijab in fear of Israeli bombing."
+Not enough information yet. Continuing fact-check...
+Got 1 new web source(s):
+	1. https://www.nairaland.com/8460455/commander-ghost-qaanis-great-escape
+Useful result: From [Source](https://www.nairaland.com/8460455/commander-ghost-qaanis-great-escape): Found exact image on website with title: "From Commander To Ghost: Qaani's Great Escape?" - Foreign Affairs
+Content: The search result is from Nairaland, a Nigerian forum. It discusses an image of Esmail Qaani, the commander of the Iranian Revolutionary Guards, in disguise. The post suggests that the disguise was a survival tactic following reported Israeli airstrikes. The post also includes a link to a tweet by @MOSSADil, which juxtaposes two images of Qaani, one in military attire and the other in civilian disguise. <image:57> The post also includes several comments from other users.
+
+Not enough information yet. Continuing fact-check...
+INFO: Dropping action 'reverse_search' as it was already performed.
+Got 3 new web source(s):
+	1. https://www.aljazeera.com/features/2020/1/20/esmaii-qaani-new-shadow-commander-of-irans-quds-force
+	2. https://www.aa.com.tr/en/middle-east/iran-s-quds-force-commander-appears-after-reports-of-his-assassination/3612018
+	3. https://www.newsweek.com/irgc-commander-qanni-alive-israel-strike-2090365
+Useful result: From [Source](https://www.aljazeera.com/features/2020/1/20/esmaii-qaani-new-shadow-commander-of-irans-quds-force): 
+Content: Al Jazeera published an article about Esmail Qaani, the new commander of Iran's Quds Force. The article includes a photograph of Qaani in military attire. <image:7803>
+
+Useful result: From [Source](https://www.newsweek.com/irgc-commander-qanni-alive-israel-strike-2090365): 
+Content: Newsweek published an article about Esmail Qaani. <image:7807>
+
+Not enough information yet. Continuing fact-check...
+INFO: Dropping action 'reverse_search' as it was already performed.
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Esmail Qaani hijab disguise Israeli bombing')
+Skipping fact-checking website: https://www.misbar.com/en/factcheck/2024/08/05/image-of-irgc-general-esmail-qaani-disguised-as-a-woman-is-photoshopped
+Skipping unsupported website: https://www.instagram.com/reel/DLb1oQjtq8V/
+Got 3 new web source(s):
+	1. https://www.timesofisrael.com/after-claims-he-died-reports-now-say-irans-quds-force-chief-alive-but-under-arrest/
+	2. https://www.ndtv.com/world-news/esmail-qaani-the-iran-quds-chief-missing-since-israeli-strike-on-beirut-6733030
+	3. https://www.wsj.com/world/middle-east/the-shadowy-backroom-dealer-steering-irans-axis-of-resistance-733a4d6f
+The claim '<image:57> This is an authentic image of Esmail Qaani, the commander of the Iranian Revolutionary Guards, disguised in a hijab in fear of Israeli bombing.' is true.
+Justification: The claim is likely true. The image is of Esmail Qaani, the commander of the Iranian Revolutionary Guards, in disguise, as suggested by a post on the Nairaland forum ([Source](https://www.nairaland.com/8460455/commander-ghost-qaanis-great-escape)). The post suggests the disguise was a survival tactic following reported Israeli airstrikes.
+
+So, the overall veracity is: true
+Fact-check took 0:34 min.

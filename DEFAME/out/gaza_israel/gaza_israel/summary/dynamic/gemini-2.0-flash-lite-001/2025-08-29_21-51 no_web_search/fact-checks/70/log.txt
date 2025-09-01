@@ -1,0 +1,51 @@
+Extracting claims from Content: The Iron Dome intercepted 90% of ballistic missiles fired at Israel in Iran's attack on October 1, 2024.
+'Claim: "The Iron Dome intercepted 90% of ballistic missiles fired at Israel in Iran's attack on October 1, 2024."'
+Verifying Claim: "The Iron Dome intercepted 90% of ballistic missiles fired at Israel in Iran's attack on October 1, 2024."
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Iron Dome Israel missile interception rate October 1 2024')
+Got 3 new web source(s):
+	1. https://www.reuters.com/pictures/latest-photos-missiles-rain-down-israel-2024-10-01/AIRIZRLERFN2FMZKBADVKDEC24/
+	2. https://www.euronews.com/next/2024/10/02/the-iron-dome-how-does-israels-missile-defence-system-work
+	3. https://apnews.com/article/israel-defense-iron-dome-iran-hezbollah-hamas-326cd1e9484dd38c430d62739b7f2ef3
+Useful result: From [Source](https://www.reuters.com/pictures/latest-photos-missiles-rain-down-israel-2024-10-01/AIRIZRLERFN2FMZKBADVKDEC24/): 
+Content: The Reuters website contains images of the Iron Dome intercepting missiles over Israel. <image:7726>
+
+Useful result: From [Source](https://www.euronews.com/next/2024/10/02/the-iron-dome-how-does-israels-missile-defence-system-work): 
+Content: Euronews published an article on October 2, 2024, about the Iron Dome. The article includes an image of the Iron Dome in action. <image:7727>
+
+Useful result: From [Source](https://apnews.com/article/israel-defense-iron-dome-iran-hezbollah-hamas-326cd1e9484dd38c430d62739b7f2ef3): 
+Content: The AP News article provides an image showing the Israeli air defense systems, including Iron Dome, which is designed to intercept short-range missiles. <image:7728>
+
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Iron Dome interception rate October 1 2024 Iran attack Israel')
+Failed to download or open image: cannot identify image file <_io.BytesIO object at 0x7ffed04b2200>
+Got 3 new web source(s):
+	1. https://www.hindustantimes.com/world-news/davids-sling-arrow-iron-dome-how-israel-intercepted-irans-200-missiles-101727829628883.html
+	2. https://abcnews.go.com/International/iran-launches-attack-israel-what-is-iron-dome/story?id=109218962
+	3. https://www.livemint.com/news/world/not-a-science-fiction-israel-shares-video-of-iron-dome-intercepting-iranian-missiles-israel-iran-war-news-11727844421348.html
+Useful result: From [Source](https://abcnews.go.com/International/iran-launches-attack-israel-what-is-iron-dome/story?id=109218962): 
+Content: ABC News has an image of the Iron Dome intercepting missiles over Israel (<image:7730>).
+
+Useful result: From [Source](https://www.livemint.com/news/world/not-a-science-fiction-israel-shares-video-of-iron-dome-intercepting-iranian-missiles-israel-iran-war-news-11727844421348.html): 
+Content: Livemint has an image of the Iron Dome intercepting missiles over Israel (<image:7731>).
+
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Iron Dome effectiveness ballistic missiles October 1 2024')
+Got 3 new web source(s):
+	1. https://www.aljazeera.com/news/2023/10/12/whats-the-israel-iron-dome-defence-system-and-is-it-effective-all-to-know
+	2. https://www.bbc.com/news/world-middle-east-20385306
+	3. https://www.abc.net.au/news/2024-10-02/iran-ballistic-missile-attack-israel-iron-dome-air-defence/104420966
+Useful result: From [Source](https://www.aljazeera.com/news/2023/10/12/whats-the-israel-iron-dome-defence-system-and-is-it-effective-all-to-know): 
+Content: Al Jazeera states that Israel claims the Iron Dome is 90 percent effective. <image:7737>
+
+Useful result: From [Source](https://www.bbc.com/news/world-middle-east-20385306): 
+Content: The BBC provides an image explaining how the Iron Dome defense system works (<image:7738>). The article does not mention the interception rate of ballistic missiles.
+
+Useful result: From [Source](https://www.abc.net.au/news/2024-10-02/iran-ballistic-missile-attack-israel-iron-dome-air-defence/104420966): 
+Content: ABC News published an article on October 2, 2024, about the Iranian ballistic missile attack on Israel, including an image of the Iron Dome intercepting missiles (<image:7741>).
+
+The claim 'The Iron Dome intercepted 90% of ballistic missiles fired at Israel in Iran's attack on October 1, 2024.' is false.
+Justification: The claim is partially verified. While the Iron Dome is a functional missile defense system with a claimed 90% effectiveness rate, the provided evidence, including articles from [Al Jazeera](https://www.aljazeera.com/news/2023/10/12/whats-the-israel-iron-dome-defence-system-and-is-it-effective-all-to-know) and [ABC News](https://www.abc.net.au/news/2024-10-02/iran-ballistic-missile-attack-israel-iron-dome-air-defence/104420966), does not confirm this specific rate for the October 1, 2024, attack.
+
+So, the overall veracity is: false
+Fact-check took 0:45 min.

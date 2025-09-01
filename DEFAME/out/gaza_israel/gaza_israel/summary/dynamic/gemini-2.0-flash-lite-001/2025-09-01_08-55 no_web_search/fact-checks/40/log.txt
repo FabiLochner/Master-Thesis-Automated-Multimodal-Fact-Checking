@@ -1,0 +1,31 @@
+Extracting claims from Content: In June 1936, Columbia University expelled student activist Robert Burke for leading an anti-Nazi demonstration.
+'Claim: "In June 1936, Columbia University expelled student activist Robert Burke for leading an anti-Nazi demonstration."'
+Verifying Claim: "In June 1936, Columbia University expelled student activist Robert Burke for leading an anti-Nazi demonstration."
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Robert Burke Columbia University 1936')
+Got 3 new web source(s):
+	1. https://blurredbylines.com/articles/robert-burke-columbia-university-expulsion-1936-protest/
+	2. https://www.nytimes.com/1936/09/25/archives/columbia-hears-plea-for-expelled-student-burke-and-two-other.html
+	3. https://magazine.columbia.edu/article/book-review-third-reich-ivory-tower
+Useful result: From [Source](https://blurredbylines.com/articles/robert-burke-columbia-university-expulsion-1936-protest/): 
+Content: The search result from blurredbylines.com contains an image of Robert Burke and a document titled "The Dismissal of Bob Burke". <image:14165>
+
+Useful result: From [Source](https://www.nytimes.com/1936/09/25/archives/columbia-hears-plea-for-expelled-student-burke-and-two-other.html): 
+Content: The New York Times published an article titled "Columbia Hears Plea for Expelled Student" on September 25, 1936, discussing Robert Burke's expulsion. <image:14166>
+
+Useful result: From [Source](https://magazine.columbia.edu/article/book-review-third-reich-ivory-tower): 
+Content: The search result from Columbia Magazine includes an image of a demonstration with signs that read "Let But Heidelberg Nazis" and "Burn Columbia Festival". <image:14167>
+
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Robert Burke Columbia University expulsion date')
+Failed to download or open image: No connection adapters were found for 'x-raw-image:///2b00ff93fd7560abba925af2744024ac08f44c276658494abc8371e4f1bcea56'
+Got 1 new web source(s):
+	1. https://academicworks.cuny.edu/cgi/viewcontent.cgi?article=1180&context=cc_arch_antiwar
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Robert Burke Columbia University anti-Nazi demonstration')
+Got 0 new web source(s):
+The claim 'In June 1936, Columbia University expelled student activist Robert Burke for leading an anti-Nazi demonstration.' is false.
+Justification: The claim is partially verified. Evidence from [blurredbylines.com](https://blurredbylines.com/articles/robert-burke-columbia-university-expulsion-1936-protest/) and a New York Times article confirms Robert Burke's expulsion from Columbia University and his involvement in an anti-Nazi demonstration. However, the exact date of the expulsion in June 1936 is not explicitly mentioned in the provided evidence, making the claim only partially verifiable.
+
+So, the overall veracity is: false
+Fact-check took 0:29 min.

@@ -1,0 +1,31 @@
+Extracting claims from Content: <image:39> This image shows heavy Israeli bombardment on Deir al-Balah in the southern Gaza Strip in March 2025 which killed at least four Palestinians.
+'Claim: "<image:39> This image shows heavy Israeli bombardment on Deir al-Balah in the southern Gaza Strip in March 2025 which killed at least four Palestinians."'
+Verifying Claim: "<image:39> This image shows heavy Israeli bombardment on Deir al-Balah in the southern Gaza Strip in March 2025 which killed at least four Palestinians."
+Not enough information yet. Continuing fact-check...
+Got 2 new web source(s):
+	1. https://today.lorientlejour.com/article/1418485/israeli-strike-on-nabatieh-at-least-7-injured-and-14-suffocated.html
+	2. https://www.bhol.co.il/news/1666411
+Useful result: From [Source](https://today.lorientlejour.com/article/1418485/israeli-strike-on-nabatieh-at-least-7-injured-and-14-suffocated.html): Found exact image on website with title: Residents in Nabatieh 'frightened' but determined to 'stay' after ...
+Content: The search result from L'Orient Today, published on June 27, 2024, reports on an Israeli strike on Nabatieh, Lebanon, on June 26, 2024, which injured nine people. <image:39> is found in the article. The article mentions the Israeli air force targeted the western part of the city.
+
+Useful result: From [Source](https://www.bhol.co.il/news/1666411): Found exact image on website with title: אזעקה נשמעה בחשמונאים | מדינות קוראות לאזרחיהן לעזוב את לבנון
+Content: The search result is from a website called "bhol.co.il". The article discusses the ongoing conflict between Israel and Hezbollah, including reports of attacks, alerts, and diplomatic actions. The article mentions an image of an attack in Nabatieh, Lebanon. <image:39> is not mentioned in the article. The article was last updated on June 26, 2024.
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Deir al-Balah bombardment March 2025')
+Got 3 new web source(s):
+	1. https://www.cnn.com/2025/07/21/middleeast/israel-military-deir-al-balah-gaza-intl
+	2. https://www.theguardian.com/world/live/2025/jul/21/gaza-israel-war-latest-situation-updates-live-news
+	3. https://www.aljazeera.com/gallery/2023/12/2/hell-on-earth-as-israel-hits-deir-al-balah-in-central-gaza
+Useful result: From [Source](https://www.cnn.com/2025/07/21/middleeast/israel-military-deir-al-balah-gaza-intl): 
+Content: CNN published an article on July 21, 2025, about the Israeli military in Deir al-Balah, Gaza. The article includes an image of smoke rising over the city. <image:8145>
+
+Useful result: From [Source](https://www.theguardian.com/world/live/2025/jul/21/gaza-israel-war-latest-situation-updates-live-news): 
+Content: The Guardian published an image of a bombardment. <image:8146>
+
+Useful result: From [Source](https://www.aljazeera.com/gallery/2023/12/2/hell-on-earth-as-israel-hits-deir-al-balah-in-central-gaza): 
+Content: Al Jazeera published an article about the Israeli strikes on Deir al-Balah in central Gaza. The article contains an image of the aftermath of the bombardment. <image:8147>
+
+The claim '<image:39> This image shows heavy Israeli bombardment on Deir al-Balah in the southern Gaza Strip in March 2025 which killed at least four Palestinians.' is false.
+Justification: The image in the claim is from an Israeli strike on Nabatieh, Lebanon, in June 2024, as reported by [L'Orient Today](https://today.lorientlejour.com/article/1418485/israeli-strike-on-nabatieh-at-least-7-injured-and-14-suffocated.html) and [bhol.co.il](https://www.bhol.co.il/news/1666411), not from Deir al-Balah, Gaza, in March 2025.
+
+So, the overall veracity is: false
+Fact-check took 0:24 min.
