@@ -1,0 +1,32 @@
+Extracting claims from Content: <image:10> This is an authentic image of Israel bombing Beirut's International Airport in October 2024.
+'Claim: "<image:10> This is an authentic image of Israel bombing Beirut's International Airport in October 2024."'
+Verifying Claim: "<image:10> This is an authentic image of Israel bombing Beirut's International Airport in October 2024."
+Not enough information yet. Continuing fact-check...
+Got 2 new web source(s):
+	1. https://www.indiatoday.in/fact-check/story/fact-check-photo-middle-east-airlines-flight-israel-airstrikes-beirut-lebanon-ai-generated-2622766-2024-10-24
+	2. https://factly.in/an-ai-generated-image-of-a-plane-landing-at-beirut-international-airport-surrounded-by-fire-and-smoke-is-falsely-shared-as-real/
+Useful result: From [Source](https://www.indiatoday.in/fact-check/story/fact-check-photo-middle-east-airlines-flight-israel-airstrikes-beirut-lebanon-ai-generated-2622766-2024-10-24): Found exact image on website with title: Fact Check: What an explosive photo of the Lebanon sky! Pity it's AI ...
+Content: The search result from India Today, published on October 24, 2024, fact-checks a viral image of a Middle East Airlines (MEA) flight landing in Beirut amid explosions. The article states that the image is AI-generated. <image:318> The article mentions that the image was posted on Instagram on October 21, 2024, and that the AI detection tool Hive Moderation stated there was a 91.7% chance of it being generated using AI.
+
+Useful result: From [Source](https://factly.in/an-ai-generated-image-of-a-plane-landing-at-beirut-international-airport-surrounded-by-fire-and-smoke-is-falsely-shared-as-real/): Found exact image on website with title: AI-generated image of a plane landing at Beirut International Airport ...
+Content: The search result from Factly.in states that the image <image:10> is AI-generated and does not depict a real event. The image was posted on an Instagram account on October 21, 2024, with a caption confirming it as AI-generated. The article provides links to the original post and uses AI detection tools to confirm the image's AI origin. <image:321>, <image:322>, <image:323>, <image:324>, <image:325>.
+
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Beirut International Airport bombing')
+Got 3 new web source(s):
+	1. https://www.marines.mil/News/Marines-TV/videoid/634642/dvpTag/Beirut/
+	2. https://www.dia.mil/News-Features/Articles/Article-View/Article/566917/they-came-in-peace/
+	3. October 03, 2024 https://www.bbc.com/news/videos/cpqz18e10gdo
+Useful result: From [Source](https://www.marines.mil/News/Marines-TV/videoid/634642/dvpTag/Beirut/): 
+Content: The search result from the U.S. Marine Corps website discusses the 40th anniversary of the Beirut barracks bombing, which occurred on October 23, 1983. <image:10>
+
+Useful result: From [Source](https://www.dia.mil/News-Features/Articles/Article-View/Article/566917/they-came-in-peace/): 
+Content: The Defense Intelligence Agency (DIA) responded to the Marine barracks bombing in Beirut, Lebanon in 1983. The article mentions the 1981 siege of Beirut by Israel. <image:1>.
+
+Useful result: From [Source](https://www.bbc.com/news/videos/cpqz18e10gdo): 
+Content: The BBC published a video on October 3, 2024, showing explosions near Beirut-Rafic Hariri International Airport. The airport borders Dahieh, a Hezbollah stronghold, which has been a target for Israeli air strikes. <image:5865>
+
+The claim '<image:10> This is an authentic image of Israel bombing Beirut's International Airport in October 2024.' is false.
+Justification: The image depicting a plane landing at Beirut International Airport amid explosions is AI-generated, as confirmed by fact-check articles from [India Today](https://www.indiatoday.in/fact-check/story/fact-check-photo-middle-east-airlines-flight-israel-airstrikes-beirut-lebanon-ai-generated-2622766-2024-10-24) and [Factly.in](https://factly.in/an-ai-generated-image-of-a-plane-landing-at-beirut-international-airport-surrounded-by-fire-and-smoke-is-falsely-shared-as-real/). The image was posted on Instagram with a caption confirming it as AI-generated.
+
+So, the overall veracity is: false
+Fact-check took 1:10 min.

@@ -1,0 +1,40 @@
+Extracting claims from Content: <image:50> This image shows Israel's 9/11 memorial which is the only one outside the US.
+'Claim: "<image:50> This image shows Israel's 9/11 memorial which is the only one outside the US."'
+Verifying Claim: "<image:50> This image shows Israel's 9/11 memorial which is the only one outside the US."
+Not enough information yet. Continuing fact-check...
+Most likely location: Israel
+Top 10 locations: Israel, Palestine, Jordan, United States, Albania, Andorra, Argentina, Australia, Austria, Bangladesh
+Got 3 new web source(s):
+	1. https://en.wikipedia.org/wiki/9/11_Living_Memorial_Plaza
+	2. http://www.memorialmapping.com/memorials/9-11-living-memorial-plaza
+	3. https://www.kkl-jnf.org/tourism-and-recreation/scenic-lookouts/center/twin-towers-living-memorial-jerusalem-park.aspx
+Useful result: From [Source](https://en.wikipedia.org/wiki/9/11_Living_Memorial_Plaza): 
+Content: The search result is from Wikipedia and describes the 9/11 Living Memorial Plaza in Jerusalem, Israel. <image:50> The memorial was completed in 2009 and honors the victims of the September 11 attacks. It was designed by Eliezer Weishoff. The article includes several images of the memorial.
+
+Useful result: From [Source](http://www.memorialmapping.com/memorials/9-11-living-memorial-plaza): 
+Content: The search result is about the 9/11 Living Memorial Plaza in Jerusalem, Israel. It includes several images of the memorial <image:2231>, <image:2232>, <image:2233>, <image:2234>, <image:2235>, <image:2236>. The memorial was dedicated on November 12, 2009. It is a 30-foot high bronze sculpture of a waving American flag transforming into a flame. A metal remnant from the Twin Towers is incorporated into the memorial.
+
+Useful result: From [Source](https://www.kkl-jnf.org/tourism-and-recreation/scenic-lookouts/center/twin-towers-living-memorial-jerusalem-park.aspx): 
+Content: The search result from KKL-JNF describes the 9/11 Twin Towers Living Memorial in Jerusalem Park. The memorial is located in Jerusalem Park and was established by KKL-JNF. The memorial includes plaques commemorating the victims of the 9/11 attacks, including five Israelis. <image:50>
+
+Not enough information yet. Continuing fact-check...
+INFO: Dropping action 'geolocate' as it was already performed.
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='9/11 memorials outside the US')
+Got 3 new web source(s):
+	1. https://voicescenter.org/living-memorial/memorials/by-country
+	2. https://en.wikipedia.org/wiki/Memorials_and_services_for_the_September_11_attacks
+	3. http://www.memorialmapping.com/memorials/browse-by-country
+Useful result: From [Source](https://voicescenter.org/living-memorial/memorials/by-country): 
+Content: The search result lists numerous 9/11 memorials outside the US, including in Australia, Canada, China, France, Iceland, India, Ireland, Israel, Italy, Poland, Puerto Rico, South Korea, Spain, Ukraine, and the United Kingdom.
+
+Useful result: From [Source](https://en.wikipedia.org/wiki/Memorials_and_services_for_the_September_11_attacks): 
+Content: The Wikipedia article "Memorials and services for the September 11 attacks" lists several 9/11 memorials, including the 9/11 Living Memorial Plaza in Jerusalem, Israel. The article also mentions memorials in the US and other locations, such as Bagram Airfield, Afghanistan. <image:50>
+
+Useful result: From [Source](http://www.memorialmapping.com/memorials/browse-by-country): 
+Content: The search result from Memorial Mapping lists several countries with 9/11 memorials outside the US, including Afghanistan, Australia, Canada, and Israel. The website provides links to more information about the memorials in each country. <image:6719>
+
+The claim '<image:50> This image shows Israel's 9/11 memorial which is the only one outside the US.' is false.
+Justification: The image shows the 9/11 Living Memorial in Jerusalem, Israel. However, contrary to the claim, this is not the only 9/11 memorial outside the US; multiple memorials exist in various countries, as confirmed by web searches.
+
+So, the overall veracity is: false
+Fact-check took 2:45 min.

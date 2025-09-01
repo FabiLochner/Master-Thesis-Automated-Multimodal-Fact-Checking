@@ -1,0 +1,40 @@
+Extracting claims from Content: <image:15> This image shows Gal Gadot’s star on the Hollywood Walk of Fame being destroyed in March 2025 just hours after being placed.
+'Claim: "<image:15> This image shows Gal Gadot’s star on the Hollywood Walk of Fame being destroyed in March 2025 just hours after being placed."'
+Verifying Claim: "<image:15> This image shows Gal Gadot’s star on the Hollywood Walk of Fame being destroyed in March 2025 just hours after being placed."
+Not enough information yet. Continuing fact-check...
+Got 0 new web source(s):
+Got 0 new web source(s):
+Not enough information yet. Continuing fact-check...
+INFO: Dropping action 'reverse_search' as it was already performed.
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Hollywood Walk of Fame star vandalism')
+Skipping unsupported website: https://www.youtube.com/watch?v=kKu5y7WXVV8
+Got 3 new web source(s):
+	1. https://www.jacksonville.com/story/news/2018/07/25/trumps-hollywood-walk-of-fame-star-vandalized/11314069007/
+	2. March 23, 2025 https://www.timesnownews.com/world/us/us-news/was-donald-trumps-hollywood-star-vandalized-recently-fact-checking-viral-claims-article-119361540
+	3. July 08, 2024 https://www.nbclosangeles.com/news/local/jenni-rivera-star-vandalized-hollywood-walk-of-fame/3454412/
+Useful result: From [Source](https://www.jacksonville.com/story/news/2018/07/25/trumps-hollywood-walk-of-fame-star-vandalized/11314069007/): 
+Content: The Jacksonville.com reports that Donald Trump's star on the Hollywood Walk of Fame was vandalized. The vandalism was reported around 3:30 a.m. A pickax was used in the vandalism. The star was placed in 2007.
+
+Useful result: From [Source](https://www.timesnownews.com/world/us/us-news/was-donald-trumps-hollywood-star-vandalized-recently-fact-checking-viral-claims-article-119361540): 
+Content: The Times Now News article, updated on March 23, 2025, fact-checks claims of recent vandalism of Donald Trump's Hollywood Walk of Fame star. The article states that no recent vandalism has occurred, and the photos circulating are from incidents in 2016 and 2018. <image:5940> <image:15>
+
+Useful result: From [Source](https://www.nbclosangeles.com/news/local/jenni-rivera-star-vandalized-hollywood-walk-of-fame/3454412/): 
+Content: The NBC Los Angeles article, published on July 8, 2024, reports that Jenni Rivera's star on the Hollywood Walk of Fame was vandalized with black paint. <image:5944> The article mentions that fans cleaned the star and that the Hollywood Chamber of Commerce was also cleaning it. <image:5943>
+
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Hollywood Walk of Fame star damage')
+Failed to download or open image: cannot identify image file <_io.BytesIO object at 0x7ffed1746390>
+Got 3 new web source(s):
+	1. https://abcnews.go.com/US/trumps-hollywood-walk-fame-star-vandalized/story?id=56808440
+	2. https://www.hollywoodreporter.com/movies/movie-features/hollywood-walk-fame-why-20-stars-are-disrepair-951150/
+	3. https://people.com/politics/50-fake-trump-stars-walk-of-fame/
+Useful result: From [Source](https://abcnews.go.com/US/trumps-hollywood-walk-fame-star-vandalized/story?id=56808440): 
+Content: ABC News published an article about the vandalism of Donald Trump's star on the Hollywood Walk of Fame. <image:5946>
+
+Useful result: From [Source](https://www.hollywoodreporter.com/movies/movie-features/hollywood-walk-fame-why-20-stars-are-disrepair-951150/): 
+Content: The Hollywood Reporter published an article about the Hollywood Walk of Fame. The article includes an image of several stars on the Walk of Fame. <image:5947>
+
+The claim '<image:15> This image shows Gal Gadot’s star on the Hollywood Walk of Fame being destroyed in March 2025 just hours after being placed.' is false.
+Justification: The claim is false. While there have been instances of vandalism on the Hollywood Walk of Fame, there is no evidence to support the claim that Gal Gadot's star was destroyed. The search results show vandalism of Donald Trump's star ([https://www.jacksonville.com/story/news/2018/07/25/trumps-hollywood-walk-of-fame-star-vandalized/11314069007/](https://www.jacksonville.com/story/news/2018/07/25/trumps-hollywood-walk-of-fame-star-vandalized/11314069007/)) and Jenni Rivera's star ([https://www.nbclosangeles.com/news/local/jenni-rivera-star-vandalized-hollywood-walk-of-fame/3454412/](https://www.nbclosangeles.com/news/local/jenni-rivera-star-vandalized-hollywood-walk-of-fame/3454412/)), but no information about Gal Gadot's star.
+
+So, the overall veracity is: false
+Fact-check took 1:08 min.

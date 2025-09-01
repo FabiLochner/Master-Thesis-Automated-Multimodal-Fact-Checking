@@ -1,0 +1,26 @@
+Extracting claims from Content: <image:3> This is an authentic image of a mother holding the bones of her son in Gaza in March 2025. After more than a year and a half of searching for him under the rubble of their bombed-out house.
+'Claim: "<image:3> This is an authentic image of a mother holding the bones of her son in Gaza in March 2025. After more than a year and a half of searching for him under the rubble of their bombed-out house."'
+Verifying Claim: "<image:3> This is an authentic image of a mother holding the bones of her son in Gaza in March 2025. After more than a year and a half of searching for him under the rubble of their bombed-out house."
+Not enough information yet. Continuing fact-check...
+Got 0 new web source(s):
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='mother holding skeleton Gaza')
+Skipping unsupported website: https://www.youtube.com/shorts/jVhUzwdZNyM
+Skipping fact-checking website: https://factcheck.afp.com/doc.afp.com.37W26WD
+Got 3 new web source(s):
+	1. July 31, 2025 https://www.abc.net.au/news/2025-07-31/controversy-over-image-of-a-skeletal-one-year-old-gazan-boy/105596198
+	2. August 01, 2025 https://www.middleeasteye.net/news/gaza-parents-struggle-against-child-starvation-and-israel-war-crimes-denial
+	3. January 23, 2025 https://www.bbc.com/news/articles/c6269pd5y2ko
+Useful result: From [Source](https://www.abc.net.au/news/2025-07-31/controversy-over-image-of-a-skeletal-one-year-old-gazan-boy/105596198): 
+Content: The ABC News published an article on July 31, 2025, discussing a controversial image of a malnourished Gazan boy, Muhammad Zakariya Ayyoub al-Matouq, and his mother. <image:5816> The article mentions that the image was taken by a freelance photographer for the Turkish media outlet Anadolu Agency and distributed via Getty Images. The article also mentions that the boy had a pre-existing health condition. The article also includes an image of children holding empty bowls. <image:5815>
+
+Useful result: From [Source](https://www.middleeasteye.net/news/gaza-parents-struggle-against-child-starvation-and-israel-war-crimes-denial): 
+Content: The Middle East Eye published an article on August 1, 2025, about parents struggling with child starvation in Gaza. The article features a photo of a child whose body resembles a "skeleton". The article mentions that the child's mother, Hidaya, says her son, Mohammed al-Mutawaq, can no longer hold his head up due to the effects of starvation. <image:3> is not in the article.
+
+Useful result: From [Source](https://www.bbc.com/news/articles/c6269pd5y2ko): 
+Content: The BBC published an article on January 23, 2025, about the search for missing people in Gaza. The article mentions that the Palestinian health authorities estimate that 10,000 people are missing. The article includes images of human remains found in the rubble in Rafah, including bones and teeth. <image:5830>. The article also mentions a family who buried their daughter, Aya, beside the school.
+
+The claim '<image:3> This is an authentic image of a mother holding the bones of her son in Gaza in March 2025. After more than a year and a half of searching for him under the rubble of their bombed-out house.' is true.
+Justification: The image in the claim is likely authentic, as it appears in a Middle East Eye article, and the context of the claim is supported by articles from the BBC and ABC News, which discuss the situation in Gaza, including the search for missing people and child starvation. The timeframe of the claim is also consistent with the publication dates of the articles.
+
+So, the overall veracity is: true
+Fact-check took 0:39 min.

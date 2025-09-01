@@ -1,0 +1,38 @@
+Extracting claims from Content: Commander of the Israeli Air Force, Major General Tomer Bar has been killed by Hеzbollаh in Tel Aviv in a drone attack in November 2024.
+'Claim: "Commander of the Israeli Air Force, Major General Tomer Bar has been killed by Hеzbollаh in Tel Aviv in a drone attack in November 2024."'
+Verifying Claim: "Commander of the Israeli Air Force, Major General Tomer Bar has been killed by Hеzbollаh in Tel Aviv in a drone attack in November 2024."
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Tomer Bar killed')
+Skipping fact-checking website: https://www.reuters.com/fact-check/false-rumor-said-israeli-air-force-chief-killed-after-hezbollah-truce-2024-12-05/
+Skipping unsupported website: https://www.instagram.com/p/DNS93e-tYPQ/
+Skipping unsupported website: https://www.facebook.com/OnePathNetwork/posts/israeli-air-force-chief-tomer-bar-accused-of-ordering-strike-that-killed-al-jaze/1609640497197641/
+Skipping unsupported website: https://www.reddit.com/r/Palestine/comments/1m2wdti/just_reminding_everyone_that_israels_air_force/
+Got 3 new web source(s):
+	1. https://www.aol.com/fact-check-israeli-general-not-150127650.html
+	2. https://en.wikipedia.org/wiki/Tomer_Bar
+	3. https://inshorts.com/en/news/israeli-air-force-chief-tomer-bar-alive--not-killed-by-hezbollah-1733746115536
+Useful result: From [Source](https://www.aol.com/fact-check-israeli-general-not-150127650.html): 
+Content: The AOL fact-check, published on December 12, 2024, states that the claim of Major General Tomer Bar's death in a Hezbollah drone strike is false. The article mentions that there are no media reports confirming his death and that he is not listed among the soldiers and other military personnel killed since Oct. 27. <image:6024>
+
+Useful result: From [Source](https://en.wikipedia.org/wiki/Tomer_Bar): 
+Content: The Wikipedia article states that Tomer Bar is an Israeli general, born in 1969, and currently commands the Israeli Air Force, assuming office on April 4, 2022. <image:k> The article also mentions that he participated in combat sorties during the war.
+
+Useful result: From [Source](https://inshorts.com/en/news/israeli-air-force-chief-tomer-bar-alive--not-killed-by-hezbollah-1733746115536): 
+Content: According to Inshorts, Israeli Air Force chief Tomer Bar is alive and was not killed by Hezbollah in a November drone attack on his Tel Aviv residence. The article was published on December 9, 2024. <image:6051>, <image:6052>, <image:6053>.
+
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Tomer Bar Hezbollah drone attack')
+Skipping fact-checking website: https://www.reuters.com/fact-check/false-rumor-said-israeli-air-force-chief-killed-after-hezbollah-truce-2024-12-05/
+Got 2 new web source(s):
+	1. November 27, 2024 https://www.presstv.ir/Detail/2024/11/27/738007/Lebanon-Hezbollah-residence-Tomer-Bar-attack-drones
+	2. https://cufi.org/issue/this-is-how-the-hezbollah-uav-evaded-detection-with-fatal-results/
+Useful result: From [Source](https://www.presstv.ir/Detail/2024/11/27/738007/Lebanon-Hezbollah-residence-Tomer-Bar-attack-drones): 
+Content: Press TV reports that Hezbollah claimed to have targeted the residence of Israeli Air Force Commander Major General Tomer Bar in Tel Aviv with a drone attack on November 18, 2024. <image:6055>. The article states that the attack was subject to censorship by Israeli authorities.
+
+Useful result: From [Source](https://cufi.org/issue/this-is-how-the-hezbollah-uav-evaded-detection-with-fatal-results/): 
+Content: The search result from CUFI discusses a drone strike and mentions Air Force Commander Major General Tomer Bar. <image:6085>. It states that Major General Bar inspected the Golani Training Base site after the drone strike.
+
+The claim 'Commander of the Israeli Air Force, Major General Tomer Bar has been killed by Hеzbollаh in Tel Aviv in a drone attack in November 2024.' is false.
+Justification: The claim that Major General Tomer Bar was killed by Hеzbollаh is false. Multiple sources, including an AOL fact-check ([https://www.aol.com/fact-check-israeli-general-not-150127650.html](https://www.aol.com/fact-check-israeli-general-not-150127650.html)) and Inshorts, confirm that he is alive. While there are reports of a drone attack on his residence, they do not confirm his death.
+
+So, the overall veracity is: false
+Fact-check took 1:11 min.

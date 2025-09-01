@@ -1,0 +1,45 @@
+Extracting claims from Content: Trump signed an executive order on January 20, 2025, to halt all funding to UNRWA.
+'Claim: "Trump signed an executive order on January 20, 2025, to halt all funding to UNRWA."'
+Verifying Claim: "Trump signed an executive order on January 20, 2025, to halt all funding to UNRWA."
+Not enough information yet. Continuing fact-check...
+Got 3 new web source(s):
+	1. February 04, 2025 https://www.aljazeera.com/news/2025/2/4/trump-to-withdraw-us-from-un-human-rights-council-extend-unrwa-funding-ban
+	2. February 05, 2025 https://www.akingump.com/en/insights/blogs/trump-executive-order-tracker/withdrawing-the-united-states-from-and-ending-funding-to-certain-united-nations-organizations-and-reviewing-united-states-support-to-all-international-organizations
+	3. February 03, 2025 https://www.npr.org/2025/02/03/nx-s1-5285696/trump-un-human-rights-council-withdrawal
+Useful result: From [Source](https://www.aljazeera.com/news/2025/2/4/trump-to-withdraw-us-from-un-human-rights-council-extend-unrwa-funding-ban): 
+Content: Al Jazeera published on February 4, 2025, that Donald Trump is planning to extend a funding ban on UNRWA. <image:0>. The article mentions that Trump is expected to sign an executive order. The US was UNRWA’s biggest donor, but Biden paused funding in January 2024.
+
+Useful result: From [Source](https://www.akingump.com/en/insights/blogs/trump-executive-order-tracker/withdrawing-the-united-states-from-and-ending-funding-to-certain-united-nations-organizations-and-reviewing-united-states-support-to-all-international-organizations): 
+Content: The search result from Akin Gump Strauss Hauer & Feld LLP, published on February 5, 2025, discusses a Trump Executive Order that orders the reevaluation of the United States’ commitment to UNRWA. <image:3709> The document also mentions that the representative to the UN are directed to conduct a review of all international intergovernmental organizations.
+
+Useful result: From [Source](https://www.npr.org/2025/02/03/nx-s1-5285696/trump-un-human-rights-council-withdrawal): 
+Content: NPR reports that Trump signed an executive order to cut future funding to UNRWA. The article was updated on February 4, 2025, and originally published on February 3, 2025. <image:3720> shows Trump signing an executive order. The author is Deepa Shivaram.
+
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Trump executive order UNRWA January 20 2025')
+Skipping fact-checking website: https://www.reuters.com/fact-check/us-unrwa-funding-already-halted-2024-not-by-trump-2025-order-2025-01-28/
+Skipping unsupported website: https://www.whitehouse.gov/presidential-actions/2025/02/withdrawing-the-united-states-from-and-ending-funding-to-certain-united-nations-organizations-and-reviewing-united-states-support-to-all-international-organizations/
+Skipping unsupported website: https://www.federalregister.gov/documents/2025/01/28/2025-01901/initial-rescissions-of-harmful-executive-orders-and-actions
+Got 2 new web source(s):
+	1. https://www.kff.org/global-health-policy/overview-of-president-trumps-executive-actions-on-global-health/
+	2. August 21, 2025 https://www.nafsa.org/executive-and-regulatory-actions-trump2admin
+Useful result: From [Source](https://www.kff.org/global-health-policy/overview-of-president-trumps-executive-actions-on-global-health/): 
+Content: KFF.org, published on August 15, 2025, and originally published on January 28, 2025, lists executive actions by President Trump. On January 20, 2025, Trump issued an executive order rescinding previous orders. On January 24, 2025, a memorandum was issued to reinstate the Mexico City Policy.
+
+Useful result: From [Source](https://www.nafsa.org/executive-and-regulatory-actions-trump2admin): 
+Content: NAFSA.org, updated on August 21, 2025, lists several executive orders signed by Trump on January 20, 2025, including Executive Order 14148, a Presidential Memorandum on a Hiring Freeze, Executive Order 14169, and Executive Order 14150. Executive Order 14169 is about reevaluating and realigning United States foreign aid.
+
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Trump executive order UNRWA January 20 2025 funding halt')
+Skipping unsupported website: https://www.whitehouse.gov/presidential-actions/2025/02/withdrawing-the-united-states-from-and-ending-funding-to-certain-united-nations-organizations-and-reviewing-united-states-support-to-all-international-organizations/
+Skipping fact-checking website: https://www.reuters.com/fact-check/us-unrwa-funding-already-halted-2024-not-by-trump-2025-order-2025-01-28/
+Got 1 new web source(s):
+	1. July 30, 2025 https://jcpa.org/the-u-s-should-permanently-stop-all-funding-to-unrwa/
+Useful result: From [Source](https://jcpa.org/the-u-s-should-permanently-stop-all-funding-to-unrwa/): 
+Content: According to the Jerusalem Center for Public Affairs, President Trump signed Executive Order 14199 on February 4, 2025, which directed agencies to withhold U.S. funding to certain United Nations Organizations. The article also mentions that the Trump administration cut off all U.S. funding to UNRWA on August 31, 2018. The article was published on July 30, 2025.
+
+The claim 'Trump signed an executive order on January 20, 2025, to halt all funding to UNRWA.' is false.
+Justification: The claim is false. While Trump signed executive orders related to UNRWA funding, the evidence indicates that the relevant executive order was signed on February 4, 2025, not January 20, 2025, as stated in the claim, according to the [Jerusalem Center for Public Affairs](https://jcpa.org/the-u-s-should-permanently-stop-all-funding-to-unrwa/).
+
+So, the overall veracity is: false
+Fact-check took 4:01 min.

@@ -1,0 +1,57 @@
+Extracting claims from Content: <image:13> This image shows a traffic sign in Montreal in July 2024 which displays a 'Free Palestine. Escalate now' message and was authorized by Montreal's Mayor Valérie Plante.
+'Claim: "<image:13> This image shows a traffic sign in Montreal in July 2024 which displays a 'Free Palestine. Escalate now' message and was authorized by Montreal's Mayor Valérie Plante."'
+Verifying Claim: "<image:13> This image shows a traffic sign in Montreal in July 2024 which displays a 'Free Palestine. Escalate now' message and was authorized by Montreal's Mayor Valérie Plante."
+Not enough information yet. Continuing fact-check...
+Most likely location: Palestine
+Top 10 locations: Palestine, Canada, Germany, Austria, Israel, Poland, Slovenia, South Korea, Albania, Andorra
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Free Palestine Montreal')
+Skipping unsupported website: https://www.instagram.com/pymmontreal/?hl=en
+Skipping unsupported website: https://www.facebook.com/p/Montreal4Palestine-61553231723872/
+Got 3 new web source(s):
+	1. https://palestinianyouthmovement.com/montreal
+	2. https://uscpr.org/pro-palestine-protests/
+	3. July 31, 2025 https://www.cbc.ca/news/canada/montreal/pride-montreal-conflict-1.7598907
+Useful result: From [Source](https://palestinianyouthmovement.com/montreal): 
+Content: The Palestinian Youth Movement in Montreal is growing. The website includes an image of a protest with Palestinian flags <image:5900> and an advertisement for a car caravan in support of Palestine <image:5903>.
+
+Useful result: From [Source](https://uscpr.org/pro-palestine-protests/): 
+Content: The search result from Uscpr.org lists pro-Palestine protests and events, including recurring protests and virtual actions. The events are scheduled from August 29, 2025, to September 28, 2025, in various locations across the US and Canada. <image:5910> The website also includes a list of virtual actions and ways to support Palestine.
+
+Useful result: From [Source](https://www.cbc.ca/news/canada/montreal/pride-montreal-conflict-1.7598907): 
+Content: The CBC News article, published on July 31, 2025, discusses the Montreal Pride festival's stance on the Israeli-Palestinian conflict. It mentions that Fierté Montréal condemned the "genocide in Gaza" and is denying participation to organizations spreading hateful discourse. The article also mentions that in 2024, the Montreal Pride parade was interrupted by pro-Palestinian protesters. <image:13> is not mentioned.
+
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Free Palestine Montreal sign')
+Failed to download or open image: HTTPSConnectionPool(host='i.cbc.ca', port=443): Read timed out. (read timeout=10)
+Skipping unsupported website: https://www.facebook.com/photo.php?fbid=403138926955393&id=118445348758087&set=a.132412804028008
+Got 3 new web source(s):
+	1. https://www.istockphoto.com/photo/palestine-flag-and-free-palestine-slogan-painted-on-the-brick-walls-of-a-building-in-gm1075509924-287949198
+	2. https://www.cbc.ca/news/canada/montreal/montreal-traffic-signs-pro-palestinian-slogans-1.7274809
+	3. https://www.flickr.com/photos/alain_quevillon/33239185104
+Useful result: From [Source](https://www.istockphoto.com/photo/palestine-flag-and-free-palestine-slogan-painted-on-the-brick-walls-of-a-building-in-gm1075509924-287949198): 
+Content: The search result contains an image of a building in Montreal with a Palestine flag and the words "PALESTINE LIBRE" painted on it. <image:5922>
+
+Useful result: From [Source](https://www.flickr.com/photos/alain_quevillon/33239185104): 
+Content: The search result contains an image of a building in Montreal with the words "PALESTINE LIBRE" written on it. <image:5923>
+
+Not enough information yet. Continuing fact-check...
+INFO: Dropping action 'geolocate' as it was already performed.
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Valérie Plante Free Palestine sign')
+Skipping fact-checking website: https://factcheck.afp.com/doc.afp.com.367P9XU
+Got 3 new web source(s):
+	1. July 31, 2024 https://www.thesuburban.com/news/city_news/plante-served-over-pro-palestinian-electronic-signs/article_e0143fdc-d532-5ecf-9a66-095ad0ee8ab9.html
+	2. September 05, 2024 https://www.readthemaple.com/city-of-montreal-illegally-seized-pro-palestine-signs-activists-allege/
+	3. July 26, 2024 https://montrealgazette.com/news/local-news/montreal-mayor-warned-to-act-on-anti-israel-messages-on-road-signs
+Useful result: From [Source](https://www.thesuburban.com/news/city_news/plante-served-over-pro-palestinian-electronic-signs/article_e0143fdc-d532-5ecf-9a66-095ad0ee8ab9.html): 
+Content: The Suburban published an article stating that Mayor Valérie Plante was served by bailiff regarding electronic signs used by pro-Palestinian activists. The signs displayed anti-Israel messages. The article mentions that the signs were used to call for violence and convey radical political messages. <image:5924> The article is authored by Joel Goldenberg.
+
+Useful result: From [Source](https://www.readthemaple.com/city-of-montreal-illegally-seized-pro-palestine-signs-activists-allege/): 
+Content: The article from The Maple, published on September 5, 2024, discusses the City of Montreal's removal of pro-Palestine signs ahead of a federal by-election. The signs were put up by LaSalle-Émard-Verdun pour la Palestine (LEV4P), a registered third-party campaign group. The City admitted to removing some signs and returned 95 out of 450. The article mentions a previous case where the City was ordered to pay damages for removing pro-Palestine signs. The article also mentions a tweet from Jeremy Levi, the mayor of Hampstead, who called the election signs "hate propaganda." The article does not mention the traffic sign in the claim.
+
+Useful result: From [Source](https://montrealgazette.com/news/local-news/montreal-mayor-warned-to-act-on-anti-israel-messages-on-road-signs): 
+Content: The Montreal Gazette published an article on July 26, 2024, reporting that electronic roadwork billboards in Montreal displayed anti-Israel messages, including "Free Palestine" and "Escalate Now." The article states that the city said the signs were vandalized and that the messages were unauthorized. The mayor of Hampstead threatened legal action against Montreal's mayor, Valérie Plante, over the messages. <image:13>
+
+The claim '<image:13> This image shows a traffic sign in Montreal in July 2024 which displays a 'Free Palestine. Escalate now' message and was authorized by Montreal's Mayor Valérie Plante.' is false.
+Justification: The image depicts a traffic sign in Montreal displaying "Free Palestine. Escalate now." While the evidence confirms the existence of such signs in Montreal and mentions Mayor Valérie Plante's involvement, it does not explicitly state that she authorized the specific sign in the image, leading to a "false" verdict.
+
+So, the overall veracity is: false
+Fact-check took 3:06 min.
