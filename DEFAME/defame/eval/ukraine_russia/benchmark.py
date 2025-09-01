@@ -85,7 +85,7 @@ class ukraine_russia(Benchmark):
 
 
     # Use the code from the benchmark.py file of the 'verite' folder as a base to load the dataset and adjust the code where it is necessary
-    def __init__(self, variant="dev"): #TODO: adjust this to 'test' for the final evaluations 
+    def __init__(self, variant="dev"): 
         super().__init__(f"ukraine_russia ({variant})", variant)
         self.file_path = data_root_dir / "ukraine_russia/ukraine_russia_dataset_combined_010724_300425_final_binary.csv" #update the path for the dataset with aggregated binary labels
         if not self.file_path.exists():

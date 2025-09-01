@@ -87,7 +87,7 @@ class gaza_israel(Benchmark):
 
 
     # Use the code from the benchmark.py file of the 'verite' folder as a base to load the dataset and adjust the code where it is necessary
-    def __init__(self, variant="dev"): #TODO: change the variant to 'test' for the final evaluations of the datasets 
+    def __init__(self, variant="dev"): #TODO:  
         super().__init__(f"gaza_israel ({variant})", variant)
         self.file_path = data_root_dir / "gaza_israel/gaza_israel_dataset_combined_010724_300425_final_binary.csv" #update the path for the dataset with aggregated binary labels
         if not self.file_path.exists():

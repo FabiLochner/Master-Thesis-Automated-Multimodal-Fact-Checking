@@ -6,7 +6,7 @@
 
 benchmark_name: gaza_israel # adjusted to my dataset
 benchmark_kwargs:
-  variant: dev # set this to test for the final evaluations
+  variant: dev # This is set to dev to also show the confusion matrix and all evaluation metrics, even though my datasets are test sets. It was just left as 'dev' to avoid rewriting too much code.
 fact_checker_kwargs:
   decompose: false
   decontextualize: false
@@ -15,7 +15,7 @@ fact_checker_kwargs:
   max_iterations: 3
   max_result_len: 64000
   procedure_variant: summary/dynamic
-llm: gemini-2.0-flash-lite # adjusted to the LLM I use
+llm: gemini-2.0-flash-lite-001 #changed to the LLM I use (stable version of the model: https://ai.google.dev/gemini-api/docs/models#gemini-2.0-flash-lite)
 llm_kwargs:
   temperature: 0.01
 n_samples:
@@ -32,5 +32,5 @@ tools_config:
       google:
       google_vision:
   geolocator:
-n_workers: 8
+n_workers: 2
 print_log_level: info
