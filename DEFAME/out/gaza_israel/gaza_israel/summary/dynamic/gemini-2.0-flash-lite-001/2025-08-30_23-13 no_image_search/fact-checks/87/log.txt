@@ -1,0 +1,24 @@
+Extracting claims from Content: <image:10251> This image shows Israeli PM Benjamin Netanyahu inside his office and was captured and published by Hezbollah in August 2024.
+'Claim: "<image:10251> This image shows Israeli PM Benjamin Netanyahu inside his office and was captured and published by Hezbollah in August 2024."'
+Verifying Claim: "<image:10251> This image shows Israeli PM Benjamin Netanyahu inside his office and was captured and published by Hezbollah in August 2024."
+Not enough information yet. Continuing fact-check...
+Searching google_vision with query: ImageQuery(limit=3, start_date=None, end_date=None, search_type='reverse', text='', image=<defame.common.medium.Image object at 0x7ffe4c2a5510>)
+Skipping fact-checking website: https://www.reuters.com/fact-check/photo-drone-surveilling-netanyahu-through-open-window-is-edited-2025-07-15/
+Skipping fact-checking website: https://www.misbar.com/en/factcheck/2020/09/18/bank-manager-wasn%E2%80%99t-attacked-by-shiv-sena-workers
+Skipping fact-checking website: https://www.thequint.com/news/webqoof/iran-guard-corps-taking-photo-of-israeli-pm-benjamin-netanyahu-viral-image-fact-check
+Got 1 new web source(s):
+	1. https://english.mathrubhumi.com/news/world/fact-check-netanyahu-iran-drone-photo-l8xdt4wd
+Useful result: From [Source](https://english.mathrubhumi.com/news/world/fact-check-netanyahu-iran-drone-photo-l8xdt4wd): Found exact image on website with title: Viral post claiming Iranian drone tracked Netanyahu proven false
+Content: The search result from Mathrubhumi English, published on July 25, 2025, fact-checks a viral post claiming an Iranian drone tracked Benjamin Netanyahu. <image:12275> The image in the viral post is an edited version of a photo taken by Michael Fattal in February 2009. The original photo shows Benjamin Netanyahu with his father.
+
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Hezbollah Benjamin Netanyahu office video')
+Skipping unsupported website: https://www.youtube.com/watch?v=5q4Tak5NxhU
+Skipping unsupported website: https://www.gov.il/en/pages/spoke-un131024
+Skipping unsupported website: https://www.facebook.com/TimesofIndia/videos/benjamin-netanyahu-in-bunker-after-hezbollah-attacks-home-israeli-pm-fears-assas/1816446339098569/
+Skipping unsupported website: https://www.instagram.com/reel/DATC3Bmi9fo/?hl=en
+Got 0 new web source(s):
+The claim '<image:10251> This image shows Israeli PM Benjamin Netanyahu inside his office and was captured and published by Hezbollah in August 2024.' is false.
+Justification: The image is an edited version of a photo taken in February 2009, as reported by [Mathrubhumi English](https://english.mathrubhumi.com/news/world/fact-check-netanyahu-iran-drone-photo-l8xdt4wd). The original photo shows Benjamin Netanyahu with his father, and the claim that it was captured and published by Hezbollah in August 2024 is false.
+
+So, the overall veracity is: false
+Fact-check took 0:21 min.

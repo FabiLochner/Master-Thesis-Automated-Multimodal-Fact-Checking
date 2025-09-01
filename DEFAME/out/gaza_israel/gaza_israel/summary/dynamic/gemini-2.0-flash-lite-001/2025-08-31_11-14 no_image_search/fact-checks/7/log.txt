@@ -1,0 +1,31 @@
+Extracting claims from Content: The Huthi rebels announced the final cessation of their military operations in international waters after Trump won the 2024 US presidential election.
+'Claim: "The Huthi rebels announced the final cessation of their military operations in international waters after Trump won the 2024 US presidential election."'
+Verifying Claim: "The Huthi rebels announced the final cessation of their military operations in international waters after Trump won the 2024 US presidential election."
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Huthi rebels military operations cessation Trump 2024')
+Skipping unsupported website: https://www.congress.gov/crs-product/IF12581
+Got 3 new web source(s):
+	1. https://en.wikipedia.org/wiki/2025_United_States%E2%80%93Houthi_ceasefire
+	2. May 07, 2025 https://www.reuters.com/world/us-houthi-ceasefire-deal-does-not-include-israel-houthi-spokesperson-reuters-2025-05-07/
+	3. May 21, 2025 https://arabcenterdc.org/resource/implications-of-the-us-houthi-ceasefire-deal/
+Useful result: From [Source](https://en.wikipedia.org/wiki/2025_United_States%E2%80%93Houthi_ceasefire): 
+Content: The Wikipedia article states that a U.S.-Houthi ceasefire took effect on May 6, 2025, ending the March–May 2025 United States attacks in Yemen. The article also mentions that the Houthis halted attacks on vessels following the 2025 Gaza war ceasefire but resumed them after Israel ended the ceasefire by bombing the Gaza Strip in March 2025. <image:i>
+
+Useful result: From [Source](https://www.reuters.com/world/us-houthi-ceasefire-deal-does-not-include-israel-houthi-spokesperson-reuters-2025-05-07/): 
+Content: Reuters reports on a ceasefire deal between Yemen's Houthis and the U.S. The deal, announced by Trump, does not include Israel. The Houthis stated they would stop attacks on U.S. vessels. The article is dated May 7, 2025. <image:12000>
+
+Useful result: From [Source](https://arabcenterdc.org/resource/implications-of-the-us-houthi-ceasefire-deal/): 
+Content: The Arab Center for DC published an article on May 21, 2025, discussing a ceasefire deal between the US and the Houthis. The deal, announced by Trump on May 6, 2025, involved the Houthis agreeing not to target American ships in the Red Sea in exchange for the US ceasing attacks. The article mentions that the US military campaign against the Houthis was intensified after the collapse of the Israel-Hamas ceasefire in March 2025. <image:k>
+
+Not enough information yet. Continuing fact-check...
+Searching google_vision with query: ImageQuery(limit=3, start_date=None, end_date=None, search_type='reverse', text='', image=<defame.common.medium.Image object at 0x7ffee81b70a0>)
+Got 1 new web source(s):
+	1. https://www.aljazeera.com/news/2025/5/16/israel-vows-to-kill-houthi-leader-after-striking-yemeni-ports
+Useful result: From [Source](https://www.aljazeera.com/news/2025/5/16/israel-vows-to-kill-houthi-leader-after-striking-yemeni-ports): Found exact image on website with title: Israel launches strikes on two Yemen ports | Houthis News
+Content: Al Jazeera published an article on May 16, 2025, reporting on Israeli strikes on Yemeni ports. <image:i>. The strikes were in response to Houthi missile attacks towards Israel, which occurred after a U.S.-Houthi ceasefire deal. The article mentions a ceasefire deal between the U.S. and the Houthis, where the Houthis agreed to end attacks on shipping lanes in the Red Sea. Israel was not included in this agreement.
+
+The claim 'The Huthi rebels announced the final cessation of their military operations in international waters after Trump won the 2024 US presidential election.' is false.
+Justification: The claim is partially false. While a U.S.-Houthi ceasefire was announced by Trump in May 2025, where the Houthis agreed to stop attacking U.S. vessels, it did not represent a complete cessation of military operations. The Houthis continued other military actions, such as missile attacks towards Israel, after the ceasefire, as reported by [Al Jazeera](https://www.aljazeera.com/news/2025/5/16/israel-vows-to-kill-houthi-leader-after-striking-yemeni-ports).
+
+So, the overall veracity is: false
+Fact-check took 1:22 min.

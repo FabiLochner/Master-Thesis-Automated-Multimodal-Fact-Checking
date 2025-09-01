@@ -1,0 +1,40 @@
+Extracting claims from Content: <image:25> This image shows the youngest victim of the Hezbollah rocket that murdered 12 children playing soccer in Israel on July 27, 2024.
+'Claim: "<image:25> This image shows the youngest victim of the Hezbollah rocket that murdered 12 children playing soccer in Israel on July 27, 2024."'
+Verifying Claim: "<image:25> This image shows the youngest victim of the Hezbollah rocket that murdered 12 children playing soccer in Israel on July 27, 2024."
+Not enough information yet. Continuing fact-check...
+Got 2 new web source(s):
+	1. https://www.aa.com.tr/tr/teyithatti/aktuel/fotograftaki-kiz-mecdel-sems-saldirisinda-olenlerden-biri-mi/1818078
+	2. https://www.mako.co.il/4fb2cc2308a9c110/Editor-8345f0d2f186c81026.htm?page=6
+Useful result: From [Source](https://www.aa.com.tr/tr/teyithatti/aktuel/fotograftaki-kiz-mecdel-sems-saldirisinda-olenlerden-biri-mi/1818078): Found exact image on website with title: Fotoğraftaki kız Mecdel Şems saldırısında ölenlerden biri mi?
+Content: The article from Anadolu Agency (AA) fact-checks the claim that the image <image:25> shows one of the victims of the Hezbollah rocket attack in Israel on July 27, 2024. The article states that the image is a stock photo and the girl in the image is not Malak, but Julia Ghirarda, who lives in the USA. The article was published on July 29, 2024.
+
+Useful result: From [Source](https://www.mako.co.il/4fb2cc2308a9c110/Editor-8345f0d2f186c81026.htm?page=6): Found exact image on website with title: ליאת מצה | עורכת משנה במגזין mako
+Content: The search result is from mako.co.il. It contains several articles, including one about Donald Trump, Elon Musk, and another about a fake news story. The website also has links to various sections like news, entertainment, and TV programs. The image <image:25> is not mentioned.
+
+Not enough information yet. Continuing fact-check...
+INFO: Dropping action 'reverse_search' as it was already performed.
+Got 0 new web source(s):
+Got 2 new web source(s):
+	1. https://news.un.org/en/story/2024/07/1152581
+	2. https://www.bbc.co.uk/news/live/c6p2979yyyzt
+Useful result: From [Source](https://news.un.org/en/story/2024/07/1152581): 
+Content: The UN News reports on a rocket attack on a football field in the Golan Heights on July 27, 2024, that killed at least 12 civilians, mainly children and teenagers. <image:0> The UN Secretary-General António Guterres condemned the killing. The UN officials urged restraint and warned against escalating violence. The UN Special Coordinator for Lebanon and the Force Commander of UNIFIL also condemned the attack.
+
+Useful result: From [Source](https://www.bbc.co.uk/news/live/c6p2979yyyzt): 
+Content: The BBC reports on a rocket strike in the Israeli-occupied Golan Heights on Saturday that killed 12 people, including children, in Majdal Shams. <image:5141> The White House and Israel have blamed Hezbollah for the attack, though Hezbollah denies involvement. The article mentions that the attack is the deadliest in the current hostilities. The article was edited by Yvette Tan.
+
+Not enough information yet. Continuing fact-check...
+INFO: Dropping action 'reverse_search' as it was already performed.
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Malak image strawberry field')
+Got 3 new web source(s):
+	1. https://www.gettyimages.com.mx/fotos/strawberry-field
+	2. https://en.wikipedia.org/wiki/Strawberry_Fields_(memorial)
+	3. https://www.centralparknyc.org/locations/strawberry-fields
+Useful result: From [Source](https://www.gettyimages.com.mx/fotos/strawberry-field): 
+Content: The search result from Getty Images provides stock photos and images of strawberry fields. <image:0>, <image:1>, <image:2>, <image:3>, <image:4>, <image:5>, <image:6>, <image:7>, <image:8>, <image:9>, <image:10>, <image:11>, <image:12>, <image:13>, <image:14>, <image:15>, <image:16>, <image:17>, <image:18>, <image:19>, <image:20>, <image:21>, <image:22>, <image:23>, <image:24>.
+
+The claim '<image:25> This image shows the youngest victim of the Hezbollah rocket that murdered 12 children playing soccer in Israel on July 27, 2024.' is false.
+Justification: The claim is false. While there was a rocket attack on July 27, 2024, that killed children, the image provided in the claim is of a child in a strawberry field and is unrelated to the attack. The evidence includes reports from the UN News ([https://news.un.org/en/story/2024/07/1152581](https://news.un.org/en/story/2024/07/1152581)) and the BBC ([https://www.bbc.co.uk/news/live/c6p2979yyyzt](https://www.bbc.co.uk/news/live/c6p2979yyyzt)) about the attack.
+
+So, the overall veracity is: false
+Fact-check took 3:09 min.

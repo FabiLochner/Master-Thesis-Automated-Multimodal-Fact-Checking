@@ -1,0 +1,44 @@
+Extracting claims from Content: <image:10240> This image shows the Israeli army reaching Damascus in Syria in December 2024.
+'Claim: "<image:10240> This image shows the Israeli army reaching Damascus in Syria in December 2024."'
+Verifying Claim: "<image:10240> This image shows the Israeli army reaching Damascus in Syria in December 2024."
+Not enough information yet. Continuing fact-check...
+Searching google_vision with query: ImageQuery(limit=3, start_date=None, end_date=None, search_type='reverse', text='', image=<defame.common.medium.Image object at 0x7ffeca3eacb0>)
+Got 7 new web source(s):
+	1. https://globalaffairs.org/commentary-and-analysis/blogs/russian-youth-more-favorable-toward-israel-older-generations
+	2. https://www.nbcnews.com/news/world/israel-hamas-war-tank-fires-at-car-gaza-strip-rcna122801
+	3. https://www.abc.net.au/news/2023-10-13/israeli-to-confront-resilient-foe-in-anticipated-gaza-invasion/102971722
+	4. https://imemc.org/article/gaza-death-toll-passes-1500-as-israeli-tanks-line-up-on-border/
+	5. https://www.nzherald.co.nz/world/israel-hamas-war-israel-orders-evacuation-of-northern-gaza-within-24-hours-un-says-as-military-prepares-for-possible-ground-invasion/PANXLVJIDJGKBOBVM27J3BPD2Q/
+	6. https://english.aawsat.com/arab-world/4602396-palestinians-flee-northern-gaza-after-israel-orders-1-million-evacuate-ground
+	7. https://www.seattletimes.com/nation-world/live-updates-day-6-of-the-latest-israel-palestinian-war/
+Useful result: From [Source](https://globalaffairs.org/commentary-and-analysis/blogs/russian-youth-more-favorable-toward-israel-older-generations): Found exact image on website with title: Russian Youth More Favorable Toward Israel than Older Generations
+Content: The search result is from the Chicago Council on Global Affairs and discusses a survey about Russian views on the Israeli-Palestinian conflict. The article mentions that young Russians may be more likely to give Israel the benefit of the doubt. The article also includes an image of Israeli tanks, but it is not specified where the image was taken. <image:10240>
+
+Useful result: From [Source](https://www.nbcnews.com/news/world/israel-hamas-war-tank-fires-at-car-gaza-strip-rcna122801): Found exact image on website with title: Video appears to show an Israeli tank firing at a car in Gaza
+Content: The search result from NBC News, published on October 30, 2023, discusses a video that appears to show an Israeli tank firing at a car on the outskirts of Gaza City. The article includes a video of the incident and quotes a freelance photographer who witnessed the event. The article also mentions the IDF's response and the ongoing conflict in Gaza.
+
+Useful result: From [Source](https://www.abc.net.au/news/2023-10-13/israeli-to-confront-resilient-foe-in-anticipated-gaza-invasion/102971722): Found exact image on website with title: Israeli army to confront resilient foe in anticipated ground invasion ...
+Content: The search result from ABC News, published on October 12, 2023, discusses an anticipated ground invasion into Gaza by the Israeli army. The article mentions the challenges the Israeli army will face, including a vast tunnel network used by Hamas and the potential for a high civilian death toll. The article also includes <image:10240>, which is used in the claim.
+
+Most likely location: Israel
+Top 10 locations: Israel, Palestine, Jordan, Albania, Andorra, Argentina, Australia, Austria, Bangladesh, Belgium
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Israeli army tanks Damascus Syria')
+Skipping unsupported website: https://www.youtube.com/watch?v=elaW9PMkYzQ
+Got 3 new web source(s):
+	1. https://npasyria.com/en/128999/
+	2. https://en.wikipedia.org/wiki/Israeli_invasion_of_Syria_(2024%E2%80%93present)
+	3. July 14, 2025 https://www.pbs.org/newshour/world/israel-strikes-military-tanks-in-southern-syria
+Useful result: From [Source](https://npasyria.com/en/128999/): 
+Content: The North Press Agency published an article on August 30, 2025, stating that Israeli forces advanced into southern Syria, entering the village of al-Asha in the Quneitra countryside. <image:11993> shows Israeli tanks on the border with Syria in the Golan Heights.
+
+Useful result: From [Source](https://en.wikipedia.org/wiki/Israeli_invasion_of_Syria_(2024%E2%80%93present)): 
+Content: The search result is from Wikipedia and discusses the Israeli invasion of Syria (2024–present). It mentions that on December 8, 2024, Israeli armored units crossed the ceasefire line and entered the buffer zone. The article also states that Israeli tanks were reported as far as Qatana, 26 kilometers (16 mi) from Damascus. <image:10240> is not present in the search result.
+
+Useful result: From [Source](https://www.pbs.org/newshour/world/israel-strikes-military-tanks-in-southern-syria): 
+Content: The PBS News article, published on July 14, 2025, reports on Israeli strikes on military tanks in southern Syria. <image:12070> The article mentions clashes between government forces, Bedouin tribes, and Druze militias in Syria's Sweida province. It also mentions that in May, Israeli forces struck a site near the presidential palace in Damascus.
+
+The claim '<image:10240> This image shows the Israeli army reaching Damascus in Syria in December 2024.' is false.
+Justification: The image depicts Israeli tanks, and while the Israeli army has been active in Syria, including near Damascus, the evidence does not confirm the image's exact location. Therefore, the claim is likely false.
+
+So, the overall veracity is: false
+Fact-check took 4:17 min.

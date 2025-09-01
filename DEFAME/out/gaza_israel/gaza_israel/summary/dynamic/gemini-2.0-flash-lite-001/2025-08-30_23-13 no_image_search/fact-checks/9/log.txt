@@ -1,0 +1,41 @@
+Extracting claims from Content: <image:10204> This image shows an Israeli missile attack on Iran in the early hours of October 26, 2024.
+'Claim: "<image:10204> This image shows an Israeli missile attack on Iran in the early hours of October 26, 2024."'
+Verifying Claim: "<image:10204> This image shows an Israeli missile attack on Iran in the early hours of October 26, 2024."
+Not enough information yet. Continuing fact-check...
+Searching google_vision with query: ImageQuery(limit=3, start_date=None, end_date=None, search_type='reverse', text='', image=<defame.common.medium.Image object at 0x7ffed165c0a0>)
+Skipping unsupported website: https://www.youtube.com/watch?v=-6k2iogXOiw
+Skipping unsupported website: https://x.com/Osint613/status/1928085402205966660
+Got 4 new web source(s):
+	1. https://jcpa.org/an-open-letter-to-the-board-of-directors-of-ben-jerrys/
+	2. https://24newshd.tv/15-Jul-2025/drone-attack-shuts-iraq-oil-field-run-by-us-company
+	3. https://www.rferl.org/a/iran-fire-oil-refinery/31289054.html
+	4. https://www.timesnownews.com/world/middle-east/video-irans-air-defense-systems-in-action-as-israel-pounds-tehran-article-114609870
+Useful result: From [Source](https://24newshd.tv/15-Jul-2025/drone-attack-shuts-iraq-oil-field-run-by-us-company): Found exact image on website with title: Drone attack shuts Iraq oil field run by US company - 24 News HD
+Content: The search result from 24 News HD shows the exact image <image:10204> and describes a drone attack on an oil field in Iraq on July 15, 2025. The article is written by AFP and published on July 15, 2025. The attack was against the Sarsang oil field in the Kurdistan region.
+
+Useful result: From [Source](https://www.rferl.org/a/iran-fire-oil-refinery/31289054.html): Found exact image on website with title: Massive Fire At Iranian Oil Refinery Extinguished; 11 Injured - RFE/RL
+Content: The search result from RFE/RL, published on June 3, 2021, reports a massive fire at an Iranian oil refinery near Tehran. The fire was extinguished after more than 20 hours and was triggered by a gas leak. <image:10468> The image in the article is the same as the one in the claim.
+
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Israeli missile attack Iran October 26 2024')
+Got 3 new web source(s):
+	1. https://en.wikipedia.org/wiki/October_2024_Israeli_strikes_on_Iran
+	2. October 26, 2024 https://apnews.com/article/israel-palestinians-hamas-war-lebanon-hezbollah-iran-news-10-26-2024-9c9f366c71c508e6dd0ee74cff8400d2
+	3. October 26, 2024 https://www.cnn.com/world/live-news/israel-iran-strikes-lebanon-gaza-war-10-26-24
+Useful result: From [Source](https://en.wikipedia.org/wiki/October_2024_Israeli_strikes_on_Iran): 
+Content: The search result from Wikipedia discusses the October 26, 2024, Israeli strikes on Iran, Iraq, and Syria. <image:10204> The strikes, codenamed Operation Days of Repentance, targeted military sites, including air defense batteries, missile production facilities, and a nuclear weapons research facility. The article mentions the date of the attack, the locations targeted, and the outcome, including casualties. The strikes were in response to Iranian strikes against Israel earlier that month. The article also includes images of Israeli aircraft before the strikes.
+
+Useful result: From [Source](https://apnews.com/article/israel-palestinians-hamas-war-lebanon-hezbollah-iran-news-10-26-2024-9c9f366c71c508e6dd0ee74cff8400d2): 
+Content: The Associated Press reports that Israel launched airstrikes on military targets in Iran on October 26, 2024. <image:10204> The attack was in retaliation for a barrage of ballistic missiles fired by Iran earlier in the month. The Israeli military targeted facilities used to make missiles and surface-to-air missile sites. The article includes a photo of Israeli Air Force planes departing to attack Iran on October 26, 2024.
+
+Useful result: From [Source](https://www.cnn.com/world/live-news/israel-iran-strikes-lebanon-gaza-war-10-26-24): 
+Content: The CNN article, updated on October 27, 2024, reports on Israeli strikes against Iran on October 26, 2024. <image:10204> is not present in the article. The article includes images of explosions in Tehran and an Israeli Air Force plane. The article mentions that the strikes were a retaliation for a ballistic missile barrage launched by Tehran earlier in the month.
+
+Not enough information yet. Continuing fact-check...
+INFO: Dropping action 'reverse_search' as it was already performed.
+Most likely location: China
+Top 10 locations: China, Malaysia, Taiwan, Singapore, Australia, India, Japan, Ukraine, Albania, Andorra
+The claim '<image:10204> This image shows an Israeli missile attack on Iran in the early hours of October 26, 2024.' is false.
+Justification: The image in question was likely taken in China or Malaysia, according to geolocation data, which contradicts the claim that it depicts an Israeli missile attack on Iran. While web searches confirm that Israeli strikes on Iran occurred on October 26, 2024, the image's origin does not align with the claim.
+
+So, the overall veracity is: false
+Fact-check took 5:12 min.

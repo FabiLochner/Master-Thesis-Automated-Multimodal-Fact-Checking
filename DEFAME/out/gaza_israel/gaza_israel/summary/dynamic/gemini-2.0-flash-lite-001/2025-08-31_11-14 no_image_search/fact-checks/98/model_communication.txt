@@ -1,0 +1,2384 @@
+PlanPrompt - QUERY:
+
+# Instructions
+The available knowledge is insufficient to assess the Claim. Therefore, **propose a set of actions** to retrieve new and helpful evidence. Adhere to the following rules:
+* The actions available are listed under Valid Actions, including a short description for each action. No other actions are possible at this moment. 
+* For each action, use the formatting as specified in Valid Actions.
+* Include all actions in a single Markdown code block at the end of your answer.
+* Propose as few actions as possible, but as much as needed. Do not propose similar or previously used actions.
+
+
+
+## Valid Actions
+* `geolocate`
+   * Description: Performs geolocation to determine the country where an image was taken.
+   * How to use: Provide an image and the model will determine the most likely countries where it was taken.
+   * Format: geolocate(<image:k>), where `k` is the image's ID
+
+* `web_search`
+   * Description: Run an open web search on Google or DuckDuckGO to retrieve any related webpage.
+   * How to use: Do not use this with a previously used or similar query from previous web searches. If a previous web search did not yield any results, use a very different query.
+   * Format: web_search("your web search query goes here")
+
+* `reverse_search`
+   * Description: Performs a reverse image search to find similar images on the web.
+   * How to use: Provide an image and the model will perform a reverse search to find similar images.
+   * Format: reverse_search(<image:k>), where `k` is the image's ID
+
+# Example: geolocate()
+
+## Claim
+Text: "<image:k> shows a nuclear weapons facility in Usbekistan."
+
+...
+
+## Actions
+```
+geolocate(<image:k>)
+```
+
+# Example: web_search()
+
+## Claim
+Text: "New Zealand’s new Food Bill bans gardening"
+Claim date: October 29, 2020
+
+...
+
+## Actions
+```
+web_search("New Zealand Food Bill 2020")
+web_search("New Zealand Food Bill gardening ban")
+```
+
+# Example: reverse_search()
+
+## Claim
+Text: "<image:k> shows a rare event of a solar eclipse with a double ring."
+
+...
+
+## Actions
+```
+reverse_search(<image:k>)
+```
+
+# Record
+## Claim
+Claim: "<image:64> This is an authentic image of Dwayne Johnson waring the Israeli flag in support of Israel."
+
+# Your Actions
+
+
+
+===== > RESPONSE:  < =====
+```
+reverse_search(<image:64>)
+web_search("Dwayne Johnson Israel support")
+```
+_________________________
+
+
+
+SummarizeResultPrompt - QUERY:
+
+# Instructions
+In order to find evidence that helps your fact-check, you just ran a web search which yielded a Search Result. **Your task right now is to summarize the Search Result.** What to include:
+* information that might be useful for the fact-check (see Record)
+* relevant images (refer to images by inserting their reference <image:k>)
+* if available: the release date as well as the author or the publisher (e.g. the media company) of the search result.
+
+Do NOT include:
+* advertisements
+* any other information not related to the Record or the Claim
+
+Additional rules:
+* Do not add any additional information besides the information in the Search Result.
+* If the Search Result doesn't contain any relevant information for the fact-checking work, simply print one word in capital letters: "NONE".
+* Keep your writing style like in the Examples 1, 2 and 3 provided to you.
+* Try to filter out relevant information even if the search result is in a different language.
+
+# Example 1
+The search result from America Today provides several photographs of the Notre-Dame Cathedral fire on April 15, 2019. <image:i>, <image:j>, <image:k>. None of the images show the Eiffel Tower in the background. 
+
+# Example 2
+NONE
+
+# Example 3
+The Guardian discusses a report blaming the Syrian government for a toxic gas attack and condemning their use of chemical weapons. The Guardian mentions the Chemical Weapons Convention and the responsibilities of Syria under the convention. According to The Guardian, The White House condemned the Assad regime for defying the norm against chemical weapons use.
+
+# Record
+## Claim
+Claim: "<image:64> This is an authentic image of Dwayne Johnson waring the Israeli flag in support of Israel."
+
+## Actions
+```
+reverse_search(<image:64>)
+web_search("Dwayne Johnson Israel support")
+```
+
+# Search Result
+From [Source](https://www.marca.com/en/lifestyle/world-news/2023/10/11/6526c4cc22601d2d748b45da.html): 
+Content: "I pray for all innocent lives."
+
+> [Ver esta publicaci�n en Instagram](https://www.instagram.com/p/CyPX7z8L-Sz/?utm_source=ig_embed&utm_medium=loading)
+
+Unlike many celebrities, **Johnson** does not appear to be showing a clear allegiance with either side of the conflict, although, whilst mentioning the loss of Palestinian lives, he does not specifically mention the Israeli airstrikes on the Gaza Strip.
+
+The airstrikes were launched in response to a sudden surprise attack from Hamas on Israeli towns near the border and a music festival in the desert where hundreds of young people were killed and many kidnapped.
+
+* * *
+
+*   [World News](https://www.marca.com/en/lifestyle/world-news.html)
+    
+*   [Dwayne Johnson - English](https://www.marca.com/en/lifestyle/dwayne-johnson.html)
+    
+*   [Israel - English](https://www.marca.com/en/lifestyle/world-news/israel.html)
+    
+*   [War in Israel - English](https://www.marca.com/en/lifestyle/world-news/war-in-israel.html)
+    
+*   [Gaza Strip - English](https://www.marca.com/en/lifestyle/world-news/gaza-strip.html)
+    
+*   [Hamas - English](https://www.marca.com/en/lifestyle/world-news/hamas.html)
+    
+*   [Palestine - English](https://www.marca.com/en/lifestyle/world-news/palestine.html)
+    
+
+World News[Playboy cancel their contract with Mia Khalifa over her support for Palestine](https://www.marca.com/en/lifestyle/world-news/2023/10/10/65254865ca4741416d8b4580.html?intcmp=MNOT23801&s_kw=1)
+
+US News[Joe Biden confirms Americans are among Hamas hostages: This is terrorism](https://www.marca.com/en/lifestyle/us-news/2023/10/10/6525b66ee2704eba5a8b45c4.html?intcmp=MNOT23801&s_kw=2)
+
+World News[What is Hamas? ![](https://pixelcounter.marca.com/pixelcontabilizacion/pixelcontabilizacion.gifctl?r=http%3A%2F%2Fwww%2Emarca%2Ecom%2Fen%2Flifestyle%2Fworld%2Dnews%2F2023%2F10%2F11%2F6526c4cc22601d2d748b45da%2Ehtml&s=marca&d=aHzSiAoAAhEAAABgUWM)
+
+*   Es noticia:
+*   [Taylor Swift Travis Kelce](https://www.marca.com/en/nfl/kansas-city-chiefs/2025/07/20/687bd70422601d943b8b45c0.html)
+    
+*   [Jerry Jones](https://www.marca.com/en/nfl/dallas-cowboys/2025/07/20/687c5b4c46163f7f618b4581.html)
+    
+*   [Micah Parsons](https://www.marca.com/en/nfl/dallas-cowboys/2025/07/19/687bf7e222601dcf258b45e6.html)
+    
+*   [Titans Fantasy Football](https://www.marca.com/en/nfl/fantasy-football/2025/07/19/687bfa5022601dfb5c8b4572.html)
+    
+*   [Patrick Mahomes](https://www.marca.com/en/nfl/kansas-city-chiefs/2025/07/19/687ba86a268e3ea05b8b458f.html)
+    
+*   [Brett Lemieux Cause of Death](https://www.marca.com/en/nfl/kansas-city-chiefs/2025/07/19/687bc4ad22601db87d8b45c8.html)
+    
+*   [Shilo Sanders](https://www.marca.com/en/nfl/tampa-bay-buccaneers/2025/07/19/687c0948268e3e7d568b45a4.html)
+    
+*   [Deion Sanders](https://www.marca.com/en/ncaa/2025/07/20/687c173022601d5b578b45ec.html)
+    
+*   [Arch Manning](https://www.marca.com/en/ncaa/2025/07/19/687bc96b22601d95248b45d8.html)
+    
+*   [Caitlin Clark](https://www.marca.com/en/basketball/wnba/indiana-fever/2025/07/19/687b93cf268e3eef708b4583.html)
+    
+*   [Klay Thompson](https://www.marca.com/en/basketball/nba/dallas-mavericks/2025/07/20/687c129e46163fd8768b45f8.html)
+    
+*   [WNBA All-Star Game Winners](https://www.marca.com/en/basketball/wnba/2025/07/20/687c2dcde2704e4b7b8b456c.html)
+    
+*   [Manny Pacquiao vs Mario Barrios](https://www.marca.com/en/boxing/2025/07/20/687c7924268e3e32588b45ad.html)
+    
+*   [Mass Bee Deaths](https://www.marca.com/en/lifestyle/us-news/2025/07/19/687bb388268e3e32588b4586.html)
+    
+*   [Justin Bieber](https://www.marca.com/en/lifestyle/us-news/2025/07/19/687c05d922601d6c7a8b45ce.html)
+    
+*   [Horoscope Today](https://www.marca.com/en/lifestyle/world-news/2025/07/19/687b624d22601d1e638b45c6.html)
+    
+*   [Latest News](https://www.marca.com/en/latest-news.html)
+    
+*   [401k Retirement Plans](https://www.marca.com/en/lifestyle/us-news/personal-finance/2025/07/19/687bb98622601d83798b45b0.html)
+    
+*   [Credit Report](https://www.marca.com/en/lifestyle/us-news/personal-finance/2025/07/19/687b7add268e3ec35e8b457b.html)
+    
+*   [SNAP Florida Beneficiaries](https://www.marca.com/en/lifestyle/us-news/personal-finance/2025/07/19/687bb02246163fe9628b45e1.html)
+    
+*   [New York Stimulus Payment](https://www.marca.com/en/lifestyle/us-news/personal-finance/2025/07/19/687bb21c22601de43c8b45d8.html)
+    
+
+*   *   [Celebrities](https://www.marca.com/en/lifestyle/celebrities.html?intcmp=MENUPROD&s_kw=en-lifestyle-celebrities)
+        
+    *   [Fitness](https://www.marca.com/en/lifestyle/fitness.html?intcmp=MENUPROD&s_kw=en-lifestyle-fitness)
+        
+    *   [Gaming](https://www.marca.com/en/technology/gaming.html?intcmp=MENUPROD&s_kw=en-gaming)
+        
+*   *   [Movies](https://www.marca.com/en/lifestyle/movies.html?intcmp=MENUPROD&s_kw=en-lifestyle-movies)
+        
+    *   [Music](https://www.marca.com/en/lifestyle/music.html?intcmp=MENUPROD&s_kw=en-lifestyle-music)
+        
+    *   [Net Worth](https://www.marca.com/en/lifestyle/net-worth.html?intcmp=MENUPROD&s_kw=en-lifestyle-net-worth)
+        
+*   *   [TV Shows](https://www.marca.com/en/lifestyle/tv-shows.html?intcmp=MENUPROD&s_kw=en-lifestyle-tv-shows)
+        
+    *   [US News](https://www.marca.com/en/lifestyle/us-news.html?intcmp=MENUPROD&s_kw=en-lifestyle-us-news)
+        
+    *   [World News](https://www.marca.com/en/lifestyle/world-news.html?intcmp=MENUPROD&s_kw=en-lifestyle-world-news)
+        
+
+*   *   [Basketball](https://www.marca.com/en/basketball.html?intcmp=MENUPROD&s_kw=en-basketball)
+        
+    *   [Formula 1](https://www.marca.com/en/f1.html?intcmp=MENUPROD&s_kw=en-formula-1)
+        
+    *   [Golf](https://www.marca.com/en/golf.html?intcmp=MENUPROD&s_kw=en-golf)
+        
+*   *   [IndyCar](https://www.marca.com/en/indycar.html?intcmp=MENUPROD&s_kw=en-indycar)
+        
+    *   [NASCAR](https://www.marca.com/en/nascar.html?intcmp=MENUPROD&s_kw=en-nascar)
+        
+    *   [NCAA](https://www.marca.com/en/ncaa.html?intcmp=MENUPROD&s_kw=en-ncaa)
+        *   [Basketball](https://www.marca.com/en/ncaa/college-basketball.html?intcmp=MENUPROD&s_kw=en-ncaa-basketball)
+            
+        *   [Football](https://www.marca.com/en/ncaa/college-football.html?intcmp=MENUPROD&s_kw=en-ncaa-football)
+            
+*   *   [NHL](https://www.marca.com/en/nhl.html?intcmp=MENUPROD&s_kw=en-nhl)
+        
+    *   [Olympic Games](https://www.marca.com/en/olympic-games.html?intcmp=MENUPROD&s_kw=english-olympic-games)
+        
+    *   [PFL](https://www.marca.com/en/pfl.html?intcmp=MENUPROD&s_kw=en-pfl)
+        
+*   *   [Tennis](https://www.marca.com/en/tennis.html?intcmp=MENUPROD&s_kw=en-tennis)
+        
+    *   [UFC](https://www.marca.com/en/ufc.html?intcmp=MENUPROD&s_kw=en-ufc)
+        
+    *   [WWE](https://www.marca.com/en/wwe.html?intcmp=MENUPROD&s_kw=en-wwe)
+        
+
+WORLD NEWS
+
+World News
+
+Dwayne 'The Rock' Johnson shares his views on Israel-Palestine war: I condemn and denounce terrorism
+====================================================================================================
+
+He has chosen to share his thoughts on the important matter
+
+!Dwayne &apos;The Rock&apos; Johnson shares his views on Israel-Palestine war <image:2699>
+
+Dwayne 'The Rock' Johnson shares his views on Israel-Palestine war
+
+*   TBS
+    
+
+11/10/2023 - 10:53 CDT
+
+*   [Compartir en Facebook](#)
+    
+*   [Compartir en Twitter](#)
+    
+*   [Compartir en Telegram](#)
+    
+*   [Compartir en Whatsapp](#)
+    
+*   [Enviar por email](mailto:?subject=Dwayne%20%27The%20Rock%27%20Johnson%20shares%20his%20views%20on%20Israel-Palestine%20war%3A%20I%20condemn%20and%20denounce%20terrorism&body=https://www.marca.com/en/lifestyle/world-news/2023/10/11/6526c4cc22601d2d748b45da.html?emk=MAILSHARE)
+    
+
+*   World News. [What did Nostradamus say about an Israel vs Hamas war in his prophecies for 2023?](https://www.marca.com/en/lifestyle/world-news/2023/10/11/6526902022601dd91c8b45a0.html)
+    
+
+At a time when experts on Middle Eastern geopolitics are being asked to give context for **[the violence between Israel and Palestine](https://www.marca.com/en/lifestyle/world-news/war-in-israel.html)
+**, many celebrities are also choosing to weigh in with their thoughts.
+
+One such celebrity is WWE legend and actor **[Dwayne 'The Rock' Johnson](https://www.marca.com/en/lifestyle/dwayne-johnson.html)
+**. [What to know on the fifth day of the latest Israel-Palestinian war](https://www.marca.com/en/lifestyle/world-news/2023/10/11/652680c6e2704e628f8b4598.html)
+    
+*   World News. He has shared a long statement on his Instagram account in which he expressed his heartbreak and outrage at the events of the past four days.
+
+TV reporter bursts into tears while talking about the victims of the Israel-Hamas conflictRoberto Ortega
+
+The Rock's statement on the Israel-Palestine conflict
+-----------------------------------------------------
+
+"I'm heartbroken, angry, and sickened by the brutal murders and kidnapping of Jewish people through the horrific acts of the Hamas terrorist group," he began.
+
+"The growing loss of innocent Israeli and Palestinian lives is heart-wrenching as this war escalates to immense proportions.
+
+"I don't pretend to know everything about the complex conflict in the Middle East. Why are Israel and Palestine at war?](https://www.marca.com/en/lifestyle/world-news/2023/10/08/6522d5e4268e3e011e8b4576.html?intcmp=MNOT23801&s_kw=3)
+
+See links of interest
+
+*   [Personal Finance](https://www.marca.com/en/lifestyle/us-news/personal-finance.html)
+    
+*   [US News](https://www.marca.com/en/lifestyle/us-news.html)
+    
+*   [California News](https://www.marca.com/en/lifestyle/us-news/california.html)
+    
+*   [New York News](https://www.marca.com/en/lifestyle/us-news/new-york.html)
+    
+*   [Florida News](https://www.marca.com/en/lifestyle/us-news/florida.html)
+    
+*   [Texas News](https://www.marca.com/en/lifestyle/us-news/texas.html)
+    
+*   [Elon Musk News](https://www.marca.com/en/lifestyle/elon-musk.html)
+    
+*   [SNAP Benefits](https://www.marca.com/en/lifestyle/us-news/snap-benefits.html)
+    
+*   [Student Loans](https://www.marca.com/en/lifestyle/student-loans.html)
+    
+*   [CalFresh](https://www.marca.com/en/lifestyle/us-news/calfresh.html)
+    
+*   [CalWORKs](https://www.marca.com/en/lifestyle/us-news/personal-finance/calworks.html)
+    
+*   [Taylor Swift news](https://www.marca.com/en/lifestyle/taylor-swift.html)
+    
+*   [Kate Middleton News](https://www.marca.com/en/lifestyle/kate-middleton.html)
+    
+*   [British Royal Family news](https://www.marca.com/en/lifestyle/british-royal-family.html)
+    
+*   [Stephen A."
+
+# Your Summary
+
+
+
+===== > RESPONSE:  < =====
+The search result from Marca.com, published on October 11, 2023, discusses Dwayne "The Rock" Johnson's views on the Israel-Palestine war. <image:2699> The article mentions Johnson's Instagram post where he expressed his heartbreak and outrage at the events, condemning the actions of Hamas and the loss of innocent lives. The article does not show Johnson wearing the Israeli flag.
+
+_________________________
+
+
+
+SummarizeResultPrompt - QUERY:
+
+# Instructions
+In order to find evidence that helps your fact-check, you just ran a web search which yielded a Search Result. **Your task right now is to summarize the Search Result.** What to include:
+* information that might be useful for the fact-check (see Record)
+* relevant images (refer to images by inserting their reference <image:k>)
+* if available: the release date as well as the author or the publisher (e.g. the media company) of the search result.
+
+Do NOT include:
+* advertisements
+* any other information not related to the Record or the Claim
+
+Additional rules:
+* Do not add any additional information besides the information in the Search Result.
+* If the Search Result doesn't contain any relevant information for the fact-checking work, simply print one word in capital letters: "NONE".
+* Keep your writing style like in the Examples 1, 2 and 3 provided to you.
+* Try to filter out relevant information even if the search result is in a different language.
+
+# Example 1
+The search result from America Today provides several photographs of the Notre-Dame Cathedral fire on April 15, 2019. <image:i>, <image:j>, <image:k>. None of the images show the Eiffel Tower in the background. 
+
+# Example 2
+NONE
+
+# Example 3
+The Guardian discusses a report blaming the Syrian government for a toxic gas attack and condemning their use of chemical weapons. The Guardian mentions the Chemical Weapons Convention and the responsibilities of Syria under the convention. According to The Guardian, The White House condemned the Assad regime for defying the norm against chemical weapons use.
+
+# Record
+## Claim
+Claim: "<image:64> This is an authentic image of Dwayne Johnson waring the Israeli flag in support of Israel."
+
+## Actions
+```
+reverse_search(<image:64>)
+web_search("Dwayne Johnson Israel support")
+```
+
+# Search Result
+From [Source](https://shopisrael.com/blogs/support/does-dwayne-johnson-support-israel?srsltid=AfmBOopy4n2f7lxTWWqdiE6_xSd1XeW0AbQOVlP76nNPJQ6KrktIHL3X): 
+Content: "
+
+Free Shipping on orders of €100 or more
+
+![](<Base64-Image-Removed>)
+
+Cart
+
+**Free Shipping** on orders of €100 or more
+
+Your cart is empty.
+
+[Continue browsing](#k-hub/)
+
+Special instructions for seller
+
+Special instructions for seller
+
+Estimate shipping
+
+      
+
+Country
+
+Province
+
+Postal/Zip Code 
+
+_Shipping & taxes calculated at checkout_
+
+Check Out • 0,00 DKK
+
+![Does Dwayne Johnson Support Israel? - Shop Israel](//shopisrael.com/cdn/shop/articles/does-dwayne-johnson-support-israel-600395.png?v=1739937114&width=960)
+
+**Key Takeaways**
+
+*   Dwayne Johnson has not been noted for direct engagements with Israel, such as visits or events, but has expressed his views on the Israel-Palestine conflict.
+*   He has made public statements condemning terrorism and expressing sympathy for innocent lives lost in the conflict.
+*   Johnson's overall stance on Israel is not explicitly supportive or critical, but he emphasizes compassion and peace.
+
+Dwayne Johnson is a globally recognized figure, known for his career in both professional wrestling and Hollywood. The question of whether Dwayne Johnson supports Israel is complex, given his recent statements on the Israel-Palestine conflict. Does Dwayne Johnson Support Israel?
+
+### Has Dwayne Johnson Engaged with Israel Directly?
+
+Dwayne Johnson has not been reported to have engaged directly with Israel through visits or personal connections. His stance on Israel is not explicitly supportive or critical but emphasizes the importance of peace and compassion.
+
+*   Johnson's overall political alignment is not strongly affiliated with any particular side in the Israel/Palestine conflict, as he tends to focus on broader humanitarian concerns.
+*   Key points about his stance:
+    *   He condemns terrorism and supports peace.
+    *   Johnson does not explicitly support or criticize either side in the conflict.
+
+### Community Engagement and Advocacy
+
+Dwayne Johnson is known for his philanthropic efforts, but these have not specifically targeted Israel or Israeli organizations. His advocacy focuses more on general humanitarian causes.
+
+*   Johnson has not undertaken any charitable or advocacy work specifically related to Israel.
+*   His community engagement and advocacy efforts are generally aimed at broader social issues rather than specific national or political causes.
+
+### Cultural Impact Related to Israel
+
+Dwayne Johnson's influence on cultural perceptions of Israel is minimal, as his public persona and actions have not been directly associated with Israeli cultural initiatives or events.
+
+*   Johnson's cultural contributions and endorsements have not specifically resonated in Israel or impacted local Israeli cultural initiatives.
+*   His influence is more aligned with global entertainment and humanitarian efforts rather than specific cultural engagements with Israel.
+
+### Conclusion: Dwayne Johnson’s Relationship with Israel
+
+Dwayne Johnson's relationship with Israel is not characterized by direct engagement or explicit political support. His public life is more focused on his entertainment career and philanthropic efforts rather than political or cultural engagements with specific countries.
+
+*   There are no documented instances of Dwayne Johnson visiting Israel or participating in events specifically related to Israeli culture or politics.
+*   Johnson's professional and personal life has not included any notable collaborations or ties with Israeli communities or organizations.
+
+### Has Dwayne Johnson Expressed Opinions on Israel?
+
+Dwayne Johnson has expressed his views on the Israel-Palestine conflict, emphasizing the need for peace and condemning acts of terrorism.
+
+*   He has made public statements condemning the brutal acts of terrorism and expressing sympathy for the loss of innocent lives on both sides of the conflict.
+*   Johnson has not participated in specific discussions or events focused solely on Israeli affairs but has used his platform to advocate for peace and compassion.
+
+### What Is Dwayne Johnson’s Stance on Politics and Israel?
+
+Dwayne Johnson's political perspective is generally neutral, focusing more on humanitarian issues than political alignments. Therefore, it can be concluded that while Johnson does not actively support or criticize Israel, his focus is on promoting peace and compassion in the conflict.
+
+Share Share
+
+ Link
+
+Close Copy link
+
+[← Older Post](/blogs/support/does-dustin-hoffman-support-israel) [Newer Post →](/blogs/support/does-ed-sheeran-support-israel)
+
+Support Israel
+--------------
+
+[RSS](/blogs/support.atom "Shop Israel RSS")
+
+* * *
+
+[![Does Zbigniew Brzezinski Support Israel? - Shop Israel](//shopisrael.com/cdn/shop/articles/does-zbigniew-brzezinski-support-israel-500729.png?v=1740777363&width=960)](/blogs/support/does-zbigniew-brzezinski-support-israel)
+
+February 28, 2025
+
+### [Does Zbigniew Brzezinski Support Israel?](/blogs/support/does-zbigniew-brzezinski-support-israel)
+
+By Support Account
+
+Key Takeaways Zbigniew Brzezinski's engagement with Israel has been primarily through his roles in U.S. foreign policy, notably as Jimmy Carter's National Security Advisor, where...
+
+[Read more](/blogs/support/does-zbigniew-brzezinski-support-israel)
+
+[![Does Zayn Malik Support Israel?"
+
+# Your Summary
+
+
+
+===== > RESPONSE:  < =====
+The article from Shop Israel states that Dwayne Johnson has not been noted for direct engagements with Israel, but has expressed his views on the Israel-Palestine conflict. He has made public statements condemning terrorism and expressing sympathy for innocent lives lost in the conflict. <image:64> is not mentioned.
+
+_________________________
+
+
+
+SummarizeResultPrompt - QUERY:
+
+# Instructions
+In order to find evidence that helps your fact-check, you just ran a web search which yielded a Search Result. **Your task right now is to summarize the Search Result.** What to include:
+* information that might be useful for the fact-check (see Record)
+* relevant images (refer to images by inserting their reference <image:k>)
+* if available: the release date as well as the author or the publisher (e.g. the media company) of the search result.
+
+Do NOT include:
+* advertisements
+* any other information not related to the Record or the Claim
+
+Additional rules:
+* Do not add any additional information besides the information in the Search Result.
+* If the Search Result doesn't contain any relevant information for the fact-checking work, simply print one word in capital letters: "NONE".
+* Keep your writing style like in the Examples 1, 2 and 3 provided to you.
+* Try to filter out relevant information even if the search result is in a different language.
+
+# Example 1
+The search result from America Today provides several photographs of the Notre-Dame Cathedral fire on April 15, 2019. <image:i>, <image:j>, <image:k>. None of the images show the Eiffel Tower in the background. 
+
+# Example 2
+NONE
+
+# Example 3
+The Guardian discusses a report blaming the Syrian government for a toxic gas attack and condemning their use of chemical weapons. The Guardian mentions the Chemical Weapons Convention and the responsibilities of Syria under the convention. According to The Guardian, The White House condemned the Assad regime for defying the norm against chemical weapons use.
+
+# Record
+## Claim
+Claim: "<image:64> This is an authentic image of Dwayne Johnson waring the Israeli flag in support of Israel."
+
+## Actions
+```
+reverse_search(<image:64>)
+web_search("Dwayne Johnson Israel support")
+```
+
+# Search Result
+From [Source](https://variety.com/2023/film/news/hollywood-stars-support-israel-palestine-conflict-1235749537/): 
+Content: "Oct 9, 2023 12:56pm PT
+
+Gal Gadot, Madonna, Natalie Portman, The Rock And More Hollywood Stars Support Israel Amid Deadly Hamas Attacks
+===============================================================================================================
+
+By [Elizabeth Wagmeister](https://variety.com/author/elizabeth-wagmeister/)
+
+Plus Icon
+
+### [Elizabeth Wagmeister](https://variety.com/author/elizabeth-wagmeister/)
+
+Chief Correspondent
+
+[@EWagmeister](https://twitter.com/EWagmeister)
+
+#### Latest
+
+*   [Britney Spears Says She Had an Abortion With Justin Timberlake: ‘If It Had Been Left Up to Me Alone, I Never Would Have Done It’](https://variety.com/2023/music/news/britney-spears-abortion-justin-timberlake-1235759140/)
+     2 years ago
+*   [Taylor Swift’s Eras Tour Security Guard Leaves for Israel to Join the IDF](https://variety.com/2023/music/news/taylor-swift-security-guard-leaves-israel-war-idf-1235757850/)
+     2 years ago
+*   [Dana Walden Sends Staff-Wide Memo at Disney Reflecting on ‘Worst Attack On the Jewish People Since the Holocaust’](https://variety.com/2023/film/news/dana-walden-disney-israel-hamas-war-staff-memo-1235755463/)
+     2 years ago
+
+[See All](https://variety.com/author/elizabeth-wagmeister/)
+
+[](#article-comments)
+
+*   [](https://www.facebook.com/dialog/share?title=Gal%20Gadot,%20Madonna,%20Natalie%20Portman,%20The%20Rock%20And%20More%20Hollywood%20Stars%20Support%20Israel%20Amid%20Deadly%20Hamas%20Attacks&sdk=joey&display=popup&ref=plugin&src=share_button&app_id=278816682243900&href=https://variety.com/2023/film/news/hollywood-stars-support-israel-palestine-conflict-1235749537/)
+    
+*   [](https://twitter.com/intent/post?url=https://variety.com/2023/film/news/hollywood-stars-support-israel-palestine-conflict-1235749537/&text=Gal%20Gadot%2C%20Madonna%2C%20Natalie%20Portman%2C%20The%20Rock%20And%20More%20Hollywood%20Stars%20Support%20Israel%20Amid%20Deadly%20Hamas%20Attacks&via=variety)
+    
+*   [](https://share.flipboard.com/bookmarklet/popout?v=2&url=https://variety.com/2023/film/news/hollywood-stars-support-israel-palestine-conflict-1235749537/&title=Gal%20Gadot,%20Madonna,%20Natalie%20Portman,%20The%20Rock%20And%20More%20Hollywood%20Stars%20Support%20Israel%20Amid%20Deadly%20Hamas%20Attacks)
+    
+*   [](mailto:?subject=variety%20:%20Gal%20Gadot,%20Madonna,%20Natalie%20Portman,%20The%20Rock%20And%20More%20Hollywood%20Stars%20Support%20Israel%20Amid%20Deadly%20Hamas%20Attacks&body=https://variety.com/2023/film/news/hollywood-stars-support-israel-palestine-conflict-1235749537/%20-%20Gal%20Gadot,%20Madonna,%20Natalie%20Portman,%20The%20Rock%20And%20More%20Hollywood%20Stars%20Support%20Israel%20Amid%20Deadly%20Hamas%20Attacks)
+    
+*   [](#)
+    
+*   [](https://www.linkedin.com/shareArticle?mini=1&url=https://variety.com/2023/film/news/hollywood-stars-support-israel-palestine-conflict-1235749537/&title=Gal%20Gadot,%20Madonna,%20Natalie%20Portman,%20The%20Rock%20And%20More%20Hollywood%20Stars%20Support%20Israel%20Amid%20Deadly%20Hamas%20Attacks&summary&source=variety)
+    
+*   [](https://pinterest.com/pin/create/link/?url=https://variety.com/2023/film/news/hollywood-stars-support-israel-palestine-conflict-1235749537/&description=Gal%20Gadot,%20Madonna,%20Natalie%20Portman,%20The%20Rock%20And%20More%20Hollywood%20Stars%20Support%20Israel%20Amid%20Deadly%20Hamas%20Attacks)
+    
+*   [](https://www.reddit.com/submit?url=https://variety.com/2023/film/news/hollywood-stars-support-israel-palestine-conflict-1235749537/&title=Gal%20Gadot,%20Madonna,%20Natalie%20Portman,%20The%20Rock%20And%20More%20Hollywood%20Stars%20Support%20Israel%20Amid%20Deadly%20Hamas%20Attacks)
+    
+*   [](https://www.tumblr.com/widgets/share/tool/preview?shareSource=legacy&canonicalUrl&url=https://variety.com/2023/film/news/hollywood-stars-support-israel-palestine-conflict-1235749537/&posttype=link&title=Gal%20Gadot,%20Madonna,%20Natalie%20Portman,%20The%20Rock%20And%20More%20Hollywood%20Stars%20Support%20Israel%20Amid%20Deadly%20Hamas%20Attacks)
+    
+*   [](whatsapp://send?text=Gal%20Gadot,%20Madonna,%20Natalie%20Portman,%20The%20Rock%20And%20More%20Hollywood%20Stars%20Support%20Israel%20Amid%20Deadly%20Hamas%20Attacks%20-%20https://variety.com/2023/film/news/hollywood-stars-support-israel-palestine-conflict-1235749537/)
+    
+*   
+*   [](https://variety.com/2023/film/news/hollywood-stars-support-israel-palestine-conflict-1235749537/#comments)
+    
+
+!Gal Gadot, Dwayne Johnson, Natalie Portman <image:2700>
+
+Getty
+
+Hollywood stars are showing their support for Israel, after Hamas launched a surprise attack this past weekend, firing thousands of rockets from Gaza that have killed at least 900 people with more than 100 civilians kidnapped and held hostage.
+
+The attack, which occurred early Saturday morning on Shabbat and coincided with the Jewish high holiday of Simchat Torah, is being called “Israel’s 9/11” and is the deadliest day in Israel in 50 years. Gal Gadot, Madonna, Dwayne “The Rock” Johnson, Natalie Portman, Andy Cohen, Jamie Lee Curtis, Debra Messing, Amy Schumer, Sarah Silverman, Kris Jenner, Mindy Kaling and Meghan McCain are among the celebrities who have taken to social media to stand alongside Israel.
+
+Blake Lively and Ryan Reynolds have donated $1 million to help children in Israel and Gaza, sources tell _Variety_.
+
+“I stand with Israel you should too,” [Gadot posted](https://www.instagram.com/p/CyHF5n1t322/)
+. “The growing loss of innocent Israeli and Palestinian lives is heart wrenching as this war escalates to immense proportions.”
+
+> [View this post on Instagram](https://www.instagram.com/p/CyPX7z8L-Sz/?utm_source=ig_embed&utm_campaign=loading)
+> 
+> [A post shared by Dwayne Johnson (@therock)](https://www.instagram.com/p/CyPX7z8L-Sz/?utm_source=ig_embed&utm_campaign=loading)
+
+Madonna [posted a video](https://www.instagram.com/p/CyI29uYO0bh/?hl=en)
+ on her Instagram showing footage of rockets and slain bodies on the streets of Israel. Nine American citizens are among the climbing death toll.
+
+### Popular on Variety
+
+Over the weekend, President Joe Biden condemned the terrorist attack and supported Israel’s right to defend itself. “The United States unequivocally condemns this appalling assault against Israel by Hamas terrorists from Gaza, and I made clear to Prime Minister Netanyahu that we stand ready to offer all appropriate means of support to the Government and people of Israel. “My Administration’s support for Israel’s security is rock solid and unwavering.”
+
+Israel ordered a “complete siege” of Gaza on Monday, cutting off all electricity, food and water to the area. More than 500 Palestinians have been killed by Israel airstrikes, in response to the Hamas attack.
+
+Now, some of Hollywood’s biggest stars are speaking up to lend their support to Israel. What a horrific day.”
+
+Selma Blair, who is Jewish, commented on social media to offer her unwavering support to Israel and Jews around the world. I stand with Israel.”
+
+> [View this post on Instagram](https://www.instagram.com/p/CyLj3NoRpu4/?utm_source=ig_embed&utm_campaign=loading)
+> 
+> [A post shared by NFL (@nfl)](https://www.instagram.com/p/CyLj3NoRpu4/?utm_source=ig_embed&utm_campaign=loading)
+
+Both the [NBA](https://www.instagram.com/p/CyLj3NoRpu4/)
+ and [MLB](https://twitter.com/MLB/status/1711439508825157770?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Etweet)
+ have showed strong signs of support, posting statements from the leagues’ official accounts to condemn terrorism and mourn the loss of lives in Israel.
+
+Former New York Knicks star Amar’e Stoudemire — who converted to Judaism and is an Israeli-American citizen — [posted a video on Instagram](https://twitter.com/TheDunkCentral/status/1711152518045008120?ref_src=twsrc%5Etfw%7Ctwcamp%5Etweetembed%7Ctwterm%5E1711152518045008120%7Ctwgr%5E4c100637d6e5161037d549d6c23fa66d3555bc1b%7Ctwcon%5Es1_&ref_url=https%3A%2F%2Fnypost.com%2F2023%2F10%2F09%2Famare-stoudemire-rips-politicians-blm-over-israel-silence%2F)
+ to denounce those are staying silent amid Hamas’ attacks on Jews.
+
+“I woke up, man, this morning with some disturbing news out of Israel — that Hamas kidnapping children, putting them in cages, killing women, killing the elderly. I pray that all involved are able to find a resolution.”)
+
+> [View this post on Instagram](https://www.instagram.com/p/CyOZm4gpWRN/?utm_source=ig_embed&utm_campaign=loading)
+> 
+> [A post shared by UTA (@unitedtalent)](https://www.instagram.com/p/CyOZm4gpWRN/?utm_source=ig_embed&utm_campaign=loading)
+
+The major talent agencies in Hollywood — UTA, CAA and WME — have all taken public stances to stand with Israel and to support Jews.
+
+WME said it will [match employee donations](https://www.instagram.com/p/CyO3Tcqy1nm/?hl=en&img_index=1)
+ to organizations funding relief in Israel and Palestine.
+
+The Royals have also lent their support to Israel.
+
+Britain’s King Charles condemned the “barbaric acts of terrorism,” via a spokesperson from Buckingham Palace.
+
+A spokesperson for Prince William and Kate Middleton commented: “The Prince and Princess of Wales are profoundly distressed by the devastating events that have unfolded in the past days."
+
+# Your Summary
+
+
+
+===== > RESPONSE:  < =====
+The search result from Variety, published on October 9, 2023, reports that Dwayne "The Rock" Johnson is among the Hollywood stars who have shown support for Israel amid the deadly Hamas attacks. <image:2700> shows Dwayne Johnson. The article also mentions that Gal Gadot, Madonna, Natalie Portman, and others have taken to social media to stand alongside Israel.
+
+_________________________
+
+
+
+SummarizeSummariesPrompt - QUERY:
+
+# Instructions
+You just retrieved web sources, each one summarized under "Web Sources". **Your task right now is to summarize the web source summaries.**
+
+Always adhere to the following rules:
+* Write only one to two paragraphs.
+* Include all URLs from the listed sources. Format them as Markdown hyperlinks.
+* Do not add any additional information besides the information in the summaries.
+* Include references (<image:k>) to all relevant images.
+
+# Record
+## Claim
+Claim: "<image:64> This is an authentic image of Dwayne Johnson waring the Israeli flag in support of Israel."
+
+## Actions
+```
+reverse_search(<image:64>)
+web_search("Dwayne Johnson Israel support")
+```
+
+## Web Sources
+**Web Search Result**
+
+From [Source](https://www.marca.com/en/lifestyle/world-news/2023/10/11/6526c4cc22601d2d748b45da.html): 
+Content: The search result from Marca.com, published on October 11, 2023, discusses Dwayne "The Rock" Johnson's views on the Israel-Palestine war. <image:2699> The article mentions Johnson's Instagram post where he expressed his heartbreak and outrage at the events, condemning the actions of Hamas and the loss of innocent lives. The article does not show Johnson wearing the Israeli flag.
+
+
+From [Source](https://shopisrael.com/blogs/support/does-dwayne-johnson-support-israel?srsltid=AfmBOopy4n2f7lxTWWqdiE6_xSd1XeW0AbQOVlP76nNPJQ6KrktIHL3X): 
+Content: The article from Shop Israel states that Dwayne Johnson has not been noted for direct engagements with Israel, but has expressed his views on the Israel-Palestine conflict. He has made public statements condemning terrorism and expressing sympathy for innocent lives lost in the conflict. <image:64> is not mentioned.
+
+
+From [Source](https://variety.com/2023/film/news/hollywood-stars-support-israel-palestine-conflict-1235749537/): 
+Content: The search result from Variety, published on October 9, 2023, reports that Dwayne "The Rock" Johnson is among the Hollywood stars who have shown support for Israel amid the deadly Hamas attacks. <image:2700> shows Dwayne Johnson. The article also mentions that Gal Gadot, Madonna, Natalie Portman, and others have taken to social media to stand alongside Israel.
+
+
+## Your Summary
+
+
+
+===== > RESPONSE:  < =====
+Dwayne "The Rock" Johnson has expressed his views on the Israel-Palestine conflict, condemning terrorism and expressing sympathy for innocent lives lost in the conflict, as reported by [Shop Israel](https://shopisrael.com/blogs/support/does-dwayne-johnson-support-israel?srsltid=AfmBOopy4n2f7lxTWWqdiE6_xSd1XeW0AbQOVlP76nNPJQ6KrktIHL3X). He has also shown support for Israel amid the deadly Hamas attacks, according to [Variety](https://variety.com/2023/film/news/hollywood-stars-support-israel-palestine-conflict-1235749537/).
+
+Marca.com, in an article published on October 11, 2023, discusses Johnson's views on the Israel-Palestine war, mentioning his Instagram post where he expressed his heartbreak and outrage at the events, condemning the actions of Hamas and the loss of innocent lives. The image of Johnson wearing the Israeli flag (<image:64>) is not mentioned in the provided sources.
+
+_________________________
+
+
+
+DevelopPrompt - QUERY:
+
+# Instructions
+You just retrieved new Evidence. Now, **analyze the Claim's veracity using the evidence**. Always adhere to the following rules:
+* Focus on developing new insights. Do not repeat larger parts from the Record. Do not restate the Claim.
+* Write down your thoughts step-by-step. Whenever necessary, you may elaborate in more detail.
+* Depending on the topic's complexity, invest one to three paragraphs. The fewer, the better.
+* If you find that there is insufficient information to verify the Claim, explicitly state what information is missing.
+* If you cite web sources, always refer to them by including their URL as a Markdown hyperlink.
+* **Use information only from the recorded evidence**: Avoid inserting information that is not implied by the evidence. You may use commonsense knowledge, though.
+
+# Record
+## Claim
+Claim: "<image:64> This is an authentic image of Dwayne Johnson waring the Israeli flag in support of Israel."
+
+## Actions
+```
+reverse_search(<image:64>)
+web_search("Dwayne Johnson Israel support")
+```
+
+## Evidence
+### Evidence from `web_search`
+Dwayne "The Rock" Johnson has expressed his views on the Israel-Palestine conflict, condemning terrorism and expressing sympathy for innocent lives lost in the conflict, as reported by [Shop Israel](https://shopisrael.com/blogs/support/does-dwayne-johnson-support-israel?srsltid=AfmBOopy4n2f7lxTWWqdiE6_xSd1XeW0AbQOVlP76nNPJQ6KrktIHL3X). He has also shown support for Israel amid the deadly Hamas attacks, according to [Variety](https://variety.com/2023/film/news/hollywood-stars-support-israel-palestine-conflict-1235749537/).
+
+Marca.com, in an article published on October 11, 2023, discusses Johnson's views on the Israel-Palestine war, mentioning his Instagram post where he expressed his heartbreak and outrage at the events, condemning the actions of Hamas and the loss of innocent lives. The image of Johnson wearing the Israeli flag (<image:64>) is not mentioned in the provided sources.
+
+
+# Your Analysis
+
+
+
+===== > RESPONSE:  < =====
+The evidence confirms that Dwayne Johnson has expressed support for Israel. However, the provided sources do not mention the image of Dwayne Johnson wearing the Israeli flag. Therefore, the authenticity of the image cannot be verified based on the provided evidence.
+
+To verify the claim, additional information is needed to confirm whether the image is authentic. This could include a statement from Dwayne Johnson or a reliable source confirming the image's origin.
+
+_________________________
+
+
+
+JudgePrompt - QUERY:
+
+# Instructions
+**Determine the Claim's veracity** by following these steps:
+1. Briefly summarize the key insights from the fact-check (see Record) in at most one paragraph.
+2. Write one paragraph about which one of the Decision Options applies best. Include the most appropriate decision option at the end and enclose it in backticks like `this`.
+
+
+
+
+## Decision Options
+* `not enough information`: The fact-check does not contain sufficient information to come to an conclusion. For example,there is substantial lack of evidence or the evidence is inconclusive, conflicting or self-contradictory. In the case of a lack of evidence, state which information exactly is missing. In particular, if no RESULTS or sources are available, pick this decision.
+* `true`: The claim is factually accurate when it is confirmed by evidence from multiple and reliable sources.
+* `false`: The claim is not factually accurate. This is the case if one of the following three conditions is met:(1) The claim is demonstrably false when it is disproven by evidence from multiple and reliable sources,(2) The claim or image is taken out of context, i.e. the origin, content and/or meaning of a statement or an image is misrepresented. For example, an old claim or an old image is mispresented in a new context in a misleading way,(3) There is not enough evidence to verify the claim or the evidence is conflicting or self-contradictory.
+
+# Record
+## Claim
+Claim: "<image:64> This is an authentic image of Dwayne Johnson waring the Israeli flag in support of Israel."
+
+## Actions
+```
+reverse_search(<image:64>)
+web_search("Dwayne Johnson Israel support")
+```
+
+## Evidence
+### Evidence from `web_search`
+Dwayne "The Rock" Johnson has expressed his views on the Israel-Palestine conflict, condemning terrorism and expressing sympathy for innocent lives lost in the conflict, as reported by [Shop Israel](https://shopisrael.com/blogs/support/does-dwayne-johnson-support-israel?srsltid=AfmBOopy4n2f7lxTWWqdiE6_xSd1XeW0AbQOVlP76nNPJQ6KrktIHL3X). He has also shown support for Israel amid the deadly Hamas attacks, according to [Variety](https://variety.com/2023/film/news/hollywood-stars-support-israel-palestine-conflict-1235749537/).
+
+Marca.com, in an article published on October 11, 2023, discusses Johnson's views on the Israel-Palestine war, mentioning his Instagram post where he expressed his heartbreak and outrage at the events, condemning the actions of Hamas and the loss of innocent lives. The image of Johnson wearing the Israeli flag (<image:64>) is not mentioned in the provided sources.
+
+
+## Elaboration
+The evidence confirms that Dwayne Johnson has expressed support for Israel. However, the provided sources do not mention the image of Dwayne Johnson wearing the Israeli flag. Therefore, the authenticity of the image cannot be verified based on the provided evidence.
+
+To verify the claim, additional information is needed to confirm whether the image is authentic. This could include a statement from Dwayne Johnson or a reliable source confirming the image's origin.
+
+
+# Your Judgement
+
+
+
+===== > RESPONSE:  < =====
+The evidence confirms that Dwayne Johnson has expressed support for Israel, but the provided sources do not mention the image of Dwayne Johnson wearing the Israeli flag. Therefore, the authenticity of the image cannot be verified based on the provided evidence.
+
+`not enough information`
+_________________________
+
+
+
+PlanPrompt - QUERY:
+
+# Instructions
+The available knowledge is insufficient to assess the Claim. Therefore, **propose a set of actions** to retrieve new and helpful evidence. Adhere to the following rules:
+* The actions available are listed under Valid Actions, including a short description for each action. No other actions are possible at this moment. 
+* For each action, use the formatting as specified in Valid Actions.
+* Include all actions in a single Markdown code block at the end of your answer.
+* Propose as few actions as possible, but as much as needed. Do not propose similar or previously used actions.
+
+
+
+## Valid Actions
+* `geolocate`
+   * Description: Performs geolocation to determine the country where an image was taken.
+   * How to use: Provide an image and the model will determine the most likely countries where it was taken.
+   * Format: geolocate(<image:k>), where `k` is the image's ID
+
+* `web_search`
+   * Description: Run an open web search on Google or DuckDuckGO to retrieve any related webpage.
+   * How to use: Do not use this with a previously used or similar query from previous web searches. If a previous web search did not yield any results, use a very different query.
+   * Format: web_search("your web search query goes here")
+
+# Example: geolocate()
+
+## Claim
+Text: "<image:k> shows a nuclear weapons facility in Usbekistan."
+
+...
+
+## Actions
+```
+geolocate(<image:k>)
+```
+
+# Example: web_search()
+
+## Claim
+Text: "New Zealand’s new Food Bill bans gardening"
+Claim date: October 29, 2020
+
+...
+
+## Actions
+```
+web_search("New Zealand Food Bill 2020")
+web_search("New Zealand Food Bill gardening ban")
+```
+
+# Record
+## Claim
+Claim: "<image:64> This is an authentic image of Dwayne Johnson waring the Israeli flag in support of Israel."
+
+## Actions
+```
+reverse_search(<image:64>)
+web_search("Dwayne Johnson Israel support")
+```
+
+## Evidence
+### Evidence from `web_search`
+Dwayne "The Rock" Johnson has expressed his views on the Israel-Palestine conflict, condemning terrorism and expressing sympathy for innocent lives lost in the conflict, as reported by [Shop Israel](https://shopisrael.com/blogs/support/does-dwayne-johnson-support-israel?srsltid=AfmBOopy4n2f7lxTWWqdiE6_xSd1XeW0AbQOVlP76nNPJQ6KrktIHL3X). He has also shown support for Israel amid the deadly Hamas attacks, according to [Variety](https://variety.com/2023/film/news/hollywood-stars-support-israel-palestine-conflict-1235749537/).
+
+Marca.com, in an article published on October 11, 2023, discusses Johnson's views on the Israel-Palestine war, mentioning his Instagram post where he expressed his heartbreak and outrage at the events, condemning the actions of Hamas and the loss of innocent lives. The image of Johnson wearing the Israeli flag (<image:64>) is not mentioned in the provided sources.
+
+
+## Elaboration
+The evidence confirms that Dwayne Johnson has expressed support for Israel. However, the provided sources do not mention the image of Dwayne Johnson wearing the Israeli flag. Therefore, the authenticity of the image cannot be verified based on the provided evidence.
+
+To verify the claim, additional information is needed to confirm whether the image is authentic. This could include a statement from Dwayne Johnson or a reliable source confirming the image's origin.
+
+
+# Your Actions
+
+
+
+===== > RESPONSE:  < =====
+```
+web_search("Dwayne Johnson Israeli flag image authenticity")
+```
+_________________________
+
+
+
+SummarizeResultPrompt - QUERY:
+
+# Instructions
+In order to find evidence that helps your fact-check, you just ran a web search which yielded a Search Result. **Your task right now is to summarize the Search Result.** What to include:
+* information that might be useful for the fact-check (see Record)
+* relevant images (refer to images by inserting their reference <image:k>)
+* if available: the release date as well as the author or the publisher (e.g. the media company) of the search result.
+
+Do NOT include:
+* advertisements
+* any other information not related to the Record or the Claim
+
+Additional rules:
+* Do not add any additional information besides the information in the Search Result.
+* If the Search Result doesn't contain any relevant information for the fact-checking work, simply print one word in capital letters: "NONE".
+* Keep your writing style like in the Examples 1, 2 and 3 provided to you.
+* Try to filter out relevant information even if the search result is in a different language.
+
+# Example 1
+The search result from America Today provides several photographs of the Notre-Dame Cathedral fire on April 15, 2019. <image:i>, <image:j>, <image:k>. None of the images show the Eiffel Tower in the background. 
+
+# Example 2
+NONE
+
+# Example 3
+The Guardian discusses a report blaming the Syrian government for a toxic gas attack and condemning their use of chemical weapons. The Guardian mentions the Chemical Weapons Convention and the responsibilities of Syria under the convention. According to The Guardian, The White House condemned the Assad regime for defying the norm against chemical weapons use.
+
+# Record
+## Claim
+Claim: "<image:64> This is an authentic image of Dwayne Johnson waring the Israeli flag in support of Israel."
+
+## Actions
+```
+reverse_search(<image:64>)
+web_search("Dwayne Johnson Israel support")
+```
+
+## Evidence
+### Evidence from `web_search`
+Dwayne "The Rock" Johnson has expressed his views on the Israel-Palestine conflict, condemning terrorism and expressing sympathy for innocent lives lost in the conflict, as reported by [Shop Israel](https://shopisrael.com/blogs/support/does-dwayne-johnson-support-israel?srsltid=AfmBOopy4n2f7lxTWWqdiE6_xSd1XeW0AbQOVlP76nNPJQ6KrktIHL3X). He has also shown support for Israel amid the deadly Hamas attacks, according to [Variety](https://variety.com/2023/film/news/hollywood-stars-support-israel-palestine-conflict-1235749537/).
+
+Marca.com, in an article published on October 11, 2023, discusses Johnson's views on the Israel-Palestine war, mentioning his Instagram post where he expressed his heartbreak and outrage at the events, condemning the actions of Hamas and the loss of innocent lives. The image of Johnson wearing the Israeli flag (<image:64>) is not mentioned in the provided sources.
+
+
+## Elaboration
+The evidence confirms that Dwayne Johnson has expressed support for Israel. However, the provided sources do not mention the image of Dwayne Johnson wearing the Israeli flag. Therefore, the authenticity of the image cannot be verified based on the provided evidence.
+
+To verify the claim, additional information is needed to confirm whether the image is authentic. This could include a statement from Dwayne Johnson or a reliable source confirming the image's origin.
+
+
+## Actions
+```
+web_search("Dwayne Johnson Israeli flag image authenticity")
+```
+
+# Search Result
+From [Source](https://www.yahoo.com/news/articles/fact-check-fake-dwayne-johnson-234700368.html): 
+Content: "The Israeli government and its Prime Minister Netanyahu are heartless criminals with no shred of humanity."
+
+Advertisement
+
+Advertisement
+
+Advertisement
+
+Advertisement
+
+For example, on July 26, an X user [posted](https://x.com/Middle_Eastern0/status/1949132260671729963)
+ ([archived](https://archive.is/qd7V9)
+) the quote along with an image of the Israeli flag and a photo of Johnson. Lisa Cook](https://finance.yahoo.com/news/judge-delays-decision-on-trumps-move-to-fire-fed-governor-lisa-cook-heres-whats-next-194532044.html)
+    
+
+!Getty Images <image:12380>
+
+Getty Images
+
+**Claim:**
+
+Actor Dwayne "The Rock" Johnson said, "I've seen a lot of evil in Hollywood scripts — but nothing compares to what Israel is doing in Gaza. The Israeli government and its Prime Minister Netanyahu are heartless criminals with no shred of humanity."
+
+**Rating:**
+
+[![Rating: Incorrect Attribution](https://s.yimg.com/ny/api/res/1.2/869b6qpQh_Iok4.27dFdQA--/YXBwaWQ9aGlnaGxhbmRlcjt3PTk2MDtoPTgxO2NmPXdlYnA-/https://media.snopes.com/ratings_with_text/incorrect_attribution.png)](https://www.snopes.com/fact-check/rating/incorrect_attribution/)
+
+Rating: Incorrect Attribution
+
+A rumor that circulated online in July 2025 claimed actor Dwayne "The Rock" Johnson said, "I've seen a lot of evil in Hollywood scripts — but nothing compares to what Israel is doing in Gaza. <image:12381>
+
+**(@Middle\_Eastern0/X)**
+
+[Users](https://x.com/aldamu_jo/status/1949323330474913815)
+ also [shared](https://www.instagram.com/chicago_first/p/DMo8Bdcs45k/dwayne-johnson-ive-seen-a-lot-of-evil-in-hollywood-scenarios-but-nothing-compare/)
+ the same quote with Johnson's name, either as text or in memes, on [Bluesky](https://bsky.app/profile/manniequinn.bsky.social/post/3luwh5v4vzk26)
+ ([archived](https://archive.is/0x4DB)
+), [Facebook](https://www.facebook.com/permalink.php?story_fbid=pfbid02napKezfMaczP7SapyBmFuPNMQZKUjnymPJ1jNSPvFEqKxaZNRBNwQiESrxqGjgR5l&id=61578021665558)
+ ([archived](https://archive.is/HUEeK)
+), [Instagram](https://www.instagram.com/reel/DMnVc00Kwl5/)
+ ([archived](https://archive.is/x7fJC)
+), [Threads](https://www.threads.com/@khaled.abd.alrahman/post/DMpwfCnoS_d)
+, [TikTok](https://www.tiktok.com/@tayotimo/video/7530960717034409222)
+, [Tumblr](https://www.tumblr.com/frickyoumarrieofficial/790255087685713920/corvid-supremacy?source=detectivejohnkimble)
+ ([archived](https://archive.is/SvvCp)
+) [and X](https://x.com/DailyIranNews/status/1949421970186977380)
+ ([archived](https://archive.is/Fqemk)
+).
+
+However, searches of [Bing](https://archive.is/eH7Vk)
+, [DuckDuckGo](https://archive.is/CmQDP)
+, [Google](https://www.google.com/search?q=%22seen+a+lot+of+evil+in+Hollywood+scripts%22&newwindow=1&sca_esv=c48dc88e8766c10f&sxsrf=AE3TifMJang1vWXWUmpDm6wrCiN2e3tJwQ%3A1753911378374&source=lnt&tbs=cdr%3A1%2Ccd_min%3A1%2F1%2F2000%2Ccd_max%3A7%2F29%2F2025&tbm=)
+ and [Yahoo](https://archive.is/ocNl6)
+ found no credible record of Johnson ever making such a statement. Had Johnson publicly spoken out against Israel and Israeli Prime Minister Benjamin Netanyahu, news media outlets worldwide would have covered the matter.
+
+Advertisement
+
+Advertisement
+
+Advertisement
+
+Advertisement
+
+Snopes contacted by email several of Johnson's representatives to ask if they could speak on the fabricated quote, and will update this story if we receive further information.
+
+Tracking down the original post
+-------------------------------
+
+According to the aforementioned searches of search-engine websites, as well as social media platforms, an X account named Global Lens News (@Global\_Lens\_New) hosted the [oldest instance](https://x.com/Global_Lens_New/status/1948547511427211477)
+ ([archived](https://archive.is/30TKZ)
+) of the purported quote. In that user's July 24 post, the quote had a different ending, reading, "The Israeli government and its Prime Minister Netanyahu are sons of a b\*\*\*\*."
+
+! <image:12382>
+
+**(@Global\_Lens\_New/X)**
+
+The Global Lens News account [displayed](https://x.com/Global_Lens_New)
+ only 13 total posts, including other inauthentic quotes, and a creation month of July 2024. Raise your voice!" Searches of [Bing](https://archive.is/1fTyZ)
+, [DuckDuckGo](https://archive.is/QwynH)
+, [Google](https://www.google.com/search?q=oprah+%22Humanity+bleeds+in+Palestine%22&newwindow=1&sca_esv=d0444d30016ff5d8&sxsrf=AE3TifNtcp57gtDmW_hH5mAN3Vej25d2Nw%3A1753914992982&source=lnt&tbs=cdr%3A1%2Ccd_min%3A1%2F1%2F2000%2Ccd_max%3A7%2F29%2F2025&tbm=)
+ and [Yahoo](https://archive.is/WMwrR)
+ found no record of Winfrey posting or saying any such remark.
+
+'Worst-case scenario' famine crisis in Gaza
+-------------------------------------------
+
+The quote attributed to Johnson began circulating online in late July, at around the same time the Integrated Food Security Phase Classification [said](https://www.ipcinfo.org/ipcinfo-website/countries-in-focus-archive/issue-133/en/)
+ on July 29 that, due to Israel's ongoing military offensive and [blockade](https://apnews.com/article/israel-palestinians-hamas-gaza-war-news-07-30-2025-9b9b516f22e61bd1dde879733fdd97aa)
+, about 2 million Palestinians in Gaza were living in the "worst-case scenario of famine."
+
+More in World
+-------------
+
+! <image:12383>
+
+### [Finland is on the verge of an incredible human-made alteration deep beneath the Earth: 'They'll hold a total of 5,500 tonnes of waste'](https://www.yahoo.com/news/articles/finland-verge-incredible-human-made-101000490.html)
+
+! <image:12384>The Cool Down
+
+226
+
+!"
+
+# Your Summary
+
+
+
+===== > RESPONSE:  < =====
+The Yahoo News article, published on July 29, 2025, fact-checks a fabricated quote attributed to Dwayne "The Rock" Johnson. The quote, which claims Johnson said, "I've seen a lot of evil in Hollywood scripts — but nothing compares to what Israel is doing in Gaza. The Israeli government and its Prime Minister Netanyahu are heartless criminals with no shred of humanity," is rated as "Incorrect Attribution" by Snopes. The article states that there is no credible record of Johnson making such a statement. The original post of the quote was found on an X account named Global Lens News (@Global_Lens_New). <image:12380>, <image:12381>, <image:12382>.
+
+_________________________
+
+
+
+SummarizeResultPrompt - QUERY:
+
+# Instructions
+In order to find evidence that helps your fact-check, you just ran a web search which yielded a Search Result. **Your task right now is to summarize the Search Result.** What to include:
+* information that might be useful for the fact-check (see Record)
+* relevant images (refer to images by inserting their reference <image:k>)
+* if available: the release date as well as the author or the publisher (e.g. the media company) of the search result.
+
+Do NOT include:
+* advertisements
+* any other information not related to the Record or the Claim
+
+Additional rules:
+* Do not add any additional information besides the information in the Search Result.
+* If the Search Result doesn't contain any relevant information for the fact-checking work, simply print one word in capital letters: "NONE".
+* Keep your writing style like in the Examples 1, 2 and 3 provided to you.
+* Try to filter out relevant information even if the search result is in a different language.
+
+# Example 1
+The search result from America Today provides several photographs of the Notre-Dame Cathedral fire on April 15, 2019. <image:i>, <image:j>, <image:k>. None of the images show the Eiffel Tower in the background. 
+
+# Example 2
+NONE
+
+# Example 3
+The Guardian discusses a report blaming the Syrian government for a toxic gas attack and condemning their use of chemical weapons. The Guardian mentions the Chemical Weapons Convention and the responsibilities of Syria under the convention. According to The Guardian, The White House condemned the Assad regime for defying the norm against chemical weapons use.
+
+# Record
+## Claim
+Claim: "<image:64> This is an authentic image of Dwayne Johnson waring the Israeli flag in support of Israel."
+
+## Actions
+```
+reverse_search(<image:64>)
+web_search("Dwayne Johnson Israel support")
+```
+
+## Evidence
+### Evidence from `web_search`
+Dwayne "The Rock" Johnson has expressed his views on the Israel-Palestine conflict, condemning terrorism and expressing sympathy for innocent lives lost in the conflict, as reported by [Shop Israel](https://shopisrael.com/blogs/support/does-dwayne-johnson-support-israel?srsltid=AfmBOopy4n2f7lxTWWqdiE6_xSd1XeW0AbQOVlP76nNPJQ6KrktIHL3X). He has also shown support for Israel amid the deadly Hamas attacks, according to [Variety](https://variety.com/2023/film/news/hollywood-stars-support-israel-palestine-conflict-1235749537/).
+
+Marca.com, in an article published on October 11, 2023, discusses Johnson's views on the Israel-Palestine war, mentioning his Instagram post where he expressed his heartbreak and outrage at the events, condemning the actions of Hamas and the loss of innocent lives. The image of Johnson wearing the Israeli flag (<image:64>) is not mentioned in the provided sources.
+
+
+## Elaboration
+The evidence confirms that Dwayne Johnson has expressed support for Israel. However, the provided sources do not mention the image of Dwayne Johnson wearing the Israeli flag. Therefore, the authenticity of the image cannot be verified based on the provided evidence.
+
+To verify the claim, additional information is needed to confirm whether the image is authentic. This could include a statement from Dwayne Johnson or a reliable source confirming the image's origin.
+
+
+## Actions
+```
+web_search("Dwayne Johnson Israeli flag image authenticity")
+```
+
+# Search Result
+From [Source](https://mythdetector.com/en/dwayne-johnson-about-israel/): 
+Content: "*   [About Us](https://mythdetector.com/en/about-us/)
+    *   [About Myth Detector](https://mythdetector.com/en/about-us/)
+        
+    *   [Our Team](https://mythdetector.com/en/our-team/)
+        
+    *   [Methodology](https://mythdetector.com/en/methodology/)
+        
+    *   [Privacy Policy](https://mythdetector.com/en/privacy-policy/)
+        
+    *   [Projects](https://mythdetector.com/en/project/)
+        
+    *   [Financial reports](https://mythdetector.com/en/financial-reports/)
+        
+*   [Code of Conduct](https://mythdetector.com/en/myth-detector-code-of-conduct/)
+    
+*   [Correction / Complaints](https://mythdetector.com/en/complaints/)
+    
+*   [Contact](https://mythdetector.com/en/contact-information/)
+    
+*   [![](<Base64-Image-Removed>)English](/#pll_switcher/)
+    *   [![](<Base64-Image-Removed>)ქართული](https://mythdetector.com/ka/duein-jonsonis-gaqhalbebuli-tsitata/)
+        
+    *   [![](<Base64-Image-Removed>)English](https://mythdetector.com/en/dwayne-johnson-about-israel/)
+        
+    *   [![](<Base64-Image-Removed>)Русский](https://mythdetector.com/ru/dueina-dzhonsona-ob-izraile/)
+        
+    *   [![](<Base64-Image-Removed>)Deutsch](https://mythdetector.com/de/)
+        
+    *   [![](<Base64-Image-Removed>)Eesti](https://mythdetector.com/et/)
+        
+    *   [![](<Base64-Image-Removed>)Հայերեն](https://mythdetector.com/hy/)
+        
+    *   [![](<Base64-Image-Removed>)Azerbaijani](https://mythdetector.com/az/)
+        
+
+[![IFCN Signatory Badge](https://cdn.ifcncodeofprinciples.poynter.org/storage/badges/86DE5673-1881-C562-233A-E4076B817186.png)](https://ifcncodeofprinciples.poynter.org/profile/myth-detector "IFCN signatory")
+ [! <image:12396>](#)
+
+*   [Home](https://mythdetector.com/en/)
+    
+*   [Updates](https://mythdetector.com/en/category/update/)
+    
+*   [FACT-CHECKING](https://mythdetector.com/en/factchecker-db/)
+    
+*   [Infodemic](https://mythdetector.com/en/category/infodemic/)
+    
+*   [Un-troll](https://mythdetector.com/en/category/un-troll/)
+    
+    [![fact Checker, დეზინფორმაცია, ფაქტჩეკერი, მითების დეტექტორი](https://mythdetector.com/wp-content/uploads/2025/06/Untitled-1l-360x180.jpg "Untitled 1l | mythdetector.com")](https://mythdetector.com/en/discreditation-of-mate-devidze/)
+    
+    ### [13 Trolls Involved in the Discreditation of Mate Devidze](https://mythdetector.com/en/discreditation-of-mate-devidze/)
+    
+    [![Mzia](https://mythdetector.com/wp-content/uploads/2025/02/Untitled-1-2-360x180.png "Untitled 1 2 | mythdetector.com")](https://mythdetector.com/en/mzia-amaghlobeli-target-of-georgian-dream-pro-government-media-and-other-anti-western-actors/)
+    
+    ### [Mzia Amaghlobeli – Target of Georgian Dream, Pro-Government Media, and Other Anti-Western Actors](https://mythdetector.com/en/mzia-amaghlobeli-target-of-georgian-dream-pro-government-media-and-other-anti-western-actors/)
+    
+    [![Khareba](https://mythdetector.com/wp-content/uploads/2024/12/Gvantsa-from-New-York-Nana-from-Arizona-and-other-trolls-in-support-of-Khareba-360x180.jpg "Gvantsa from New York Nana from Arizona and other trolls in support of Khareba | mythdetector.com")](https://mythdetector.com/en/in-support-of-khareba/)
+    
+    ### [Gvantsa from New York, Nana from Arizona, and other trolls “in support” of Khareba](https://mythdetector.com/en/in-support-of-khareba/)
+    
+*   [Opinion](https://mythdetector.com/en/category/opinion-en/ "#")
+    
+    *   [All](https://mythdetector.com/en/category/opinion-en1/)
+        
+    *   [Analysis](https://mythdetector.com/en/category/opinion-en1/analysis/)
+        
+    *   [Blog](https://mythdetector.com/en/category/opinion-en1/blog/)
+        
+    *   [Guide](https://mythdetector.com/en/category/opinion-en1/guide/)
+        
+    *   [Investigation](https://mythdetector.com/en/category/opinion-en1/investigation/)
+        
+    *   [overview](https://mythdetector.com/en/category/opinion-en1/overview/)
+        
+    
+    [![Zelenskyy-of-corruption](https://mythdetector.com/wp-content/uploads/2025/08/What-does-the-Georgian-pro-government-and-Kremlin-aligned-media-rely-on-when-accusing-Zelenskyy-of-corruption-360x180.jpg "What does the Georgian pro government and Kremlin aligned media rely on when accusing Zelenskyy of corruption | mythdetector.com")](https://mythdetector.com/en/when-accusing-zelenskyy-of-corruption/)
+    
+    ### [What does the Georgian pro-government and Kremlin-aligned media rely on when accusing Zelenskyy of corruption?](https://mythdetector.com/en/when-accusing-zelenskyy-of-corruption/)
+    
+    [![fact Checker, დეზინფორმაცია, ფაქტჩეკერი, მითების დეტექტორი](https://mythdetector.com/wp-content/uploads/2025/07/Insults-on-Social-Media-A-Comparison-of-Legislation-in-Georgia-and-the-European-Union-360x180.jpg "Insults on Social Media A Comparison of Legislation in Georgia and the European Union | mythdetector.com")](https://mythdetector.com/en/a-comparison-of-legislation-in-georgia/)
+    
+    ### [Insults on Social Media – A Comparison of Legislation in Georgia and the European Union](https://mythdetector.com/en/a-comparison-of-legislation-in-georgia/)
+    
+    [![Black Sea trategy](https://mythdetector.com/wp-content/uploads/2025/07/Does-Armenia-Need-Access-to-the-Sea-to-Participate-in-the-Black-Sea-Strategy-360x180.jpg "Does Armenia Need Access to the Sea to Participate in the Black Sea Strategy | mythdetector.com")](https://mythdetector.com/en/black-sea-strategy/)
+    
+    ### [Does Armenia Need Access to the Sea to Participate in the “Black Sea Strategy”?](https://mythdetector.com/en/black-sea-strategy/)
+    
+    *   [Analysis](https://mythdetector.com/en/category/opinion-en1/analysis/)
+        
+    *   [Blog](https://mythdetector.com/en/category/opinion-en1/blog/)
+        
+    *   [Investigation](https://mythdetector.com/en/category/opinion-en1/investigation/)
+        
+    *   [overview](https://mythdetector.com/en/category/opinion-en1/overview/)
+        
+    *   [Guide](https://mythdetector.com/en/category/opinion-en1/guide/)
+        
+*   [Multimedia](https://mythdetector.com/en/category/multimedia-en/)
+    
+    *   [All](https://mythdetector.com/en/category/multimedia-en/)
+        
+    *   [Caricature](https://mythdetector.com/en/category/multimedia-en/caricature/)
+        
+    *   [Infographics](https://mythdetector.com/en/category/multimedia-en/infographics/)
+        
+    *   [Video](https://mythdetector.com/en/category/multimedia-en/video-en/)
+        
+    
+    [![ფოტომანიპულცია](https://mythdetector.com/wp-content/uploads/2024/09/461282853_827302276281610_6885978139467139525_n-360x180.jpg "461282853 827302276281610 6885978139467139525 n | mythdetector.com")](https://mythdetector.com/en/pre-electoral-disinformation-1-17-september-2024/)
+    
+    ### [Pre-Electoral Disinformation – 1-17 September, 2024](https://mythdetector.com/en/pre-electoral-disinformation-1-17-september-2024/)
+    
+    [![ფაქტების გადამოწმება, ფაქტჩექი, კოორდინირებული არაავთენტური ქცევა](https://mythdetector.com/wp-content/uploads/2023/02/ukrainian-women-8211-targets-of-russian-information-warfare1.webp "ukrainian women 8211 targets of russian information warfare1 | mythdetector.com")](https://mythdetector.com/en/ukrainian-women-targets-of-russian-information-warfare/)
+    
+    ### [Ukrainian Women – Targets of Russian Information Warfare!](https://mythdetector.com/en/ukrainian-women-targets-of-russian-information-warfare/)
+    
+    [![დეზინფორმაციის იდენტიფიცირება; მედიაწიგნიერება; ფაქტების გადამოწმება](https://mythdetector.com/wp-content/uploads/2022/09/ukrainis-tsinaaghmdeg-23-30-Augustl-360x180.png "ukrainis tsinaaghmdeg 23 30 Augustl | mythdetector.com")](https://mythdetector.com/en/russian-information-warfare-against-ukraine-disinformation-digest-23-30-august/)
+    
+    ### [RUSSIAN INFORMATION WARFARE AGAINST UKRAINE – DISINFORMATION DIGEST 23-30 AUGUST](https://mythdetector.com/en/russian-information-warfare-against-ukraine-disinformation-digest-23-30-august/)
+    
+
+[](#)
+
+No Result
+
+View All Result
+
+*   [Home](https://mythdetector.com/en/)
+    
+*   [Updates](https://mythdetector.com/en/category/update/)
+    
+*   [FACT-CHECKING](https://mythdetector.com/en/factchecker-db/)
+    
+*   [Infodemic](https://mythdetector.com/en/category/infodemic/)
+    
+*   [Un-troll](https://mythdetector.com/en/category/un-troll/)
+    
+    [![fact Checker, დეზინფორმაცია, ფაქტჩეკერი, მითების დეტექტორი](https://mythdetector.com/wp-content/uploads/2025/06/Untitled-1l-360x180.jpg "Untitled 1l | mythdetector.com")](https://mythdetector.com/en/discreditation-of-mate-devidze/)
+    
+    ### [13 Trolls Involved in the Discreditation of Mate Devidze](https://mythdetector.com/en/discreditation-of-mate-devidze/)
+    
+    [![Mzia](https://mythdetector.com/wp-content/uploads/2025/02/Untitled-1-2-360x180.png "Untitled 1 2 | mythdetector.com")](https://mythdetector.com/en/mzia-amaghlobeli-target-of-georgian-dream-pro-government-media-and-other-anti-western-actors/)
+    
+    ### [Mzia Amaghlobeli – Target of Georgian Dream, Pro-Government Media, and Other Anti-Western Actors](https://mythdetector.com/en/mzia-amaghlobeli-target-of-georgian-dream-pro-government-media-and-other-anti-western-actors/)
+    
+    [![Khareba](https://mythdetector.com/wp-content/uploads/2024/12/Gvantsa-from-New-York-Nana-from-Arizona-and-other-trolls-in-support-of-Khareba-360x180.jpg "Gvantsa from New York Nana from Arizona and other trolls in support of Khareba | mythdetector.com")](https://mythdetector.com/en/in-support-of-khareba/)
+    
+    ### [Gvantsa from New York, Nana from Arizona, and other trolls “in support” of Khareba](https://mythdetector.com/en/in-support-of-khareba/)
+    
+*   [Opinion](https://mythdetector.com/en/category/opinion-en/ "#")
+    
+    *   [All](https://mythdetector.com/en/category/opinion-en1/)
+        
+    *   [Analysis](https://mythdetector.com/en/category/opinion-en1/analysis/)
+        
+    *   [Blog](https://mythdetector.com/en/category/opinion-en1/blog/)
+        
+    *   [Guide](https://mythdetector.com/en/category/opinion-en1/guide/)
+        
+    *   [Investigation](https://mythdetector.com/en/category/opinion-en1/investigation/)
+        
+    *   [overview](https://mythdetector.com/en/category/opinion-en1/overview/)
+        
+    
+    [![Zelenskyy-of-corruption](https://mythdetector.com/wp-content/uploads/2025/08/What-does-the-Georgian-pro-government-and-Kremlin-aligned-media-rely-on-when-accusing-Zelenskyy-of-corruption-360x180.jpg "What does the Georgian pro government and Kremlin aligned media rely on when accusing Zelenskyy of corruption | mythdetector.com")](https://mythdetector.com/en/when-accusing-zelenskyy-of-corruption/)
+    
+    ### [What does the Georgian pro-government and Kremlin-aligned media rely on when accusing Zelenskyy of corruption?](https://mythdetector.com/en/when-accusing-zelenskyy-of-corruption/)
+    
+    [![fact Checker, დეზინფორმაცია, ფაქტჩეკერი, მითების დეტექტორი](https://mythdetector.com/wp-content/uploads/2025/07/Insults-on-Social-Media-A-Comparison-of-Legislation-in-Georgia-and-the-European-Union-360x180.jpg "Insults on Social Media A Comparison of Legislation in Georgia and the European Union | mythdetector.com")](https://mythdetector.com/en/a-comparison-of-legislation-in-georgia/)
+    
+    ### [Insults on Social Media – A Comparison of Legislation in Georgia and the European Union](https://mythdetector.com/en/a-comparison-of-legislation-in-georgia/)
+    
+    [![Black Sea trategy](https://mythdetector.com/wp-content/uploads/2025/07/Does-Armenia-Need-Access-to-the-Sea-to-Participate-in-the-Black-Sea-Strategy-360x180.jpg "Does Armenia Need Access to the Sea to Participate in the Black Sea Strategy | mythdetector.com")](https://mythdetector.com/en/black-sea-strategy/)
+    
+    ### [Does Armenia Need Access to the Sea to Participate in the “Black Sea Strategy”?](https://mythdetector.com/en/black-sea-strategy/)
+    
+    *   [Analysis](https://mythdetector.com/en/category/opinion-en1/analysis/)
+        
+    *   [Blog](https://mythdetector.com/en/category/opinion-en1/blog/)
+        
+    *   [Investigation](https://mythdetector.com/en/category/opinion-en1/investigation/)
+        
+    *   [overview](https://mythdetector.com/en/category/opinion-en1/overview/)
+        
+    *   [Guide](https://mythdetector.com/en/category/opinion-en1/guide/)
+        
+*   [Multimedia](https://mythdetector.com/en/category/multimedia-en/)
+    
+    *   [All](https://mythdetector.com/en/category/multimedia-en/)
+        
+    *   [Caricature](https://mythdetector.com/en/category/multimedia-en/caricature/)
+        
+    *   [Infographics](https://mythdetector.com/en/category/multimedia-en/infographics/)
+        
+    *   [Video](https://mythdetector.com/en/category/multimedia-en/video-en/)
+        
+    
+    [![ფოტომანიპულცია](https://mythdetector.com/wp-content/uploads/2024/09/461282853_827302276281610_6885978139467139525_n-360x180.jpg "461282853 827302276281610 6885978139467139525 n | mythdetector.com")](https://mythdetector.com/en/pre-electoral-disinformation-1-17-september-2024/)
+    
+    ### [Pre-Electoral Disinformation – 1-17 September, 2024](https://mythdetector.com/en/pre-electoral-disinformation-1-17-september-2024/)
+    
+    [![ფაქტების გადამოწმება, ფაქტჩექი, კოორდინირებული არაავთენტური ქცევა](https://mythdetector.com/wp-content/uploads/2023/02/ukrainian-women-8211-targets-of-russian-information-warfare1.webp "ukrainian women 8211 targets of russian information warfare1 | mythdetector.com")](https://mythdetector.com/en/ukrainian-women-targets-of-russian-information-warfare/)
+    
+    ### [Ukrainian Women – Targets of Russian Information Warfare!](https://mythdetector.com/en/ukrainian-women-targets-of-russian-information-warfare/)
+    
+    [![დეზინფორმაციის იდენტიფიცირება; მედიაწიგნიერება; ფაქტების გადამოწმება](https://mythdetector.com/wp-content/uploads/2022/09/ukrainis-tsinaaghmdeg-23-30-Augustl-360x180.png "ukrainis tsinaaghmdeg 23 30 Augustl | mythdetector.com")](https://mythdetector.com/en/russian-information-warfare-against-ukraine-disinformation-digest-23-30-august/)
+    
+    ### [RUSSIAN INFORMATION WARFARE AGAINST UKRAINE – DISINFORMATION DIGEST 23-30 AUGUST](https://mythdetector.com/en/russian-information-warfare-against-ukraine-disinformation-digest-23-30-august/)
+    
+
+[](#)
+
+No Result
+
+View All Result
+
+[](#)
+
+[![mythdetector.com](/wp-content/uploads/2022/04/Logo_Eng-w.png)](https://mythdetector.com/en/)
+
+[](#)
+
+No Result
+
+View All Result
+
+A Fake Quote Attributed to Dwayne Johnson About Israel is Spreading on Social Media
+===================================================================================
+
+[Myth Detector](https://mythdetector.com/en/author/myth-detector/)
+
+[August 5, 2025 16:12](https://mythdetector.com/en/2025/08/)
+
+Reading Time: 3 minutes
+
+**Reading Time: 3 minutes**
+
+!Dwayne Johnson <image:12397>
+
+422
+
+VIEWS
+
+Between July 27 and August 3, [Georgian](https://www.facebook.com/zaal.mamatsashvili/posts/pfbid02ZV5icDdtmZzamBaPfkzkBa1LbrBuTVdevkkWGkfsuRSLoZVoFnzTAvrBqKq47j7l)
+– and Russian-language ([1](https://www.facebook.com/photo.php?fbid=1316556280016990&set=a.11153035)
+,[2](https://www.facebook.com/osama.jadallah.184056/posts/pfbid02wfRifniQVvvaEmuEiBQJyVCJE3fH15655LARTUwPFo7ZqHZ14WibH1yQibJKgySwl)
+,[3](https://www.facebook.com/uakhit.elmar/posts/pfbid0MXLeWSWofLqNzbs3BWwYsZRGyi3YjMSj3rAnEHHXmNt864otBm3bcWkoFUZhpJGbl)
+,[4](https://www.facebook.com/mahmoudshanaa/posts/pfbid0KsnUuTX1jdD6K2EUeMxy2SMtYgxg8MoGjDwS9M35ZXTbVtkDbgZyP8mdHx6jzT4Ll)
+,[5](https://www.facebook.com/murat.sutaly/posts/pfbid0RQKJ142SfL57y26domb6q8wroQ4K3qhCzfecs42gUwpEENMVRxwnfyoM915791Dhl)
+) Facebook accounts shared a quote attributed to actor Dwayne Johnson. The quote also says that the Israeli government and its Prime Minister Benjamin Netanyahu are “heartless criminals without a drop of humanity.” The same wording has been circulated on Russian-language [pages](https://www.facebook.com/permalink.php?story_fbid=pfbid0SRBRLHpy3yUgpPSRqKTJB2yPeDom8hSAuiBumfx2B1Xexvszh93Ete8hJHQfRWx3l&id=100070217693211)
+ and [groups](https://www.facebook.com/groups/252675102582946/posts/1484859119364532)
+.
+
+![Dwayne Johnson](https://mythdetector.com/wp-content/uploads/2025/08/sotsialur-qselshi-israelthan-dakavshirebith-duein-jonsonis-gaqhalbebuli-tsitata-vrtseldeba-.png "sotsialur qselshi israelthan dakavshirebith duein jonsonis gaqhalbebuli tsitata vrtseldeba | mythdetector.com")
+
+![Dwayne Johnson](https://mythdetector.com/wp-content/uploads/2025/08/sotsialur-qselshi-israelthan-dakavshirebith-duein-jonsonis-gaqhalbebuli-tsitata-vrtseldeba-1.png "sotsialur qselshi israelthan dakavshirebith duein jonsonis gaqhalbebuli tsitata vrtseldeba 1 | mythdetector.com")
+
+**The quote attributed to Dwayne Johnson is fake. No such statement appears on any of the actor’s official pages, nor has it been reported by any reputable media outlet.**
+
+The quote about the Gaza Strip and the Israeli government, allegedly made by Dwayne Johnson, is fabricated. 
+Read detailed appeal [instructions.](https://mythdetector.com/en/page/dispute-rating)
+
+Topic: [Politics](https://mythdetector.com/en/topic/politics/)
+
+Violation: [Fabricated quote](https://mythdetector.com/en/violation/fabricated-quote/)
+
+Country: [Israel](https://mythdetector.com/en/country/israel/)
+
+Tags: [Dwayne Johnson](https://mythdetector.com/en/tag/dwayne-johnson/)
+[Gaza Strip](https://mythdetector.com/en/tag/gaza-strip/)
+[Israel-Hamas War](https://mythdetector.com/en/tag/israel-hamas-war/)
+
+Source
+
+### Last News
+
+[!Aleko-Elisashvili <image:12398>](https://mythdetector.com/en/aleko-elisashvilis-statements/)
+
+###### [Video Manipulation Spreads About Aleko Elisashvili’s Statements on the Russia-Ukraine and August Wars](https://mythdetector.com/en/aleko-elisashvilis-statements/)
+
+August 26, 2025
+
+[!Ursula-von-der-Leyen <image:12399>](https://mythdetector.com/en/ursula-von-der-leyen-was-expelled/)
+
+###### [Disinformation claiming Ursula von der Leyen was expelled from a meeting with Trump](https://mythdetector.com/en/ursula-von-der-leyen-was-expelled/)
+
+August 26, 2025
+
+[!Zelenskyy-of-corruption <image:12400>](https://mythdetector.com/en/when-accusing-zelenskyy-of-corruption/)
+
+###### [What does the Georgian pro-government and Kremlin-aligned media rely on when accusing Zelenskyy of corruption?](https://mythdetector.com/en/when-accusing-zelenskyy-of-corruption/)
+
+August 25, 2025
+
+[!Levan-Khabeishvili <image:12401>](https://mythdetector.com/en/levan-khabeishvili-and-gia-bugadze-circulating/)
+
+###### [Photo Fabrication of Levan Khabeishvili and Gia Bugadze Circulating on Facebook](https://mythdetector.com/en/levan-khabeishvili-and-gia-bugadze-circulating/)
+
+August 22, 2025
+
+### Popular Posts
+
+*   [![Social Media Posts](https://mythdetector.com/wp-content/uploads/2025/06/Are-Over-a-Thousand-People-Arrested-Each-Month-in-the-UK-for-Social-Media-Posts.jpg "Are Over a Thousand People Arrested Each Month in the UK for Social Media Posts | mythdetector.com")](https://mythdetector.com/en/uk-for-social-media-posts/)
+    
+    ### [Are Over a Thousand People Arrested Each Month in the UK for Social Media Posts?](https://mythdetector.com/en/uk-for-social-media-posts/)
+    
+    0 shares
+    
+    [Share 0](https://www.facebook.com/sharer.php?u=https%3A%2F%2Fmythdetector.com%2Fen%2Fuk-for-social-media-posts%2F)
+     [Tweet 0](https://twitter.com/intent/tweet?text=Are%20Over%20a%20Thousand%20People%20Arrested%20Each%20Month%20in%20the%20UK%20for%20Social%20Media%20Posts%3F%20via%20%40MythDetector&url=https%3A%2F%2Fmythdetector.com%2Fen%2Fuk-for-social-media-posts%2F)
+    
+*   ### [Which Territories did Ukraine Own in 1922 When Entering the Soviet Union?](https://mythdetector.com/en/which-territories-did-ukraine-own-in-1922-when-entering-the-soviet-union/)
+    
+    0 shares
+    
+    [Share 0](https://www.facebook.com/sharer.php?u=https%3A%2F%2Fmythdetector.com%2Fen%2Fwhich-territories-did-ukraine-own-in-1922-when-entering-the-soviet-union%2F)
+     [Tweet 0](https://twitter.com/intent/tweet?text=Which%20Territories%20did%20Ukraine%20Own%20in%201922%20When%20Entering%20the%20Soviet%20Union%3F%20via%20%40MythDetector&url=https%3A%2F%2Fmythdetector.com%2Fen%2Fwhich-territories-did-ukraine-own-in-1922-when-entering-the-soviet-union%2F)
+    
+*   ### [The Shot Presented as a War Crime Committed by the Ukrainian Soldiers is actually from a Pornographic Video](https://mythdetector.com/en/the-shot-presented-as-a-war-crime-committed-by-the-ukrainian-soldiers-is-actually-from-a-pornographic-video/)
+    
+    0 shares
+    
+    [Share 0](https://www.facebook.com/sharer.php?u=https%3A%2F%2Fmythdetector.com%2Fen%2Fthe-shot-presented-as-a-war-crime-committed-by-the-ukrainian-soldiers-is-actually-from-a-pornographic-video%2F)
+     [Tweet 0](https://twitter.com/intent/tweet?text=The%20Shot%20Presented%20as%20a%20War%20Crime%20Committed%20by%20the%20Ukrainian%20Soldiers%20is%20actually%20from%20a%20Pornographic%20Video%20via%20%40MythDetector&url=https%3A%2F%2Fmythdetector.com%2Fen%2Fthe-shot-presented-as-a-war-crime-committed-by-the-ukrainian-soldiers-is-actually-from-a-pornographic-video%2F)
+    
+
+### Welcome Back!
+
+Login to your account below
+
+ Remember Me
+
+  
+
+[Forgotten Password?](#jeg_forgotform)
+
+### Retrieve your password
+
+Please enter your username or email address to reset your password.
+
+  
+
+[Log In](#jeg_loginform)
+
+### Add New Playlist
+
+\- Select Visibility -PublicPrivate
+
+    
+
+[](#)
+
+[](#)
+
+No Result
+
+View All Result
+
+*   [Home](https://mythdetector.com/en/)
+    
+*   [Updates](https://mythdetector.com/en/category/update/)
+    
+*   [Fact Checking](https://mythdetector.com/en/factchecker-db/)
+    
+*   [Infodemic](https://mythdetector.com/en/category/infodemic/)
+    
+*   [Un-troll](https://mythdetector.com/en/category/un-troll/)
+    
+*   [Opinion](https://mythdetector.com/en/category/opinion-en/)
+    *   [Analysis](https://mythdetector.com/en/category/opinion-en1/analysis/)
+        
+    *   [Blog](https://mythdetector.com/en/category/opinion-en1/blog/)
+        
+    *   [Investigation](https://mythdetector.com/en/category/opinion-en1/investigation/)
+        
+    *   [overview](https://mythdetector.com/en/category/opinion-en1/overview/)
+        
+*   [Multimedia](https://mythdetector.com/en/category/multimedia-en/)
+    *   [Video](https://mythdetector.com/en/category/multimedia-en/video-en/)
+        
+    *   [Caricature](https://mythdetector.com/en/category/multimedia-en/caricature/)
+        
+    *   [Infographics](https://mythdetector.com/en/category/multimedia-en/infographics/)
+        
+*   [English](/#pll_switcher/)
+    *   [ქართული](https://mythdetector.com/ka/duein-jonsonis-gaqhalbebuli-tsitata/)
+        
+    *   [Русский](https://mythdetector.com/ru/dueina-dzhonsona-ob-izraile/)
+        
+    *   [Deutsch](https://mythdetector.com/de/)
+        
+    *   [Eesti](https://mythdetector.com/et/)
+        
+    *   [Հայերեն](https://mythdetector.com/hy/)
+        
+    *   [Azerbaijani](https://mythdetector.com/az/)
+        
+
+[](https://www.facebook.com/mythdetector/)
+[](https://twitter.com/MythDetector)
+[](https://www.youtube.com/channel/UCbZu0KuYlXE6UF3FzvjrFVQ)
+[](https://t.me/MythDetector_bot)
+[](https://www.tiktok.com/@myth_detector)
+[](https://bsky.app/profile/mythdetector.com)
+
+© 2025 [mythdetector.com](https://mythdetector.com "გაზომე სიმართლე მითების დეტექტორთან ერთად!")
+ — გაზომე სიმართლე მითების დეტექტორთან ერთად! It cannot be found on any of his official accounts ([1](https://www.instagram.com/therock/)
+, [2](https://www.facebook.com/DwayneJohnson/)
+, [3](https://x.com/therock?lang=en)
+). Johnson expressed sympathy for the families of the victims.
+
+![Dwayne Johnson](https://mythdetector.com/wp-content/uploads/2025/08/sotsialur-qselshi-israelthan-dakavshirebith-duein-jonsonis-gaqhalbebuli-tsitata-vrtseldeba-2.png "sotsialur qselshi israelthan dakavshirebith duein jonsonis gaqhalbebuli tsitata vrtseldeba 2 | mythdetector.com")
+
+__Screenshot of Dwayne Johnson’s post__
+
+Alongside Georgian and Russian-speaking users, English-language accounts have also been [sharing](https://x.com/Global_Lens_New/status/1948547511427211477)
+ the fake quote. The fabricated statement has also been [fact-checked](https://www.snopes.com/fact-check/dwayne-johnson-israel-gaza-netanyahu/)
+ by the organization Snopes.
+
+The appearance of the fake quote may be directly connected to events that occurred at the end of July. The city had been considered a key hub for the delivery of humanitarian aid in Gaza.
+
+**About the Source:**
+
+Among others, the fake quote attributed to Dwayne Johnson is being spread by a Facebook account belonging to [Zaal Mamatsashvili](https://www.facebook.com/zaal.mamatsashvili/posts/pfbid02ZV5icDdtmZzamBaPfkzkBa1LbrBuTVdevkkWGkfsuRSLoZVoFnzTAvrBqKq47j7l)
+, who [regularly](https://www.facebook.com/photo.php?fbid=898839472463244&set=pb.100070115992975.-2207520000&type=3)
+ [posts](https://www.facebook.com/photo.php?fbid=925627096451148&set=pb.100070115992975.-2207520000&type=3)
+ anti-Western and anti-opposition content, including disinformation.
+
+![Dwayne Johnson](https://mythdetector.com/wp-content/uploads/2025/08/sotsialur-qselshi-israelthan-dakavshirebith-duein-jonsonis-gaqhalbebuli-tsitata-vrtseldeba-3.png "sotsialur qselshi israelthan dakavshirebith duein jonsonis gaqhalbebuli tsitata vrtseldeba 3 | mythdetector.com")
+
+* * *
+
+The article has been written in the framework of Facebook’s fact-checking [program](https://www.facebook.com/journalismproject/programs/third-party-fact-checking)
+. <image:12392>](https://www.facebook.com/formedia/mjp/programs/third-party-fact-checking?content_id=Ez92MVl4asoxvNL)
+ [!"
+
+# Your Summary
+
+
+
+===== > RESPONSE:  < =====
+The search result from Myth Detector, published on August 5, 2025, fact-checks a fabricated quote attributed to Dwayne Johnson regarding Israel. The quote, which condemns the Israeli government, is not found on Johnson's official social media accounts. The article includes images of the fabricated quote and mentions that the quote has also been fact-checked by Snopes. <image:12397>, <image:12392>.
+
+_________________________
+
+
+
+SummarizeResultPrompt - QUERY:
+
+# Instructions
+In order to find evidence that helps your fact-check, you just ran a web search which yielded a Search Result. **Your task right now is to summarize the Search Result.** What to include:
+* information that might be useful for the fact-check (see Record)
+* relevant images (refer to images by inserting their reference <image:k>)
+* if available: the release date as well as the author or the publisher (e.g. the media company) of the search result.
+
+Do NOT include:
+* advertisements
+* any other information not related to the Record or the Claim
+
+Additional rules:
+* Do not add any additional information besides the information in the Search Result.
+* If the Search Result doesn't contain any relevant information for the fact-checking work, simply print one word in capital letters: "NONE".
+* Keep your writing style like in the Examples 1, 2 and 3 provided to you.
+* Try to filter out relevant information even if the search result is in a different language.
+
+# Example 1
+The search result from America Today provides several photographs of the Notre-Dame Cathedral fire on April 15, 2019. <image:i>, <image:j>, <image:k>. None of the images show the Eiffel Tower in the background. 
+
+# Example 2
+NONE
+
+# Example 3
+The Guardian discusses a report blaming the Syrian government for a toxic gas attack and condemning their use of chemical weapons. The Guardian mentions the Chemical Weapons Convention and the responsibilities of Syria under the convention. According to The Guardian, The White House condemned the Assad regime for defying the norm against chemical weapons use.
+
+# Record
+## Claim
+Claim: "<image:64> This is an authentic image of Dwayne Johnson waring the Israeli flag in support of Israel."
+
+## Actions
+```
+reverse_search(<image:64>)
+web_search("Dwayne Johnson Israel support")
+```
+
+## Evidence
+### Evidence from `web_search`
+Dwayne "The Rock" Johnson has expressed his views on the Israel-Palestine conflict, condemning terrorism and expressing sympathy for innocent lives lost in the conflict, as reported by [Shop Israel](https://shopisrael.com/blogs/support/does-dwayne-johnson-support-israel?srsltid=AfmBOopy4n2f7lxTWWqdiE6_xSd1XeW0AbQOVlP76nNPJQ6KrktIHL3X). He has also shown support for Israel amid the deadly Hamas attacks, according to [Variety](https://variety.com/2023/film/news/hollywood-stars-support-israel-palestine-conflict-1235749537/).
+
+Marca.com, in an article published on October 11, 2023, discusses Johnson's views on the Israel-Palestine war, mentioning his Instagram post where he expressed his heartbreak and outrage at the events, condemning the actions of Hamas and the loss of innocent lives. The image of Johnson wearing the Israeli flag (<image:64>) is not mentioned in the provided sources.
+
+
+## Elaboration
+The evidence confirms that Dwayne Johnson has expressed support for Israel. However, the provided sources do not mention the image of Dwayne Johnson wearing the Israeli flag. Therefore, the authenticity of the image cannot be verified based on the provided evidence.
+
+To verify the claim, additional information is needed to confirm whether the image is authentic. This could include a statement from Dwayne Johnson or a reliable source confirming the image's origin.
+
+
+## Actions
+```
+web_search("Dwayne Johnson Israeli flag image authenticity")
+```
+
+# Search Result
+From [Source](https://www.aarp.org/money/scams-fraud/reverse-image-search-for-fake-photos/): 
+Content: "Even a basic Google search can uncover truths.
+
+Search for “Lionel Messi with Israeli flag” and you’ll find stories from _USA Today_ and Reuters debunking the image along with reports from AFP Fact Check, which is a department within Agence France-Presse French news agency, and other fact-checking sites.
+
+### 5\. Or not](#fake-politics "anchor text link")
+ • [Primary sources reveal truths](#primary-sources "anchor text link")
+ • [AI gets better quickly](#ai-flaws "anchor text link")
+ • [Lighting looks unreal](#odd-lighting "anchor text link")
+ • [Are you getting emotional?](#emotional-manipulation "anchor text link")
+
+In the photograph, Lionel Messi holds an Israeli flag. Stars such as Ben Affleck, Chris Evans, Dwayne “The Rock” Johnson and Sylvester Stallone have all appeared in T-shirts that make contentious political statements. Go to the source ﻿
+
+A quick look at Messi’s Instagram page would have shown that he didn’t post the Israeli flag photo. Enter by 8/31.](https://www.aarp.org/membership/sweeps/getawaygiveawayswps25/?cmp=DPMCK22IXUKZV "Gateway Giveaway")
+
+[](#)
+
+Content starts here
+
+CLOSE ×
+
+Search
+
+{"dropDownLabel":"All Topics","dropDownValue":"everywhere"},{"dropDownLabel":"Entertainment","dropDownValue":"entertainment"},{"dropDownLabel":"Health","dropDownValue":"health"},{"dropDownLabel":"Money","dropDownValue":"money"},{"dropDownLabel":"Policy & Research","dropDownValue":"research"},{"dropDownLabel":"Travel","dropDownValue":"travel"},{"dropDownLabel":"Work","dropDownValue":"work"},{"dropDownLabel":"Member Benefits","dropDownValue":"member benefits"},{"dropDownLabel":"Caregiving","dropDownValue":"caregiving"},{"dropDownLabel":"Rewards","dropDownValue":"rewards"},{"dropDownLabel":"Videos","dropDownValue":"videos"}
+
+Search
+
+Popular Searches
+
+[Games](https://www.aarp.org/games/)
+
+[Car rental](https://www.aarp.org/membership/benefits/carrental/?intcmp=DSO-HDR-BENEFITS-EWHERE)
+
+[AARP daily Crossword Puzzle](https://games.aarp.org/games/daily-crossword)
+
+[Hotels with AARP discounts](https://www.aarp.org/membership/benefits/hotels/?intcmp=DSO-HDR-BENEFITS-EWHERE)
+
+[Life Insurance](https://www.aarp.org/membership/benefits/insurance/life/?intcmp=DSO-HDR-BENEFITS-EWHERE)
+
+[AARP Dental Insurance Plans](/membership/benefits/insurance/delta-dental/)
+
+[Travel](https://www.aarp.org/travel/)
+
+Suggested Links
+
+[Help](https://help.aarp.org/s/)
+ [Show me my account info](https://help.aarp.org/s/article/show-me-my-account-info)
+ [Change my Address](https://help.aarp.org/s/article/i-want-to-change-my-address)
+ [How do I contact AARP?](https://help.aarp.org/s/article/contact-aarp)
+ [Where is my membership card?](https://help.aarp.org/s/article/where-is-my-membership-card)
+ [How do I get a digital card?](https://help.aarp.org/s/article/how-do-i-access-my-aarp-digital-card-via-aarp-now-app)
+
+![](https://cdn.aarp.net/etc/uxdia/images/uxdia-spinner.svg)      ![limited time labor day sale banner with people and grill at a community bbq​\
+​](https://cdn.aarp.net/content/dam/experience-fragments/uxdia-folder-structure/en/features/membership/header-search-membership-promo/default/anonymous/_jcr_content/root/responsivegrid/container_copy/container/articleimage.coreimg.75.1140.jpeg/content/dam/aarp/members/2025/labor-day/250x139-fy25-q3-laborday-org-next-action-widget-right-rail.jpg "AARP Labor Day Sale on Membership")
+
+LIMITED TIME OFFER
+
+Labor Day Sale
+
+Join AARP for just $11 per year with a 5-year membership. Expires 9/9
+
+[Join Now](https://join.aarp.org/orgisjoin)
+
+[Renew Now](https://join.aarp.org/orgisrenew)
+
+CLOSE ×
+
+Search
+
+{"dropDownLabel":"All Topics","dropDownValue":"everywhere"},{"dropDownLabel":"Entertainment","dropDownValue":"entertainment"},{"dropDownLabel":"Health","dropDownValue":"health"},{"dropDownLabel":"Money","dropDownValue":"money"},{"dropDownLabel":"Policy & Research","dropDownValue":"research"},{"dropDownLabel":"Travel","dropDownValue":"travel"},{"dropDownLabel":"Work","dropDownValue":"work"},{"dropDownLabel":"Member Benefits","dropDownValue":"member benefits"},{"dropDownLabel":"Caregiving","dropDownValue":"caregiving"},{"dropDownLabel":"Rewards","dropDownValue":"rewards"},{"dropDownLabel":"Videos","dropDownValue":"videos"}
+
+Search
+
+Popular Searches
+
+[Games](https://www.aarp.org/games/)
+
+[Car rental](https://www.aarp.org/membership/benefits/carrental/?intcmp=DSO-HDR-BENEFITS-EWHERE)
+
+[AARP daily Crossword Puzzle](https://games.aarp.org/games/daily-crossword)
+
+[Hotels with AARP discounts](https://www.aarp.org/membership/benefits/hotels/?intcmp=DSO-HDR-BENEFITS-EWHERE)
+
+[Life Insurance](https://www.aarp.org/membership/benefits/insurance/life/?intcmp=DSO-HDR-BENEFITS-EWHERE)
+
+[AARP Dental Insurance Plans](/membership/benefits/insurance/delta-dental/)
+
+[Travel](https://www.aarp.org/travel/)
+
+Suggested Links
+
+[Help](https://help.aarp.org/s/)
+ [Show me my account info](https://help.aarp.org/s/article/show-me-my-account-info)
+ [Change my Address](https://help.aarp.org/s/article/i-want-to-change-my-address)
+ [How do I contact AARP?](https://help.aarp.org/s/article/contact-aarp)
+ [Where is my membership card?](https://help.aarp.org/s/article/where-is-my-membership-card)
+ [How do I get a digital card?](https://help.aarp.org/s/article/how-do-i-access-my-aarp-digital-card-via-aarp-now-app)
+
+![](https://cdn.aarp.net/etc/uxdia/images/uxdia-spinner.svg)      ![limited time labor day sale banner with people and grill at a community bbq​\
+​](https://cdn.aarp.net/content/dam/experience-fragments/uxdia-folder-structure/en/features/membership/header-search-membership-promo/default/anonymous/_jcr_content/root/responsivegrid/container_copy/container/articleimage.coreimg.75.1140.jpeg/content/dam/aarp/members/2025/labor-day/250x139-fy25-q3-laborday-org-next-action-widget-right-rail.jpg "AARP Labor Day Sale on Membership")
+
+LIMITED TIME OFFER
+
+Labor Day Sale
+
+Join AARP for just $11 per year with a 5-year membership. Expires 9/9
+
+[Join Now](https://join.aarp.org/orgisjoin)
+
+[Renew Now](https://join.aarp.org/orgisrenew)
+
+[120x30-AARP-logo-red](/)
+
+ [![](https://cdn.aarp.net/etc/uxdia/images/uxdia-spinner.svg)](https://help.aarp.org/s/?intcmp=AE-HP-HDR-HELP)
+
+[Join](https://join.aarp.org/joinnav?intcmp=GLOBAL-HDR-BTN-CLK-MPROMO-JOIN-UXDIA-DEFAULT)
+
+[Renew](https://join.aarp.org/rfrenew?intcmp=GLOBAL-HDR-BTN-CLK-MPROMO-RENEW-UXDIA-DEFAULT)
+
+[Enroll: Automatic Renewal](https://appsec.aarp.org/mem/autorenew?cmp=HDR-AR-ENROLL)
+
+[Rejoin](https://join.aarp.org/rfrenew?intcmp=GLOBAL-HDR-BTN-CLK-MPROMO-REJOIN-UXDIA-DEFAULT)
+
+1. More...
+
+[AARP en Español](https://www.aarp.org/espanol/ "Link to spanish homepage")
+
+ [![](https://cdn.aarp.net/etc/uxdia/images/uxdia-spinner.svg)](https://help.aarp.org/s/?intcmp=AE-HP-HDR-HELP)
+
+*   [AARP en Español](https://www.aarp.org/espanol/)
+    
+*   [Membership & Benefits](https://www.aarp.org/membership/benefits/all-offers-a-z/)
+    
+*   [Members Edition](https://www.aarp.org/benefits-discounts/members-only-access/)
+    
+*   [AARP Rewards](https://www.aarp.org/rewards/)
+    
+
+*   [AARP en Español](https://www.aarp.org/espanol/)
+    
+*   [Membership & Benefits](https://www.aarp.org/membership/benefits/all-offers-a-z/)
+    
+*   [Members Edition](https://www.aarp.org/benefits-discounts/members-only-access/)
+    
+*   [AARP Rewards %{points}%](https://www.aarp.org/rewards/)
+    
+
+[Back](#)
+ 
+
+[Health](/health/ "link to health page")
+
+[Close Menu](# "link to close menu")
+
+[Healthy Living](/health/healthy-living/ "link to healthy living topic page")
+
+[Conditions & Treatments](/health/conditions-treatments/ "Link to conditions and treatment page")
+
+[Drugs & Supplements](/health/drugs-supplements/ "link to drugs and supplements page")
+
+[Health Care & Coverage](/health/healthcare/ "link to health insurance page")
+
+[Health Benefits](/membership/benefits/health/ "AARP Health & Wellness Benefits")
+
+ [![](https://cdn.aarp.net/etc/uxdia/images/uxdia-spinner.svg)](/health/conditions-treatments/hearing-resource-center/ "Advice on Tinnitus and Hearing Loss")
+
+AARP Hearing Center
+
+[Advice on Tinnitus and Hearing Loss](/health/conditions-treatments/hearing-resource-center/)
+
+ [![](https://cdn.aarp.net/etc/uxdia/images/uxdia-spinner.svg)](/health/conditions-treatments/vaccines-after-50/ "What to Know About Vaccines")
+
+Your Health
+
+[What to Know About Vaccines](/health/conditions-treatments/vaccines-after-50/)
+
+ [![](https://cdn.aarp.net/etc/uxdia/images/uxdia-spinner.svg)](/health/brain-health/ "Tools and Explainers on Brain Health")
+
+Brain Health Resources
+
+[Tools and Explainers on Brain Health](/health/brain-health/)
+
+ [![](https://cdn.aarp.net/etc/uxdia/images/uxdia-spinner.svg) \
+\
+MEMBERS ONLY](/health/healthy-living/ways-to-get-a-flatter-stomach/ "25 Ways to Get a Flatter Stomach ")
+
+Fitness
+
+[25 Ways to Get a Flatter Stomach](/health/healthy-living/ways-to-get-a-flatter-stomach/)
+
+MEMBERS ONLY
+
+[Back](#)
+ 
+
+[Money](/money/ "Link to money channel page")
+
+[Close Menu](# "link to close menu")
+
+[Scams & Fraud](/money/scams-fraud/ "link to scams and fraud landing page")
+
+[Personal Finance](/money/personal-finance/ "link to personal finance page")
+
+[Taxes](/money/taxes/ "Link to taxes landing page")
+
+[Retirement](/money/retirement/ "Link to retirement landing page")
+
+[Money Benefits](/membership/benefits/finance/ "AARP Money Benefits")
+
+ [![](https://cdn.aarp.net/etc/uxdia/images/uxdia-spinner.svg)](/money/scams-fraud/tracking-map/ "View and Report Scams in Your Area")
+
+Scams & Fraud
+
+[View and Report Scams in Your Area](/money/scams-fraud/tracking-map/)
+
+ [![](https://cdn.aarp.net/etc/uxdia/images/uxdia-spinner.svg)](/money/personal-finance/charitable-giving-quiz/ "Take the Charitable Giving Quiz")
+
+Giving Back
+
+[Take the Charitable Giving Quiz](/money/personal-finance/charitable-giving-quiz/)
+
+ [![](https://cdn.aarp.net/etc/uxdia/images/uxdia-spinner.svg)](/money/retirement/retirement-calculator/ "AARP Retirement Calculator")
+
+Retirement
+
+[AARP Retirement Calculator](/money/retirement/retirement-calculator/)
+
+ [![](https://cdn.aarp.net/etc/uxdia/images/uxdia-spinner.svg) \
+\
+MEMBERS ONLY](/money/personal-finance/ways-to-save-at-the-supermarket/ "25 Ways to Save at the Grocery Store")
+
+Your Money
+
+[25 Ways to Save at the Grocery Store](/money/personal-finance/ways-to-save-at-the-supermarket/)
+
+MEMBERS ONLY
+
+[Back](#)
+ 
+
+[Work & Jobs](/work/ "Link to work and jobs channel page")
+
+[Close Menu](# "link to close menu")
+
+[Job Search](/work/job-search/ "link to job search landing page")
+
+[Careers](/work/careers/ "link to the careers landing page")
+
+[Small Business](/work/small-business/ "link to small business landing page")
+
+[Employers](/work/employers/ "Link to the employers landing page")
+
+[Age Discrimination](/work/age-discrimination/ "Link to the age discrimination landing page")
+
+ [![](https://cdn.aarp.net/etc/uxdia/images/uxdia-spinner.svg)](/work/job-search/indeed-career-services/ "Job Search Help from AARP and Indeed")
+
+Flexible Work
+
+[Job Search Help from AARP and Indeed](/work/job-search/indeed-career-services/)
+
+ [![](https://cdn.aarp.net/etc/uxdia/images/uxdia-spinner.svg)](/work/skills-builder/ "Online Courses to Boost Your Career")
+
+AARP Skills Builder
+
+[Online Courses to Boost Your Career](/work/skills-builder/)
+
+ [![](https://cdn.aarp.net/etc/uxdia/images/uxdia-spinner.svg)](/work/job-search/retiree-part-time-jobs/ "Part-Time Jobs (No Degree Required!)")
+
+Flexible Work
+
+[Part-Time Jobs (No Degree Required!)](/work/job-search/retiree-part-time-jobs/)
+
+ [![](https://cdn.aarp.net/etc/uxdia/images/uxdia-spinner.svg)](https://virtualevents.aarp.org/workjobs-hub/en/home?utm_medium=dotorg&utm_source=aarp&utm_campaign=workjobs-turnkey-webinar-hubpage-2024&utm_content=evergreen-top-nav&cmp=OTH-IMM-WORKJOBS-WEBINAR-HOUSE_TOPNAV "Tips to Enhance Your Job Search")
+
+ON-DEMAND WEBINARS
+
+[Tips to Enhance Your Job Search](https://virtualevents.aarp.org/workjobs-hub/en/home?utm_medium=dotorg&utm_source=aarp&utm_campaign=workjobs-turnkey-webinar-hubpage-2024&utm_content=evergreen-top-nav&cmp=OTH-IMM-WORKJOBS-WEBINAR-HOUSE_TOPNAV)
+
+[Back](#)
+ 
+
+[Advocacy](/advocacy/ "Link to advocacy channel page")
+
+[Close Menu](# "link to close menu")
+
+ [![](https://cdn.aarp.net/etc/uxdia/images/uxdia-spinner.svg)](/medicare/medicare-inflation-drug-price-reduction/ "Saving You RX Dollars")
+
+Drug Prices
+
+[Saving You RX Dollars](/medicare/medicare-inflation-drug-price-reduction/)
+
+ [![](https://cdn.aarp.net/etc/uxdia/images/uxdia-spinner.svg)](/advocacy/call-on-congress-protect-social-security-2025/ "Fighting to Protect Social Security")
+
+Social Security
+
+[Fighting to Protect Social Security](/advocacy/call-on-congress-protect-social-security-2025/)
+
+ [![](https://cdn.aarp.net/etc/uxdia/images/uxdia-spinner.svg)](/advocacy/safeguard-medicaid-2025/ "Advocating for Strong Programs")
+
+Medicare & Medicaid
+
+[Advocating for Strong Programs](/advocacy/safeguard-medicaid-2025/)
+
+ [![](https://cdn.aarp.net/etc/uxdia/images/uxdia-spinner.svg)](/advocacy/100-reasons-support-family-caregivers-2025/ "Supporting Family Caregivers")
+
+Caregiving
+
+[Supporting Family Caregivers](/advocacy/100-reasons-support-family-caregivers-2025/)
+
+[Back](#)
+ 
+
+[Social Security](/social-security/)
+
+[Close Menu](# "link to close menu")
+
+ [![](https://cdn.aarp.net/etc/uxdia/images/uxdia-spinner.svg)](https://virtualevents.aarp.org/socialsecurity-hub/en/home "Get More out of Your Benefits")
+
+Webinars
+
+[Get More out of Your Benefits](https://virtualevents.aarp.org/socialsecurity-hub/en/home)
+
+ [![](https://cdn.aarp.net/etc/uxdia/images/uxdia-spinner.svg)](/social-security/claim-benefits-early-or-late/ "When to Start Taking Social Security")
+
+Enrollment
+
+[When to Start Taking Social Security](/social-security/claim-benefits-early-or-late/)
+
+ [![](https://cdn.aarp.net/etc/uxdia/images/uxdia-spinner.svg)](/social-security/top-faqs-answered/ "10 Top Social Security FAQs")
+
+Basics
+
+[10 Top Social Security FAQs](/social-security/top-faqs-answered/)
+
+ [![](https://cdn.aarp.net/etc/uxdia/images/uxdia-spinner.svg)](/social-security/benefits-calculator/ "Social Security Benefits Calculator")
+
+Tools
+
+[Social Security Benefits Calculator](/social-security/benefits-calculator/)
+
+[Back](#)
+ 
+
+[Medicare](/medicare/)
+
+[Close Menu](# "link to close menu")
+
+ [![](https://cdn.aarp.net/etc/uxdia/images/uxdia-spinner.svg)](/medicare/enrollment-guide/ "Start Your Journey With Our Medicare Enrollment Guide")
+
+Guide
+
+[Start Your Journey With Our Medicare Enrollment Guide](/medicare/enrollment-guide/)
+
+ [![](https://cdn.aarp.net/etc/uxdia/images/uxdia-spinner.svg)](/medicare/faq/ "Get Quick Medicare Answers With Our Medicare Q&A Tool")
+
+Tool
+
+[Get Quick Medicare Answers With Our Medicare Q&A Tool](/medicare/faq/)
+
+ [![](https://cdn.aarp.net/etc/uxdia/images/uxdia-spinner.svg)](/medicare/getting-help/ "Learn How to Get Help With Common Medicare Problems")
+
+Series
+
+[Learn How to Get Help With Common Medicare Problems](/medicare/getting-help/)
+
+ [![](https://cdn.aarp.net/etc/uxdia/images/uxdia-spinner.svg)](/advocacy/ "Learn How AARP is Fighting for Better Medicare")
+
+Advocacy
+
+[Learn How AARP is Fighting for Better Medicare](/advocacy/)
+
+[Back](#)
+ 
+
+[Caregiving](/caregiving/ "Link to caregiving channel page")
+
+[Close Menu](# "Link to close menu")
+
+[Basics](/caregiving/basics/ "Link to basics laning page")
+
+[Care at Home](/caregiving/home-care/ "Link to care at home landing page")
+
+[Medical](/caregiving/medical/ "Link to medical landing page")
+
+[Financial & Legal](/caregiving/financial-legal/ "Link to the finance and legal landing page")
+
+[Life Balance](/caregiving/life-balance/ "Link to life balance landing page")
+
+[Local](/caregiving/local/ "Link to the local landing page")
+
+ [![](https://cdn.aarp.net/etc/uxdia/images/uxdia-spinner.svg)](/caregiving/financial-legal/understanding-long-term-care-insurance/ "​Understanding Basics of LTC Insurance​")
+
+LONG-TERM CARE
+
+[​Understanding Basics of LTC Insurance​](/caregiving/financial-legal/understanding-long-term-care-insurance/)
+
+ [![](https://cdn.aarp.net/etc/uxdia/images/uxdia-spinner.svg)](/caregiving/local/state-caregiver-resources/ "Assistance and Services in Your Area")
+
+State Guides
+
+[Assistance and Services in Your Area](/caregiving/local/state-caregiver-resources/)
+
+ [![](https://cdn.aarp.net/etc/uxdia/images/uxdia-spinner.svg)](/caregiving/prepare-to-care-planning-guide/ "How to Develop a Caregiving Plan")
+
+Prepare to Care Guides
+
+[How to Develop a Caregiving Plan](/caregiving/prepare-to-care-planning-guide/)
+
+ [![](https://cdn.aarp.net/etc/uxdia/images/uxdia-spinner.svg)](/caregiving/grief-loss-end-of-life/ "How to Cope With Grief, Loss")
+
+End of Life
+
+[How to Cope With Grief, Loss](/caregiving/grief-loss-end-of-life/)
+
+[Back](#)
+ 
+
+[Games](https://www.aarp.org/games/)
+
+[Close Menu](# "Link to close menu")
+
+[All](https://www.aarp.org/games/category/all-games/ "Link to the AARP All Games landing page")
+
+[Recently Played](https://games.aarp.org/category/recently-played "Link to AARP recently played games")
+
+[Word & Trivia](https://www.aarp.org/games/category/word/ "Link to AARP Games Word and Trivia category landing page")
+
+[Rewards](https://www.aarp.org/games/category/rewards-games/ "Link to the AARP Games Rewards category landing age")
+
+[Atari® & Retro](https://www.aarp.org/games/category/atari-games/ "Link to the AARP Games Atari and Retro category landing page")
+
+[Mahjongg](https://www.aarp.org/games/category/mahjongg/ "Link to the AARP Games Mahjongg category landing page")
+
+[Members Only](https://www.aarp.org/games/category/members/ "Link to the AARP Games Members Only category landing page")
+
+[Staying Sharp](https://www.aarp.org/games/category/staying-sharp/ "Link to the AARP Games Staying Sharp category landing page")
+
+[Solitare](https://www.aarp.org/games/category/solitaire/ "Link to the AARP Games Solitare category landing page")
+
+[New Games](https://www.aarp.org/games/category/new/ "Link to new games webpage")
+
+[Strategy](https://www.aarp.org/games/category/strategy/ "Link to the AARP Games Strategy category landing page")
+
+[Arcade](https://www.aarp.org/games/category/arcade/ "Link to the AARP Games Arcade category landing page")
+
+[Puzzles](https://www.aarp.org/games/category/puzzles/ "Link to the AARP Games Puzzle category landing page")
+
+[Card](https://www.aarp.org/games/category/card/ "Link to the AARP Games Card category landing page")
+
+[Juegos](https://www.aarp.org/games/category/juegos-espanol/ "Link to the AARP Games Juegos category landing page")
+
+[Daily](https://www.aarp.org/games/category/daily-games/ "Link to the AARP Games Daily category landing page")
+
+[Game Shows](https://www.aarp.org/games/category/game-shows/ "Learn more about the game show")
+
+[More About Games](https://www.aarp.org/games/more-on-games/ "Learn more about A A R P games")
+
+ [![](https://cdn.aarp.net/etc/uxdia/images/uxdia-spinner.svg)](https://games.aarp.org/games/right-again-trivia "Right Again! Trivia](https://games.aarp.org/games/right-again-trivia)
+
+ [![](https://cdn.aarp.net/etc/uxdia/images/uxdia-spinner.svg)](https://games.aarp.org/games/right-again-trivia-sports "Right Again! Trivia – Sports](https://games.aarp.org/games/right-again-trivia-sports)
+
+ [![](https://cdn.aarp.net/etc/uxdia/images/uxdia-spinner.svg)](/games/category/atari-games/ "Atari® Video Games")
+
+[Atari® Video Games](/games/category/atari-games/)
+
+ [![](https://cdn.aarp.net/etc/uxdia/images/uxdia-spinner.svg)](https://games.aarp.org/games/throwback-thursday-crossword "Throwback Thursday Crossword")
+
+[Throwback Thursday Crossword](https://games.aarp.org/games/throwback-thursday-crossword)
+
+[Back](#)
+ 
+
+[Travel](/travel/ "Link to travel channel page")
+
+[Close Menu](# "Link to close menu")
+
+[Travel Tips](/travel/travel-tips/ "Link to travel tips page")
+
+[Vacation Ideas](/travel/vacation-ideas/ "Link to vacation ideas landing page")
+
+[Destinations](/travel/destinations/ "Link to destinations landing page")
+
+[Travel Benefits](/membership/benefits/travel/ "AARP Travel Benefits")
+
+ [![](https://cdn.aarp.net/etc/uxdia/images/uxdia-spinner.svg)](/travel/vacation-ideas/outdoors/camping-and-rving-guide/ "Camping and RV Destinations")
+
+Outdoor Fun
+
+[Camping and RV Destinations](/travel/vacation-ideas/outdoors/camping-and-rving-guide/)
+
+ [![](https://cdn.aarp.net/etc/uxdia/images/uxdia-spinner.svg)](/travel/travel-tips/budget/beach-destinations/ "Affordable Beach Towns")
+
+Summer Travel
+
+[Affordable Beach Towns](/travel/travel-tips/budget/beach-destinations/)
+
+ [![](https://cdn.aarp.net/etc/uxdia/images/uxdia-spinner.svg)](/travel/destinations/accessible-vacation-destinations/ "Easily Accessible Locations")
+
+Destinations
+
+[Easily Accessible Locations](/travel/destinations/accessible-vacation-destinations/)
+
+ [![](https://cdn.aarp.net/etc/uxdia/images/uxdia-spinner.svg) \
+\
+MEMBERS ONLY](/travel/travel-tips/tips-for-great-train-travel/ "Tips for Traveling by Train")
+
+Insider Secrets
+
+[Tips for Traveling by Train](/travel/travel-tips/tips-for-great-train-travel/)
+
+MEMBERS ONLY
+
+1."
+
+# Your Summary
+
+
+
+===== > RESPONSE:  < =====
+The AARP article mentions that a quick search can debunk images, such as the one of Lionel Messi holding an Israeli flag. It also states that Dwayne "The Rock" Johnson has appeared in T-shirts that make contentious political statements.
+
+_________________________
+
+
+
+SummarizeSummariesPrompt - QUERY:
+
+# Instructions
+You just retrieved web sources, each one summarized under "Web Sources". **Your task right now is to summarize the web source summaries.**
+
+Always adhere to the following rules:
+* Write only one to two paragraphs.
+* Include all URLs from the listed sources. Format them as Markdown hyperlinks.
+* Do not add any additional information besides the information in the summaries.
+* Include references (<image:k>) to all relevant images.
+
+# Record
+## Claim
+Claim: "<image:64> This is an authentic image of Dwayne Johnson waring the Israeli flag in support of Israel."
+
+## Actions
+```
+reverse_search(<image:64>)
+web_search("Dwayne Johnson Israel support")
+```
+
+## Evidence
+### Evidence from `web_search`
+Dwayne "The Rock" Johnson has expressed his views on the Israel-Palestine conflict, condemning terrorism and expressing sympathy for innocent lives lost in the conflict, as reported by [Shop Israel](https://shopisrael.com/blogs/support/does-dwayne-johnson-support-israel?srsltid=AfmBOopy4n2f7lxTWWqdiE6_xSd1XeW0AbQOVlP76nNPJQ6KrktIHL3X). He has also shown support for Israel amid the deadly Hamas attacks, according to [Variety](https://variety.com/2023/film/news/hollywood-stars-support-israel-palestine-conflict-1235749537/).
+
+Marca.com, in an article published on October 11, 2023, discusses Johnson's views on the Israel-Palestine war, mentioning his Instagram post where he expressed his heartbreak and outrage at the events, condemning the actions of Hamas and the loss of innocent lives. The image of Johnson wearing the Israeli flag (<image:64>) is not mentioned in the provided sources.
+
+
+## Elaboration
+The evidence confirms that Dwayne Johnson has expressed support for Israel. However, the provided sources do not mention the image of Dwayne Johnson wearing the Israeli flag. Therefore, the authenticity of the image cannot be verified based on the provided evidence.
+
+To verify the claim, additional information is needed to confirm whether the image is authentic. This could include a statement from Dwayne Johnson or a reliable source confirming the image's origin.
+
+
+## Actions
+```
+web_search("Dwayne Johnson Israeli flag image authenticity")
+```
+
+## Web Sources
+**Web Search Result**
+
+From [Source](https://www.yahoo.com/news/articles/fact-check-fake-dwayne-johnson-234700368.html): 
+Content: The Yahoo News article, published on July 29, 2025, fact-checks a fabricated quote attributed to Dwayne "The Rock" Johnson. The quote, which claims Johnson said, "I've seen a lot of evil in Hollywood scripts — but nothing compares to what Israel is doing in Gaza. The Israeli government and its Prime Minister Netanyahu are heartless criminals with no shred of humanity," is rated as "Incorrect Attribution" by Snopes. The article states that there is no credible record of Johnson making such a statement. The original post of the quote was found on an X account named Global Lens News (@Global_Lens_New). <image:12380>, <image:12381>, <image:12382>.
+
+
+From [Source](https://mythdetector.com/en/dwayne-johnson-about-israel/): 
+Content: The search result from Myth Detector, published on August 5, 2025, fact-checks a fabricated quote attributed to Dwayne Johnson regarding Israel. The quote, which condemns the Israeli government, is not found on Johnson's official social media accounts. The article includes images of the fabricated quote and mentions that the quote has also been fact-checked by Snopes. <image:12397>, <image:12392>.
+
+
+From [Source](https://www.aarp.org/money/scams-fraud/reverse-image-search-for-fake-photos/): 
+Content: The AARP article mentions that a quick search can debunk images, such as the one of Lionel Messi holding an Israeli flag. It also states that Dwayne "The Rock" Johnson has appeared in T-shirts that make contentious political statements.
+
+
+## Your Summary
+
+
+
+===== > RESPONSE:  < =====
+The Yahoo News article ([https://www.yahoo.com/news/articles/fact-check-fake-dwayne-johnson-234700368.html](https://www.yahoo.com/news/articles/fact-check-fake-dwayne-johnson-234700368.html)) and Myth Detector ([https://mythdetector.com/en/dwayne-johnson-about-israel/](https://mythdetector.com/en/dwayne-johnson-about-israel/)) fact-check fabricated quotes attributed to Dwayne Johnson regarding Israel, with the latter including images of the fabricated quote (<image:12397>, <image:12392>). The AARP article mentions that a quick search can debunk images, such as the one of Lionel Messi holding an Israeli flag. The Yahoo News article also includes images of the fabricated quote (<image:12380>, <image:12381>, <image:12382>).
+
+_________________________
+
+
+
+DevelopPrompt - QUERY:
+
+# Instructions
+You just retrieved new Evidence. Now, **analyze the Claim's veracity using the evidence**. Always adhere to the following rules:
+* Focus on developing new insights. Do not repeat larger parts from the Record. Do not restate the Claim.
+* Write down your thoughts step-by-step. Whenever necessary, you may elaborate in more detail.
+* Depending on the topic's complexity, invest one to three paragraphs. The fewer, the better.
+* If you find that there is insufficient information to verify the Claim, explicitly state what information is missing.
+* If you cite web sources, always refer to them by including their URL as a Markdown hyperlink.
+* **Use information only from the recorded evidence**: Avoid inserting information that is not implied by the evidence. You may use commonsense knowledge, though.
+
+# Record
+## Claim
+Claim: "<image:64> This is an authentic image of Dwayne Johnson waring the Israeli flag in support of Israel."
+
+## Actions
+```
+reverse_search(<image:64>)
+web_search("Dwayne Johnson Israel support")
+```
+
+## Evidence
+### Evidence from `web_search`
+Dwayne "The Rock" Johnson has expressed his views on the Israel-Palestine conflict, condemning terrorism and expressing sympathy for innocent lives lost in the conflict, as reported by [Shop Israel](https://shopisrael.com/blogs/support/does-dwayne-johnson-support-israel?srsltid=AfmBOopy4n2f7lxTWWqdiE6_xSd1XeW0AbQOVlP76nNPJQ6KrktIHL3X). He has also shown support for Israel amid the deadly Hamas attacks, according to [Variety](https://variety.com/2023/film/news/hollywood-stars-support-israel-palestine-conflict-1235749537/).
+
+Marca.com, in an article published on October 11, 2023, discusses Johnson's views on the Israel-Palestine war, mentioning his Instagram post where he expressed his heartbreak and outrage at the events, condemning the actions of Hamas and the loss of innocent lives. The image of Johnson wearing the Israeli flag (<image:64>) is not mentioned in the provided sources.
+
+
+## Elaboration
+The evidence confirms that Dwayne Johnson has expressed support for Israel. However, the provided sources do not mention the image of Dwayne Johnson wearing the Israeli flag. Therefore, the authenticity of the image cannot be verified based on the provided evidence.
+
+To verify the claim, additional information is needed to confirm whether the image is authentic. This could include a statement from Dwayne Johnson or a reliable source confirming the image's origin.
+
+
+## Actions
+```
+web_search("Dwayne Johnson Israeli flag image authenticity")
+```
+
+## Evidence
+### Evidence from `web_search`
+The Yahoo News article ([https://www.yahoo.com/news/articles/fact-check-fake-dwayne-johnson-234700368.html](https://www.yahoo.com/news/articles/fact-check-fake-dwayne-johnson-234700368.html)) and Myth Detector ([https://mythdetector.com/en/dwayne-johnson-about-israel/](https://mythdetector.com/en/dwayne-johnson-about-israel/)) fact-check fabricated quotes attributed to Dwayne Johnson regarding Israel, with the latter including images of the fabricated quote (<image:12397>, <image:12392>). The AARP article mentions that a quick search can debunk images, such as the one of Lionel Messi holding an Israeli flag. The Yahoo News article also includes images of the fabricated quote (<image:12380>, <image:12381>, <image:12382>).
+
+
+# Your Analysis
+
+
+
+===== > RESPONSE:  < =====
+The evidence indicates that the image of Dwayne Johnson wearing the Israeli flag is likely fabricated. Fact-checking articles from Yahoo News and Myth Detector debunk fabricated quotes and images attributed to Dwayne Johnson regarding Israel.
+
+_________________________
+
+
+
+JudgePrompt - QUERY:
+
+# Instructions
+**Determine the Claim's veracity** by following these steps:
+1. Briefly summarize the key insights from the fact-check (see Record) in at most one paragraph.
+2. Write one paragraph about which one of the Decision Options applies best. Include the most appropriate decision option at the end and enclose it in backticks like `this`.
+
+
+
+
+## Decision Options
+* `not enough information`: The fact-check does not contain sufficient information to come to an conclusion. For example,there is substantial lack of evidence or the evidence is inconclusive, conflicting or self-contradictory. In the case of a lack of evidence, state which information exactly is missing. In particular, if no RESULTS or sources are available, pick this decision.
+* `true`: The claim is factually accurate when it is confirmed by evidence from multiple and reliable sources.
+* `false`: The claim is not factually accurate. This is the case if one of the following three conditions is met:(1) The claim is demonstrably false when it is disproven by evidence from multiple and reliable sources,(2) The claim or image is taken out of context, i.e. the origin, content and/or meaning of a statement or an image is misrepresented. For example, an old claim or an old image is mispresented in a new context in a misleading way,(3) There is not enough evidence to verify the claim or the evidence is conflicting or self-contradictory.
+
+# Record
+## Claim
+Claim: "<image:64> This is an authentic image of Dwayne Johnson waring the Israeli flag in support of Israel."
+
+## Actions
+```
+reverse_search(<image:64>)
+web_search("Dwayne Johnson Israel support")
+```
+
+## Evidence
+### Evidence from `web_search`
+Dwayne "The Rock" Johnson has expressed his views on the Israel-Palestine conflict, condemning terrorism and expressing sympathy for innocent lives lost in the conflict, as reported by [Shop Israel](https://shopisrael.com/blogs/support/does-dwayne-johnson-support-israel?srsltid=AfmBOopy4n2f7lxTWWqdiE6_xSd1XeW0AbQOVlP76nNPJQ6KrktIHL3X). He has also shown support for Israel amid the deadly Hamas attacks, according to [Variety](https://variety.com/2023/film/news/hollywood-stars-support-israel-palestine-conflict-1235749537/).
+
+Marca.com, in an article published on October 11, 2023, discusses Johnson's views on the Israel-Palestine war, mentioning his Instagram post where he expressed his heartbreak and outrage at the events, condemning the actions of Hamas and the loss of innocent lives. The image of Johnson wearing the Israeli flag (<image:64>) is not mentioned in the provided sources.
+
+
+## Elaboration
+The evidence confirms that Dwayne Johnson has expressed support for Israel. However, the provided sources do not mention the image of Dwayne Johnson wearing the Israeli flag. Therefore, the authenticity of the image cannot be verified based on the provided evidence.
+
+To verify the claim, additional information is needed to confirm whether the image is authentic. This could include a statement from Dwayne Johnson or a reliable source confirming the image's origin.
+
+
+## Actions
+```
+web_search("Dwayne Johnson Israeli flag image authenticity")
+```
+
+## Evidence
+### Evidence from `web_search`
+The Yahoo News article ([https://www.yahoo.com/news/articles/fact-check-fake-dwayne-johnson-234700368.html](https://www.yahoo.com/news/articles/fact-check-fake-dwayne-johnson-234700368.html)) and Myth Detector ([https://mythdetector.com/en/dwayne-johnson-about-israel/](https://mythdetector.com/en/dwayne-johnson-about-israel/)) fact-check fabricated quotes attributed to Dwayne Johnson regarding Israel, with the latter including images of the fabricated quote (<image:12397>, <image:12392>). The AARP article mentions that a quick search can debunk images, such as the one of Lionel Messi holding an Israeli flag. The Yahoo News article also includes images of the fabricated quote (<image:12380>, <image:12381>, <image:12382>).
+
+
+## Elaboration
+The evidence indicates that the image of Dwayne Johnson wearing the Israeli flag is likely fabricated. Fact-checking articles from Yahoo News and Myth Detector debunk fabricated quotes and images attributed to Dwayne Johnson regarding Israel.
+
+
+# Your Judgement
+
+
+
+===== > RESPONSE:  < =====
+The fact-check reveals that while Dwayne Johnson has expressed support for Israel, the image of him wearing the Israeli flag is likely fabricated. Several fact-checking articles debunk fabricated quotes and images attributed to him. Therefore, the claim that the image is authentic is false.
+
+`false`
+_________________________
+
+
+
+SummarizeDocPrompt - QUERY:
+
+# Instructions
+You are provided with the record of a fact-check. It contains the Claim to be verified and a documentation of all the fact-checking work along the gathered evidence. Your task is to **summarize the fact-check**. That is, you provide a concise, one-paragraph justification for the final VERDICT based on the knowledge from the Record. Note:
+* Be truthful, brief, do not add any additional information besides the information given in the Record. 
+* Link key sources in your summary. Use Markdown notation for that. You may link them in-line.
+* Don't state the Claim again. Rather focus on the key insights of the fact-check.
+* Simply print just the summary.
+
+# Record
+## Claim
+Claim: "<image:64> This is an authentic image of Dwayne Johnson waring the Israeli flag in support of Israel."
+
+## Actions
+```
+reverse_search(<image:64>)
+web_search("Dwayne Johnson Israel support")
+```
+
+## Evidence
+### Evidence from `web_search`
+Dwayne "The Rock" Johnson has expressed his views on the Israel-Palestine conflict, condemning terrorism and expressing sympathy for innocent lives lost in the conflict, as reported by [Shop Israel](https://shopisrael.com/blogs/support/does-dwayne-johnson-support-israel?srsltid=AfmBOopy4n2f7lxTWWqdiE6_xSd1XeW0AbQOVlP76nNPJQ6KrktIHL3X). He has also shown support for Israel amid the deadly Hamas attacks, according to [Variety](https://variety.com/2023/film/news/hollywood-stars-support-israel-palestine-conflict-1235749537/).
+
+Marca.com, in an article published on October 11, 2023, discusses Johnson's views on the Israel-Palestine war, mentioning his Instagram post where he expressed his heartbreak and outrage at the events, condemning the actions of Hamas and the loss of innocent lives. The image of Johnson wearing the Israeli flag (<image:64>) is not mentioned in the provided sources.
+
+
+## Elaboration
+The evidence confirms that Dwayne Johnson has expressed support for Israel. However, the provided sources do not mention the image of Dwayne Johnson wearing the Israeli flag. Therefore, the authenticity of the image cannot be verified based on the provided evidence.
+
+To verify the claim, additional information is needed to confirm whether the image is authentic. This could include a statement from Dwayne Johnson or a reliable source confirming the image's origin.
+
+
+## Actions
+```
+web_search("Dwayne Johnson Israeli flag image authenticity")
+```
+
+## Evidence
+### Evidence from `web_search`
+The Yahoo News article ([https://www.yahoo.com/news/articles/fact-check-fake-dwayne-johnson-234700368.html](https://www.yahoo.com/news/articles/fact-check-fake-dwayne-johnson-234700368.html)) and Myth Detector ([https://mythdetector.com/en/dwayne-johnson-about-israel/](https://mythdetector.com/en/dwayne-johnson-about-israel/)) fact-check fabricated quotes attributed to Dwayne Johnson regarding Israel, with the latter including images of the fabricated quote (<image:12397>, <image:12392>). The AARP article mentions that a quick search can debunk images, such as the one of Lionel Messi holding an Israeli flag. The Yahoo News article also includes images of the fabricated quote (<image:12380>, <image:12381>, <image:12382>).
+
+
+## Elaboration
+The evidence indicates that the image of Dwayne Johnson wearing the Israeli flag is likely fabricated. Fact-checking articles from Yahoo News and Myth Detector debunk fabricated quotes and images attributed to Dwayne Johnson regarding Israel.
+
+
+## Final Judgement
+The fact-check reveals that while Dwayne Johnson has expressed support for Israel, the image of him wearing the Israeli flag is likely fabricated. Several fact-checking articles debunk fabricated quotes and images attributed to him. Therefore, the claim that the image is authentic is false.
+
+`false`
+
+## Summary
+
+
+
+===== > RESPONSE:  < =====
+The claim is false. While Dwayne Johnson has expressed support for Israel, the image of him wearing the Israeli flag is likely fabricated, as indicated by fact-checking articles from sources like [Yahoo News](https://www.yahoo.com/news/articles/fact-check-fake-dwayne-johnson-234700368.html) and [Myth Detector](https://mythdetector.com/en/dwayne-johnson-about-israel/).
+
+_________________________
+
+
+

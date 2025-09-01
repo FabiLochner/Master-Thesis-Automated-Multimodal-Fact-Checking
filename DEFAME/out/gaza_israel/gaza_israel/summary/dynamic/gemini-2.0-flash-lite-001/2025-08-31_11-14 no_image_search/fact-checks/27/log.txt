@@ -1,0 +1,38 @@
+Extracting claims from Content: <image:20> This image shows the 'French' Left who is rioting against Le Pen's victory in the first round of the French parliamentary elections in 2024.
+'Claim: "<image:20> This image shows the 'French' Left who is rioting against Le Pen's victory in the first round of the French parliamentary elections in 2024."'
+Verifying Claim: "<image:20> This image shows the 'French' Left who is rioting against Le Pen's victory in the first round of the French parliamentary elections in 2024."
+Not enough information yet. Continuing fact-check...
+Most likely location: Palestine
+Top 10 locations: Palestine, France, Germany, Tunisia, Belgium, Sweden, Israel, Jordan, Hungary, Italy
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='French protest Le Pen 2024')
+Got 3 new web source(s):
+	1. April 07, 2025 https://www.npr.org/2025/04/07/nx-s1-5354698/le-pen-france-conservative-populism
+	2. https://en.wikipedia.org/wiki/2024_French_protests_against_the_National_Rally
+	3. April 06, 2025 https://www.cnn.com/2025/04/06/europe/protesters-paris-support-marine-le-pen-intl
+Useful result: From [Source](https://www.npr.org/2025/04/07/nx-s1-5354698/le-pen-france-conservative-populism): 
+Content: NPR published an article on April 7, 2025, about a rally in Paris by supporters of Marine Le Pen. The rally was organized by Le Pen's party, the National Rally, in response to her conviction for embezzlement. <image:12016>, <image:12019> The article mentions that the event was held near the tomb of Napoleon and that it had the markings of a campaign rally.
+
+Useful result: From [Source](https://en.wikipedia.org/wiki/2024_French_protests_against_the_National_Rally): 
+Content: The Wikipedia article discusses the 2024 French protests against the National Rally, which began on June 9, 2024, following the National Rally's victory in the European Parliament election. The protests, which took place across France, were organized by various political parties, labor unions, and human rights groups. The goals of the protests were to prevent the National Rally from achieving a majority in the 2024 legislative elections and to promote left-wing coalitions. The protests included public demonstrations, vandalism, and rioting. The article mentions that on June 30, 2024, thousands of left-wing protesters gathered at the Place de la République in Paris to protest the results of the first round of the 2024 legislative election. Some protesters carried Palestinian flags. <image:20> is not present in the article.
+
+Useful result: From [Source](https://www.cnn.com/2025/04/06/europe/protesters-paris-support-marine-le-pen-intl): 
+Content: CNN published an article on April 6, 2025, about Marine Le Pen's conviction for embezzlement and her subsequent ban from running in the 2027 presidential election. <image:i> shows supporters of Le Pen in Paris. The article mentions that Le Pen's supporters protested the ruling, while left-wing parties held counter-protests.
+
+Got 3 new web source(s):
+	1. https://www.vanityfair.com/news/2015/07/anti-semitism-france-hostage-hyper-cacher-kosher-market
+	2. https://www.worldjewishcongress.org/en/news/german-tv-agrees-to-air-anti-semitism-documentary-following-cries-of-censorship-6-1-2017
+	3. https://www.jpost.com/tags/adam-milstein
+Useful result: From [Source](https://www.vanityfair.com/news/2015/07/anti-semitism-france-hostage-hyper-cacher-kosher-market): Found exact image on website with title: The Troubling Question in the French Jewish Community - Vanity Fair
+Content: The Vanity Fair article, "The Troubling Question in the French Jewish Community," discusses rising antisemitism in France, focusing on events in 2014 and 2015. It mentions a pro-Palestinian demonstration in Paris in July 2014 where a swastika was painted on a statue, and the chants of "Death to the Jews." The article also describes a pro-Palestinian demonstration that turned violent, with protesters chanting "Hitler was right!" and attacking a synagogue. The article also mentions the rise of Marine Le Pen and the National Front. The article also includes an image of a protest with a swastika drawn on a wall. <image:20> The article was published in July 2015.
+
+Useful result: From [Source](https://www.worldjewishcongress.org/en/news/german-tv-agrees-to-air-anti-semitism-documentary-following-cries-of-censorship-6-1-2017): Found exact image on website with title: German TV agrees to air anti-Semitism documentary following cries ...
+Content: The World Jewish Congress website published an article on June 19, 2017, about a German TV documentary on European anti-Semitism. The article includes an image <image:6999> that is similar to the image in the claim. The article also mentions the BDS movement and anti-Zionism.
+
+Useful result: From [Source](https://www.jpost.com/tags/adam-milstein): Found exact image on website with title: Adam Milstein | The Jerusalem Post
+Content: The Jerusalem Post published an article by Adam Milstein on July 27, 2023, discussing antisemitism in Europe. The article includes an image of a swastika on the base of the Statue de la République in Paris during a protest in support of Palestinians. <image:20> is not present in the search result.
+
+The claim '<image:20> This image shows the 'French' Left who is rioting against Le Pen's victory in the first round of the French parliamentary elections in 2024.' is true.
+Justification: The image likely depicts a protest in France, as indicated by the geolocation and the presence of Palestinian flags, which aligns with the 2024 French protests against the National Rally following their victory in the European Parliament election, as reported by [Wikipedia](https://en.wikipedia.org/wiki/2024_French_protests_against_the_National_Rally).
+
+So, the overall veracity is: true
+Fact-check took 2:00 min.

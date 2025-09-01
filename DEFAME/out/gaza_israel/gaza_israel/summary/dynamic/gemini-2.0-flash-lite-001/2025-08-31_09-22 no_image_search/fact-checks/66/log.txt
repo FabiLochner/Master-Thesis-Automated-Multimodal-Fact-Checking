@@ -1,0 +1,39 @@
+Extracting claims from Content: <image:40> This image shows Ukrainian President Volodymyr Zelenskyy in March 2025 signing Israeli bombs intended for use against Palestinians in Gaza.
+'Claim: "<image:40> This image shows Ukrainian President Volodymyr Zelenskyy in March 2025 signing Israeli bombs intended for use against Palestinians in Gaza."'
+Verifying Claim: "<image:40> This image shows Ukrainian President Volodymyr Zelenskyy in March 2025 signing Israeli bombs intended for use against Palestinians in Gaza."
+Not enough information yet. Continuing fact-check...
+Got 3 new web source(s):
+	1. https://www.bbc.co.uk/news/articles/c80rkv0k4j8o
+	2. https://www.bbc.com/news/articles/c80rkv0k4j8o
+	3. https://apnews.com/article/zelenskyy-johnson-ambassador-ukraine-biden-harris-trump-d81b0a055d99cfd4804b3f2c00915d09
+Useful result: From [Source](https://www.bbc.co.uk/news/articles/c80rkv0k4j8o): Found exact image on website with title: Republican anger clouds Zelensky-Biden 'victory plan' meeting - BBC
+Content: The BBC published an article on September 26, 2024, about Volodymyr Zelensky's meeting with Joe Biden at the White House. <image:1957> The article also mentions Zelensky's visit to the Scranton Army Ammunition Plant (SCAAP) on September 23, 2024, where he signed ammunition. <image:1958>
+
+Useful result: From [Source](https://www.bbc.com/news/articles/c80rkv0k4j8o): Found exact image on website with title: Republican anger clouds Zelensky's crunch Biden meeting - BBC
+Content: The BBC News article, published on September 26, 2024, discusses a meeting between Ukrainian President Volodymyr Zelenskyy and US President Joe Biden. The article mentions Zelenskyy's visit to the Scranton Army Ammunition Plant (SCAAP) on September 23, 2024, where he signed ammunition. <image:1964>
+
+Useful result: From [Source](https://apnews.com/article/zelenskyy-johnson-ambassador-ukraine-biden-harris-trump-d81b0a055d99cfd4804b3f2c00915d09): Found exact image on website with title: Speaker Johnson demands Zelenskyy remove Ukraine's ... - AP News
+Content: The Associated Press reports that Ukrainian President Volodymyr Zelenskyy visited a Pennsylvania ammunition factory on September 22, 2024, and signed military ordnance. <image:40> The article also mentions that House Speaker Mike Johnson demanded Zelenskyy remove Ukraine’s ambassador to the U.S. after the visit. The article was written by LISA MASCARO and published on September 25, 2024.
+
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Volodymyr Zelenskyy signing bombs')
+Skipping fact-checking website: https://www.reuters.com/fact-check/video-does-not-show-zelenskiy-signing-bombs-be-dropped-gazans-2025-03-11/
+Skipping unsupported website: https://www.reddit.com/r/ukraine/comments/1fnfhxg/president_zelenskyy_signs_an_artillery_shell/
+Skipping unsupported website: https://www.facebook.com/cnnnews18/videos/ukrainian-president-zelensky-visits-us-ammunition-factory-to-thank-workers-signs/2429064850628951/
+Got 3 new web source(s):
+	1. March 13, 2025 https://spotlight.ebu.ch/p/video-caption-falsely-claims-zelenskyy
+	2. September 24, 2024 https://www.foxnews.com/politics/josh-shapiro-blasted-signing-missile-alongside-zelenskyy-bidens-hometown-party-war
+	3. October 15, 2024 https://caliber.az/en/post/zelenskyy-s-glory-to-ukraine-inscription-on-us-bombs-in-pennsylvania-stirs-controversy
+Useful result: From [Source](https://spotlight.ebu.ch/p/video-caption-falsely-claims-zelenskyy): 
+Content: The search result from Eurovision News | Spotlight states that a video and still images shared online falsely claimed that Ukrainian President Volodymyr Zelenskyy signed artillery shells destined for use in Gaza by Israel. The video actually shows Zelenskyy at a U.S. factory supporting Ukraine's defense needs. The video was shared on September 23, 2024, and Zelenskyy wrote "Glory to Ukraine" and "Thanks for Support" on the shells, referencing Ukraine’s war with Russia. <image:40>
+
+Useful result: From [Source](https://www.foxnews.com/politics/josh-shapiro-blasted-signing-missile-alongside-zelenskyy-bidens-hometown-party-war): 
+Content: The search result from Fox News discusses Ukrainian President Volodymyr Zelenskyy signing a missile alongside Pennsylvania Democratic Gov. Josh Shapiro. The article mentions that Shapiro posted a video of him signing the missile at the Scranton Army Ammunition Plant (SCAAP). <image:11669>
+
+Useful result: From [Source](https://caliber.az/en/post/zelenskyy-s-glory-to-ukraine-inscription-on-us-bombs-in-pennsylvania-stirs-controversy): 
+Content: The article from Caliber.Az, published on October 15, 2024, discusses Ukrainian President Volodymyr Zelenskyy signing munitions at the Scranton Army Ammunition Plant in Pennsylvania. The article mentions that Zelenskyy inscribed messages on US bombs, including the phrase "Glory to Ukraine." The article also mentions that the visit stirred controversy. <image:11673>, <image:11674>, <image:11675>, <image:11676>, <image:11677>
+
+The claim '<image:40> This image shows Ukrainian President Volodymyr Zelenskyy in March 2025 signing Israeli bombs intended for use against Palestinians in Gaza.' is false.
+Justification: The image depicts Ukrainian President Volodymyr Zelenskyy signing artillery shells at the Scranton Army Ammunition Plant (SCAAP) in Pennsylvania in September 2024, as reported by the [BBC](https://www.bbc.co.uk/news/articles/c80rkv0k4j8o) and the [Associated Press](https://apnews.com/article/zelenskyy-johnson-ambassador-ukraine-biden-harris-trump-d81b0a055d99cfd4804b3f2c00915d09). The claim that the image shows Israeli bombs intended for use against Palestinians in Gaza is false, as confirmed by [Eurovision News | Spotlight](https://spotlight.ebu.ch/p/video-caption-falsely-claims-zelenskyy).
+
+So, the overall veracity is: false
+Fact-check took 1:25 min.

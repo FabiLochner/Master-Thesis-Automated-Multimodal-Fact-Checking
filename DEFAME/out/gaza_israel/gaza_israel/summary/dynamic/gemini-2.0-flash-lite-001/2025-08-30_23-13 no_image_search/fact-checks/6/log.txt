@@ -1,0 +1,40 @@
+Extracting claims from Content: <image:10202> This is an authentic image of Benjamin Netanyahu being hospitalized in Tel Aviv in November 2024 due to a serious health issue.
+'Claim: "<image:10202> This is an authentic image of Benjamin Netanyahu being hospitalized in Tel Aviv in November 2024 due to a serious health issue."'
+Verifying Claim: "<image:10202> This is an authentic image of Benjamin Netanyahu being hospitalized in Tel Aviv in November 2024 due to a serious health issue."
+Not enough information yet. Continuing fact-check...
+Searching google_vision with query: ImageQuery(limit=3, start_date=None, end_date=None, search_type='reverse', text='', image=<defame.common.medium.Image object at 0x7ffed165ccd0>)
+Skipping unsupported website: https://www.facebook.com/photo.php?fbid=431184125970057&id=100072354197635&set=a.335217235566747
+Skipping unsupported website: https://www.youtube.com/watch?v=6W-GjMPPONo
+Got 4 new web source(s):
+	1. https://pesacheck.org/fake-this-image-claiming-to-show-israeli-pm-benjamin-netanyahu-admitted-in-hospital-isnt-24197dac209e
+	2. https://en.webangah.ir/2024-12-30/news=240102/
+	3. https://dearborn.org/preview/officially-after-surgery-netanyahu-has-prostate-cancer-63813
+	4. https://www.saba.ye/en/news3416306.htm
+Useful result: From [Source](https://pesacheck.org/fake-this-image-claiming-to-show-israeli-pm-benjamin-netanyahu-admitted-in-hospital-isnt-24197dac209e): Found exact image on website with title: FAKE: This image claiming to show Israeli PM Benjamin Netanyahu ...
+Content: The search result from PesaCheck states that the image is fake and AI-generated. The image was shared on Threads and X (formerly Twitter) with the claim that it shows Benjamin Netanyahu in a hospital bed in November 2024. The article was published on December 18, 2024. <image:10202>
+
+Useful result: From [Source](https://en.webangah.ir/2024-12-30/news=240102/): Found exact image on website with title: Transferring Netanyahu to an underground ward after surgery
+Content: The search result from Webangah News Hub, published on December 30, 2024, reports that Benjamin Netanyahu underwent prostate surgery and was transferred to an underground ward. <image:10202> The article mentions that Channel 12 of the Zionist regime confirmed that Netanyahu has prostate cancer.
+
+Useful result: From [Source](https://dearborn.org/preview/officially-after-surgery-netanyahu-has-prostate-cancer-63813): Found exact image on website with title: Officially after surgery: Netanyahu has prostate cancer - Dearborn.org
+Content: The search result from Dearborn.org contains the exact image. The title of the article is "Officially after surgery: Netanyahu has prostate cancer".
+
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Benjamin Netanyahu hospitalized November 2024')
+Skipping fact-checking website: https://factcheck.afp.com/doc.afp.com.36MV6KT
+Skipping unsupported website: https://x.com/AFPFactCheck/status/1859318144474513525
+Skipping fact-checking website: https://www.politifact.com/factchecks/2024/nov/18/threads-posts/social-media-posts-spread-false-claims-about-benja/
+Skipping fact-checking website: https://fullfact.org/online/netanyahu-hospitalised-fake-image/
+Got 2 new web source(s):
+	1. November 20, 2024 https://www.buffalo.edu/ai-data-science/news-events/news.host.html/content/shared/engineering/home/articles/media-mentions/2024-media-coverage/ai-generated-image-used-to-falsely-claim-netanyahu-hospitalized.detail.html
+	2. December 31, 2024 https://www.cnn.com/2024/12/31/middleeast/netanyahu-hospital-prostate-budget-bill-intl-latam
+Useful result: From [Source](https://www.buffalo.edu/ai-data-science/news-events/news.host.html/content/shared/engineering/home/articles/media-mentions/2024-media-coverage/ai-generated-image-used-to-falsely-claim-netanyahu-hospitalized.detail.html): 
+Content: The search result from Buffalo.edu, published on November 20, 2024, discusses an AI-generated image falsely claiming Benjamin Netanyahu was hospitalized. The article mentions AFP Fact Check debunking the image.
+
+Useful result: From [Source](https://www.cnn.com/2024/12/31/middleeast/netanyahu-hospital-prostate-budget-bill-intl-latam): 
+Content: CNN reports that Benjamin Netanyahu left a Jerusalem hospital on December 31, 2024, against his doctor's orders to help his party pass a divisive budget law. He had undergone prostate removal surgery two days prior. <image:10202> is not present in the search result.
+
+The claim '<image:10202> This is an authentic image of Benjamin Netanyahu being hospitalized in Tel Aviv in November 2024 due to a serious health issue.' is false.
+Justification: The claim is false. The image in question has been identified as potentially fake or AI-generated, and was used to falsely claim Benjamin Netanyahu was hospitalized in November 2024, as reported by PesaCheck ([https://pesacheck.org/fake-this-image-claiming-to-show-israeli-pm-benjamin-netanyahu-admitted-in-hospital-isnt-24197dac209e](https://pesacheck.org/fake-this-image-claiming-to-show-israeli-pm-benjamin-netanyahu-admitted-in-hospital-isnt-24197dac209e)) and the University at Buffalo ([https://www.buffalo.edu/ai-data-science/news-events/news.host.html/content/shared/engineering/home/articles/media-mentions/2024-media-coverage/ai-generated-image-used-to-falsely-claim-netanyahu-hospitalized.detail.html](https://www.buffalo.edu/ai-data-science/news-events/news.host.html/content/shared/engineering/home/articles/media-mentions/2024-media-coverage/ai-generated-image-used-to-falsely-claim-netanyahu-hospitalized.detail.html)). While Netanyahu did have surgery in December 2024, the image is not associated with that event in reliable sources.
+
+So, the overall veracity is: false
+Fact-check took 1:59 min.

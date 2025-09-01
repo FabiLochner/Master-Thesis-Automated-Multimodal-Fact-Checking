@@ -1,0 +1,42 @@
+Extracting claims from Content: <image:33> This image shows Gaza, completely destroyed, in December 2024.
+'Claim: "<image:33> This image shows Gaza, completely destroyed, in December 2024."'
+Verifying Claim: "<image:33> This image shows Gaza, completely destroyed, in December 2024."
+Not enough information yet. Continuing fact-check...
+Got 0 new web source(s):
+Not enough information yet. Continuing fact-check...
+INFO: Dropping action 'reverse_search' as it was already performed.
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Gaza destruction December 2024')
+Got 3 new web source(s):
+	1. December 10, 2024 https://www.ochaopt.org/content/reported-impact-snapshot-gaza-strip-10-december-2024
+	2. December 19, 2024 https://www.hrw.org/report/2024/12/19/extermination-and-acts-genocide/israel-deliberately-depriving-palestinians-gaza
+	3. January 16, 2025 https://reliefweb.int/report/occupied-palestinian-territory/occupied-palestinian-territory-opt-gaza-protection-analysis-update-december-2024
+Useful result: From [Source](https://www.ochaopt.org/content/reported-impact-snapshot-gaza-strip-10-december-2024): 
+Content: The United Nations Office for the Coordination of Humanitarian Affairs (OCHA) published a report on December 10, 2024, regarding the reported impact snapshot in the Gaza Strip. The report includes reported casualties as of December 10, 2024.
+
+Useful result: From [Source](https://www.hrw.org/report/2024/12/19/extermination-and-acts-genocide/israel-deliberately-depriving-palestinians-gaza): 
+Content: The Human Rights Watch report, published on December 19, 2024, discusses the destruction in Gaza and the impact on the population. The report mentions that as of December 2023, 80 percent of buildings in northern Gaza had been damaged or destroyed. The report also states that 1.9 million people were displaced in Gaza as of November 2024. The report also includes a photograph of a destroyed solar panel field <image:1>.
+
+Useful result: From [Source](https://reliefweb.int/report/occupied-palestinian-territory/occupied-palestinian-territory-opt-gaza-protection-analysis-update-december-2024): 
+Content: The Reliefweb report, "Occupied Palestinian Territory (oPt) - Gaza Protection Analysis Update, December 2024," discusses the ongoing protection and human rights crisis in Gaza. The report mentions the closure of the Rafah crossing, intensified Israeli operations, and the impact of the ongoing hostilities, including violence, death, injury, deprivation, starvation, and disease. The report also mentions the killing of over 1,040 medical personnel. <image:1>
+
+Not enough information yet. Continuing fact-check...
+INFO: Dropping action 'reverse_search' as it was already performed.
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Gaza building damage assessment December 2024')
+Got 3 new web source(s):
+	1. December 01, 2024 https://data.humdata.org/dataset/unosat-gaza-strip-comprehensive-damage-assessment-01-december-2024
+	2. March 29, 2024 https://thedocs.worldbank.org/en/doc/14e309cd34e04e40b90eb19afa7b5d15-0280012024/original/Gaza-Interim-Damage-Assessment-032924-Final.pdf
+	3. March 01, 2025 https://news.un.org/en/story/2025/03/1160661
+Useful result: From [Source](https://data.humdata.org/dataset/unosat-gaza-strip-comprehensive-damage-assessment-01-december-2024): 
+Content: The UNOSAT published a comprehensive damage assessment of the Gaza Strip based on satellite imagery collected on December 1, 2024. The assessment compares the damage to structures with images collected on various dates in 2023 and 2024. The report indicates that North Gaza and Rafah experienced the highest increase in damage compared to a September 6, 2024 analysis, with approximately 3,138 and 3,054 new structures damaged, respectively. The assessment estimates that around 69% of the total structures in the Gaza Strip have been damaged, corresponding to 245,123 damaged housing units. The dataset was added to HDX on December 14, 2024. A static PDF map is available.
+
+Useful result: From [Source](https://thedocs.worldbank.org/en/doc/14e309cd34e04e40b90eb19afa7b5d15-0280012024/original/Gaza-Interim-Damage-Assessment-032924-Final.pdf): 
+Content: The World Bank, the European Union, and the United Nations conducted an interim damage assessment of the Gaza Strip, estimating $18.5 billion in direct damages to infrastructure by the end of January 2024. More than 60% of physical infrastructure in all sectors, except WASH, was damaged or destroyed as of the end of January 2024. The assessment includes a breakdown of damages by sector, with housing incurring the highest amount of damage. The report was published on March 29, 2024.
+
+Useful result: From [Source](https://news.un.org/en/story/2025/03/1160661): 
+Content: The UN News article, published on March 1, 2025, discusses the destruction in Gaza after 16 months of conflict. It mentions that over 60% of homes and 65% of roads have been destroyed. The article includes images of the destruction <image:1>, <image:2>, <image:3>. The UN estimates 51 million tons of rubble and the cost of damage to physical infrastructure at $30 billion. UNDP started removing rubble in December 2024.
+
+The claim '<image:33> This image shows Gaza, completely destroyed, in December 2024.' is false.
+Justification: The claim is rated as false. While evidence from sources like the UNOSAT ([https://data.humdata.org/dataset/unosat-gaza-strip-comprehensive-damage-assessment-01-december-2024](https://data.humdata.org/dataset/unosat-gaza-strip-comprehensive-damage-assessment-01-december-2024)) and UN News articles ([https://news.un.org/en/story/2025/03/1160661](https://news.un.org/en/story/2025/03/1160661)) confirms extensive damage in Gaza in December 2024, with approximately 69% of structures damaged, the evidence does not support the assertion that Gaza was "completely destroyed."
+
+So, the overall veracity is: false
+Fact-check took 1:08 min.

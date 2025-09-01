@@ -1,0 +1,54 @@
+Extracting claims from Content: <image:3> This is an authentic image of a mother holding the bones of her son in Gaza in March 2025. After more than a year and a half of searching for him under the rubble of their bombed-out house.
+'Claim: "<image:3> This is an authentic image of a mother holding the bones of her son in Gaza in March 2025. After more than a year and a half of searching for him under the rubble of their bombed-out house."'
+Verifying Claim: "<image:3> This is an authentic image of a mother holding the bones of her son in Gaza in March 2025. After more than a year and a half of searching for him under the rubble of their bombed-out house."
+Not enough information yet. Continuing fact-check...
+Got 0 new web source(s):
+Not enough information yet. Continuing fact-check...
+INFO: Dropping action 'reverse_search' as it was already performed.
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Gaza March 2025 bombing')
+Got 3 new web source(s):
+	1. https://en.wikipedia.org/wiki/March_2025_Israeli_attacks_on_the_Gaza_Strip
+	2. March 18, 2025 https://www.amnesty.org/en/latest/news/2025/03/israeli-air-strikes-kill-over-400-palestinians-across-gaza-following-unilateral-resumption-of-mass-attacks/
+	3. https://www.aljazeera.com/news/2025/3/30/israeli-air-attacks-kill-dozens-in-gaza-as-palestinians-mark-eid-al-fitr
+Useful result: From [Source](https://en.wikipedia.org/wiki/March_2025_Israeli_attacks_on_the_Gaza_Strip): 
+Content: The Wikipedia article discusses the March 2025 Israeli attacks on the Gaza Strip, which began on March 18, 2025, ending a ceasefire. The attacks, involving airstrikes, artillery, and missile barrages, targeted various locations in Gaza, including Gaza City, Khan Yunis, and Rafah. The attacks resulted in numerous casualties, with over 591 deaths, and were condemned by human rights organizations. The article mentions the attacks on March 18, 2025, at approximately 02:20 local time. The article also mentions the Israeli military's actions, including shutting off food, medicine, and electricity, which were deemed war crimes. The article also mentions the involvement of the Trump administration and the Israeli government's actions.
+
+Useful result: From [Source](https://www.amnesty.org/en/latest/news/2025/03/israeli-air-strikes-kill-over-400-palestinians-across-gaza-following-unilateral-resumption-of-mass-attacks/): 
+Content: Amnesty International reports on Israeli air strikes in Gaza in March 2025, which killed at least 414 Palestinians, including 174 children. <image:11892> The strikes led to a humanitarian crisis, with hospitals overwhelmed and shortages of medical supplies. The source is Amnesty International.
+
+Useful result: From [Source](https://www.aljazeera.com/news/2025/3/30/israeli-air-attacks-kill-dozens-in-gaza-as-palestinians-mark-eid-al-fitr): 
+Content: Al Jazeera published an article on March 30, 2025, reporting on Israeli air attacks in Gaza that killed dozens of people. <image:1>. The article mentions the recovery of bodies of medical workers and the deteriorating humanitarian situation, including a halt in aid delivery. The article also discusses ceasefire talks and Netanyahu's demands.
+
+Got 3 new web source(s):
+	1. January 23, 2025 https://www.bbc.com/news/articles/c6269pd5y2ko
+	2. April 30, 2024 https://www.aljazeera.com/news/longform/2024/4/30/we-didnt-expect-to-find-bones-inside-one-gaza-familys-nightmare
+	3. April 08, 2025 https://www.euronews.com/my-europe/2025/08/04/how-a-photo-of-a-skeletal-child-sparked-controversy-about-starvation-in-gaza
+Useful result: From [Source](https://www.bbc.com/news/articles/c6269pd5y2ko): 
+Content: The BBC published an article on January 23, 2025, discussing the search for missing people in Gaza. The article mentions that the Palestinian health authorities estimate that 10,000 people are missing. It also includes images of human remains found in the rubble in Rafah <image:10001>, and of a resident of Rafah, Osama Saleh, who found a skeleton in his home <image:10004>. The article also mentions a 13-year-old girl, Aya al-Dabeh, who was killed while staying in a school.
+
+Useful result: From [Source](https://www.aljazeera.com/news/longform/2024/4/30/we-didnt-expect-to-find-bones-inside-one-gaza-familys-nightmare): 
+Content: The Al Jazeera article, published on April 30, 2024, discusses the case of Naifa Rizq al-Sawada, a 92-year-old woman with dementia who went missing in late March after an Israeli raid on her family's home near al-Shifa Hospital in Gaza City. The article details the family's search for her, which ended with the discovery of bone fragments believed to be hers. <image:3> The article includes images of the aftermath of the raid and the family's home. The article also mentions the challenges in gathering information due to the Israeli military's actions and the lack of access for humanitarian groups.
+
+Useful result: From [Source](https://www.euronews.com/my-europe/2025/08/04/how-a-photo-of-a-skeletal-child-sparked-controversy-about-starvation-in-gaza): 
+Content: Euronews published an article on August 4, 2025, discussing a controversial photo of an emaciated child in Gaza. The article mentions that the photo was taken by freelance photographer Ahmeed al-Arini and was published by The New York Times. The article also mentions that the photo sparked controversy about starvation in Gaza. The article states that the WHO says malnutrition in Gaza has reached "alarming levels" and that there have been at least 74 malnutrition-related deaths in 2025. The article also mentions that the United Nations-backed Integrated Food Security Phase Classification has said that "the worst-case scenario of famine is currently playing out in the Gaza Strip". <image:3> is not mentioned in the article.
+
+Not enough information yet. Continuing fact-check...
+INFO: Dropping action 'reverse_search' as it was already performed.
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Gaza mother holding skeleton image origin')
+Skipping fact-checking website: https://factcheck.afp.com/doc.afp.com.37W26WD
+Got 3 new web source(s):
+	1. March 25, 2025 https://news.abplive.com/fact-check/viral-image-of-gazan-woman-golding-child-s-remains-is-digitally-generated-1760363
+	2. August 04, 2025 https://www.dailymail.co.uk/news/article-14969115/Gaza-skeleton-Palestinian-girl-skin-bone-food-crisis-Israel-hostage-video.html
+	3. August 05, 2025 https://www.kuow.org/stories/the-story-behind-one-grim-image-of-a-mother-and-child-in-gaza
+Useful result: From [Source](https://news.abplive.com/fact-check/viral-image-of-gazan-woman-golding-child-s-remains-is-digitally-generated-1760363): 
+Content: The image in the claim (<image:3>
+Useful result: From [Source](https://www.dailymail.co.uk/news/article-14969115/Gaza-skeleton-Palestinian-girl-skin-bone-food-crisis-Israel-hostage-video.html): 
+Content: The Daily Mail published an article on August 4, 2025, discussing the humanitarian crisis in Gaza and featuring images of a severely malnourished 9-year-old girl named Maryam Duvvas, who is receiving treatment at Patient Friends Association Hospital in Gaza City. <image:11948>, <image:11949>, <image:11951>, <image:11952>. The article also mentions the ongoing conflict, the deaths of Palestinians due to starvation, and the debate over the causes of the crisis. The article also includes images of other malnourished individuals and discusses the challenges of aid delivery.
+
+Useful result: From [Source](https://www.kuow.org/stories/the-story-behind-one-grim-image-of-a-mother-and-child-in-gaza): 
+Content: KUOW published an article on August 5, 2025, discussing the story behind an image of a mother and child in Gaza. The article mentions a photo of a starving child in Gaza that has gone viral.
+
+The claim '<image:3> This is an authentic image of a mother holding the bones of her son in Gaza in March 2025. After more than a year and a half of searching for him under the rubble of their bombed-out house.' is false.
+Justification: The claim is likely false. While the image (<image:3>
+So, the overall veracity is: false
+Fact-check took 5:27 min.

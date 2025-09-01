@@ -1,0 +1,39 @@
+Extracting claims from Content: The assassination plot to kill Donald Trump in 2024 was orchestrated by two Jewish Americans. Israel wants war with Iran but wants American money to fund it and American servicemen to fight it.
+'Claim: "The assassination plot to kill Donald Trump in 2024 was orchestrated by two Jewish Americans. Israel wants war with Iran but wants American money to fund it and American servicemen to fight it."'
+Verifying Claim: "The assassination plot to kill Donald Trump in 2024 was orchestrated by two Jewish Americans. Israel wants war with Iran but wants American money to fund it and American servicemen to fight it."
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='assassination plot Donald Trump 2024')
+Skipping unsupported website: https://www.justice.gov/archives/opa/pr/justice-department-announces-murder-hire-and-related-charges-against-irgc-asset-and-two
+Got 3 new web source(s):
+	1. https://en.wikipedia.org/wiki/Attempted_assassination_of_Donald_Trump_in_Pennsylvania
+	2. November 08, 2024 https://www.npr.org/2024/11/08/nx-s1-5184549/iran-donald-trump-murder-for-hire-plot-justice-department
+	3. November 08, 2024 https://www.bbc.com/news/articles/cx28x187rmko
+Useful result: From [Source](https://en.wikipedia.org/wiki/Attempted_assassination_of_Donald_Trump_in_Pennsylvania): 
+Content: The search result is from Wikipedia and discusses the attempted assassination of Donald Trump on July 13, 2024, in Pennsylvania. The perpetrator, Thomas Matthew Crooks, shot Trump with an AR-15-style rifle. The article mentions that the Secret Service had increased Trump's security due to intelligence suggesting Iran was plotting to assassinate him. The article also mentions conspiracy theories and misinformation that spread after the shooting.
+
+Useful result: From [Source](https://www.npr.org/2024/11/08/nx-s1-5184549/iran-donald-trump-murder-for-hire-plot-justice-department): 
+Content: NPR reports on a Justice Department announcement of an Iranian murder-for-hire plot to kill Donald Trump. The plot was allegedly orchestrated by an Iranian government official. The article mentions that the accused, Farhad Shakeri, was tasked with planning the assassination. Shakeri also told investigators that he was tasked with plotting the killings of two Jewish-Americans living in New York and Israeli tourists in Sri Lanka. The article was published on November 8, 2024. <image:12023>, <image:12022>, <image:12024>
+
+Useful result: From [Source](https://www.bbc.com/news/articles/cx28x187rmko): 
+Content: The BBC published an article on November 9, 2024, by Madeline Halpert, reporting that the US government charged an Afghan national in connection with an alleged Iranian plot to assassinate Donald Trump. <image:12026> The indictment also alleges that the Iranian government sought to kill two Jewish American businesspeople living in New York City. The article mentions that the Iranian government also asked the Afghan national to plan a mass shooting to target Israeli tourists in Sri Lanka.
+
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Israel war Iran US funding')
+Skipping unsupported website: https://www.congress.gov/crs-product/IF13032
+Got 3 new web source(s):
+	1. https://watson.brown.edu/costsofwar/papers/2024/USspendingIsrael
+	2. https://en.wikipedia.org/wiki/United_States_support_for_Israel_in_the_Gaza_war
+	3. June 26, 2025 https://www.aa.com.tr/en/middle-east/explainer-war-with-iran-financial-fallout-for-israel-us/3614218
+Useful result: From [Source](https://watson.brown.edu/costsofwar/papers/2024/USspendingIsrael): 
+Content: Brown University's Watson Institute for International and Public Affairs published a paper discussing U.S. spending on Israel's military operations since October 7, 2023. The U.S. has approved $17.9 billion in security assistance for Israeli military operations in Gaza and elsewhere. The total spending on Israel's military operations and related U.S. operations in the region is at least $22.76 billion.
+
+Useful result: From [Source](https://en.wikipedia.org/wiki/United_States_support_for_Israel_in_the_Gaza_war): 
+Content: The search result from Wikipedia discusses the US support for Israel in the Gaza war. It mentions that some Americans support ending arms transfers to Israel. It also mentions the Antisemitism Awareness Act, which broadens the legal definition of antisemitism to include Anti-Zionism, criticism of the policies of the state of Israel, and concerns about Palestinian human rights.
+
+Useful result: From [Source](https://www.aa.com.tr/en/middle-east/explainer-war-with-iran-financial-fallout-for-israel-us/3614218): 
+Content: The search result from Anadolu Agency discusses the financial impact of a conflict between Israel and Iran, as well as the US involvement. The article mentions that the US operation targeting Iranian nuclear sites involved 125 military aircraft and expensive ammunition, running a total cost that could be somewhere ‘between $1 billion to $2 billion’. The article was published on June 26, 2025, and updated on June 29, 2025. <image:k>
+
+The claim 'The assassination plot to kill Donald Trump in 2024 was orchestrated by two Jewish Americans. Israel wants war with Iran but wants American money to fund it and American servicemen to fight it.' is false.
+Justification: The claim is partially false. Evidence suggests an Iranian government official was involved in a plot to assassinate Donald Trump, but there is no evidence to support the claim that Jewish Americans orchestrated it. Furthermore, while the U.S. provides financial assistance to Israel, there is no direct evidence to support the assertion that Israel wants American money and servicemen for a war with Iran.
+
+So, the overall veracity is: false
+Fact-check took 11:30 min.
