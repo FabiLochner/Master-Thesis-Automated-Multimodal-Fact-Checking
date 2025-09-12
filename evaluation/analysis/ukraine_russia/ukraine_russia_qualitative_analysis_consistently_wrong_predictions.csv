@@ -1,0 +1,8 @@
+,claim_index,claim_type,variants_with_error,frequency_in_top10,primary_reason,secondary_reason,tool_limitation,evidence_quality
+3,31,Text-Only,"w/o_RIS, w/o_web_search, w/o_geolocate, w/o_image_search",14,News sources contain misleading/wrong headlines and/or content: Orthodox Church of Ukriane vs Ukrainian Orthodox Church.,,,Misleading
+6,63,Text-Only,"w/o_RIS, w/o_geolocate",12,News sources contain factually wrong information,,,Low and limited: DEFAME only used one newspaper article as source.
+5,48,Altered Image,"w/o_RIS, w/o_geolocate",11,The model did not check or compare the actual content of the AI image with the retrieved evidence.,The context of the retrieved evidence makes the claim highly plausible.,,
+2,28,Text-Only,w/o_web_search,10,Claim ambigiuity. Mismatch between fact-checking website evidence and retrieved newspaper evidence.  ," Snopes based its fact-check on criticisms around military aid, the retrieved newspapers confirm the criticism but not the military aid part.",,
+0,18,Text-Only,w/o_web_search,9,News sources contain wrong/misleading/ambigious headlines and/or information: Quran Burning vs Treason.,,,Misleading
+4,32,Text-Only,w/o_web_search,8,Tool limitation: Could not retrieve enough relevant evidence without web search to make the correct prediciton.,,Could not retrieve enough relevant evidence without web search to make the correct prediciton.,
+1,25,Text-Only,w/o_web_search,3,Tool limitation: Could not retrieve enough relevant evidence without web search to make the correct prediciton.,,Could not retrieve enough relevant evidence without web search to make the correct prediciton.,

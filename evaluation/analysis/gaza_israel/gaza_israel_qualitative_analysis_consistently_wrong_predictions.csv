@@ -1,0 +1,11 @@
+,claim_index,claim_type,variants_with_error,frequency_in_top10,primary_reason,secondary_reason,tool_limitation,evidence_quality
+3,26,Altered Image,"w/o_RIS, default, w/o_web_search, w/o_geolocate",14,Failed retrieval/understanding of sources OR Context makes claim plausible,Model does not verify image content OR Wrong RIS results,No web search available OR Relies on contextual understanding only,Poor to moderate - varies by available tools
+7,89,Text-Only,w/o_RIS,10,The context/retrieved evidence from the web search makes the claim highly plausible,Ground truth label may not be rigorous and might be wrong.,Difficult to verify assassination details,Contradictory sources (misbar vs intellinews)
+5,70,Text-Only,w/o_RIS,9,The context/retrieved evidence from the web search makes the claim highly plausible. ,Linguistic/contextual misunderstanding: Mixed up general vs specific success rates,,Conflicting evidence in sources
+6,77,Text-Only,w/o_RIS,9,Wrong retrieval/understanding of sources,Misinformation in NDTV article,None - text-only claim,Conflictign evidence in sources
+9,91,Normal Image,w/o_web_search,9,The context/retrieved evidence from the tool use makes the claim highly plausible,News sources falsely use image from different context,No web search for broader context verification,Misleading - correct geolocation but wrong temporal context
+1,9,Normal Image,w/o_geolocate,8,News sources contain wrong information: Old image used in new context,,No geolocation to verify image origin,Misleading - newspapers wrongly use old images
+0,8,Normal Image,w/o_RIS,7,The context/retrieved evidence from the web and image search make the claim highly plausible,Similar image context (Israel bombing in Lebanon vs Iran),No RIS to identify exact image origin,High plausibility from web/image search
+2,17,Text-Only,w/o_image_search,4,Ground truth label error,Missing image makes claim actually true,Missing image content,Predictions actually correct
+4,34,Normal Image,w/o_RIS,0,The context/retrieved evidence from the web search makes the claim highly plausible,CNN article image reference could not be verified,,Web evidence highly plausible but mentioned image could not be found
+8,90,Text-Only,default,0,Claim ambiguity,Interpretation dependent on intentionality,,Ambiguous evidence interpretation
