@@ -1,0 +1,43 @@
+Extracting claims from Content: <image:10229> This image shows an Israeli tank unit near Jabalia camp in northern Gaza that was successfully ambushed by Hamas fighters, destroying multiple vehicles and injuring or killing their crews in October 2024.
+'Claim: "<image:10229> This image shows an Israeli tank unit near Jabalia camp in northern Gaza that was successfully ambushed by Hamas fighters, destroying multiple vehicles and injuring or killing their crews in October 2024."'
+Verifying Claim: "<image:10229> This image shows an Israeli tank unit near Jabalia camp in northern Gaza that was successfully ambushed by Hamas fighters, destroying multiple vehicles and injuring or killing their crews in October 2024."
+Not enough information yet. Continuing fact-check...
+Searching google_vision with query: ImageQuery(limit=3, start_date=None, end_date=None, search_type='reverse', text='', image=<defame.common.medium.Image object at 0x7ffed0219e70>)
+Skipping unsupported website: https://www.facebook.com/media/set/?vanity=mhmd.mnswr.al.ntry&set=a.203227126152718
+Skipping unsupported website: https://www.youtube.com/watch?v=RpC8SN-X5rg
+Skipping unsupported website: https://x.com/arabic_post/status/1960630857191854296
+Got 4 new web source(s):
+	1. https://9jaflaver.com/israel-declares-state-of-war-after-hamas-militants-launch-surprise-attack-from-gaza-videos/
+	2. https://www.nairaland.com/7868168/israel-declares-war-readiness-hamas
+	3. https://africacheck.org/fr/fact-checks/meta-programme-fact-checks/guerre-israel-hamas-palestine-char-detruit-image-hors-contexe-2024-03-26
+	4. https://defencesecurityasia.com/500-kenderaan-perisai-israel-rosak-dibedil-pejuang-palestin-media-israel/
+Useful result: From [Source](https://9jaflaver.com/israel-declares-state-of-war-after-hamas-militants-launch-surprise-attack-from-gaza-videos/): Found exact image on website with title: Israel declares 'state of war' after Hamas militants launch surprise ...
+Content: The search result is from 9jaflaver.com and is titled "Israel declares ‘state of war’ after Hamas militants launch surprise attack from Gaza (videos)" and was posted on October 7, 2023. The article discusses the surprise attack by Hamas on October 7, 2023, and includes images of the aftermath of the attacks <image:11572>. The article also mentions that Hamas launched the biggest attack on Israel on Saturday morning, October 7, in a surprise assault. The article also includes a video of an Israeli woman in the hands of Hamas.
+
+Useful result: From [Source](https://www.nairaland.com/7868168/israel-declares-war-readiness-hamas): Found exact image on website with title: Israel declares war readiness as Hamas springs surprise multiple ...
+Content: The search result is from Nairaland, a Nigerian forum. It contains a post from October 7, 2023, discussing the Israel-Hamas conflict. The post includes images of the conflict, including the one in the claim <image:10229>. The post also mentions Hamas attacks, Israeli responses, and reactions from various sources.
+
+Useful result: From [Source](https://africacheck.org/fr/fact-checks/meta-programme-fact-checks/guerre-israel-hamas-palestine-char-detruit-image-hors-contexe-2024-03-26): Found exact image on website with title: Guerre Israël - Hamas : cette image ne montre pas un char détruit ...
+Content: The image shows an Israeli tank destroyed by the Al-Qassam Brigade in the Gaza Strip in October 2023. The image was published by Defense Mirror on November 8, 2023. The image is attributed to the Islam Republic News Agency (IRNA). <image:10229>
+
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Israeli tank Jabalia camp Hamas October 2024')
+Got 3 new web source(s):
+	1. October 06, 2024 https://www.aljazeera.com/news/2024/10/6/israel-launches-ground-offensive-on-jabalia-again-killing-17
+	2. https://www.bbc.com/news/articles/c9vplm00pm0o
+	3. December 18, 2024 https://www.theguardian.com/global-development/2024/dec/18/jabaliya-refugee-camp-gaza-destruction-idf
+Useful result: From [Source](https://www.aljazeera.com/news/2024/10/6/israel-launches-ground-offensive-on-jabalia-again-killing-17): 
+Content: Al Jazeera published an article on October 6, 2024, reporting on an Israeli ground offensive in Jabalia, Gaza. The article mentions intense bombardment, tank deployment, and casualties, including children. <image:10229> is not present in the article.
+
+Useful result: From [Source](https://www.bbc.com/news/articles/c9vplm00pm0o): 
+Content: The BBC published an article on October 9, 2024, discussing the situation in Jabalia refugee camp in the northern Gaza Strip. <image:11599> shows an injured woman being carried out of the camp. The article mentions Israeli military operations, including shelling and ground offensives, and the evacuation of patients from Kamal Adwan Hospital.
+
+Useful result: From [Source](https://www.theguardian.com/global-development/2024/dec/18/jabaliya-refugee-camp-gaza-destruction-idf): 
+Content: The Guardian published an article on December 18, 2024, discussing the destruction of the Jabaliya refugee camp in Gaza. The article mentions three offensives by Israeli forces, with the third offensive beginning on October 5, 2024. The article includes satellite images and videos showing the destruction of the camp. <image:10229> is not present in the article.
+
+Most likely location: Pakistan
+Top 10 locations: Pakistan, Palestine, Israel, Tunisia, Mexico, Colombia, Chile, Sweden, Argentina, Denmark
+The claim '<image:10229> This image shows an Israeli tank unit near Jabalia camp in northern Gaza that was successfully ambushed by Hamas fighters, destroying multiple vehicles and injuring or killing their crews in October 2024.' is false.
+Justification: The image depicts an Israeli tank destroyed in the Gaza Strip, as confirmed by sources like [africacheck.org](https://africacheck.org/fr/fact-checks/meta-programme-fact-checks/guerre-israel-hamas-palestine-char-detruit-image-hors-contexe-2024-03-26). However, the claim's specific details about the ambush by Hamas, the number of vehicles destroyed, and casualties are not verified by the evidence.
+
+So, the overall veracity is: false
+Fact-check took 2:59 min.

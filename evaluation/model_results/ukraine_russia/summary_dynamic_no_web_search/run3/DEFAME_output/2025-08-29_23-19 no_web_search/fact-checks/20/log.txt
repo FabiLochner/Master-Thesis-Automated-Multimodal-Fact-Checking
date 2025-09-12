@@ -1,0 +1,63 @@
+Extracting claims from Content: After Donald Trump won the US presidential election in 2024, NATO Secretary General Mark Rutte said that ‘If Trump surrenders Ukraine to Putin, he will personally expel the United States from the alliance’.
+'Claim: "After Donald Trump won the US presidential election in 2024, NATO Secretary General Mark Rutte said that ‘If Trump surrenders Ukraine to Putin, he will personally expel the United States from the alliance’."'
+Verifying Claim: "After Donald Trump won the US presidential election in 2024, NATO Secretary General Mark Rutte said that ‘If Trump surrenders Ukraine to Putin, he will personally expel the United States from the alliance’."
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Mark Rutte Trump Ukraine Putin NATO')
+Failed to download or open image: cannot identify image file <_io.BytesIO object at 0x7ffed17b5fd0>
+Got 3 new web source(s):
+	1. https://www.npr.org/2025/07/14/nx-s1-5467272/russia-ukraine-war-trump-nato-weapons-tariffs
+	2. https://www.nato.int/cps/en/natohq/opinions_237212.htm
+	3. https://abcnews.go.com/International/russia-launches-136-drones-ukraine-ahead-expected-trump/story?id=123729140
+Useful result: From [Source](https://www.npr.org/2025/07/14/nx-s1-5467272/russia-ukraine-war-trump-nato-weapons-tariffs): 
+Content: The search result from NPR contains an image of Mark Rutte and Donald Trump. <image:7088>
+
+Useful result: From [Source](https://abcnews.go.com/International/russia-launches-136-drones-ukraine-ahead-expected-trump/story?id=123729140): 
+Content: The search result contains an image of Donald Trump. <image:7089>
+
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Mark Rutte statement Trump Ukraine Putin NATO')
+Failed to download or open image: cannot identify image file <_io.BytesIO object at 0x7ffed1560ae0>
+Failed to download or open image: cannot identify image file <_io.BytesIO object at 0x7ffed1561c60>
+Got 3 new web source(s):
+	1. https://www.nato.int/cps/en/natohq/opinions_237051.htm
+	2. https://www.politico.com/news/2025/03/13/putin-ukraine-ceasefire-trump-negotiations-00229739
+	3. https://abcnews.go.com/International/trump-ukraine-weapons-putin-reaction-analysis/story?id=123759522
+Useful result: From [Source](https://abcnews.go.com/International/trump-ukraine-weapons-putin-reaction-analysis/story?id=123759522): 
+Content: The search result from ABC News includes an image of Mark Rutte and Donald Trump <image:7100>.
+
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Mark Rutte expel US NATO Trump')
+Failed to download or open image: cannot identify image file <_io.BytesIO object at 0x7ffed1563470>
+Got 2 new web source(s):
+	1. https://www.aljazeera.com/features/2025/6/28/hey-daddy-how-different-world-leaders-massage-trumps-ego
+	2. https://www.politico.com/news/2024/06/20/nato-new-chief-trump-00164340
+Useful result: From [Source](https://www.aljazeera.com/features/2025/6/28/hey-daddy-how-different-world-leaders-massage-trumps-ego): 
+Content: Al Jazeera published an article on June 28, 2025, with an image of Donald Trump and Mark Rutte together <image:7104>.
+
+Useful result: From [Source](https://www.politico.com/news/2024/06/20/nato-new-chief-trump-00164340): 
+Content: Politico published an image of Mark Rutte and Donald Trump. <image:7105>
+
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Mark Rutte statement on Trump and Ukraine')
+Failed to download or open image: cannot identify image file <_io.BytesIO object at 0x7ffed1560630>
+Failed to download or open image: cannot identify image file <_io.BytesIO object at 0x7ffee8184770>
+Got 1 new web source(s):
+	1. https://www.theguardian.com/world/2025/jul/14/trumps-hazy-ukraine-arms-announcement-marks-a-tonal-u-turn
+Useful result: From [Source](https://www.theguardian.com/world/2025/jul/14/trumps-hazy-ukraine-arms-announcement-marks-a-tonal-u-turn): 
+Content: The Guardian published an article on July 14, 2025, which includes an image of Mark Rutte and Donald Trump <image:7113>.
+
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='NATO Secretary General Trump Ukraine Putin')
+Failed to download or open image: cannot identify image file <_io.BytesIO object at 0x7ffed1560630>
+Got 2 new web source(s):
+	1. https://www.iowapublicradio.org/news-from-npr/2025-07-14/trump-touts-weapon-sales-to-nato-for-ukraine-and-threatens-russia-with-100-tariffs
+	2. https://www.lemonde.fr/en/international/article/2025/07/14/trump-tells-russia-to-resolve-its-ukraine-war-in-50-days_6743364_4.html
+Useful result: From [Source](https://www.iowapublicradio.org/news-from-npr/2025-07-14/trump-touts-weapon-sales-to-nato-for-ukraine-and-threatens-russia-with-100-tariffs): 
+Content: The search result from Iowa Public Radio includes an image of Mark Rutte and Donald Trump <image:7116>.
+
+Useful result: From [Source](https://www.lemonde.fr/en/international/article/2025/07/14/trump-tells-russia-to-resolve-its-ukraine-war-in-50-days_6743364_4.html): 
+Content: Le Monde published an article on July 14, 2025, featuring an image of Mark Rutte and Donald Trump <image:7117>.
+
+The claim 'After Donald Trump won the US presidential election in 2024, NATO Secretary General Mark Rutte said that ‘If Trump surrenders Ukraine to Putin, he will personally expel the United States from the alliance’.' is false.
+Justification: The fact-check, based on multiple image searches, found numerous images of Mark Rutte and Donald Trump together, but no evidence to support the claim that Rutte made the specific statement about Trump, Ukraine, Putin, and the expulsion of the United States from NATO. Therefore, the claim is rated as false.
+
+So, the overall veracity is: false
+Fact-check took 1:10 min.

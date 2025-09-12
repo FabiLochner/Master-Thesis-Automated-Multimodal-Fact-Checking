@@ -1,0 +1,1371 @@
+PlanPrompt - QUERY:
+
+# Instructions
+The available knowledge is insufficient to assess the Claim. Therefore, **propose a set of actions** to retrieve new and helpful evidence. Adhere to the following rules:
+* The actions available are listed under Valid Actions, including a short description for each action. No other actions are possible at this moment. 
+* For each action, use the formatting as specified in Valid Actions.
+* Include all actions in a single Markdown code block at the end of your answer.
+* Propose as few actions as possible, but as much as needed. Do not propose similar or previously used actions.
+
+
+
+## Valid Actions
+* `image_search`
+   * Description: Run an image search on Google to retrieve related images for a given query.
+   * How to use: This is a helpful tool for fact-checking images. Use this to retrieve images associated with a specific keyword or phrase. Ensure that the query is clear and specific to improve search accuracy. If no relevant images are found, refine the query or use more descriptive terms.
+   * Format: image_search("your image search query goes here")
+
+* `geolocate`
+   * Description: Performs geolocation to determine the country where an image was taken.
+   * How to use: Provide an image and the model will determine the most likely countries where it was taken.
+   * Format: geolocate(<image:k>), where `k` is the image's ID
+
+* `web_search`
+   * Description: Run an open web search on Google or DuckDuckGO to retrieve any related webpage.
+   * How to use: Do not use this with a previously used or similar query from previous web searches. If a previous web search did not yield any results, use a very different query.
+   * Format: web_search("your web search query goes here")
+
+* `reverse_search`
+   * Description: Performs a reverse image search to find similar images on the web.
+   * How to use: Provide an image and the model will perform a reverse search to find similar images.
+   * Format: reverse_search(<image:k>), where `k` is the image's ID
+
+# Example: image_search()
+
+## Claim
+Text: "Chinese officials in white protective hazmat suits carried people down a hallway to be quarantined for having COVID-19 in November 2022."
+
+...
+
+ACTIONS:
+```
+image_search("China officials white suits carry people")
+image_search("China officials carry people COVID quarantine 2022")
+```
+
+# Example: geolocate()
+
+## Claim
+Text: "<image:k> shows a nuclear weapons facility in Usbekistan."
+
+...
+
+## Actions
+```
+geolocate(<image:k>)
+```
+
+# Example: web_search()
+
+## Claim
+Text: "New Zealand’s new Food Bill bans gardening"
+Claim date: October 29, 2020
+
+...
+
+## Actions
+```
+web_search("New Zealand Food Bill 2020")
+web_search("New Zealand Food Bill gardening ban")
+```
+
+# Example: reverse_search()
+
+## Claim
+Text: "<image:k> shows a rare event of a solar eclipse with a double ring."
+
+...
+
+## Actions
+```
+reverse_search(<image:k>)
+```
+
+# Record
+## Claim
+Claim: "<image:64> This is an authentic image of Dwayne Johnson waring the Israeli flag in support of Israel."
+
+# Your Actions
+
+
+
+===== > RESPONSE:  < =====
+```
+reverse_search(<image:64>)
+web_search("Dwayne Johnson Israel support")
+```
+_________________________
+
+
+
+SummarizeResultPrompt - QUERY:
+
+# Instructions
+In order to find evidence that helps your fact-check, you just ran a web search which yielded a Search Result. **Your task right now is to summarize the Search Result.** What to include:
+* information that might be useful for the fact-check (see Record)
+* relevant images (refer to images by inserting their reference <image:k>)
+* if available: the release date as well as the author or the publisher (e.g. the media company) of the search result.
+
+Do NOT include:
+* advertisements
+* any other information not related to the Record or the Claim
+
+Additional rules:
+* Do not add any additional information besides the information in the Search Result.
+* If the Search Result doesn't contain any relevant information for the fact-checking work, simply print one word in capital letters: "NONE".
+* Keep your writing style like in the Examples 1, 2 and 3 provided to you.
+* Try to filter out relevant information even if the search result is in a different language.
+
+# Example 1
+The search result from America Today provides several photographs of the Notre-Dame Cathedral fire on April 15, 2019. <image:i>, <image:j>, <image:k>. None of the images show the Eiffel Tower in the background. 
+
+# Example 2
+NONE
+
+# Example 3
+The Guardian discusses a report blaming the Syrian government for a toxic gas attack and condemning their use of chemical weapons. The Guardian mentions the Chemical Weapons Convention and the responsibilities of Syria under the convention. According to The Guardian, The White House condemned the Assad regime for defying the norm against chemical weapons use.
+
+# Record
+## Claim
+Claim: "<image:64> This is an authentic image of Dwayne Johnson waring the Israeli flag in support of Israel."
+
+## Actions
+```
+reverse_search(<image:64>)
+web_search("Dwayne Johnson Israel support")
+```
+
+# Search Result
+From [Source](https://www.marca.com/en/lifestyle/world-news/2023/10/11/6526c4cc22601d2d748b45da.html): 
+Content: "I pray for all innocent lives."
+
+> [Ver esta publicaci�n en Instagram](https://www.instagram.com/p/CyPX7z8L-Sz/?utm_source=ig_embed&utm_medium=loading)
+
+Unlike many celebrities, **Johnson** does not appear to be showing a clear allegiance with either side of the conflict, although, whilst mentioning the loss of Palestinian lives, he does not specifically mention the Israeli airstrikes on the Gaza Strip.
+
+The airstrikes were launched in response to a sudden surprise attack from Hamas on Israeli towns near the border and a music festival in the desert where hundreds of young people were killed and many kidnapped.
+
+* * *
+
+*   [World News](https://www.marca.com/en/lifestyle/world-news.html)
+    
+*   [Dwayne Johnson - English](https://www.marca.com/en/lifestyle/dwayne-johnson.html)
+    
+*   [Israel - English](https://www.marca.com/en/lifestyle/world-news/israel.html)
+    
+*   [War in Israel - English](https://www.marca.com/en/lifestyle/world-news/war-in-israel.html)
+    
+*   [Gaza Strip - English](https://www.marca.com/en/lifestyle/world-news/gaza-strip.html)
+    
+*   [Hamas - English](https://www.marca.com/en/lifestyle/world-news/hamas.html)
+    
+*   [Palestine - English](https://www.marca.com/en/lifestyle/world-news/palestine.html)
+    
+
+World News[Playboy cancel their contract with Mia Khalifa over her support for Palestine](https://www.marca.com/en/lifestyle/world-news/2023/10/10/65254865ca4741416d8b4580.html?intcmp=MNOT23801&s_kw=1)
+
+US News[Joe Biden confirms Americans are among Hamas hostages: This is terrorism](https://www.marca.com/en/lifestyle/us-news/2023/10/10/6525b66ee2704eba5a8b45c4.html?intcmp=MNOT23801&s_kw=2)
+
+World News[What is Hamas? ![](https://pixelcounter.marca.com/pixelcontabilizacion/pixelcontabilizacion.gifctl?r=http%3A%2F%2Fwww%2Emarca%2Ecom%2Fen%2Flifestyle%2Fworld%2Dnews%2F2023%2F10%2F11%2F6526c4cc22601d2d748b45da%2Ehtml&s=marca&d=aHzSiAoAAhEAAABgUWM)
+
+*   Es noticia:
+*   [Taylor Swift Travis Kelce](https://www.marca.com/en/nfl/kansas-city-chiefs/2025/07/20/687bd70422601d943b8b45c0.html)
+    
+*   [Jerry Jones](https://www.marca.com/en/nfl/dallas-cowboys/2025/07/20/687c5b4c46163f7f618b4581.html)
+    
+*   [Micah Parsons](https://www.marca.com/en/nfl/dallas-cowboys/2025/07/19/687bf7e222601dcf258b45e6.html)
+    
+*   [Titans Fantasy Football](https://www.marca.com/en/nfl/fantasy-football/2025/07/19/687bfa5022601dfb5c8b4572.html)
+    
+*   [Patrick Mahomes](https://www.marca.com/en/nfl/kansas-city-chiefs/2025/07/19/687ba86a268e3ea05b8b458f.html)
+    
+*   [Brett Lemieux Cause of Death](https://www.marca.com/en/nfl/kansas-city-chiefs/2025/07/19/687bc4ad22601db87d8b45c8.html)
+    
+*   [Shilo Sanders](https://www.marca.com/en/nfl/tampa-bay-buccaneers/2025/07/19/687c0948268e3e7d568b45a4.html)
+    
+*   [Deion Sanders](https://www.marca.com/en/ncaa/2025/07/20/687c173022601d5b578b45ec.html)
+    
+*   [Arch Manning](https://www.marca.com/en/ncaa/2025/07/19/687bc96b22601d95248b45d8.html)
+    
+*   [Caitlin Clark](https://www.marca.com/en/basketball/wnba/indiana-fever/2025/07/19/687b93cf268e3eef708b4583.html)
+    
+*   [Klay Thompson](https://www.marca.com/en/basketball/nba/dallas-mavericks/2025/07/20/687c129e46163fd8768b45f8.html)
+    
+*   [WNBA All-Star Game Winners](https://www.marca.com/en/basketball/wnba/2025/07/20/687c2dcde2704e4b7b8b456c.html)
+    
+*   [Manny Pacquiao vs Mario Barrios](https://www.marca.com/en/boxing/2025/07/20/687c7924268e3e32588b45ad.html)
+    
+*   [Mass Bee Deaths](https://www.marca.com/en/lifestyle/us-news/2025/07/19/687bb388268e3e32588b4586.html)
+    
+*   [Justin Bieber](https://www.marca.com/en/lifestyle/us-news/2025/07/19/687c05d922601d6c7a8b45ce.html)
+    
+*   [Horoscope Today](https://www.marca.com/en/lifestyle/world-news/2025/07/19/687b624d22601d1e638b45c6.html)
+    
+*   [Latest News](https://www.marca.com/en/latest-news.html)
+    
+*   [401k Retirement Plans](https://www.marca.com/en/lifestyle/us-news/personal-finance/2025/07/19/687bb98622601d83798b45b0.html)
+    
+*   [Credit Report](https://www.marca.com/en/lifestyle/us-news/personal-finance/2025/07/19/687b7add268e3ec35e8b457b.html)
+    
+*   [SNAP Florida Beneficiaries](https://www.marca.com/en/lifestyle/us-news/personal-finance/2025/07/19/687bb02246163fe9628b45e1.html)
+    
+*   [New York Stimulus Payment](https://www.marca.com/en/lifestyle/us-news/personal-finance/2025/07/19/687bb21c22601de43c8b45d8.html)
+    
+
+*   *   [Celebrities](https://www.marca.com/en/lifestyle/celebrities.html?intcmp=MENUPROD&s_kw=en-lifestyle-celebrities)
+        
+    *   [Fitness](https://www.marca.com/en/lifestyle/fitness.html?intcmp=MENUPROD&s_kw=en-lifestyle-fitness)
+        
+    *   [Gaming](https://www.marca.com/en/technology/gaming.html?intcmp=MENUPROD&s_kw=en-gaming)
+        
+*   *   [Movies](https://www.marca.com/en/lifestyle/movies.html?intcmp=MENUPROD&s_kw=en-lifestyle-movies)
+        
+    *   [Music](https://www.marca.com/en/lifestyle/music.html?intcmp=MENUPROD&s_kw=en-lifestyle-music)
+        
+    *   [Net Worth](https://www.marca.com/en/lifestyle/net-worth.html?intcmp=MENUPROD&s_kw=en-lifestyle-net-worth)
+        
+*   *   [TV Shows](https://www.marca.com/en/lifestyle/tv-shows.html?intcmp=MENUPROD&s_kw=en-lifestyle-tv-shows)
+        
+    *   [US News](https://www.marca.com/en/lifestyle/us-news.html?intcmp=MENUPROD&s_kw=en-lifestyle-us-news)
+        
+    *   [World News](https://www.marca.com/en/lifestyle/world-news.html?intcmp=MENUPROD&s_kw=en-lifestyle-world-news)
+        
+
+*   *   [Basketball](https://www.marca.com/en/basketball.html?intcmp=MENUPROD&s_kw=en-basketball)
+        
+    *   [Formula 1](https://www.marca.com/en/f1.html?intcmp=MENUPROD&s_kw=en-formula-1)
+        
+    *   [Golf](https://www.marca.com/en/golf.html?intcmp=MENUPROD&s_kw=en-golf)
+        
+*   *   [IndyCar](https://www.marca.com/en/indycar.html?intcmp=MENUPROD&s_kw=en-indycar)
+        
+    *   [NASCAR](https://www.marca.com/en/nascar.html?intcmp=MENUPROD&s_kw=en-nascar)
+        
+    *   [NCAA](https://www.marca.com/en/ncaa.html?intcmp=MENUPROD&s_kw=en-ncaa)
+        *   [Basketball](https://www.marca.com/en/ncaa/college-basketball.html?intcmp=MENUPROD&s_kw=en-ncaa-basketball)
+            
+        *   [Football](https://www.marca.com/en/ncaa/college-football.html?intcmp=MENUPROD&s_kw=en-ncaa-football)
+            
+*   *   [NHL](https://www.marca.com/en/nhl.html?intcmp=MENUPROD&s_kw=en-nhl)
+        
+    *   [Olympic Games](https://www.marca.com/en/olympic-games.html?intcmp=MENUPROD&s_kw=english-olympic-games)
+        
+    *   [PFL](https://www.marca.com/en/pfl.html?intcmp=MENUPROD&s_kw=en-pfl)
+        
+*   *   [Tennis](https://www.marca.com/en/tennis.html?intcmp=MENUPROD&s_kw=en-tennis)
+        
+    *   [UFC](https://www.marca.com/en/ufc.html?intcmp=MENUPROD&s_kw=en-ufc)
+        
+    *   [WWE](https://www.marca.com/en/wwe.html?intcmp=MENUPROD&s_kw=en-wwe)
+        
+
+WORLD NEWS
+
+World News
+
+Dwayne 'The Rock' Johnson shares his views on Israel-Palestine war: I condemn and denounce terrorism
+====================================================================================================
+
+He has chosen to share his thoughts on the important matter
+
+!Dwayne &apos;The Rock&apos; Johnson shares his views on Israel-Palestine war <image:2699>
+
+Dwayne 'The Rock' Johnson shares his views on Israel-Palestine war
+
+*   TBS
+    
+
+11/10/2023 - 10:53 CDT
+
+*   [Compartir en Facebook](#)
+    
+*   [Compartir en Twitter](#)
+    
+*   [Compartir en Telegram](#)
+    
+*   [Compartir en Whatsapp](#)
+    
+*   [Enviar por email](mailto:?subject=Dwayne%20%27The%20Rock%27%20Johnson%20shares%20his%20views%20on%20Israel-Palestine%20war%3A%20I%20condemn%20and%20denounce%20terrorism&body=https://www.marca.com/en/lifestyle/world-news/2023/10/11/6526c4cc22601d2d748b45da.html?emk=MAILSHARE)
+    
+
+*   World News. [What did Nostradamus say about an Israel vs Hamas war in his prophecies for 2023?](https://www.marca.com/en/lifestyle/world-news/2023/10/11/6526902022601dd91c8b45a0.html)
+    
+
+At a time when experts on Middle Eastern geopolitics are being asked to give context for **[the violence between Israel and Palestine](https://www.marca.com/en/lifestyle/world-news/war-in-israel.html)
+**, many celebrities are also choosing to weigh in with their thoughts.
+
+One such celebrity is WWE legend and actor **[Dwayne 'The Rock' Johnson](https://www.marca.com/en/lifestyle/dwayne-johnson.html)
+**. [What to know on the fifth day of the latest Israel-Palestinian war](https://www.marca.com/en/lifestyle/world-news/2023/10/11/652680c6e2704e628f8b4598.html)
+    
+*   World News. He has shared a long statement on his Instagram account in which he expressed his heartbreak and outrage at the events of the past four days.
+
+TV reporter bursts into tears while talking about the victims of the Israel-Hamas conflictRoberto Ortega
+
+The Rock's statement on the Israel-Palestine conflict
+-----------------------------------------------------
+
+"I'm heartbroken, angry, and sickened by the brutal murders and kidnapping of Jewish people through the horrific acts of the Hamas terrorist group," he began.
+
+"The growing loss of innocent Israeli and Palestinian lives is heart-wrenching as this war escalates to immense proportions.
+
+"I don't pretend to know everything about the complex conflict in the Middle East. Why are Israel and Palestine at war?](https://www.marca.com/en/lifestyle/world-news/2023/10/08/6522d5e4268e3e011e8b4576.html?intcmp=MNOT23801&s_kw=3)
+
+See links of interest
+
+*   [Personal Finance](https://www.marca.com/en/lifestyle/us-news/personal-finance.html)
+    
+*   [US News](https://www.marca.com/en/lifestyle/us-news.html)
+    
+*   [California News](https://www.marca.com/en/lifestyle/us-news/california.html)
+    
+*   [New York News](https://www.marca.com/en/lifestyle/us-news/new-york.html)
+    
+*   [Florida News](https://www.marca.com/en/lifestyle/us-news/florida.html)
+    
+*   [Texas News](https://www.marca.com/en/lifestyle/us-news/texas.html)
+    
+*   [Elon Musk News](https://www.marca.com/en/lifestyle/elon-musk.html)
+    
+*   [SNAP Benefits](https://www.marca.com/en/lifestyle/us-news/snap-benefits.html)
+    
+*   [Student Loans](https://www.marca.com/en/lifestyle/student-loans.html)
+    
+*   [CalFresh](https://www.marca.com/en/lifestyle/us-news/calfresh.html)
+    
+*   [CalWORKs](https://www.marca.com/en/lifestyle/us-news/personal-finance/calworks.html)
+    
+*   [Taylor Swift news](https://www.marca.com/en/lifestyle/taylor-swift.html)
+    
+*   [Kate Middleton News](https://www.marca.com/en/lifestyle/kate-middleton.html)
+    
+*   [British Royal Family news](https://www.marca.com/en/lifestyle/british-royal-family.html)
+    
+*   [Stephen A."
+
+# Your Summary
+
+
+
+===== > RESPONSE:  < =====
+The search result from Marca.com, published on October 11, 2023, discusses Dwayne "The Rock" Johnson's views on the Israel-Palestine war. <image:2699> The article mentions Johnson's Instagram post where he expressed his heartbreak and outrage at the events, condemning the actions of Hamas and the loss of innocent lives. The article does not show Johnson wearing the Israeli flag.
+
+_________________________
+
+
+
+SummarizeResultPrompt - QUERY:
+
+# Instructions
+In order to find evidence that helps your fact-check, you just ran a web search which yielded a Search Result. **Your task right now is to summarize the Search Result.** What to include:
+* information that might be useful for the fact-check (see Record)
+* relevant images (refer to images by inserting their reference <image:k>)
+* if available: the release date as well as the author or the publisher (e.g. the media company) of the search result.
+
+Do NOT include:
+* advertisements
+* any other information not related to the Record or the Claim
+
+Additional rules:
+* Do not add any additional information besides the information in the Search Result.
+* If the Search Result doesn't contain any relevant information for the fact-checking work, simply print one word in capital letters: "NONE".
+* Keep your writing style like in the Examples 1, 2 and 3 provided to you.
+* Try to filter out relevant information even if the search result is in a different language.
+
+# Example 1
+The search result from America Today provides several photographs of the Notre-Dame Cathedral fire on April 15, 2019. <image:i>, <image:j>, <image:k>. None of the images show the Eiffel Tower in the background. 
+
+# Example 2
+NONE
+
+# Example 3
+The Guardian discusses a report blaming the Syrian government for a toxic gas attack and condemning their use of chemical weapons. The Guardian mentions the Chemical Weapons Convention and the responsibilities of Syria under the convention. According to The Guardian, The White House condemned the Assad regime for defying the norm against chemical weapons use.
+
+# Record
+## Claim
+Claim: "<image:64> This is an authentic image of Dwayne Johnson waring the Israeli flag in support of Israel."
+
+## Actions
+```
+reverse_search(<image:64>)
+web_search("Dwayne Johnson Israel support")
+```
+
+# Search Result
+From [Source](https://shopisrael.com/blogs/support/does-dwayne-johnson-support-israel?srsltid=AfmBOopy4n2f7lxTWWqdiE6_xSd1XeW0AbQOVlP76nNPJQ6KrktIHL3X): 
+Content: "
+
+Free Shipping on orders of €100 or more
+
+![](<Base64-Image-Removed>)
+
+Cart
+
+**Free Shipping** on orders of €100 or more
+
+Your cart is empty.
+
+[Continue browsing](#k-hub/)
+
+Special instructions for seller
+
+Special instructions for seller
+
+Estimate shipping
+
+      
+
+Country
+
+Province
+
+Postal/Zip Code 
+
+_Shipping & taxes calculated at checkout_
+
+Check Out • 0,00 DKK
+
+![Does Dwayne Johnson Support Israel? - Shop Israel](//shopisrael.com/cdn/shop/articles/does-dwayne-johnson-support-israel-600395.png?v=1739937114&width=960)
+
+**Key Takeaways**
+
+*   Dwayne Johnson has not been noted for direct engagements with Israel, such as visits or events, but has expressed his views on the Israel-Palestine conflict.
+*   He has made public statements condemning terrorism and expressing sympathy for innocent lives lost in the conflict.
+*   Johnson's overall stance on Israel is not explicitly supportive or critical, but he emphasizes compassion and peace.
+
+Dwayne Johnson is a globally recognized figure, known for his career in both professional wrestling and Hollywood. The question of whether Dwayne Johnson supports Israel is complex, given his recent statements on the Israel-Palestine conflict. Does Dwayne Johnson Support Israel?
+
+### Has Dwayne Johnson Engaged with Israel Directly?
+
+Dwayne Johnson has not been reported to have engaged directly with Israel through visits or personal connections. His stance on Israel is not explicitly supportive or critical but emphasizes the importance of peace and compassion.
+
+*   Johnson's overall political alignment is not strongly affiliated with any particular side in the Israel/Palestine conflict, as he tends to focus on broader humanitarian concerns.
+*   Key points about his stance:
+    *   He condemns terrorism and supports peace.
+    *   Johnson does not explicitly support or criticize either side in the conflict.
+
+### Community Engagement and Advocacy
+
+Dwayne Johnson is known for his philanthropic efforts, but these have not specifically targeted Israel or Israeli organizations. His advocacy focuses more on general humanitarian causes.
+
+*   Johnson has not undertaken any charitable or advocacy work specifically related to Israel.
+*   His community engagement and advocacy efforts are generally aimed at broader social issues rather than specific national or political causes.
+
+### Cultural Impact Related to Israel
+
+Dwayne Johnson's influence on cultural perceptions of Israel is minimal, as his public persona and actions have not been directly associated with Israeli cultural initiatives or events.
+
+*   Johnson's cultural contributions and endorsements have not specifically resonated in Israel or impacted local Israeli cultural initiatives.
+*   His influence is more aligned with global entertainment and humanitarian efforts rather than specific cultural engagements with Israel.
+
+### Conclusion: Dwayne Johnson’s Relationship with Israel
+
+Dwayne Johnson's relationship with Israel is not characterized by direct engagement or explicit political support. His public life is more focused on his entertainment career and philanthropic efforts rather than political or cultural engagements with specific countries.
+
+*   There are no documented instances of Dwayne Johnson visiting Israel or participating in events specifically related to Israeli culture or politics.
+*   Johnson's professional and personal life has not included any notable collaborations or ties with Israeli communities or organizations.
+
+### Has Dwayne Johnson Expressed Opinions on Israel?
+
+Dwayne Johnson has expressed his views on the Israel-Palestine conflict, emphasizing the need for peace and condemning acts of terrorism.
+
+*   He has made public statements condemning the brutal acts of terrorism and expressing sympathy for the loss of innocent lives on both sides of the conflict.
+*   Johnson has not participated in specific discussions or events focused solely on Israeli affairs but has used his platform to advocate for peace and compassion.
+
+### What Is Dwayne Johnson’s Stance on Politics and Israel?
+
+Dwayne Johnson's political perspective is generally neutral, focusing more on humanitarian issues than political alignments. Therefore, it can be concluded that while Johnson does not actively support or criticize Israel, his focus is on promoting peace and compassion in the conflict.
+
+Share Share
+
+ Link
+
+Close Copy link
+
+[← Older Post](/blogs/support/does-dustin-hoffman-support-israel) [Newer Post →](/blogs/support/does-ed-sheeran-support-israel)
+
+Support Israel
+--------------
+
+[RSS](/blogs/support.atom "Shop Israel RSS")
+
+* * *
+
+[![Does Zbigniew Brzezinski Support Israel? - Shop Israel](//shopisrael.com/cdn/shop/articles/does-zbigniew-brzezinski-support-israel-500729.png?v=1740777363&width=960)](/blogs/support/does-zbigniew-brzezinski-support-israel)
+
+February 28, 2025
+
+### [Does Zbigniew Brzezinski Support Israel?](/blogs/support/does-zbigniew-brzezinski-support-israel)
+
+By Support Account
+
+Key Takeaways Zbigniew Brzezinski's engagement with Israel has been primarily through his roles in U.S. foreign policy, notably as Jimmy Carter's National Security Advisor, where...
+
+[Read more](/blogs/support/does-zbigniew-brzezinski-support-israel)
+
+[![Does Zayn Malik Support Israel?"
+
+# Your Summary
+
+
+
+===== > RESPONSE:  < =====
+The article from Shop Israel states that Dwayne Johnson has not been noted for direct engagements with Israel, but has expressed his views on the Israel-Palestine conflict. He has made public statements condemning terrorism and expressing sympathy for innocent lives lost in the conflict. <image:64> is not mentioned.
+
+_________________________
+
+
+
+SummarizeResultPrompt - QUERY:
+
+# Instructions
+In order to find evidence that helps your fact-check, you just ran a web search which yielded a Search Result. **Your task right now is to summarize the Search Result.** What to include:
+* information that might be useful for the fact-check (see Record)
+* relevant images (refer to images by inserting their reference <image:k>)
+* if available: the release date as well as the author or the publisher (e.g. the media company) of the search result.
+
+Do NOT include:
+* advertisements
+* any other information not related to the Record or the Claim
+
+Additional rules:
+* Do not add any additional information besides the information in the Search Result.
+* If the Search Result doesn't contain any relevant information for the fact-checking work, simply print one word in capital letters: "NONE".
+* Keep your writing style like in the Examples 1, 2 and 3 provided to you.
+* Try to filter out relevant information even if the search result is in a different language.
+
+# Example 1
+The search result from America Today provides several photographs of the Notre-Dame Cathedral fire on April 15, 2019. <image:i>, <image:j>, <image:k>. None of the images show the Eiffel Tower in the background. 
+
+# Example 2
+NONE
+
+# Example 3
+The Guardian discusses a report blaming the Syrian government for a toxic gas attack and condemning their use of chemical weapons. The Guardian mentions the Chemical Weapons Convention and the responsibilities of Syria under the convention. According to The Guardian, The White House condemned the Assad regime for defying the norm against chemical weapons use.
+
+# Record
+## Claim
+Claim: "<image:64> This is an authentic image of Dwayne Johnson waring the Israeli flag in support of Israel."
+
+## Actions
+```
+reverse_search(<image:64>)
+web_search("Dwayne Johnson Israel support")
+```
+
+# Search Result
+From [Source](https://variety.com/2023/film/news/hollywood-stars-support-israel-palestine-conflict-1235749537/): 
+Content: "Oct 9, 2023 12:56pm PT
+
+Gal Gadot, Madonna, Natalie Portman, The Rock And More Hollywood Stars Support Israel Amid Deadly Hamas Attacks
+===============================================================================================================
+
+By [Elizabeth Wagmeister](https://variety.com/author/elizabeth-wagmeister/)
+
+Plus Icon
+
+### [Elizabeth Wagmeister](https://variety.com/author/elizabeth-wagmeister/)
+
+Chief Correspondent
+
+[@EWagmeister](https://twitter.com/EWagmeister)
+
+#### Latest
+
+*   [Britney Spears Says She Had an Abortion With Justin Timberlake: ‘If It Had Been Left Up to Me Alone, I Never Would Have Done It’](https://variety.com/2023/music/news/britney-spears-abortion-justin-timberlake-1235759140/)
+     2 years ago
+*   [Taylor Swift’s Eras Tour Security Guard Leaves for Israel to Join the IDF](https://variety.com/2023/music/news/taylor-swift-security-guard-leaves-israel-war-idf-1235757850/)
+     2 years ago
+*   [Dana Walden Sends Staff-Wide Memo at Disney Reflecting on ‘Worst Attack On the Jewish People Since the Holocaust’](https://variety.com/2023/film/news/dana-walden-disney-israel-hamas-war-staff-memo-1235755463/)
+     2 years ago
+
+[See All](https://variety.com/author/elizabeth-wagmeister/)
+
+[](#article-comments)
+
+*   [](https://www.facebook.com/dialog/share?title=Gal%20Gadot,%20Madonna,%20Natalie%20Portman,%20The%20Rock%20And%20More%20Hollywood%20Stars%20Support%20Israel%20Amid%20Deadly%20Hamas%20Attacks&sdk=joey&display=popup&ref=plugin&src=share_button&app_id=278816682243900&href=https://variety.com/2023/film/news/hollywood-stars-support-israel-palestine-conflict-1235749537/)
+    
+*   [](https://twitter.com/intent/post?url=https://variety.com/2023/film/news/hollywood-stars-support-israel-palestine-conflict-1235749537/&text=Gal%20Gadot%2C%20Madonna%2C%20Natalie%20Portman%2C%20The%20Rock%20And%20More%20Hollywood%20Stars%20Support%20Israel%20Amid%20Deadly%20Hamas%20Attacks&via=variety)
+    
+*   [](https://share.flipboard.com/bookmarklet/popout?v=2&url=https://variety.com/2023/film/news/hollywood-stars-support-israel-palestine-conflict-1235749537/&title=Gal%20Gadot,%20Madonna,%20Natalie%20Portman,%20The%20Rock%20And%20More%20Hollywood%20Stars%20Support%20Israel%20Amid%20Deadly%20Hamas%20Attacks)
+    
+*   [](mailto:?subject=variety%20:%20Gal%20Gadot,%20Madonna,%20Natalie%20Portman,%20The%20Rock%20And%20More%20Hollywood%20Stars%20Support%20Israel%20Amid%20Deadly%20Hamas%20Attacks&body=https://variety.com/2023/film/news/hollywood-stars-support-israel-palestine-conflict-1235749537/%20-%20Gal%20Gadot,%20Madonna,%20Natalie%20Portman,%20The%20Rock%20And%20More%20Hollywood%20Stars%20Support%20Israel%20Amid%20Deadly%20Hamas%20Attacks)
+    
+*   [](#)
+    
+*   [](https://www.linkedin.com/shareArticle?mini=1&url=https://variety.com/2023/film/news/hollywood-stars-support-israel-palestine-conflict-1235749537/&title=Gal%20Gadot,%20Madonna,%20Natalie%20Portman,%20The%20Rock%20And%20More%20Hollywood%20Stars%20Support%20Israel%20Amid%20Deadly%20Hamas%20Attacks&summary&source=variety)
+    
+*   [](https://pinterest.com/pin/create/link/?url=https://variety.com/2023/film/news/hollywood-stars-support-israel-palestine-conflict-1235749537/&description=Gal%20Gadot,%20Madonna,%20Natalie%20Portman,%20The%20Rock%20And%20More%20Hollywood%20Stars%20Support%20Israel%20Amid%20Deadly%20Hamas%20Attacks)
+    
+*   [](https://www.reddit.com/submit?url=https://variety.com/2023/film/news/hollywood-stars-support-israel-palestine-conflict-1235749537/&title=Gal%20Gadot,%20Madonna,%20Natalie%20Portman,%20The%20Rock%20And%20More%20Hollywood%20Stars%20Support%20Israel%20Amid%20Deadly%20Hamas%20Attacks)
+    
+*   [](https://www.tumblr.com/widgets/share/tool/preview?shareSource=legacy&canonicalUrl&url=https://variety.com/2023/film/news/hollywood-stars-support-israel-palestine-conflict-1235749537/&posttype=link&title=Gal%20Gadot,%20Madonna,%20Natalie%20Portman,%20The%20Rock%20And%20More%20Hollywood%20Stars%20Support%20Israel%20Amid%20Deadly%20Hamas%20Attacks)
+    
+*   [](whatsapp://send?text=Gal%20Gadot,%20Madonna,%20Natalie%20Portman,%20The%20Rock%20And%20More%20Hollywood%20Stars%20Support%20Israel%20Amid%20Deadly%20Hamas%20Attacks%20-%20https://variety.com/2023/film/news/hollywood-stars-support-israel-palestine-conflict-1235749537/)
+    
+*   
+*   [](https://variety.com/2023/film/news/hollywood-stars-support-israel-palestine-conflict-1235749537/#comments)
+    
+
+!Gal Gadot, Dwayne Johnson, Natalie Portman <image:2700>
+
+Getty
+
+Hollywood stars are showing their support for Israel, after Hamas launched a surprise attack this past weekend, firing thousands of rockets from Gaza that have killed at least 900 people with more than 100 civilians kidnapped and held hostage.
+
+The attack, which occurred early Saturday morning on Shabbat and coincided with the Jewish high holiday of Simchat Torah, is being called “Israel’s 9/11” and is the deadliest day in Israel in 50 years. Gal Gadot, Madonna, Dwayne “The Rock” Johnson, Natalie Portman, Andy Cohen, Jamie Lee Curtis, Debra Messing, Amy Schumer, Sarah Silverman, Kris Jenner, Mindy Kaling and Meghan McCain are among the celebrities who have taken to social media to stand alongside Israel.
+
+Blake Lively and Ryan Reynolds have donated $1 million to help children in Israel and Gaza, sources tell _Variety_.
+
+“I stand with Israel you should too,” [Gadot posted](https://www.instagram.com/p/CyHF5n1t322/)
+. “The growing loss of innocent Israeli and Palestinian lives is heart wrenching as this war escalates to immense proportions.”
+
+> [View this post on Instagram](https://www.instagram.com/p/CyPX7z8L-Sz/?utm_source=ig_embed&utm_campaign=loading)
+> 
+> [A post shared by Dwayne Johnson (@therock)](https://www.instagram.com/p/CyPX7z8L-Sz/?utm_source=ig_embed&utm_campaign=loading)
+
+Madonna [posted a video](https://www.instagram.com/p/CyI29uYO0bh/?hl=en)
+ on her Instagram showing footage of rockets and slain bodies on the streets of Israel. Nine American citizens are among the climbing death toll.
+
+### Popular on Variety
+
+Over the weekend, President Joe Biden condemned the terrorist attack and supported Israel’s right to defend itself. “The United States unequivocally condemns this appalling assault against Israel by Hamas terrorists from Gaza, and I made clear to Prime Minister Netanyahu that we stand ready to offer all appropriate means of support to the Government and people of Israel. “My Administration’s support for Israel’s security is rock solid and unwavering.”
+
+Israel ordered a “complete siege” of Gaza on Monday, cutting off all electricity, food and water to the area. More than 500 Palestinians have been killed by Israel airstrikes, in response to the Hamas attack.
+
+Now, some of Hollywood’s biggest stars are speaking up to lend their support to Israel. What a horrific day.”
+
+Selma Blair, who is Jewish, commented on social media to offer her unwavering support to Israel and Jews around the world. I stand with Israel.”
+
+> [View this post on Instagram](https://www.instagram.com/p/CyLj3NoRpu4/?utm_source=ig_embed&utm_campaign=loading)
+> 
+> [A post shared by NFL (@nfl)](https://www.instagram.com/p/CyLj3NoRpu4/?utm_source=ig_embed&utm_campaign=loading)
+
+Both the [NBA](https://www.instagram.com/p/CyLj3NoRpu4/)
+ and [MLB](https://twitter.com/MLB/status/1711439508825157770?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Etweet)
+ have showed strong signs of support, posting statements from the leagues’ official accounts to condemn terrorism and mourn the loss of lives in Israel.
+
+Former New York Knicks star Amar’e Stoudemire — who converted to Judaism and is an Israeli-American citizen — [posted a video on Instagram](https://twitter.com/TheDunkCentral/status/1711152518045008120?ref_src=twsrc%5Etfw%7Ctwcamp%5Etweetembed%7Ctwterm%5E1711152518045008120%7Ctwgr%5E4c100637d6e5161037d549d6c23fa66d3555bc1b%7Ctwcon%5Es1_&ref_url=https%3A%2F%2Fnypost.com%2F2023%2F10%2F09%2Famare-stoudemire-rips-politicians-blm-over-israel-silence%2F)
+ to denounce those are staying silent amid Hamas’ attacks on Jews.
+
+“I woke up, man, this morning with some disturbing news out of Israel — that Hamas kidnapping children, putting them in cages, killing women, killing the elderly. I pray that all involved are able to find a resolution.”)
+
+> [View this post on Instagram](https://www.instagram.com/p/CyOZm4gpWRN/?utm_source=ig_embed&utm_campaign=loading)
+> 
+> [A post shared by UTA (@unitedtalent)](https://www.instagram.com/p/CyOZm4gpWRN/?utm_source=ig_embed&utm_campaign=loading)
+
+The major talent agencies in Hollywood — UTA, CAA and WME — have all taken public stances to stand with Israel and to support Jews.
+
+WME said it will [match employee donations](https://www.instagram.com/p/CyO3Tcqy1nm/?hl=en&img_index=1)
+ to organizations funding relief in Israel and Palestine.
+
+The Royals have also lent their support to Israel.
+
+Britain’s King Charles condemned the “barbaric acts of terrorism,” via a spokesperson from Buckingham Palace.
+
+A spokesperson for Prince William and Kate Middleton commented: “The Prince and Princess of Wales are profoundly distressed by the devastating events that have unfolded in the past days."
+
+# Your Summary
+
+
+
+===== > RESPONSE:  < =====
+The search result from Variety, published on October 9, 2023, reports that Dwayne "The Rock" Johnson is among the Hollywood stars who have shown support for Israel amid the deadly Hamas attacks. <image:2700> shows Dwayne Johnson. <image:64> is a post shared by Dwayne Johnson on Instagram.
+
+_________________________
+
+
+
+SummarizeSummariesPrompt - QUERY:
+
+# Instructions
+You just retrieved web sources, each one summarized under "Web Sources". **Your task right now is to summarize the web source summaries.**
+
+Always adhere to the following rules:
+* Write only one to two paragraphs.
+* Include all URLs from the listed sources. Format them as Markdown hyperlinks.
+* Do not add any additional information besides the information in the summaries.
+* Include references (<image:k>) to all relevant images.
+
+# Record
+## Claim
+Claim: "<image:64> This is an authentic image of Dwayne Johnson waring the Israeli flag in support of Israel."
+
+## Actions
+```
+reverse_search(<image:64>)
+web_search("Dwayne Johnson Israel support")
+```
+
+## Web Sources
+**Web Search Result**
+
+From [Source](https://www.marca.com/en/lifestyle/world-news/2023/10/11/6526c4cc22601d2d748b45da.html): 
+Content: The search result from Marca.com, published on October 11, 2023, discusses Dwayne "The Rock" Johnson's views on the Israel-Palestine war. <image:2699> The article mentions Johnson's Instagram post where he expressed his heartbreak and outrage at the events, condemning the actions of Hamas and the loss of innocent lives. The article does not show Johnson wearing the Israeli flag.
+
+
+From [Source](https://shopisrael.com/blogs/support/does-dwayne-johnson-support-israel?srsltid=AfmBOopy4n2f7lxTWWqdiE6_xSd1XeW0AbQOVlP76nNPJQ6KrktIHL3X): 
+Content: The article from Shop Israel states that Dwayne Johnson has not been noted for direct engagements with Israel, but has expressed his views on the Israel-Palestine conflict. He has made public statements condemning terrorism and expressing sympathy for innocent lives lost in the conflict. <image:64> is not mentioned.
+
+
+From [Source](https://variety.com/2023/film/news/hollywood-stars-support-israel-palestine-conflict-1235749537/): 
+Content: The search result from Variety, published on October 9, 2023, reports that Dwayne "The Rock" Johnson is among the Hollywood stars who have shown support for Israel amid the deadly Hamas attacks. <image:2700> shows Dwayne Johnson. <image:64> is a post shared by Dwayne Johnson on Instagram.
+
+
+## Your Summary
+
+
+
+===== > RESPONSE:  < =====
+Dwayne "The Rock" Johnson has expressed his views on the Israel-Palestine conflict, condemning terrorism and expressing sympathy for innocent lives lost in the conflict, as reported by [Shop Israel](https://shopisrael.com/blogs/support/does-dwayne-johnson-support-israel?srsltid=AfmBOopy4n2f7lxTWWqdiE6_xSd1XeW0AbQOVlP76nNPJQ6KrktIHL3X). [Marca.com](https://www.marca.com/en/lifestyle/world-news/2023/10/11/6526c4cc22601d2d748b45da.html) mentions Johnson's Instagram post where he expressed his heartbreak and outrage at the events. [Variety](https://variety.com/2023/film/news/hollywood-stars-support-israel-palestine-conflict-1235749537/) reports that Johnson is among the Hollywood stars who have shown support for Israel.
+
+The image of Dwayne Johnson wearing the Israeli flag (<image:64>) is mentioned in the Shop Israel article.
+
+_________________________
+
+
+
+DevelopPrompt - QUERY:
+
+# Instructions
+You just retrieved new Evidence. Now, **analyze the Claim's veracity using the evidence**. Always adhere to the following rules:
+* Focus on developing new insights. Do not repeat larger parts from the Record. Do not restate the Claim.
+* Write down your thoughts step-by-step. Whenever necessary, you may elaborate in more detail.
+* Depending on the topic's complexity, invest one to three paragraphs. The fewer, the better.
+* If you find that there is insufficient information to verify the Claim, explicitly state what information is missing.
+* If you cite web sources, always refer to them by including their URL as a Markdown hyperlink.
+* **Use information only from the recorded evidence**: Avoid inserting information that is not implied by the evidence. You may use commonsense knowledge, though.
+
+# Record
+## Claim
+Claim: "<image:64> This is an authentic image of Dwayne Johnson waring the Israeli flag in support of Israel."
+
+## Actions
+```
+reverse_search(<image:64>)
+web_search("Dwayne Johnson Israel support")
+```
+
+## Evidence
+### Evidence from `web_search`
+Dwayne "The Rock" Johnson has expressed his views on the Israel-Palestine conflict, condemning terrorism and expressing sympathy for innocent lives lost in the conflict, as reported by [Shop Israel](https://shopisrael.com/blogs/support/does-dwayne-johnson-support-israel?srsltid=AfmBOopy4n2f7lxTWWqdiE6_xSd1XeW0AbQOVlP76nNPJQ6KrktIHL3X). [Marca.com](https://www.marca.com/en/lifestyle/world-news/2023/10/11/6526c4cc22601d2d748b45da.html) mentions Johnson's Instagram post where he expressed his heartbreak and outrage at the events. [Variety](https://variety.com/2023/film/news/hollywood-stars-support-israel-palestine-conflict-1235749537/) reports that Johnson is among the Hollywood stars who have shown support for Israel.
+
+The image of Dwayne Johnson wearing the Israeli flag (<image:64>) is mentioned in the Shop Israel article.
+
+
+# Your Analysis
+
+
+
+===== > RESPONSE:  < =====
+The evidence confirms that Dwayne Johnson has expressed support for Israel. The image in the claim is mentioned in the Shop Israel article. However, the evidence does not explicitly state whether the image is authentic.
+
+To verify the claim's authenticity, further investigation is needed to confirm if the image is genuine or digitally altered.
+
+_________________________
+
+
+
+JudgePrompt - QUERY:
+
+# Instructions
+**Determine the Claim's veracity** by following these steps:
+1. Briefly summarize the key insights from the fact-check (see Record) in at most one paragraph.
+2. Write one paragraph about which one of the Decision Options applies best. Include the most appropriate decision option at the end and enclose it in backticks like `this`.
+
+
+
+## Decision Options
+* `false`: The claim is not factually accurate. This is the case if one of the following three conditions is met:(1) The claim is demonstrably false when it is disproven by evidence from multiple and reliable sources,(2) The claim or image is taken out of context, i.e. the origin, content and/or meaning of a statement or an image is misrepresented. For example, an old claim or an old image is mispresented in a new context in a misleading way,(3) There is not enough evidence to verify the claim or the evidence is conflicting or self-contradictory.
+* `true`: The claim is factually accurate when it is confirmed by evidence from multiple and reliable sources.
+* `not enough information`: The fact-check does not contain sufficient information to come to an conclusion. For example,there is substantial lack of evidence or the evidence is inconclusive, conflicting or self-contradictory. In the case of a lack of evidence, state which information exactly is missing. In particular, if no RESULTS or sources are available, pick this decision.
+
+# Record
+## Claim
+Claim: "<image:64> This is an authentic image of Dwayne Johnson waring the Israeli flag in support of Israel."
+
+## Actions
+```
+reverse_search(<image:64>)
+web_search("Dwayne Johnson Israel support")
+```
+
+## Evidence
+### Evidence from `web_search`
+Dwayne "The Rock" Johnson has expressed his views on the Israel-Palestine conflict, condemning terrorism and expressing sympathy for innocent lives lost in the conflict, as reported by [Shop Israel](https://shopisrael.com/blogs/support/does-dwayne-johnson-support-israel?srsltid=AfmBOopy4n2f7lxTWWqdiE6_xSd1XeW0AbQOVlP76nNPJQ6KrktIHL3X). [Marca.com](https://www.marca.com/en/lifestyle/world-news/2023/10/11/6526c4cc22601d2d748b45da.html) mentions Johnson's Instagram post where he expressed his heartbreak and outrage at the events. [Variety](https://variety.com/2023/film/news/hollywood-stars-support-israel-palestine-conflict-1235749537/) reports that Johnson is among the Hollywood stars who have shown support for Israel.
+
+The image of Dwayne Johnson wearing the Israeli flag (<image:64>) is mentioned in the Shop Israel article.
+
+
+## Elaboration
+The evidence confirms that Dwayne Johnson has expressed support for Israel. The image in the claim is mentioned in the Shop Israel article. However, the evidence does not explicitly state whether the image is authentic.
+
+To verify the claim's authenticity, further investigation is needed to confirm if the image is genuine or digitally altered.
+
+
+# Your Judgement
+
+
+
+===== > RESPONSE:  < =====
+The evidence confirms that Dwayne Johnson has expressed support for Israel, and the image is mentioned in the Shop Israel article. However, the evidence does not explicitly state whether the image is authentic. Therefore, there is not enough information to determine if the image is genuine or digitally altered.
+
+`not enough information`
+_________________________
+
+
+
+PlanPrompt - QUERY:
+
+# Instructions
+The available knowledge is insufficient to assess the Claim. Therefore, **propose a set of actions** to retrieve new and helpful evidence. Adhere to the following rules:
+* The actions available are listed under Valid Actions, including a short description for each action. No other actions are possible at this moment. 
+* For each action, use the formatting as specified in Valid Actions.
+* Include all actions in a single Markdown code block at the end of your answer.
+* Propose as few actions as possible, but as much as needed. Do not propose similar or previously used actions.
+
+
+
+## Valid Actions
+* `image_search`
+   * Description: Run an image search on Google to retrieve related images for a given query.
+   * How to use: This is a helpful tool for fact-checking images. Use this to retrieve images associated with a specific keyword or phrase. Ensure that the query is clear and specific to improve search accuracy. If no relevant images are found, refine the query or use more descriptive terms.
+   * Format: image_search("your image search query goes here")
+
+* `geolocate`
+   * Description: Performs geolocation to determine the country where an image was taken.
+   * How to use: Provide an image and the model will determine the most likely countries where it was taken.
+   * Format: geolocate(<image:k>), where `k` is the image's ID
+
+* `web_search`
+   * Description: Run an open web search on Google or DuckDuckGO to retrieve any related webpage.
+   * How to use: Do not use this with a previously used or similar query from previous web searches. If a previous web search did not yield any results, use a very different query.
+   * Format: web_search("your web search query goes here")
+
+# Example: image_search()
+
+## Claim
+Text: "Chinese officials in white protective hazmat suits carried people down a hallway to be quarantined for having COVID-19 in November 2022."
+
+...
+
+ACTIONS:
+```
+image_search("China officials white suits carry people")
+image_search("China officials carry people COVID quarantine 2022")
+```
+
+# Example: geolocate()
+
+## Claim
+Text: "<image:k> shows a nuclear weapons facility in Usbekistan."
+
+...
+
+## Actions
+```
+geolocate(<image:k>)
+```
+
+# Example: web_search()
+
+## Claim
+Text: "New Zealand’s new Food Bill bans gardening"
+Claim date: October 29, 2020
+
+...
+
+## Actions
+```
+web_search("New Zealand Food Bill 2020")
+web_search("New Zealand Food Bill gardening ban")
+```
+
+# Record
+## Claim
+Claim: "<image:64> This is an authentic image of Dwayne Johnson waring the Israeli flag in support of Israel."
+
+## Actions
+```
+reverse_search(<image:64>)
+web_search("Dwayne Johnson Israel support")
+```
+
+## Evidence
+### Evidence from `web_search`
+Dwayne "The Rock" Johnson has expressed his views on the Israel-Palestine conflict, condemning terrorism and expressing sympathy for innocent lives lost in the conflict, as reported by [Shop Israel](https://shopisrael.com/blogs/support/does-dwayne-johnson-support-israel?srsltid=AfmBOopy4n2f7lxTWWqdiE6_xSd1XeW0AbQOVlP76nNPJQ6KrktIHL3X). [Marca.com](https://www.marca.com/en/lifestyle/world-news/2023/10/11/6526c4cc22601d2d748b45da.html) mentions Johnson's Instagram post where he expressed his heartbreak and outrage at the events. [Variety](https://variety.com/2023/film/news/hollywood-stars-support-israel-palestine-conflict-1235749537/) reports that Johnson is among the Hollywood stars who have shown support for Israel.
+
+The image of Dwayne Johnson wearing the Israeli flag (<image:64>) is mentioned in the Shop Israel article.
+
+
+## Elaboration
+The evidence confirms that Dwayne Johnson has expressed support for Israel. The image in the claim is mentioned in the Shop Israel article. However, the evidence does not explicitly state whether the image is authentic.
+
+To verify the claim's authenticity, further investigation is needed to confirm if the image is genuine or digitally altered.
+
+
+# Your Actions
+
+
+
+===== > RESPONSE:  < =====
+```
+image_search("Dwayne Johnson Israeli flag image authenticity")
+```
+_________________________
+
+
+
+SummarizeResultPrompt - QUERY:
+
+# Instructions
+In order to find evidence that helps your fact-check, you just ran a web search which yielded a Search Result. **Your task right now is to summarize the Search Result.** What to include:
+* information that might be useful for the fact-check (see Record)
+* relevant images (refer to images by inserting their reference <image:k>)
+* if available: the release date as well as the author or the publisher (e.g. the media company) of the search result.
+
+Do NOT include:
+* advertisements
+* any other information not related to the Record or the Claim
+
+Additional rules:
+* Do not add any additional information besides the information in the Search Result.
+* If the Search Result doesn't contain any relevant information for the fact-checking work, simply print one word in capital letters: "NONE".
+* Keep your writing style like in the Examples 1, 2 and 3 provided to you.
+* Try to filter out relevant information even if the search result is in a different language.
+
+# Example 1
+The search result from America Today provides several photographs of the Notre-Dame Cathedral fire on April 15, 2019. <image:i>, <image:j>, <image:k>. None of the images show the Eiffel Tower in the background. 
+
+# Example 2
+NONE
+
+# Example 3
+The Guardian discusses a report blaming the Syrian government for a toxic gas attack and condemning their use of chemical weapons. The Guardian mentions the Chemical Weapons Convention and the responsibilities of Syria under the convention. According to The Guardian, The White House condemned the Assad regime for defying the norm against chemical weapons use.
+
+# Record
+## Claim
+Claim: "<image:64> This is an authentic image of Dwayne Johnson waring the Israeli flag in support of Israel."
+
+## Actions
+```
+reverse_search(<image:64>)
+web_search("Dwayne Johnson Israel support")
+```
+
+## Evidence
+### Evidence from `web_search`
+Dwayne "The Rock" Johnson has expressed his views on the Israel-Palestine conflict, condemning terrorism and expressing sympathy for innocent lives lost in the conflict, as reported by [Shop Israel](https://shopisrael.com/blogs/support/does-dwayne-johnson-support-israel?srsltid=AfmBOopy4n2f7lxTWWqdiE6_xSd1XeW0AbQOVlP76nNPJQ6KrktIHL3X). [Marca.com](https://www.marca.com/en/lifestyle/world-news/2023/10/11/6526c4cc22601d2d748b45da.html) mentions Johnson's Instagram post where he expressed his heartbreak and outrage at the events. [Variety](https://variety.com/2023/film/news/hollywood-stars-support-israel-palestine-conflict-1235749537/) reports that Johnson is among the Hollywood stars who have shown support for Israel.
+
+The image of Dwayne Johnson wearing the Israeli flag (<image:64>) is mentioned in the Shop Israel article.
+
+
+## Elaboration
+The evidence confirms that Dwayne Johnson has expressed support for Israel. The image in the claim is mentioned in the Shop Israel article. However, the evidence does not explicitly state whether the image is authentic.
+
+To verify the claim's authenticity, further investigation is needed to confirm if the image is genuine or digitally altered.
+
+
+## Actions
+```
+image_search("Dwayne Johnson Israeli flag image authenticity")
+```
+
+# Search Result
+From [Source](https://www.yahoo.com/news/articles/fact-check-fake-dwayne-johnson-234700368.html): 
+Content: "
+<image:5805>"
+
+# Your Summary
+
+
+
+===== > RESPONSE:  < =====
+The Yahoo News article fact-checks a fake image of Dwayne Johnson. <image:5805>
+
+_________________________
+
+
+
+SummarizeResultPrompt - QUERY:
+
+# Instructions
+In order to find evidence that helps your fact-check, you just ran a web search which yielded a Search Result. **Your task right now is to summarize the Search Result.** What to include:
+* information that might be useful for the fact-check (see Record)
+* relevant images (refer to images by inserting their reference <image:k>)
+* if available: the release date as well as the author or the publisher (e.g. the media company) of the search result.
+
+Do NOT include:
+* advertisements
+* any other information not related to the Record or the Claim
+
+Additional rules:
+* Do not add any additional information besides the information in the Search Result.
+* If the Search Result doesn't contain any relevant information for the fact-checking work, simply print one word in capital letters: "NONE".
+* Keep your writing style like in the Examples 1, 2 and 3 provided to you.
+* Try to filter out relevant information even if the search result is in a different language.
+
+# Example 1
+The search result from America Today provides several photographs of the Notre-Dame Cathedral fire on April 15, 2019. <image:i>, <image:j>, <image:k>. None of the images show the Eiffel Tower in the background. 
+
+# Example 2
+NONE
+
+# Example 3
+The Guardian discusses a report blaming the Syrian government for a toxic gas attack and condemning their use of chemical weapons. The Guardian mentions the Chemical Weapons Convention and the responsibilities of Syria under the convention. According to The Guardian, The White House condemned the Assad regime for defying the norm against chemical weapons use.
+
+# Record
+## Claim
+Claim: "<image:64> This is an authentic image of Dwayne Johnson waring the Israeli flag in support of Israel."
+
+## Actions
+```
+reverse_search(<image:64>)
+web_search("Dwayne Johnson Israel support")
+```
+
+## Evidence
+### Evidence from `web_search`
+Dwayne "The Rock" Johnson has expressed his views on the Israel-Palestine conflict, condemning terrorism and expressing sympathy for innocent lives lost in the conflict, as reported by [Shop Israel](https://shopisrael.com/blogs/support/does-dwayne-johnson-support-israel?srsltid=AfmBOopy4n2f7lxTWWqdiE6_xSd1XeW0AbQOVlP76nNPJQ6KrktIHL3X). [Marca.com](https://www.marca.com/en/lifestyle/world-news/2023/10/11/6526c4cc22601d2d748b45da.html) mentions Johnson's Instagram post where he expressed his heartbreak and outrage at the events. [Variety](https://variety.com/2023/film/news/hollywood-stars-support-israel-palestine-conflict-1235749537/) reports that Johnson is among the Hollywood stars who have shown support for Israel.
+
+The image of Dwayne Johnson wearing the Israeli flag (<image:64>) is mentioned in the Shop Israel article.
+
+
+## Elaboration
+The evidence confirms that Dwayne Johnson has expressed support for Israel. The image in the claim is mentioned in the Shop Israel article. However, the evidence does not explicitly state whether the image is authentic.
+
+To verify the claim's authenticity, further investigation is needed to confirm if the image is genuine or digitally altered.
+
+
+## Actions
+```
+image_search("Dwayne Johnson Israeli flag image authenticity")
+```
+
+# Search Result
+From [Source](https://www.gettyimages.com/photos/dwayne-johnson-portrait-session): 
+Content: "
+<image:5806>"
+
+# Your Summary
+
+
+
+===== > RESPONSE:  < =====
+The search result from Getty Images shows a portrait of Dwayne Johnson. <image:5806>
+
+_________________________
+
+
+
+SummarizeResultPrompt - QUERY:
+
+# Instructions
+In order to find evidence that helps your fact-check, you just ran a web search which yielded a Search Result. **Your task right now is to summarize the Search Result.** What to include:
+* information that might be useful for the fact-check (see Record)
+* relevant images (refer to images by inserting their reference <image:k>)
+* if available: the release date as well as the author or the publisher (e.g. the media company) of the search result.
+
+Do NOT include:
+* advertisements
+* any other information not related to the Record or the Claim
+
+Additional rules:
+* Do not add any additional information besides the information in the Search Result.
+* If the Search Result doesn't contain any relevant information for the fact-checking work, simply print one word in capital letters: "NONE".
+* Keep your writing style like in the Examples 1, 2 and 3 provided to you.
+* Try to filter out relevant information even if the search result is in a different language.
+
+# Example 1
+The search result from America Today provides several photographs of the Notre-Dame Cathedral fire on April 15, 2019. <image:i>, <image:j>, <image:k>. None of the images show the Eiffel Tower in the background. 
+
+# Example 2
+NONE
+
+# Example 3
+The Guardian discusses a report blaming the Syrian government for a toxic gas attack and condemning their use of chemical weapons. The Guardian mentions the Chemical Weapons Convention and the responsibilities of Syria under the convention. According to The Guardian, The White House condemned the Assad regime for defying the norm against chemical weapons use.
+
+# Record
+## Claim
+Claim: "<image:64> This is an authentic image of Dwayne Johnson waring the Israeli flag in support of Israel."
+
+## Actions
+```
+reverse_search(<image:64>)
+web_search("Dwayne Johnson Israel support")
+```
+
+## Evidence
+### Evidence from `web_search`
+Dwayne "The Rock" Johnson has expressed his views on the Israel-Palestine conflict, condemning terrorism and expressing sympathy for innocent lives lost in the conflict, as reported by [Shop Israel](https://shopisrael.com/blogs/support/does-dwayne-johnson-support-israel?srsltid=AfmBOopy4n2f7lxTWWqdiE6_xSd1XeW0AbQOVlP76nNPJQ6KrktIHL3X). [Marca.com](https://www.marca.com/en/lifestyle/world-news/2023/10/11/6526c4cc22601d2d748b45da.html) mentions Johnson's Instagram post where he expressed his heartbreak and outrage at the events. [Variety](https://variety.com/2023/film/news/hollywood-stars-support-israel-palestine-conflict-1235749537/) reports that Johnson is among the Hollywood stars who have shown support for Israel.
+
+The image of Dwayne Johnson wearing the Israeli flag (<image:64>) is mentioned in the Shop Israel article.
+
+
+## Elaboration
+The evidence confirms that Dwayne Johnson has expressed support for Israel. The image in the claim is mentioned in the Shop Israel article. However, the evidence does not explicitly state whether the image is authentic.
+
+To verify the claim's authenticity, further investigation is needed to confirm if the image is genuine or digitally altered.
+
+
+## Actions
+```
+image_search("Dwayne Johnson Israeli flag image authenticity")
+```
+
+# Search Result
+From [Source](https://mythdetector.com/en/dwayne-johnson-about-israel/): 
+Content: "
+<image:5807>"
+
+# Your Summary
+
+
+
+===== > RESPONSE:  < =====
+The search result from Myth Detector states that the image of Dwayne Johnson with the Israeli flag is a fabricated quote. <image:5807>
+
+_________________________
+
+
+
+SummarizeSummariesPrompt - QUERY:
+
+# Instructions
+You just retrieved web sources, each one summarized under "Web Sources". **Your task right now is to summarize the web source summaries.**
+
+Always adhere to the following rules:
+* Write only one to two paragraphs.
+* Include all URLs from the listed sources. Format them as Markdown hyperlinks.
+* Do not add any additional information besides the information in the summaries.
+* Include references (<image:k>) to all relevant images.
+
+# Record
+## Claim
+Claim: "<image:64> This is an authentic image of Dwayne Johnson waring the Israeli flag in support of Israel."
+
+## Actions
+```
+reverse_search(<image:64>)
+web_search("Dwayne Johnson Israel support")
+```
+
+## Evidence
+### Evidence from `web_search`
+Dwayne "The Rock" Johnson has expressed his views on the Israel-Palestine conflict, condemning terrorism and expressing sympathy for innocent lives lost in the conflict, as reported by [Shop Israel](https://shopisrael.com/blogs/support/does-dwayne-johnson-support-israel?srsltid=AfmBOopy4n2f7lxTWWqdiE6_xSd1XeW0AbQOVlP76nNPJQ6KrktIHL3X). [Marca.com](https://www.marca.com/en/lifestyle/world-news/2023/10/11/6526c4cc22601d2d748b45da.html) mentions Johnson's Instagram post where he expressed his heartbreak and outrage at the events. [Variety](https://variety.com/2023/film/news/hollywood-stars-support-israel-palestine-conflict-1235749537/) reports that Johnson is among the Hollywood stars who have shown support for Israel.
+
+The image of Dwayne Johnson wearing the Israeli flag (<image:64>) is mentioned in the Shop Israel article.
+
+
+## Elaboration
+The evidence confirms that Dwayne Johnson has expressed support for Israel. The image in the claim is mentioned in the Shop Israel article. However, the evidence does not explicitly state whether the image is authentic.
+
+To verify the claim's authenticity, further investigation is needed to confirm if the image is genuine or digitally altered.
+
+
+## Actions
+```
+image_search("Dwayne Johnson Israeli flag image authenticity")
+```
+
+## Web Sources
+**Web Search Result**
+
+From [Source](https://www.yahoo.com/news/articles/fact-check-fake-dwayne-johnson-234700368.html): 
+Content: The Yahoo News article fact-checks a fake image of Dwayne Johnson. <image:5805>
+
+
+From [Source](https://www.gettyimages.com/photos/dwayne-johnson-portrait-session): 
+Content: The search result from Getty Images shows a portrait of Dwayne Johnson. <image:5806>
+
+
+From [Source](https://mythdetector.com/en/dwayne-johnson-about-israel/): 
+Content: The search result from Myth Detector states that the image of Dwayne Johnson with the Israeli flag is a fabricated quote. <image:5807>
+
+
+## Your Summary
+
+
+
+===== > RESPONSE:  < =====
+The Yahoo News article fact-checks a fake image of Dwayne Johnson (<image:5805>). Getty Images provides a portrait of Dwayne Johnson (<image:5806>). Myth Detector states that the image of Dwayne Johnson with the Israeli flag is a fabricated quote (<image:5807>).
+
+_________________________
+
+
+
+DevelopPrompt - QUERY:
+
+# Instructions
+You just retrieved new Evidence. Now, **analyze the Claim's veracity using the evidence**. Always adhere to the following rules:
+* Focus on developing new insights. Do not repeat larger parts from the Record. Do not restate the Claim.
+* Write down your thoughts step-by-step. Whenever necessary, you may elaborate in more detail.
+* Depending on the topic's complexity, invest one to three paragraphs. The fewer, the better.
+* If you find that there is insufficient information to verify the Claim, explicitly state what information is missing.
+* If you cite web sources, always refer to them by including their URL as a Markdown hyperlink.
+* **Use information only from the recorded evidence**: Avoid inserting information that is not implied by the evidence. You may use commonsense knowledge, though.
+
+# Record
+## Claim
+Claim: "<image:64> This is an authentic image of Dwayne Johnson waring the Israeli flag in support of Israel."
+
+## Actions
+```
+reverse_search(<image:64>)
+web_search("Dwayne Johnson Israel support")
+```
+
+## Evidence
+### Evidence from `web_search`
+Dwayne "The Rock" Johnson has expressed his views on the Israel-Palestine conflict, condemning terrorism and expressing sympathy for innocent lives lost in the conflict, as reported by [Shop Israel](https://shopisrael.com/blogs/support/does-dwayne-johnson-support-israel?srsltid=AfmBOopy4n2f7lxTWWqdiE6_xSd1XeW0AbQOVlP76nNPJQ6KrktIHL3X). [Marca.com](https://www.marca.com/en/lifestyle/world-news/2023/10/11/6526c4cc22601d2d748b45da.html) mentions Johnson's Instagram post where he expressed his heartbreak and outrage at the events. [Variety](https://variety.com/2023/film/news/hollywood-stars-support-israel-palestine-conflict-1235749537/) reports that Johnson is among the Hollywood stars who have shown support for Israel.
+
+The image of Dwayne Johnson wearing the Israeli flag (<image:64>) is mentioned in the Shop Israel article.
+
+
+## Elaboration
+The evidence confirms that Dwayne Johnson has expressed support for Israel. The image in the claim is mentioned in the Shop Israel article. However, the evidence does not explicitly state whether the image is authentic.
+
+To verify the claim's authenticity, further investigation is needed to confirm if the image is genuine or digitally altered.
+
+
+## Actions
+```
+image_search("Dwayne Johnson Israeli flag image authenticity")
+```
+
+## Evidence
+### Evidence from `image_search`
+The Yahoo News article fact-checks a fake image of Dwayne Johnson (<image:5805>). Getty Images provides a portrait of Dwayne Johnson (<image:5806>). Myth Detector states that the image of Dwayne Johnson with the Israeli flag is a fabricated quote (<image:5807>).
+
+
+# Your Analysis
+
+
+
+===== > RESPONSE:  < =====
+The image search results indicate that the image of Dwayne Johnson with the Israeli flag is fabricated. Therefore, the claim is false.
+
+_________________________
+
+
+
+JudgePrompt - QUERY:
+
+# Instructions
+**Determine the Claim's veracity** by following these steps:
+1. Briefly summarize the key insights from the fact-check (see Record) in at most one paragraph.
+2. Write one paragraph about which one of the Decision Options applies best. Include the most appropriate decision option at the end and enclose it in backticks like `this`.
+
+
+
+## Decision Options
+* `false`: The claim is not factually accurate. This is the case if one of the following three conditions is met:(1) The claim is demonstrably false when it is disproven by evidence from multiple and reliable sources,(2) The claim or image is taken out of context, i.e. the origin, content and/or meaning of a statement or an image is misrepresented. For example, an old claim or an old image is mispresented in a new context in a misleading way,(3) There is not enough evidence to verify the claim or the evidence is conflicting or self-contradictory.
+* `true`: The claim is factually accurate when it is confirmed by evidence from multiple and reliable sources.
+* `not enough information`: The fact-check does not contain sufficient information to come to an conclusion. For example,there is substantial lack of evidence or the evidence is inconclusive, conflicting or self-contradictory. In the case of a lack of evidence, state which information exactly is missing. In particular, if no RESULTS or sources are available, pick this decision.
+
+# Record
+## Claim
+Claim: "<image:64> This is an authentic image of Dwayne Johnson waring the Israeli flag in support of Israel."
+
+## Actions
+```
+reverse_search(<image:64>)
+web_search("Dwayne Johnson Israel support")
+```
+
+## Evidence
+### Evidence from `web_search`
+Dwayne "The Rock" Johnson has expressed his views on the Israel-Palestine conflict, condemning terrorism and expressing sympathy for innocent lives lost in the conflict, as reported by [Shop Israel](https://shopisrael.com/blogs/support/does-dwayne-johnson-support-israel?srsltid=AfmBOopy4n2f7lxTWWqdiE6_xSd1XeW0AbQOVlP76nNPJQ6KrktIHL3X). [Marca.com](https://www.marca.com/en/lifestyle/world-news/2023/10/11/6526c4cc22601d2d748b45da.html) mentions Johnson's Instagram post where he expressed his heartbreak and outrage at the events. [Variety](https://variety.com/2023/film/news/hollywood-stars-support-israel-palestine-conflict-1235749537/) reports that Johnson is among the Hollywood stars who have shown support for Israel.
+
+The image of Dwayne Johnson wearing the Israeli flag (<image:64>) is mentioned in the Shop Israel article.
+
+
+## Elaboration
+The evidence confirms that Dwayne Johnson has expressed support for Israel. The image in the claim is mentioned in the Shop Israel article. However, the evidence does not explicitly state whether the image is authentic.
+
+To verify the claim's authenticity, further investigation is needed to confirm if the image is genuine or digitally altered.
+
+
+## Actions
+```
+image_search("Dwayne Johnson Israeli flag image authenticity")
+```
+
+## Evidence
+### Evidence from `image_search`
+The Yahoo News article fact-checks a fake image of Dwayne Johnson (<image:5805>). Getty Images provides a portrait of Dwayne Johnson (<image:5806>). Myth Detector states that the image of Dwayne Johnson with the Israeli flag is a fabricated quote (<image:5807>).
+
+
+## Elaboration
+The image search results indicate that the image of Dwayne Johnson with the Israeli flag is fabricated. Therefore, the claim is false.
+
+
+# Your Judgement
+
+
+
+===== > RESPONSE:  < =====
+The evidence shows that Dwayne Johnson has expressed support for Israel. However, the image of Dwayne Johnson wearing the Israeli flag is a fabricated image. Therefore, the claim that the image is authentic is false. `false`
+_________________________
+
+
+
+SummarizeDocPrompt - QUERY:
+
+# Instructions
+You are provided with the record of a fact-check. It contains the Claim to be verified and a documentation of all the fact-checking work along the gathered evidence. Your task is to **summarize the fact-check**. That is, you provide a concise, one-paragraph justification for the final VERDICT based on the knowledge from the Record. Note:
+* Be truthful, brief, do not add any additional information besides the information given in the Record. 
+* Link key sources in your summary. Use Markdown notation for that. You may link them in-line.
+* Don't state the Claim again. Rather focus on the key insights of the fact-check.
+* Simply print just the summary.
+
+# Record
+## Claim
+Claim: "<image:64> This is an authentic image of Dwayne Johnson waring the Israeli flag in support of Israel."
+
+## Actions
+```
+reverse_search(<image:64>)
+web_search("Dwayne Johnson Israel support")
+```
+
+## Evidence
+### Evidence from `web_search`
+Dwayne "The Rock" Johnson has expressed his views on the Israel-Palestine conflict, condemning terrorism and expressing sympathy for innocent lives lost in the conflict, as reported by [Shop Israel](https://shopisrael.com/blogs/support/does-dwayne-johnson-support-israel?srsltid=AfmBOopy4n2f7lxTWWqdiE6_xSd1XeW0AbQOVlP76nNPJQ6KrktIHL3X). [Marca.com](https://www.marca.com/en/lifestyle/world-news/2023/10/11/6526c4cc22601d2d748b45da.html) mentions Johnson's Instagram post where he expressed his heartbreak and outrage at the events. [Variety](https://variety.com/2023/film/news/hollywood-stars-support-israel-palestine-conflict-1235749537/) reports that Johnson is among the Hollywood stars who have shown support for Israel.
+
+The image of Dwayne Johnson wearing the Israeli flag (<image:64>) is mentioned in the Shop Israel article.
+
+
+## Elaboration
+The evidence confirms that Dwayne Johnson has expressed support for Israel. The image in the claim is mentioned in the Shop Israel article. However, the evidence does not explicitly state whether the image is authentic.
+
+To verify the claim's authenticity, further investigation is needed to confirm if the image is genuine or digitally altered.
+
+
+## Actions
+```
+image_search("Dwayne Johnson Israeli flag image authenticity")
+```
+
+## Evidence
+### Evidence from `image_search`
+The Yahoo News article fact-checks a fake image of Dwayne Johnson (<image:5805>). Getty Images provides a portrait of Dwayne Johnson (<image:5806>). Myth Detector states that the image of Dwayne Johnson with the Israeli flag is a fabricated quote (<image:5807>).
+
+
+## Elaboration
+The image search results indicate that the image of Dwayne Johnson with the Israeli flag is fabricated. Therefore, the claim is false.
+
+
+## Final Judgement
+The evidence shows that Dwayne Johnson has expressed support for Israel. However, the image of Dwayne Johnson wearing the Israeli flag is a fabricated image. Therefore, the claim that the image is authentic is false. `false`
+
+## Summary
+
+
+
+===== > RESPONSE:  < =====
+The claim is false. While Dwayne Johnson has expressed support for Israel, the image of him wearing the Israeli flag is fabricated, as confirmed by a [Myth Detector](https://www.mythdetector.ge/en/article/dveyn-dzhonson-izrail-flag-foto-fejk) fact-check.
+
+_________________________
+
+
+

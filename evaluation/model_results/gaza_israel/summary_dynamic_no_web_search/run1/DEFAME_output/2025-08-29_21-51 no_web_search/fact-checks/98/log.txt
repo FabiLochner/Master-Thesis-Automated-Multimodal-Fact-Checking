@@ -1,0 +1,26 @@
+Extracting claims from Content: <image:64> This is an authentic image of Dwayne Johnson waring the Israeli flag in support of Israel.
+'Claim: "<image:64> This is an authentic image of Dwayne Johnson waring the Israeli flag in support of Israel."'
+Verifying Claim: "<image:64> This is an authentic image of Dwayne Johnson waring the Israeli flag in support of Israel."
+Not enough information yet. Continuing fact-check...
+Got 0 new web source(s):
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Dwayne Johnson Israel flag')
+Skipping unsupported website: https://www.facebook.com/IsraelBondsDCI/posts/we-extend-our-heartfelt-thanks-to-dwayne-the-rock-johnson-for-his-strong-stance-/930322965801732/
+Got 3 new web source(s):
+	1. https://www.wionews.com/entertainment/dwayne-johnson-on-israel-hamas-conflict-im-heartbroken-angry-and-sickened-645300
+	2. https://www.euronews.com/culture/2023/11/14/dwayne-the-rock-johnson-says-political-parties-asked-him-to-run-for-president
+	3. https://www.yahoo.com/news/articles/fact-check-fake-dwayne-johnson-234700368.html
+Useful result: From [Source](https://www.wionews.com/entertainment/dwayne-johnson-on-israel-hamas-conflict-im-heartbroken-angry-and-sickened-645300): 
+Content: The search result from WIONews contains a statement from Dwayne Johnson regarding the Israel-Hamas conflict. <image:7839>
+
+Useful result: From [Source](https://www.euronews.com/culture/2023/11/14/dwayne-the-rock-johnson-says-political-parties-asked-him-to-run-for-president): 
+Content: Euronews published an article on November 14, 2023, about Dwayne Johnson. <image:7840>
+
+Useful result: From [Source](https://www.yahoo.com/news/articles/fact-check-fake-dwayne-johnson-234700368.html): 
+Content: The Yahoo News article fact-checks a fake image of Dwayne Johnson. <image:7841>
+
+The claim '<image:64> This is an authentic image of Dwayne Johnson waring the Israeli flag in support of Israel.' is false.
+Justification: The image of Dwayne Johnson wearing the Israeli flag is fake, as confirmed by a fact-check from [Yahoo News](https://www.yahoo.com/news/articles/fact-check-fake-dwayne-johnson-234700368.html).
+
+So, the overall veracity is: false
+Fact-check took 0:15 min.
+Worker 3 is done and terminates gracefully.

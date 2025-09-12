@@ -1,0 +1,34 @@
+Extracting claims from Content: <image:6> This image shows the Chinese Communist Party's Red Cross troops in Russia who have changed into winter clothes and set off for the Russian-Ukrainian front to aid Russia in rescuing its occupied territories.
+'Claim: "<image:6> This image shows the Chinese Communist Party's Red Cross troops in Russia who have changed into winter clothes and set off for the Russian-Ukrainian front to aid Russia in rescuing its occupied territories."'
+Verifying Claim: "<image:6> This image shows the Chinese Communist Party's Red Cross troops in Russia who have changed into winter clothes and set off for the Russian-Ukrainian front to aid Russia in rescuing its occupied territories."
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Chinese Red Cross troops Russia aid Ukraine')
+Got 3 new web source(s):
+	1. https://www.atlanticcouncil.org/blogs/new-atlanticist/chinas-support-may-not-be-lethal-aid-but-its-vital-to-russias-aggression-in-ukraine/
+	2. https://www.aljazeera.com/news/2024/9/17/putin-orders-third-increase-in-russian-troop-numbers-since-ukraine-invasion
+	3. https://www.cnn.com/2025/04/16/europe/ukraine-russia-chinese-nationals-intl-latam
+Useful result: From [Source](https://www.atlanticcouncil.org/blogs/new-atlanticist/chinas-support-may-not-be-lethal-aid-but-its-vital-to-russias-aggression-in-ukraine/): 
+Content: The Atlantic Council published an article discussing China's support for Russia. <image:1626>
+
+Useful result: From [Source](https://www.aljazeera.com/news/2024/9/17/putin-orders-third-increase-in-russian-troop-numbers-since-ukraine-invasion): 
+Content: Al Jazeera published an image of Russian troops. <image:1627>
+
+Useful result: From [Source](https://www.cnn.com/2025/04/16/europe/ukraine-russia-chinese-nationals-intl-latam): 
+Content: CNN published an article about the war in Ukraine. <image:1628>
+
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Chinese Red Cross troops Russia Ukraine war')
+Skipping unsupported website: https://www.uscc.gov/research/chinas-position-russias-invasion-ukraine
+Got 2 new web source(s):
+	1. September 06, 2024 https://www.rfa.org/english/news/afcl/afcl-china-russia-troop-09062024030513.html
+	2. April 17, 2025 https://www.ndtv.com/world-news/ukraine-war-beijing-red-faced-as-kyiv-breaks-humanitarian-law-to-prove-china-wrong-8183057
+Useful result: From [Source](https://www.rfa.org/english/news/afcl/afcl-china-russia-troop-09062024030513.html): 
+Content: Asia Fact Check Lab published on September 6, 2024, states that the claim about China sending troops to aid Russia in the Ukraine war is false. The search result includes an image of an aircraft with the Chinese flag on its tail, which was shared on social media with the claim that it shows a Chinese plane disguised as a Red Cross flight entering Ukraine to help Russia. <image:1629>. However, the image was published in Chinese-language media in 2020 and shows a Chinese plane carrying doctors to Wuhan following the outbreak of COVID-19. The search result also mentions another photo of an unmarked aircraft <image:1630>, which was claimed to be transporting prohibited materials to Russia or Iran, but it was also taken in 2020 and shows a plane that carried a group of doctors to Wuhan.
+
+Useful result: From [Source](https://www.ndtv.com/world-news/ukraine-war-beijing-red-faced-as-kyiv-breaks-humanitarian-law-to-prove-china-wrong-8183057): 
+Content: The NDTV article discusses the capture of Chinese prisoners of war in Ukraine and their subsequent parading before the media, which is a violation of international humanitarian law. <image:1> The article mentions that Ukraine released documents and passports of the two PoWs, proving their identity as Chinese. <image:2> The article also states that China has denied its citizens are fighting alongside Russians. The article was published on April 25, 2025.
+
+The claim '<image:6> This image shows the Chinese Communist Party's Red Cross troops in Russia who have changed into winter clothes and set off for the Russian-Ukrainian front to aid Russia in rescuing its occupied territories.' is false.
+Justification: The claim is demonstrably false. The image used in the claim is from 2020 and shows a Chinese plane carrying doctors to Wuhan during the COVID-19 outbreak, not Chinese troops heading to the Russian-Ukrainian front, as reported by the [Asia Fact Check Lab](https://www.rfa.org/english/news/afcl/afcl-china-russia-troop-09062024030513.html).
+
+So, the overall veracity is: false
+Fact-check took 1:05 min.

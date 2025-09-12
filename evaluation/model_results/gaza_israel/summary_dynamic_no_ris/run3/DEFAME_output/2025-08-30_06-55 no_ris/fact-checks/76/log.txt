@@ -1,0 +1,37 @@
+Extracting claims from Content: <image:47> The image shows a screenshot of an authentic social media post from Mel Gibson saying that Israel will end soon and therefore destroy everything in its way together with a flag in the color of Israel that shows an hourglass.
+'Claim: "<image:47> The image shows a screenshot of an authentic social media post from Mel Gibson saying that Israel will end soon and therefore destroy everything in its way together with a flag in the color of Israel that shows an hourglass."'
+Verifying Claim: "<image:47> The image shows a screenshot of an authentic social media post from Mel Gibson saying that Israel will end soon and therefore destroy everything in its way together with a flag in the color of Israel that shows an hourglass."
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Mel Gibson Israel end destroy everything')
+Skipping fact-checking website: https://www.reuters.com/fact-check/mel-gibson-post-suggesting-end-israel-is-fake-2023-11-13/
+Skipping unsupported website: https://x.com/snopes/status/1715164080246305203
+Skipping fact-checking website: https://www.politifact.com/factchecks/2023/nov/09/viral-image/no-mel-gibson-didnt-post-about-the-end-of-israel/
+Skipping fact-checking website: https://www.usatoday.com/story/news/factcheck/2023/11/10/anti-israel-post-tied-to-mel-gibson-is-a-fabrication-fact-check/71534091007/
+Got 2 new web source(s):
+	1. November 10, 2023 https://apnews.com/article/fact-check-mel-gibson-israel-post-342335121493
+	2. October 19, 2023 https://www.yahoo.com/entertainment/fact-check-mel-gibson-posted-235600604.html
+Useful result: From [Source](https://apnews.com/article/fact-check-mel-gibson-israel-post-342335121493): 
+Content: The Associated Press states that the image is false. The post was not made by Mel Gibson, who does not have any public social media accounts. <image:47> The article mentions that Gibson made antisemitic remarks in the past.
+
+Useful result: From [Source](https://www.yahoo.com/entertainment/fact-check-mel-gibson-posted-235600604.html): 
+Content: The search result from Yahoo states that the image of Mel Gibson's post is fake. The post included an altered Israeli flag with an hourglass. The article mentions that Gibson has no public-facing social media accounts. <image:10603>, <image:10604>, <image:10602>.
+
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Israel flag hourglass')
+Got 3 new web source(s):
+	1. https://www.flickr.com/photos/talporat/4728247932
+	2. https://www.shutterstock.com/image-illustration/hourglass-colors-national-flag-concept-clip-2131517309
+	3. https://www.123rf.com/photo_152379279_hourglass-and-israel-flag-soft-focus-copy-space.html
+Useful result: From [Source](https://www.flickr.com/photos/talporat/4728247932): 
+Content: The search result shows an image of a flag with the colors of Israel and an hourglass in the middle. <image:10613>
+
+Useful result: From [Source](https://www.shutterstock.com/image-illustration/hourglass-colors-national-flag-concept-clip-2131517309): 
+Content: The search result from Shutterstock shows an hourglass with the colors of the Israeli flag. <image:10614>
+
+Useful result: From [Source](https://www.123rf.com/photo_152379279_hourglass-and-israel-flag-soft-focus-copy-space.html): 
+Content: The search result shows an image of an hourglass in front of an Israel flag. <image:10615>
+
+The claim '<image:47> The image shows a screenshot of an authentic social media post from Mel Gibson saying that Israel will end soon and therefore destroy everything in its way together with a flag in the color of Israel that shows an hourglass.' is false.
+Justification: The claim is false. Fact-checkers from the Associated Press ([Source](https://apnews.com/article/fact-check-mel-gibson-israel-post-342335121493)) and Yahoo ([Source](https://www.yahoo.com/entertainment/fact-check-mel-gibson-posted-235600604.html)) have debunked the social media post as fabricated, and Mel Gibson does not have any public social media accounts.
+
+So, the overall veracity is: false
+Fact-check took 1:57 min.

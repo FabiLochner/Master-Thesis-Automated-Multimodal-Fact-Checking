@@ -1,0 +1,41 @@
+Extracting claims from Content: <image:22> This image shows a Ukrainian F-16 fighter jet which was shot down by Russia as part of the large-scale Russian invasion in Ukraine.
+'Claim: "<image:22> This image shows a Ukrainian F-16 fighter jet which was shot down by Russia as part of the large-scale Russian invasion in Ukraine."'
+Verifying Claim: "<image:22> This image shows a Ukrainian F-16 fighter jet which was shot down by Russia as part of the large-scale Russian invasion in Ukraine."
+Not enough information yet. Continuing fact-check...
+Searching google_vision with query: ImageQuery(limit=3, start_date=None, end_date=None, search_type='reverse', text='', image=<defame.common.medium.Image object at 0x7ffed2ae1840>)
+Got 6 new web source(s):
+	1. https://www.pressenterprise.com/2020/05/01/heres-why-the-missiles-on-the-crashed-f-16-near-march-air-reserve-base-did-not-explode/
+	2. https://www.airandspaceforces.com/improperly-installed-parts-caused-f-16-to-crash-into-warehouse-in-may-2019/
+	3. https://www.sbsun.com/2020/04/23/hydraulic-failure-caused-f-16-to-crash-near-march-base-last-year-air-force-says/
+	4. https://www.nationthailand.com/news/general/40052979
+	5. https://www.factchecker.gr/2024/09/27/no-proof-about-the-destruction-of-ukrainian-f-16s-by-russian-kinzhal-hypersonic-missiles/
+	6. https://en.topwar.ru/268708-opublikovano-video-oblomkov-istrebitelja-f-16-vvs-tailanda-utverzhdajut-resursy-kambodzhi.html
+Useful result: From [Source](https://www.pressenterprise.com/2020/05/01/heres-why-the-missiles-on-the-crashed-f-16-near-march-air-reserve-base-did-not-explode/): Found exact image on website with title: Here's why the missiles on the crashed F-16 near March Air Reserve ...
+Content: The Press-Enterprise published an article on May 1, 2020, discussing the crash of an Air National Guard F-16 fighter jet near March Air Reserve Base on May 16, 2019. <image:2710> The article includes a photo of the crashed F-16 inside a warehouse. The article explains that the missiles on board did not explode because they were not armed.
+
+Useful result: From [Source](https://www.airandspaceforces.com/improperly-installed-parts-caused-f-16-to-crash-into-warehouse-in-may-2019/): Found exact image on website with title: Improperly Installed Parts Caused F-16 to Crash into Warehouse in ...
+Content: The image <image:2711> shows the wreckage of an F-16 that crashed into a warehouse in May 2019 due to improperly installed parts. The article was published on April 28, 2020, by Brian W. Everstine.
+
+Useful result: From [Source](https://www.sbsun.com/2020/04/23/hydraulic-failure-caused-f-16-to-crash-near-march-base-last-year-air-force-says/): Found exact image on website with title: Hydraulic failure caused F-16 to crash near March base last year, Air ...
+Content: The search result from The Press-Enterprise, published on April 23, 2020, discusses an F-16 Fighting Falcon that crashed near March Air Reserve Base on May 16, 2019, due to hydraulic failure. <image:2712> shows an inlet check valve from the crashed F-16. The image in the claim is the same as the image in the search result. The article states that the F-16 was assigned to the 114th Fighter Wing at Joe Foss Field in South Dakota.
+
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Ukrainian F-16 fighter jet shot down')
+Skipping unsupported website: https://www.youtube.com/watch?v=AuCDudTrmDc
+Got 3 new web source(s):
+	1. June 29, 2025 https://www.reuters.com/business/aerospace-defense/least-six-wounded-large-scale-russian-air-attack-ukraine-ukrainian-authorities-2025-06-29/
+	2. June 29, 2025 https://abcnews.go.com/International/ukraine-loses-16-fighter-amid-massed-russian-drone/story?id=123315001
+	3. June 29, 2025 https://www.aljazeera.com/news/2025/6/29/ukrainian-pilot-killed-repelling-massive-russian-air-attack-overnight
+Useful result: From [Source](https://www.reuters.com/business/aerospace-defense/least-six-wounded-large-scale-russian-air-attack-ukraine-ukrainian-authorities-2025-06-29/): 
+Content: The search result from Reuters, published on June 29, 2025, reports that a Ukrainian F-16 fighter pilot died in a crash while repelling a Russian air attack. The article mentions that Ukraine has lost three F-16s since it began operating the U.S.-made jets last year. <image:2735>
+
+Useful result: From [Source](https://abcnews.go.com/International/ukraine-loses-16-fighter-amid-massed-russian-drone/story?id=123315001): 
+Content: The ABC News article, published on June 29, 2025, reports that a Ukrainian F-16 fighter jet was lost during an attempt to repel a Russian attack. The pilot, Maksym Ustimenko, shot down seven targets before his F-16 was damaged. <image:2741> shows a Ukrainian F-16 in flight. <image:2736> shows firefighters working at a site of a Russian attack.
+
+Useful result: From [Source](https://www.aljazeera.com/news/2025/6/29/ukrainian-pilot-killed-repelling-massive-russian-air-attack-overnight): 
+Content: Al Jazeera reports that a Ukrainian F-16 aircraft was lost after repelling a Russian missile and drone strike on June 29, 2025. <image:0> The pilot, Lieutenant Colonel Maksym Ustimenko, died in the incident. The article also mentions that Russia launched 537 projectiles against Ukraine.
+
+The claim '<image:22> This image shows a Ukrainian F-16 fighter jet which was shot down by Russia as part of the large-scale Russian invasion in Ukraine.' is misleading.
+Justification: The image in the claim depicts an F-16 that crashed in a warehouse in 2019 due to mechanical failure, not a Ukrainian F-16 shot down by Russia. While Ukraine has lost F-16s recently, the image is unrelated to those events, making the claim misleading ([https://www.sbsun.com/2020/04/23/hydraulic-failure-caused-f-16-to-crash-near-march-base-last-year-air-force-says/](https://www.sbsun.com/2020/04/23/hydraulic-failure-caused-f-16-to-crash-near-march-base-last-year-air-force-says/)).
+
+So, the overall veracity is: misleading
+Fact-check took 1:43 min.

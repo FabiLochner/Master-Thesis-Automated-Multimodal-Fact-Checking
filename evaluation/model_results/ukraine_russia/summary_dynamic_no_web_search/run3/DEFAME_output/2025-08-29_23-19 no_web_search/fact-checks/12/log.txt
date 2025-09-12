@@ -1,0 +1,24 @@
+Extracting claims from Content: <image:9> This is an authentic image of world leaders taking off their suits to symbolically support Ukraine at the London summit on Ukraine on March 2, 2025.
+'Claim: "<image:9> This is an authentic image of world leaders taking off their suits to symbolically support Ukraine at the London summit on Ukraine on March 2, 2025."'
+Verifying Claim: "<image:9> This is an authentic image of world leaders taking off their suits to symbolically support Ukraine at the London summit on Ukraine on March 2, 2025."
+Not enough information yet. Continuing fact-check...
+Got 0 new web source(s):
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='London summit on Ukraine March 2 2023 leaders')
+Got 3 new web source(s):
+	1. https://www.lemonde.fr/en/international/article/2025/03/02/zelensky-joins-european-leaders-at-key-ukraine-summit-in-london_6738729_4.html
+	2. https://www.aljazeera.com/news/2025/3/2/european-leaders-gather-in-london-to-strengthen-support-for-ukraine
+	3. https://abcnews.go.com/International/zelenskyy-set-european-summit-london-after-trump-showdown/story?id=119338966
+Useful result: From [Source](https://www.lemonde.fr/en/international/article/2025/03/02/zelensky-joins-european-leaders-at-key-ukraine-summit-in-london_6738729_4.html): 
+Content: Le Monde published an article about the London summit on Ukraine on March 2, 2023, with a photograph of the leaders. <image:7060>
+
+Useful result: From [Source](https://www.aljazeera.com/news/2025/3/2/european-leaders-gather-in-london-to-strengthen-support-for-ukraine): 
+Content: Al Jazeera published an article about the London summit on Ukraine on March 2, 2023. The article includes a photograph of the leaders at the summit. <image:7061>
+
+Useful result: From [Source](https://abcnews.go.com/International/zelenskyy-set-european-summit-london-after-trump-showdown/story?id=119338966): 
+Content: ABC News published an article about the London summit on Ukraine. The article includes a photograph of the leaders at the summit. <image:7062>
+
+The claim '<image:9> This is an authentic image of world leaders taking off their suits to symbolically support Ukraine at the London summit on Ukraine on March 2, 2025.' is false.
+Justification: The claim is false. While a London summit on Ukraine did occur on March 2, 2023, as reported by sources like [Le Monde](https://www.lemonde.fr/en/international/article/2025/03/02/zelensky-joins-european-leaders-at-key-ukraine-summit-in-london_6738729_4.html), [Al Jazeera](https://www.aljazeera.com/news/2025/3/2/european-leaders-gather-in-london-to-strengthen-support-for-ukraine), and [ABC News](https://abcnews.go.com/International/zelenskyy-set-european-summit-london-after-trump-showdown/story?id=119338966), the provided image does not align with the documented photographs of the event. The image in the claim is not authentic.
+
+So, the overall veracity is: false
+Fact-check took 0:18 min.

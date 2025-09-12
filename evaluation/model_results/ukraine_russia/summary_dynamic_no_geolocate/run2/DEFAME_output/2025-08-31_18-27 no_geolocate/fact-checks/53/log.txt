@@ -1,0 +1,40 @@
+Extracting claims from Content: As of February 2025, Russia has lost 1.5 million troops in the Ukraine war.
+'Claim: "As of February 2025, Russia has lost 1.5 million troops in the Ukraine war."'
+Verifying Claim: "As of February 2025, Russia has lost 1.5 million troops in the Ukraine war."
+Not enough information yet. Continuing fact-check...
+Got 3 new web source(s):
+	1. February 26, 2025 https://www.russiamatters.org/news/russia-ukraine-war-report-card/russia-ukraine-war-report-card-feb-26-2025
+	2. https://en.wikipedia.org/wiki/Casualties_of_the_Russo-Ukrainian_War
+	3. https://en.zona.media/article/2025/08/01/casualties_eng-trl
+Useful result: From [Source](https://www.russiamatters.org/news/russia-ukraine-war-report-card/russia-ukraine-war-report-card-feb-26-2025): 
+Content: The search result from Russia Matters, dated February 26, 2025, provides estimates of military casualties in the Russia-Ukraine war. It states that Russia has more than 700,000 killed or injured, according to a January 2025 estimate, and 48,000 missing. <image:1>, <image:2>, <image:3>, <image:4>, <image:5>. The article also mentions that according to Donald Trump’s January 2025 estimate, 1 million Russian soldiers have been killed.
+
+Useful result: From [Source](https://en.wikipedia.org/wiki/Casualties_of_the_Russo-Ukrainian_War): 
+Content: The Wikipedia article "Casualties of the Russo-Ukrainian War" states that in July 2024, a British Army official said that the war could cost Russia 1.5 to 1.8 million casualties. The article also mentions that by the end of 2024, Meduza estimated that over 165,000 Russian soldiers had died during the war. The article also mentions that as of the beginning of February 2025, 1,382 Russian servicemen that were previously thought missing were confirmed to be in Ukrainian captivity.
+
+Useful result: From [Source](https://en.zona.media/article/2025/08/01/casualties_eng-trl): 
+Content: The search result from Mediazona, in collaboration with BBC News Russian service, provides an estimate of Russian losses in the war with Ukraine. The last update of the Probate Registry estimate was February 24, 2025, with data as of December 2024. The article also mentions that by November 2024, the number of losses among prisoners had dropped to between 2–3%.
+
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Russian military casualties Ukraine war')
+Skipping unsupported website: https://www.congress.gov/118/meeting/house/116768/documents/HHRG-118-ZS00-20240130-SD002.pdf
+Got 2 new web source(s):
+	1. June 22, 2025 https://www.theguardian.com/world/ng-interactive/2025/jun/22/one-million-and-counting-russian-casualties-hit-milestone-in-ukraine-war
+	2. June 03, 2025 https://www.csis.org/analysis/russias-battlefield-woes-ukraine
+Useful result: From [Source](https://www.theguardian.com/world/ng-interactive/2025/jun/22/one-million-and-counting-russian-casualties-hit-milestone-in-ukraine-war): 
+Content: The Guardian published an article on June 22, 2025, stating that more than one million Russian troops have been killed or injured since the full-scale invasion of Ukraine began on February 24, 2022. <image:13534>, <image:13536>, <image:13537>. The article mentions a study by the US-based Centre for Strategic and International Studies (CSIS), which puts Russian military deaths at up to 250,000 and total casualties, including the wounded, at over 950,000.
+
+Useful result: From [Source](https://www.csis.org/analysis/russias-battlefield-woes-ukraine): 
+Content: The CSIS analysis, published on June 3, 2025, states that over 950,000 Russian soldiers have been killed and wounded since the war began. It also mentions that a high of 250,000 Russian soldiers have died in Ukraine.
+
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Russian military casualties Ukraine war February 2025')
+Got 1 new web source(s):
+	1. https://en.zona.media/article/2025/08/29/casualties_eng-trl
+Useful result: From [Source](https://en.zona.media/article/2025/08/29/casualties_eng-trl): 
+Content: The Mediazona, in collaboration with the BBC’s Russian service, estimates that by August 2025, around 220,000 Russian men between 18 and 55 had been killed in the war. The article also mentions that by August 29, the death of over 5,500 officers of the Russian army and other security agencies had been confirmed. The date of death is known in 98,340 cases.
+
+The claim 'As of February 2025, Russia has lost 1.5 million troops in the Ukraine war.' is false.
+Justification: The claim is not supported by the evidence. While various sources provide estimates of Russian casualties in the Ukraine war, none of them confirm the specific figure of 1.5 million losses as of February 2025. A report from August 2025, estimates around 220,000 deaths ([https://en.zona.media/article/2025/08/29/casualties_eng-trl](https://en.zona.media/article/2025/08/29/casualties_eng-trl)).
+
+So, the overall veracity is: false
+Fact-check took 13:09 min.

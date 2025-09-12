@@ -1,0 +1,31 @@
+Extracting claims from Content: <image:25> This image shows the youngest victim of the Hezbollah rocket that murdered 12 children playing soccer in Israel on July 27, 2024.
+'Claim: "<image:25> This image shows the youngest victim of the Hezbollah rocket that murdered 12 children playing soccer in Israel on July 27, 2024."'
+Verifying Claim: "<image:25> This image shows the youngest victim of the Hezbollah rocket that murdered 12 children playing soccer in Israel on July 27, 2024."
+Not enough information yet. Continuing fact-check...
+Got 2 new web source(s):
+	1. https://www.aa.com.tr/tr/teyithatti/aktuel/fotograftaki-kiz-mecdel-sems-saldirisinda-olenlerden-biri-mi/1818078
+	2. https://www.mako.co.il/4fb2cc2308a9c110/Editor-8345f0d2f186c81026.htm?page=6
+Useful result: From [Source](https://www.aa.com.tr/tr/teyithatti/aktuel/fotograftaki-kiz-mecdel-sems-saldirisinda-olenlerden-biri-mi/1818078): Found exact image on website with title: Fotoğraftaki kız Mecdel Şems saldırısında ölenlerden biri mi?
+Content: The search result from Anadolu Agency, published on July 29, 2024, fact-checks the claim that the image shows a child who died in a Hezbollah rocket attack in Israel. The article states that the image is a stock photo and the child in the image is not Malak, but Julia Ghirarda, who lives in the USA. <image:25> The article also mentions a rocket attack on July 27 in the Golan Heights, where 12 people, including children, died.
+
+Useful result: From [Source](https://www.mako.co.il/4fb2cc2308a9c110/Editor-8345f0d2f186c81026.htm?page=6): Found exact image on website with title: ליאת מצה | עורכת משנה במגזין mako
+Content: The search result is from the website mako.co.il. It contains several articles, but none of them are related to the claim. The website also contains images <image:484>.
+
+Got 3 new web source(s):
+	1. https://en.wikipedia.org/wiki/Timeline_of_the_Israel%E2%80%93Hezbollah_conflict_(27_July_2024_%E2%80%93_16_September_2024)
+	2. July 27, 2024 https://www.reuters.com/world/middle-east/nine-people-killed-rocket-hits-football-pitch-israeli-occupied-golan-israel-2024-07-27/
+	3. July 28, 2024 https://www.aljazeera.com/news/2024/7/27/israel-says-10-killed-in-rocket-attack-on-occupied-golan-heights
+Useful result: From [Source](https://en.wikipedia.org/wiki/Timeline_of_the_Israel%E2%80%93Hezbollah_conflict_(27_July_2024_%E2%80%93_16_September_2024)): 
+Content: The search result is a Wikipedia article about the timeline of the Israel–Hezbollah conflict from July 27, 2024, to September 16, 2024. It mentions that on July 27, 2024, a Hezbollah rocket struck a soccer field in Majdal Shams, killing 12 children. <image:25> is not in the search result.
+
+Useful result: From [Source](https://www.reuters.com/world/middle-east/nine-people-killed-rocket-hits-football-pitch-israeli-occupied-golan-israel-2024-07-27/): 
+Content: Reuters reports that a rocket attack on a football ground in the Israeli-occupied Golan Heights on July 27, 2024, killed 12 people, including children. <image:5126> Hezbollah denied responsibility for the attack. The article includes a photograph of the soccer pitch in Majdal Shams, a Druze village in Golan Heights, after the attack.
+
+Useful result: From [Source](https://www.aljazeera.com/news/2024/7/27/israel-says-10-killed-in-rocket-attack-on-occupied-golan-heights): 
+Content: The Al Jazeera article, published on July 27, 2024, reports that at least 12 people were killed and 30 wounded in a rocket attack on a football pitch in Majdal Shams in the Israeli-occupied Golan Heights. <image:i>. Israel accused Hezbollah of carrying out the attack, but Hezbollah denied responsibility. The article includes images of the aftermath of the attack.
+
+The claim '<image:25> This image shows the youngest victim of the Hezbollah rocket that murdered 12 children playing soccer in Israel on July 27, 2024.' is false.
+Justification: The image in the claim is a stock photo of a child named Julia Ghirarda, not a victim of the Hezbollah rocket attack. While the attack did occur on July 27, 2024, in the Golan Heights, killing 12 children, the image is unrelated, as confirmed by the Anadolu Agency ([https://www.aa.com.tr/tr/teyithatti/aktuel/fotograftaki-kiz-mecdel-sems-saldirisinda-olenlerden-biri-mi/1818078](https://www.aa.com.tr/tr/teyithatti/aktuel/fotograftaki-kiz-mecdel-sems-saldirisinda-olenlerden-biri-mi/1818078)).
+
+So, the overall veracity is: false
+Fact-check took 0:22 min.

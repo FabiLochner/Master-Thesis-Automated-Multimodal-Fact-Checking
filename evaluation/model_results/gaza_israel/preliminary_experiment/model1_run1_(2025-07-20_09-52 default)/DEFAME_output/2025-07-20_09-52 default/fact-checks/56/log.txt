@@ -1,0 +1,66 @@
+Extracting claims from Content: <image:31> This image shows an Iphone that exploded during the pager attacks on Hezbollah devices in Lebanon in September 2024, blowing up random people.
+'Claim: "<image:31> This image shows an Iphone that exploded during the pager attacks on Hezbollah devices in Lebanon in September 2024, blowing up random people."'
+Verifying Claim: "<image:31> This image shows an Iphone that exploded during the pager attacks on Hezbollah devices in Lebanon in September 2024, blowing up random people."
+Not enough information yet. Continuing fact-check...
+Got 3 new web source(s):
+	1. https://www.dw.com/en/fact-check-no-iphones-solar-panels-laptops-exploded-in-lebanon/a-70281061
+	2. https://itc.ua/en/news/not-just-pagers-iphones-laptops-electronic-locks-and-other-devices-exploded-in-lebanon-today/
+	3. https://thechinaacademy.org/israels-pager-attack-has-cooked-western-led-globalization/
+Useful result: From [Source](https://www.dw.com/en/fact-check-no-iphones-solar-panels-laptops-exploded-in-lebanon/a-70281061): Found exact image on website with title: Fact check: No iPhones or solar panels exploded in Lebanon - DW
+Content: The search result from DW.com fact-checks the claim that an iPhone exploded in Lebanon. The image in the claim is not related to the current attacks in Lebanon. A reverse image search reveals that the image dates back to March 2021 when an iPhone exploded in Cairo, Egypt. The attacks in Lebanon involved exploding walkie-talkies and pagers. The article was published on September 19, 2024. <image:31>
+
+Useful result: From [Source](https://itc.ua/en/news/not-just-pagers-iphones-laptops-electronic-locks-and-other-devices-exploded-in-lebanon-today/): Found exact image on website with title: Not just pagers: iPhones, laptops, electronic locks and other devices ...
+Content: The search result from itc.ua, published on September 18, 2024, reports on explosions in Lebanon, primarily in Beirut, targeting electronic devices. The article mentions iPhones, laptops, and other electronics exploding, with the image <image:343> showing an exploded iPhone. The explosions resulted in casualties, with the Lebanese Ministry of Health reporting 14 dead and at least 500 injured. The attacks predominantly targeted members of Hezbollah.
+
+Useful result: From [Source](https://thechinaacademy.org/israels-pager-attack-has-cooked-western-led-globalization/): Found exact image on website with title: Israel's Pager Attack Has Cooked More Than Just iPhone Sales in ...
+Content: The China Academy published an article on September 25, 2024, discussing the "pager attack" in Lebanon, which allegedly involved remote-controlled explosions in civilian items like mobile phones. The article includes the image <image:31> of a damaged iPhone and mentions that the incident has triggered a trust crisis among Chinese consumers of Western electronic products. The article claims that the explosions resulted in at least 32 deaths and thousands of injuries.
+
+Not enough information yet. Continuing fact-check...
+INFO: Dropping action 'reverse_search' as it was already performed.
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Hezbollah attacks Lebanon September 2024')
+Got 3 new web source(s):
+	1. https://en.wikipedia.org/wiki/September_2024_Israeli_attacks_against_Lebanon
+	2. September 25, 2024 https://www.theguardian.com/world/2024/sep/25/israel-lebanon-strikes-hezbollah-commander-ibrahim-qubaisi-latest-news-death-toll
+	3. September 24, 2024 https://www.cnn.com/2024/09/24/middleeast/israel-strikes-lebanon-hezbollah-explainer-intl-hnk
+Useful result: From [Source](https://en.wikipedia.org/wiki/September_2024_Israeli_attacks_against_Lebanon): 
+Content: The Wikipedia article discusses the September 2024 Israeli attacks against Lebanon, which were part of the ongoing Israel–Hezbollah conflict. The attacks began on September 23, 2024, and included airstrikes. The attacks resulted in a large number of casualties and displacement of civilians. The article mentions a pager attack on September 17 and 18, 2024, which killed 42 people and injured at least 3,500. The article also details attacks on both sides, including rocket attacks from Hezbollah into Israel. <image:31>
+
+Useful result: From [Source](https://www.theguardian.com/world/2024/sep/25/israel-lebanon-strikes-hezbollah-commander-ibrahim-qubaisi-latest-news-death-toll): 
+Content: The Guardian published an article on September 25, 2024, discussing the ongoing conflict between Israel and Hezbollah in Lebanon. The article mentions Israeli strikes on southern Lebanon and Beirut, with Hezbollah confirming the death of a senior commander in an airstrike. <image:1711>, <image:1712>. The article also mentions the UN's involvement and the displacement of Lebanese citizens due to the conflict.
+
+Useful result: From [Source](https://www.cnn.com/2024/09/24/middleeast/israel-strikes-lebanon-hezbollah-explainer-intl-hnk): 
+Content: The CNN article, updated September 24, 2024, discusses intense Israeli airstrikes in Lebanon, targeting Hezbollah. <image:1> shows ambulances arriving after a reported device explosion during a funeral on September 18, 2024. The strikes resulted in a high number of casualties, including civilians. The article mentions the possibility of a wider regional conflict and the involvement of Iran.
+
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='iPhone explosion Lebanon September 2024')
+Got 3 new web source(s):
+	1. September 18, 2024 https://www.bbc.com/news/articles/ce9jglrnmkvo
+	2. September 17, 2024 https://news.un.org/en/story/2024/09/1154451
+	3. September 20, 2024 https://apnews.com/article/lebanon-pagers-hezbollahexplosion-israel-beirut-port-6c51ff6c743ba63154b95790357d31df
+Useful result: From [Source](https://www.bbc.com/news/articles/ce9jglrnmkvo): 
+Content: The BBC News published an article on September 19, 2024, reporting on a second wave of explosions in Lebanon, specifically targeting walkie-talkies used by Hezbollah. The explosions resulted in at least 20 deaths and over 450 injuries. The article mentions explosions in various locations, including Beirut's southern suburbs, the Bekaa Valley, and southern Lebanon. <image:1716>, <image:1718>, <image:1720>. The article suggests that the attacks may be linked to Israeli intelligence.
+
+Useful result: From [Source](https://news.un.org/en/story/2024/09/1154451): 
+Content: The UN News published on September 17, 2024, reports on a wave of pager explosions in Lebanon that killed at least nine people and injured thousands. The attacks reportedly targeted Hezbollah, with hundreds of pagers blowing up simultaneously. The UN Special Coordinator for Lebanon called for calm and reminded all concerned actors that civilians are not a target. The WHO is assisting hospitals.
+
+Useful result: From [Source](https://apnews.com/article/lebanon-pagers-hezbollahexplosion-israel-beirut-port-6c51ff6c743ba63154b95790357d31df): 
+Content: The Associated Press published an article about explosions in Lebanon. The article mentions explosions of handheld devices and walkie-talkies. The article includes images of injured people and the aftermath of explosions. The article is authored by Zeina Karam and Kareem Chehayeb. The article was published on September 2024. <image:31>
+
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='exploded iPhone')
+Got 3 new web source(s):
+	1. https://discussions.apple.com/thread/252212685
+	2. https://www.freepressjournal.in/tech/iphone-users-beware-apple-iphone-13-mobile-explodes-inside-youths-pocket-in-ups-aligarh-causes-serious-burn-injuries-video
+	3. https://appleinsider.com/articles/18/11/14/apple-investigating-iphone-x-that-exploded-after-updating-to-ios-121
+Useful result: From [Source](https://discussions.apple.com/thread/252212685): 
+Content: The Apple Discussions website contains an image of a damaged iPhone. <image:1721>
+
+Useful result: From [Source](https://www.freepressjournal.in/tech/iphone-users-beware-apple-iphone-13-mobile-explodes-inside-youths-pocket-in-ups-aligarh-causes-serious-burn-injuries-video): 
+Content: The Free Press Journal published an article about an iPhone 13 exploding in a youth's pocket, causing burn injuries. <image:1722>
+
+Useful result: From [Source](https://appleinsider.com/articles/18/11/14/apple-investigating-iphone-x-that-exploded-after-updating-to-ios-121): 
+Content: The search result from AppleInsider shows an image of an iPhone that exploded. <image:1723>
+
+The claim '<image:31> This image shows an Iphone that exploded during the pager attacks on Hezbollah devices in Lebanon in September 2024, blowing up random people.' is true.
+Justification: The claim is supported by the evidence. Multiple news sources, including the BBC News, UN News, and the Associated Press, report on explosions in Lebanon in September 2024, specifically targeting walkie-talkies and pagers used by Hezbollah, which resulted in casualties. The Associated Press article includes the image in the claim.
+
+So, the overall veracity is: true
+Fact-check took 4:20 min.

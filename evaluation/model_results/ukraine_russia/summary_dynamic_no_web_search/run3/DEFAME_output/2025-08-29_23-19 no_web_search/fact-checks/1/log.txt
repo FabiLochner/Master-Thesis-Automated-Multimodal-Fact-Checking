@@ -1,0 +1,31 @@
+Extracting claims from Content: Ukrainian President Volodymyr Zelenskyy purchased the Eagle's Nest, or Kehlsteinhaus, in Berchtesgaden in the southern German state of Bavaria, for 14.2 million euros.
+'Claim: "Ukrainian President Volodymyr Zelenskyy purchased the Eagle's Nest, or Kehlsteinhaus, in Berchtesgaden in the southern German state of Bavaria, for 14.2 million euros."'
+Verifying Claim: "Ukrainian President Volodymyr Zelenskyy purchased the Eagle's Nest, or Kehlsteinhaus, in Berchtesgaden in the southern German state of Bavaria, for 14.2 million euros."
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text="Volodymyr Zelenskyy Eagle's Nest")
+Skipping unsupported website: https://www.president.gov.ua/en/news/u-varshavi-andzhej-duda-vruchiv-volodimiru-zelenskomu-najvis-82097
+Skipping fact-checking website: https://factcheck.afp.com/doc.afp.com.36YR9KZ
+Got 3 new web source(s):
+	1. https://cedmohub.eu/no-zelensky-hasnt-bought-eagles-nest-it-is-still-in-ownership-of-bavarian-state/
+	2. https://www.theguardian.com/world/2025/feb/21/us-envoy-ukraine-keith-kellogg-volodymyr-zelenskyy-embattled-courageous-leader
+	3. https://www.abc.net.au/news/2022-02-27/zelenskyy-s-unlikely-journey-from-comedy-to-wartime-leader/100865896
+Useful result: From [Source](https://cedmohub.eu/no-zelensky-hasnt-bought-eagles-nest-it-is-still-in-ownership-of-bavarian-state/): 
+Content: The search result includes an image of a social media post claiming that Zelenskyy acquired the Kehlsteinhaus. <image:7020>. The post is dated February 6, 2025.
+
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Kehlsteinhaus Berchtesgaden purchase')
+Failed to download or open image: cannot identify image file <_io.BytesIO object at 0x7ffef2b51f80>
+Got 3 new web source(s):
+	1. https://www.salzburg.info/en/sights/excursions/kehlsteinhaus
+	2. https://www.munich.travel/en/pois/lakes-mountains/kehlsteinhaus
+	3. https://www.berchtesgaden.de/en/the-eagles-s-nest
+Useful result: From [Source](https://www.munich.travel/en/pois/lakes-mountains/kehlsteinhaus): 
+Content: The search result provides an image of the Kehlsteinhaus (Eagle's Nest) in Berchtesgaden, Germany. <image:7027>
+
+Useful result: From [Source](https://www.berchtesgaden.de/en/the-eagles-s-nest): 
+Content: The search result provides images of the Eagle's Nest (Kehlsteinhaus) in Berchtesgaden, Germany. <image:7028>
+
+The claim 'Ukrainian President Volodymyr Zelenskyy purchased the Eagle's Nest, or Kehlsteinhaus, in Berchtesgaden in the southern German state of Bavaria, for 14.2 million euros.' is false.
+Justification: The claim that Volodymyr Zelenskyy purchased the Eagle's Nest is demonstrably false. The evidence includes a social media post making the claim, but it is marked as incorrect.
+
+So, the overall veracity is: false
+Fact-check took 0:19 min.

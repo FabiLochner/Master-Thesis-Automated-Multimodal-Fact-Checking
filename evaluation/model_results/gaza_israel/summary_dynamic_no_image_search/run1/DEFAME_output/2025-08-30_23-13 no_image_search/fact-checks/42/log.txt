@@ -1,0 +1,23 @@
+Extracting claims from Content: U.S. President-elect Donald Trump said on January 7, 2025 that if Israeli hostages held by Hamas 'are not back by the time I get into office, all hell will break out in the Middle East'.
+'Claim: "U.S. President-elect Donald Trump said on January 7, 2025 that if Israeli hostages held by Hamas 'are not back by the time I get into office, all hell will break out in the Middle East'."'
+Verifying Claim: "U.S. President-elect Donald Trump said on January 7, 2025 that if Israeli hostages held by Hamas 'are not back by the time I get into office, all hell will break out in the Middle East'."
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Donald Trump January 7 2025 Israeli hostages Hamas')
+Got 3 new web source(s):
+	1. January 07, 2025 https://www.npr.org/2025/01/07/nx-s1-5250278/trump-hostages-israel-hamas-middle-east
+	2. March 06, 2025 https://www.pbs.org/newshour/world/brushing-off-trumps-threat-hamas-says-it-will-only-free-hostages-for-a-lasting-truce
+	3. March 06, 2025 https://www.bbc.com/news/articles/c0mwln4p87do
+Useful result: From [Source](https://www.npr.org/2025/01/07/nx-s1-5250278/trump-hostages-israel-hamas-middle-east): 
+Content: NPR published an article on January 7, 2025, stating that Donald Trump said during a news conference at Mar-a-Lago that "all hell will break out" if Hamas does not release hostages by the time he returns to the White House. <image:11255>, <image:11256>, <image:11257>. The article was written by Franco Ordoñez and Lexie Schapitl.
+
+Useful result: From [Source](https://www.pbs.org/newshour/world/brushing-off-trumps-threat-hamas-says-it-will-only-free-hostages-for-a-lasting-truce): 
+Content: PBS News published an article on March 6, 2025, discussing Hamas's response to Donald Trump's "last warning" regarding the Israeli hostages. Trump's warning, issued after meeting with former hostages, demanded the immediate release of all hostages and the return of the deceased. Hamas reiterated its stance that it would only free the remaining hostages in exchange for a lasting truce. The article mentions a ceasefire agreement reached in January, which included negotiations for a second phase involving the release of hostages for Palestinian prisoners, a permanent ceasefire, and an Israeli withdrawal from Gaza. <image:11259>
+
+Useful result: From [Source](https://www.bbc.com/news/articles/c0mwln4p87do): 
+Content: The BBC News article, published on March 6, 2025, reports that Donald Trump issued a "last warning" to Hamas regarding the release of hostages. Trump stated there would be "hell to pay" if the hostages were not released. <image:11260>, <image:11261>. The article also mentions that the White House confirmed direct talks with Hamas to secure the release of hostages.
+
+The claim 'U.S. President-elect Donald Trump said on January 7, 2025 that if Israeli hostages held by Hamas 'are not back by the time I get into office, all hell will break out in the Middle East'.' is true.
+Justification: Based on the NPR article from January 7, 2025, and the BBC News article from March 6, 2025, the claim is accurate. The NPR article states that Donald Trump said "all hell will break out" if Hamas does not release hostages by the time he returns to the White House, and the BBC News article reports a "last warning" with the phrase "hell to pay".
+
+So, the overall veracity is: true
+Fact-check took 1:00 min.

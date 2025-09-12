@@ -1,0 +1,38 @@
+Extracting claims from Content: <image:20> This image shows a US drone which was shot down in March 2025 by the Houthis using Russian missiles.
+'Claim: "<image:20> This image shows a US drone which was shot down in March 2025 by the Houthis using Russian missiles."'
+Verifying Claim: "<image:20> This image shows a US drone which was shot down in March 2025 by the Houthis using Russian missiles."
+Not enough information yet. Continuing fact-check...
+Got 3 new web source(s):
+	1. February 26, 2025 https://www.atlanticcouncil.org/blogs/menasource/houthi-strikes-on-us-mq9-reaper-drones/
+	2. April 25, 2025 https://www.npr.org/2025/04/25/nx-s1-5377192/houthis-reaper-drones-us-military-yemen
+	3. April 25, 2025 https://www.cnn.com/2025/04/25/politics/houthis-target-drones-hampering-trump-mission
+Useful result: From [Source](https://www.atlanticcouncil.org/blogs/menasource/houthi-strikes-on-us-mq9-reaper-drones/): 
+Content: The Atlantic Council published an article discussing Houthi strikes on US MQ-9 Reaper drones. The Houthis have claimed responsibility for downing fourteen MQ-9 Reaper drones since November 2023. The article mentions that on December 28, 2024, the Houthis shot down a US MQ-9 Reaper over Yemen. Four days later, the Houthis claimed to have downed a second US-made drone in the Marib governorate, marking the first Houthi strike of an MQ-9 Reaper in 2025. The article also mentions that Iran mediated talks between Russia and the Houthis that led to Moscow supplying Russian-made advanced anti-ship cruise missiles to the group.
+
+Useful result: From [Source](https://www.npr.org/2025/04/25/nx-s1-5377192/houthis-reaper-drones-us-military-yemen): 
+Content: NPR reports that Houthi rebels have shot down seven US Reaper drones in recent weeks. The article mentions that the drones were conducting attack runs or surveillance and crashed into water and land. The article was published on April 25, 2025, by The Associated Press. <image:20> is not in the search result.
+
+Useful result: From [Source](https://www.cnn.com/2025/04/25/politics/houthis-target-drones-hampering-trump-mission): 
+Content: The CNN article, published on April 25, 2025, discusses the Houthis' successful targeting of US drones, hindering the US's military campaign. The Houthis have shot down at least seven American drones. The article includes images of Houthi supporters and a damaged vehicle in Yemen. <image:i>.
+
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='drone shot down fire')
+Got 3 new web source(s):
+	1. https://www.pbs.org/newshour/politics/houthi-rebels-have-shot-down-7-reaper-drones-as-u-s-continues-attack-on-yemeni-group
+	2. https://www.businessinsider.com/video-shows-us-mq-9-reaper-drone-shot-down-over-yemen-2017-10
+	3. https://www.themoscowtimes.com/2024/10/10/russia-says-shot-down-ukrainian-drone-barrage-a86637
+Useful result: From [Source](https://www.pbs.org/newshour/politics/houthi-rebels-have-shot-down-7-reaper-drones-as-u-s-continues-attack-on-yemeni-group): 
+Content: PBS reports that the Houthis have shot down 7 Reaper drones. <image:8292>
+
+Useful result: From [Source](https://www.businessinsider.com/video-shows-us-mq-9-reaper-drone-shot-down-over-yemen-2017-10): 
+Content: Business Insider published a video showing a US MQ-9 Reaper drone being shot down over Yemen. <image:8293>
+
+Useful result: From [Source](https://www.themoscowtimes.com/2024/10/10/russia-says-shot-down-ukrainian-drone-barrage-a86637): 
+Content: The Moscow Times published an article with an image of a large explosion. <image:8294>
+
+Most likely location: Israel
+Top 10 locations: Israel, Palestine, United Arab Emirates, Jordan, Tunisia, Albania, Andorra, Argentina, Australia, Austria
+The claim '<image:20> This image shows a US drone which was shot down in March 2025 by the Houthis using Russian missiles.' is false.
+Justification: The claim is inaccurate. While the Houthis have shot down US Reaper drones, the provided image's context is not verified. The geolocation of the image suggests it was taken in Israel, contradicting the claim that the drone was shot down by the Houthis in Yemen.
+
+So, the overall veracity is: false
+Fact-check took 0:36 min.

@@ -1,0 +1,48 @@
+Extracting claims from Content: <image:51> This image shows Israeli Finance Minister Smotrich, who previously threatened to invade Lebanon, taking shelter in an Israeli bomb shelter during Hezbollah's attack on Israel on August 25, 2024.
+'Claim: "<image:51> This image shows Israeli Finance Minister Smotrich, who previously threatened to invade Lebanon, taking shelter in an Israeli bomb shelter during Hezbollah's attack on Israel on August 25, 2024."'
+Verifying Claim: "<image:51> This image shows Israeli Finance Minister Smotrich, who previously threatened to invade Lebanon, taking shelter in an Israeli bomb shelter during Hezbollah's attack on Israel on August 25, 2024."
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Israeli Finance Minister Smotrich bomb shelter Hezbollah attack August 25 2024')
+Failed to scrape https://www.idf.il/en/mini-sites/prevention-of-large-scale-hezbollah-attack/press-briefing-by-idf-spokesperson-radm-daniel-hagari-august-25-2024/
+Error 500: Server error.
+Skipping that URL.
+Got 3 new web source(s):
+	1. August 27, 2024 https://jinsa.org/jinsa_report/israel-preempts-hezbollah-attack/
+	2. August 11, 2024 https://www.reuters.com/world/middle-east/more-than-100-palestinians-killed-israeli-strike-targeted-school-gaza-2024-08-10/
+	3. August 01, 2024 https://www.un.org/unispal/wp-content/uploads/2024/09/MBAugust24_17092024.pdf
+Useful result: From [Source](https://jinsa.org/jinsa_report/israel-preempts-hezbollah-attack/): 
+Content: The article from JINSA, published on August 27, 2024, discusses an Israeli preemptive strike against Hezbollah on August 25, 2024. The strike disrupted a planned Hezbollah attack. Hezbollah retaliated by firing rockets and drones. The article mentions that the Israeli strike killed Hezbollah's most senior military commander on July 30.
+
+Useful result: From [Source](https://www.reuters.com/world/middle-east/more-than-100-palestinians-killed-israeli-strike-targeted-school-gaza-2024-08-10/): 
+Content: The search result from Reuters discusses an Israeli strike on a school sheltering displaced people in Gaza City on August 10, 2024, which resulted in the death of Palestinians. <image:10636> The article also mentions that Israeli Finance Minister Bezalel Smotrich pushed back against the White House's accusation. The article was written by Nidal Al-Mughrabi.
+
+Useful result: From [Source](https://www.un.org/unispal/wp-content/uploads/2024/09/MBAugust24_17092024.pdf): 
+Content: The UN website discusses actions by Israeli Finance Minister Bezalel Smotrich in August 2024. It mentions Smotrich's announcement of a military order to allocate land for a new settlement and his statements regarding aid for civilians in the Gaza Strip. The document also includes information about attacks and raids by Israeli forces during August 2024.
+
+Got 3 new web source(s):
+	1. https://www.cnn.com/2024/06/21/middleeast/israel-west-bank-bezalel-smotrich-settlements-intl-latam
+	2. https://www.theguardian.com/world/article/2024/jun/24/israeli-far-right-minister-bezalel-smotrich-annex-west-bank
+	3. https://www.ft.com/content/b41c9f9c-23c5-4c9a-b6a3-11a61df46cae
+Useful result: From [Source](https://www.cnn.com/2024/06/21/middleeast/israel-west-bank-bezalel-smotrich-settlements-intl-latam): 
+Content: CNN published an article about Bezalel Smotrich. <image:8210>
+
+Useful result: From [Source](https://www.theguardian.com/world/article/2024/jun/24/israeli-far-right-minister-bezalel-smotrich-annex-west-bank): 
+Content: The Guardian published an article about Israeli far-right minister Bezalel Smotrich. <image:8211>
+
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Bezalel Smotrich bomb shelter August 25 2024')
+Got 3 new web source(s):
+	1. https://www.lemonde.fr/en/international/article/2023/06/20/israeli-government-takes-major-step-toward-west-bank-annexation_6034532_4.html
+	2. https://www.hrw.org/report/2024/11/14/hopeless-starving-and-besieged/israels-forced-displacement-palestinians-gaza
+	3. https://www.theguardian.com/world/2025/jun/10/who-are-bezalel-smotrich-and-itamar-ben-gvir-the-israeli-ministers-facing-sanctions
+Useful result: From [Source](https://www.theguardian.com/world/2025/jun/10/who-are-bezalel-smotrich-and-itamar-ben-gvir-the-israeli-ministers-facing-sanctions): 
+Content: The Guardian published an article about Bezalel Smotrich. <image:10643>
+
+Not enough information yet. Continuing fact-check...
+Most likely location: Israel
+Top 10 locations: Israel, Turkey, Kyrgyzstan, Russia, Jordan, Palestine, Poland, United Arab Emirates, Austria, Bulgaria
+The claim '<image:51> This image shows Israeli Finance Minister Smotrich, who previously threatened to invade Lebanon, taking shelter in an Israeli bomb shelter during Hezbollah's attack on Israel on August 25, 2024.' is false.
+Justification: The claim cannot be verified. While the evidence confirms that Bezalel Smotrich is the Israeli Finance Minister and that there was a Hezbollah attack on August 25, 2024, it does not show Smotrich in a bomb shelter during the attack. The geolocation analysis suggests the image was likely taken in Israel, but this does not confirm the claim.
+
+So, the overall veracity is: false
+Fact-check took 1:02 min.

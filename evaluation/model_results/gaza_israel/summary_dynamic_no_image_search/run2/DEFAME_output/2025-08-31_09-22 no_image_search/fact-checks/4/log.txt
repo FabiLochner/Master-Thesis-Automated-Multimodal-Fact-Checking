@@ -1,0 +1,80 @@
+Extracting claims from Content: <image:5> This image shows the U.S. bombarding Yemen on December 22, 2024 in reprisal after Yemen launched an attack on Israel's capital.
+'Claim: "<image:5> This image shows the U.S. bombarding Yemen on December 22, 2024 in reprisal after Yemen launched an attack on Israel's capital."'
+Verifying Claim: "<image:5> This image shows the U.S. bombarding Yemen on December 22, 2024 in reprisal after Yemen launched an attack on Israel's capital."
+Not enough information yet. Continuing fact-check...
+Got 3 new web source(s):
+	1. https://english.wafa.ps/Pages/Details/149999
+	2. https://en.ammonnews.net/article/74833
+	3. https://hausatv.com/amurka-ta-kai-hare-hare-a-yankunan-kasa-yemen/
+Useful result: From [Source](https://english.wafa.ps/Pages/Details/149999): Found exact image on website with title: Palestinian civilians killed by Israeli airstrikes on homes in Gaza
+Content: The search result is from WAFA, dated October 7, 2024, and discusses Israeli airstrikes on Gaza. The article states that three Palestinian citizens were killed and dozens injured in an Israeli bombing that targeted citizens' homes in the Nuseirat and Bureij camps in the central Gaza Strip. <image:5> is included in the article. The article also mentions that the Israeli warplanes bombed a house in the Saftawi area northwest of Gaza City, which resulted in the injury of a number of citizens.
+
+Useful result: From [Source](https://en.ammonnews.net/article/74833): Found exact image on website with title: Day 333 of Genocide: Palestinian civilians killed, injured, in Israeli ...
+Content: The search result from Ammon News contains the image <image:5> and is titled "Day 333 of Genocide: Palestinian civilians killed, injured, in Israeli bombardment". The article was published on March 9, 2024. The article discusses the ongoing Israeli bombing of several areas in the Gaza Strip.
+
+Useful result: From [Source](https://hausatv.com/amurka-ta-kai-hare-hare-a-yankunan-kasa-yemen/): Found exact image on website with title: Amurka Ta Kai Hare-hare A Yankunan Kasa Yemen – HAUSATV
+Content: The Hausa-language website HAUSATV published an article on April 11, 2025, reporting that U.S. warplanes carried out a series of attacks on various areas of Yemen, including the city of Sana'a. The article includes the image <image:5> and states that the attacks were in response to the HKI (likely referring to Houthis) attacks on Israeli targets.
+
+Most likely location: Palestine
+Top 10 locations: Palestine, Israel, United Arab Emirates, Jordan, Albania, Andorra, Argentina, Australia, Austria, Bangladesh
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='U.S. bombing Yemen December 22, 2024')
+Got 3 new web source(s):
+	1. December 23, 2024 https://www.theguardian.com/world/2024/dec/22/us-launches-airstrikes-against-houthi-targets-in-yemen
+	2. December 16, 2024 https://www.reuters.com/world/us-airstrike-hits-houthi-command-control-facility-yemen-2024-12-16/
+	3. December 22, 2024 https://www.aljazeera.com/news/2024/12/22/us-army-says-two-navy-pilots-shot-down-over-red-sea-in-friendly-fire
+Useful result: From [Source](https://www.theguardian.com/world/2024/dec/22/us-launches-airstrikes-against-houthi-targets-in-yemen): 
+Content: The Guardian published an article on December 22, 2024, reporting that the U.S. launched airstrikes against Houthi targets in Yemen. The strikes were in response to attacks against U.S. navy warships and merchant vessels. The article also mentions that Israel launched strikes against ports and energy infrastructure in Houthi-held parts of Yemen. <image:11232> shows a sunken vessel at a site hit by Israeli forces in the Houthi-controlled port of Hodeida.
+
+Useful result: From [Source](https://www.reuters.com/world/us-airstrike-hits-houthi-command-control-facility-yemen-2024-12-16/): 
+Content: Reuters reports that on December 16, 2024, the U.S. military conducted an airstrike against a command and control facility operated by the Houthis in Yemen.
+
+Useful result: From [Source](https://www.aljazeera.com/news/2024/12/22/us-army-says-two-navy-pilots-shot-down-over-red-sea-in-friendly-fire): 
+Content: The article from Al Jazeera, published on December 22, 2024, reports that two U.S. Navy pilots were shot down over the Red Sea in a "friendly fire" incident. It also mentions that Yemen's Houthi fighters claimed to have targeted the aircraft carrier USS Harry S Truman. The article includes a related story about the Houthis hitting Tel Aviv, Israel, with a missile. <image:5> is not included in the search result.
+
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Yemen attack Israel capital')
+Got 3 new web source(s):
+	1. https://www.reuters.com/world/middle-east/prime-minister-yemens-houthi-run-government-killed-israeli-strike-2025-08-30/
+	2. https://www.aljazeera.com/news/2025/8/28/israel-launches-latest-attacks-against-houthis-in-yemens-sanaa
+	3. https://www.nbcnews.com/world/yemen/israeli-airstrike-kills-houthi-prime-minister-rcna228187
+Useful result: From [Source](https://www.reuters.com/world/middle-east/prime-minister-yemens-houthi-run-government-killed-israeli-strike-2025-08-30/): 
+Content: The Reuters article, published on August 30, 2025, reports that an Israeli strike on Sanaa killed the prime minister of Yemen's Houthi-run government and several other ministers. <image:11233> The article mentions that since October 2023, the Houthis have attacked vessels in the Red Sea and fired missiles towards Israel.
+
+Useful result: From [Source](https://www.aljazeera.com/news/2025/8/28/israel-launches-latest-attacks-against-houthis-in-yemens-sanaa): 
+Content: The search result from Al Jazeera, published on August 28, 2025, discusses Israeli airstrikes on Sanaa, Yemen, on August 24, 2025. <image:k> The article mentions that the attacks were in response to Houthi attacks on Israel.
+
+Useful result: From [Source](https://www.nbcnews.com/world/yemen/israeli-airstrike-kills-houthi-prime-minister-rcna228187): 
+Content: The NBC News article, published on August 30, 2025, reports that an Israeli airstrike killed the prime minister of Yemen's rebel-controlled government, Ahmed al-Rawahi, in Sanaa. The article mentions that al-Rawahi was appointed prime minister in August 2024. The Houthis have been firing missiles at Israel, and in response, Israel has bombarded rebel-held areas in Yemen. <image:1>.
+
+Not enough information yet. Continuing fact-check...
+INFO: Dropping action 'reverse_search' as it was already performed.
+INFO: Dropping action 'geolocate' as it was already performed.
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Getty Images Anadolu credit bombing')
+Got 1 new web source(s):
+	1. https://www.gettyimages.com/photos/anadolu-agency
+Useful result: From [Source](https://www.gettyimages.com/photos/anadolu-agency): 
+Content: The search result from Getty Images provides images from Anadolu Agency. The images include: a photo of Anadolu Agency's photojournalist Muhammed Dahlan holding his damaged camera <image:11234>, a photo of Anadolu Agency's correspondent in the U.S Bilgin Sasmaz being taken into custody <image:11235>, photos related to a rocket attack on journalists <image:11236>, <image:11237>, and the wreckage of Anadolu Agency journalists' burnt car in Kharkiv, Ukraine <image:11238>.
+
+Not enough information yet. Continuing fact-check...
+INFO: Dropping action 'reverse_search' as it was already performed.
+INFO: Dropping action 'geolocate' as it was already performed.
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Anadolu Agency bombing image Yemen Israel')
+Skipping unsupported website: https://m.facebook.com/anadoluagencyenglish/photos/the-israeli-military-launched-airstrikes-on-houthi-targets-at-the-port-of-al-hud/1071882265130789/
+Skipping unsupported website: https://www.instagram.com/reel/DEDw5lcOB0r/?hl=en
+Got 3 new web source(s):
+	1. https://www.aa.com.tr/en/middle-east/israeli-warplanes-hit-presidential-palace-power-plants-in-fresh-attacks-on-yemeni-capital/3667791
+	2. https://www.bbc.com/news/articles/c0kzy7r8pl1o
+	3. December 12, 2023 https://www.aljazeera.com/gallery/2023/12/12/photos-israel-is-bombing-starving-palestinians-in-southern-gaza
+Useful result: From [Source](https://www.aa.com.tr/en/middle-east/israeli-warplanes-hit-presidential-palace-power-plants-in-fresh-attacks-on-yemeni-capital/3667791): 
+Content: The Anadolu Agency reported on August 24, 2025, that Israeli warplanes bombed several sites in Yemen's capital, including the presidential palace and power plants. <image:k> The strikes were in response to Houthi attacks against Israel. The article includes an image of the aftermath of the bombing.
+
+Useful result: From [Source](https://www.bbc.com/news/articles/c0kzy7r8pl1o): 
+Content: The BBC article discusses Israeli airstrikes on Houthi targets in Sanaa, Yemen, in response to a Houthi missile attack on Israel. The article mentions the use of cluster munitions and includes images of smoke rising in Sanaa <image:11273>. The article also mentions a video released by the Houthis showing bombs dispersing mid-air. The article was published 7 days ago.
+
+Useful result: From [Source](https://www.aljazeera.com/gallery/2023/12/12/photos-israel-is-bombing-starving-palestinians-in-southern-gaza): 
+Content: The search result from Al Jazeera, published on December 12, 2023, features images from Anadolu Agency and other sources, documenting Israeli attacks on Gaza. The images show the aftermath of bombings, search and rescue operations, injured Palestinians, and the destruction of buildings. <image:k> <image:11239> <image:11240> <image:11241> <image:11242> <image:11243> <image:11244> <image:11245> The article also mentions the worsening humanitarian situation in Gaza, including hunger and lack of essential resources.
+
+The claim '<image:5> This image shows the U.S. bombarding Yemen on December 22, 2024 in reprisal after Yemen launched an attack on Israel's capital.' is false.
+Justification: The claim is **false**. While the U.S. did conduct airstrikes on Yemen on December 22, 2024, the image's origin and its direct relation to the events described in the claim are not confirmed. The image is credited to Anadolu Agency, which has covered conflicts between Israel and Yemen, but the search results do not provide any information about the specific image in the claim.
+
+So, the overall veracity is: false
+Fact-check took 6:17 min.

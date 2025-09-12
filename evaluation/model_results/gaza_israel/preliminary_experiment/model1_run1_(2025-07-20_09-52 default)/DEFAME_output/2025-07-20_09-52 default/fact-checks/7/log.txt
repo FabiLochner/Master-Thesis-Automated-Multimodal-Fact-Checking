@@ -1,0 +1,39 @@
+Extracting claims from Content: The Huthi rebels announced the final cessation of their military operations in international waters after Trump won the 2024 US presidential election.
+'Claim: "The Huthi rebels announced the final cessation of their military operations in international waters after Trump won the 2024 US presidential election."'
+Verifying Claim: "The Huthi rebels announced the final cessation of their military operations in international waters after Trump won the 2024 US presidential election."
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Huthi rebels military operations international waters cessation')
+Got 3 new web source(s):
+	1. https://abcnews.go.com/US/wireStory/council-authorizes-continuing-vigilance-attacks-yemens-houthi-rebels-123789548
+	2. https://en.wikipedia.org/wiki/Operation_Prosperity_Guardian
+	3. https://safety4sea.com/u-n-extends-monitoring-of-houthi-attacks-in-the-red-sea/
+Useful result: From [Source](https://abcnews.go.com/US/wireStory/council-authorizes-continuing-vigilance-attacks-yemens-houthi-rebels-123789548): 
+Content: The U.N. Security Council authorized continued reporting on attacks on ships in the Red Sea by Yemen’s Houthi rebels. The Houthis have been launching missile and drone attacks against commercial and military ships in the region. The attacks are described as an effort to end Israel’s offensive against Hamas in Gaza. <image:841>, <image:842>
+
+Useful result: From [Source](https://en.wikipedia.org/wiki/Operation_Prosperity_Guardian): 
+Content: The Wikipedia article on Operation Prosperity Guardian states that it is an international military operation to protect Red Sea shipping, which began on December 18, 2023, and is ongoing. The operation involves the United States Navy, Royal Navy, and other countries. The article mentions a 2025 U.S.–Houthi ceasefire, where the Houthis ceased attacks on commercial shipping in the Red Sea, but would continue targeting Israel and Israeli-linked vessels. The article also mentions that on May 6, 2025, President Donald Trump announced that the Houthis had "capitulated" and promised not to attack commercial vessels.
+
+Useful result: From [Source](https://safety4sea.com/u-n-extends-monitoring-of-houthi-attacks-in-the-red-sea/): 
+Content: The search result discusses the U.N. extending monitoring of Houthi attacks in the Red Sea. It mentions demands for the cessation of Houthi attacks against vessels and the release of detained crew members. The resolution was cosponsored by the United States and Greece. China criticized military actions taken by some countries against Yemen.
+
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Huthi rebels Trump 2024 election')
+Skipping fact-checking website: https://fullfact.org/online/houthis-surrendered-rumours-donald-trump-election/
+Skipping fact-checking website: https://factcheck.afp.com/doc.afp.com.36MT424
+Got 3 new web source(s):
+	1. https://www.yahoo.com/news/trump-urged-aid-yemen-anti-112626822.html
+	2. April 07, 2025 https://www.atlanticcouncil.org/blogs/menasource/can-donald-trump-completely-annihilate-the-houthis-in-yemen/
+	3. https://www.foxnews.com/world/trump-urged-aid-yemens-anti-houthi-forces-terror-group-escalates-attacks-shipping
+Useful result: From [Source](https://www.yahoo.com/news/trump-urged-aid-yemen-anti-112626822.html): 
+Content: Fox News reports that Trump halted military strikes on Houthis. The article mentions that the Houthis have violated their pledge to stop attacks in the Red Sea. <image:856>, <image:855>, <image:857>. The article also mentions that Israel exchanged missile fire with Iran-backed Houthi rebels in Yemen.
+
+Useful result: From [Source](https://www.atlanticcouncil.org/blogs/menasource/can-donald-trump-completely-annihilate-the-houthis-in-yemen/): 
+Content: The Atlantic Council discusses the challenges of the US strategy towards the Houthis in Yemen. The article mentions that the Trump administration is escalating US military strikes against the rebel force over their attacks against international shipping in the Red Sea. It also mentions that the US is working to cut off Iranian shipments to the Houthis. The article does not mention the cessation of military operations in international waters.
+
+Useful result: From [Source](https://www.foxnews.com/world/trump-urged-aid-yemens-anti-houthi-forces-terror-group-escalates-attacks-shipping): 
+Content: Fox News reports that in May, Trump announced that the Houthis "just don't want to fight…and we will honor that. We will stop the bombings." However, the Houthi terrorists appear to have violated their pledge to Trump to stop attacks in the Red Sea. <image:884>, <image:885>. The article also mentions that Israel exchanged missile fire with Iran-backed Houthi rebels in Yemen on Monday, targeting the group's ports and other facilities.
+
+The claim 'The Huthi rebels announced the final cessation of their military operations in international waters after Trump won the 2024 US presidential election.' is misleading.
+Justification: The claim is misleading. While there was a 2025 ceasefire where the Houthis ceased attacks on commercial shipping, they continued targeting Israeli vessels, and later violated their pledge, as reported by [Fox News](https://www.foxnews.com/). The evidence does not support the claim that the Houthis announced the final cessation of their military operations in international waters after Trump won the 2024 US presidential election.
+
+So, the overall veracity is: misleading
+Fact-check took 3:22 min.

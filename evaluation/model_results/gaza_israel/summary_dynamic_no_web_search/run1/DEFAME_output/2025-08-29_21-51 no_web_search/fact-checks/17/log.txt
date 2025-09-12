@@ -1,0 +1,21 @@
+Extracting claims from Content: A US-flagged vessel has been attacked in the Guld of Aden in July 2024. A Spokesperson at Denmark's shipping company Maersk said: 'There was an attack targeted on one of the company's US-flagged vessels at the northernmost part of the Gulf of Aden.'
+'Claim: "A US-flagged vessel has been attacked in the Guld of Aden in July 2024. A Spokesperson at Denmark's shipping company Maersk said: 'There was an attack targeted on one of the company's US-flagged vessels at the northernmost part of the Gulf of Aden.'"'
+Verifying Claim: "A US-flagged vessel has been attacked in the Guld of Aden in July 2024. A Spokesperson at Denmark's shipping company Maersk said: 'There was an attack targeted on one of the company's US-flagged vessels at the northernmost part of the Gulf of Aden.'"
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Maersk US-flagged vessel Gulf of Aden attack July 2024')
+Failed to download or open image: cannot identify image file <_io.BytesIO object at 0x7ffed97a25c0>
+Got 3 new web source(s):
+	1. https://khabaragency.net/news214386.html
+	2. https://www.sochfactcheck.com/does-viral-image-show-us-flagged-ship-targeted-by-houthis-in-july-2024-gulf-of-aden/
+	3. https://gcaptain.com/u-s-flagged-containership-targeted-by-flying-object-in-gulf-of-aden/
+Useful result: From [Source](https://khabaragency.net/news214386.html): 
+Content: The search result contains an image of a Maersk Line vessel. <image:7475>
+
+Useful result: From [Source](https://www.sochfactcheck.com/does-viral-image-show-us-flagged-ship-targeted-by-houthis-in-july-2024-gulf-of-aden/): 
+Content: The search result from Soch Fact Check includes an image of a ship on fire with a Twitter post that says "Reports of a ship with a US flag targeted in the gulf of Aden" dated July 9, 2024. <image:7476>
+
+The claim 'A US-flagged vessel has been attacked in the Guld of Aden in July 2024. A Spokesperson at Denmark's shipping company Maersk said: 'There was an attack targeted on one of the company's US-flagged vessels at the northernmost part of the Gulf of Aden.'' is false.
+Justification: The claim is partially supported by the evidence. An image search revealed a Twitter post reporting an attack on a US-flagged ship in the Gulf of Aden on July 9, 2024, as shown in the search results (<image:7476>). However, the evidence does not include a statement from a Maersk spokesperson, making the claim false.
+
+So, the overall veracity is: false
+Fact-check took 0:13 min.

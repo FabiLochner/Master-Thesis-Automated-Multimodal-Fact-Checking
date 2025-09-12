@@ -1,0 +1,24 @@
+Extracting claims from Content: Ethiopia has expelled Israel's ambassador in April 2025.
+'Claim: "Ethiopia has expelled Israel's ambassador in April 2025."'
+Verifying Claim: "Ethiopia has expelled Israel's ambassador in April 2025."
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Ethiopia Israel ambassador expelled April 2025')
+Skipping fact-checking website: https://www.reuters.com/fact-check/israeli-ambassador-ethiopia-remains-post-says-israel-foreign-ministry-2025-04-22/
+Got 3 new web source(s):
+	1. https://www.tasnimnews.com/en/news/2025/04/07/3286985/israeli-ambassador-removed-from-african-union-meeting
+	2. April 08, 2025 https://peoplesdispatch.org/2025/04/08/israeli-diplomat-booted-from-au-conference-on-rwandan-genocide/
+	3. April 07, 2025 https://www.ethiopiaobserver.com/2025/04/07/israeli-ambassador-to-ethiopia-expelled-from-african-union-headquarters-despite-invite/
+Useful result: From [Source](https://www.tasnimnews.com/en/news/2025/04/07/3286985/israeli-ambassador-removed-from-african-union-meeting): 
+Content: The search result from Tasnim News Agency, published on April 7, 2025, reports that the Israeli ambassador was removed from an African Union meeting. <image:5956> The article mentions that the removal occurred during an annual session focused on the Rwandan genocide. The article also mentions that the Israeli ambassador to Ethiopia was removed from an African Union session.
+
+Useful result: From [Source](https://peoplesdispatch.org/2025/04/08/israeli-diplomat-booted-from-au-conference-on-rwandan-genocide/): 
+Content: The search result from peoplesdispatch.org states that the Israeli ambassador to Ethiopia, Avraham Neguise, was expelled from an annual conference on the Rwandan genocide held in Addis Ababa on April 7, 2025. <image:5962> The article mentions that the African Union joined a case filed in the International Court of Justice by South Africa against Israel’s genocide in Gaza in February 2025. The Israeli Foreign Ministry condemned the action.
+
+Useful result: From [Source](https://www.ethiopiaobserver.com/2025/04/07/israeli-ambassador-to-ethiopia-expelled-from-african-union-headquarters-despite-invite/): 
+Content: The Ethiopia Observer published an article on April 7, 2025, stating that the Israeli ambassador to Ethiopia was expelled from the African Union headquarters. <image:5973> The Jerusalem Post is cited as a source.
+
+The claim 'Ethiopia has expelled Israel's ambassador in April 2025.' is false.
+Justification: The Israeli ambassador to Ethiopia, Avraham Neguise, was removed from an African Union conference in Addis Ababa on April 7, 2025, as reported by [Tasnim News Agency](https://www.tasnimnews.com/en/news/2025/04/07/3286985/israeli-ambassador-removed-from-african-union-meeting), [peoplesdispatch.org](https://peoplesdispatch.org/2025/04/08/israeli-diplomat-booted-from-au-conference-on-rwandan-genocide/), and [Ethiopia Observer](https://www.ethiopiaobserver.com/2025/04/07/israeli-ambassador-to-ethiopia-expelled-from-african-union-headquarters-despite-invite/). However, the sources do not explicitly state that Ethiopia expelled the ambassador.
+
+So, the overall veracity is: false
+Fact-check took 0:45 min.

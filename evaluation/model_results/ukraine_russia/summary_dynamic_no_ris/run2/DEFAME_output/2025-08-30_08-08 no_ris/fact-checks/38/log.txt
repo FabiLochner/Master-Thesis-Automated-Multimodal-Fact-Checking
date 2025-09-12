@@ -1,0 +1,44 @@
+Extracting claims from Content: Ukrainian President Volodymyr Zelenskyy engaged in election interference by campaigning in Pennsylvania for Kamala Harris ahead of the US presidential election in 2024.
+'Claim: "Ukrainian President Volodymyr Zelenskyy engaged in election interference by campaigning in Pennsylvania for Kamala Harris ahead of the US presidential election in 2024."'
+Verifying Claim: "Ukrainian President Volodymyr Zelenskyy engaged in election interference by campaigning in Pennsylvania for Kamala Harris ahead of the US presidential election in 2024."
+Not enough information yet. Continuing fact-check...
+Got 3 new web source(s):
+	1. March 01, 2025 https://www.newsweek.com/volodymyr-zelensky-jd-vance-campaign-kamala-harris-2024-election-2038060
+	2. September 26, 2024 https://www.nbcnews.com/politics/2024-election/zelenskyys-meeting-harris-spat-trump-reveal-growing-partisan-divide-uk-rcna172648
+	3. https://abcnews.go.com/Politics/harris-standing-zelenskyy-indirectly-jabs-trump-vance-ukraine/story?id=114219628
+Useful result: From [Source](https://www.newsweek.com/volodymyr-zelensky-jd-vance-campaign-kamala-harris-2024-election-2038060): 
+Content: Newsweek reports that during a meeting, JD Vance accused Volodymyr Zelenskyy of campaigning for Kamala Harris during the 2024 presidential race. The article mentions a visit by Zelenskyy to a munitions plant in Scranton, Pennsylvania, in September 2024. <image:2051>, <image:2050>. The article also mentions that House Republicans are investigating whether Zelensky's appearance was an improper use of tax dollars. The article was written by Andrew Stanton.
+
+Useful result: From [Source](https://www.nbcnews.com/politics/2024-election/zelenskyys-meeting-harris-spat-trump-reveal-growing-partisan-divide-uk-rcna172648): 
+Content: NBC News reports that Volodymyr Zelenskyy visited a munitions factory in Scranton, Pennsylvania, which some Republicans viewed as a signal of which way he wants the November election to go. The article mentions that Kamala Harris is scheduled to meet with Zelenskyy at the White House. The article was published on June 26, 2024, and was written by Alex Seitz-Wald and Katherine Doyle.
+
+Useful result: From [Source](https://abcnews.go.com/Politics/harris-standing-zelenskyy-indirectly-jabs-trump-vance-ukraine/story?id=114219628): 
+Content: The ABC News article, published on September 26, 2024, reports on Vice President Kamala Harris meeting with Ukrainian President Volodymyr Zelenskyy to discuss the war with Russia. <image:1>, <image:2061>. The article mentions Zelenskyy's visit to Washington and his meetings with U.S. lawmakers.
+
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Volodymyr Zelenskyy Scranton Pennsylvania speech')
+Skipping unsupported website: https://x.com/ZelenskyyUa/status/1837989488703779052?lang=en
+Skipping unsupported website: https://m.youtube.com/watch?v=LMEGzBzgn84
+Skipping unsupported website: https://www.president.gov.ua/en/news/prezident-vidvidav-skrentonskij-armijskij-boyepripasnij-zavo-93389
+Skipping unsupported website: https://dced.pa.gov/newsroom/governor-shapiro-welcomes-ukrainian-president-zelenskyy-to-scranton-army-ammunition-plant-signs-sister-state-agreement-with-zaporizhzhia-ukraine-to-strengthen-ties/
+Got 2 new web source(s):
+	1. September 22, 2024 https://www.army.mil/article/279907/ukrainian_president_zelenskyy_praises_scranton_dod_for_role_supporting_ukraine
+	2. September 23, 2024 https://whyy.org/articles/ukraine-president-volodymyr-zelenskyy-visits-scranton-pennsylvania-ammunition-factory/
+Useful result: From [Source](https://www.army.mil/article/279907/ukrainian_president_zelenskyy_praises_scranton_dod_for_role_supporting_ukraine): 
+Content: The U.S. Army website published an article on September 22, 2024, reporting on Volodymyr Zelenskyy's visit to the Scranton Army Ammunition Plant. <image:8162>, <image:8164>, <image:8166>, <image:8170>. Zelenskyy thanked the workforce for their support and emphasized the partnership between Ukraine and the U.S.
+
+Useful result: From [Source](https://whyy.org/articles/ukraine-president-volodymyr-zelenskyy-visits-scranton-pennsylvania-ammunition-factory/): 
+Content: WHYY reports that Volodymyr Zelenskyy visited a Pennsylvania ammunition factory to thank workers for producing munitions for Ukraine. The article mentions that Zelenskyy met with Matt Cartwright, a Democrat, and expressed his gratitude to the employees. The article also mentions that Zelenskyy was scheduled to meet with President Joe Biden and Vice President Kamala Harris in Washington. <image:8171>
+
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Volodymyr Zelenskyy Scranton Pennsylvania')
+Skipping unsupported website: https://www.youtube.com/watch?v=RUnOWvV8piY
+Got 1 new web source(s):
+	1. https://penncapital-star.com/government-politics/shapiro-casey-meet-with-zelenskyy-at-scranton-pennsylvania-ammunitions-factory/
+Useful result: From [Source](https://penncapital-star.com/government-politics/shapiro-casey-meet-with-zelenskyy-at-scranton-pennsylvania-ammunitions-factory/): 
+Content: Penn Capital-Star reports that Volodymyr Zelenskyy visited a munitions factory in Scranton, Pennsylvania. <image:8185>
+
+The claim 'Ukrainian President Volodymyr Zelenskyy engaged in election interference by campaigning in Pennsylvania for Kamala Harris ahead of the US presidential election in 2024.' is false.
+Justification: The claim is false. While Volodymyr Zelenskyy visited a munitions factory in Scranton, Pennsylvania, and met with Kamala Harris, there is no evidence to suggest that he was campaigning for her or engaging in election interference. News reports indicate that Zelenskyy's visit was focused on thanking the workforce and emphasizing the partnership between Ukraine and the U.S. [Newsweek](https://www.newsweek.com/volodymyr-zelensky-jd-vance-campaign-kamala-harris-2024-election-2038060) and [NBC News](https://www.nbcnews.com/politics/2024-election/zelenskyys-meeting-harris-spat-trump-reveal-growing-partisan-divide-uk-rcna172648) reported on the visit and the political interpretations of it.
+
+So, the overall veracity is: false
+Fact-check took 0:55 min.

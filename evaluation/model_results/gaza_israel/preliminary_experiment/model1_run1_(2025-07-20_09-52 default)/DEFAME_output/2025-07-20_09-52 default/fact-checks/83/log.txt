@@ -1,0 +1,40 @@
+Extracting claims from Content: <image:52> This image shows the President of FC Barcelona with Israel Embassy Representatives in September 2024 during the ongoing Gaza war.
+'Claim: "<image:52> This image shows the President of FC Barcelona with Israel Embassy Representatives in September 2024 during the ongoing Gaza war."'
+Verifying Claim: "<image:52> This image shows the President of FC Barcelona with Israel Embassy Representatives in September 2024 during the ongoing Gaza war."
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='FC Barcelona Israel flag')
+Got 3 new web source(s):
+	1. February 17, 2023 https://www.jpost.com/international/article-731893
+	2. https://www.gettyimages.com/photos/barcelona-visit-the-west-bank-and-israel
+	3. September 11, 2023 https://www.newarab.com/analysis/why-barcelona-reversed-its-decision-cut-ties-israel
+Useful result: From [Source](https://www.jpost.com/international/article-731893): 
+Content: The Jerusalem Post published an article on February 17, 2023, stating that Israeli diplomats presented FC Barcelona's president Joan Laporta with an Israeli flag on February 16, 2023. <image:1>.
+
+Useful result: From [Source](https://www.gettyimages.com/photos/barcelona-visit-the-west-bank-and-israel): 
+Content: The search result contains images of FC Barcelona players with Israeli officials and flags. The images are from 2013. <image:2259>, <image:2260>, <image:2261>, <image:2262>, <image:2263>, <image:2264>, <image:2265>, <image:2267>.
+
+Useful result: From [Source](https://www.newarab.com/analysis/why-barcelona-reversed-its-decision-cut-ties-israel): 
+Content: The New Arab published an article on September 11, 2023, discussing Barcelona's decision to reverse its decision to cut ties with Israel. The article mentions that in February, Barcelona broke off ties with Israel, but in September, the new mayor signed a decree suspending the decision. The article also mentions legal actions taken by pro-Israel groups against the former mayor and the city council. <image:1>.
+
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='FC Barcelona Israel embassy representatives')
+Got 2 new web source(s):
+	1. February 17, 2023 https://www.i24news.tv/en/news/israel/diplomacy/1676623454-barcelona-soccer-team-sends-message-of-support-for-israel
+	2. February 17, 2023 https://www.israelnationalnews.com/news/367604
+Useful result: From [Source](https://www.i24news.tv/en/news/israel/diplomacy/1676623454-barcelona-soccer-team-sends-message-of-support-for-israel): 
+Content: i24NEWS reports that FC Barcelona sent a message of support for Israel. The president of the Barcelona football club, Joan Laporte, invited the representatives of the Israeli Embassy in Spain to a soccer match and was presented with an Israeli flag <image:2291>. The article was published on February 16, 2023.
+
+Useful result: From [Source](https://www.israelnationalnews.com/news/367604): 
+Content: The President of FC Barcelona hosted representatives from the Israeli Embassy and presented them with team shirts on February 17, 2023. <image:2293> The meeting occurred after Barcelona announced it would cut ties with Israel. The Israeli diplomats presented Laporta with an Israeli flag. The article is from Israel National News.
+
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='FC Barcelona president Israel flag')
+Failed to download or open image: cannot identify image file <_io.BytesIO object at 0x7ffe2c2d2700>
+Got 1 new web source(s):
+	1. https://www.fcbarcelona.com/en/club/news/2192444/joan-laporta-meets-with-isaac-herzog-president-of-israel
+Useful result: From [Source](https://www.fcbarcelona.com/en/club/news/2192444/joan-laporta-meets-with-isaac-herzog-president-of-israel): 
+Content: FC Barcelona's president Joan Laporta met with Isaac Herzog, the President of Israel. <image:2295>
+
+The claim '<image:52> This image shows the President of FC Barcelona with Israel Embassy Representatives in September 2024 during the ongoing Gaza war.' is misleading.
+Justification: The image depicts FC Barcelona's president with Israeli representatives holding an Israeli flag, which occurred in February 2023, not September 2024 as the claim suggests. Therefore, the claim is misleading due to the incorrect date.
+
+So, the overall veracity is: misleading
+Fact-check took 0:57 min.

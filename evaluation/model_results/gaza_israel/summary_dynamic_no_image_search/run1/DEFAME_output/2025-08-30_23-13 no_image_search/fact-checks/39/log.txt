@@ -1,0 +1,35 @@
+Extracting claims from Content: <image:10222> This image shows an athlete of China which has chosen a design of the Palestinian flag for the Paris 2024 Olympics.
+'Claim: "<image:10222> This image shows an athlete of China which has chosen a design of the Palestinian flag for the Paris 2024 Olympics."'
+Verifying Claim: "<image:10222> This image shows an athlete of China which has chosen a design of the Palestinian flag for the Paris 2024 Olympics."
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='China Paris 2024 Olympics design Palestinian flag')
+Skipping fact-checking website: https://www.reuters.com/fact-check/image-does-not-show-chinas-2024-olympic-outfit-inspired-by-palestinian-flag-2024-07-30/
+Skipping fact-checking website: https://www.usatoday.com/story/news/factcheck/2024/07/26/china-olympic-uniform-palestinian-flag-fact-check/74546513007/
+Skipping fact-checking website: https://newschecker.in/fact-check/old-vogue-photoshoot-falsely-shared-as-chinas-pro-palestine-statement-for-paris-2024-olympics
+Skipping unsupported website: https://www.youtube.com/watch?v=w0sZIMddVTA
+Skipping unsupported website: https://x.com/Palestine001_/status/1816070145455874144?lang=en
+Skipping fact-checking website: https://www.thequint.com/news/webqoof/china-did-not-wear-palestine-colours-in-paris-olympics-outfit-fact-check
+Skipping unsupported website: https://www.instagram.com/p/C9lCOIaO2d4/?hl=en
+Skipping fact-checking website: https://www.misbar.com/en/factcheck/2024/07/25/this-dress-is-unrelated-to-the-palestinian-flag-or-the-2024-paris-olympics
+Got 2 new web source(s):
+	1. July 27, 2024 https://srilanka.factcrescendo.com/english/china-has-not-chosen-a-design-inspired-by-the-palestinian-flag-for-the-paris-olympics-2024/
+	2. July 29, 2024 https://factly.in/an-old-photo-from-vogue-china-magazine-is-being-falsely-shared-as-showing-chinese-athletes-wearing-the-colours-of-the-palestinian-flag/
+Useful result: From [Source](https://srilanka.factcrescendo.com/english/china-has-not-chosen-a-design-inspired-by-the-palestinian-flag-for-the-paris-olympics-2024/): 
+Content: The search result from Fact Crescendo states that the image in the claim is from the September 2023 issue of Vogue China Magazine and was taken for the promotion of the Hangzhou Asian Games. The article is titled "China has not chosen a design inspired by the Palestinian flag for the Paris Olympics 2024" and is labeled as "Misleading". <image:11205>, <image:11206>, <image:11207>, <image:11208>.
+
+Useful result: From [Source](https://factly.in/an-old-photo-from-vogue-china-magazine-is-being-falsely-shared-as-showing-chinese-athletes-wearing-the-colours-of-the-palestinian-flag/): 
+Content: The search result from Factly.in states that the image in the claim is from a 2023 issue of Vogue China magazine and does not show China’s Olympic uniform for the 2024 Olympic Games. The article mentions that China's uniform for the Paris Olympics features red and white colors. The article also mentions that the photo references the Hangzhou Asian Games, held in China from September 23, 2023, to October 8, 2023. <image:11226>, <image:11227>, <image:11230>, <image:11238>, <image:11239>.
+
+Searching google_vision with query: ImageQuery(limit=3, start_date=None, end_date=None, search_type='reverse', text='', image=<defame.common.medium.Image object at 0x7ffed9508370>)
+Skipping fact-checking website: https://www.reuters.com/fact-check/image-does-not-show-chinas-2024-olympic-outfit-inspired-by-palestinian-flag-2024-07-30/
+Skipping fact-checking website: https://newschecker.in/fact-check/old-vogue-photoshoot-falsely-shared-as-chinas-pro-palestine-statement-for-paris-2024-olympics
+Skipping unsupported website: https://www.tiktok.com/discover/china-olympics-palestine
+Skipping unsupported website: https://id.pinterest.com/feliciachloe/poses/
+Skipping unsupported website: https://in.pinterest.com/jessyjoe2468/art-reference-poses/
+Skipping unsupported website: https://www.facebook.com/photo.php?fbid=10159518316945144&id=90845230143&set=a.10151817027930144
+Got 0 new web source(s):
+The claim '<image:10222> This image shows an athlete of China which has chosen a design of the Palestinian flag for the Paris 2024 Olympics.' is false.
+Justification: The claim is false. The image originates from a September 2023 issue of Vogue China Magazine and was created to promote the Hangzhou Asian Games, not the Paris 2024 Olympics, as reported by Fact Crescendo ([https://srilanka.factcrescendo.com/english/china-has-not-chosen-a-design-inspired-by-the-palestinian-flag-for-the-paris-olympics-2024/](https://srilanka.factcrescendo.com/english/china-has-not-chosen-a-design-inspired-by-the-palestinian-flag-for-the-paris-olympics-2024/)) and Factly.in ([https://factly.in/an-old-photo-from-vogue-china-magazine-is-being-falsely-shared-as-showing-chinese-athletes-wearing-the-colours-of-the-palestinian-flag/](https://factly.in/an-old-photo-from-vogue-china-magazine-is-being-falsely-shared-as-showing-chinese-athletes-wearing-the-colours-of-the-palestinian-flag/)).
+
+So, the overall veracity is: false
+Fact-check took 1:03 min.

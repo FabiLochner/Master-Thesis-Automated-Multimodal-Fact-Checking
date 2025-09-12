@@ -1,0 +1,1604 @@
+PlanPrompt - QUERY:
+
+# Instructions
+The available knowledge is insufficient to assess the Claim. Therefore, **propose a set of actions** to retrieve new and helpful evidence. Adhere to the following rules:
+* The actions available are listed under Valid Actions, including a short description for each action. No other actions are possible at this moment. 
+* For each action, use the formatting as specified in Valid Actions.
+* Include all actions in a single Markdown code block at the end of your answer.
+* Propose as few actions as possible, but as much as needed. Do not propose similar or previously used actions.
+
+
+
+## Valid Actions
+* `reverse_search`
+   * Description: Performs a reverse image search to find similar images on the web.
+   * How to use: Provide an image and the model will perform a reverse search to find similar images.
+   * Format: reverse_search(<image:k>), where `k` is the image's ID
+
+* `geolocate`
+   * Description: Performs geolocation to determine the country where an image was taken.
+   * How to use: Provide an image and the model will determine the most likely countries where it was taken.
+   * Format: geolocate(<image:k>), where `k` is the image's ID
+
+* `image_search`
+   * Description: Run an image search on Google to retrieve related images for a given query.
+   * How to use: This is a helpful tool for fact-checking images. Use this to retrieve images associated with a specific keyword or phrase. Ensure that the query is clear and specific to improve search accuracy. If no relevant images are found, refine the query or use more descriptive terms.
+   * Format: image_search("your image search query goes here")
+
+# Example: reverse_search()
+
+## Claim
+Text: "<image:k> shows a rare event of a solar eclipse with a double ring."
+
+...
+
+## Actions
+```
+reverse_search(<image:k>)
+```
+
+# Example: geolocate()
+
+## Claim
+Text: "<image:k> shows a nuclear weapons facility in Usbekistan."
+
+...
+
+## Actions
+```
+geolocate(<image:k>)
+```
+
+# Example: image_search()
+
+## Claim
+Text: "Chinese officials in white protective hazmat suits carried people down a hallway to be quarantined for having COVID-19 in November 2022."
+
+...
+
+ACTIONS:
+```
+image_search("China officials white suits carry people")
+image_search("China officials carry people COVID quarantine 2022")
+```
+
+# Record
+## Claim
+Claim: "<image:63> This image shows Mayar Hamida (9 years old) and Bilal Hamida (6 years old) who were killed by Israel along with their mother and grandmother at Al-Jaoni UN school in Al-Nuseirat refugee camp on July, 6 2024."
+
+# Your Actions
+
+
+
+===== > RESPONSE:  < =====
+```
+reverse_search(<image:63>)
+```
+_________________________
+
+
+
+DevelopPrompt - QUERY:
+
+# Instructions
+You just retrieved new Evidence. Now, **analyze the Claim's veracity using the evidence**. Always adhere to the following rules:
+* Focus on developing new insights. Do not repeat larger parts from the Record. Do not restate the Claim.
+* Write down your thoughts step-by-step. Whenever necessary, you may elaborate in more detail.
+* Depending on the topic's complexity, invest one to three paragraphs. The fewer, the better.
+* If you find that there is insufficient information to verify the Claim, explicitly state what information is missing.
+* If you cite web sources, always refer to them by including their URL as a Markdown hyperlink.
+* **Use information only from the recorded evidence**: Avoid inserting information that is not implied by the evidence. You may use commonsense knowledge, though.
+
+# Record
+## Claim
+Claim: "<image:63> This image shows Mayar Hamida (9 years old) and Bilal Hamida (6 years old) who were killed by Israel along with their mother and grandmother at Al-Jaoni UN school in Al-Nuseirat refugee camp on July, 6 2024."
+
+## Actions
+```
+reverse_search(<image:63>)
+```
+
+## Evidence
+No new evidence found.
+
+# Your Analysis
+
+
+
+===== > RESPONSE:  < =====
+There is no new evidence to verify the claim. Therefore, I cannot assess the veracity of the claim.
+
+_________________________
+
+
+
+JudgePrompt - QUERY:
+
+# Instructions
+**Determine the Claim's veracity** by following these steps:
+1. Briefly summarize the key insights from the fact-check (see Record) in at most one paragraph.
+2. Write one paragraph about which one of the Decision Options applies best. Include the most appropriate decision option at the end and enclose it in backticks like `this`.
+
+
+
+
+## Decision Options
+* `true`: The claim is factually accurate when it is confirmed by evidence from multiple and reliable sources.
+* `false`: The claim is not factually accurate. This is the case if one of the following three conditions is met:(1) The claim is demonstrably false when it is disproven by evidence from multiple and reliable sources,(2) The claim or image is taken out of context, i.e. the origin, content and/or meaning of a statement or an image is misrepresented. For example, an old claim or an old image is mispresented in a new context in a misleading way,(3) There is not enough evidence to verify the claim or the evidence is conflicting or self-contradictory.
+* `not enough information`: The fact-check does not contain sufficient information to come to an conclusion. For example,there is substantial lack of evidence or the evidence is inconclusive, conflicting or self-contradictory. In the case of a lack of evidence, state which information exactly is missing. In particular, if no RESULTS or sources are available, pick this decision.
+
+# Record
+## Claim
+Claim: "<image:63> This image shows Mayar Hamida (9 years old) and Bilal Hamida (6 years old) who were killed by Israel along with their mother and grandmother at Al-Jaoni UN school in Al-Nuseirat refugee camp on July, 6 2024."
+
+## Actions
+```
+reverse_search(<image:63>)
+```
+
+## Evidence
+No new evidence found.
+
+## Elaboration
+There is no new evidence to verify the claim. Therefore, I cannot assess the veracity of the claim.
+
+
+# Your Judgement
+
+
+
+===== > RESPONSE:  < =====
+The fact-check did not yield any results or sources to verify the claim. Therefore, the claim cannot be assessed.
+
+`not enough information`
+
+_________________________
+
+
+
+PlanPrompt - QUERY:
+
+# Instructions
+The available knowledge is insufficient to assess the Claim. Therefore, **propose a set of actions** to retrieve new and helpful evidence. Adhere to the following rules:
+* The actions available are listed under Valid Actions, including a short description for each action. No other actions are possible at this moment. 
+* For each action, use the formatting as specified in Valid Actions.
+* Include all actions in a single Markdown code block at the end of your answer.
+* Propose as few actions as possible, but as much as needed. Do not propose similar or previously used actions.
+
+
+
+## Valid Actions
+* `geolocate`
+   * Description: Performs geolocation to determine the country where an image was taken.
+   * How to use: Provide an image and the model will determine the most likely countries where it was taken.
+   * Format: geolocate(<image:k>), where `k` is the image's ID
+
+* `image_search`
+   * Description: Run an image search on Google to retrieve related images for a given query.
+   * How to use: This is a helpful tool for fact-checking images. Use this to retrieve images associated with a specific keyword or phrase. Ensure that the query is clear and specific to improve search accuracy. If no relevant images are found, refine the query or use more descriptive terms.
+   * Format: image_search("your image search query goes here")
+
+# Example: geolocate()
+
+## Claim
+Text: "<image:k> shows a nuclear weapons facility in Usbekistan."
+
+...
+
+## Actions
+```
+geolocate(<image:k>)
+```
+
+# Example: image_search()
+
+## Claim
+Text: "Chinese officials in white protective hazmat suits carried people down a hallway to be quarantined for having COVID-19 in November 2022."
+
+...
+
+ACTIONS:
+```
+image_search("China officials white suits carry people")
+image_search("China officials carry people COVID quarantine 2022")
+```
+
+# Record
+## Claim
+Claim: "<image:63> This image shows Mayar Hamida (9 years old) and Bilal Hamida (6 years old) who were killed by Israel along with their mother and grandmother at Al-Jaoni UN school in Al-Nuseirat refugee camp on July, 6 2024."
+
+## Actions
+```
+reverse_search(<image:63>)
+```
+
+## Evidence
+No new evidence found.
+
+## Elaboration
+There is no new evidence to verify the claim. Therefore, I cannot assess the veracity of the claim.
+
+
+# Your Actions
+
+
+
+===== > RESPONSE:  < =====
+```
+image_search("Mayar Hamida Bilal Hamida killed Israel")
+image_search("Al-Jaoni UN school Al-Nuseirat refugee camp July 6 2024")
+```
+_________________________
+
+
+
+SummarizeResultPrompt - QUERY:
+
+# Instructions
+In order to find evidence that helps your fact-check, you just ran a web search which yielded a Search Result. **Your task right now is to summarize the Search Result.** What to include:
+* information that might be useful for the fact-check (see Record)
+* relevant images (refer to images by inserting their reference <image:k>)
+* if available: the release date as well as the author or the publisher (e.g. the media company) of the search result.
+
+Do NOT include:
+* advertisements
+* any other information not related to the Record or the Claim
+
+Additional rules:
+* Do not add any additional information besides the information in the Search Result.
+* If the Search Result doesn't contain any relevant information for the fact-checking work, simply print one word in capital letters: "NONE".
+* Keep your writing style like in the Examples 1, 2 and 3 provided to you.
+* Try to filter out relevant information even if the search result is in a different language.
+
+# Example 1
+The search result from America Today provides several photographs of the Notre-Dame Cathedral fire on April 15, 2019. <image:i>, <image:j>, <image:k>. None of the images show the Eiffel Tower in the background. 
+
+# Example 2
+NONE
+
+# Example 3
+The Guardian discusses a report blaming the Syrian government for a toxic gas attack and condemning their use of chemical weapons. The Guardian mentions the Chemical Weapons Convention and the responsibilities of Syria under the convention. According to The Guardian, The White House condemned the Assad regime for defying the norm against chemical weapons use.
+
+# Record
+## Claim
+Claim: "<image:63> This image shows Mayar Hamida (9 years old) and Bilal Hamida (6 years old) who were killed by Israel along with their mother and grandmother at Al-Jaoni UN school in Al-Nuseirat refugee camp on July, 6 2024."
+
+## Actions
+```
+reverse_search(<image:63>)
+```
+
+## Evidence
+No new evidence found.
+
+## Elaboration
+There is no new evidence to verify the claim. Therefore, I cannot assess the veracity of the claim.
+
+
+## Actions
+```
+image_search("Mayar Hamida Bilal Hamida killed Israel")
+image_search("Al-Jaoni UN school Al-Nuseirat refugee camp July 6 2024")
+```
+
+# Search Result
+From [Source](https://www.hrw.org/report/2007/09/05/why-they-died/civilian-casualties-lebanon-during-2006-war): 
+Content: "
+<image:14354>"
+
+# Your Summary
+
+
+
+===== > RESPONSE:  < =====
+The Human Rights Watch report from September 5, 2007, includes an image of a man holding a framed photo. <image:14354>
+
+_________________________
+
+
+
+SummarizeResultPrompt - QUERY:
+
+# Instructions
+In order to find evidence that helps your fact-check, you just ran a web search which yielded a Search Result. **Your task right now is to summarize the Search Result.** What to include:
+* information that might be useful for the fact-check (see Record)
+* relevant images (refer to images by inserting their reference <image:k>)
+* if available: the release date as well as the author or the publisher (e.g. the media company) of the search result.
+
+Do NOT include:
+* advertisements
+* any other information not related to the Record or the Claim
+
+Additional rules:
+* Do not add any additional information besides the information in the Search Result.
+* If the Search Result doesn't contain any relevant information for the fact-checking work, simply print one word in capital letters: "NONE".
+* Keep your writing style like in the Examples 1, 2 and 3 provided to you.
+* Try to filter out relevant information even if the search result is in a different language.
+
+# Example 1
+The search result from America Today provides several photographs of the Notre-Dame Cathedral fire on April 15, 2019. <image:i>, <image:j>, <image:k>. None of the images show the Eiffel Tower in the background. 
+
+# Example 2
+NONE
+
+# Example 3
+The Guardian discusses a report blaming the Syrian government for a toxic gas attack and condemning their use of chemical weapons. The Guardian mentions the Chemical Weapons Convention and the responsibilities of Syria under the convention. According to The Guardian, The White House condemned the Assad regime for defying the norm against chemical weapons use.
+
+# Record
+## Claim
+Claim: "<image:63> This image shows Mayar Hamida (9 years old) and Bilal Hamida (6 years old) who were killed by Israel along with their mother and grandmother at Al-Jaoni UN school in Al-Nuseirat refugee camp on July, 6 2024."
+
+## Actions
+```
+reverse_search(<image:63>)
+```
+
+## Evidence
+No new evidence found.
+
+## Elaboration
+There is no new evidence to verify the claim. Therefore, I cannot assess the veracity of the claim.
+
+
+## Actions
+```
+image_search("Mayar Hamida Bilal Hamida killed Israel")
+image_search("Al-Jaoni UN school Al-Nuseirat refugee camp July 6 2024")
+```
+
+# Search Result
+From [Source](https://english.palinfo.com/Zionist-Terrorism/2023/11/18/82751/): 
+Content: "
+<image:14355>"
+
+# Your Summary
+
+
+
+===== > RESPONSE:  < =====
+The search result from palinfo.com contains an image of two children. <image:14355>
+
+_________________________
+
+
+
+SummarizeResultPrompt - QUERY:
+
+# Instructions
+In order to find evidence that helps your fact-check, you just ran a web search which yielded a Search Result. **Your task right now is to summarize the Search Result.** What to include:
+* information that might be useful for the fact-check (see Record)
+* relevant images (refer to images by inserting their reference <image:k>)
+* if available: the release date as well as the author or the publisher (e.g. the media company) of the search result.
+
+Do NOT include:
+* advertisements
+* any other information not related to the Record or the Claim
+
+Additional rules:
+* Do not add any additional information besides the information in the Search Result.
+* If the Search Result doesn't contain any relevant information for the fact-checking work, simply print one word in capital letters: "NONE".
+* Keep your writing style like in the Examples 1, 2 and 3 provided to you.
+* Try to filter out relevant information even if the search result is in a different language.
+
+# Example 1
+The search result from America Today provides several photographs of the Notre-Dame Cathedral fire on April 15, 2019. <image:i>, <image:j>, <image:k>. None of the images show the Eiffel Tower in the background. 
+
+# Example 2
+NONE
+
+# Example 3
+The Guardian discusses a report blaming the Syrian government for a toxic gas attack and condemning their use of chemical weapons. The Guardian mentions the Chemical Weapons Convention and the responsibilities of Syria under the convention. According to The Guardian, The White House condemned the Assad regime for defying the norm against chemical weapons use.
+
+# Record
+## Claim
+Claim: "<image:63> This image shows Mayar Hamida (9 years old) and Bilal Hamida (6 years old) who were killed by Israel along with their mother and grandmother at Al-Jaoni UN school in Al-Nuseirat refugee camp on July, 6 2024."
+
+## Actions
+```
+reverse_search(<image:63>)
+```
+
+## Evidence
+No new evidence found.
+
+## Elaboration
+There is no new evidence to verify the claim. Therefore, I cannot assess the veracity of the claim.
+
+
+## Actions
+```
+image_search("Mayar Hamida Bilal Hamida killed Israel")
+image_search("Al-Jaoni UN school Al-Nuseirat refugee camp July 6 2024")
+```
+
+# Search Result
+From [Source](https://interactive.aljazeera.com/aje/2024/israel-war-on-gaza-10000-children-killed/): 
+Content: "
+<image:14356>"
+
+# Your Summary
+
+
+
+===== > RESPONSE:  < =====
+Al Jazeera published an article about children killed in Gaza. <image:14356>
+
+_________________________
+
+
+
+SummarizeSummariesPrompt - QUERY:
+
+# Instructions
+You just retrieved web sources, each one summarized under "Web Sources". **Your task right now is to summarize the web source summaries.**
+
+Always adhere to the following rules:
+* Write only one to two paragraphs.
+* Include all URLs from the listed sources. Format them as Markdown hyperlinks.
+* Do not add any additional information besides the information in the summaries.
+* Include references (<image:k>) to all relevant images.
+
+# Record
+## Claim
+Claim: "<image:63> This image shows Mayar Hamida (9 years old) and Bilal Hamida (6 years old) who were killed by Israel along with their mother and grandmother at Al-Jaoni UN school in Al-Nuseirat refugee camp on July, 6 2024."
+
+## Actions
+```
+reverse_search(<image:63>)
+```
+
+## Evidence
+No new evidence found.
+
+## Elaboration
+There is no new evidence to verify the claim. Therefore, I cannot assess the veracity of the claim.
+
+
+## Actions
+```
+image_search("Mayar Hamida Bilal Hamida killed Israel")
+image_search("Al-Jaoni UN school Al-Nuseirat refugee camp July 6 2024")
+```
+
+## Web Sources
+**Web Search Result**
+
+From [Source](https://www.hrw.org/report/2007/09/05/why-they-died/civilian-casualties-lebanon-during-2006-war): 
+Content: The Human Rights Watch report from September 5, 2007, includes an image of a man holding a framed photo. <image:14354>
+
+
+From [Source](https://english.palinfo.com/Zionist-Terrorism/2023/11/18/82751/): 
+Content: The search result from palinfo.com contains an image of two children. <image:14355>
+
+
+From [Source](https://interactive.aljazeera.com/aje/2024/israel-war-on-gaza-10000-children-killed/): 
+Content: Al Jazeera published an article about children killed in Gaza. <image:14356>
+
+
+## Your Summary
+
+
+
+===== > RESPONSE:  < =====
+The Human Rights Watch report from September 5, 2007, includes an image of a man holding a framed photo (<image:14354>). The search result from palinfo.com contains an image of two children (<image:14355>). Al Jazeera published an article about children killed in Gaza (<image:14356>).
+
+_________________________
+
+
+
+SummarizeResultPrompt - QUERY:
+
+# Instructions
+In order to find evidence that helps your fact-check, you just ran a web search which yielded a Search Result. **Your task right now is to summarize the Search Result.** What to include:
+* information that might be useful for the fact-check (see Record)
+* relevant images (refer to images by inserting their reference <image:k>)
+* if available: the release date as well as the author or the publisher (e.g. the media company) of the search result.
+
+Do NOT include:
+* advertisements
+* any other information not related to the Record or the Claim
+
+Additional rules:
+* Do not add any additional information besides the information in the Search Result.
+* If the Search Result doesn't contain any relevant information for the fact-checking work, simply print one word in capital letters: "NONE".
+* Keep your writing style like in the Examples 1, 2 and 3 provided to you.
+* Try to filter out relevant information even if the search result is in a different language.
+
+# Example 1
+The search result from America Today provides several photographs of the Notre-Dame Cathedral fire on April 15, 2019. <image:i>, <image:j>, <image:k>. None of the images show the Eiffel Tower in the background. 
+
+# Example 2
+NONE
+
+# Example 3
+The Guardian discusses a report blaming the Syrian government for a toxic gas attack and condemning their use of chemical weapons. The Guardian mentions the Chemical Weapons Convention and the responsibilities of Syria under the convention. According to The Guardian, The White House condemned the Assad regime for defying the norm against chemical weapons use.
+
+# Record
+## Claim
+Claim: "<image:63> This image shows Mayar Hamida (9 years old) and Bilal Hamida (6 years old) who were killed by Israel along with their mother and grandmother at Al-Jaoni UN school in Al-Nuseirat refugee camp on July, 6 2024."
+
+## Actions
+```
+reverse_search(<image:63>)
+```
+
+## Evidence
+No new evidence found.
+
+## Elaboration
+There is no new evidence to verify the claim. Therefore, I cannot assess the veracity of the claim.
+
+
+## Actions
+```
+image_search("Mayar Hamida Bilal Hamida killed Israel")
+image_search("Al-Jaoni UN school Al-Nuseirat refugee camp July 6 2024")
+```
+
+# Search Result
+From [Source](https://www.aljazeera.com/news/2024/7/6/israeli-attack-on-un-school-used-as-shelter-in-gaza-kills-at-least-16): 
+Content: "
+<image:14360>"
+
+# Your Summary
+
+
+
+===== > RESPONSE:  < =====
+Al Jazeera reports that an Israeli attack on a UN school used as a shelter in Gaza killed at least 16 people. <image:14360>
+
+_________________________
+
+
+
+SummarizeResultPrompt - QUERY:
+
+# Instructions
+In order to find evidence that helps your fact-check, you just ran a web search which yielded a Search Result. **Your task right now is to summarize the Search Result.** What to include:
+* information that might be useful for the fact-check (see Record)
+* relevant images (refer to images by inserting their reference <image:k>)
+* if available: the release date as well as the author or the publisher (e.g. the media company) of the search result.
+
+Do NOT include:
+* advertisements
+* any other information not related to the Record or the Claim
+
+Additional rules:
+* Do not add any additional information besides the information in the Search Result.
+* If the Search Result doesn't contain any relevant information for the fact-checking work, simply print one word in capital letters: "NONE".
+* Keep your writing style like in the Examples 1, 2 and 3 provided to you.
+* Try to filter out relevant information even if the search result is in a different language.
+
+# Example 1
+The search result from America Today provides several photographs of the Notre-Dame Cathedral fire on April 15, 2019. <image:i>, <image:j>, <image:k>. None of the images show the Eiffel Tower in the background. 
+
+# Example 2
+NONE
+
+# Example 3
+The Guardian discusses a report blaming the Syrian government for a toxic gas attack and condemning their use of chemical weapons. The Guardian mentions the Chemical Weapons Convention and the responsibilities of Syria under the convention. According to The Guardian, The White House condemned the Assad regime for defying the norm against chemical weapons use.
+
+# Record
+## Claim
+Claim: "<image:63> This image shows Mayar Hamida (9 years old) and Bilal Hamida (6 years old) who were killed by Israel along with their mother and grandmother at Al-Jaoni UN school in Al-Nuseirat refugee camp on July, 6 2024."
+
+## Actions
+```
+reverse_search(<image:63>)
+```
+
+## Evidence
+No new evidence found.
+
+## Elaboration
+There is no new evidence to verify the claim. Therefore, I cannot assess the veracity of the claim.
+
+
+## Actions
+```
+image_search("Mayar Hamida Bilal Hamida killed Israel")
+image_search("Al-Jaoni UN school Al-Nuseirat refugee camp July 6 2024")
+```
+
+# Search Result
+From [Source](https://www.unrwa.org/newsroom/features/no-shelter-war-bombing-block-2-unrwa-nuseirat-school): 
+Content: ""
+
+# Your Summary
+
+
+
+===== > RESPONSE:  < =====
+NONE
+
+_________________________
+
+
+
+SummarizeResultPrompt - QUERY:
+
+# Instructions
+In order to find evidence that helps your fact-check, you just ran a web search which yielded a Search Result. **Your task right now is to summarize the Search Result.** What to include:
+* information that might be useful for the fact-check (see Record)
+* relevant images (refer to images by inserting their reference <image:k>)
+* if available: the release date as well as the author or the publisher (e.g. the media company) of the search result.
+
+Do NOT include:
+* advertisements
+* any other information not related to the Record or the Claim
+
+Additional rules:
+* Do not add any additional information besides the information in the Search Result.
+* If the Search Result doesn't contain any relevant information for the fact-checking work, simply print one word in capital letters: "NONE".
+* Keep your writing style like in the Examples 1, 2 and 3 provided to you.
+* Try to filter out relevant information even if the search result is in a different language.
+
+# Example 1
+The search result from America Today provides several photographs of the Notre-Dame Cathedral fire on April 15, 2019. <image:i>, <image:j>, <image:k>. None of the images show the Eiffel Tower in the background. 
+
+# Example 2
+NONE
+
+# Example 3
+The Guardian discusses a report blaming the Syrian government for a toxic gas attack and condemning their use of chemical weapons. The Guardian mentions the Chemical Weapons Convention and the responsibilities of Syria under the convention. According to The Guardian, The White House condemned the Assad regime for defying the norm against chemical weapons use.
+
+# Record
+## Claim
+Claim: "<image:63> This image shows Mayar Hamida (9 years old) and Bilal Hamida (6 years old) who were killed by Israel along with their mother and grandmother at Al-Jaoni UN school in Al-Nuseirat refugee camp on July, 6 2024."
+
+## Actions
+```
+reverse_search(<image:63>)
+```
+
+## Evidence
+No new evidence found.
+
+## Elaboration
+There is no new evidence to verify the claim. Therefore, I cannot assess the veracity of the claim.
+
+
+## Actions
+```
+image_search("Mayar Hamida Bilal Hamida killed Israel")
+image_search("Al-Jaoni UN school Al-Nuseirat refugee camp July 6 2024")
+```
+
+# Search Result
+From [Source](https://www.lemonde.fr/en/international/article/2024/06/07/israeli-airstrike-in-central-gaza-wipes-out-shelter-in-unrwa-school_6674107_4.html): 
+Content: "
+<image:14361>"
+
+# Your Summary
+
+
+
+===== > RESPONSE:  < =====
+Le Monde reports on an Israeli airstrike in central Gaza that wiped out a shelter in an UNRWA school. <image:14361>
+
+_________________________
+
+
+
+SummarizeSummariesPrompt - QUERY:
+
+# Instructions
+You just retrieved web sources, each one summarized under "Web Sources". **Your task right now is to summarize the web source summaries.**
+
+Always adhere to the following rules:
+* Write only one to two paragraphs.
+* Include all URLs from the listed sources. Format them as Markdown hyperlinks.
+* Do not add any additional information besides the information in the summaries.
+* Include references (<image:k>) to all relevant images.
+
+# Record
+## Claim
+Claim: "<image:63> This image shows Mayar Hamida (9 years old) and Bilal Hamida (6 years old) who were killed by Israel along with their mother and grandmother at Al-Jaoni UN school in Al-Nuseirat refugee camp on July, 6 2024."
+
+## Actions
+```
+reverse_search(<image:63>)
+```
+
+## Evidence
+No new evidence found.
+
+## Elaboration
+There is no new evidence to verify the claim. Therefore, I cannot assess the veracity of the claim.
+
+
+## Actions
+```
+image_search("Mayar Hamida Bilal Hamida killed Israel")
+image_search("Al-Jaoni UN school Al-Nuseirat refugee camp July 6 2024")
+```
+
+## Web Sources
+**Web Search Result**
+
+From [Source](https://www.aljazeera.com/news/2024/7/6/israeli-attack-on-un-school-used-as-shelter-in-gaza-kills-at-least-16): 
+Content: Al Jazeera reports that an Israeli attack on a UN school used as a shelter in Gaza killed at least 16 people. <image:14360>
+
+
+From [Source](https://www.unrwa.org/newsroom/features/no-shelter-war-bombing-block-2-unrwa-nuseirat-school): 
+Content: NONE
+
+
+From [Source](https://www.lemonde.fr/en/international/article/2024/06/07/israeli-airstrike-in-central-gaza-wipes-out-shelter-in-unrwa-school_6674107_4.html): 
+Content: Le Monde reports on an Israeli airstrike in central Gaza that wiped out a shelter in an UNRWA school. <image:14361>
+
+
+## Your Summary
+
+
+
+===== > RESPONSE:  < =====
+Al Jazeera reports that an Israeli attack on a UN school used as a shelter in Gaza killed at least 16 people (<image:14360>). Le Monde reports on an Israeli airstrike in central Gaza that wiped out a shelter in an UNRWA school (<image:14361>). The UNRWA website has no relevant content.
+
+_________________________
+
+
+
+DevelopPrompt - QUERY:
+
+# Instructions
+You just retrieved new Evidence. Now, **analyze the Claim's veracity using the evidence**. Always adhere to the following rules:
+* Focus on developing new insights. Do not repeat larger parts from the Record. Do not restate the Claim.
+* Write down your thoughts step-by-step. Whenever necessary, you may elaborate in more detail.
+* Depending on the topic's complexity, invest one to three paragraphs. The fewer, the better.
+* If you find that there is insufficient information to verify the Claim, explicitly state what information is missing.
+* If you cite web sources, always refer to them by including their URL as a Markdown hyperlink.
+* **Use information only from the recorded evidence**: Avoid inserting information that is not implied by the evidence. You may use commonsense knowledge, though.
+
+# Record
+## Claim
+Claim: "<image:63> This image shows Mayar Hamida (9 years old) and Bilal Hamida (6 years old) who were killed by Israel along with their mother and grandmother at Al-Jaoni UN school in Al-Nuseirat refugee camp on July, 6 2024."
+
+## Actions
+```
+reverse_search(<image:63>)
+```
+
+## Evidence
+No new evidence found.
+
+## Elaboration
+There is no new evidence to verify the claim. Therefore, I cannot assess the veracity of the claim.
+
+
+## Actions
+```
+image_search("Mayar Hamida Bilal Hamida killed Israel")
+image_search("Al-Jaoni UN school Al-Nuseirat refugee camp July 6 2024")
+```
+
+## Evidence
+### Evidence from `image_search`
+The Human Rights Watch report from September 5, 2007, includes an image of a man holding a framed photo (<image:14354>). The search result from palinfo.com contains an image of two children (<image:14355>). Al Jazeera published an article about children killed in Gaza (<image:14356>).
+
+
+### Evidence from `image_search`
+Al Jazeera reports that an Israeli attack on a UN school used as a shelter in Gaza killed at least 16 people (<image:14360>). Le Monde reports on an Israeli airstrike in central Gaza that wiped out a shelter in an UNRWA school (<image:14361>). The UNRWA website has no relevant content.
+
+
+# Your Analysis
+
+
+
+===== > RESPONSE:  < =====
+The evidence contains images and reports related to the claim. Specifically, the image search results include images of children and reports of attacks on UN schools in Gaza. However, the evidence does not directly confirm the specific details of the claim, such as the names and ages of the children, the date of the event, or the exact location (Al-Jaoni UN school in Al-Nuseirat refugee camp).
+
+The evidence does mention an Israeli attack on a UN school, which aligns with part of the claim. However, the evidence does not provide enough information to verify the specific details of the claim.
+
+Therefore, I cannot fully verify the claim based on the provided evidence. More information is needed to confirm the specific details.
+
+_________________________
+
+
+
+JudgePrompt - QUERY:
+
+# Instructions
+**Determine the Claim's veracity** by following these steps:
+1. Briefly summarize the key insights from the fact-check (see Record) in at most one paragraph.
+2. Write one paragraph about which one of the Decision Options applies best. Include the most appropriate decision option at the end and enclose it in backticks like `this`.
+
+
+
+
+## Decision Options
+* `true`: The claim is factually accurate when it is confirmed by evidence from multiple and reliable sources.
+* `false`: The claim is not factually accurate. This is the case if one of the following three conditions is met:(1) The claim is demonstrably false when it is disproven by evidence from multiple and reliable sources,(2) The claim or image is taken out of context, i.e. the origin, content and/or meaning of a statement or an image is misrepresented. For example, an old claim or an old image is mispresented in a new context in a misleading way,(3) There is not enough evidence to verify the claim or the evidence is conflicting or self-contradictory.
+* `not enough information`: The fact-check does not contain sufficient information to come to an conclusion. For example,there is substantial lack of evidence or the evidence is inconclusive, conflicting or self-contradictory. In the case of a lack of evidence, state which information exactly is missing. In particular, if no RESULTS or sources are available, pick this decision.
+
+# Record
+## Claim
+Claim: "<image:63> This image shows Mayar Hamida (9 years old) and Bilal Hamida (6 years old) who were killed by Israel along with their mother and grandmother at Al-Jaoni UN school in Al-Nuseirat refugee camp on July, 6 2024."
+
+## Actions
+```
+reverse_search(<image:63>)
+```
+
+## Evidence
+No new evidence found.
+
+## Elaboration
+There is no new evidence to verify the claim. Therefore, I cannot assess the veracity of the claim.
+
+
+## Actions
+```
+image_search("Mayar Hamida Bilal Hamida killed Israel")
+image_search("Al-Jaoni UN school Al-Nuseirat refugee camp July 6 2024")
+```
+
+## Evidence
+### Evidence from `image_search`
+The Human Rights Watch report from September 5, 2007, includes an image of a man holding a framed photo (<image:14354>). The search result from palinfo.com contains an image of two children (<image:14355>). Al Jazeera published an article about children killed in Gaza (<image:14356>).
+
+
+### Evidence from `image_search`
+Al Jazeera reports that an Israeli attack on a UN school used as a shelter in Gaza killed at least 16 people (<image:14360>). Le Monde reports on an Israeli airstrike in central Gaza that wiped out a shelter in an UNRWA school (<image:14361>). The UNRWA website has no relevant content.
+
+
+## Elaboration
+The evidence contains images and reports related to the claim. Specifically, the image search results include images of children and reports of attacks on UN schools in Gaza. However, the evidence does not directly confirm the specific details of the claim, such as the names and ages of the children, the date of the event, or the exact location (Al-Jaoni UN school in Al-Nuseirat refugee camp).
+
+The evidence does mention an Israeli attack on a UN school, which aligns with part of the claim. However, the evidence does not provide enough information to verify the specific details of the claim.
+
+Therefore, I cannot fully verify the claim based on the provided evidence. More information is needed to confirm the specific details.
+
+
+# Your Judgement
+
+
+
+===== > RESPONSE:  < =====
+The evidence includes images and reports related to the claim, such as images of children and reports of attacks on UN schools in Gaza. However, the evidence does not directly confirm the specific details of the claim, such as the names and ages of the children, the date of the event, or the exact location. Therefore, there is not enough information to verify the claim. `not enough information`
+_________________________
+
+
+
+PlanPrompt - QUERY:
+
+# Instructions
+The available knowledge is insufficient to assess the Claim. Therefore, **propose a set of actions** to retrieve new and helpful evidence. Adhere to the following rules:
+* The actions available are listed under Valid Actions, including a short description for each action. No other actions are possible at this moment. 
+* For each action, use the formatting as specified in Valid Actions.
+* Include all actions in a single Markdown code block at the end of your answer.
+* Propose as few actions as possible, but as much as needed. Do not propose similar or previously used actions.
+
+
+
+## Valid Actions
+* `geolocate`
+   * Description: Performs geolocation to determine the country where an image was taken.
+   * How to use: Provide an image and the model will determine the most likely countries where it was taken.
+   * Format: geolocate(<image:k>), where `k` is the image's ID
+
+* `image_search`
+   * Description: Run an image search on Google to retrieve related images for a given query.
+   * How to use: This is a helpful tool for fact-checking images. Use this to retrieve images associated with a specific keyword or phrase. Ensure that the query is clear and specific to improve search accuracy. If no relevant images are found, refine the query or use more descriptive terms.
+   * Format: image_search("your image search query goes here")
+
+# Example: geolocate()
+
+## Claim
+Text: "<image:k> shows a nuclear weapons facility in Usbekistan."
+
+...
+
+## Actions
+```
+geolocate(<image:k>)
+```
+
+# Example: image_search()
+
+## Claim
+Text: "Chinese officials in white protective hazmat suits carried people down a hallway to be quarantined for having COVID-19 in November 2022."
+
+...
+
+ACTIONS:
+```
+image_search("China officials white suits carry people")
+image_search("China officials carry people COVID quarantine 2022")
+```
+
+# Record
+## Claim
+Claim: "<image:63> This image shows Mayar Hamida (9 years old) and Bilal Hamida (6 years old) who were killed by Israel along with their mother and grandmother at Al-Jaoni UN school in Al-Nuseirat refugee camp on July, 6 2024."
+
+## Actions
+```
+reverse_search(<image:63>)
+```
+
+## Evidence
+No new evidence found.
+
+## Elaboration
+There is no new evidence to verify the claim. Therefore, I cannot assess the veracity of the claim.
+
+
+## Actions
+```
+image_search("Mayar Hamida Bilal Hamida killed Israel")
+image_search("Al-Jaoni UN school Al-Nuseirat refugee camp July 6 2024")
+```
+
+## Evidence
+### Evidence from `image_search`
+The Human Rights Watch report from September 5, 2007, includes an image of a man holding a framed photo (<image:14354>). The search result from palinfo.com contains an image of two children (<image:14355>). Al Jazeera published an article about children killed in Gaza (<image:14356>).
+
+
+### Evidence from `image_search`
+Al Jazeera reports that an Israeli attack on a UN school used as a shelter in Gaza killed at least 16 people (<image:14360>). Le Monde reports on an Israeli airstrike in central Gaza that wiped out a shelter in an UNRWA school (<image:14361>). The UNRWA website has no relevant content.
+
+
+## Elaboration
+The evidence contains images and reports related to the claim. Specifically, the image search results include images of children and reports of attacks on UN schools in Gaza. However, the evidence does not directly confirm the specific details of the claim, such as the names and ages of the children, the date of the event, or the exact location (Al-Jaoni UN school in Al-Nuseirat refugee camp).
+
+The evidence does mention an Israeli attack on a UN school, which aligns with part of the claim. However, the evidence does not provide enough information to verify the specific details of the claim.
+
+Therefore, I cannot fully verify the claim based on the provided evidence. More information is needed to confirm the specific details.
+
+
+# Your Actions
+
+
+
+===== > RESPONSE:  < =====
+```
+image_search("Mayar Hamida Bilal Hamida Al-Jaoni UN school Al-Nuseirat")
+```
+_________________________
+
+
+
+DevelopPrompt - QUERY:
+
+# Instructions
+You just retrieved new Evidence. Now, **analyze the Claim's veracity using the evidence**. Always adhere to the following rules:
+* Focus on developing new insights. Do not repeat larger parts from the Record. Do not restate the Claim.
+* Write down your thoughts step-by-step. Whenever necessary, you may elaborate in more detail.
+* Depending on the topic's complexity, invest one to three paragraphs. The fewer, the better.
+* If you find that there is insufficient information to verify the Claim, explicitly state what information is missing.
+* If you cite web sources, always refer to them by including their URL as a Markdown hyperlink.
+* **Use information only from the recorded evidence**: Avoid inserting information that is not implied by the evidence. You may use commonsense knowledge, though.
+
+# Record
+## Claim
+Claim: "<image:63> This image shows Mayar Hamida (9 years old) and Bilal Hamida (6 years old) who were killed by Israel along with their mother and grandmother at Al-Jaoni UN school in Al-Nuseirat refugee camp on July, 6 2024."
+
+## Actions
+```
+reverse_search(<image:63>)
+```
+
+## Evidence
+No new evidence found.
+
+## Elaboration
+There is no new evidence to verify the claim. Therefore, I cannot assess the veracity of the claim.
+
+
+## Actions
+```
+image_search("Mayar Hamida Bilal Hamida killed Israel")
+image_search("Al-Jaoni UN school Al-Nuseirat refugee camp July 6 2024")
+```
+
+## Evidence
+### Evidence from `image_search`
+The Human Rights Watch report from September 5, 2007, includes an image of a man holding a framed photo (<image:14354>). The search result from palinfo.com contains an image of two children (<image:14355>). Al Jazeera published an article about children killed in Gaza (<image:14356>).
+
+
+### Evidence from `image_search`
+Al Jazeera reports that an Israeli attack on a UN school used as a shelter in Gaza killed at least 16 people (<image:14360>). Le Monde reports on an Israeli airstrike in central Gaza that wiped out a shelter in an UNRWA school (<image:14361>). The UNRWA website has no relevant content.
+
+
+## Elaboration
+The evidence contains images and reports related to the claim. Specifically, the image search results include images of children and reports of attacks on UN schools in Gaza. However, the evidence does not directly confirm the specific details of the claim, such as the names and ages of the children, the date of the event, or the exact location (Al-Jaoni UN school in Al-Nuseirat refugee camp).
+
+The evidence does mention an Israeli attack on a UN school, which aligns with part of the claim. However, the evidence does not provide enough information to verify the specific details of the claim.
+
+Therefore, I cannot fully verify the claim based on the provided evidence. More information is needed to confirm the specific details.
+
+
+## Actions
+```
+image_search("Mayar Hamida Bilal Hamida Al-Jaoni UN school Al-Nuseirat")
+```
+
+## Evidence
+No new evidence found.
+
+# Your Analysis
+
+
+
+===== > RESPONSE:  < =====
+The image search did not yield any new evidence. Therefore, I cannot verify the claim.
+
+_________________________
+
+
+
+JudgePrompt - QUERY:
+
+# Instructions
+**Determine the Claim's veracity** by following these steps:
+1. Briefly summarize the key insights from the fact-check (see Record) in at most one paragraph.
+2. Write one paragraph about which one of the Decision Options applies best. Include the most appropriate decision option at the end and enclose it in backticks like `this`.
+
+
+
+
+## Decision Options
+* `true`: The claim is factually accurate when it is confirmed by evidence from multiple and reliable sources.
+* `false`: The claim is not factually accurate. This is the case if one of the following three conditions is met:(1) The claim is demonstrably false when it is disproven by evidence from multiple and reliable sources,(2) The claim or image is taken out of context, i.e. the origin, content and/or meaning of a statement or an image is misrepresented. For example, an old claim or an old image is mispresented in a new context in a misleading way,(3) There is not enough evidence to verify the claim or the evidence is conflicting or self-contradictory.
+
+# Record
+## Claim
+Claim: "<image:63> This image shows Mayar Hamida (9 years old) and Bilal Hamida (6 years old) who were killed by Israel along with their mother and grandmother at Al-Jaoni UN school in Al-Nuseirat refugee camp on July, 6 2024."
+
+## Actions
+```
+reverse_search(<image:63>)
+```
+
+## Evidence
+No new evidence found.
+
+## Elaboration
+There is no new evidence to verify the claim. Therefore, I cannot assess the veracity of the claim.
+
+
+## Actions
+```
+image_search("Mayar Hamida Bilal Hamida killed Israel")
+image_search("Al-Jaoni UN school Al-Nuseirat refugee camp July 6 2024")
+```
+
+## Evidence
+### Evidence from `image_search`
+The Human Rights Watch report from September 5, 2007, includes an image of a man holding a framed photo (<image:14354>). The search result from palinfo.com contains an image of two children (<image:14355>). Al Jazeera published an article about children killed in Gaza (<image:14356>).
+
+
+### Evidence from `image_search`
+Al Jazeera reports that an Israeli attack on a UN school used as a shelter in Gaza killed at least 16 people (<image:14360>). Le Monde reports on an Israeli airstrike in central Gaza that wiped out a shelter in an UNRWA school (<image:14361>). The UNRWA website has no relevant content.
+
+
+## Elaboration
+The evidence contains images and reports related to the claim. Specifically, the image search results include images of children and reports of attacks on UN schools in Gaza. However, the evidence does not directly confirm the specific details of the claim, such as the names and ages of the children, the date of the event, or the exact location (Al-Jaoni UN school in Al-Nuseirat refugee camp).
+
+The evidence does mention an Israeli attack on a UN school, which aligns with part of the claim. However, the evidence does not provide enough information to verify the specific details of the claim.
+
+Therefore, I cannot fully verify the claim based on the provided evidence. More information is needed to confirm the specific details.
+
+
+## Actions
+```
+image_search("Mayar Hamida Bilal Hamida Al-Jaoni UN school Al-Nuseirat")
+```
+
+## Evidence
+No new evidence found.
+
+## Elaboration
+The image search did not yield any new evidence. Therefore, I cannot verify the claim.
+
+
+# Your Judgement
+
+
+
+===== > RESPONSE:  < =====
+The search results provide some context about attacks on UN schools in Gaza, but they do not confirm the specific details of the claim, such as the names, ages, and date. There is not enough evidence to verify the claim.
+
+`false`
+_________________________
+
+
+
+SummarizeDocPrompt - QUERY:
+
+# Instructions
+You are provided with the record of a fact-check. It contains the Claim to be verified and a documentation of all the fact-checking work along the gathered evidence. Your task is to **summarize the fact-check**. That is, you provide a concise, one-paragraph justification for the final VERDICT based on the knowledge from the Record. Note:
+* Be truthful, brief, do not add any additional information besides the information given in the Record. 
+* Link key sources in your summary. Use Markdown notation for that. You may link them in-line.
+* Don't state the Claim again. Rather focus on the key insights of the fact-check.
+* Simply print just the summary.
+
+# Record
+## Claim
+Claim: "<image:63> This image shows Mayar Hamida (9 years old) and Bilal Hamida (6 years old) who were killed by Israel along with their mother and grandmother at Al-Jaoni UN school in Al-Nuseirat refugee camp on July, 6 2024."
+
+## Actions
+```
+reverse_search(<image:63>)
+```
+
+## Evidence
+No new evidence found.
+
+## Elaboration
+There is no new evidence to verify the claim. Therefore, I cannot assess the veracity of the claim.
+
+
+## Actions
+```
+image_search("Mayar Hamida Bilal Hamida killed Israel")
+image_search("Al-Jaoni UN school Al-Nuseirat refugee camp July 6 2024")
+```
+
+## Evidence
+### Evidence from `image_search`
+The Human Rights Watch report from September 5, 2007, includes an image of a man holding a framed photo (<image:14354>). The search result from palinfo.com contains an image of two children (<image:14355>). Al Jazeera published an article about children killed in Gaza (<image:14356>).
+
+
+### Evidence from `image_search`
+Al Jazeera reports that an Israeli attack on a UN school used as a shelter in Gaza killed at least 16 people (<image:14360>). Le Monde reports on an Israeli airstrike in central Gaza that wiped out a shelter in an UNRWA school (<image:14361>). The UNRWA website has no relevant content.
+
+
+## Elaboration
+The evidence contains images and reports related to the claim. Specifically, the image search results include images of children and reports of attacks on UN schools in Gaza. However, the evidence does not directly confirm the specific details of the claim, such as the names and ages of the children, the date of the event, or the exact location (Al-Jaoni UN school in Al-Nuseirat refugee camp).
+
+The evidence does mention an Israeli attack on a UN school, which aligns with part of the claim. However, the evidence does not provide enough information to verify the specific details of the claim.
+
+Therefore, I cannot fully verify the claim based on the provided evidence. More information is needed to confirm the specific details.
+
+
+## Actions
+```
+image_search("Mayar Hamida Bilal Hamida Al-Jaoni UN school Al-Nuseirat")
+```
+
+## Evidence
+No new evidence found.
+
+## Elaboration
+The image search did not yield any new evidence. Therefore, I cannot verify the claim.
+
+
+## Final Judgement
+The search results provide some context about attacks on UN schools in Gaza, but they do not confirm the specific details of the claim, such as the names, ages, and date. There is not enough evidence to verify the claim.
+
+`false`
+
+## Summary
+
+
+
+===== > RESPONSE:  < =====
+The claim cannot be verified due to a lack of specific evidence. While image searches revealed reports of attacks on UN schools in Gaza, they did not confirm the specific details of the claim, such as the names, ages, and date.
+
+_________________________
+
+
+
+PlanPrompt - QUERY:
+
+# Instructions
+The available knowledge is insufficient to assess the Claim. Therefore, **propose a set of actions** to retrieve new and helpful evidence. Adhere to the following rules:
+* The actions available are listed under Valid Actions, including a short description for each action. No other actions are possible at this moment. 
+* For each action, use the formatting as specified in Valid Actions.
+* Include all actions in a single Markdown code block at the end of your answer.
+* Propose as few actions as possible, but as much as needed. Do not propose similar or previously used actions.
+
+
+
+## Valid Actions
+* `reverse_search`
+   * Description: Performs a reverse image search to find similar images on the web.
+   * How to use: Provide an image and the model will perform a reverse search to find similar images.
+   * Format: reverse_search(<image:k>), where `k` is the image's ID
+
+* `geolocate`
+   * Description: Performs geolocation to determine the country where an image was taken.
+   * How to use: Provide an image and the model will determine the most likely countries where it was taken.
+   * Format: geolocate(<image:k>), where `k` is the image's ID
+
+* `image_search`
+   * Description: Run an image search on Google to retrieve related images for a given query.
+   * How to use: This is a helpful tool for fact-checking images. Use this to retrieve images associated with a specific keyword or phrase. Ensure that the query is clear and specific to improve search accuracy. If no relevant images are found, refine the query or use more descriptive terms.
+   * Format: image_search("your image search query goes here")
+
+# Example: reverse_search()
+
+## Claim
+Text: "<image:k> shows a rare event of a solar eclipse with a double ring."
+
+...
+
+## Actions
+```
+reverse_search(<image:k>)
+```
+
+# Example: geolocate()
+
+## Claim
+Text: "<image:k> shows a nuclear weapons facility in Usbekistan."
+
+...
+
+## Actions
+```
+geolocate(<image:k>)
+```
+
+# Example: image_search()
+
+## Claim
+Text: "Chinese officials in white protective hazmat suits carried people down a hallway to be quarantined for having COVID-19 in November 2022."
+
+...
+
+ACTIONS:
+```
+image_search("China officials white suits carry people")
+image_search("China officials carry people COVID quarantine 2022")
+```
+
+# Record
+## Claim
+Claim: "<image:64> This is an authentic image of Dwayne Johnson waring the Israeli flag in support of Israel."
+
+# Your Actions
+
+
+
+===== > RESPONSE:  < =====
+```
+reverse_search(<image:64>)
+image_search("Dwayne Johnson Israel flag")
+```
+_________________________
+
+
+
+SummarizeResultPrompt - QUERY:
+
+# Instructions
+In order to find evidence that helps your fact-check, you just ran a web search which yielded a Search Result. **Your task right now is to summarize the Search Result.** What to include:
+* information that might be useful for the fact-check (see Record)
+* relevant images (refer to images by inserting their reference <image:k>)
+* if available: the release date as well as the author or the publisher (e.g. the media company) of the search result.
+
+Do NOT include:
+* advertisements
+* any other information not related to the Record or the Claim
+
+Additional rules:
+* Do not add any additional information besides the information in the Search Result.
+* If the Search Result doesn't contain any relevant information for the fact-checking work, simply print one word in capital letters: "NONE".
+* Keep your writing style like in the Examples 1, 2 and 3 provided to you.
+* Try to filter out relevant information even if the search result is in a different language.
+
+# Example 1
+The search result from America Today provides several photographs of the Notre-Dame Cathedral fire on April 15, 2019. <image:i>, <image:j>, <image:k>. None of the images show the Eiffel Tower in the background. 
+
+# Example 2
+NONE
+
+# Example 3
+The Guardian discusses a report blaming the Syrian government for a toxic gas attack and condemning their use of chemical weapons. The Guardian mentions the Chemical Weapons Convention and the responsibilities of Syria under the convention. According to The Guardian, The White House condemned the Assad regime for defying the norm against chemical weapons use.
+
+# Record
+## Claim
+Claim: "<image:64> This is an authentic image of Dwayne Johnson waring the Israeli flag in support of Israel."
+
+## Actions
+```
+reverse_search(<image:64>)
+image_search("Dwayne Johnson Israel flag")
+```
+
+# Search Result
+From [Source](https://www.wionews.com/entertainment/dwayne-johnson-on-israel-hamas-conflict-im-heartbroken-angry-and-sickened-645300): 
+Content: "
+<image:14362>"
+
+# Your Summary
+
+
+
+===== > RESPONSE:  < =====
+WIONews published an article about Dwayne Johnson's reaction to the Israel-Hamas conflict. The article includes an image of Dwayne Johnson with a statement about the conflict. <image:14362>
+
+_________________________
+
+
+
+SummarizeResultPrompt - QUERY:
+
+# Instructions
+In order to find evidence that helps your fact-check, you just ran a web search which yielded a Search Result. **Your task right now is to summarize the Search Result.** What to include:
+* information that might be useful for the fact-check (see Record)
+* relevant images (refer to images by inserting their reference <image:k>)
+* if available: the release date as well as the author or the publisher (e.g. the media company) of the search result.
+
+Do NOT include:
+* advertisements
+* any other information not related to the Record or the Claim
+
+Additional rules:
+* Do not add any additional information besides the information in the Search Result.
+* If the Search Result doesn't contain any relevant information for the fact-checking work, simply print one word in capital letters: "NONE".
+* Keep your writing style like in the Examples 1, 2 and 3 provided to you.
+* Try to filter out relevant information even if the search result is in a different language.
+
+# Example 1
+The search result from America Today provides several photographs of the Notre-Dame Cathedral fire on April 15, 2019. <image:i>, <image:j>, <image:k>. None of the images show the Eiffel Tower in the background. 
+
+# Example 2
+NONE
+
+# Example 3
+The Guardian discusses a report blaming the Syrian government for a toxic gas attack and condemning their use of chemical weapons. The Guardian mentions the Chemical Weapons Convention and the responsibilities of Syria under the convention. According to The Guardian, The White House condemned the Assad regime for defying the norm against chemical weapons use.
+
+# Record
+## Claim
+Claim: "<image:64> This is an authentic image of Dwayne Johnson waring the Israeli flag in support of Israel."
+
+## Actions
+```
+reverse_search(<image:64>)
+image_search("Dwayne Johnson Israel flag")
+```
+
+# Search Result
+From [Source](https://www.euronews.com/culture/2023/11/14/dwayne-the-rock-johnson-says-political-parties-asked-him-to-run-for-president): 
+Content: "
+<image:14363>"
+
+# Your Summary
+
+
+
+===== > RESPONSE:  < =====
+The search result from Euronews features an image of Dwayne Johnson with the American flag. <image:14363>
+
+_________________________
+
+
+
+SummarizeResultPrompt - QUERY:
+
+# Instructions
+In order to find evidence that helps your fact-check, you just ran a web search which yielded a Search Result. **Your task right now is to summarize the Search Result.** What to include:
+* information that might be useful for the fact-check (see Record)
+* relevant images (refer to images by inserting their reference <image:k>)
+* if available: the release date as well as the author or the publisher (e.g. the media company) of the search result.
+
+Do NOT include:
+* advertisements
+* any other information not related to the Record or the Claim
+
+Additional rules:
+* Do not add any additional information besides the information in the Search Result.
+* If the Search Result doesn't contain any relevant information for the fact-checking work, simply print one word in capital letters: "NONE".
+* Keep your writing style like in the Examples 1, 2 and 3 provided to you.
+* Try to filter out relevant information even if the search result is in a different language.
+
+# Example 1
+The search result from America Today provides several photographs of the Notre-Dame Cathedral fire on April 15, 2019. <image:i>, <image:j>, <image:k>. None of the images show the Eiffel Tower in the background. 
+
+# Example 2
+NONE
+
+# Example 3
+The Guardian discusses a report blaming the Syrian government for a toxic gas attack and condemning their use of chemical weapons. The Guardian mentions the Chemical Weapons Convention and the responsibilities of Syria under the convention. According to The Guardian, The White House condemned the Assad regime for defying the norm against chemical weapons use.
+
+# Record
+## Claim
+Claim: "<image:64> This is an authentic image of Dwayne Johnson waring the Israeli flag in support of Israel."
+
+## Actions
+```
+reverse_search(<image:64>)
+image_search("Dwayne Johnson Israel flag")
+```
+
+# Search Result
+From [Source](https://www.yahoo.com/news/articles/fact-check-fake-dwayne-johnson-234700368.html): 
+Content: "
+<image:14364>"
+
+# Your Summary
+
+
+
+===== > RESPONSE:  < =====
+The Yahoo News article fact-checks a fake image of Dwayne Johnson. <image:14364>
+
+_________________________
+
+
+
+SummarizeSummariesPrompt - QUERY:
+
+# Instructions
+You just retrieved web sources, each one summarized under "Web Sources". **Your task right now is to summarize the web source summaries.**
+
+Always adhere to the following rules:
+* Write only one to two paragraphs.
+* Include all URLs from the listed sources. Format them as Markdown hyperlinks.
+* Do not add any additional information besides the information in the summaries.
+* Include references (<image:k>) to all relevant images.
+
+# Record
+## Claim
+Claim: "<image:64> This is an authentic image of Dwayne Johnson waring the Israeli flag in support of Israel."
+
+## Actions
+```
+reverse_search(<image:64>)
+image_search("Dwayne Johnson Israel flag")
+```
+
+## Web Sources
+**Web Search Result**
+
+From [Source](https://www.wionews.com/entertainment/dwayne-johnson-on-israel-hamas-conflict-im-heartbroken-angry-and-sickened-645300): 
+Content: WIONews published an article about Dwayne Johnson's reaction to the Israel-Hamas conflict. The article includes an image of Dwayne Johnson with a statement about the conflict. <image:14362>
+
+
+From [Source](https://www.euronews.com/culture/2023/11/14/dwayne-the-rock-johnson-says-political-parties-asked-him-to-run-for-president): 
+Content: The search result from Euronews features an image of Dwayne Johnson with the American flag. <image:14363>
+
+
+From [Source](https://www.yahoo.com/news/articles/fact-check-fake-dwayne-johnson-234700368.html): 
+Content: The Yahoo News article fact-checks a fake image of Dwayne Johnson. <image:14364>
+
+
+## Your Summary
+
+
+
+===== > RESPONSE:  < =====
+The web sources include articles about Dwayne Johnson's reactions to the Israel-Hamas conflict and his potential political aspirations. One article from WIONews ([https://www.wionews.com/entertainment/dwayne-johnson-on-israel-hamas-conflict-im-heartbroken-angry-and-sickened-645300](https://www.wionews.com/entertainment/dwayne-johnson-on-israel-hamas-conflict-im-heartbroken-angry-and-sickened-645300)) features an image of Johnson with a statement about the conflict <image:14362>. Another source from Euronews ([https://www.euronews.com/culture/2023/11/14/dwayne-the-rock-johnson-says-political-parties-asked-him-to-run-for-president](https://www.euronews.com/culture/2023/11/14/dwayne-the-rock-johnson-says-political-parties-asked-him-to-run-for-president)) shows Johnson with the American flag <image:14363>.
+
+Yahoo News ([https://www.yahoo.com/news/articles/fact-check-fake-dwayne-johnson-234700368.html](https://www.yahoo.com/news/articles/fact-check-fake-dwayne-johnson-234700368.html)) fact-checks a fake image of Dwayne Johnson <image:14364>.
+
+_________________________
+
+
+
+DevelopPrompt - QUERY:
+
+# Instructions
+You just retrieved new Evidence. Now, **analyze the Claim's veracity using the evidence**. Always adhere to the following rules:
+* Focus on developing new insights. Do not repeat larger parts from the Record. Do not restate the Claim.
+* Write down your thoughts step-by-step. Whenever necessary, you may elaborate in more detail.
+* Depending on the topic's complexity, invest one to three paragraphs. The fewer, the better.
+* If you find that there is insufficient information to verify the Claim, explicitly state what information is missing.
+* If you cite web sources, always refer to them by including their URL as a Markdown hyperlink.
+* **Use information only from the recorded evidence**: Avoid inserting information that is not implied by the evidence. You may use commonsense knowledge, though.
+
+# Record
+## Claim
+Claim: "<image:64> This is an authentic image of Dwayne Johnson waring the Israeli flag in support of Israel."
+
+## Actions
+```
+reverse_search(<image:64>)
+image_search("Dwayne Johnson Israel flag")
+```
+
+## Evidence
+### Evidence from `image_search`
+The web sources include articles about Dwayne Johnson's reactions to the Israel-Hamas conflict and his potential political aspirations. One article from WIONews ([https://www.wionews.com/entertainment/dwayne-johnson-on-israel-hamas-conflict-im-heartbroken-angry-and-sickened-645300](https://www.wionews.com/entertainment/dwayne-johnson-on-israel-hamas-conflict-im-heartbroken-angry-and-sickened-645300)) features an image of Johnson with a statement about the conflict <image:14362>. Another source from Euronews ([https://www.euronews.com/culture/2023/11/14/dwayne-the-rock-johnson-says-political-parties-asked-him-to-run-for-president](https://www.euronews.com/culture/2023/11/14/dwayne-the-rock-johnson-says-political-parties-asked-him-to-run-for-president)) shows Johnson with the American flag <image:14363>.
+
+Yahoo News ([https://www.yahoo.com/news/articles/fact-check-fake-dwayne-johnson-234700368.html](https://www.yahoo.com/news/articles/fact-check-fake-dwayne-johnson-234700368.html)) fact-checks a fake image of Dwayne Johnson <image:14364>.
+
+
+# Your Analysis
+
+
+
+===== > RESPONSE:  < =====
+The evidence suggests that the image of Dwayne Johnson with the Israeli flag is likely not authentic. The search results include a fact-check of a fake image of Johnson and articles about his statements on the Israel-Hamas conflict, but no evidence of him posing with the Israeli flag.
+
+_________________________
+
+
+
+JudgePrompt - QUERY:
+
+# Instructions
+**Determine the Claim's veracity** by following these steps:
+1. Briefly summarize the key insights from the fact-check (see Record) in at most one paragraph.
+2. Write one paragraph about which one of the Decision Options applies best. Include the most appropriate decision option at the end and enclose it in backticks like `this`.
+
+
+
+
+## Decision Options
+* `true`: The claim is factually accurate when it is confirmed by evidence from multiple and reliable sources.
+* `false`: The claim is not factually accurate. This is the case if one of the following three conditions is met:(1) The claim is demonstrably false when it is disproven by evidence from multiple and reliable sources,(2) The claim or image is taken out of context, i.e. the origin, content and/or meaning of a statement or an image is misrepresented. For example, an old claim or an old image is mispresented in a new context in a misleading way,(3) There is not enough evidence to verify the claim or the evidence is conflicting or self-contradictory.
+* `not enough information`: The fact-check does not contain sufficient information to come to an conclusion. For example,there is substantial lack of evidence or the evidence is inconclusive, conflicting or self-contradictory. In the case of a lack of evidence, state which information exactly is missing. In particular, if no RESULTS or sources are available, pick this decision.
+
+# Record
+## Claim
+Claim: "<image:64> This is an authentic image of Dwayne Johnson waring the Israeli flag in support of Israel."
+
+## Actions
+```
+reverse_search(<image:64>)
+image_search("Dwayne Johnson Israel flag")
+```
+
+## Evidence
+### Evidence from `image_search`
+The web sources include articles about Dwayne Johnson's reactions to the Israel-Hamas conflict and his potential political aspirations. One article from WIONews ([https://www.wionews.com/entertainment/dwayne-johnson-on-israel-hamas-conflict-im-heartbroken-angry-and-sickened-645300](https://www.wionews.com/entertainment/dwayne-johnson-on-israel-hamas-conflict-im-heartbroken-angry-and-sickened-645300)) features an image of Johnson with a statement about the conflict <image:14362>. Another source from Euronews ([https://www.euronews.com/culture/2023/11/14/dwayne-the-rock-johnson-says-political-parties-asked-him-to-run-for-president](https://www.euronews.com/culture/2023/11/14/dwayne-the-rock-johnson-says-political-parties-asked-him-to-run-for-president)) shows Johnson with the American flag <image:14363>.
+
+Yahoo News ([https://www.yahoo.com/news/articles/fact-check-fake-dwayne-johnson-234700368.html](https://www.yahoo.com/news/articles/fact-check-fake-dwayne-johnson-234700368.html)) fact-checks a fake image of Dwayne Johnson <image:14364>.
+
+
+## Elaboration
+The evidence suggests that the image of Dwayne Johnson with the Israeli flag is likely not authentic. The search results include a fact-check of a fake image of Johnson and articles about his statements on the Israel-Hamas conflict, but no evidence of him posing with the Israeli flag.
+
+
+# Your Judgement
+
+
+
+===== > RESPONSE:  < =====
+The search results indicate that the image of Dwayne Johnson with the Israeli flag is likely not authentic. While there are articles about his statements on the Israel-Hamas conflict, there is no evidence to support the claim that he posed with the Israeli flag. A fact-check of a fake image of Johnson was also found.
+
+`false`
+_________________________
+
+
+
+SummarizeDocPrompt - QUERY:
+
+# Instructions
+You are provided with the record of a fact-check. It contains the Claim to be verified and a documentation of all the fact-checking work along the gathered evidence. Your task is to **summarize the fact-check**. That is, you provide a concise, one-paragraph justification for the final VERDICT based on the knowledge from the Record. Note:
+* Be truthful, brief, do not add any additional information besides the information given in the Record. 
+* Link key sources in your summary. Use Markdown notation for that. You may link them in-line.
+* Don't state the Claim again. Rather focus on the key insights of the fact-check.
+* Simply print just the summary.
+
+# Record
+## Claim
+Claim: "<image:64> This is an authentic image of Dwayne Johnson waring the Israeli flag in support of Israel."
+
+## Actions
+```
+reverse_search(<image:64>)
+image_search("Dwayne Johnson Israel flag")
+```
+
+## Evidence
+### Evidence from `image_search`
+The web sources include articles about Dwayne Johnson's reactions to the Israel-Hamas conflict and his potential political aspirations. One article from WIONews ([https://www.wionews.com/entertainment/dwayne-johnson-on-israel-hamas-conflict-im-heartbroken-angry-and-sickened-645300](https://www.wionews.com/entertainment/dwayne-johnson-on-israel-hamas-conflict-im-heartbroken-angry-and-sickened-645300)) features an image of Johnson with a statement about the conflict <image:14362>. Another source from Euronews ([https://www.euronews.com/culture/2023/11/14/dwayne-the-rock-johnson-says-political-parties-asked-him-to-run-for-president](https://www.euronews.com/culture/2023/11/14/dwayne-the-rock-johnson-says-political-parties-asked-him-to-run-for-president)) shows Johnson with the American flag <image:14363>.
+
+Yahoo News ([https://www.yahoo.com/news/articles/fact-check-fake-dwayne-johnson-234700368.html](https://www.yahoo.com/news/articles/fact-check-fake-dwayne-johnson-234700368.html)) fact-checks a fake image of Dwayne Johnson <image:14364>.
+
+
+## Elaboration
+The evidence suggests that the image of Dwayne Johnson with the Israeli flag is likely not authentic. The search results include a fact-check of a fake image of Johnson and articles about his statements on the Israel-Hamas conflict, but no evidence of him posing with the Israeli flag.
+
+
+## Final Judgement
+The search results indicate that the image of Dwayne Johnson with the Israeli flag is likely not authentic. While there are articles about his statements on the Israel-Hamas conflict, there is no evidence to support the claim that he posed with the Israeli flag. A fact-check of a fake image of Johnson was also found.
+
+`false`
+
+## Summary
+
+
+
+===== > RESPONSE:  < =====
+The image of Dwayne Johnson with the Israeli flag is likely not authentic. While Johnson has commented on the Israel-Hamas conflict, there is no evidence to support the claim that he posed with the Israeli flag. A fact-check of a fake image of Johnson was also found ([https://www.yahoo.com/news/articles/fact-check-fake-dwayne-johnson-234700368.html](https://www.yahoo.com/news/articles/fact-check-fake-dwayne-johnson-234700368.html)).
+
+_________________________
+
+
+

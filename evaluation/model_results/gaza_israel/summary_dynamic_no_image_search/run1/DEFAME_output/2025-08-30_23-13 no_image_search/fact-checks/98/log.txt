@@ -1,0 +1,36 @@
+Extracting claims from Content: <image:10259> This is an authentic image of Dwayne Johnson waring the Israeli flag in support of Israel.
+'Claim: "<image:10259> This is an authentic image of Dwayne Johnson waring the Israeli flag in support of Israel."'
+Verifying Claim: "<image:10259> This is an authentic image of Dwayne Johnson waring the Israeli flag in support of Israel."
+Not enough information yet. Continuing fact-check...
+Searching google_vision with query: ImageQuery(limit=3, start_date=None, end_date=None, search_type='reverse', text='', image=<defame.common.medium.Image object at 0x7ffe4c3380a0>)
+Skipping unsupported website: https://www.facebook.com/photo.php?fbid=768522592153782&id=100069881451207&set=a.544529364553107
+Skipping unsupported website: https://www.youtube.com/watch?v=g5KEFDM5-Oc
+Skipping unsupported website: https://www.reddit.com/r/Palestine/comments/1bmur7u/theyre_using_ai_generated_images_and_celebrities/
+Skipping unsupported website: https://www.instagram.com/jewishrockradio/reel/C2aCUzMo9uu/?api=1&hl=zh-cn
+Got 1 new web source(s):
+	1. https://music.apple.com/us/song/jewish-rock/1406634253
+Useful result: From [Source](https://music.apple.com/us/song/jewish-rock/1406634253): Found exact image on website with title: ‎Jewish Rock - Song by Shawn Pelofsky - Apple Music
+Content: The search result is from Apple Music and features the image in the claim. The image is used as the cover art for the song "Jewish Rock" by Shawn Pelofsky, released on August 24, 2018. <image:10259>
+
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Dwayne Johnson Israel support')
+Skipping unsupported website: https://www.facebook.com/IsraelBondsDCI/posts/we-extend-our-heartfelt-thanks-to-dwayne-the-rock-johnson-for-his-strong-stance-/930322965801732/
+Skipping unsupported website: https://www.instagram.com/p/DFsq-edPJU5/?hl=en
+Got 3 new web source(s):
+	1. August 05, 2025 https://mythdetector.com/en/dwayne-johnson-about-israel/
+	2. July 30, 2025 https://www.yahoo.com/news/articles/fact-check-fake-dwayne-johnson-234700368.html
+	3. October 09, 2023 https://variety.com/2023/film/news/hollywood-stars-support-israel-palestine-conflict-1235749537/
+Useful result: From [Source](https://mythdetector.com/en/dwayne-johnson-about-israel/): 
+Content: The search result from Myth Detector, published on August 5, 2025, states that a quote attributed to Dwayne Johnson about Israel is fake. The quote, which criticizes the Israeli government and its actions in Gaza, is not found on any of Johnson's official pages. The article includes images of the fabricated quote and screenshots of social media posts sharing it. <image:12517> The article also mentions that the quote has been fact-checked by Snopes.
+
+Useful result: From [Source](https://www.yahoo.com/news/articles/fact-check-fake-dwayne-johnson-234700368.html): 
+Content: The Yahoo News article fact-checks a claim that Dwayne "The Rock" Johnson said, "I've seen a lot of evil in Hollywood scripts — but nothing compares to what Israel is doing in Gaza. The Israeli government and its Prime Minister Netanyahu are heartless criminals with no shred of humanity." The article rates the claim as "Incorrect Attribution." The article states that there is no credible record of Johnson ever making such a statement. The article also includes an image of Dwayne Johnson <image:12522> and an image of the claim with Johnson's photo and the Israeli flag <image:12523>.
+
+Useful result: From [Source](https://variety.com/2023/film/news/hollywood-stars-support-israel-palestine-conflict-1235749537/): 
+Content: The article from Variety, published on October 9, 2023, reports that Dwayne "The Rock" Johnson, along with other Hollywood stars, has shown support for Israel amid the conflict. <image:12534> The article includes a post from Dwayne Johnson on Instagram.
+
+The claim '<image:10259> This is an authentic image of Dwayne Johnson waring the Israeli flag in support of Israel.' is false.
+Justification: The image in the claim is used as cover art for a song and is not an authentic image of Dwayne Johnson wearing the Israeli flag. While Dwayne Johnson has shown support for Israel, the image is not authentic, as confirmed by a reverse image search ([Source](https://music.apple.com/us/song/jewish-rock/1406634253)) and fact-check articles ([Myth Detector](https://mythdetector.com/en/dwayne-johnson-about-israel/) and [Yahoo News](https://www.yahoo.com/news/articles/fact-check-fake-dwayne-johnson-234700368.html)).
+
+So, the overall veracity is: false
+Fact-check took 4:41 min.
+Worker 3 is done and terminates gracefully.

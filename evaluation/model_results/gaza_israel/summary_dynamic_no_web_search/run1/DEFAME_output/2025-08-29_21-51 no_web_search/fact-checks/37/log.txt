@@ -1,0 +1,34 @@
+Extracting claims from Content: <image:25> This image shows the youngest victim of the Hezbollah rocket that murdered 12 children playing soccer in Israel on July 27, 2024.
+'Claim: "<image:25> This image shows the youngest victim of the Hezbollah rocket that murdered 12 children playing soccer in Israel on July 27, 2024."'
+Verifying Claim: "<image:25> This image shows the youngest victim of the Hezbollah rocket that murdered 12 children playing soccer in Israel on July 27, 2024."
+Not enough information yet. Continuing fact-check...
+Got 2 new web source(s):
+	1. https://www.aa.com.tr/tr/teyithatti/aktuel/fotograftaki-kiz-mecdel-sems-saldirisinda-olenlerden-biri-mi/1818078
+	2. https://www.mako.co.il/4fb2cc2308a9c110/Editor-8345f0d2f186c81026.htm?page=6
+Useful result: From [Source](https://www.aa.com.tr/tr/teyithatti/aktuel/fotograftaki-kiz-mecdel-sems-saldirisinda-olenlerden-biri-mi/1818078): Found exact image on website with title: Fotoğraftaki kız Mecdel Şems saldırısında ölenlerden biri mi?
+Content: The article from Anadolu Agency (AA) fact-checks the claim that the image <image:25> shows one of the children killed in the rocket attack in Majdal Shams. The article states that the image is a stock photo and the child in the image is not Malak, but Julia Ghirarda, who lives in the USA. The article was published on July 29, 2024.
+
+Useful result: From [Source](https://www.mako.co.il/4fb2cc2308a9c110/Editor-8345f0d2f186c81026.htm?page=6): Found exact image on website with title: ליאת מצה | עורכת משנה במגזין mako
+Content: The search result is from the website mako.co.il. It contains several articles, including one about Donald Trump, Elon Musk, and another about a fake news story. The website also has sections for news, entertainment, and other topics. The image <image:25> is not mentioned.
+
+Not enough information yet. Continuing fact-check...
+INFO: Dropping action 'reverse_search' as it was already performed.
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Hezbollah rocket Israel July 27 2024')
+Got 3 new web source(s):
+	1. https://www.aljazeera.com/news/2024/7/28/israel-says-it-bombed-hezbollah-sites-deep-inside-lebanon
+	2. https://www.axios.com/2024/07/27/golan-heights-attack-israel-hezbollah-war
+	3. https://www.latimes.com/world-nation/story/2024-07-27/rocket-attack-on-town-in-israeli-controlled-golan-heights-kills-at-least-10-netanyahu-hurries-home
+Useful result: From [Source](https://www.aljazeera.com/news/2024/7/28/israel-says-it-bombed-hezbollah-sites-deep-inside-lebanon): 
+Content: Al Jazeera published an article about Israel bombing Hezbollah sites. The article includes an image of a soccer field. <image:7545>
+
+Useful result: From [Source](https://www.axios.com/2024/07/27/golan-heights-attack-israel-hezbollah-war): 
+Content: Axios reports on an attack in the Golan Heights on July 27, 2024. <image:7546>
+
+Useful result: From [Source](https://www.latimes.com/world-nation/story/2024-07-27/rocket-attack-on-town-in-israeli-controlled-golan-heights-kills-at-least-10-netanyahu-hurries-home): 
+Content: The Los Angeles Times reports on a rocket attack on a town in the Israeli-controlled Golan Heights on July 27, 2024, which killed at least 10 people. <image:7548>
+
+The claim '<image:25> This image shows the youngest victim of the Hezbollah rocket that murdered 12 children playing soccer in Israel on July 27, 2024.' is false.
+Justification: The claim is unsubstantiated. While there were attacks in the Golan Heights on July 27, 2024, the provided evidence does not connect the image to the alleged event or confirm the specific details of the claim. The Anadolu Agency fact-checked the image and found no connection.
+
+So, the overall veracity is: false
+Fact-check took 0:28 min.

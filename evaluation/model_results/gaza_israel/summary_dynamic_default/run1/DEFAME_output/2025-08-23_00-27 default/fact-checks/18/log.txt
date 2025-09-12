@@ -1,0 +1,24 @@
+Extracting claims from Content: <image:15> This image shows Gal Gadot’s star on the Hollywood Walk of Fame being destroyed in March 2025 just hours after being placed.
+'Claim: "<image:15> This image shows Gal Gadot’s star on the Hollywood Walk of Fame being destroyed in March 2025 just hours after being placed."'
+Verifying Claim: "<image:15> This image shows Gal Gadot’s star on the Hollywood Walk of Fame being destroyed in March 2025 just hours after being placed."
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Gal Gadot Hollywood Walk of Fame star damage')
+Got 3 new web source(s):
+	1. https://www.ndtv.com/world-news/gal-gadots-hollywood-walk-of-fame-star-smashed-amid-pro-palestinian-protests-photo-is-viral-7966341
+	2. https://www.euronews.com/video/2025/03/19/gal-gadots-hollywood-walk-of-fame-ceremony-disrupted-by-pro-palestinian-protests
+	3. https://www.yahoo.com/entertainment/gal-gadots-hollywood-star-destroyed-232335363.html
+Useful result: From [Source](https://www.ndtv.com/world-news/gal-gadots-hollywood-walk-of-fame-star-smashed-amid-pro-palestinian-protests-photo-is-viral-7966341): 
+Content: NDTV shows an image of Gal Gadot's star on the Hollywood Walk of Fame being damaged. <image:3696>
+
+Useful result: From [Source](https://www.euronews.com/video/2025/03/19/gal-gadots-hollywood-walk-of-fame-ceremony-disrupted-by-pro-palestinian-protests): 
+Content: Euronews published a video on March 19, 2025, showing Gal Gadot at her Hollywood Walk of Fame ceremony. <image:3697>
+
+Useful result: From [Source](https://www.yahoo.com/entertainment/gal-gadots-hollywood-star-destroyed-232335363.html): 
+Content: Yahoo Entertainment published an article about Gal Gadot's star on the Hollywood Walk of Fame. <image:3698>
+
+Got 0 new web source(s):
+The claim '<image:15> This image shows Gal Gadot’s star on the Hollywood Walk of Fame being destroyed in March 2025 just hours after being placed.' is true.
+Justification: The claim is supported by evidence from image searches and news articles. The image search results show an image of Gal Gadot's star being damaged, and a video of her Hollywood Walk of Fame ceremony, confirming the claim's assertion that the image depicts damage to her star on the Hollywood Walk of Fame.
+
+So, the overall veracity is: true
+Fact-check took 0:41 min.

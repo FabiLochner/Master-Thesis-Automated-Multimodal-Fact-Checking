@@ -1,0 +1,41 @@
+Extracting claims from Content: <image:16> This image shows Ukrainian President Volodymyr Zelenskyy signing Israeli bombs intended for use against Palestinians in Gaza.
+'Claim: "<image:16> This image shows Ukrainian President Volodymyr Zelenskyy signing Israeli bombs intended for use against Palestinians in Gaza."'
+Verifying Claim: "<image:16> This image shows Ukrainian President Volodymyr Zelenskyy signing Israeli bombs intended for use against Palestinians in Gaza."
+Not enough information yet. Continuing fact-check...
+Got 3 new web source(s):
+	1. March 13, 2025 https://spotlight.ebu.ch/p/video-caption-falsely-claims-zelenskyy
+	2. September 24, 2024 https://www.foxnews.com/politics/josh-shapiro-blasted-signing-missile-alongside-zelenskyy-bidens-hometown-party-war
+	3. October 15, 2024 https://caliber.az/en/post/zelenskyy-s-glory-to-ukraine-inscription-on-us-bombs-in-pennsylvania-stirs-controversy
+Useful result: From [Source](https://spotlight.ebu.ch/p/video-caption-falsely-claims-zelenskyy): 
+Content: The search result from Eurovision News | Spotlight, published on March 13, 2025, addresses a claim that Volodymyr Zelenskyy signed artillery shells destined for use in Gaza. The video actually shows Zelenskyy at a U.S. munitions factory supporting Ukraine's defense needs. The video was shared on September 23, 2024, and Zelenskyy wrote "Glory to Ukraine" and "Thanks for Support" on the shells, referencing Ukraine's war with Russia, not Israel's war in Gaza. <image:16>
+
+Useful result: From [Source](https://www.foxnews.com/politics/josh-shapiro-blasted-signing-missile-alongside-zelenskyy-bidens-hometown-party-war): 
+Content: The search result from Fox News discusses Ukrainian President Volodymyr Zelenskyy signing a missile at the Scranton Army Ammunition Plant (SCAAP) in President Biden’s hometown. <image:3661>, <image:3664>. The article mentions that Pennsylvania Governor Josh Shapiro also signed the missile.
+
+Useful result: From [Source](https://caliber.az/en/post/zelenskyy-s-glory-to-ukraine-inscription-on-us-bombs-in-pennsylvania-stirs-controversy): 
+Content: The article from Caliber.Az discusses Ukrainian President Volodymyr Zelenskyy's visit to the Scranton Army Ammunition Plant in Pennsylvania, where he signed munitions. The article mentions that Zelenskyy inscribed messages on US bombs, including "Glory to Ukraine." The article was published on October 15, 2024. <image:16>
+
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Zelenskyy signing Israeli bombs')
+Skipping fact-checking website: https://www.reuters.com/fact-check/video-does-not-show-zelenskiy-signing-bombs-be-dropped-gazans-2025-03-11/
+Skipping unsupported website: https://www.reddit.com/r/ukraine/comments/1fnfhxg/president_zelenskyy_signs_an_artillery_shell/
+Skipping fact-checking website: https://www.misbar.com/en/factcheck/2025/03/05/image-does-not-show-zelenskyy-signing-bombs-gaza
+Skipping unsupported website: https://www.facebook.com/cnnnews18/videos/ukrainian-president-zelensky-visits-us-ammunition-factory-to-thank-workers-signs/2429064850628951/
+Got 0 new web source(s):
+Got 3 new web source(s):
+	1. https://apnews.com/article/zelenskyy-johnson-ambassador-ukraine-biden-harris-trump-d81b0a055d99cfd4804b3f2c00915d09
+	2. https://www.rferl.org/a/zelenskiy-markarova-scranton-munitions-plant-johnson-harris/33135165.html
+	3. https://www.bbc.com/news/articles/c5y30244467o
+Useful result: From [Source](https://apnews.com/article/zelenskyy-johnson-ambassador-ukraine-biden-harris-trump-d81b0a055d99cfd4804b3f2c00915d09): 
+Content: The Associated Press published an image of Volodymyr Zelenskyy signing artillery shells. <image:2213>
+
+Useful result: From [Source](https://www.rferl.org/a/zelenskiy-markarova-scranton-munitions-plant-johnson-harris/33135165.html): 
+Content: Radio Free Europe/Radio Liberty published an image of Volodymyr Zelenskyy signing munitions. <image:2214>
+
+Useful result: From [Source](https://www.bbc.com/news/articles/c5y30244467o): 
+Content: The BBC News website shows an image of Volodymyr Zelenskyy signing artillery shells. <image:2215>
+
+The claim '<image:16> This image shows Ukrainian President Volodymyr Zelenskyy signing Israeli bombs intended for use against Palestinians in Gaza.' is false.
+Justification: The claim is false. The image depicts Ukrainian President Volodymyr Zelenskyy signing artillery shells at a U.S. munitions factory, not Israeli bombs. This event was part of his visit to support Ukraine's defense, as reported by the Eurovision News | Spotlight ([https://spotlight.ebu.ch/p/video-caption-falsely-claims-zelenskyy](https://spotlight.ebu.ch/p/video-caption-falsely-claims-zelenskyy)) and confirmed by other sources like Fox News and Caliber.Az.
+
+So, the overall veracity is: false
+Fact-check took 1:26 min.

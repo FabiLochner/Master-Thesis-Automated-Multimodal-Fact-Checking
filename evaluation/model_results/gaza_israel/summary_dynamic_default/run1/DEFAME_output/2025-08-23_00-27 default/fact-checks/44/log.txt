@@ -1,0 +1,27 @@
+Extracting claims from Content: <image:28> This image authentically shows U.S. President Joe Boden in late November 2024 exiting a Nantucket bookstore holding a copy of writer Rashid Khalidi's book, 'The Hundred Years' War on Palestine: A History of Settler Colonialism and Resistance, 1917–2017.'
+'Claim: "<image:28> This image authentically shows U.S. President Joe Boden in late November 2024 exiting a Nantucket bookstore holding a copy of writer Rashid Khalidi's book, 'The Hundred Years' War on Palestine: A History of Settler Colonialism and Resistance, 1917–2017.'"'
+Verifying Claim: "<image:28> This image authentically shows U.S. President Joe Boden in late November 2024 exiting a Nantucket bookstore holding a copy of writer Rashid Khalidi's book, 'The Hundred Years' War on Palestine: A History of Settler Colonialism and Resistance, 1917–2017.'"
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Joe Biden Nantucket Bookworks')
+Skipping fact-checking website: https://www.snopes.com/fact-check/biden-war-palestine-book/
+Got 3 new web source(s):
+	1. November 30, 2024 https://www.jns.org/biden-photographed-exiting-nantucket-shop-with-anti-israel-book/
+	2. November 29, 2024 https://www.foxnews.com/politics/biden-seen-holding-anti-israel-book-black-friday-shopping-excursion
+	3. November 29, 2024 https://nypost.com/2024/11/29/us-news/biden-picks-up-anti-israel-book-during-black-friday-shopping-4-years-too-late-says-author/
+Useful result: From [Source](https://www.jns.org/biden-photographed-exiting-nantucket-shop-with-anti-israel-book/): 
+Content: The search result from JNS.org states that President Joe Biden was photographed exiting Nantucket Bookworks in Nantucket, Mass., carrying a copy of the book "The Hundred Years’ War on Palestine" by Rashid Khalidi in late November. <image:28> The article mentions that the photograph was taken by a reporter and that the White House pool reported the event. The article also includes reactions from various individuals regarding Biden's choice of book. The article was written by JNS Staff.
+
+Useful result: From [Source](https://www.foxnews.com/politics/biden-seen-holding-anti-israel-book-black-friday-shopping-excursion): 
+Content: Fox News reports that President Biden was seen holding a copy of "The Hundred Years’ War on Palestine: A History of Settler Colonialism and Resistance, 1917-2017" by Rashid Khalidi while leaving Nantucket Bookworks. <image:4011>, <image:4012>, <image:4013>, <image:28>. The article mentions Khalidi's criticism of the Trump administration and his views on Israel's policies. The book argues that the history of Palestine is a colonial war against the indigenous population.
+
+Useful result: From [Source](https://nypost.com/2024/11/29/us-news/biden-picks-up-anti-israel-book-during-black-friday-shopping-4-years-too-late-says-author/): 
+Content: The New York Post reports that Joe Biden was seen leaving Nantucket Bookworks holding a copy of Rashid Khalidi's book, "The Hundred Years' War on Palestine: A History of Settler Colonialism and Resistance, 1917–2017" in late November 2024. <image:4014>, <image:4015>, <image:4017>, <image:4018>. The author, Rashid Khalidi, is a Columbia University professor emeritus. The article was published on November 29, 2024.
+
+Searching google_vision with query: ImageQuery(limit=3, start_date=None, end_date=None, search_type='reverse', text='', image=<defame.common.medium.Image object at 0x7ffed97e0730>)
+Skipping fact-checking website: https://www.snopes.com/fact-check/biden-war-palestine-book/
+Got 0 new web source(s):
+The claim '<image:28> This image authentically shows U.S. President Joe Boden in late November 2024 exiting a Nantucket bookstore holding a copy of writer Rashid Khalidi's book, 'The Hundred Years' War on Palestine: A History of Settler Colonialism and Resistance, 1917–2017.'' is true.
+Justification: Multiple news sources, including JNS.org, Fox News, and the New York Post, confirm that President Joe Biden was photographed exiting Nantucket Bookworks in late November 2024, holding a copy of Rashid Khalidi's book, "The Hundred Years’ War on Palestine: A History of Settler Colonialism and Resistance, 1917–2017."
+
+So, the overall veracity is: true
+Fact-check took 1:02 min.

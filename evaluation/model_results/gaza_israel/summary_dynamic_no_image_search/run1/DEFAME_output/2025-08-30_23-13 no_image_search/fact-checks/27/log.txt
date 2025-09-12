@@ -1,0 +1,45 @@
+Extracting claims from Content: <image:10215> This image shows the 'French' Left who is rioting against Le Pen's victory in the first round of the French parliamentary elections in 2024.
+'Claim: "<image:10215> This image shows the 'French' Left who is rioting against Le Pen's victory in the first round of the French parliamentary elections in 2024."'
+Verifying Claim: "<image:10215> This image shows the 'French' Left who is rioting against Le Pen's victory in the first round of the French parliamentary elections in 2024."
+Not enough information yet. Continuing fact-check...
+Searching google_vision with query: ImageQuery(limit=3, start_date=None, end_date=None, search_type='reverse', text='', image=<defame.common.medium.Image object at 0x7ffed16b1570>)
+Skipping fact-checking website: https://www.reuters.com/fact-check/photo-shows-paris-protesters-2014-not-after-2024-election-2024-07-05/
+Skipping unsupported website: https://www.facebook.com/photo.php?fbid=1105284598269126&id=100063627877935&set=a.511362424328016
+Failed to scrape https://au.linkedin.com/in/malcolmcolderick
+Error 403: Forbidden.
+Skipping that URL.
+Failed to scrape https://www.linkedin.com/in/eric-bryner-4bb87879
+Error 403: Forbidden.
+Skipping that URL.
+Got 3 new web source(s):
+	1. https://www.vanityfair.com/news/2015/07/anti-semitism-france-hostage-hyper-cacher-kosher-market
+	2. https://www.worldjewishcongress.org/en/news/german-tv-agrees-to-air-anti-semitism-documentary-following-cries-of-censorship-6-1-2017
+	3. https://www.jpost.com/tags/adam-milstein
+Useful result: From [Source](https://www.vanityfair.com/news/2015/07/anti-semitism-france-hostage-hyper-cacher-kosher-market): Found exact image on website with title: The Troubling Question in the French Jewish Community - Vanity Fair
+Content: The Vanity Fair article, "The Troubling Question in the French Jewish Community," discusses rising antisemitism in France, including a 2014 pro-Palestinian demonstration in Paris where a swastika was painted on a statue and chants of "Death to the Jews" were heard. The article mentions a retired police commissioner, Sammy Ghozlan, who founded a community hotline to protect French Jews. The article also mentions a 2014 pro-Palestinian demonstration that turned violent. The article also mentions the rise of Marine Le Pen. The article was published in July 2015. <image:10215> is an image of a pro-Palestinian demonstration in Paris.
+
+Useful result: From [Source](https://www.worldjewishcongress.org/en/news/german-tv-agrees-to-air-anti-semitism-documentary-following-cries-of-censorship-6-1-2017): Found exact image on website with title: German TV agrees to air anti-Semitism documentary following cries ...
+Content: The World Jewish Congress website published an article on June 19, 2017, about a German TV documentary on European anti-Semitism. The article includes an image <image:10782> that is similar to the one in the claim. The image shows a group of people with Palestinian flags and keffiyehs, with a swastika drawn on a wall.
+
+Useful result: From [Source](https://www.jpost.com/tags/adam-milstein): Found exact image on website with title: Adam Milstein | The Jerusalem Post
+Content: The Jerusalem Post published an article by Adam Milstein on July 27, 2023, discussing antisemitism in Europe. The article includes an image of a swastika on the base of the Statue de la République in Paris during a protest in support of Palestinians on July 26, 2014. <image:10215> is not present in the search result.
+
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='French Left protest Le Pen 2024')
+Got 3 new web source(s):
+	1. April 06, 2025 https://www.lemonde.fr/en/france/article/2025/04/06/french-left-protests-against-far-right-but-remains-divided_6739901_7.html
+	2. https://en.wikipedia.org/wiki/2024_French_protests_against_the_National_Rally
+	3. April 05, 2025 https://www.theguardian.com/world/2025/apr/05/france-braced-as-far-right-and-leftwing-parties-plan-rallies-in-wake-of-le-pen-decision
+Useful result: From [Source](https://www.lemonde.fr/en/france/article/2025/04/06/french-left-protests-against-far-right-but-remains-divided_6739901_7.html): 
+Content: The article from Le Monde discusses a left-wing counter-demonstration in Paris on April 6, 2025, against the far right, following Marine Le Pen's conviction. <image:10789> The article mentions the participation of La France Insoumise (LFI) and the Greens.
+
+Useful result: From [Source](https://en.wikipedia.org/wiki/2024_French_protests_against_the_National_Rally): 
+Content: The search result is from Wikipedia and discusses the 2024 French protests against the National Rally. The protests began on June 9, 2024, in response to the National Rally party's victory in the 2024 European Parliament election and the subsequent call for legislative elections. The protests were organized by various political organizations, unions, and student groups. The protests took place in multiple cities across France. The article mentions that on June 30, 2024, thousands of left-wing protesters gathered at the Place de la République in Paris to protest the results of the first round of the 2024 legislative election. <image:10215> is not present in the search result.
+
+Useful result: From [Source](https://www.theguardian.com/world/2025/apr/05/france-braced-as-far-right-and-leftwing-parties-plan-rallies-in-wake-of-le-pen-decision): 
+Content: The Guardian published an article on April 5, 2025, discussing rallies planned by both far-right and left-wing parties in France following Marine Le Pen's conviction. The article mentions Le Pen's conviction for embezzlement and the subsequent calls for demonstrations. <image:10794>, <image:10793>.
+
+The claim '<image:10215> This image shows the 'French' Left who is rioting against Le Pen's victory in the first round of the French parliamentary elections in 2024.' is false.
+Justification: The image depicts a pro-Palestinian demonstration in Paris, as evidenced by sources like a [Vanity Fair article](https://www.vanityfair.com/news/2015/07/anti-semitism-france-hostage-hyper-cacher-kosher-market) and a [World Jewish Congress article](https://www.worldjewishcongress.org/en/news/german-tv-agrees-to-air-anti-semitism-documentary-following-cries-of-censorship-6-1-2017). The image is not related to the French parliamentary elections or Le Pen's victory.
+
+So, the overall veracity is: false
+Fact-check took 1:16 min.

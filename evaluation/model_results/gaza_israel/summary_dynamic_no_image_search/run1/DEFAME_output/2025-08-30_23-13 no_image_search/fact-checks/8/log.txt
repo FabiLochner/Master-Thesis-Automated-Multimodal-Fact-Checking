@@ -1,0 +1,61 @@
+Extracting claims from Content: <image:10203> This image shows Israel launching several waves of revengeful attacks on Iranian military targets on October 26, 2024.
+'Claim: "<image:10203> This image shows Israel launching several waves of revengeful attacks on Iranian military targets on October 26, 2024."'
+Verifying Claim: "<image:10203> This image shows Israel launching several waves of revengeful attacks on Iranian military targets on October 26, 2024."
+Not enough information yet. Continuing fact-check...
+Searching google_vision with query: ImageQuery(limit=3, start_date=None, end_date=None, search_type='reverse', text='', image=<defame.common.medium.Image object at 0x7ffed97f3550>)
+Failed to scrape https://il.linkedin.com/in/gabrielemanasse
+Error 403: Forbidden.
+Skipping that URL.
+Failed to scrape https://www.linkedin.com/in/ndonchenko
+Error 403: Forbidden.
+Skipping that URL.
+Failed to scrape https://in.linkedin.com/in/kunshjain
+Error 403: Forbidden.
+Skipping that URL.
+Got 5 new web source(s):
+	1. https://sofrep.com/news/irans-radical-regime-circling-the-drain-and-trumps-stirring-the-bowl-oil-war-games-and-the-bloody-theater-of-geopolitics
+	2. https://en.protothema.gr/2024/10/26/israel-strikes-on-iran-show-it-may-have-heeded-us-warnings/
+	3. https://www.israelhayom.co.il/news/local/article/16668399
+	4. https://timelinedaily.com/west-asia/israel-attacks-iran-tehran-says-its-air-defence-was-successful
+	5. https://news.abplive.com/news/world/israeli-strike-in-iran-kills-2-soldiers-us-urges-tehran-not-to-retaliate-hamas-condemns-attack-1727052
+Useful result: From [Source](https://sofrep.com/news/irans-radical-regime-circling-the-drain-and-trumps-stirring-the-bowl-oil-war-games-and-the-bloody-theater-of-geopolitics): Found exact image on website with title: Iran's Radical Regime Circling the Drain—and Trump's ... - SOFREP
+Content: The article from SOFREP, published on June 14, 2025, discusses the geopolitical situation involving Iran, Israel, and other countries. The author is Brandon Webb. The article does not mention any attacks on Iranian military targets on October 26, 2024. The image <image:10203> is present in the article.
+
+Useful result: From [Source](https://en.protothema.gr/2024/10/26/israel-strikes-on-iran-show-it-may-have-heeded-us-warnings/): Found exact image on website with title: Israel: Strikes on Iran show it may have heeded US warnings
+Content: The search result from en.protothema.gr discusses Israeli strikes on Iran on October 26, 2024, in response to an Iranian attack on October 1. The article includes the image <image:10423> which is the same as the image in the claim. The article mentions that the US was briefed but not involved in the operation. The article was published on October 26, 2024.
+
+Useful result: From [Source](https://www.israelhayom.co.il/news/local/article/16668399): Found exact image on website with title: התגובה הישראלית באיראן יצאה לפועל - אלו המטרות שהותקפו - ישראל היום
+Content: The search result from Israel Hayom, published on October 26, 2024, discusses an Israeli attack on Iranian military targets. The article mentions that the image in the claim was published by an Arabic network. The article also mentions that the attack was planned to minimize casualties and that the Israeli Defense Forces (IDF) confirmed the attack, targeting military sites in Iran. <image:10203>
+
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Israel attacks Iranian military targets October 26, 2024')
+Got 3 new web source(s):
+	1. https://en.wikipedia.org/wiki/October_2024_Israeli_strikes_on_Iran
+	2. October 26, 2024 https://www.cnn.com/world/live-news/israel-iran-strikes-lebanon-gaza-war-10-26-24
+	3. October 26, 2024 https://www.theguardian.com/world/2024/oct/26/idf-israel-iran-strikes-explosions-tehran
+Useful result: From [Source](https://en.wikipedia.org/wiki/October_2024_Israeli_strikes_on_Iran): 
+Content: The search result from Wikipedia discusses the October 26, 2024, Israeli strikes on Iran, which were codenamed "Operation Days of Repentance". The strikes targeted military sites in Iran, Iraq, and Syria. The result mentions the destruction of a nuclear weapons research facility, missile systems, and other military infrastructure. The attacks were in response to Iranian strikes earlier that month. The result also mentions the timeline of events, including the use of F-15D, F-16I, and F-15C aircraft. <image:10203> is an image of the F-15D Eagle Baz #957 before the strike.
+
+Useful result: From [Source](https://www.cnn.com/world/live-news/israel-iran-strikes-lebanon-gaza-war-10-26-24): 
+Content: The CNN article discusses the recent Israeli strikes on Iran on October 26, 2024. <image:10203> shows a general view of Tehran, Iran after several explosions were heard on October 26. The article mentions that the strikes were a retaliation to a ballistic missile barrage launched by Tehran earlier this month. The article also mentions that the US is focused on preventing further escalation in the Middle East.
+
+Useful result: From [Source](https://www.theguardian.com/world/2024/oct/26/idf-israel-iran-strikes-explosions-tehran): 
+Content: The Guardian reports that Israel launched airstrikes against military targets in Iran on October 26, 2024, in retaliation for attacks against Israel. <image:10495> The IDF said the attacks hit missile and drone manufacturing sites. The article mentions explosions in Tehran and other cities. The article is more than 9 months old.
+
+Not enough information yet. Continuing fact-check...
+INFO: Dropping action 'reverse_search' as it was already performed.
+Most likely location: Palestine
+Top 10 locations: Palestine, Israel, Bangladesh, Taiwan, Ukraine, China, Pakistan, Bulgaria, Jordan, Malta
+Not enough information yet. Continuing fact-check...
+INFO: Dropping action 'reverse_search' as it was already performed.
+INFO: Dropping action 'geolocate' as it was already performed.
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Iranian military targets October 26, 2024 images')
+Got 1 new web source(s):
+	1. October 27, 2024 https://www.pbs.org/newshour/world/satellite-images-show-damage-from-israeli-strikes-at-2-secretive-iranian-military-bases
+Useful result: From [Source](https://www.pbs.org/newshour/world/satellite-images-show-damage-from-israeli-strikes-at-2-secretive-iranian-military-bases): 
+Content: The PBS News article, published on October 27, 2024, discusses Israeli strikes on Iranian military bases on October 26, 2024. The strikes damaged facilities at the Parchin military base <image:10522> and the Khojir military base <image:10523>. The article includes satellite images of the damage.
+
+The claim '<image:10203> This image shows Israel launching several waves of revengeful attacks on Iranian military targets on October 26, 2024.' is false.
+Justification: The claim is partially supported. While evidence confirms that Israel launched attacks on Iranian military targets on October 26, 2024, the provided image's connection to those attacks remains unverified. The attacks targeted military sites, and satellite images of damaged facilities are available, but the image in the claim is not confirmed to depict the attacks.
+
+So, the overall veracity is: false
+Fact-check took 6:05 min.

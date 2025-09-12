@@ -1,0 +1,27 @@
+Extracting claims from Content: In remarks to reporters on September 29, 2024 US President Joe Biden announced that no more aid would be provided for the areas affected by Hurrican Helene, but 2.4 billion US-$ more for Ukraine.
+'Claim: "In remarks to reporters on September 29, 2024 US President Joe Biden announced that no more aid would be provided for the areas affected by Hurrican Helene, but 2.4 billion US-$ more for Ukraine."'
+Verifying Claim: "In remarks to reporters on September 29, 2024 US President Joe Biden announced that no more aid would be provided for the areas affected by Hurrican Helene, but 2.4 billion US-$ more for Ukraine."
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Joe Biden remarks Hurricane Helene Ukraine aid September 29 2024')
+Skipping unsupported website: https://bidenwhitehouse.archives.gov/briefing-room/statements-releases/2024/09/28/statement-from-president-joe-biden-on-hurricane-helene/
+Skipping fact-checking website: https://www.politifact.com/factchecks/2024/sep/30/social-media/no-link-between-ukraine-and-helene-aid-and-joe-bid/
+Skipping unsupported website: https://www.youtube.com/watch?v=BzjC7AeeKqQ
+Skipping fact-checking website: https://factcheck.afp.com/doc.afp.com.36JM7LH
+Got 3 new web source(s):
+	1. October 09, 2024 https://www.bbc.com/news/articles/czd1q9q9gl9o
+	2. September 30, 2024 https://www.lemonde.fr/en/united-states/article/2024/09/30/biden-pledges-to-aid-victims-of-hurrican-helene-as-long-as-it-takes_6727795_133.html
+	3. October 01, 2024 https://www.france24.com/en/americas/20241001-biden-defends-government-response-as-hurricane-helene-death-toll-reaches-118
+Useful result: From [Source](https://www.bbc.com/news/articles/czd1q9q9gl9o): 
+Content: The BBC published an article on October 9, 2024, discussing misinformation about the government's response to Hurricane Helene. The article mentions that Donald Trump and his allies have claimed that government money earmarked for disaster victims has been spent on migrants. The article also mentions that the North Carolina National Guard had completed 146 flight missions, resulting in the rescue of 538 people and 150 pets. <image:13049>, <image:13053>, <image:13055>.
+
+Useful result: From [Source](https://www.lemonde.fr/en/united-states/article/2024/09/30/biden-pledges-to-aid-victims-of-hurrican-helene-as-long-as-it-takes_6727795_133.html): 
+Content: The search result from Le Monde, published on September 30, 2024, reports on remarks made by US President Joe Biden regarding the response to Hurricane Helene. <image:13058> Biden announced he would travel to North Carolina to monitor rescue efforts. The article mentions the death toll from the storm and Biden's response to criticism from Donald Trump.
+
+Useful result: From [Source](https://www.france24.com/en/americas/20241001-biden-defends-government-response-as-hurricane-helene-death-toll-reaches-118): 
+Content: France 24 published an article on October 1, 2024, reporting on President Biden's response to Hurricane Helene. <image:k> The article mentions that Biden visited North Carolina to assess rescue efforts and that the death toll reached 130. Biden refuted claims that the government was slow to respond. The article also mentions that Trump criticized Biden's response.
+
+The claim 'In remarks to reporters on September 29, 2024 US President Joe Biden announced that no more aid would be provided for the areas affected by Hurrican Helene, but 2.4 billion US-$ more for Ukraine.' is false.
+Justification: The available evidence, including reports from the BBC, Le Monde, and France 24, indicates that President Biden responded to Hurricane Helene by visiting affected areas and pledging aid. However, none of the sources support the claim that Biden announced a cessation of aid for hurricane relief or the allocation of funds to Ukraine. Therefore, the claim is not supported by the provided evidence.
+
+So, the overall veracity is: false
+Fact-check took 0:37 min.

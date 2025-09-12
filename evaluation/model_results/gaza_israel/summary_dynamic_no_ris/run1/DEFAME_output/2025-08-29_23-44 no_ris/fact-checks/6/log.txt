@@ -1,0 +1,42 @@
+Extracting claims from Content: <image:7> This is an authentic image of Benjamin Netanyahu being hospitalized in Tel Aviv in November 2024 due to a serious health issue.
+'Claim: "<image:7> This is an authentic image of Benjamin Netanyahu being hospitalized in Tel Aviv in November 2024 due to a serious health issue."'
+Verifying Claim: "<image:7> This is an authentic image of Benjamin Netanyahu being hospitalized in Tel Aviv in November 2024 due to a serious health issue."
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Benjamin Netanyahu hospitalized Tel Aviv November 2024')
+Skipping fact-checking website: https://factcheck.afp.com/doc.afp.com.36MV6KT
+Got 3 new web source(s):
+	1. https://www.theguardian.com/world/2023/jul/15/benjamin-netanyahu-taken-to-hospital-israel
+	2. https://www.cnn.com/2024/12/29/middleeast/netanyahu-prostate-operation-successful-intl-latam
+	3. https://www.politico.com/news/2023/07/16/israel-netanyahu-discharged-hospital-00106491
+Useful result: From [Source](https://www.theguardian.com/world/2023/jul/15/benjamin-netanyahu-taken-to-hospital-israel): 
+Content: The Guardian reports that Benjamin Netanyahu was taken to the hospital. <image:8296>
+
+Useful result: From [Source](https://www.cnn.com/2024/12/29/middleeast/netanyahu-prostate-operation-successful-intl-latam): 
+Content: CNN reports that Benjamin Netanyahu underwent a successful prostate operation. <image:8297>
+
+Useful result: From [Source](https://www.politico.com/news/2023/07/16/israel-netanyahu-discharged-hospital-00106491): 
+Content: Politico reports that Benjamin Netanyahu was discharged from the hospital. <image:8298>
+
+Not enough information yet. Continuing fact-check...
+Got 0 new web source(s):
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Benjamin Netanyahu hospital mask')
+Skipping fact-checking website: https://factcheck.afp.com/doc.afp.com.36MV6KT
+Got 3 new web source(s):
+	1. https://www.aspistrategist.org.au/netanyahus-poisoned-legacy/
+	2. https://www.aljazeera.com/news/2020/12/19/netanyahu-gets-covid-vaccine-starts-israel-rollout
+	3. https://www.latimes.com/world-nation/story/2022-10-06/israel-benjamin-netanyahu-leaves-hospital-overnight-stay
+Useful result: From [Source](https://www.aspistrategist.org.au/netanyahus-poisoned-legacy/): 
+Content: The search result from [Source](https://www.aspistrategist.org.au/netanyahus-poisoned-legacy/) contains an image of Benjamin Netanyahu wearing a mask. <image:8303>
+
+Useful result: From [Source](https://www.aljazeera.com/news/2020/12/19/netanyahu-gets-covid-vaccine-starts-israel-rollout): 
+Content: Al Jazeera reports that Benjamin Netanyahu received a COVID-19 vaccine. <image:8304>
+
+Useful result: From [Source](https://www.latimes.com/world-nation/story/2022-10-06/israel-benjamin-netanyahu-leaves-hospital-overnight-stay): 
+Content: The Los Angeles Times published an article about Benjamin Netanyahu leaving the hospital after an overnight stay. <image:8305>
+
+The claim '<image:7> This is an authentic image of Benjamin Netanyahu being hospitalized in Tel Aviv in November 2024 due to a serious health issue.' is false.
+Justification: The claim is not supported by the evidence. While Benjamin Netanyahu has been hospitalized and has been seen wearing masks, there is no evidence to confirm the authenticity of the image, the specific date (November 2024), the location (Tel Aviv), or the reason for hospitalization as stated in the claim. The search results from sources like The Guardian, CNN, and Politico do not provide any information about the image or the circumstances described in the claim.
+
+So, the overall veracity is: false
+Fact-check took 0:40 min.

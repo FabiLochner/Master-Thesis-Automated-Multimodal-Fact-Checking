@@ -1,0 +1,76 @@
+Extracting claims from Content: <image:24> This image shows American mercenaries participating in Ukraine's incursion into Russia's Kursk Oblast in August 2024.
+'Claim: "<image:24> This image shows American mercenaries participating in Ukraine's incursion into Russia's Kursk Oblast in August 2024."'
+Verifying Claim: "<image:24> This image shows American mercenaries participating in Ukraine's incursion into Russia's Kursk Oblast in August 2024."
+Not enough information yet. Continuing fact-check...
+Got 3 new web source(s):
+	1. https://apostrophe.ua/news/society/2022-09-08/rasplata-za-ilovaysk-okkupantyi-ponesli-ogromnyie-poteri-pri-begstve-iz-balaklei-video/278880
+	2. https://charter97.org/ru/news/2022/9/9/514837/
+	3. https://cripo.com.ua/vojna-s-rf/rossyjskye-vojska-begut-pod-natyskom-vsu-mnenye-ekspertov-y-rossyjskyh-voennyh/
+Useful result: From [Source](https://apostrophe.ua/news/society/2022-09-08/rasplata-za-ilovaysk-okkupantyi-ponesli-ogromnyie-poteri-pri-begstve-iz-balaklei-video/278880): Found exact image on website with title: оккупанты понесли огромные потери при бегстве из Балаклеи ...
+Content: The article from Apostrophe.ua, published on September 8, 2022, discusses the losses suffered by Russian forces during their retreat from Balakleya in the Kharkiv region. The article includes a photo of Ukrainian soldiers, one of whom has a patch with the American flag. <image:24> The article does not mention American mercenaries or the Kursk Oblast.
+
+Useful result: From [Source](https://charter97.org/ru/news/2022/9/9/514837/): Found exact image on website with title: Оккупанты понесли огромные потери при паническом бегстве из ...
+Content: The article from Charter97.org, published on September 9, 2022, discusses the Ukrainian army's actions in the Kharkiv region. The article includes an image <image:2753> of Ukrainian soldiers, one of whom is taking a selfie with a dead soldier. The image is captioned "Balakleya is Ukraine!". The article mentions the city of Balakleya and the losses of the Russian army.
+
+Useful result: From [Source](https://cripo.com.ua/vojna-s-rf/rossyjskye-vojska-begut-pod-natyskom-vsu-mnenye-ekspertov-y-rossyjskyh-voennyh/): Found exact image on website with title: Российские войска бегут под натиском ВСУ: мнение экспертов и ...
+Content: The article, published on September 11, 2022, discusses the Ukrainian counteroffensive and the retreat of Russian forces. It mentions the liberation of several cities in the Kharkiv region, including Balakleya, and the strategic importance of Kupiansk and Izyum. The article includes an image of soldiers with an American flag patch. <image:24>
+
+Got 3 new web source(s):
+	1. August 21, 2024 https://www.newsweek.com/russia-protests-american-soldiers-kursk-1942273
+	2. https://www.aa.com.tr/en/russia-ukraine-war/russia-formally-protests-us-mercenaries-joining-ukrainian-soldiers-in-kursk-region-/3308755
+	3. September 16, 2024 https://www.ukrainianphotographers.com/en/news-articles/foreign-mercenaries-in-the-kursk-region
+Useful result: From [Source](https://www.newsweek.com/russia-protests-american-soldiers-kursk-1942273): 
+Content: Newsweek reports that Russia has claimed the presence of American mercenaries in the Kursk region during Ukraine's incursion in August 2024. <image:3404>, <image:3401>, <image:3403>. The Russian Foreign Ministry expressed strong protest to the U.S. and stated that those involved would be considered legitimate military targets. Experts interviewed by Newsweek suggest that even if American PMCs were present, it wouldn't necessarily mean the U.S. government directed the raid. The article was published on August 20, 2024.
+
+Useful result: From [Source](https://www.aa.com.tr/en/russia-ukraine-war/russia-formally-protests-us-mercenaries-joining-ukrainian-soldiers-in-kursk-region-/3308755): 
+Content: The Anadolu Agency published an article on August 20, 2024, stating that Russia protested the participation of US mercenaries fighting alongside Ukraine in the Kursk region. <image:i>. The Russian Foreign Ministry claimed that US private military companies are fighting alongside Ukrainian troops in the Kursk region.
+
+Not enough information yet. Continuing fact-check...
+INFO: Dropping action 'reverse_search' as it was already performed.
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='American flag military uniform Ukraine Russia')
+Skipping unsupported website: https://www.reddit.com/r/vexillology/comments/pr8glg/does_anyone_know_why_this_ukrainian_soldier_is/
+Got 3 new web source(s):
+	1. https://www.nytimes.com/2025/05/28/us/russia-ukraine-war-military-simulation-oklahoma.html
+	2. https://news.columbia.edu/news/what-are-some-possible-outcomes-russias-aggression-against-ukraine
+	3. https://www.legion.org/information-center/news/newsletters/2022/november/someone-has-to-do-it-american-vets-in-ukraine-train-front-line-medics-as-war-rages-with-russia
+Useful result: From [Source](https://www.nytimes.com/2025/05/28/us/russia-ukraine-war-military-simulation-oklahoma.html): 
+Content: The New York Times published an article on May 28, 2025, about a military simulation in Oklahoma. <image:13706>
+
+Useful result: From [Source](https://www.legion.org/information-center/news/newsletters/2022/november/someone-has-to-do-it-american-vets-in-ukraine-train-front-line-medics-as-war-rages-with-russia): 
+Content: The American Legion website features an article about American veterans in Ukraine training front-line medics. <image:13708>
+
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Ukraine Russia Kursk Oblast August 2024 mercenaries')
+Got 3 new web source(s):
+	1. August 31, 2024 https://www.themoscowtimes.com/2024/08/31/russian-mercenaries-pulled-out-of-burkina-faso-to-defend-kursk-commander-a86214
+	2. March 16, 2025 https://www.bbc.com/news/articles/c0q198zyppqo
+	3. https://en.wikipedia.org/wiki/Kursk_campaign
+Useful result: From [Source](https://www.themoscowtimes.com/2024/08/31/russian-mercenaries-pulled-out-of-burkina-faso-to-defend-kursk-commander-a86214): 
+Content: The Moscow Times, in an article by Anna Smolchenko and Didier Lauras for AFP, reports that Russian mercenaries from the Bear Brigade were pulled out of Burkina Faso to defend the Kursk region in August 2024. <image:13709>, <image:13714>. The article mentions the incursion into Russia's Kursk region by Ukraine. The article was published on August 31, 2024.
+
+Useful result: From [Source](https://www.bbc.com/news/articles/c0q198zyppqo): 
+Content: The BBC published an article on March 17, 2025, discussing the retreat of Ukrainian troops from the Kursk region. The article includes accounts from Ukrainian soldiers who described the withdrawal as "catastrophic" due to heavy fire and drone attacks. The article mentions fighting in the Kursk region in August 2024 and includes images of the area <image:13718>, <image:13724>, <image:13716>, <image:13720>.
+
+Useful result: From [Source](https://en.wikipedia.org/wiki/Kursk_campaign): 
+Content: The Wikipedia article discusses the 2024 Kursk offensive, which began on August 6, 2024, when Ukrainian forces launched an incursion into Russia's Kursk Oblast. <image:i> The article mentions that Russia claimed the presence of American mercenaries. The White House stated it had no advance knowledge of the attack.
+
+Not enough information yet. Continuing fact-check...
+INFO: Dropping action 'reverse_search' as it was already performed.
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='American flag military uniform Ukraine Russia Kursk')
+Skipping unsupported website: https://x.com/clashreport/status/1826634157134602713
+Skipping unsupported website: https://www.reddit.com/r/MilitaryPorn/comments/1eyl3av/american_volunteer_fighters_in_the_ukrainian/
+Failed to download or open image: cannot identify image file <_io.BytesIO object at 0x7ffed1b77560>
+Got 3 new web source(s):
+	1. https://mythdetector.com/en/disseminated-image-does-not-prove-that-americans-fight-in-kursk/
+	2. https://abn.org.ua/en/news/the-kursk-peoples-republic-will-be-free-from-the-russian-federation/
+	3. https://united24media.com/latest-news/russian-forces-execute-ukrainian-pows-in-kursk-region-video-shows-6158
+Useful result: From [Source](https://mythdetector.com/en/disseminated-image-does-not-prove-that-americans-fight-in-kursk/): 
+Content: Myth Detector states that the image <image:13731> is a photomanipluation.
+
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='American mercenaries Kursk Oblast Ukraine Russia August 2024 image')
+Skipping fact-checking website: https://www.usatoday.com/story/news/factcheck/2024/08/22/u-s-mercenaries-kursk-russia-ukraine-fact-check/74891709007/
+Got 0 new web source(s):
+The claim '<image:24> This image shows American mercenaries participating in Ukraine's incursion into Russia's Kursk Oblast in August 2024.' is false.
+Justification: The claim is **false**. The image in question has been identified as a photomanipluation by Myth Detector ([https://mythdetector.com/en/disseminated-image-does-not-prove-that-americans-fight-in-kursk/](https://mythdetector.com/en/disseminated-image-does-not-prove-that-americans-fight-in-kursk/)).
+
+So, the overall veracity is: false
+Fact-check took 6:42 min.

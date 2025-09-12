@@ -1,0 +1,42 @@
+Extracting claims from Content: <image:55> This image shows U.S. warships being en route to the Lebanon coast in August 2024 to support the Israel Defence Forces (IDF).
+'Claim: "<image:55> This image shows U.S. warships being en route to the Lebanon coast in August 2024 to support the Israel Defence Forces (IDF)."'
+Verifying Claim: "<image:55> This image shows U.S. warships being en route to the Lebanon coast in August 2024 to support the Israel Defence Forces (IDF)."
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='U.S. warships Lebanon coast August 2024')
+Got 3 new web source(s):
+	1. August 03, 2024 https://www.nytimes.com/2024/08/02/world/middleeast/us-iran-israel-aircraft.html
+	2. July 31, 2024 https://today.lorientlejour.com/article/1422223/which-american-warships-are-en-route-to-lebanon.html
+	3. August 02, 2024 https://news.usni.org/2024/08/02/carrier-uss-abraham-lincoln-heads-to-middle-east-as-iran-threatens-strikes-against-israel
+Useful result: From [Source](https://www.nytimes.com/2024/08/02/world/middleeast/us-iran-israel-aircraft.html): 
+Content: The New York Times reports that in August 2024, the U.S. military sent additional combat aircraft and missile-shooting warships to the Middle East in response to threats from Iran and its proxies to attack Israel. Some ships already in the western Mediterranean Sea will move east, closer to the coast of Israel.
+
+Useful result: From [Source](https://today.lorientlejour.com/article/1422223/which-american-warships-are-en-route-to-lebanon.html): 
+Content: The article from L'Orient Today, published on July 31, 2024, reports that the U.S. sent warships to the Mediterranean, including the USS Wasp, USS New York, and USS Oak Hill. <image:i>. The article mentions that the deployment follows an Israeli strike and raises fears of escalation in the conflict between Hezbollah and Israel.
+
+Useful result: From [Source](https://news.usni.org/2024/08/02/carrier-uss-abraham-lincoln-heads-to-middle-east-as-iran-threatens-strikes-against-israel): 
+Content: The USNI News article, published on August 2, 2024, reports that the USS Abraham Lincoln is heading to the Middle East. The article mentions that the three-ship Wasp Amphibious Ready Group is in the Eastern Mediterranean. The article also mentions that the Pentagon announced the deployment of unspecified fighter squadrons headed to the region. <image:2308>
+
+Searching google_vision with query: ImageQuery(limit=3, start_date=None, end_date=None, search_type='reverse', text='', image=<defame.common.medium.Image object at 0x7ffe2c2dbb50>)
+Skipping unsupported website: https://x.com/NATO/status/1800168929685619071
+Failed to scrape https://www.linkedin.com/posts/nato_baltops24-activity-7205933902056665089-PuMk
+Error 403: Forbidden.
+Skipping that URL.
+Got 4 new web source(s):
+	1. https://www.dvidshub.net/news/474750/uss-mount-whitney-lcc-20-arrives-kiel-germany-marking-its-final-stop-after-completing-baltops-24
+	2. https://www.c6f.navy.mil/Press-Room/News/News-Display/Article/3814280/baltops-24-concludes-in-kiel-germany/
+	3. https://www.navy.mil/Press-Office/News-Stories/Article/3815129/baltops-24-concludes-in-kiel-germany/
+	4. https://www.usff.navy.mil/Press-Room/News-Stories/Article/3814526/baltops-24-concludes-in-kiel-germany/
+Useful result: From [Source](https://www.dvidshub.net/news/474750/uss-mount-whitney-lcc-20-arrives-kiel-germany-marking-its-final-stop-after-completing-baltops-24): Found exact image on website with title: USS Mount Whitney (LCC 20) arrives in Kiel, Germany, marking its ...
+Content: The image is of the USS Mount Whitney and other ships participating in the Baltic Operations 2024 (BALTOPS 24) exercise in the Baltic Sea on June 8, 2024. The USS Mount Whitney arrived in Kiel, Germany on June 19, 2024, after completing BALTOPS 24. The exercise involved various NATO allies. The photo was taken by Petty Officer 2nd Class Mario Coto. <image:55>
+
+Useful result: From [Source](https://www.c6f.navy.mil/Press-Room/News/News-Display/Article/3814280/baltops-24-concludes-in-kiel-germany/): Found exact image on website with title: BALTOPS 24 concludes in Kiel, Germany - U.S. Naval Forces Europe
+Content: The image is from a U.S. Navy website and shows ships participating in exercise Baltic Operations 2024 (BALTOPS 24) in the Baltic Sea on June 8, 2024. <image:55> The exercise involved over 50 ships, 85 aircraft, and approximately 9,000 personnel.
+
+Useful result: From [Source](https://www.navy.mil/Press-Office/News-Stories/Article/3815129/baltops-24-concludes-in-kiel-germany/): Found exact image on website with title: BALTOPS 24 Concludes In Kiel, Germany - Navy.mil
+Content: The image is from the U.S. Navy website and shows the BALTOPS 24 exercise, which concluded on June 20, 2024, in Kiel, Germany. <image:55> The exercise involved over 50 ships, 85 aircraft, and approximately 9,000 personnel from NATO allies.
+
+The claim '<image:55> This image shows U.S. warships being en route to the Lebanon coast in August 2024 to support the Israel Defence Forces (IDF).' is misleading.
+Justification: The image in the claim is misrepresented. The photo shows the USS Mount Whitney and other ships participating in the Baltic Operations 2024 (BALTOPS 24) exercise in the Baltic Sea on June 8, 2024, as confirmed by a reverse image search. While the U.S. did send warships to the Mediterranean in August 2024, as reported by The New York Times ([https://www.nytimes.com/2024/08/02/world/middleeast/us-iran-israel-aircraft.html](https://www.nytimes.com/2024/08/02/world/middleeast/us-iran-israel-aircraft.html)), the image does not depict this event.
+
+So, the overall veracity is: misleading
+Fact-check took 1:15 min.

@@ -1,0 +1,32 @@
+Extracting claims from Content: <image:49> This image shows coffins of dead Israeli soldiers in September, 2024.
+'Claim: "<image:49> This image shows coffins of dead Israeli soldiers in September, 2024."'
+Verifying Claim: "<image:49> This image shows coffins of dead Israeli soldiers in September, 2024."
+Not enough information yet. Continuing fact-check...
+Got 0 new web source(s):
+Not enough information yet. Continuing fact-check...
+INFO: Dropping action 'reverse_search' as it was already performed.
+Got 2 new web source(s):
+	1. https://www.bbc.com/news/articles/c20l22jnj6go
+	2. https://www.aljazeera.com/news/2024/9/2/hamas-says-gaza-captives-will-return-in-coffins-if-israel-continues-raids
+Useful result: From [Source](https://www.bbc.com/news/articles/c20l22jnj6go): 
+Content: The BBC News website contains an image of coffins draped with Israeli flags. <image:4548>
+
+Useful result: From [Source](https://www.aljazeera.com/news/2024/9/2/hamas-says-gaza-captives-will-return-in-coffins-if-israel-continues-raids): 
+Content: Al Jazeera published an article about Hamas stating that Gaza captives will return in coffins if Israel continues raids. The article includes an image of a protest. <image:4549>
+
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Israel coffins demonstration')
+Skipping unsupported website: https://www.youtube.com/watch?v=v90yg4OH2Cw
+Got 2 new web source(s):
+	1. https://www.aljazeera.com/news/2025/2/20/hamas-releases-bodies-of-four-israelis-held-captive-in-gaza
+	2. https://www.euronews.com/2024/09/05/protesters-march-in-tel-aviv-with-makeshift-coffins-to-demand-release-of-gaza-hostages
+Useful result: From [Source](https://www.aljazeera.com/news/2025/2/20/hamas-releases-bodies-of-four-israelis-held-captive-in-gaza): 
+Content: Al Jazeera published an image of a coffin covered with a white cloth. <image:8207>
+
+Useful result: From [Source](https://www.euronews.com/2024/09/05/protesters-march-in-tel-aviv-with-makeshift-coffins-to-demand-release-of-gaza-hostages): 
+Content: Euronews published an article about a protest in Tel Aviv. The article includes an image of coffins with the Star of David on them. <image:8208> The article's release date is September 5, 2024.
+
+The claim '<image:49> This image shows coffins of dead Israeli soldiers in September, 2024.' is true.
+Justification: The image in the claim is from a protest in Tel Aviv, as confirmed by the image search results, which also show that the protest took place in September 2024. The coffins in the image are draped with Israeli flags and the Star of David, as seen in the Euronews article ([<image:8208>](https://www.euronews.com/2024/09/05/israel-protests-over-hostages-held-in-gaza)). Therefore, the claim is likely true.
+
+So, the overall veracity is: true
+Fact-check took 0:21 min.

@@ -1,0 +1,45 @@
+Extracting claims from Content: <image:51> This image shows Israeli Finance Minister Smotrich, who previously threatened to invade Lebanon, taking shelter in an Israeli bomb shelter during Hezbollah's attack on Israel on August 25, 2024.
+'Claim: "<image:51> This image shows Israeli Finance Minister Smotrich, who previously threatened to invade Lebanon, taking shelter in an Israeli bomb shelter during Hezbollah's attack on Israel on August 25, 2024."'
+Verifying Claim: "<image:51> This image shows Israeli Finance Minister Smotrich, who previously threatened to invade Lebanon, taking shelter in an Israeli bomb shelter during Hezbollah's attack on Israel on August 25, 2024."
+Not enough information yet. Continuing fact-check...
+Got 0 new web source(s):
+Not enough information yet. Continuing fact-check...
+INFO: Dropping action 'reverse_search' as it was already performed.
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Israeli Finance Minister Smotrich bomb shelter')
+Got 3 new web source(s):
+	1. https://www.cnn.com/2024/06/21/middleeast/israel-west-bank-bezalel-smotrich-settlements-intl-latam
+	2. https://www.theguardian.com/world/article/2024/jun/24/israeli-far-right-minister-bezalel-smotrich-annex-west-bank
+	3. https://www.ft.com/content/b41c9f9c-23c5-4c9a-b6a3-11a61df46cae
+Useful result: From [Source](https://www.cnn.com/2024/06/21/middleeast/israel-west-bank-bezalel-smotrich-settlements-intl-latam): 
+Content: The CNN article features an image of Bezalel Smotrich. <image:8210>
+
+Useful result: From [Source](https://www.theguardian.com/world/article/2024/jun/24/israeli-far-right-minister-bezalel-smotrich-annex-west-bank): 
+Content: The Guardian published an article on June 24, 2024, about Israeli far-right minister Bezalel Smotrich. <image:8211>
+
+Useful result: From [Source](https://www.ft.com/content/b41c9f9c-23c5-4c9a-b6a3-11a61df46cae): 
+Content: The Financial Times published an image of Bezalel Smotrich. <image:8212>
+
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Hezbollah attack Israel August 25 2024')
+Got 3 new web source(s):
+	1. https://www.npr.org/2024/08/25/nx-s1-5089083/israel-airstrikes-lebanon-hezbollah
+	2. https://www.aljazeera.com/news/2024/8/25/what-you-need-to-know-about-attacks-between-israel-and-hezbollah
+	3. https://www.lemonde.fr/en/international/article/2024/08/25/israel-bombs-lebanon-says-it-is-targeting-hezbollah_6721381_4.html
+Useful result: From [Source](https://www.npr.org/2024/08/25/nx-s1-5089083/israel-airstrikes-lebanon-hezbollah): 
+Content: NPR published an article about the Hezbollah attack on Israel on August 25, 2024. The article includes an image of smoke rising from the area. <image:8215>
+
+Useful result: From [Source](https://www.aljazeera.com/news/2024/8/25/what-you-need-to-know-about-attacks-between-israel-and-hezbollah): 
+Content: Al Jazeera reports on attacks between Israel and Hezbollah on August 25, 2024. <image:8216> shows locations targeted by Hezbollah.
+
+Useful result: From [Source](https://www.lemonde.fr/en/international/article/2024/08/25/israel-bombs-lebanon-says-it-is-targeting-hezbollah_6721381_4.html): 
+Content: Le Monde reports on August 25, 2024, that Israel bombed Lebanon, targeting Hezbollah. <image:8217>
+
+Not enough information yet. Continuing fact-check...
+INFO: Dropping action 'reverse_search' as it was already performed.
+Got 2 new web source(s):
+	1. https://en.wikipedia.org/wiki/Bezalel_Smotrich
+	2. https://www.lemonde.fr/en/international/article/2023/03/13/israeli-minister-bezalel-smotrich-is-persona-non-grata-in-washington_6019152_4.html
+The claim '<image:51> This image shows Israeli Finance Minister Smotrich, who previously threatened to invade Lebanon, taking shelter in an Israeli bomb shelter during Hezbollah's attack on Israel on August 25, 2024.' is false.
+Justification: The claim cannot be verified. While the evidence confirms that Bezalel Smotrich is the Israeli Finance Minister and that there was an attack by Hezbollah on Israel on August 25, 2024, the context of the image in the claim is unknown, and it cannot be confirmed that the image shows Smotrich in a bomb shelter during the attack.
+
+So, the overall veracity is: false
+Fact-check took 0:44 min.

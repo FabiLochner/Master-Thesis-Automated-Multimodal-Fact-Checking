@@ -1,0 +1,55 @@
+Extracting claims from Content: Russian President Vladimir Putin has died in an explosion in one of his limousines.
+'Claim: "Russian President Vladimir Putin has died in an explosion in one of his limousines."'
+Verifying Claim: "Russian President Vladimir Putin has died in an explosion in one of his limousines."
+Not enough information yet. Continuing fact-check...
+Got 3 new web source(s):
+	1. March 31, 2025 https://www.newsweek.com/russia-putin-limousine-fire-video-2052846
+	2. March 30, 2025 https://www.hindustantimes.com/world-news/275000-aurus-senat-limousine-vladimir-putin-goes-up-in-flames-limo-explodes-moscow-assassination-attempt-101743297137628.html
+	3. March 30, 2025 https://m.economictimes.com/news/international/world-news/blast-in-one-of-vladimir-putins-official-limousines-triggers-fresh-assassination-concerns/articleshow/119758547.cms
+Useful result: From [Source](https://www.newsweek.com/russia-putin-limousine-fire-video-2052846): 
+Content: Newsweek reports that a limousine from Vladimir Putin's presidential fleet caught fire near the FSB headquarters in Moscow. <image:5183>. The cause of the fire is unknown, and there were no reports of injuries. The article includes a photo of Putin with a similar car. The article was written by Brendan Cole, a Senior News Reporter.
+
+Useful result: From [Source](https://www.hindustantimes.com/world-news/275000-aurus-senat-limousine-vladimir-putin-goes-up-in-flames-limo-explodes-moscow-assassination-attempt-101743297137628.html): 
+Content: The Hindustan Times published an article on March 30, 2025, reporting on a viral video of an explosion involving an Aurus Senat limousine in Moscow, near the FSB headquarters. <image:k> The article mentions speculation of an assassination attempt on Vladimir Putin, but it also states that it was not immediately clear who was in the car and no injuries were reported.
+
+Useful result: From [Source](https://m.economictimes.com/news/international/world-news/blast-in-one-of-vladimir-putins-official-limousines-triggers-fresh-assassination-concerns/articleshow/119758547.cms): 
+Content: The Economic Times reports that a luxury limousine from Vladimir Putin's official car fleet exploded in central Moscow. The article mentions that the explosion has raised security concerns and that a video of the burning limousine has gone viral on social media. The Sun reported that the explosion happened only days after Ukrainian President Volodymyr Zelensky suggested that Russia could suffer a major setback in the war and amid rumors surrounding Putin’s health. The article was published on March 30, 2025. <image:5206>, <image:5207>, <image:5208>.
+
+Not enough information yet. Continuing fact-check...
+Got 3 new web source(s):
+	1. https://en.wikipedia.org/wiki/Claims_of_Vladimir_Putin%27s_incapacity_and_death
+	2. April 08, 2025 https://legionmagazine.com/long-standing-rumours-of-putins-impending-death-have-been-greatly-exaggerated/
+	3. March 28, 2025 https://m.economictimes.com/news/international/us/is-putin-suffering-from-a-deadly-disease-zelensky-says-he-will-die-soon-heres-the-truth/articleshow/119615602.cms
+Useful result: From [Source](https://en.wikipedia.org/wiki/Claims_of_Vladimir_Putin%27s_incapacity_and_death): 
+Content: The Wikipedia article "Claims of Vladimir Putin's incapacity and death" discusses speculations about Putin's health, including claims of various illnesses and even death, which have been circulating for approximately 20 years. The article mentions reports of stroke, cancer, cosmetic surgery complications, and other health issues. It also references claims of Putin's death in October 2023. The article states that these claims are largely speculation and cannot be accredited for authenticity. <image:k>
+
+Useful result: From [Source](https://legionmagazine.com/long-standing-rumours-of-putins-impending-death-have-been-greatly-exaggerated/): 
+Content: The article from Legion Magazine discusses rumors about Vladimir Putin's health and potential death, mentioning speculation and predictions, including one from Ukrainian President Volodymyr Zelenskyy. The article states that there is no verifiable evidence that Putin is seriously ill or dead. It also mentions that Putin has survived multiple assassination attempts and that there is evidence he uses body doubles. <image:5235>, <image:5239>.
+
+Useful result: From [Source](https://m.economictimes.com/news/international/us/is-putin-suffering-from-a-deadly-disease-zelensky-says-he-will-die-soon-heres-the-truth/articleshow/119615602.cms): 
+Content: The Economic Times reports that Ukrainian President Volodymyr Zelensky stated that Vladimir Putin "will die soon." The article mentions speculation about Putin's health, including reports of cancer and Parkinson's disease, and discusses rumors about his appearance and the use of body doubles. The article was last updated on March 28, 2025.
+
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Vladimir Putin official statements')
+Failed to scrape http://www.en.kremlin.ru/events/president/transcripts
+Error 500: Server error.
+Skipping that URL.
+Skipping unsupported website: https://x.com/kremlinrussia_e?lang=en
+Got 3 new web source(s):
+	1. https://www.bbc.com/news/topics/cvenzmgywd4t
+	2. https://www.prlib.ru/en/article-vladimir-putin-historical-unity-russians-and-ukrainians
+	3. June 14, 2024 https://mid.ru/en/foreign_policy/news/1957107/
+Useful result: From [Source](https://www.bbc.com/news/topics/cvenzmgywd4t): 
+Content: The BBC website has several articles about Vladimir Putin, including discussions about his relationship with Donald Trump (<image:7716>), India's foreign policy (<image:7699>), and potential summit locations with Zelensky (<image:7708>). The articles were published between August 18 and August 22, 2025.
+
+Useful result: From [Source](https://www.prlib.ru/en/article-vladimir-putin-historical-unity-russians-and-ukrainians): 
+Content: The search result is an article by Vladimir Putin titled "On the Historical Unity of Russians and Ukrainians" published on the Russian President's official website.
+
+Useful result: From [Source](https://mid.ru/en/foreign_policy/news/1957107/): 
+Content: The Russian Foreign Ministry website published a speech by Vladimir Putin on June 14, 2024, at a meeting with senior staff of the Russian Foreign Ministry. The speech is about the work in the interests of Russia and its people. <image:k>
+
+The claim 'Russian President Vladimir Putin has died in an explosion in one of his limousines.' is false.
+Justification: The claim that Vladimir Putin died in a limousine explosion is not supported by the evidence. While there are reports of a fire and explosion involving a limousine from Putin's fleet, there is no confirmation that Putin was in the vehicle or that he died. Furthermore, there are official statements and recent publications attributed to Putin, contradicting the claim.
+
+So, the overall veracity is: false
+Fact-check took 1:11 min.

@@ -1,0 +1,2493 @@
+PlanPrompt - QUERY:
+
+# Instructions
+The available knowledge is insufficient to assess the Claim. Therefore, **propose a set of actions** to retrieve new and helpful evidence. Adhere to the following rules:
+* The actions available are listed under Valid Actions, including a short description for each action. No other actions are possible at this moment. 
+* For each action, use the formatting as specified in Valid Actions.
+* Include all actions in a single Markdown code block at the end of your answer.
+* Propose as few actions as possible, but as much as needed. Do not propose similar or previously used actions.
+
+
+
+## Valid Actions
+* `reverse_search`
+   * Description: Performs a reverse image search to find similar images on the web.
+   * How to use: Provide an image and the model will perform a reverse search to find similar images.
+   * Format: reverse_search(<image:k>), where `k` is the image's ID
+
+* `image_search`
+   * Description: Run an image search on Google to retrieve related images for a given query.
+   * How to use: This is a helpful tool for fact-checking images. Use this to retrieve images associated with a specific keyword or phrase. Ensure that the query is clear and specific to improve search accuracy. If no relevant images are found, refine the query or use more descriptive terms.
+   * Format: image_search("your image search query goes here")
+
+* `web_search`
+   * Description: Run an open web search on Google or DuckDuckGO to retrieve any related webpage.
+   * How to use: Do not use this with a previously used or similar query from previous web searches. If a previous web search did not yield any results, use a very different query.
+   * Format: web_search("your web search query goes here")
+
+# Example: reverse_search()
+
+## Claim
+Text: "<image:k> shows a rare event of a solar eclipse with a double ring."
+
+...
+
+## Actions
+```
+reverse_search(<image:k>)
+```
+
+# Example: image_search()
+
+## Claim
+Text: "Chinese officials in white protective hazmat suits carried people down a hallway to be quarantined for having COVID-19 in November 2022."
+
+...
+
+ACTIONS:
+```
+image_search("China officials white suits carry people")
+image_search("China officials carry people COVID quarantine 2022")
+```
+
+# Example: web_search()
+
+## Claim
+Text: "New Zealand’s new Food Bill bans gardening"
+Claim date: October 29, 2020
+
+...
+
+## Actions
+```
+web_search("New Zealand Food Bill 2020")
+web_search("New Zealand Food Bill gardening ban")
+```
+
+# Record
+## Claim
+Claim: "While serving as US President in 2024, Joe Biden ordered the US forces to prepare for possible nuclear confrontations with Russia, China, and North Korea."
+
+# Your Actions
+
+
+
+===== > RESPONSE:  < =====
+```
+web_search("Joe Biden US President nuclear confrontation Russia China North Korea")
+```
+_________________________
+
+
+
+SummarizeResultPrompt - QUERY:
+
+# Instructions
+In order to find evidence that helps your fact-check, you just ran a web search which yielded a Search Result. **Your task right now is to summarize the Search Result.** What to include:
+* information that might be useful for the fact-check (see Record)
+* relevant images (refer to images by inserting their reference <image:k>)
+* if available: the release date as well as the author or the publisher (e.g. the media company) of the search result.
+
+Do NOT include:
+* advertisements
+* any other information not related to the Record or the Claim
+
+Additional rules:
+* Do not add any additional information besides the information in the Search Result.
+* If the Search Result doesn't contain any relevant information for the fact-checking work, simply print one word in capital letters: "NONE".
+* Keep your writing style like in the Examples 1, 2 and 3 provided to you.
+* Try to filter out relevant information even if the search result is in a different language.
+
+# Example 1
+The search result from America Today provides several photographs of the Notre-Dame Cathedral fire on April 15, 2019. <image:i>, <image:j>, <image:k>. None of the images show the Eiffel Tower in the background. 
+
+# Example 2
+NONE
+
+# Example 3
+The Guardian discusses a report blaming the Syrian government for a toxic gas attack and condemning their use of chemical weapons. The Guardian mentions the Chemical Weapons Convention and the responsibilities of Syria under the convention. According to The Guardian, The White House condemned the Assad regime for defying the norm against chemical weapons use.
+
+# Record
+## Claim
+Claim: "While serving as US President in 2024, Joe Biden ordered the US forces to prepare for possible nuclear confrontations with Russia, China, and North Korea."
+
+## Actions
+```
+web_search("Joe Biden US President nuclear confrontation Russia China North Korea")
+```
+
+# Search Result
+From [Source](https://www.theguardian.com/us-news/article/2024/aug/20/biden-nuclear-strategy-china-threat): 
+Content: "Photograph: Saul Loeb/AFP/Getty Images
+
+This article is more than **1 year old**
+
+Biden approves nuclear strategy refocusing on China threat – report
+===================================================================
+
+This article is more than 1 year old
+
+White House says plan was approved earlier this year and was not a response to a single country or threat
+
+[Joe Biden](https://www.theguardian.com/us-news/joebiden)
+ has approved a US nuclear strategy to prepare for possible coordinated nuclear confrontations with Russia, China and North Korea, according to a New York Times [report](https://www.nytimes.com/2024/08/20/us/politics/biden-nuclear-china-russia.html)
+ on Tuesday.
+
+On Tuesday, the White House said the president approved the plan earlier this year and it was not a response to a single country or threat.
+
+The spokesperson Sean Savett said that while “the specific text of the guidance is classified, its existence is in no way secret. “It is possible that we will one day look back and see the quarter-century after the cold war as nuclear intermission.”
+
+Explore more on these topics
+
+*   [Joe Biden](/us-news/joebiden)
+    
+*   [Nuclear weapons](/world/nuclear-weapons)
+    
+*   [China](/world/china)
+    
+*   [Russia](/world/russia)
+    
+*   [North Korea](/world/north-korea)
+    
+*   [Ukraine](/world/ukraine)
+    
+*   [Vladimir Putin](/world/vladimir-putin)
+    
+*   [news](/tone/news)
+    
+
+[Share](mailto:?subject=Biden approves nuclear strategy refocusing on China threat – report&body=https://www.theguardian.com/us-news/article/2024/aug/20/biden-nuclear-strategy-china-threat?CMP=share_btn_url)
+
+[Reuse this content](https://syndication.theguardian.com/?url=https%3A%2F%2Fwww.theguardian.com%2Fus-news%2Farticle%2F2024%2Faug%2F20%2Fbiden-nuclear-strategy-china-threat&type=article&internalpagecode=us-news/article/2024/aug/20/biden-nuclear-strategy-china-threat "Reuse this content")
+
+Most viewed
+-----------
+
+Most viewed
+----------- Zhou said that “it is impossible for Beijing to stand by idly” in the face of deteriorating relations between Russia and the US, but that there was space to strengthen the policies governing the control of nuclear weapons stockpiles.
+
+Zhou argued that nuclear-armed states should declare a “no first use” policy, as so far only China and India have done.
+
+[Global spending on nuclear weapons up 13% in record rise\
+\
+Read more](https://www.theguardian.com/world/article/2024/jun/17/global-spending-on-nuclear-weapons-up-13-in-record-rise)
+
+On Tuesday, the Times reported that two senior administration officials had earlier been permitted to allude to the revision in US nuclear strategy without disclosing its existence.
+
+In June, Pranay Vaddi, a senior director of the national security council, [warned](https://www.theguardian.com/world/article/2024/jun/17/row-as-nato-chief-hints-at-talks-to-increase-availability-of-nuclear-weapons)
+ that “absent a change” in nuclear strategy by China and Russia, the US was prepared to shift from modernisation of existing weapons to expanding its arsenal.
+
+Vaddi also alluded to the highly classified document, saying it emphasised “the need to deter Russia, the PRC \[People’s Republic of China\] and [North Korea](https://www.theguardian.com/world/north-korea)
+ simultaneously”.
+
+The last major nuclear arms control agreement with Russia, [New Start](https://www.theguardian.com/world/2023/jan/31/us-russia-new-start-nuclear-arms-treaty)
+, which sets limits on intercontinental-range nuclear weapons, expires in early 2026 with no subsequent agreement in place.
+
+China and Russia are now more politically and economically [aligned](https://www.theguardian.com/world/article/2024/jun/23/a-return-to-the-cold-war-putin-and-kim-have-joined-forces-as-global-delinquents)
+. [Skip to main content](#maincontent)
+[Skip to navigation](#navigation)
+[Skip to navigation](#navigation)
+
+!Two men (Xi Jinping and Joe Biden) wearing suits and ties stand and look at each other, with flags of China and the United States in the background <image:13255>
+
+China’s president, Xi Jinping, and his US counterpart, Joe Biden, meeting at the G20 summit in Bali, Indonesia, in November 2022. Photograph: Saul Loeb/AFP/Getty Images
+
+[View image in fullscreen](#img-1)
+
+China’s president, Xi Jinping, and his US counterpart, Joe Biden, meeting at the G20 summit in Bali, Indonesia, in November 2022. The Russian president, [Vladimir Putin](https://www.theguardian.com/world/vladimir-putin)
+, has [threatened](https://www.theguardian.com/world/article/2024/may/21/russia-begins-tactical-nuclear-weapon-drills-near-ukraine-border)
+ to use nuclear weapons in Ukraine.
+
+China’s foreign ministry on Wednesday said that it was “seriously concerned” by the reports and accused the US of “stirring up the so-called ‘China nuclear threat theory’”. But China’s arsenal is thought to be expanding at a much faster pace than any other country’s.
+
+The US-based Arms Control Association said it understood US nuclear weapons strategy and posture remained the same as described in the administration’s 2022 nuclear posture review, and there had been no reorientation away from [Russia](https://www.theguardian.com/world/russia)
+ and toward China.
+
+Daryl Kimball, the executive director of the Arms Control Association, said that while US intelligence estimates suggested China might increase the size of its nuclear arsenal from 500 to 1,000 warheads by 2030, Russia currently had about 4,000 nuclear warheads “and it remains the major driver behind US nuclear strategy”.
+
+Biden approved the revised strategy – called the nuclear employment guidance – in March, according to the Times, but an unclassified notification of the policy change has not yet been presented to Congress.
+
+After years of nuclear arms reduction efforts, the administration has been signalling willingness to expand the US arsenal to counter China and Russia’s nuclear strategies more recently. Last month, Chinese and Russian long-range bombers patrolled together near Alaska for the first time and held live-fire exercises in the South China Sea.
+
+The second US administration official permitted to refer to the document, Vipin Narang, an MIT nuclear strategist who served in the Pentagon, said earlier this month that Biden had “issued updated nuclear weapons employment guidance to account for multiple nuclear-armed adversaries” and for “the significant increase in the size and diversity” of China’s nuclear arsenal.
+
+“It is our responsibility to see the world as it is, not as we hoped or wished it would be,” the Times quoted Narang as saying. The guidance issued earlier this year is not a response to any single entity, country, nor threat.”
+
+The Times reported that the deterrent policy takes into account a rapid buildup of [China’s nuclear arsenal](https://www.theguardian.com/world/2023/oct/20/china-expanding-nuclear-arsenal-much-faster-than-predicted-us-report-says)
+, which will rival the size and diversity of the US and Russian stockpiles over the next decade. In February, the US [warned](https://www.theguardian.com/us-news/2024/feb/14/mike-turner-national-security-threat)
+ allies that Russia could be planning to put a nuclear weapon into space.
+
+On Tuesday, a retired senior colonel in the Chinese People’s Liberation Army, Zhou Bo, [published a piece](https://foreignpolicy.com/2024/08/20/nuclear-weapons-war-no-first-use-policy/)
+ in Foreign Policy arguing that the US and China could still cooperate on nuclear diplomacy."
+
+# Your Summary
+
+
+
+===== > RESPONSE:  < =====
+The Guardian published an article on August 20, 2024, stating that Joe Biden approved a US nuclear strategy to prepare for possible nuclear confrontations with Russia, China, and North Korea. <image:13255> The White House said the plan was approved earlier this year and was not a response to a single country or threat. The article mentions that the US is prepared to shift from modernizing existing weapons to expanding its arsenal.
+
+_________________________
+
+
+
+SummarizeResultPrompt - QUERY:
+
+# Instructions
+In order to find evidence that helps your fact-check, you just ran a web search which yielded a Search Result. **Your task right now is to summarize the Search Result.** What to include:
+* information that might be useful for the fact-check (see Record)
+* relevant images (refer to images by inserting their reference <image:k>)
+* if available: the release date as well as the author or the publisher (e.g. the media company) of the search result.
+
+Do NOT include:
+* advertisements
+* any other information not related to the Record or the Claim
+
+Additional rules:
+* Do not add any additional information besides the information in the Search Result.
+* If the Search Result doesn't contain any relevant information for the fact-checking work, simply print one word in capital letters: "NONE".
+* Keep your writing style like in the Examples 1, 2 and 3 provided to you.
+* Try to filter out relevant information even if the search result is in a different language.
+
+# Example 1
+The search result from America Today provides several photographs of the Notre-Dame Cathedral fire on April 15, 2019. <image:i>, <image:j>, <image:k>. None of the images show the Eiffel Tower in the background. 
+
+# Example 2
+NONE
+
+# Example 3
+The Guardian discusses a report blaming the Syrian government for a toxic gas attack and condemning their use of chemical weapons. The Guardian mentions the Chemical Weapons Convention and the responsibilities of Syria under the convention. According to The Guardian, The White House condemned the Assad regime for defying the norm against chemical weapons use.
+
+# Record
+## Claim
+Claim: "While serving as US President in 2024, Joe Biden ordered the US forces to prepare for possible nuclear confrontations with Russia, China, and North Korea."
+
+## Actions
+```
+web_search("Joe Biden US President nuclear confrontation Russia China North Korea")
+```
+
+# Search Result
+From [Source](https://www.brookings.edu/articles/how-would-trump-and-biden-handle-us-nuclear-policy-upon-reelection/): 
+Content: "They might seek their own nuclear weapons or accommodation with nuclear-armed adversaries such as China and Russia as a result.
+
+What Biden has done on nuclear policy while in office
+-----------------------------------------------------
+
+Biden’s most important nuclear achievement has been successfully deterring Russian nuclear escalation over the war in Ukraine: Russia has not used nuclear weapons against NATO members or against Ukraine itself. Indeed, the treaty is still standing only because Biden quickly negotiated an [extension](https://www.state.gov/on-the-extension-of-the-new-start-treaty-with-the-russian-federation/)
+ during his first weeks in office, and the administration has expressed [continued](https://www.armscontrol.org/act/2022-12/news/bidens-nuclear-posture-straddles-obama-trump-policies)
+ interest in strategic arms control if it can find a willing partner in Moscow.
+
+The Biden administration has also worked to stabilize relations with China, a country whose nuclear arsenal is undergoing a rapid [expansion](https://media.defense.gov/2023/Oct/19/2003323409/-1/-1/1/2023-MILITARY-AND-SECURITY-DEVELOPMENTS-INVOLVING-THE-PEOPLES-REPUBLIC-OF-CHINA.PDF)
+. These differences matter because of the enormous presidential latitude with respect to nuclear decision-making, including presidents’ [sole authority](https://sgp.fas.org/crs/natsec/IF10521.pdf)
+ to launch nuclear weapons without authorization from other parts of the government.
+
+While in office, Trump was often confrontational in his dealings with other nuclear powers and was openly skeptical of the alliance relationships that depend on U.S. While valuing a robust deterrent, Biden also has a long-standing commitment to arms control.
+
+What Trump did on nuclear policy while in office
+------------------------------------------------
+
+Trump’s [decision](https://trumpwhitehouse.archives.gov/briefings-statements/president-donald-j-trump-ending-united-states-participation-unacceptable-iran-deal/)
+ to renege on the Iran nuclear deal—despite the [State Department](https://2017-2021.state.gov/briefings/department-press-briefing-july-18-2017/)
+ certifying that Iran was complying with its terms—was likely the most significant nuclear policy decision of his time in office. In fact, North Korea significantly expanded and improved its nuclear arsenal on Trump’s watch, gaining the [ability](https://www.reuters.com/world/asia-pacific/north-korea-fires-ballistic-missile-south-korea-says-2023-12-17/)
+ to hit the continental United States with a nuclear-tipped ballistic missile.
+
+Furthermore, Trump actively stoked a dangerous nuclear crisis with North Korea in the period leading up to the summit. At another point, he [tweeted](https://twitter.com/realDonaldTrump/status/948355557022420992?ref_src=twsrc%5Etfw%7Ctwcamp%5Etweetembed%7Ctwterm%5E948355557022420992%7Ctwgr%5E8f3c7c895f959526a3e4adcaae7b41e23ea14eba%7Ctwcon%5Es1_&ref_url=https%3A%2F%2Fwww.cnn.com%2F2018%2F01%2F02%2Fpolitics%2Fdonald-trump-north-korea-nuclear%2Findex.html)
+ of Kim, “Will someone from his depleted and food starved regime please inform him that I too have a Nuclear Button, but it is a much bigger & more powerful one than his, and my Button works!” Trump was later [revealed](https://www.nbcnews.com/politics/donald-trump/trump-discussed-using-nuclear-weapon-north-korea-2017-blaming-someone-rcna65120)
+ to have privately considered using a nuclear weapon against North Korea while falsely blaming it on another country.
+
+Finally, the Trump administration was highly skeptical of arms control with other nuclear powers. China’s nuclear arsenal is expanding as it becomes increasingly [confrontational](https://www.reuters.com/world/asia-pacific/china-starts-military-drills-around-taiwan-days-after-new-president-takes-office-2024-05-23/#:~:text=China%20launched%20military%20drills%20around,of%20high%2Dvalue%20military%20targets.)
+ toward Taiwan. This is in significant part because Biden has effectively [communicated](https://www.nytimes.com/2022/05/31/opinion/biden-ukraine-strategy.html)
+ that the United States will defend NATO, and also that it would respond forcefully (though almost certainly [not](https://www.nbcnews.com/politics/national-security/will-biden-putin-goes-nuclear-experts-say-nuclear-response-unlikely-no-rcna32756)
+ with nuclear weapons) to Russian nuclear use in Ukraine. For example, it has ([mostly](https://www.politico.com/news/2024/04/24/us-long-range-missiles-ukraine-00154110)
+) constrained Ukraine’s ability to conduct longer-range attacks on Russian territory with U.S.-supplied weapons.
+
+Furthermore, the Biden administration has taken steps to stabilize the overall strategic nuclear relationship with Russia. It has also fortified the defense relationship with South Korea through the [Washington Declaration](https://www.whitehouse.gov/briefing-room/statements-releases/2023/04/26/washington-declaration-2/)
+, which will engage the two countries more closely on nuclear deterrence matters.
+
+What Biden might do on nuclear policy if reelected
+--------------------------------------------------
+
+As with Trump, Biden’s first term in office provides useful guidance as to his likely nuclear policy priorities were he to be reelected."
+
+# Your Summary
+
+
+
+===== > RESPONSE:  < =====
+The Brookings article discusses Biden's nuclear policy while in office. It mentions that Biden successfully deterred Russian nuclear escalation in the war in Ukraine. The article also states that the Biden administration has worked to stabilize relations with China, whose nuclear arsenal is expanding. The article also mentions that Biden has taken steps to stabilize the overall strategic nuclear relationship with Russia. The article does not mention Biden ordering the US forces to prepare for possible nuclear confrontations with Russia, China, and North Korea.
+
+_________________________
+
+
+
+SummarizeResultPrompt - QUERY:
+
+# Instructions
+In order to find evidence that helps your fact-check, you just ran a web search which yielded a Search Result. **Your task right now is to summarize the Search Result.** What to include:
+* information that might be useful for the fact-check (see Record)
+* relevant images (refer to images by inserting their reference <image:k>)
+* if available: the release date as well as the author or the publisher (e.g. the media company) of the search result.
+
+Do NOT include:
+* advertisements
+* any other information not related to the Record or the Claim
+
+Additional rules:
+* Do not add any additional information besides the information in the Search Result.
+* If the Search Result doesn't contain any relevant information for the fact-checking work, simply print one word in capital letters: "NONE".
+* Keep your writing style like in the Examples 1, 2 and 3 provided to you.
+* Try to filter out relevant information even if the search result is in a different language.
+
+# Example 1
+The search result from America Today provides several photographs of the Notre-Dame Cathedral fire on April 15, 2019. <image:i>, <image:j>, <image:k>. None of the images show the Eiffel Tower in the background. 
+
+# Example 2
+NONE
+
+# Example 3
+The Guardian discusses a report blaming the Syrian government for a toxic gas attack and condemning their use of chemical weapons. The Guardian mentions the Chemical Weapons Convention and the responsibilities of Syria under the convention. According to The Guardian, The White House condemned the Assad regime for defying the norm against chemical weapons use.
+
+# Record
+## Claim
+Claim: "While serving as US President in 2024, Joe Biden ordered the US forces to prepare for possible nuclear confrontations with Russia, China, and North Korea."
+
+## Actions
+```
+web_search("Joe Biden US President nuclear confrontation Russia China North Korea")
+```
+
+# Search Result
+From [Source](https://www.aa.com.tr/en/americas/biden-approved-nuclear-strategy-focusing-on-china-report/3308990): 
+Content: "[Americas](https://www.aa.com.tr/en/americas)
+  
+  
+
+Biden approved nuclear strategy focusing on China: Report
+=========================================================
+
+#### President directed US forces to prepare for 'possible coordinated nuclear confrontations with Russia, China and North Korea,’ New York Times reports
+
+Rabia Iclal Turan  | 21.08.2024 - Update : 22.08.2024
+
+![Biden approved nuclear strategy focusing on China: Report](https://cdnuploads.aa.com.tr/uploads/Contents/2024/08/21/thumbs_b_c_a1cdb3ecc4f8f5a54c3ecf3b5317adb0.jpg?v=074110)  
+  
+
+[![](https://cdnassets.aa.com.tr/assets/newVersion/images/next-sosyal-icon.png)](https://sosyal.teknofest.app/share?url=http://v.aa.com.tr/3308990&text=Biden+approved+nuclear+strategy+focusing+on+China%3a+Report)
+[](http://www.facebook.com/sharer.php?u=http://v.aa.com.tr/3308990&p[images][0]=https://cdnuploads.aa.com.tr/uploads/Contents/2024/08/21/thumbs_b_c_a1cdb3ecc4f8f5a54c3ecf3b5317adb0.jpg?v=074110&p[title]=Biden approved nuclear strategy focusing on China: Report&p[summary]=President directed US forces to prepare for 'possible coordinated nuclear confrontations with Russia, China and North Korea,’ New York Times reports)
+[](https://twitter.com/intent/tweet?url=http://v.aa.com.tr/3308990&text=Biden+approved+nuclear+strategy+focusing+on+China%3a+Report)
+[](https://www.linkedin.com/shareArticle?mini=true&url=http://v.aa.com.tr/3308990&title=Biden+approved+nuclear+strategy+focusing+on+China%3a+Report)
+[](mailto:?subject=Biden+approved+nuclear+strategy+focusing+on+China%3a+Report&body=Biden+approved+nuclear+strategy+focusing+on+China%3a+Report http://v.aa.com.tr/3308990)
+[](#!)
+
+**WASHINGTON** 
+
+President Joe Biden approved a classified document in March directing US forces to get ready for potential "coordinated nuclear confrontations involving Russia, China and North Korea,” the New York Times reported Tuesday.
+
+The document, which is revised approximately every four years, is classified to such a degree that there are no electronic versions available. **Please contact us for subscription options.**](https://www.aa.com.tr/en/p/subscription/1001)
+
+###### Related topics
+
+[China](https://www.aa.com.tr/en/search/?s=China&tag=1)
+ [Joe Biden](https://www.aa.com.tr/en/search/?s=Joe+Biden&tag=1)
+ [North Korea](https://www.aa.com.tr/en/search/?s=North+Korea&tag=1)
+ [nuclear strategy](https://www.aa.com.tr/en/search/?s=nuclear+strategy&tag=1)
+ [nuclear weapons](https://www.aa.com.tr/en/search/?s=nuclear+weapons&tag=1)
+ [Russia](https://www.aa.com.tr/en/search/?s=Russia&tag=1)
+ [US](https://www.aa.com.tr/en/search/?s=US&tag=1)
+
+###### Bu haberi paylaşın
+
+[![](https://cdnassets.aa.com.tr/assets/newVersion/images/next-sosyal-icon.png)](https://sosyal.teknofest.app/share?url=http://v.aa.com.tr/3308990&text=Biden+approved+nuclear+strategy+focusing+on+China%3a+Report)
+ [](http://www.facebook.com/sharer.php?u=http://v.aa.com.tr/3308990&p[images][0]=https://cdnuploads.aa.com.tr/uploads/Contents/2024/08/21/thumbs_b_c_a1cdb3ecc4f8f5a54c3ecf3b5317adb0.jpg?v=074110&p[title]=Biden approved nuclear strategy focusing on China: Report&p[summary]=President directed US forces to prepare for 'possible coordinated nuclear confrontations with Russia, China and North Korea,’ New York Times reports)
+[](https://twitter.com/intent/tweet?url=http://v.aa.com.tr/3308990&text=Biden+approved+nuclear+strategy+focusing+on+China%3a+Report)
+[](https://www.linkedin.com/shareArticle?mini=true&url=https://www.aa.com.tr/en/americas/biden-approved-nuclear-strategy-focusing-on-china-report/3308990&title=Biden+approved+nuclear+strategy+focusing+on+China%3a+Report)
+[](mailto:?subject=Biden+approved+nuclear+strategy+focusing+on+China%3a+Report&body=Biden+approved+nuclear+strategy+focusing+on+China%3a+Report https://www.aa.com.tr/en/americas/biden-approved-nuclear-strategy-focusing-on-china-report/3308990)
+![](https://cdnassets.aa.com.tr/assets/newVersion/images/bip.png)
+
+![Analysis](https://cdnassets.aa.com.tr/assets/newVersion/images/analiz.png)
+
+[World](https://www.aa.com.tr/en/world)
+
+[###### Morning Briefing: Aug. Only a limited number of hard copies have been distributed to select national security officials and Pentagon leaders, the newspaper reported.
+
+The newspaper added, however, that in recent speeches, two senior administration officials were allowed to allude to the change prior to a more comprehensive and unclassified update to Congress that is anticipated before Biden's term concludes.
+
+The Pentagon believes that China’s nuclear arsenal will rival the size and diversity of US and Russian stockpiles over the next decade, the Times reported.
+
+“The president recently released updated guidance for nuclear weapons employment to address the presence of multiple nuclear-armed adversaries,” the newspaper cited Vipin Narang, a nuclear strategist from the Massachusetts Institute of Technology (MIT) who previously worked at the Pentagon, as saying earlier this month before returning to academia.
+
+He further noted that this guidance specifically considers “the significant increase in the size and diversity” of China’s nuclear arsenal, it added.
+
+In June, the National Security Council’s senior director for arms control and nonproliferation, Pranay Vaddi, said Biden "recently issued updated nuclear weapons employment guidance, which takes into account the realities of a new nuclear era."
+
+"It emphasizes the need to account for the growth and diversity of the PRC’s nuclear arsenal—and the need to deter Russia, the PRC and North Korea simultaneously," he added, referring to the People’s Republic of China, China’s official name.
+
+White House National Security Council spokesperson Sean Savett told Anadolu that the US nuclear policy is updated regularly as part of their efforts to "reduce nuclear risks and maintain stable deterrence.”
+
+"This administration—like the four administrations before it—issued a Nuclear Posture Review and Nuclear Weapons Employment Planning Guidance. 30, 2025](https://www.aa.com.tr/en/world/morning-briefing-aug-30-2025/3673279)
+
+Related news
+============
+
+[![South Korean regulator fines AliExpress $1.5M for misleading customers](https://cdnuploads.aa.com.tr/uploads/Contents/2025/08/31/thumbs_m_c_fb12e8d7157a59c8d847a80bd935f9dd.jpg?v=191347)](https://www.aa.com.tr/en/asia-pacific/south-korean-regulator-fines-aliexpress-15m-for-misleading-customers/3674474)
+
+[South Korean regulator fines AliExpress $1.5M for misleading customers](https://www.aa.com.tr/en/asia-pacific/south-korean-regulator-fines-aliexpress-15m-for-misleading-customers/3674474)
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+[![](https://cdnuploads.aa.com.tr/uploads/Contents/2025/08/31/thumbs_m_c_ea04e4c41038e40ad037c39ad3d9d76d.jpg?v=171347)](https://www.aa.com.tr/en/asia-pacific/kremlin-says-putin-xi-held-detailed-talks-ahead-of-sco-summit-in-china/3674437)
+[#### Kremlin says Putin-Xi held ‘detailed’ talks ahead of SCO summit in China](https://www.aa.com.tr/en/asia-pacific/kremlin-says-putin-xi-held-detailed-talks-ahead-of-sco-summit-in-china/3674437)
+
+[![](https://cdnuploads.aa.com.tr/uploads/Contents/2025/08/31/thumbs_m_c_a8d8a6da86bf78ef71356d2fd3a793a2.jpg?v=160104)](https://www.aa.com.tr/en/middle-east/60-of-gen-z-in-us-support-hamas-over-israel-survey/3674391)
+[#### 60% of Gen Z in US support Hamas over Israel: Survey](https://www.aa.com.tr/en/middle-east/60-of-gen-z-in-us-support-hamas-over-israel-survey/3674391)
+
+[![China’s Xi hosts foreign guests for banquet as part of SCO summit](https://cdnuploads.aa.com.tr/uploads/Contents/2025/08/31/thumbs_m_c_0309bda81759843490dbfa8ee6b98d2a.jpg?v=154616)](https://www.aa.com.tr/en/asia-pacific/china-s-xi-hosts-foreign-guests-for-banquet-as-part-of-sco-summit/3674379)
+[#### China’s Xi hosts foreign guests for banquet as part of SCO summit](https://www.aa.com.tr/en/asia-pacific/china-s-xi-hosts-foreign-guests-for-banquet-as-part-of-sco-summit/3674379)
+
+[![Xi hails Türkiye’s ‘self-reliance spirit,’ seeks to boost synergy between Belt and Road, Middle Corridor initiatives](https://cdnuploads.aa.com.tr/uploads/Contents/2025/08/31/thumbs_m_c_055830aab49a4c4f6da49eecfc01b82c.jpg?v=150937)](https://www.aa.com.tr/en/asia-pacific/xi-hails-turkiye-s-self-reliance-spirit-seeks-to-boost-synergy-between-belt-and-road-middle-corridor-initiatives/3674348)
+[#### Xi hails Türkiye’s ‘self-reliance spirit,’ seeks to boost synergy between Belt and Road, Middle Corridor initiatives](https://www.aa.com.tr/en/asia-pacific/xi-hails-turkiye-s-self-reliance-spirit-seeks-to-boost-synergy-between-belt-and-road-middle-corridor-initiatives/3674348)
+
+[![Turkish, Chinese presidents discuss Middle Corridor, Belt and Road Initiative](https://cdnuploads.aa.com.tr/uploads/Contents/2025/08/31/thumbs_m_c_01699105982615100b480c34979a8b52.jpg?v=141027)](https://www.aa.com.tr/en/asia-pacific/turkish-chinese-presidents-discuss-middle-corridor-belt-and-road-initiative/3674291)
+[#### Turkish, Chinese presidents discuss Middle Corridor, Belt and Road Initiative](https://www.aa.com.tr/en/asia-pacific/turkish-chinese-presidents-discuss-middle-corridor-belt-and-road-initiative/3674291)
+
+[We use cookies in a limited and restricted manner for specific purposes. 31, 2025](https://www.aa.com.tr/en/world/morning-briefing-aug-31-2025/3673993)
+
+* * *
+
+[###### China’s Xi hosts global leaders at SCO summit in Tianjin city](https://www.aa.com.tr/en/asia-pacific/china-s-xi-hosts-global-leaders-at-sco-summit-in-tianjin-city/3673984)
+
+* * *
+
+[###### UNRWA warns of ‘lost generation’ as 660,000 Gaza children remain out of school](https://www.aa.com.tr/en/middle-east/unrwa-warns-of-lost-generation-as-660-000-gaza-children-remain-out-of-school/3673886)
+
+* * *
+
+[###### Global Sumud Flotilla to begin sailing from Spain to Gaza on Sunday to challenge Israeli blockade](https://www.aa.com.tr/en/europe/global-sumud-flotilla-to-begin-sailing-from-spain-to-gaza-on-sunday-to-challenge-israeli-blockade/3673714)
+
+* * *
+
+[###### Morning Briefing: Aug."
+
+# Your Summary
+
+
+
+===== > RESPONSE:  < =====
+According to an article published on August 21, 2024, by Anadolu Agency, President Joe Biden approved a classified document in March directing US forces to prepare for potential "coordinated nuclear confrontations involving Russia, China and North Korea.” <image:0>
+
+_________________________
+
+
+
+SummarizeSummariesPrompt - QUERY:
+
+# Instructions
+You just retrieved web sources, each one summarized under "Web Sources". **Your task right now is to summarize the web source summaries.**
+
+Always adhere to the following rules:
+* Write only one to two paragraphs.
+* Include all URLs from the listed sources. Format them as Markdown hyperlinks.
+* Do not add any additional information besides the information in the summaries.
+* Include references (<image:k>) to all relevant images.
+
+# Record
+## Claim
+Claim: "While serving as US President in 2024, Joe Biden ordered the US forces to prepare for possible nuclear confrontations with Russia, China, and North Korea."
+
+## Actions
+```
+web_search("Joe Biden US President nuclear confrontation Russia China North Korea")
+```
+
+## Web Sources
+**Web Search Result**
+
+From [Source](https://www.theguardian.com/us-news/article/2024/aug/20/biden-nuclear-strategy-china-threat): 
+Content: The Guardian published an article on August 20, 2024, stating that Joe Biden approved a US nuclear strategy to prepare for possible nuclear confrontations with Russia, China, and North Korea. <image:13255> The White House said the plan was approved earlier this year and was not a response to a single country or threat. The article mentions that the US is prepared to shift from modernizing existing weapons to expanding its arsenal.
+
+
+From [Source](https://www.brookings.edu/articles/how-would-trump-and-biden-handle-us-nuclear-policy-upon-reelection/): 
+Content: The Brookings article discusses Biden's nuclear policy while in office. It mentions that Biden successfully deterred Russian nuclear escalation in the war in Ukraine. The article also states that the Biden administration has worked to stabilize relations with China, whose nuclear arsenal is expanding. The article also mentions that Biden has taken steps to stabilize the overall strategic nuclear relationship with Russia. The article does not mention Biden ordering the US forces to prepare for possible nuclear confrontations with Russia, China, and North Korea.
+
+
+From [Source](https://www.aa.com.tr/en/americas/biden-approved-nuclear-strategy-focusing-on-china-report/3308990): 
+Content: According to an article published on August 21, 2024, by Anadolu Agency, President Joe Biden approved a classified document in March directing US forces to prepare for potential "coordinated nuclear confrontations involving Russia, China and North Korea.” <image:0>
+
+
+## Your Summary
+
+
+
+===== > RESPONSE:  < =====
+According to an article published on August 20, 2024, by The Guardian, Joe Biden approved a US nuclear strategy to prepare for possible nuclear confrontations with Russia, China, and North Korea (<image:13255>). The White House said the plan was approved earlier this year and was not a response to a single country or threat.
+
+Anadolu Agency published an article on August 21, 2024, stating that President Joe Biden approved a classified document in March directing US forces to prepare for potential "coordinated nuclear confrontations involving Russia, China and North Korea” (<image:0>). A Brookings article discusses Biden's nuclear policy and does not mention Biden ordering the US forces to prepare for possible nuclear confrontations with Russia, China, and North Korea.
+
+_________________________
+
+
+
+DevelopPrompt - QUERY:
+
+# Instructions
+You just retrieved new Evidence. Now, **analyze the Claim's veracity using the evidence**. Always adhere to the following rules:
+* Focus on developing new insights. Do not repeat larger parts from the Record. Do not restate the Claim.
+* Write down your thoughts step-by-step. Whenever necessary, you may elaborate in more detail.
+* Depending on the topic's complexity, invest one to three paragraphs. The fewer, the better.
+* If you find that there is insufficient information to verify the Claim, explicitly state what information is missing.
+* If you cite web sources, always refer to them by including their URL as a Markdown hyperlink.
+* **Use information only from the recorded evidence**: Avoid inserting information that is not implied by the evidence. You may use commonsense knowledge, though.
+
+# Record
+## Claim
+Claim: "While serving as US President in 2024, Joe Biden ordered the US forces to prepare for possible nuclear confrontations with Russia, China, and North Korea."
+
+## Actions
+```
+web_search("Joe Biden US President nuclear confrontation Russia China North Korea")
+```
+
+## Evidence
+### Evidence from `web_search`
+According to an article published on August 20, 2024, by The Guardian, Joe Biden approved a US nuclear strategy to prepare for possible nuclear confrontations with Russia, China, and North Korea (<image:13255>). The White House said the plan was approved earlier this year and was not a response to a single country or threat.
+
+Anadolu Agency published an article on August 21, 2024, stating that President Joe Biden approved a classified document in March directing US forces to prepare for potential "coordinated nuclear confrontations involving Russia, China and North Korea” (<image:0>). A Brookings article discusses Biden's nuclear policy and does not mention Biden ordering the US forces to prepare for possible nuclear confrontations with Russia, China, and North Korea.
+
+
+# Your Analysis
+
+
+
+===== > RESPONSE:  < =====
+The evidence indicates that Joe Biden, while serving as US President, approved a US nuclear strategy to prepare for possible nuclear confrontations with Russia, China, and North Korea. The Guardian reported this on August 20, 2024, and the Anadolu Agency reported on August 21, 2024, that Biden approved a classified document in March directing US forces to prepare for potential "coordinated nuclear confrontations" involving the mentioned countries.
+
+_________________________
+
+
+
+JudgePrompt - QUERY:
+
+# Instructions
+**Determine the Claim's veracity** by following these steps:
+1. Briefly summarize the key insights from the fact-check (see Record) in at most one paragraph.
+2. Write one paragraph about which one of the Decision Options applies best. Include the most appropriate decision option at the end and enclose it in backticks like `this`.
+
+
+
+
+## Decision Options
+* `false`: The claim is not factually accurate. This is the case if one of the following three conditions is met:(1) The claim is demonstrably false when it is disproven by evidence from multiple and reliable sources,(2) The claim or image is taken out of context, i.e. the origin, content and/or meaning of a statement or an image is misrepresented. For example, an old claim or an old image is mispresented in a new context in a misleading way,(3) There is not enough evidence to verify the claim or the evidence is conflicting or self-contradictory.
+* `not enough information`: The fact-check does not contain sufficient information to come to an conclusion. For example,there is substantial lack of evidence or the evidence is inconclusive, conflicting or self-contradictory. In the case of a lack of evidence, state which information exactly is missing. In particular, if no RESULTS or sources are available, pick this decision.
+* `true`: The claim is factually accurate when it is confirmed by evidence from multiple and reliable sources.
+
+# Record
+## Claim
+Claim: "While serving as US President in 2024, Joe Biden ordered the US forces to prepare for possible nuclear confrontations with Russia, China, and North Korea."
+
+## Actions
+```
+web_search("Joe Biden US President nuclear confrontation Russia China North Korea")
+```
+
+## Evidence
+### Evidence from `web_search`
+According to an article published on August 20, 2024, by The Guardian, Joe Biden approved a US nuclear strategy to prepare for possible nuclear confrontations with Russia, China, and North Korea (<image:13255>). The White House said the plan was approved earlier this year and was not a response to a single country or threat.
+
+Anadolu Agency published an article on August 21, 2024, stating that President Joe Biden approved a classified document in March directing US forces to prepare for potential "coordinated nuclear confrontations involving Russia, China and North Korea” (<image:0>). A Brookings article discusses Biden's nuclear policy and does not mention Biden ordering the US forces to prepare for possible nuclear confrontations with Russia, China, and North Korea.
+
+
+## Elaboration
+The evidence indicates that Joe Biden, while serving as US President, approved a US nuclear strategy to prepare for possible nuclear confrontations with Russia, China, and North Korea. The Guardian reported this on August 20, 2024, and the Anadolu Agency reported on August 21, 2024, that Biden approved a classified document in March directing US forces to prepare for potential "coordinated nuclear confrontations" involving the mentioned countries.
+
+
+# Your Judgement
+
+
+
+===== > RESPONSE:  < =====
+The claim is supported by evidence from multiple sources, including The Guardian and Anadolu Agency, which report that President Biden approved a US nuclear strategy to prepare for possible nuclear confrontations with Russia, China, and North Korea. Therefore, the claim is factually accurate. `true`
+
+_________________________
+
+
+
+SummarizeDocPrompt - QUERY:
+
+# Instructions
+You are provided with the record of a fact-check. It contains the Claim to be verified and a documentation of all the fact-checking work along the gathered evidence. Your task is to **summarize the fact-check**. That is, you provide a concise, one-paragraph justification for the final VERDICT based on the knowledge from the Record. Note:
+* Be truthful, brief, do not add any additional information besides the information given in the Record. 
+* Link key sources in your summary. Use Markdown notation for that. You may link them in-line.
+* Don't state the Claim again. Rather focus on the key insights of the fact-check.
+* Simply print just the summary.
+
+# Record
+## Claim
+Claim: "While serving as US President in 2024, Joe Biden ordered the US forces to prepare for possible nuclear confrontations with Russia, China, and North Korea."
+
+## Actions
+```
+web_search("Joe Biden US President nuclear confrontation Russia China North Korea")
+```
+
+## Evidence
+### Evidence from `web_search`
+According to an article published on August 20, 2024, by The Guardian, Joe Biden approved a US nuclear strategy to prepare for possible nuclear confrontations with Russia, China, and North Korea (<image:13255>). The White House said the plan was approved earlier this year and was not a response to a single country or threat.
+
+Anadolu Agency published an article on August 21, 2024, stating that President Joe Biden approved a classified document in March directing US forces to prepare for potential "coordinated nuclear confrontations involving Russia, China and North Korea” (<image:0>). A Brookings article discusses Biden's nuclear policy and does not mention Biden ordering the US forces to prepare for possible nuclear confrontations with Russia, China, and North Korea.
+
+
+## Elaboration
+The evidence indicates that Joe Biden, while serving as US President, approved a US nuclear strategy to prepare for possible nuclear confrontations with Russia, China, and North Korea. The Guardian reported this on August 20, 2024, and the Anadolu Agency reported on August 21, 2024, that Biden approved a classified document in March directing US forces to prepare for potential "coordinated nuclear confrontations" involving the mentioned countries.
+
+
+## Final Judgement
+The claim is supported by evidence from multiple sources, including The Guardian and Anadolu Agency, which report that President Biden approved a US nuclear strategy to prepare for possible nuclear confrontations with Russia, China, and North Korea. Therefore, the claim is factually accurate. `true`
+
+
+## Summary
+
+
+
+===== > RESPONSE:  < =====
+Based on reports from sources like *The Guardian* and *Anadolu Agency*, the claim is accurate. These sources indicate that President Joe Biden approved a US nuclear strategy to prepare for potential nuclear confrontations with Russia, China, and North Korea.
+
+_________________________
+
+
+
+PlanPrompt - QUERY:
+
+# Instructions
+The available knowledge is insufficient to assess the Claim. Therefore, **propose a set of actions** to retrieve new and helpful evidence. Adhere to the following rules:
+* The actions available are listed under Valid Actions, including a short description for each action. No other actions are possible at this moment. 
+* For each action, use the formatting as specified in Valid Actions.
+* Include all actions in a single Markdown code block at the end of your answer.
+* Propose as few actions as possible, but as much as needed. Do not propose similar or previously used actions.
+
+
+
+## Valid Actions
+* `reverse_search`
+   * Description: Performs a reverse image search to find similar images on the web.
+   * How to use: Provide an image and the model will perform a reverse search to find similar images.
+   * Format: reverse_search(<image:k>), where `k` is the image's ID
+
+* `image_search`
+   * Description: Run an image search on Google to retrieve related images for a given query.
+   * How to use: This is a helpful tool for fact-checking images. Use this to retrieve images associated with a specific keyword or phrase. Ensure that the query is clear and specific to improve search accuracy. If no relevant images are found, refine the query or use more descriptive terms.
+   * Format: image_search("your image search query goes here")
+
+* `web_search`
+   * Description: Run an open web search on Google or DuckDuckGO to retrieve any related webpage.
+   * How to use: Do not use this with a previously used or similar query from previous web searches. If a previous web search did not yield any results, use a very different query.
+   * Format: web_search("your web search query goes here")
+
+# Example: reverse_search()
+
+## Claim
+Text: "<image:k> shows a rare event of a solar eclipse with a double ring."
+
+...
+
+## Actions
+```
+reverse_search(<image:k>)
+```
+
+# Example: image_search()
+
+## Claim
+Text: "Chinese officials in white protective hazmat suits carried people down a hallway to be quarantined for having COVID-19 in November 2022."
+
+...
+
+ACTIONS:
+```
+image_search("China officials white suits carry people")
+image_search("China officials carry people COVID quarantine 2022")
+```
+
+# Example: web_search()
+
+## Claim
+Text: "New Zealand’s new Food Bill bans gardening"
+Claim date: October 29, 2020
+
+...
+
+## Actions
+```
+web_search("New Zealand Food Bill 2020")
+web_search("New Zealand Food Bill gardening ban")
+```
+
+# Record
+## Claim
+Claim: "<image:26> This image shows destroyed Ukrainian tanks during Ukraine's incursion into Russia's Kursk Oblast in August 2024."
+
+# Your Actions
+
+
+
+===== > RESPONSE:  < =====
+```
+reverse_search(<image:26>)
+web_search("Ukraine Russia Kursk Oblast August 2024 tanks")
+```
+_________________________
+
+
+
+SummarizeResultPrompt - QUERY:
+
+# Instructions
+In order to find evidence that helps your fact-check, you just ran a web search which yielded a Search Result. **Your task right now is to summarize the Search Result.** What to include:
+* information that might be useful for the fact-check (see Record)
+* relevant images (refer to images by inserting their reference <image:k>)
+* if available: the release date as well as the author or the publisher (e.g. the media company) of the search result.
+
+Do NOT include:
+* advertisements
+* any other information not related to the Record or the Claim
+
+Additional rules:
+* Do not add any additional information besides the information in the Search Result.
+* If the Search Result doesn't contain any relevant information for the fact-checking work, simply print one word in capital letters: "NONE".
+* Keep your writing style like in the Examples 1, 2 and 3 provided to you.
+* Try to filter out relevant information even if the search result is in a different language.
+
+# Example 1
+The search result from America Today provides several photographs of the Notre-Dame Cathedral fire on April 15, 2019. <image:i>, <image:j>, <image:k>. None of the images show the Eiffel Tower in the background. 
+
+# Example 2
+NONE
+
+# Example 3
+The Guardian discusses a report blaming the Syrian government for a toxic gas attack and condemning their use of chemical weapons. The Guardian mentions the Chemical Weapons Convention and the responsibilities of Syria under the convention. According to The Guardian, The White House condemned the Assad regime for defying the norm against chemical weapons use.
+
+# Record
+## Claim
+Claim: "<image:26> This image shows destroyed Ukrainian tanks during Ukraine's incursion into Russia's Kursk Oblast in August 2024."
+
+## Actions
+```
+reverse_search(<image:26>)
+web_search("Ukraine Russia Kursk Oblast August 2024 tanks")
+```
+
+# Search Result
+From [Source](https://en.sputniknews.africa/20241017/ukraine-has-reportedly-lost-about-40-leopard-tanks-since-february-2022-1068726197.html): Found exact image on website with title: Ukraine Has Reportedly Lost About 40 Leopard Tanks Since ...
+Content: "[](https://en.sputniknews.africa "Sputnik Africa")
+
+*   [](https://en.sputniknews.africa "Sputnik Africa")
+    
+*   [](https://en.sputniknews.africa/20241017/ "News")
+    
+*   [](https://en.sputniknews.africa/20241017/ukraine-has-reportedly-lost-about-40-leopard-tanks-since-february-2022-1068726197.html "Ukraine Has Reportedly Lost About 40 Leopard Tanks Since February 2022")
+    
+
+[! - Sputnik Africa, 1920, 10.04.2023 <image:2766>\
+\
+Russia's Special Operation in Ukraine\
+\
+On February 24, 2022, Russia launched its special military operation in Ukraine, aiming to liberate and defend the inhabitants of the Donbass region, where people have been suffering from a blockade and regular attacks by the Kiev regime's forces since 2014.](/russias-special-operation-in-ukraine/ "Russia's Special Operation in Ukraine")
+
+https://en.sputniknews.africa/20241017/ukraine-has-reportedly-lost-about-40-leopard-tanks-since-february-2022-1068726197.html
+
+[](https://en.sputniknews.africa/20241017/ukraine-has-reportedly-lost-about-40-leopard-tanks-since-february-2022-1068726197.html "Ukraine Has Reportedly Lost About 40 Leopard Tanks Since February 2022")
+
+Ukraine Has Reportedly Lost About 40 Leopard Tanks Since February 2022
+
+Ukraine Has Reportedly Lost About 40 Leopard Tanks Since February 2022
+
+Sputnik Africa
+
+MOSCOW (Sputnik) - Ukraine has lost around 40 Leopard tanks since the beginning of Russia's special military operation in February 2022, the Business Insider... 17.10.2024, Sputnik Africa
+
+2024-10-17T10:12+0200
+
+2024-10-17T10:12+0200
+
+2024-10-17T13:02+0200
+
+russia's special operation in ukraine
+
+ukraine
+
+russia
+
+international
+
+leopard 2
+
+tank
+
+weapon
+
+conflict
+
+https://cdn1.img.sputniknews.africa/img/07e8/07/0d/1067487443\_0:0:3564:2004\_1920x0\_80\_0\_0\_7733207e8d6471ece40fd505c0b45362.jpg
+
+Some open-source estimates suggest that Ukraine had already lost nearly 40 Leopards, but those estimates are unconfirmed so far, according to the report. Russia repeatedly stated that arms supplies to Ukraine hinder the settlement and directly involve NATO countries in the conflict. Russian Foreign Minister Sergey Lavrov said that the United States and NATO were directly involved in the conflict not only by providing weapons but also by training Ukrainian personnel in European countries.
+
+https://en.sputniknews.africa/20231104/quarter-of-leopard-2-tanks-written-off-by-ukraine-just-over-week-1063322121.html
+
+ukraine
+
+russia
+
+Sputnik Africa
+
+[](https://en.sputniknews.africa "Sputnik Africa")
+
+feedback@sputniknews.com
+
++74956456601
+
+MIA „Rossiya Segodnya“
+
+[](https://t.me/sputnik_africa)
+[](https://t.me/sputnik_afrique)
+[](https://t.me/sputnik_ethiopia)
+[](https://x.com/sputnik_africa)
+[](https://x.com/sputnik_afrique)
+[](https://x.com/sputnik_ethio)
+[](https://x.com/sputnik_swahili)
+
+[](https://en.sputniknews.africa/i/logo/logo.png "Sputnik Africa")
+[](https://en.sputniknews.africa/i/logo/logo.png "Sputnik Africa")
+
+252
+
+60
+
+2024
+
+Sputnik Africa
+
+[](https://en.sputniknews.africa "Sputnik Africa")
+
+feedback@sputniknews.com
+
++74956456601
+
+MIA „Rossiya Segodnya“
+
+[](https://t.me/sputnik_africa)
+[](https://t.me/sputnik_afrique)
+[](https://t.me/sputnik_ethiopia)
+[](https://x.com/sputnik_africa)
+[](https://x.com/sputnik_afrique)
+[](https://x.com/sputnik_ethio)
+[](https://x.com/sputnik_swahili)
+
+[](https://en.sputniknews.africa/i/logo/logo.png "Sputnik Africa")
+[](https://en.sputniknews.africa/i/logo/logo.png "Sputnik Africa")
+
+252
+
+60
+
+News
+
+en\_EN
+
+Sputnik Africa
+
+[](https://en.sputniknews.africa "Sputnik Africa")
+
+feedback@sputniknews.com
+
++74956456601
+
+MIA „Rossiya Segodnya“
+
+[](https://t.me/sputnik_africa)
+[](https://t.me/sputnik_afrique)
+[](https://t.me/sputnik_ethiopia)
+[](https://x.com/sputnik_africa)
+[](https://x.com/sputnik_afrique)
+[](https://x.com/sputnik_ethio)
+[](https://x.com/sputnik_swahili)
+
+[](https://en.sputniknews.africa/i/logo/logo.png "Sputnik Africa")
+[](https://en.sputniknews.africa/i/logo/logo.png "Sputnik Africa")
+
+252
+
+60
+
+[](https://cdn1.img.sputniknews.africa/img/07e8/07/0d/1067487443_0:0:3564:2004_1920x0_80_0_0_7733207e8d6471ece40fd505c0b45362.jpg "A Leopard 2 tank as a part of weapons deliveries to Ukraine")
+[](https://cdn1.img.sputniknews.africa/img/07e8/07/0d/1067487443_0:0:3564:2004_1920x0_80_0_0_7733207e8d6471ece40fd505c0b45362.jpg "A Leopard 2 tank as a part of weapons deliveries to Ukraine")
+
+1920
+
+1080
+
+true
+
+ <image:2767>
+
+[](https://cdn1.img.sputniknews.africa/img/07e8/07/0d/1067487443_252:0:2983:2048_1920x0_80_0_0_444c3617e32e6e66d731b38fccd8b1cd.jpg "A Leopard 2 tank as a part of weapons deliveries to Ukraine")
+[](https://cdn1.img.sputniknews.africa/img/07e8/07/0d/1067487443_252:0:2983:2048_1920x0_80_0_0_444c3617e32e6e66d731b38fccd8b1cd.jpg "A Leopard 2 tank as a part of weapons deliveries to Ukraine")
+
+1920
+
+1440
+
+true
+
+https://cdn1.img.sputniknews.africa/img/07e8/07/0d/1067487443\_252:0:2983:2048\_1920x0\_80\_0\_0\_444c3617e32e6e66d731b38fccd8b1cd.jpg <image:2768>
+
+[](https://cdn1.img.sputniknews.africa/img/07e8/07/0d/1067487443_593:0:2641:2048_1920x0_80_0_0_641c21d50bc8ff59d5f188705019fc86.jpg "A Leopard 2 tank as a part of weapons deliveries to Ukraine")
+[](https://cdn1.img.sputniknews.africa/img/07e8/07/0d/1067487443_593:0:2641:2048_1920x0_80_0_0_641c21d50bc8ff59d5f188705019fc86.jpg "A Leopard 2 tank as a part of weapons deliveries to Ukraine")
+
+1920
+
+1920
+
+true
+
+[](https://cdn1.img.sputniknews.africa/img/07e8/07/0d/1067487443_593:0:2641:2048_1920x0_80_0_0_641c21d50bc8ff59d5f188705019fc86.jpg "A Leopard 2 tank as a part of weapons deliveries to Ukraine")
+
+Sputnik Africa
+
+[](https://en.sputniknews.africa "Sputnik Africa")
+
+feedback@sputniknews.com
+
++74956456601
+
+MIA „Rossiya Segodnya“
+
+[](https://t.me/sputnik_africa)
+[](https://t.me/sputnik_afrique)
+[](https://t.me/sputnik_ethiopia)
+[](https://x.com/sputnik_africa)
+[](https://x.com/sputnik_afrique)
+[](https://x.com/sputnik_ethio)
+[](https://x.com/sputnik_swahili)
+
+[](https://en.sputniknews.africa/i/logo/logo.png "Sputnik Africa")
+[](https://en.sputniknews.africa/i/logo/logo.png "Sputnik Africa")
+
+252
+
+60
+
+Sputnik Africa
+
+ukraine, russia, international, leopard 2, tank, weapon, conflict
+
+ukraine, russia, international, leopard 2, tank, weapon, conflict
+
+Ukraine Has Reportedly Lost About 40 Leopard Tanks Since February 2022
+======================================================================
+
+[10:12 17.10.2024](/20241017/ "News archive")
+ (Updated: 13:02 17.10.2024)
+
+© AP Photo / Michael SohnA Leopard 2 tank as a part of weapons deliveries to Ukraine
+
+![A Leopard 2 tank as a part of weapons deliveries to Ukraine - Sputnik Africa, 1920, 17.10.2024](https://cdn1.img.sputniknews.africa/img/07e8/07/0d/1067487443_0:0:3564:2004_1920x0_80_0_0_7733207e8d6471ece40fd505c0b45362.jpg "A Leopard 2 tank as a part of weapons deliveries to Ukraine")
+
+© AP Photo / Michael Sohn
+
+Subscribe
+
+MOSCOW (Sputnik) - Ukraine has lost around 40 Leopard tanks since the beginning of Russia's special military operation in February 2022, the Business Insider news outlet reported on Thursday.
+
+Some open-source estimates suggest that Ukraine had already [lost](https://en.sputniknews.africa/20241013/1068665538.html)
+ nearly 40 Leopards, but those estimates are unconfirmed so far, according to the report.
+
+Russia repeatedly stated that arms supplies to Ukraine hinder the settlement and directly involve NATO countries in the conflict. Russian Foreign Minister Sergey Lavrov said that the United States and [NATO](https://en.sputniknews.africa/20240512/1066501213.html)
+ were directly involved in the conflict not only by providing weapons but also by training Ukrainian personnel in European countries.
+
+[![Leopard 2 and Bradley pictured among destroyed and damaged Ukrainian vehicles. Screenshot of Russian Defense Ministry video. - Sputnik Africa, 1920, 04.11.2023](https://cdn1.img.sputniknews.africa/img/07e7/08/05/1061086329_0:221:1360:765_1920x0_80_0_0_e3c9d50c9e4682697a50f5d445b1b805.jpg "Leopard 2 and Bradley pictured among destroyed and damaged Ukrainian vehicles. Screenshot of Russian Defense Ministry video.")](/20231104/quarter-of-leopard-2-tanks-written-off-by-ukraine-just-over-week-1063322121.html "Quarter of Leopard 2 Tanks 'Written Off' by Ukraine Just Over Week")
+
+[Russia's Special Operation in Ukraine](/russias-special-operation-in-ukraine/ "Russia's Special Operation in Ukraine")
+
+[Quarter of Leopard 2 Tanks 'Written Off' by Ukraine Just Over Week](/20231104/quarter-of-leopard-2-tanks-written-off-by-ukraine-just-over-week-1063322121.html "Quarter of Leopard 2 Tanks 'Written Off' by Ukraine Just Over Week")
+
+4 November 2023, 15:10
+
+*   [Russia's Special Operation in Ukraine](/russias-special-operation-in-ukraine/ "Russia's Special Operation in Ukraine")
+    
+*   [Ukraine](/location_ukraine/ "Ukraine")
+    
+*   [Russia](/location_russia/ "Russia")
+    
+*   [International](/category_international/ "International")
+    
+*   [Leopard 2](/product_leopard-2/ "Leopard 2")
+    
+*   [tank](/category_tank/ "tank")
+    
+*   [weapon](/common_weapon/ "weapon")
+    
+*   [conflict](/category_conflict/ "conflict")
+    
+
+Newsfeed
+
+0
+
+![](https://cdn1.img.sputniknews.africa/i/loader.svg?)
+
+![](https://cdn1.img.sputniknews.africa/i/loader.svg?)
+
+![](https://cdn1.img.sputniknews.africa/i/loader.svg?)"
+
+# Your Summary
+
+
+
+===== > RESPONSE:  < =====
+The search result from Sputnik Africa, published on October 17, 2024, reports that Ukraine has lost around 40 Leopard tanks since the beginning of Russia's special military operation in February 2022. <image:2766>, <image:2767>, <image:2768>. The article also mentions that Russia repeatedly stated that arms supplies to Ukraine hinder the settlement and directly involve NATO countries in the conflict. The article includes an image of a Leopard 2 tank.
+
+_________________________
+
+
+
+SummarizeResultPrompt - QUERY:
+
+# Instructions
+In order to find evidence that helps your fact-check, you just ran a web search which yielded a Search Result. **Your task right now is to summarize the Search Result.** What to include:
+* information that might be useful for the fact-check (see Record)
+* relevant images (refer to images by inserting their reference <image:k>)
+* if available: the release date as well as the author or the publisher (e.g. the media company) of the search result.
+
+Do NOT include:
+* advertisements
+* any other information not related to the Record or the Claim
+
+Additional rules:
+* Do not add any additional information besides the information in the Search Result.
+* If the Search Result doesn't contain any relevant information for the fact-checking work, simply print one word in capital letters: "NONE".
+* Keep your writing style like in the Examples 1, 2 and 3 provided to you.
+* Try to filter out relevant information even if the search result is in a different language.
+
+# Example 1
+The search result from America Today provides several photographs of the Notre-Dame Cathedral fire on April 15, 2019. <image:i>, <image:j>, <image:k>. None of the images show the Eiffel Tower in the background. 
+
+# Example 2
+NONE
+
+# Example 3
+The Guardian discusses a report blaming the Syrian government for a toxic gas attack and condemning their use of chemical weapons. The Guardian mentions the Chemical Weapons Convention and the responsibilities of Syria under the convention. According to The Guardian, The White House condemned the Assad regime for defying the norm against chemical weapons use.
+
+# Record
+## Claim
+Claim: "<image:26> This image shows destroyed Ukrainian tanks during Ukraine's incursion into Russia's Kursk Oblast in August 2024."
+
+## Actions
+```
+reverse_search(<image:26>)
+web_search("Ukraine Russia Kursk Oblast August 2024 tanks")
+```
+
+# Search Result
+From [Source](https://www.themoscowtimes.com/2023/06/13/russia-says-german-leopard-tanks-us-bradleys-captured-in-ukraine-a81492): Found exact image on website with title: Russia Says German Leopard Tanks, U.S. Bradleys Captured in ...
+Content: "[![The Moscow Times](https://static.themoscowtimes.com/img/logo_tmt_30_yo.svg)](https://www.themoscowtimes.com/ "The Moscow Times - Independent News from Russia")
+
+Support The Moscow Times!
+
+[Contribute today](https://www.themoscowtimes.com/contribute?utm_source=contribute&utm_medium=internal-header)
+
+[](https://www.themoscowtimes.com/account)
+
+[My account](https://www.themoscowtimes.com/account)
+ [Signout](https://www.themoscowtimes.com/account/signout)
+
+Support The Moscow Times!
+
+[Contribute today](https://www.themoscowtimes.com/contribute?utm_source=contribute&utm_medium=internal-header-mobile)
+
+By [AFP](https://www.themoscowtimes.com/author/afp "AFP")
+
+June 13, 2023
+
+! <image:2769>
+
+Ukrainian Armed Forces destroyed in the Zaporozhye direction. Russian Defence Ministry / TASS
+
+Moscow said Tuesday that it had captured several German Leopard tanks and U.S. Bradley infantry fighting vehicles, releasing footage showing Russian troops surveying the equipment supplied to Ukraine by Western countries.
+
+"Leopard tanks and Bradley infantry fighting vehicles. These are our trophies. Equipment of the Ukrainian armed forces in the Zaporizhzhia region," the Russian Defense Ministry said in a statement.
+
+"Servicemen of the Vostok group inspect enemy tanks and infantry fighting vehicles captured in battle."
+
+Kyiv has appealed to its allies in the West to deliver a broad range of modern military equipment to help Ukrainian forces recapture large swathes of territory controlled by Russian forces.
+
+The Defense Ministry said several of the captured vehicles had working engines, suggesting that the battles they were involved in had been short and that Ukrainian troops had "fled" their offensive positions.
+
+Read more about: [Ukraine war](https://www.themoscowtimes.com/tag/ukraine-war "Ukraine war")
+
+#### Sign up for our free weekly newsletter
+
+Our weekly newsletter contains a hand-picked selection of news, features, analysis and more from The Moscow Times. You will receive it in your mailbox every Friday. Never miss the latest news from Russia. [Preview](https://www.themoscowtimes.com/newsletterpreview/article)
+
+  Subscribe
+
+_Subscribers agree to the [Privacy Policy](https://www.themoscowtimes.com/page/privacy-policy)
+_
+
+We sent a confirmation to your email. Please confirm your subscription.
+
+**A Message from The Moscow Times:**
+
+Dear readers,
+
+We are facing unprecedented challenges. Russia's Prosecutor General's Office has designated The Moscow Times as an "undesirable" organization, criminalizing our work and putting our staff at risk of prosecution. This follows our earlier unjust labeling as a "foreign agent."
+
+These actions are direct attempts to silence independent journalism in Russia. The authorities claim our work "discredits the decisions of the Russian leadership." We see things differently: we strive to provide accurate, unbiased reporting on Russia.
+
+We, the journalists of The Moscow Times, refuse to be silenced. But to continue our work, [we need your help](https://www.themoscowtimes.com/contribute?utm_source=contribute&utm_medium=article "we need your help")
+.
+
+Your support, no matter how small, makes a world of difference. If you can, please support us monthly starting from just $2. It's quick to set up, and every contribution makes a significant impact.
+
+By supporting The Moscow Times, you're defending open, independent journalism in the face of repression. Thank you for standing with us.
+
+Once
+
+Monthly
+
+Annual
+
+Continue
+
+!paiment methods <image:2770>
+
+Not ready to support today?  
+Remind me later.
+
+×
+
+#### **Remind me next month**
+
+Remind me
+
+Thank you! Your reminder is set.
+
+We will send you one reminder email a month from now. For details on the personal data we collect and how it is used, please see our [Privacy Policy](https://www.themoscowtimes.com/page/privacy-policy "privacy policy")
+.
+
+Read more
+---------
+
+[! <image:2771>\
+\
+opinion Ionuț-Vlad Şutea\
+\
+### How to Understand Russia’s Shadow War Against the West\
+\
+Russia’s strategy of attacking the West without escalating to the level of open war is an evolving threat we cannot afford to ignore.\
+\
+5 Min read](https://www.themoscowtimes.com/2024/07/24/how-to-understand-russias-shadow-war-against-the-west-a85814 "How to Understand Russia’s Shadow War Against the West")
+
+[! <image:2772>\
+\
+### Two Killed in Overnight Strikes on Ukraine\
+\
+Around 50 buildings were damaged in the bombardment.\
+\
+1 Min read](https://www.themoscowtimes.com/2024/07/20/two-killed-in-overnight-strikes-on-ukraine-a85775 "Two Killed in Overnight Strikes on Ukraine")
+
+[! <image:2773>\
+\
+### Russian Attacks in Southern Ukraine Kill 2\
+\
+In the town of Bilozerka, "massive strikes by Russian rocket artillery" left two dead, the Kherson region Governor Oleksandr Prokudin said.\
+\
+1 Min read](https://www.themoscowtimes.com/2024/07/19/russian-attacks-in-southern-ukraine-kill-2-a85769 "Russian Attacks in Southern Ukraine Kill 2")
+
+[! <image:2774>\
+\
+### Russia Says Destroyed Dozens of Ukrainian Drones in Annexed Crimea\
+\
+Videos shared on social media showed what appeared to be Russian defense forces blowing up waterborne drones off the coast of Crimea.\
+\
+1 Min read](https://www.themoscowtimes.com/2024/07/18/russia-says-destroyed-dozens-of-ukrainian-drones-in-annexed-crimea-a85748 "Russia Says Destroyed Dozens of Ukrainian Drones in Annexed Crimea")"
+
+# Your Summary
+
+
+
+===== > RESPONSE:  < =====
+The Moscow Times published an article on June 13, 2023, stating that Russia had captured German Leopard tanks and U.S. Bradley infantry fighting vehicles in the Zaporizhzhia region. <image:2769> shows destroyed tanks. The article mentions that the Russian Defense Ministry released footage of Russian troops surveying the equipment supplied to Ukraine by Western countries.
+
+_________________________
+
+
+
+SummarizeResultPrompt - QUERY:
+
+# Instructions
+In order to find evidence that helps your fact-check, you just ran a web search which yielded a Search Result. **Your task right now is to summarize the Search Result.** What to include:
+* information that might be useful for the fact-check (see Record)
+* relevant images (refer to images by inserting their reference <image:k>)
+* if available: the release date as well as the author or the publisher (e.g. the media company) of the search result.
+
+Do NOT include:
+* advertisements
+* any other information not related to the Record or the Claim
+
+Additional rules:
+* Do not add any additional information besides the information in the Search Result.
+* If the Search Result doesn't contain any relevant information for the fact-checking work, simply print one word in capital letters: "NONE".
+* Keep your writing style like in the Examples 1, 2 and 3 provided to you.
+* Try to filter out relevant information even if the search result is in a different language.
+
+# Example 1
+The search result from America Today provides several photographs of the Notre-Dame Cathedral fire on April 15, 2019. <image:i>, <image:j>, <image:k>. None of the images show the Eiffel Tower in the background. 
+
+# Example 2
+NONE
+
+# Example 3
+The Guardian discusses a report blaming the Syrian government for a toxic gas attack and condemning their use of chemical weapons. The Guardian mentions the Chemical Weapons Convention and the responsibilities of Syria under the convention. According to The Guardian, The White House condemned the Assad regime for defying the norm against chemical weapons use.
+
+# Record
+## Claim
+Claim: "<image:26> This image shows destroyed Ukrainian tanks during Ukraine's incursion into Russia's Kursk Oblast in August 2024."
+
+## Actions
+```
+reverse_search(<image:26>)
+web_search("Ukraine Russia Kursk Oblast August 2024 tanks")
+```
+
+# Search Result
+From [Source](https://defencesecurityasia.com/en/german-made-leopard-tanks-bear-the-brunt-of-russian-forces-rejuvenation-in-ukraine/): Found exact image on website with title: German-Made Leopard Tanks Bear The Brunt of Russian Forces ...
+Content: "[!Defence Security Asia <image:2775>](https://defencesecurityasia.com/en/home-en/)
+
+German-Made Leopard Tanks Bear The Brunt of Russian Forces’ “Rejuvenation” in Ukraine”
+======================================================================================
+
+In addition to the Leopard tanks, the Russian Ministry of Defense also alleged that 13 armored vehicles, 55 various vehicles, "Grad" multiple rocket launcher systems, and 47 artillery units—22 of which were supplied by foreign countries—were destroyed during this period.
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+[Image](https://defencesecurityasia.com/en/type/image/)
+[News](https://defencesecurityasia.com/en/category/news/)
+[International](https://defencesecurityasia.com/en/category/news/international-en/)
+[Technology](https://defencesecurityasia.com/en/category/technology/)
+
+[By **admin**](https://defencesecurityasia.com/en/author/dsa-a/ "Browse Author Articles")
+ On **May 19, 2024**
+
+ <image:2776>
+
+The captured Ukrainian's Leopard 2A6 main battle tanks on its way to Moscow.
+
+**Share**[](https://www.facebook.com/sharer.php?u=https%3A%2F%2Fdefencesecurityasia.com%2Fen%2Fgerman-made-leopard-tanks-bear-the-brunt-of-russian-forces-rejuvenation-in-ukraine%2F)
+[](https://twitter.com/share?text=German-Made Leopard Tanks Bear The Brunt of Russian Forces’ “Rejuvenation” in Ukraine”&url=https%3A%2F%2Fdefencesecurityasia.com%2Fen%2Fgerman-made-leopard-tanks-bear-the-brunt-of-russian-forces-rejuvenation-in-ukraine%2F)
+[](https://plus.google.com/share?url=https%3A%2F%2Fdefencesecurityasia.com%2Fen%2Fgerman-made-leopard-tanks-bear-the-brunt-of-russian-forces-rejuvenation-in-ukraine%2F)
+[](https://reddit.com/submit?url=https%3A%2F%2Fdefencesecurityasia.com%2Fen%2Fgerman-made-leopard-tanks-bear-the-brunt-of-russian-forces-rejuvenation-in-ukraine%2F&title=German-Made Leopard Tanks Bear The Brunt of Russian Forces’ “Rejuvenation” in Ukraine”)
+[](whatsapp://send?text=German-Made Leopard Tanks Bear The Brunt of Russian Forces’ “Rejuvenation” in Ukraine” %0A%0A https%3A%2F%2Fdefencesecurityasia.com%2Fen%2Fgerman-made-leopard-tanks-bear-the-brunt-of-russian-forces-rejuvenation-in-ukraine%2F)
+[](https://pinterest.com/pin/create/button/?url=https%3A%2F%2Fdefencesecurityasia.com%2Fen%2Fgerman-made-leopard-tanks-bear-the-brunt-of-russian-forces-rejuvenation-in-ukraine%2F&media=https://i0.wp.com/defencesecurityasia.com/wp-content/uploads/2024/04/20240423_000828-1.jpg?fit=640%2C427&ssl=1&description=German-Made Leopard Tanks Bear The Brunt of Russian Forces’ “Rejuvenation” in Ukraine”)
+[](/cdn-cgi/l/email-protection#4b74383e29212e283f760c2e39262a2566062a2f2e6b072e243b2a392f6b1f2a2520386b092e2a396b1f232e6b09393e253f6b242d6b193e3838222a256b0d2439282e386d6873797a7c706b6d687379797b70192e213e3d2e252a3f2224256d687379797a706b22256b1e20392a22252e6d687379797a706d29242f3276233f3f3b386e780a6e790d6e790d2f2e2d2e25282e382e283e39223f322a38222a652824266e790d2e256e790d2c2e39262a2566262a2f2e66272e243b2a392f663f2a25203866292e2a39663f232e6629393e253f66242d66393e3838222a25662d2439282e3866392e213e3d2e252a3f222425662225663e20392a22252e6e790d)
+
+**(DEFENCE SECURITY ASIA) — During the week of May 11 to 17, Russian military claimed to have successfully destroyed five Leopard 2A1 tanks, manufactured by the German company Krauss-Maffei but donated to the Ukrainian Armed Forces to help the Eastern Europe country in its armed conflict with Russia.**
+
+**In addition to the Leopard tanks, the Russian Ministry of Defense also alleged that 13 armored vehicles, 55 various vehicles, “Grad” multiple rocket launcher systems, and 47 artillery units—22 of which were supplied by foreign countries—were destroyed during this period.**
+
+**Moreover, four Mi-24 helicopters and 40 unmanned boats belonging to the Ukrainian military were reportedly destroyed by Russia in the same timeframe.**
+
+**Among the foreign-supplied armored vehicles to Ukraine, the Leopard tanks have been the most frequently supplied to Kyiv compared to other models such as the American-made Abrams and the British-made Challengers.**
+
+**Since last year, countries such as Germany and several other European nations have supplied between 100-200 Leopard tanks to Ukraine for use in a spring counteroffensive against Russian positions.**
+
+**“Russian Soldiers Pose in Front of Captured Leopard 2A6 Tank”**
+
+**Line of Leopard tanks and Bradley armoured infantry fighting vehicle were destroyed in Zaphorizia, southern Ukraine.**
+
+**Although the Ukrainian counteroffensive in 2023 initially started well, it faced increasingly formidable opposition from Russian forces who began altering their tactics and strategies.**
+
+**These changes in strategy and tactics by the Russian forces led to the destruction of many of the Ukrainian tanks that had been supplied by donor countries like Germany, other European nations, the United States, and Britain.**
+
+**However, to date, no one knows exactly how many Leopard tanks have been destroyed by Russia.**
+
+**Nevertheless, Russian President Vladimir Putin has reportedly stated to his country’s war correspondents that Ukraine has lost more than 160 tanks supplied by foreign countries.**
+
+**Given the high volume of Leopard tanks supplied to Ukraine, it is logical to conclude that many of the tanks destroyed by Russia were Leopard models.**
+
+**Regarding the Abrams tanks, the Russian military stated that of the 31 American-made tanks supplied to Ukraine, more than five of the tanks have been destroyed by Russian forces.**
+
+**A charred M1A1 Abrams main battle tank being transported to Moscow to participate in an exhibition at Victory Park.**
+
+ **As a result of the destruction of five Abrams tanks, the United States has reportedly “withdrawn” these tanks from the Ukrainian battlefield, likely in an effort to “preserve its reputation.”**
+
+**Following the destruction experienced by Leopard tanks supplied by Germany and other European countries, Ukraine’s Deputy Foreign Minister Andii Melnyk has requested that Kiev be supplied with more Leopard tanks, including the latest variant, the Leopard 2A6.**
+
+ **However, the newest Leopard 2A6 variant supplied to Ukraine has met the same fate.**
+
+**The Russian military reported capturing the most powerful tank in the Ukrainian arsenal, the German-made Leopard 2A6, after intense fighting in Avdiivka, Ukraine, last April.**
+
+**It is believed that Ukraine possesses 21 Leopard 2A6 tanks, with 18 of these tanks developed by the companies Krauss-Maffei Wegmann and Rheinmetall being donated by Germany, while the remainder were provided by Portugal.**
+
+**However, most of these Leopard 2A6 tanks donated to the Ukrainian military could not be used after failing to be properly maintained and remained inoperable as claimed by a senior German politician last January.**
+
+**An Abrams tank caught fire after being struck by a Lancet kamikaze drone and an RPG from Russian forces.**
+
+**According to Russian military sources, after capturing and removing the tank from the combat area, Russian forces transported the tank and sent it to Moscow, possibly for research purposes.**
+
+**The Leopard 2A6 was successfully captured after a Russian platoon executed an ambush that caused the Ukrainian tank crew to abandon the German-made vehicle.**
+
+**The Leopard 2A6 represents an upgrade from the Leopard 2A5, incorporating enhanced armor protection, firepower, and electronic warfare capabilities.**
+
+**The tank measures 9.97 meters in length and weighs 62.3 tons, making it one of the heaviest main battle tanks ever deployed, with an engine power of 1,500 horsepower.**
+
+**Capable of speeds up to 75 km/h and with an operational range of 500 km, it is equipped with a Rheinmetall 120 mm L/55 cannon, allowing it to fire all standard NATO ammunition types, including APFSDS, HEAT, and multi-purpose shells.**
+
+**The Leopard 2A6 also features dual 7.62 mm MG3A1 machine guns and an advanced fire control system including a laser rangefinder, thermal imaging, and a ballistic computer. — DSA**
+
+[featured](https://defencesecurityasia.com/en/tag/featured-en/)
+[German](https://defencesecurityasia.com/en/tag/german/)
+[Leopard](https://defencesecurityasia.com/en/tag/leopard-en/)
+[Ukraine](https://defencesecurityasia.com/en/tag/ukraine-en/)
+
+**Share** [Facebook](https://www.facebook.com/sharer.php?u=https%3A%2F%2Fdefencesecurityasia.com%2Fen%2Fgerman-made-leopard-tanks-bear-the-brunt-of-russian-forces-rejuvenation-in-ukraine%2F)
+[Twitter](https://twitter.com/share?text=German-Made Leopard Tanks Bear The Brunt of Russian Forces’ “Rejuvenation” in Ukraine”&url=https%3A%2F%2Fdefencesecurityasia.com%2Fen%2Fgerman-made-leopard-tanks-bear-the-brunt-of-russian-forces-rejuvenation-in-ukraine%2F)
+[Google+](https://plus.google.com/share?url=https%3A%2F%2Fdefencesecurityasia.com%2Fen%2Fgerman-made-leopard-tanks-bear-the-brunt-of-russian-forces-rejuvenation-in-ukraine%2F)
+[ReddIt](https://reddit.com/submit?url=https%3A%2F%2Fdefencesecurityasia.com%2Fen%2Fgerman-made-leopard-tanks-bear-the-brunt-of-russian-forces-rejuvenation-in-ukraine%2F&title=German-Made Leopard Tanks Bear The Brunt of Russian Forces’ “Rejuvenation” in Ukraine”)
+[WhatsApp](whatsapp://send?text=German-Made Leopard Tanks Bear The Brunt of Russian Forces’ “Rejuvenation” in Ukraine” %0A%0A https%3A%2F%2Fdefencesecurityasia.com%2Fen%2Fgerman-made-leopard-tanks-bear-the-brunt-of-russian-forces-rejuvenation-in-ukraine%2F)
+[Pinterest](https://pinterest.com/pin/create/button/?url=https%3A%2F%2Fdefencesecurityasia.com%2Fen%2Fgerman-made-leopard-tanks-bear-the-brunt-of-russian-forces-rejuvenation-in-ukraine%2F&media=https://i0.wp.com/defencesecurityasia.com/wp-content/uploads/2024/04/20240423_000828-1.jpg?fit=640%2C427&ssl=1&description=German-Made Leopard Tanks Bear The Brunt of Russian Forces’ “Rejuvenation” in Ukraine”)
+[Email](/cdn-cgi/l/email-protection#e8d79b9d8a828d8b9cd5af8d9a858986c5a5898c8dc8a48d8798899a8cc8bc8986839bc8aa8d899ac8bc808dc8aa9a9d869cc8878ec8ba9d9b9b818986c8ae879a8b8d9bcecbd0dad9dfd3c8cecbd0dadad8d3ba8d829d9e8d86899c818786cecbd0dadad9d3c88186c8bd839a8981868dcecbd0dadad9d3ce8a878c91d5809c9c989bcddba9cddaaecddaae8c8d8e8d868b8d9b8d8b9d9a819c91899b8189c68b8785cddaae8d86cddaae8f8d9a858986c585898c8dc5848d8798899a8cc59c8986839bc58a8d899ac59c808dc58a9a9d869cc5878ec59a9d9b9b818986c58e879a8b8d9bc59a8d829d9e8d86899c818786c58186c59d839a8981868dcddaae)
+
+[](https://defencesecurityasia.com/en/author/dsa-a/ "Browse Author Articles")
+
+[admin](https://defencesecurityasia.com/en/author/dsa-a/)
+ 7479 posts 1 comments
+
+*   [](https://defencesecurityasia.com)
+    
+
+Prev Post
+
+[(VIDEO) Does Hezbollah Have Iran-Made “3rd Khordad” Advanced Air Defense System?](https://defencesecurityasia.com/en/video-does-hezbollah-have-iran-made-3rd-khordad-advanced-air-defense-system/)
+
+Next Post
+
+[“KAAN” to Continue as Planned Even If Turkey Allowed to Repurchase F-35s from the US](https://defencesecurityasia.com/en/kaan-to-continue-as-planned-even-if-turkey-allowed-to-repurchase-f-35s-from-the-us/)
+
+Comments are closed.
+
+You cannot print contents of this website."
+
+# Your Summary
+
+
+
+===== > RESPONSE:  < =====
+The article from Defence Security Asia, published on May 19, 2024, discusses the destruction of German-made Leopard tanks in Ukraine. It mentions that the Russian military claimed to have destroyed five Leopard 2A1 tanks between May 11 and 17, 2024. The article also includes an image of a captured Leopard 2A6 tank <image:2776>. The article does not mention any Ukrainian incursion into Russia's Kursk Oblast.
+
+_________________________
+
+
+
+SummarizeSummariesPrompt - QUERY:
+
+# Instructions
+You just retrieved web sources, each one summarized under "Web Sources". **Your task right now is to summarize the web source summaries.**
+
+Always adhere to the following rules:
+* Write only one to two paragraphs.
+* Include all URLs from the listed sources. Format them as Markdown hyperlinks.
+* Do not add any additional information besides the information in the summaries.
+* Include references (<image:k>) to all relevant images.
+
+# Record
+## Claim
+Claim: "<image:26> This image shows destroyed Ukrainian tanks during Ukraine's incursion into Russia's Kursk Oblast in August 2024."
+
+## Actions
+```
+reverse_search(<image:26>)
+web_search("Ukraine Russia Kursk Oblast August 2024 tanks")
+```
+
+## Web Sources
+**Reverse Search Result** The exact image was found in the following sources:
+
+From [Source](https://en.sputniknews.africa/20241017/ukraine-has-reportedly-lost-about-40-leopard-tanks-since-february-2022-1068726197.html): Found exact image on website with title: Ukraine Has Reportedly Lost About 40 Leopard Tanks Since ...
+Content: The search result from Sputnik Africa, published on October 17, 2024, reports that Ukraine has lost around 40 Leopard tanks since the beginning of Russia's special military operation in February 2022. <image:2766>, <image:2767>, <image:2768>. The article also mentions that Russia repeatedly stated that arms supplies to Ukraine hinder the settlement and directly involve NATO countries in the conflict. The article includes an image of a Leopard 2 tank.
+
+
+From [Source](https://www.themoscowtimes.com/2023/06/13/russia-says-german-leopard-tanks-us-bradleys-captured-in-ukraine-a81492): Found exact image on website with title: Russia Says German Leopard Tanks, U.S. Bradleys Captured in ...
+Content: The Moscow Times published an article on June 13, 2023, stating that Russia had captured German Leopard tanks and U.S. Bradley infantry fighting vehicles in the Zaporizhzhia region. <image:2769> shows destroyed tanks. The article mentions that the Russian Defense Ministry released footage of Russian troops surveying the equipment supplied to Ukraine by Western countries.
+
+
+From [Source](https://defencesecurityasia.com/en/german-made-leopard-tanks-bear-the-brunt-of-russian-forces-rejuvenation-in-ukraine/): Found exact image on website with title: German-Made Leopard Tanks Bear The Brunt of Russian Forces ...
+Content: The article from Defence Security Asia, published on May 19, 2024, discusses the destruction of German-made Leopard tanks in Ukraine. It mentions that the Russian military claimed to have destroyed five Leopard 2A1 tanks between May 11 and 17, 2024. The article also includes an image of a captured Leopard 2A6 tank <image:2776>. The article does not mention any Ukrainian incursion into Russia's Kursk Oblast.
+
+
+## Your Summary
+
+
+
+===== > RESPONSE:  < =====
+The image of destroyed tanks (<image:26>) appears in multiple sources. One source, from Sputnik Africa, published on October 17, 2024, reports that Ukraine has lost around 40 Leopard tanks since February 2022. The Moscow Times published an article on June 13, 2023, stating that Russia had captured German Leopard tanks in the Zaporizhzhia region. Defence Security Asia published an article on May 19, 2024, discussing the destruction of German-made Leopard tanks in Ukraine.
+
+The sources do not mention any Ukrainian incursion into Russia's Kursk Oblast in August 2024.
+
+_________________________
+
+
+
+SummarizeResultPrompt - QUERY:
+
+# Instructions
+In order to find evidence that helps your fact-check, you just ran a web search which yielded a Search Result. **Your task right now is to summarize the Search Result.** What to include:
+* information that might be useful for the fact-check (see Record)
+* relevant images (refer to images by inserting their reference <image:k>)
+* if available: the release date as well as the author or the publisher (e.g. the media company) of the search result.
+
+Do NOT include:
+* advertisements
+* any other information not related to the Record or the Claim
+
+Additional rules:
+* Do not add any additional information besides the information in the Search Result.
+* If the Search Result doesn't contain any relevant information for the fact-checking work, simply print one word in capital letters: "NONE".
+* Keep your writing style like in the Examples 1, 2 and 3 provided to you.
+* Try to filter out relevant information even if the search result is in a different language.
+
+# Example 1
+The search result from America Today provides several photographs of the Notre-Dame Cathedral fire on April 15, 2019. <image:i>, <image:j>, <image:k>. None of the images show the Eiffel Tower in the background. 
+
+# Example 2
+NONE
+
+# Example 3
+The Guardian discusses a report blaming the Syrian government for a toxic gas attack and condemning their use of chemical weapons. The Guardian mentions the Chemical Weapons Convention and the responsibilities of Syria under the convention. According to The Guardian, The White House condemned the Assad regime for defying the norm against chemical weapons use.
+
+# Record
+## Claim
+Claim: "<image:26> This image shows destroyed Ukrainian tanks during Ukraine's incursion into Russia's Kursk Oblast in August 2024."
+
+## Actions
+```
+reverse_search(<image:26>)
+web_search("Ukraine Russia Kursk Oblast August 2024 tanks")
+```
+
+# Search Result
+From [Source](https://en.wikipedia.org/wiki/Kursk_campaign): 
+Content: "740 pieces of equipment[\[13\]](#cite_note-kursk_gambit_20250401-14)
+
+*   66–80 tanks[\[14\]](#cite_note-tanks-15)
+    [\[13\]](#cite_note-kursk_gambit_20250401-14)
+    
+*   2 [Ka-52](/wiki/Ka-52 "Ka-52")
+     helicopters[\[17\]](#cite_note-insider-18)
+    [\[23\]](#cite_note-KI86-24)
+    [\[24\]](#cite_note-Ka52-2-25)
+    
+
+115–247+ captured[\[25\]](#cite_note-26)
+[\[26\]](#cite_note-27)
+  
+**Per Ukraine:**[\[27\]](#cite_note-c650-28)
+  
+[![Russia](//upload.wikimedia.org/wikipedia/en/thumb/f/f3/Flag_of_Russia.svg/40px-Flag_of_Russia.svg.png)](/wiki/Russia "Russia")
+ 77,000 killed or wounded  
+7,236 pieces of equipment[\[b\]](#cite_note-29)
+  
+1,018 captured[\[28\]](#cite_note-d123-30)
+  
+931 tactical and strategic UAVs  
+
+[![North Korea](//upload.wikimedia.org/wikipedia/commons/thumb/5/51/Flag_of_North_Korea.svg/40px-Flag_of_North_Korea.svg.png)](/wiki/North_Korea "North Korea")
+ 4,500 killed or wounded[\[29\]](#cite_note-p426-31)
+  
+**Per South Korea:**[\[30\]](#cite_note-32)
+[\[31\]](#cite_note-33)
+  
+[![North Korea](//upload.wikimedia.org/wikipedia/commons/thumb/5/51/Flag_of_North_Korea.svg/40px-Flag_of_North_Korea.svg.png)](/wiki/North_Korea "North Korea")
+ 600 killed, 4,100 injured, 2 captured**Per Russia:** 358 civilians killed, 503 injured[\[32\]](#cite_note-mt288-34)
+ and 789 civilians missing [\[33\]](#cite_note-g266-35)
+  
+144,000+ civilians evacuated[\[34\]](#cite_note-mt133-36)
+ (133,000+ evacuated in Kursk Oblast and 11,000+ evacuated in Belgorod Oblast)[\[34\]](#cite_note-mt133-36)
+[\[35\]](#cite_note-37)
+
+[Russian invasion of Ukraine](/wiki/Russian_invasion_of_Ukraine "Russian invasion of Ukraine")
+
+[Timeline](/wiki/Timeline_of_the_Russian_invasion_of_Ukraine "Timeline of the Russian invasion of Ukraine")
+
+*   *   [February – April 2022](/wiki/Timeline_of_the_Russian_invasion_of_Ukraine_(24_February_%E2%80%93_7_April_2022) "Timeline of the Russian invasion of Ukraine (24 February – 7 April 2022)")
+        
+    *   [April – August 2022](/wiki/Timeline_of_the_Russian_invasion_of_Ukraine_(8_April_%E2%80%93_28_August_2022) "Timeline of the Russian invasion of Ukraine (8 April – 28 August 2022)")
+        
+    *   [August – November 2022](/wiki/Timeline_of_the_Russian_invasion_of_Ukraine_(29_August_%E2%80%93_11_November_2022) "Timeline of the Russian invasion of Ukraine (29 August – 11 November 2022)")
+        
+    *   [November 2022 – June 2023](/wiki/Timeline_of_the_Russian_invasion_of_Ukraine_(12_November_2022_%E2%80%93_7_June_2023) "Timeline of the Russian invasion of Ukraine (12 November 2022 – 7 June 2023)")
+        
+    *   [June – August 2023](/wiki/Timeline_of_the_Russian_invasion_of_Ukraine_(8_June_2023_%E2%80%93_31_August_2023) "Timeline of the Russian invasion of Ukraine (8 June 2023 – 31 August 2023)")
+        
+    *   [September – November 2023](/wiki/Timeline_of_the_Russian_invasion_of_Ukraine_(1_September_%E2%80%93_30_November_2023) "Timeline of the Russian invasion of Ukraine (1 September – 30 November 2023)")
+        
+    *   [December 2023 – March 2024](/wiki/Timeline_of_the_Russian_invasion_of_Ukraine_(1_December_2023_%E2%80%93_31_March_2024) "Timeline of the Russian invasion of Ukraine (1 December 2023 – 31 March 2024)")
+        
+    *   [April – July 2024](/wiki/Timeline_of_the_Russian_invasion_of_Ukraine_(1_April_%E2%80%93_31_July_2024) "Timeline of the Russian invasion of Ukraine (1 April – 31 July 2024)")
+        
+    *   [August – December 2024](/wiki/Timeline_of_the_Russian_invasion_of_Ukraine_(1_August_%E2%80%93_31_December_2024) "Timeline of the Russian invasion of Ukraine (1 August – 31 December 2024)")
+        
+    *   [January 2025 – May 2025](/wiki/Timeline_of_the_Russian_invasion_of_Ukraine_(1_January_2025_%E2%80%93_31_May_2025) "Timeline of the Russian invasion of Ukraine (1 January 2025 – 31 May 2025)")
+        
+    *   [June 2025 – present](/wiki/Timeline_of_the_Russian_invasion_of_Ukraine_(1_June_2025_%E2%80%93_present) "Timeline of the Russian invasion of Ukraine (1 June 2025 – present)")
+        
+
+* * *
+
+*   _[Prelude](/wiki/Prelude_to_the_Russian_invasion_of_Ukraine "Prelude to the Russian invasion of Ukraine")
+    _
+*   _[Casualties](/wiki/Casualties_of_the_Russo-Ukrainian_War "Casualties of the Russo-Ukrainian War")
+    _
+*   _[Territorial control](/wiki/Territorial_control_during_the_Russo-Ukrainian_War "Territorial control during the Russo-Ukrainian War")
+    _
+    *   _[map](/wiki/Template:Russo-Ukrainian_War_detailed_map "Template:Russo-Ukrainian War detailed map")
+        _
+*   _[List of engagements](/wiki/List_of_military_engagements_during_the_Russian_invasion_of_Ukraine "List of military engagements during the Russian invasion of Ukraine")
+    _
+*   _[War crimes](/wiki/War_crimes_in_the_Russian_invasion_of_Ukraine "War crimes in the Russian invasion of Ukraine")
+    _
+*   _[Attacks on civilians](/wiki/Attacks_on_civilians_in_the_Russian_invasion_of_Ukraine "Attacks on civilians in the Russian invasion of Ukraine")
+    _
+*   _[Economic impact](/wiki/Economic_impact_of_the_Russian_invasion_of_Ukraine "Economic impact of the Russian invasion of Ukraine")
+    _
+*   _[Peace negotiations](/wiki/Peace_negotiations_in_the_Russian_invasion_of_Ukraine "Peace negotiations in the Russian invasion of Ukraine")
+    _
+*   _[Collaboration with Russia](/wiki/Collaboration_with_Russia_during_the_Russian_invasion_of_Ukraine "Collaboration with Russia during the Russian invasion of Ukraine")
+    _
+*   _[Russian emigration](/wiki/Russian_emigration_during_the_Russian_invasion_of_Ukraine "Russian emigration during the Russian invasion of Ukraine")
+    _
+*   _[Nuclear risk](/wiki/Nuclear_risk_during_the_Russian_invasion_of_Ukraine "Nuclear risk during the Russian invasion of Ukraine")
+    _
+*   _[Humanitarian impacts](/wiki/Humanitarian_impacts_of_the_Russian_invasion_of_Ukraine "Humanitarian impacts of the Russian invasion of Ukraine")
+    _
+*   _[Russian annexation](/wiki/Russian_annexation_of_Donetsk,_Kherson,_Luhansk_and_Zaporizhzhia_oblasts "Russian annexation of Donetsk, Kherson, Luhansk and Zaporizhzhia oblasts")
+    _
+*   _[Treatment of prisoners of war](/wiki/Prisoners_of_war_in_the_Russian_invasion_of_Ukraine "Prisoners of war in the Russian invasion of Ukraine")
+    _
+
+| 2022–23 campaign |     |
+| --- |
+| **[Northern front](/wiki/Northern_front_of_the_Russian_invasion_of_Ukraine "Northern front of the Russian invasion of Ukraine")<br>**<br><br>*   **[Antonov Airport](/wiki/Battle_of_Antonov_Airport "Battle of Antonov Airport")<br>    **<br>*   [Chernobyl](/wiki/Capture_of_Chernobyl "Capture of Chernobyl")<br>    <br>*   [Hostomel](/wiki/Battle_of_Hostomel "Battle of Hostomel")<br>    <br>*   **[Kyiv](/wiki/Battle_of_Kyiv_(2022) "Battle of Kyiv (2022)")<br>    **<br>*   [Bucha](/wiki/Battle_of_Bucha "Battle of Bucha")<br>    *   [massacre](/wiki/Bucha_massacre "Bucha massacre")<br>        <br>*   [Irpin](/wiki/Battle_of_Irpin "Battle of Irpin")<br>    <br>*   [Makariv](/wiki/Battle_of_Makariv "Battle of Makariv")<br>    <br>*   [Moshchun](/wiki/Battle_of_Moshchun "Battle of Moshchun")<br>    *   [Kozarovytska Dam](/wiki/Destruction_of_the_Kozarovytska_Dam "Destruction of the Kozarovytska Dam")<br>        <br>*   [Brovary](/wiki/Battle_of_Brovary "Battle of Brovary")<br>    <br>*   [Slavutych](/wiki/Battle_of_Slavutych "Battle of Slavutych")<br>    <br>*   **[1st Sumy](/wiki/Battle_of_Sumy "Battle of Sumy")<br>    **<br>*   **[Chernihiv](/wiki/Siege_of_Chernihiv "Siege of Chernihiv")<br>    **<br>*   [Northern Ukraine skirmishes](/wiki/Northern_Ukraine_skirmishes_(2022%E2%80%93present) "Northern Ukraine skirmishes (2022–present)")<br>    <br><br>* * *<br><br>**[Eastern front](/wiki/Eastern_front_of_the_Russian_invasion_of_Ukraine "Eastern front of the Russian invasion of Ukraine")<br>**<br><br>*   **[1st Kharkiv](/wiki/Battle_of_Kharkiv_(2022) "Battle of Kharkiv (2022)")<br>    **<br>*   [Volnovakha](/wiki/Battle_of_Volnovakha "Battle of Volnovakha")<br>    <br>*   **[Izium](/wiki/Battle_of_Izium "Battle of Izium")<br>    **<br>*   **[Donbas](/wiki/Battle_of_Donbas_(2022) "Battle of Donbas (2022)")<br>    **<br>    *   [Rubizhne](/wiki/Battle_of_Rubizhne "Battle of Rubizhne")<br>        <br>    *   [Popasna](/wiki/Battle_of_Popasna "Battle of Popasna")<br>        <br>    *   [Siverskyi Donets](/wiki/Battle_of_the_Siverskyi_Donets "Battle of the Siverskyi Donets")<br>        <br>    *   **[Sievierodonetsk](/wiki/Battle_of_Sievierodonetsk_(2022) "Battle of Sievierodonetsk (2022)")<br>        **<br>    *   **[Lysychansk](/wiki/Battle_of_Lysychansk "Battle of Lysychansk")<br>        **<br>    *   [Pisky](/wiki/Battle_of_Pisky "Battle of Pisky")<br>        <br>    *   **[Bakhmut](/wiki/Battle_of_Bakhmut "Battle of Bakhmut")<br>        **<br>    *   **[Soledar](/wiki/Battle_of_Soledar "Battle of Soledar")<br>        **<br>*   **[2nd Kharkiv](/wiki/2022_Kharkiv_counteroffensive "2022 Kharkiv counteroffensive")<br>    **<br>    *   [Lyman](/wiki/Lyman_front_of_the_2022_Kharkiv_counteroffensive "Lyman front of the 2022 Kharkiv counteroffensive")<br>        <br>*   **[Luhansk Oblast](/wiki/Luhansk_Oblast_campaign "Luhansk Oblast campaign")<br>    **<br>*   [Vuhledar](/wiki/Battle_of_Vuhledar "Battle of Vuhledar")<br>    <br>*   **[Russian winter offensive (2022–23)](/wiki/Russian_winter_offensive_in_Ukraine_(2022%E2%80%932023) "Russian winter offensive in Ukraine (2022–2023)")<br>    **<br>*   **[Marinka](/wiki/Battle_of_Marinka_(2022%E2%80%932023) "Battle of Marinka (2022–2023)")<br>    **<br>*   **[Avdiivka](/wiki/Battle_of_Avdiivka_(2023%E2%80%932024) "Battle of Avdiivka (2023–2024)")<br>    **<br><br>* * *<br><br>**[Southern front](/wiki/Southern_front_of_the_Russian_invasion_of_Ukraine "Southern front of the Russian invasion of Ukraine")<br>**<br><br>*   **[Mariupol](/wiki/Siege_of_Mariupol "Siege of Mariupol")<br>    **<br>*   **[1st Kherson](/wiki/Battle_of_Kherson "Battle of Kherson")<br>    **<br>*   **[Melitopol](/wiki/Battle_of_Melitopol "Battle of Melitopol")<br>    **<br>*   **[Mykolaiv](/wiki/Battle_of_Mykolaiv "Battle of Mykolaiv")<br>    **<br>*   [Enerhodar](/wiki/Battle_of_Enerhodar "Battle of Enerhodar")<br>    <br>*   [Voznesensk](/wiki/Battle_of_Voznesensk "Battle of Voznesensk")<br>    <br>*   **[2nd Kherson](/wiki/2022_Kherson_counteroffensive "2022 Kherson counteroffensive")<br>    **<br>    *   [Kherson City](/wiki/Liberation_of_Kherson "Liberation of Kherson")<br>        <br>*   **[Dnieper](/wiki/Dnieper_campaign_(2022%E2%80%93present) "Dnieper campaign (2022–present)")<br>    **<br>    *   [Kakhovka Dam](/wiki/Destruction_of_the_Kakhovka_Dam "Destruction of the Kakhovka Dam")<br>        <br>    *   [Krynky](/wiki/Battle_of_Krynky "Battle of Krynky")<br>        <br>*   **[2023 Ukrainian counteroffensive](/wiki/2023_Ukrainian_counteroffensive "2023 Ukrainian counteroffensive")<br>    ** ([Mala Tokmachka](/wiki/Battle_of_Mala_Tokmachka "Battle of Mala Tokmachka")<br>    )<br><br>* * *<br><br>**Other regions**<br><br>*   [Strikes against Ukrainian infrastructure](/wiki/Russian_strikes_against_Ukrainian_infrastructure_(2022%E2%80%93present) "Russian strikes against Ukrainian infrastructure (2022–present)")<br>    <br><br>* * *<br><br>**Naval operations**<br><br>*   [Snake Island](/wiki/Snake_Island_campaign "Snake Island campaign")<br>    <br>*   [Berdiansk port](/wiki/2022_Berdiansk_port_attack "2022 Berdiansk port attack")<br>    <br>*   [Moskva](/wiki/Sinking_of_the_Moskva "Sinking of the Moskva")<br>    <br><br>* * *<br><br>**Spillover & related incidents**<br><br>*   [Western Russia](/wiki/Attacks_in_Russia_during_the_Russian_invasion_of_Ukraine "Attacks in Russia during the Russian invasion of Ukraine")<br>    *   [Bryansk Oblast](/wiki/2023_Bryansk_Oblast_raid "2023 Bryansk Oblast raid")<br>        <br>    *   [Kremlin drone attack](/wiki/Kremlin_drone_attack "Kremlin drone attack")<br>        <br>    *   [Belgorod Oblast incursion](/wiki/2023_Belgorod_Oblast_incursions "2023 Belgorod Oblast incursions")<br>        <br>*   [2022 Russian mobilization](/wiki/2022_Russian_mobilization "2022 Russian mobilization")<br>    <br>*   [Nord Stream pipeline sabotage](/wiki/2022_Nord_Stream_pipeline_sabotage "2022 Nord Stream pipeline sabotage")<br>    <br>*   [Poland missile explosion](/wiki/2022_missile_explosion_in_Poland "2022 missile explosion in Poland")<br>    <br>*   [Black Sea drone incident](/wiki/2023_Black_Sea_drone_incident "2023 Black Sea drone incident")<br>    <br>*   [Wagner Group rebellion](/wiki/Wagner_Group_rebellion "Wagner Group rebellion") |     |
+
+| 2024–25 campaign |     |
+| --- |
+| **[Northern Ukraine skirmishes](/wiki/Northern_Ukraine_skirmishes_(2022%E2%80%93present) "Northern Ukraine skirmishes (2022–present)")<br>**<br><br>*   **[2nd Sumy](/wiki/2025_Sumy_offensive "2025 Sumy offensive")<br>    **<br>    *   [Sumy strike](/wiki/2025_Sumy_airstrike "2025 Sumy airstrike")<br>        <br><br>* * *<br><br>**[Eastern front](/wiki/Eastern_front_of_the_Russian_invasion_of_Ukraine "Eastern front of the Russian invasion of Ukraine")<br>**<br><br>*   **[Luhansk Oblast](/wiki/Luhansk_Oblast_campaign "Luhansk Oblast campaign")<br>    **<br>    *   [Kupiansk](/wiki/Kupiansk_offensive "Kupiansk offensive")<br>        <br>    *   [Northeast Donetsk](/wiki/Northeast_Donetsk_campaign "Northeast Donetsk campaign")<br>        <br>*   **[Avdiivka](/wiki/Battle_of_Avdiivka_(2023%E2%80%932024) "Battle of Avdiivka (2023–2024)")<br>    **<br>*   **[Vuhledar](/wiki/Battle_of_Vuhledar "Battle of Vuhledar")<br>    **<br>*   **[Chasiv Yar](/wiki/Battle_of_Chasiv_Yar "Battle of Chasiv Yar")<br>    **<br>*   [Krasnohorivka](/wiki/Battle_of_Krasnohorivka "Battle of Krasnohorivka")<br>    <br>*   [Ocheretyne](/wiki/Battle_of_Ocheretyne "Battle of Ocheretyne")<br>    <br>*   **[3rd Kharkiv](/wiki/2024_Kharkiv_offensive "2024 Kharkiv offensive")<br>    **<br>    *   [Kharkiv strikes](/wiki/Kharkiv_strikes_(2022%E2%80%93present) "Kharkiv strikes (2022–present)")<br>        <br>*   **[Toretsk](/wiki/Battle_of_Toretsk "Battle of Toretsk")<br>    **<br>*   **[Pokrovsk](/wiki/Pokrovsk_offensive "Pokrovsk offensive")<br>    **<br>    *   [Dobropillia](/wiki/Dobropillia_offensive "Dobropillia offensive")<br>        <br>*   **[Kurakhove](/wiki/Battle_of_Kurakhove "Battle of Kurakhove")<br>    **<br>*   [Velyka Novosilka](/wiki/Velyka_Novosilka_offensive "Velyka Novosilka offensive")<br>    <br>*   **[Novopavlivka](/wiki/Novopavlivka_offensive "Novopavlivka offensive")<br>    **<br><br>* * *<br><br>**[Southern front](/wiki/Southern_front_of_the_Russian_invasion_of_Ukraine "Southern front of the Russian invasion of Ukraine")<br>**<br><br>*   **[Dnieper](/wiki/Dnieper_campaign_(2022%E2%80%93present) "Dnieper campaign (2022–present)")<br>    **<br>    *   [Krynky](/wiki/Battle_of_Krynky "Battle of Krynky")<br>        <br><br>* * *<br><br>**Ukrainian incursion**<br><br>*   **[Kursk](/wiki/2024_Kursk_offensive "2024 Kursk offensive")<br>    **<br>    *   [Olgovskiy Forest](/wiki/Battle_of_Olgovskiy_Forest "Battle of Olgovskiy Forest")<br>        <br>    *   _[Stream](/wiki/Operation_Stream "Operation Stream")<br>        _<br>*   [Belgorod incursion](/wiki/2025_Belgorod_incursion "2025 Belgorod incursion")<br>    <br>*   [Tyotkino incursion](/wiki/2025_Tyotkino_incursion "2025 Tyotkino incursion")<br>    <br><br>* * *<br><br>**Other regions**<br><br>*   [Strikes against Ukrainian infrastructure](/wiki/Russian_strikes_against_Ukrainian_infrastructure_(2022%E2%80%93present) "Russian strikes against Ukrainian infrastructure (2022–present)")<br>    <br><br>* * *<br><br>**Naval operations**<br><br>*   [Tendra Spit](/wiki/Raid_on_Tendra_Spit "Raid on Tendra Spit")<br>    <br><br>* * *<br><br>**Spillover & related incidents**<br><br>*   [Western Russia](/wiki/Attacks_in_Russia_during_the_Russian_invasion_of_Ukraine "Attacks in Russia during the Russian invasion of Ukraine")<br>    *   [May 2024 Belgorod missile strike](/wiki/May_2024_Belgorod_missile_strike "May 2024 Belgorod missile strike")<br>        <br>    *   [March 2024 western Russia incursion](/wiki/March_2024_western_Russia_incursion "March 2024 western Russia incursion")<br>        <br>*   [2024 Ukrainian coup attempt allegations](/wiki/2024_Ukrainian_coup_attempt_allegations "2024 Ukrainian coup attempt allegations")<br>    <br>*   [2024 Ukrainian cyberattacks against Russia](/wiki/2024_Ukrainian_cyberattacks_against_Russia "2024 Ukrainian cyberattacks against Russia")<br>    <br>*   [Toropets explosions](/wiki/Toropets_depot_explosions "Toropets depot explosions")<br>    <br>*   [North Korean involvement](/wiki/North_Korean_involvement_in_the_Russian_invasion_of_Ukraine "North Korean involvement in the Russian invasion of Ukraine")<br>    <br>*   [Azerbaijan Airlines Flight 8243](/wiki/Azerbaijan_Airlines_Flight_8243 "Azerbaijan Airlines Flight 8243")<br>    <br>*   _[Spider's Web](/wiki/Operation_Spider%27s_Web "Operation Spider's Web")<br>    _ |     |
+
+On 6 August 2024, during the [Russian invasion of Ukraine](/wiki/Russian_invasion_of_Ukraine "Russian invasion of Ukraine")
+,[\[36\]](#cite_note-dw.com-38)
+[\[37\]](#cite_note-ft.com-39)
+\[_[failed verification](/wiki/Wikipedia:Verifiability "Wikipedia:Verifiability")\
+ – [see discussion](/wiki/Talk:Kursk_campaign#A_ridiculous_edit "Talk:Kursk campaign")\
+_\] part of the [Russo-Ukrainian War](/wiki/Russo-Ukrainian_War "Russo-Ukrainian War")
+, the [Armed Forces of Ukraine](/wiki/Armed_Forces_of_Ukraine "Armed Forces of Ukraine")
+ launched an incursion into [Russia](/wiki/Russia "Russia")
+'s [Kursk Oblast](/wiki/Kursk_Oblast "Kursk Oblast")
+ and clashed with the [Russian Armed Forces](/wiki/Russian_Armed_Forces "Russian Armed Forces")
+ and [Russian border guard](/wiki/FSB_Border_Service_of_Russia "FSB Border Service of Russia")
+.[\[38\]](#cite_note-REU86-40)
+[\[36\]](#cite_note-dw.com-38)
+[\[37\]](#cite_note-ft.com-39)
+ A [state of emergency](/wiki/State_of_emergency_in_Russia "State of emergency in Russia")
+ was declared in Kursk Oblast,[\[39\]](#cite_note-BBC_8_Aug-41)
+ and Russian reserves were rushed to the area.[\[40\]](#cite_note-BBC_Cursino-42)
+ By the end of the first week, the Ukrainian military said it had captured 1,000 km2 (390 sq mi) of Russian territory, while Russian authorities acknowledged that Ukraine had captured 28 settlements.[\[41\]](#cite_note-43)
+
+In the second half of August the front stabilized,[\[42\]](#cite_note-forbes_20240911-44)
+ and in early October, the Ukrainian advance had stalled.[\[11\]](#cite_note-CNN_Third_Month-12)
+ From November, North Korean forces were sent to the province to support the Russian military. According to Russia, the incursion involved around 300 Ukrainian troops, 11 tanks, and over 20 [armored combat vehicles](/wiki/Armoured_fighting_vehicle "Armoured fighting vehicle")
+,[\[67\]](#cite_note-MT86-69)
+ and was aimed in two directions: at [Oleshnya](/wiki/Oleshnya,_Kursk_Oblast "Oleshnya, Kursk Oblast")
+ in the direction of [Sudzha](/wiki/Sudzha "Sudzha")
+, east-northeast of [Sumy](/wiki/Sumy "Sumy")
+, and towards [Nikolayevo-Darino](/wiki/Nikolayevo-Darino "Nikolayevo-Darino")
+, north-northeast of Sumy.[\[68\]](#cite_note-ISW_August_6-70)
+ It was reported that Chechen [Akhmat battalions](/wiki/Russian_irregular_units_in_Ukraine#Akhmat_battalions "Russian irregular units in Ukraine")
+ were responding to the raids,[\[68\]](#cite_note-ISW_August_6-70)
+ though these claims remained unverified as of 13 September 2024.[\[69\]](#cite_note-71)
+
+The attack began at 08:00 [MSK](/wiki/Moscow_Time "Moscow Time")
+. [Alexei Smirnov](/wiki/Alexei_Smirnov_(politician) "Alexei Smirnov (politician)")
+, acting [governor of Kursk Oblast](/wiki/Governor_of_Kursk_Oblast "Governor of Kursk Oblast")
+, reported that three people died during the events: a woman in the border incursion and two individuals in separate drone attacks.[\[70\]](#cite_note-72)
+ Russian [milbloggers](/wiki/Milblog "Milblog")
+ also largely dismissed the supposed raids as "unsuccessful" and a "media stunt".[\[68\]](#cite_note-ISW_August_6-70)
+
+According to Russia, at least 1,000 troops crossed the border on the first day, supported by [tanks](/wiki/Tank "Tank")
+ and armored vehicles.[\[39\]](#cite_note-BBC_8_Aug-41)
+ According to Andrzej Wilk of the [Centre for Eastern Studies](/wiki/Centre_for_Eastern_Studies "Centre for Eastern Studies")
+, the entire Ukrainian grouping, including some elements which did not cross over into Russia, consisted of an estimated 2,000 men from Ukraine's [22nd](/wiki/22nd_Mechanized_Brigade_(Ukraine) "22nd Mechanized Brigade (Ukraine)")
+ and [82nd](/wiki/82nd_Air_Assault_Brigade_(Ukraine) "82nd Air Assault Brigade (Ukraine)")
+ Brigades, supported by artillery and air defense sub-units.[\[66\]](#cite_note-wilk-68)
+ It was later claimed by members of the Ukrainian military that the breakthrough on the border was conducted by the 80th and 82nd Air Assault Brigades.[\[64\]](#cite_note-Kyrylenko-66)
+
+Russian milbloggers claimed that the offensive was being performed by the [Russian Volunteer Corps](/wiki/Russian_Volunteer_Corps "Russian Volunteer Corps")
+ (RVC), while the _[New Voice of Ukraine](/wiki/New_Voice_of_Ukraine "New Voice of Ukraine")
+_ citing a source in [Ukraine's Main Military Intelligence](/wiki/Ukraine%27s_Main_Military_Intelligence "Ukraine's Main Military Intelligence")
+ reported that the RVC was not present.[\[68\]](#cite_note-ISW_August_6-70)
+
+[![](//upload.wikimedia.org/wikipedia/commons/thumb/5/5a/%D0%9F%D0%BE%D0%B2%D1%80%D0%B5%D0%B6%D0%B4%D0%B5%D0%BD%D0%BD%D1%8B%D0%B9_%D0%B4%D0%BE%D0%BC_%D0%BE%D1%82_%D0%BD%D0%B0%D0%BF%D0%B0%D0%B4%D0%B5%D0%BD%D0%B8%D1%8F_%D0%92%D0%A1%D0%A3_%D0%BD%D0%B0_%D0%9A%D1%83%D1%80%D1%81%D0%BA%D1%83%D1%8E_%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C.jpg/250px-%D0%9F%D0%BE%D0%B2%D1%80%D0%B5%D0%B6%D0%B4%D0%B5%D0%BD%D0%BD%D1%8B%D0%B9_%D0%B4%D0%BE%D0%BC_%D0%BE%D1%82_%D0%BD%D0%B0%D0%BF%D0%B0%D0%B4%D0%B5%D0%BD%D0%B8%D1%8F_%D0%92%D0%A1%D0%A3_%D0%BD%D0%B0_%D0%9A%D1%83%D1%80%D1%81%D0%BA%D1%83%D1%8E_%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C.jpg)](/wiki/File:%D0%9F%D0%BE%D0%B2%D1%80%D0%B5%D0%B6%D0%B4%D0%B5%D0%BD%D0%BD%D1%8B%D0%B9_%D0%B4%D0%BE%D0%BC_%D0%BE%D1%82_%D0%BD%D0%B0%D0%BF%D0%B0%D0%B4%D0%B5%D0%BD%D0%B8%D1%8F_%D0%92%D0%A1%D0%A3_%D0%BD%D0%B0_%D0%9A%D1%83%D1%80%D1%81%D0%BA%D1%83%D1%8E_%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C.jpg)
+
+Building damaged in Kursk Oblast, 6 August 2024
+
+#### 7 August
+
+[![](//upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Ukrainian_%22Southern_Railway%22_1943.jpg/250px-Ukrainian_%22Southern_Railway%22_1943.jpg)](/wiki/File:Ukrainian_%22Southern_Railway%22_1943.jpg)
+
+1943 Ukrainian railway map shows Sudzha in quadrant A2 at km 60 on the [Lgov](/wiki/Lgov,_Kursk_Oblast "Lgov, Kursk Oblast")
+–[Gotnya](/wiki/Gotnya "Gotnya")
+–[Zolochiv](/wiki/Zolochiv,_Kharkiv_Oblast "Zolochiv, Kharkiv Oblast")
+ main line to [Kharkiv](/wiki/Kharkiv "Kharkiv")
+
+A milblogger claimed that Ukrainian forces had captured 11 settlements and had advanced 14 kilometres (9 mi) deep into the oblast.[\[71\]](#cite_note-NBC87-73)
+ Government agencies were ordered by President [Vladimir Putin](/wiki/Vladimir_Putin "Vladimir Putin")
+ to "provide the needed assistance to residents", and deputy prime minister [Denis Manturov](/wiki/Denis_Manturov "Denis Manturov")
+ was sent to oversee their work.[\[72\]](#cite_note-mt1-74)
+ Kursk Oblast was placed under a [state of emergency](/wiki/State_of_emergency "State of emergency")
+ by governor Smirnov.[\[73\]](#cite_note-dw1-75)
+[\[74\]](#cite_note-CNBC_State_of_Emergency-76)
+
+Putin met with key members of the security establishment including [Valery Gerasimov](/wiki/Valery_Gerasimov "Valery Gerasimov")
+, [Alexander Bortnikov](/wiki/Alexander_Bortnikov "Alexander Bortnikov")
+, [Sergei Shoigu](/wiki/Sergei_Shoigu "Sergei Shoigu")
+ and [Andrey Belousov](/wiki/Andrey_Belousov "Andrey Belousov")
+ on the Kursk incursion.[\[75\]](#cite_note-kru1-77)
+ Gerasimov told Putin that about 1,000 Ukrainian soldiers took part in the attack and that their advance had been halted.[\[74\]](#cite_note-CNBC_State_of_Emergency-76)
+[\[76\]](#cite_note-Reuters_Videos_show_Ukrainian_Presence-78)
+
+Geolocated footage confirmed that Ukrainian forces had advanced at least 10 kilometres (6.2 mi) across the Russian border, having penetrated at least two Russian defensive lines and a stronghold. Khinstein said that the bodies of killed civilians in the region were being recovered, but gave no details on how they had died.[\[32\]](#cite_note-mt288-34)
+
+### Ukraine
+
+Russia claimed that six Ukrainian tanks and ten armored vehicles were lost in the initial engagement on 6 August.[\[67\]](#cite_note-MT86-69)
+[\[425\]](#cite_note-Novaya-427)
+[\[426\]](#cite_note-UkrRetreat2-428)
+ Acting governor of Kursk Oblast, [Alexei Smirnov](/wiki/Alexei_Smirnov_(politician) "Alexei Smirnov (politician)")
+, claimed that 26 Ukrainian UAVs were shot down in the area.[\[427\]](#cite_note-nocomment-429)
+ Russia later claimed on 9 August, that Ukraine had losses of 945 soldiers and 102 armored vehicles, although this could not be verified.[\[76\]](#cite_note-Reuters_Videos_show_Ukrainian_Presence-78)
+
+On 17 August, Forbes reported "heavy Ukrainian equipment write-offs compared to relatively few Russian write-offs."[\[428\]](#cite_note-430)
+
+[DeepStateMap.Live](/wiki/DeepStateMap.Live "DeepStateMap.Live")
+ reported that nine Ukrainian "drone operators and contractors" were shot after surrendering to Russian forces on 10 October.[\[429\]](#cite_note-431)
+
+As of 7 August 2025, UALosses listed Ukrainian casualties during the Kursk campaign as 2,588 dead, 9,622 missing and 306 captured Ukrainian soldiers.[\[430\]](#cite_note-432)
+
+See also
+--------
+
+*   [2023 Bryansk Oblast raid](/wiki/2023_Bryansk_Oblast_raid "2023 Bryansk Oblast raid")
+    
+*   [2023 Belgorod Oblast incursions](/wiki/2023_Belgorod_Oblast_incursions "2023 Belgorod Oblast incursions")
+    
+*   [March 2024 western Russia incursion](/wiki/March_2024_western_Russia_incursion "March 2024 western Russia incursion")
+    
+*   [North Korean involvement in the Russian invasion of Ukraine](/wiki/North_Korean_involvement_in_the_Russian_invasion_of_Ukraine "North Korean involvement in the Russian invasion of Ukraine")
+    
+*   [Ukrainian occupation of Kursk Oblast](/wiki/Ukrainian_occupation_of_Kursk_Oblast "Ukrainian occupation of Kursk Oblast")
+    
+*   [2025 Sumy Oblast incursion](/wiki/2025_Sumy_Oblast_incursion "2025 Sumy Oblast incursion")
+    
+
+Notes
+-----
+
+1. For other attacks by Ukraine-aligned forces, see [Attacks in Russia during the Russian invasion of Ukraine](/wiki/Attacks_in_Russia_during_the_Russian_invasion_of_Ukraine "Attacks in Russia during the Russian invasion of Ukraine")
+.
+
+Kursk campaignPart of [attacks in Russia during the Russian invasion of Ukraine](/wiki/Attacks_in_Russia_during_the_Russian_invasion_of_Ukraine "Attacks in Russia during the Russian invasion of Ukraine")
+[![](//upload.wikimedia.org/wikipedia/commons/thumb/7/74/Kursk_front_of_the_Russo-Ukrainian_War.svg/330px-Kursk_front_of_the_Russo-Ukrainian_War.svg.png)](/wiki/File:Kursk_front_of_the_Russo-Ukrainian_War.svg)
+  
+Claimed extent of Ukrainian-held areas as of 28 April 2025
+
+|     |     |
+| --- | --- |
+| Date | 6 August 2024 – March 2025 |
+| Location | [Kursk Oblast](/wiki/Kursk_Oblast "Kursk Oblast")<br>, [Russia](/wiki/Russia "Russia") |
+| Result | See [§ Analysis](#Analysis) |
+| Territorial  <br>changes | *   Russian forces regain control over most of the territory held by Ukraine in Kursk Oblast<br>*   Russian [offensive](/wiki/2025_Sumy_offensive "2025 Sumy offensive")<br>     into neighbouring [Sumy Oblast](/wiki/Sumy_Oblast "Sumy Oblast")<br>    [\[2\]](#cite_note-aljazeera_20250313-3) |
+
+Belligerents ![](//upload.wikimedia.org/wikipedia/commons/thumb/4/49/Flag_of_Ukraine.svg/40px-Flag_of_Ukraine.svg.png)[Ukraine](/wiki/Ukraine "Ukraine")
+ ![](//upload.wikimedia.org/wikipedia/en/thumb/f/f3/Flag_of_Russia.svg/40px-Flag_of_Russia.svg.png)[Russia](/wiki/Russia "Russia")
+  
+ ![](//upload.wikimedia.org/wikipedia/commons/thumb/5/51/Flag_of_North_Korea.svg/40px-Flag_of_North_Korea.svg.png)[North Korea](/wiki/North_Korea "North Korea")
+[\[a\]](#cite_note-2)
+Commanders and leaders[![Ukraine](//upload.wikimedia.org/wikipedia/commons/thumb/4/49/Flag_of_Ukraine.svg/40px-Flag_of_Ukraine.svg.png)](/wiki/Ukraine "Ukraine")
+ [Oleksandr Syrskyi](/wiki/Oleksandr_Syrskyi "Oleksandr Syrskyi")
+[\[3\]](#cite_note-KyivIndy-4)
+  
+[![Ukraine](//upload.wikimedia.org/wikipedia/commons/thumb/4/49/Flag_of_Ukraine.svg/40px-Flag_of_Ukraine.svg.png)](/wiki/Ukraine "Ukraine")
+ [Eduard Moskaliov](/wiki/Eduard_Moskalyov "Eduard Moskalyov")
+[\[3\]](#cite_note-KyivIndy-4)
+  
+[![Ukraine](//upload.wikimedia.org/wikipedia/commons/thumb/4/49/Flag_of_Ukraine.svg/40px-Flag_of_Ukraine.svg.png)](/wiki/Ukraine "Ukraine")
+ [Pavlo Rozlach](/w/index.php?title=Pavlo_Rozlach&action=edit&redlink=1 "Pavlo Rozlach (page does not exist)")
+ \[[uk](https://uk.wikipedia.org/wiki/%D0%A0%D0%BE%D0%B7%D0%BB%D0%B0%D1%87_%D0%9F%D0%B0%D0%B2%D0%BB%D0%BE_%D0%86%D0%B2%D0%B0%D0%BD%D0%BE%D0%B2%D0%B8%D1%87 "uk:Розлач Павло Іванович")\
+\]  
+ [![Ukraine](//upload.wikimedia.org/wikipedia/commons/thumb/4/49/Flag_of_Ukraine.svg/40px-Flag_of_Ukraine.svg.png)](/wiki/Ukraine "Ukraine")
+ [Dmytro Voloshyn](/w/index.php?title=Dmytro_Serhiiovych_Voloshyn&action=edit&redlink=1 "Dmytro Serhiiovych Voloshyn (page does not exist)")
+ \[[uk](https://uk.wikipedia.org/wiki/%D0%92%D0%BE%D0%BB%D0%BE%D1%88%D0%B8%D0%BD_%D0%94%D0%BC%D0%B8%D1%82%D1%80%D0%BE_%D0%A1%D0%B5%D1%80%D0%B3%D1%96%D0%B9%D0%BE%D0%B2%D0%B8%D1%87 "uk:Волошин Дмитро Сергійович")\
+\][![Russia](//upload.wikimedia.org/wikipedia/en/thumb/f/f3/Flag_of_Russia.svg/40px-Flag_of_Russia.svg.png)](/wiki/Russia "Russia")
+ [Andrey Belousov](/wiki/Andrey_Belousov "Andrey Belousov")
+[\[4\]](#cite_note-yevkurov-5)
+  
+[![Russia](//upload.wikimedia.org/wikipedia/en/thumb/f/f3/Flag_of_Russia.svg/40px-Flag_of_Russia.svg.png)](/wiki/Russia "Russia")
+ [Valery Gerasimov](/wiki/Valery_Gerasimov "Valery Gerasimov")
+  
+[![Russia](//upload.wikimedia.org/wikipedia/en/thumb/f/f3/Flag_of_Russia.svg/40px-Flag_of_Russia.svg.png)](/wiki/Russia "Russia")
+ [Yunus-Bek Yevkurov](/wiki/Yunus-Bek_Yevkurov "Yunus-Bek Yevkurov")
+[\[4\]](#cite_note-yevkurov-5)
+  
+[![Russia](//upload.wikimedia.org/wikipedia/en/thumb/f/f3/Flag_of_Russia.svg/40px-Flag_of_Russia.svg.png)](/wiki/Russia "Russia")
+ [Aleksey Dyumin](/wiki/Aleksey_Dyumin "Aleksey Dyumin")
+  
+[![Russia](//upload.wikimedia.org/wikipedia/en/thumb/f/f3/Flag_of_Russia.svg/40px-Flag_of_Russia.svg.png)](/wiki/Russia "Russia")
+ [Alexander Bortnikov](/wiki/Alexander_Bortnikov "Alexander Bortnikov")
+[\[5\]](#cite_note-ISW_2024-08-10-6)
+  
+[![Russia](//upload.wikimedia.org/wikipedia/en/thumb/f/f3/Flag_of_Russia.svg/40px-Flag_of_Russia.svg.png)](/wiki/Russia "Russia")
+ [Apti Alaudinov](/wiki/Apti_Alaudinov "Apti Alaudinov")
+[\[6\]](#cite_note-Kyiv_Independent_August_9-7)
+Units involved[Order of battle](/wiki/Kursk_offensive_order_of_battle "Kursk offensive order of battle")
+[Order of battle](/wiki/Kursk_offensive_order_of_battle "Kursk offensive order of battle")
+Strength**Western estimate:**  
+10,000–15,000 soldiers and 600 armored vehicles[\[7\]](#cite_note-auto-8)
+[\[8\]](#cite_note-Axe_2024-08-14-9)
+  
+(14 August 2024)  
+15,000–30,000 soldiers[\[9\]](#cite_note-i-10)
+  
+(20 August 2024)
+
+**Per Ukraine:**  
+[![Russia](//upload.wikimedia.org/wikipedia/en/thumb/f/f3/Flag_of_Russia.svg/40px-Flag_of_Russia.svg.png)](/wiki/Russia "Russia")
+ 50,000 soldiers  
+(5 November 2024)[\[10\]](#cite_note-Ukrinform_20,000-11)
+
+**Western estimate:**  
+[![Russia](//upload.wikimedia.org/wikipedia/en/thumb/f/f3/Flag_of_Russia.svg/40px-Flag_of_Russia.svg.png)](/wiki/Russia "Russia")
+ 40,000 soldiers  
+(12 October 2024)[\[11\]](#cite_note-CNN_Third_Month-12)
+  
+[![North Korea](//upload.wikimedia.org/wikipedia/commons/thumb/5/51/Flag_of_North_Korea.svg/40px-Flag_of_North_Korea.svg.png)](/wiki/North_Korea "North Korea")
+ 12,000 soldiers[\[12\]](#cite_note-cnn_20250131-13)
+Casualties and losses
+
+**Per OSINT:**  
+c. By the end of August, the operation began to be criticized for diverting Ukrainian forces from [the east](/wiki/Eastern_Ukraine_campaign "Eastern Ukraine campaign")
+, stretching Ukraine's personnel along the front and allowing Russia to [advance toward Pokrovsk](/wiki/Pokrovsk_offensive "Pokrovsk offensive")
+.[\[46\]](#cite_note-AlexHorton-48)
+[\[47\]](#cite_note-Miller-49)
+ The [Institute for the Study of War](/wiki/Institute_for_the_Study_of_War "Institute for the Study of War")
+ reported that Russia had moved forces from "lower-priority" areas, but not from Donetsk Oblast.[\[48\]](#cite_note-50)
+
+The Ukrainian incursion into Kursk surprised Russia, some of Ukraine's allies, and many in the Ukrainian elite.[\[40\]](#cite_note-BBC_Cursino-42)
+[\[49\]](#cite_note-ap_20240814-51)
+[\[50\]](#cite_note-guardiansept-52)
+ It is the most significant attack across the border since the 2022 Russian invasion of Ukraine,[\[51\]](#cite_note-53)
+ and the first carried out primarily by Ukrainian regular forces. Additionally, there were reports of fighting in [Ivnitsa](/w/index.php?title=Ivnitsa&action=edit&redlink=1 "Ivnitsa (page does not exist)")
+ \[[ru](https://ru.wikipedia.org/wiki/%D0%98%D0%B2%D0%BD%D0%B8%D1%86%D0%B0_(%D0%9A%D1%83%D1%80%D1%81%D0%BA%D0%B0%D1%8F_%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C) "ru:Ивница (Курская область)")\
+; [uk](https://uk.wikipedia.org/wiki/%D0%86%D0%B2%D0%BD%D0%B8%D1%86%D1%8F_(%D0%9A%D1%83%D1%80%D1%81%D1%8C%D0%BA%D0%B0_%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C) "uk:Івниця (Курська область)")\
+\], a village 24 km (15 mi) from the border.[\[79\]](#cite_note-Politico_August_8-81)
+ Russian sources claimed that Ukrainian forces had reached the village of [Darino](/wiki/Darino,_Kursk_Oblast "Darino, Kursk Oblast")
+.[\[80\]](#cite_note-82)
+
+#### 8 August
+
+[RIA Novosti](/wiki/RIA_Novosti "RIA Novosti")
+ reported that four people died as a result of 'attacks' by the [AFU](/wiki/Armed_Forces_of_Ukraine "Armed Forces of Ukraine")
+ in the oblast[\[81\]](#cite_note-Rai_2024-08-08-2-83)
+ as fighting continued for the third day.[\[82\]](#cite_note-Reuters_2024-08-08-84)
+[\[83\]](#cite_note-AlJazeera_2024-08-08-85)
+ Pro-Russian milblogger Yuri Podolyaka said that "Sudzha is basically lost to us" and that Ukrainian forces were pushing towards [Lgov](/wiki/Lgov,_Kursk_Oblast "Lgov, Kursk Oblast")
+.[\[84\]](#cite_note-86)
+
+Ukrainian forces were in control of the western part of Sudzha and the surrounding roads; skirmishes continued in the town.[\[85\]](#cite_note-agent-87)
+
+According to Smirnov, the acting governor of Kursk Oblast, six Ukrainian drones and five missiles were shot down during the night and morning.[\[86\]](#cite_note-meduzalive8aug-88)
+
+[![](//upload.wikimedia.org/wikipedia/commons/thumb/3/3e/President_Vladimir_Putin_talks_with_the_governor_of_Kursk_in_August_2024.jpg/250px-President_Vladimir_Putin_talks_with_the_governor_of_Kursk_in_August_2024.jpg)](/wiki/File:President_Vladimir_Putin_talks_with_the_governor_of_Kursk_in_August_2024.jpg)
+
+[Vladimir Putin](/wiki/Vladimir_Putin "Vladimir Putin")
+ talks with [Alexei Smirnov](/wiki/Alexei_Smirnov_(politician) "Alexei Smirnov (politician)")
+, the acting [governor of Kursk](/wiki/Governor_of_Kursk_Oblast "Governor of Kursk Oblast")
+, about the situation regarding the Ukrainian incursion. As a result of the UAV attack, Kurchatov, as well as parts of the [Kurchatovsky](/wiki/Kurchatovsky_District,_Kursk_Oblast "Kurchatovsky District, Kursk Oblast")
+, [Oktyabrsky](/wiki/Oktyabrsky,_Lgovsky_District,_Kursk_Oblast "Oktyabrsky, Lgovsky District, Kursk Oblast")
+, [Bolshesoldatsky](/wiki/Bolshesoldatsky "Bolshesoldatsky")
+, [Oboyansky](/wiki/Oboyansky "Oboyansky")
+ and [Belovsky](/wiki/Belovsky_District,_Kursk_Oblast "Belovsky District, Kursk Oblast")
+ districts, were left without power supply.[\[105\]](#cite_note-107)
+
+A counter-terrorism operational regime under the [Federal Security Service](/wiki/Federal_Security_Service "Federal Security Service")
+, headed by [Alexander Bortnikov](/wiki/Alexander_Bortnikov "Alexander Bortnikov")
+,[\[5\]](#cite_note-ISW_2024-08-10-6)
+ was introduced in [Kursk](/wiki/Kursk_Oblast "Kursk Oblast")
+, [Bryansk](/wiki/Bryansk_Oblast "Bryansk Oblast")
+ and [Belgorod Oblasts](/wiki/Belgorod_Oblast "Belgorod Oblast")
+ to temporarily take control of the regions till the conditions return to normalcy.[\[106\]](#cite_note-108)
+ This meant that movement was restricted, vehicles could be seized, and phone calls could be monitored, among other measures.[\[107\]](#cite_note-voa1-109)
+
+The number of Ukrainian troops in Kursk Oblast was estimated by [CEIP](/wiki/Carnegie_Endowment_for_International_Peace "Carnegie Endowment for International Peace")
+ senior fellow Dara Massicot to be around 10,000–12,000, containing elements from four to five Ukrainian brigades.[\[108\]](#cite_note-110)
+
+#### 10 August
+
+According to analysts cited by _[The New York Times](/wiki/The_New_York_Times "The New York Times")
+_, the Ukrainian advance in Kursk Oblast had largely been stopped by Russian reinforcements at this point, and the situation stabilized, but Ukrainian forces continued to hold on to their captured territory.[\[109\]](#cite_note-111)
+ Conversely, other sources such as the _[Washington Post](/wiki/Washington_Post "Washington Post")
+_ and _[Frankfurter Rundschau](/wiki/Frankfurter_Rundschau "Frankfurter Rundschau")
+_ reported that Russia remained unable to control the situation, with continued Ukrainian advances.[\[110\]](#cite_note-Khurshudyan810-112)
+[\[111\]](#cite_note-113)
+ The [Russian Ministry of Defense](/wiki/Russian_Ministry_of_Defense "Russian Ministry of Defense")
+ made similar claims that they had stopped any Ukrainian advances in Kursk Oblast.[\[112\]](#cite_note-114)
+ Russian authorities introduced a "counter-terrorist operation" regime in Kursk Oblast.[\[113\]](#cite_note-115)
+[\[107\]](#cite_note-voa1-109)
+
+Battles were reported in [Olgovka](/wiki/Olgovka,_Kursk_Oblast "Olgovka, Kursk Oblast")
+ near Korenevo, the Ivashkovskoye farmstead, and Malaya Loknya.[\[114\]](#cite_note-116)
+
+On 10 August, Ukraine's [95th Air Assault Brigade](/wiki/95th_Air_Assault_Brigade "95th Air Assault Brigade")
+ entered Kursk Oblast, and was given the task of conducting assaults and mop-up operations around [Malaya Loknya](/wiki/Malaya_Loknya "Malaya Loknya")
+ and [Pogrebki](/w/index.php?title=Pogrebki&action=edit&redlink=1 "Pogrebki (page does not exist)")
+ \[[ru](https://ru.wikipedia.org/wiki/%D0%9F%D0%BE%D0%B3%D1%80%D0%B5%D0%B1%D0%BA%D0%B8_(%D0%9A%D1%83%D1%80%D1%81%D0%BA%D0%B0%D1%8F_%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C) "ru:Погребки (Курская область)")\
+\].[\[64\]](#cite_note-Kyrylenko-66)
+
+The Russian Armed Forces claimed to have regained control of the village of Makhnovka east of Sudzha.[\[115\]](#cite_note-117)
+ Reports claimed that the combat zone had expanded to 650 km2 (250 sq mi).[\[116\]](#cite_note-118)
+
+In the evening, Kursk Oblast governor Smirnov said that 15 people were injured in Kursk city after the wreckage of an intercepted Ukrainian missile fell onto a residential area.[\[117\]](#cite_note-BBC_Tough_Response-119)
+
+Soldiers of Ukraine's [252nd Territorial Defense Battalion](/wiki/241st_Territorial_Defense_Brigade_(Ukraine) "241st Territorial Defense Brigade (Ukraine)")
+ published footage from Poroz, a border village in [Belgorod Oblast](/wiki/Belgorod_Oblast "Belgorod Oblast")
+.[\[110\]](#cite_note-Khurshudyan810-112)
+
+#### 11 August
+
+On the night of 11 August, the Ukrainian Armed Forces entered [Belovsky District](/wiki/Belovsky_District,_Kursk_Oblast "Belovsky District, Kursk Oblast")
+, located southeast of Sudzhansky District, which was confirmed by the head of the district and the acting governor. Russian officials said that the loss of the bridge would hinder the relocation via land routes of civilians in the district.[\[151\]](#cite_note-153)
+[\[152\]](#cite_note-154)
+ Approximately 2,000 to 3,000 Russian conscripts were trapped in a [pocket](/wiki/Pocket_(military) "Pocket (military)")
+ south of the river.[\[153\]](#cite_note-155)
+
+#### 17 August
+
+Russian forces reportedly blew up two bridges near [Tyotkino](/wiki/Tyotkino "Tyotkino")
+ and [Popovo-Lezhachi](/wiki/Popovo-Lezhachi "Popovo-Lezhachi")
+ after withdrawing from the right bank of the [Seym River](/wiki/Seym_River "Seym River")
+ in the area.[\[154\]](#cite_note-156)
+
+The Ukrainian military claimed the capture of the settlement of [Korenevo](/wiki/Korenevo,_Korenevsky_District,_Kursk_Oblast "Korenevo, Korenevsky District, Kursk Oblast")
+ but the Russian MOD described the settlement as contested.[\[155\]](#cite_note-157)
+
+#### 18 August
+
+[![](//upload.wikimedia.org/wikipedia/commons/thumb/c/c1/The_80th_Air_Assault_Brigade_captured_a_T-90M_Proryv_tank_in_the_Kursk_region.jpg/250px-The_80th_Air_Assault_Brigade_captured_a_T-90M_Proryv_tank_in_the_Kursk_region.jpg)](/wiki/File:The_80th_Air_Assault_Brigade_captured_a_T-90M_Proryv_tank_in_the_Kursk_region.jpg)
+
+Ukrainian soldiers with a captured Russian [T-90](/wiki/T-90 "T-90")
+M Proryv tank
+
+Ukrainian forces destroyed another bridge over the [Seym](/wiki/Seym_(river) "Seym (river)")
+ river near [Zvannoye](/wiki/Zvannoye "Zvannoye")
+.[\[156\]](#cite_note-158)
+[\[157\]](#cite_note-ISW_2024-08-16-159)
+[\[158\]](#cite_note-160)
+
+According to Russian bloggers, both Ukraine and Russia reinforced their forces battling in Kursk Oblast, with Russia moving some forces from other fronts to the front.[\[159\]](#cite_note-newsweek20240818-161)
+\[_[better source needed](/wiki/Wikipedia:NOTRS "Wikipedia:NOTRS")\
+_\]
+
+Marines from the [501st Separate Naval Infantry Battalion](/wiki/501st_Separate_Naval_Infantry_Battalion "501st Separate Naval Infantry Battalion")
+ posted a video of them tearing down the Russian flag from the municipal building of [Apanasovka](/wiki/Apanasovka,_Korenevsky_District,_Kursk_Oblast "Apanasovka, Korenevsky District, Kursk Oblast")
+.[\[160\]](#cite_note-162)
+
+#### 19 August
+
+Russia claimed that the Ukrainian military destroyed the third and last bridge over the Seym River in [Korenevsky District](/wiki/Korenevsky_District "Korenevsky District")
+ leading to possible logistical strain on over 700 square kilometers of Russian territory.[\[161\]](#cite_note-163)
+
+In his evening address, President Zelenskyy said that Ukrainian forces were in control of 92 settlements in Kursk Oblast and 1,250 square kilometers of Russian territory.[\[162\]](#cite_note-164)
+
+#### 20 August
+
+The Russian interior ministry warned residents of Bryansk, Kursk and Belgorod Oblasts against using online dating websites and security cameras, citing concerns of information being gathered by Ukrainian forces.[\[163\]](#cite_note-165)
+ [Yunus-Bek Yevkurov](/wiki/Yunus-Bek_Yevkurov "Yunus-Bek Yevkurov")
+, former head of [Ingushetia](/wiki/Ingushetia "Ingushetia")
+ and incumbent deputy head of the Ministry of Defense was appointed as [Andrei Belousov](/wiki/Andrei_Belousov "Andrei Belousov")
+'s deputy in the Coordinating Council for the Security Issues of the Bordering Territories. The ministry stated, "After suffering losses, the Ukrainian sabotage group retreated to its territory, while some of the fighters attempted to establish a position on the territory adjacent to the state border, where they were blocked by Russian army units."[\[298\]](#cite_note-nva-300)
+[\[299\]](#cite_note-guardian-301)
+ President [Vladimir Putin](/wiki/Vladimir_Putin "Vladimir Putin")
+ described the AFU's offensive into Kursk Oblast as a "large-scale provocation." He accused the "Kyiv regime" of "indiscriminately firing various types of weapons, including missiles, at civilian buildings, houses, and ambulances." Putin stated that he plans to meet with the heads of the security agencies, the Defense Ministry, and the [Federal Security Service](/wiki/Federal_Security_Service "Federal Security Service")
+ (FSB).[\[71\]](#cite_note-NBC87-73)
+[\[16\]](#cite_note-surface-17)
+
+[State Duma](/wiki/State_Duma "State Duma")
+ deputy and retired major general [Andrey Gurulyov](/wiki/Andrey_Gurulyov "Andrey Gurulyov")
+ criticized the Russian army for failing to defend Kursk Oblast.[\[300\]](#cite_note-302)
+ On 8 August, Gurulyov said in a television interview that the Russian military knew about the planned Ukrainian invasion of Kursk a month before it happened but "from the top came the order not to panic, and that those above know better."[\[301\]](#cite_note-303)
+
+On 13 August, an immediate special meeting in the "[Arria format](/wiki/Arria_format "Arria format")
+" of the [United Nations Security Council](/wiki/United_Nations_Security_Council "United Nations Security Council")
+ took place on request of Russia's Commissioner for Human Rights [Tatyana Moskalkova](/wiki/Tatyana_Moskalkova "Tatyana Moskalkova")
+, who demanded to "condemn the actions of Ukraine" in relation to the events in Kursk Oblast.[\[302\]](#cite_note-304)
+
+In response to the offensive, Putin has reportedly set deadlines for Russian forces to push Ukrainian troops out of Kursk Oblast, first by October 2024, which was then delayed to January 2025.[\[303\]](#cite_note-y851-305)
+[\[304\]](#cite_note-g362-306)
+
+Pro-Kremlin political analyst [Sergei Markov](/wiki/Sergei_Markov "Sergei Markov")
+ told _The Washington Post_ that "the signal came from intelligence to the leadership, but ..."
+
+# Your Summary
+
+
+
+===== > RESPONSE:  < =====
+The search result is from Wikipedia and discusses the 2024 Kursk offensive, which began on August 6, 2024, as part of the Russian invasion of Ukraine. The Ukrainian military launched an incursion into Russia's Kursk Oblast. The article mentions the involvement of Ukrainian brigades, Russian forces, and North Korean forces. The article also mentions the capture of territory, casualties, and the response from Russian authorities, including the declaration of a state of emergency. The article also includes images of damaged buildings and a captured tank. <image:26> is not mentioned in the search result.
+
+_________________________
+
+
+
+SummarizeResultPrompt - QUERY:
+
+# Instructions
+In order to find evidence that helps your fact-check, you just ran a web search which yielded a Search Result. **Your task right now is to summarize the Search Result.** What to include:
+* information that might be useful for the fact-check (see Record)
+* relevant images (refer to images by inserting their reference <image:k>)
+* if available: the release date as well as the author or the publisher (e.g. the media company) of the search result.
+
+Do NOT include:
+* advertisements
+* any other information not related to the Record or the Claim
+
+Additional rules:
+* Do not add any additional information besides the information in the Search Result.
+* If the Search Result doesn't contain any relevant information for the fact-checking work, simply print one word in capital letters: "NONE".
+* Keep your writing style like in the Examples 1, 2 and 3 provided to you.
+* Try to filter out relevant information even if the search result is in a different language.
+
+# Example 1
+The search result from America Today provides several photographs of the Notre-Dame Cathedral fire on April 15, 2019. <image:i>, <image:j>, <image:k>. None of the images show the Eiffel Tower in the background. 
+
+# Example 2
+NONE
+
+# Example 3
+The Guardian discusses a report blaming the Syrian government for a toxic gas attack and condemning their use of chemical weapons. The Guardian mentions the Chemical Weapons Convention and the responsibilities of Syria under the convention. According to The Guardian, The White House condemned the Assad regime for defying the norm against chemical weapons use.
+
+# Record
+## Claim
+Claim: "<image:26> This image shows destroyed Ukrainian tanks during Ukraine's incursion into Russia's Kursk Oblast in August 2024."
+
+## Actions
+```
+reverse_search(<image:26>)
+web_search("Ukraine Russia Kursk Oblast August 2024 tanks")
+```
+
+# Search Result
+From [Source](https://www.reuters.com/world/europe/russia-says-it-pummelled-ukrainian-forces-along-kursk-front-2024-08-26/): 
+Content: "They also say it will ensnare thousands of Ukrainian troops in a new front which has little strategic or tactical importance.
+
+The Kremlin said on Monday that [there would have to be a Russian response to Ukraine's incursion](/world/europe/kremlin-says-there-will-be-response-ukraines-kursk-attack-2024-08-26/)
+, and that the idea of ceasefire talks with Kyiv was no longer relevant.
+
+Putin has said that Ukraine will receive a ["worthy response"](/world/europe/russia-evacuates-another-border-region-amid-growing-threat-ukrainian-units-2024-08-12/)
+ but has yet to set out in public what that response is.
+
+Since the incursion, Russia said that Ukraine had lost 73 tanks, 61 armoured personnel carriers and 404 armoured combat vehicles in the Kursk region. [Skip to main content](#main-content)
+
+[Exclusive news, data and analytics for financial market professionalsLearn more aboutRefinitiv](/differentiator/)
+
+!A crossing point on the border with Russia a is seen in Sumy region <image:4884>
+
+A crossing point on the border with Russia a is seen, amid Russia's attack on Ukraine, near the Russian border in Sumy region, Ukraine August 11, 2024. 6 in a surprise attack that Russian President Vladimir Putin said was aimed at [improving Kyiv's negotiating position](/world/europe/russia-evacuates-another-border-region-amid-growing-threat-ukrainian-units-2024-08-12/)
+ ahead of possible talks and slowing the advance of Russian forces along the front.
+
+Sign up [here.](undefined?location=article-paragraph&redirectUrl=%2Fworld%2Feurope%2Frussia-says-it-pummelled-ukrainian-forces-along-kursk-front-2024-08-26%2F)
+
+Ukrainian President Volodymyr Zelenskiy said on Sunday that his forces had advanced up to 3 kilometres (1.86 miles) in Russia's Kursk region, taking control of two more settlements there.
+
+Russia said it had struck Ukraine's 22nd and 115th Mechanized Brigades, the 82nd Airborne Assault Brigade, and a Guard and Support Brigade in at least 12 different places with air strikes, artillery and infantry.
+
+Moscow said it had also repelled attacks at seven additional places in Kursk and had struck Ukrainian forces at 16 other locations in Ukraine's neighbouring Sumy region.
+
+"Units of the northern group of forces, with the support of army aviation and artillery fire, repelled attacks by enemy assault groups in the direction of the settlements of Kremyanoye, Malaya Loknya and Nechayev," Russia's defence ministry said in a statement.
+
+It said Russian forces had also "thwarted attempts to attack in the direction of Komarovka, Spalnoye, Korenevo, Pogrebky and Olgovka."
+
+The ministry said it was seeking to identify and destroy Ukrainian sabotage units which had hidden in the forests in an attempt to penetrate deeper into Russian sovereign territory.
+
+While the Kursk incursion has grabbed headlines, Russian officials say the attack will fail to draw Russian forces away from the east of Ukraine where they are still advancing. Reuters was unable to verify battlefield reports from either side.
+
+Russia also gave estimates for Ukrainian losses in Kursk, but Reuters does not publish combatant estimates from either side.
+
+Reporting by Guy Faulconbridge Editing by Andrew Osborn and Toby Chopra
+
+Our Standards: [The Thomson Reuters Trust Principles., opens new tab](https://www.thomsonreuters.com/en/about-us/trust-principles.html)
+
+Share
+
+*   X
+    
+*   Facebook
+    
+*   Linkedin
+    
+*   Email
+    
+*   Link
+    
+
+[Purchase Licensing Rights](https://www.reutersagency.com/en/licensereuterscontent/?utm_medium=rcom-article-media&utm_campaign=rcom-rcp-lead)
+
+Read Next
+---------
+
+*   [](/world/uk/uks-farage-sets-out-plan-mass-deportation-asylum-seekers-2025-08-23/)
+    
+    [United Kingdomcategory](/world/uk/)
+    [UK's Farage sets out plan for 'mass deportation' of asylum seekers](/world/uk/uks-farage-sets-out-plan-mass-deportation-asylum-seekers-2025-08-23/)
+    
+    11:32 AM UTC
+    
+*   [](/business/media-telecom/online-death-abused-french-streamer-was-not-result-trauma-prosecutor-says-2025-08-22/)
+    
+    [category](/business/)
+    [Online death of abused French streamer was not result of trauma, prosecutor says](/business/media-telecom/online-death-abused-french-streamer-was-not-result-trauma-prosecutor-says-2025-08-22/)
+    
+    August 22, 2025
+    
+*   [](/world/americas/fleeing-maduro-then-trump-venezuelans-seek-refuge-spain-2025-08-22/)
+    
+    [Americascategory](/world/americas/)
+    [Fleeing Maduro then Trump, Venezuelans seek refuge in Spain](/world/americas/fleeing-maduro-then-trump-venezuelans-seek-refuge-spain-2025-08-22/)
+    
+    August 22, 2025
+    
+*   [](/business/environment/firefighter-injured-portugal-blaze-crew-flees-wall-fire-2025-08-21/)
+    
+    [category](/business/)
+    [Firefighter injured in Portugal blaze as crew flees wall of fire](/business/environment/firefighter-injured-portugal-blaze-crew-flees-wall-fire-2025-08-21/)
+    
+    August 21, 2025
+    
+
+[](https://www.lseg.com/en/data-analytics/products/workspace?utm_source=reuters.com&utm_medium=articlebanner&utm_campaign=Reuters_ProductPage_Links)
+
+[World](/world/)
+
+-----------------
+
+*   [](/world/us/trump-crime-crackdown-deploys-troops-washingtons-safest-sites-2025-08-23/)
+    
+    ### [Trump crime crackdown deploys troops in Washington's safest sites](/world/us/trump-crime-crackdown-deploys-troops-washingtons-safest-sites-2025-08-23/)
+    
+    [United Statescategory](/world/us/)
+     · August 23, 2025 · 1:04 PM UTC · ago
+    
+    Hundreds of National Guard soldiers in military fatigues and combat boots mingled with tourists, posed for selfies, and treated themselves to ice cream from food trucks on Thursday along Washington's National Mall, one of the safest parts of America's capital.
+    
+*   [](/business/energy/taiwan-nuclear-plant-re-opening-vote-fails-approval-threshold-missed-2025-08-23/)
+    
+    [category](/business/)
+    [Taiwan nuclear plant re-opening vote fails as approval threshold missed](/business/energy/taiwan-nuclear-plant-re-opening-vote-fails-approval-threshold-missed-2025-08-23/)
+    
+    12:43 PM UTC
+    
+*   [](/world/china/japans-ishiba-south-koreas-lee-agree-closer-cooperation-before-lee-meets-trump-2025-08-23/)
+    
+    [Chinacategory](/world/china/)
+    [Japan's Ishiba, South Korea's Lee agree closer cooperation before Lee meets Trump](/world/china/japans-ishiba-south-koreas-lee-agree-closer-cooperation-before-lee-meets-trump-2025-08-23/)
+    
+    12:12 PM UTC
+    
+*   [](/world/uk/uks-farage-sets-out-plan-mass-deportation-asylum-seekers-2025-08-23/)
+    
+    [United Kingdomcategory](/world/uk/)
+    [UK's Farage sets out plan for 'mass deportation' of asylum seekers](/world/uk/uks-farage-sets-out-plan-mass-deportation-asylum-seekers-2025-08-23/)
+    
+    11:32 AM UTC
+    
+*   [](/world/france-summons-italian-ambassador-over-challenge-macron-ukraine-2025-08-23/)
+    
+    [Worldcategory](/world/)
+    [France summons Italian ambassador over challenge to Macron on Ukraine](/world/france-summons-italian-ambassador-over-challenge-macron-ukraine-2025-08-23/)
+    
+    9:57 AM UTC REUTERS/Viacheslav Ratynskyi/File Photo [Purchase Licensing Rights, opens new tab](https://www.reutersconnect.com/item/a-crossing-point-on-the-border-with-russia-a-is-seen-in-sumy-region/dGFnOnJldXRlcnMuY29tLDIwMjQ6bmV3c21sX1JDMk1EOUE1MjJCUw%3D%3D/?utm_medium=rcom-article-media&utm_campaign=rcom-rcp-lead)
+
+MOSCOW, Aug 26 (Reuters) - Russia said on Monday it had struck Ukrainian forces at more than a dozen places along the front in the Kursk region of western Russia where Ukraine has carved out a slice of territory after smashing through the Russian border 20 days ago.
+
+Thousands of Ukrainian soldiers punched through the border on Aug."
+
+# Your Summary
+
+
+
+===== > RESPONSE:  < =====
+Reuters reports on August 26, 2024, that Russia said it had struck Ukrainian forces in the Kursk region. The article mentions an incursion by Ukraine into the Kursk region. The article also mentions that Russia said that Ukraine had lost 73 tanks, 61 armored personnel carriers and 404 armored combat vehicles in the Kursk region. <image:4884>
+
+_________________________
+
+
+
+SummarizeResultPrompt - QUERY:
+
+# Instructions
+In order to find evidence that helps your fact-check, you just ran a web search which yielded a Search Result. **Your task right now is to summarize the Search Result.** What to include:
+* information that might be useful for the fact-check (see Record)
+* relevant images (refer to images by inserting their reference <image:k>)
+* if available: the release date as well as the author or the publisher (e.g. the media company) of the search result.
+
+Do NOT include:
+* advertisements
+* any other information not related to the Record or the Claim
+
+Additional rules:
+* Do not add any additional information besides the information in the Search Result.
+* If the Search Result doesn't contain any relevant information for the fact-checking work, simply print one word in capital letters: "NONE".
+* Keep your writing style like in the Examples 1, 2 and 3 provided to you.
+* Try to filter out relevant information even if the search result is in a different language.
+
+# Example 1
+The search result from America Today provides several photographs of the Notre-Dame Cathedral fire on April 15, 2019. <image:i>, <image:j>, <image:k>. None of the images show the Eiffel Tower in the background. 
+
+# Example 2
+NONE
+
+# Example 3
+The Guardian discusses a report blaming the Syrian government for a toxic gas attack and condemning their use of chemical weapons. The Guardian mentions the Chemical Weapons Convention and the responsibilities of Syria under the convention. According to The Guardian, The White House condemned the Assad regime for defying the norm against chemical weapons use.
+
+# Record
+## Claim
+Claim: "<image:26> This image shows destroyed Ukrainian tanks during Ukraine's incursion into Russia's Kursk Oblast in August 2024."
+
+## Actions
+```
+reverse_search(<image:26>)
+web_search("Ukraine Russia Kursk Oblast August 2024 tanks")
+```
+
+# Search Result
+From [Source](https://www.aljazeera.com/features/2024/8/29/russia-lashes-out-against-terrorist-incursion-in-kursk-pulls-back-planes): 
+Content: "If in previous periods we had 30 to 50 antiaircraft missiles per day only \[in the Sumy region\], then yesterday the enemy used air strikes twice, using four antiaircraft missiles and 11 unguided air missiles.”
+
+Units operating in hotly contested [Chasiv Yar](/news/2024/7/4/ukraine-army-retreats-from-part-of-strategic-chasiv-yar-as-russia-advances)
+ in the eastern region of Donetsk have also reported a drop in glide bombs this month.
+
+Vadym Mysnyk, a spokesman for the Siversk tactical group, said: “It is a sign that we are thinning out their air force and hitting airfields, and we have pushed the enemy away from the border a little.”
+
+![Kursk](/wp-content/uploads/2024/08/2024-08-08T164332Z_147386495_RC2SB9AWNB2F_RTRMADP_3_UKRAINE-CRISIS-RUSSIA-SUDZHA-1724945113.jpg?w=770&resize=770%2C433&quality=80)
+
+A building is on fire in the town of Sudzha after a cross-border incursion of Ukrainian troops into the Kursk region of Russia in this still image from video taken on August 7, 2024 \[MIC Izvestia via Reuters\]
+
+No effect on the Pokrovsk front
+-------------------------------
+
+There was also increasing evidence that Moscow was having trouble stopping the Ukrainian counterinvasion in Kursk and was increasingly tapping elite units to do so.
+
+Russian military reporters and geolocated footage have revealed that elements of the 810th and 155th naval infantry brigades, the 11th Airborne Brigade, and the 51st and 56th airborne regiments were redeployed to fight in Kursk.
+
+The 810th and 155th naval infantry brigades had been fighting in Kharkiv, where Russia launched a new incursion in May. Sarantsev admitted that the Kursk action had had no effect on the Pokrovsk front.
+
+![Pokrovsk](/wp-content/uploads/2024/08/2024-08-24T151932Z_307779824_RC2EM9ARYVWH_RTRMADP_3_UKRAINE-CRISIS-POKROVSK-1724945269.jpg?w=770&resize=770%2C514&quality=80)
+
+Ukrainian servicemen gather around a pick-up truck in Pokrovsk, Ukraine, as they prepare to move into battle against Russian troops 12km (7.5 miles) away on August 24, 2024 \[Thomas Peter/Reuters\]
+
+An ‘insane and suicidal escapade’
+---------------------------------
+
+Western analysts have offered differing explanations for the Kursk offensive – including the diversion of Russian troops and a psychological reset through seizing the initiative. ![](/wp-content/uploads/2024/08/AP24240624343613-1724950393.jpg?resize=770%2C513&quality=80)
+
+Ukrainian historian Yuri Savchuk carries a road sign in Sudzha, Russia, on August 16, 2024 \[File:AP\]
+
+*   [![John T Psaropoulos](/wp-content/uploads/2018/01/e97a12bd596e49388d5c4baa7421e7ce_6.jpeg?resize=96%2C96&quality=80)](/author/john_psaropoulos_2012510204426705651)
+    
+    By [John T Psaropoulos](/author/john_psaropoulos_2012510204426705651)
+    
+
+Published On 29 Aug 202429 Aug 2024
+
+Ukraine’s deep strikes against Russian military targets and its three-week-old ground offensive inside Russian territory have appeared to be yielding military and political results during the past week.
+
+Russia was reported to be moving its aircraft back from airfields near the Ukrainian border while glide bomb attacks inside Ukraine were reported to have decreased. Life has the same value everywhere.”
+
+Zelenskyy said he had discussed such a joint aerial defence with Lithuanian Prime Minister Ingrid Shimonite and Polish President Andrej Duda in Kyiv on August 24.
+
+![Zelenskyy](/wp-content/uploads/2024/08/2024-08-29T152147Z_1900713370_RC2W89AC0M5A_RTRMADP_3_UKRAINE-CRISIS-JET-CRASH-1724945509.jpg?w=770&resize=770%2C513&quality=80)
+
+Ukrainian President Volodymyr Zelenskyy appears next to an F-16, confirming the arrival of the first such fighter jet from its allies on August 4, 2024 \[Valentyn Ogirenko/Reuters\]
+
+Taking the fight to Russia
+--------------------------
+
+While Ukraine seeks expanded authority and cooperation from its allies, it is also going its own way. It is believed prototypes of this missile may have been used against Russian-occupied Crimea in August 2023 to [destroy two S-400](/news/2024/2/12/for-ukraines-defence-industry-ambitions-the-skys-the-limit)
+ air defence systems. Evidence that Moscow was scrambling elite units from Ukraine to defend home turf also mounted during the week.
+
+An unnamed White House official told the Politico news website that “90 percent of the planes that launch glide bombs” against Ukrainian front-line positions had been moved back inside Russia.
+
+![INTERACTIVE-ATTACK_ON_KURSK_AUG_28-1724833592](/wp-content/uploads/2022/02/INTERACTIVE-ATTACK_ON_KURSK_AUG_20-1724833592.png?w=770&resize=770%2C962&quality=80)
+
+(Al Jazeera)
+
+The independent analysis website Frontelligence agreed that “between the second half of June and mid-July, Russian forces relocated many valuable assets away from the Ukrainian border,” including planes and helicopters.
+
+Ukrainian Colonel Vitaly Sarantsev told a joint news telethon broadcast by Ukrainian channels that the Kursk offensive had greatly reduced Russia’s use of aviation against northeastern Ukraine.
+
+“We felt relief in tactical aviation,” he said on Sunday. If so, that would be a significant proportion of the more than 700,000 soldiers Russia is estimated to have in Ukraine.
+
+The Washington, DC-based Institute for the Study of War (ISW), a think tank, estimated that Russia would need 60,000 soldiers to win back territory in Kursk once Ukrainian defences were dug. Ukrainian President Volodymyr Zelenskyy last week said it was a preemptive defence to prevent another Kharkiv-type invasion in the north.
+
+But he also told Ukrainians it was “a way to compensate for the deficit in long-range capabilities”.
+
+For months, Zelenskyy has implored the United States to allow Ukraine to use the [ATACMS long-range rocket artillery](/news/2024/8/23/which-countries-weapons-is-ukraine-using-in-russia-incursion)
+ it provides to strike airfields deep inside Russia. He also wants the US to release Britain and France, for whose Storm Shadow missiles the US provides components, to authorise their use in the same way.
+
+Currently, the US allows Ukraine to use its weapons to counter battery fire within a limited range across the border but not to hit Russian airfields because it is afraid that this could draw the US into the war.
+
+![INTERACTIVE-WHO CONTROLS WHAT IN SOUTHERN UKRAINE-1724833604](/wp-content/uploads/2022/02/INTERACTIVE-WHO-CONTROLS-WHAT-IN-SOUTHERN-UKRAINE-1724833604.png?w=770&resize=770%2C770&quality=80)
+
+(Al Jazeera)
+
+In a recent analysis, the ISW identified that “at least 209 of 245 (more than 85 percent) known Russian military objects in range of ATACMS are not air bases” but ammunition depots, communications centres, army bases and command centres.
+
+White House national security spokesman John Kirby told reporters on Monday that restrictions on the use of long-range weapons remain in place but “we’ll keep the conversations with the Ukrainians going” to potentially revise them.
+
+The European Commission, which does not command military assets, has openly supported a lifting of restrictions.
+
+The European Union’s top diplomat, Josep Borrell, [repeated that support](/news/2024/8/29/eus-borrell-urges-ukraine-backers-to-lift-curbs-on-arms-use-inside-russia)
+ on Monday and Thursday. “I reiterate that lifting restrictions on the use of capabilities against the Russian military involved in aggression against Ukraine, in accordance with international law, would strengthen Ukrainian self-defence, save lives and reduce destruction in Ukraine,” he said on Monday.
+
+Russian officials bared their teeth against any such decision and hit out against the fact that both Brussels and Washington have allowed the use of US and European equipment in Ukraine’s Kursk offensive.
+
+“The West does not want to avoid escalation."
+
+# Your Summary
+
+
+
+===== > RESPONSE:  < =====
+The Al Jazeera article, published on August 29, 2024, discusses Ukraine's ground offensive inside Russian territory, specifically in the Kursk region. <image:k> shows a building on fire in Sudzha, Russia, after a cross-border incursion of Ukrainian troops into the Kursk region on August 7, 2024. The article mentions that Russia was moving its aircraft back from airfields near the Ukrainian border. The article also mentions that the Kursk offensive had greatly reduced Russia’s use of aviation against northeastern Ukraine.
+
+_________________________
+
+
+
+SummarizeSummariesPrompt - QUERY:
+
+# Instructions
+You just retrieved web sources, each one summarized under "Web Sources". **Your task right now is to summarize the web source summaries.**
+
+Always adhere to the following rules:
+* Write only one to two paragraphs.
+* Include all URLs from the listed sources. Format them as Markdown hyperlinks.
+* Do not add any additional information besides the information in the summaries.
+* Include references (<image:k>) to all relevant images.
+
+# Record
+## Claim
+Claim: "<image:26> This image shows destroyed Ukrainian tanks during Ukraine's incursion into Russia's Kursk Oblast in August 2024."
+
+## Actions
+```
+reverse_search(<image:26>)
+web_search("Ukraine Russia Kursk Oblast August 2024 tanks")
+```
+
+## Web Sources
+**Web Search Result**
+
+From [Source](https://en.wikipedia.org/wiki/Kursk_campaign): 
+Content: The search result is from Wikipedia and discusses the 2024 Kursk offensive, which began on August 6, 2024, as part of the Russian invasion of Ukraine. The Ukrainian military launched an incursion into Russia's Kursk Oblast. The article mentions the involvement of Ukrainian brigades, Russian forces, and North Korean forces. The article also mentions the capture of territory, casualties, and the response from Russian authorities, including the declaration of a state of emergency. The article also includes images of damaged buildings and a captured tank. <image:26> is not mentioned in the search result.
+
+
+From [Source](https://www.reuters.com/world/europe/russia-says-it-pummelled-ukrainian-forces-along-kursk-front-2024-08-26/): 
+Content: Reuters reports on August 26, 2024, that Russia said it had struck Ukrainian forces in the Kursk region. The article mentions an incursion by Ukraine into the Kursk region. The article also mentions that Russia said that Ukraine had lost 73 tanks, 61 armored personnel carriers and 404 armored combat vehicles in the Kursk region. <image:4884>
+
+
+From [Source](https://www.aljazeera.com/features/2024/8/29/russia-lashes-out-against-terrorist-incursion-in-kursk-pulls-back-planes): 
+Content: The Al Jazeera article, published on August 29, 2024, discusses Ukraine's ground offensive inside Russian territory, specifically in the Kursk region. <image:k> shows a building on fire in Sudzha, Russia, after a cross-border incursion of Ukrainian troops into the Kursk region on August 7, 2024. The article mentions that Russia was moving its aircraft back from airfields near the Ukrainian border. The article also mentions that the Kursk offensive had greatly reduced Russia’s use of aviation against northeastern Ukraine.
+
+
+## Your Summary
+
+
+
+===== > RESPONSE:  < =====
+The search results discuss the 2024 Kursk offensive, which began on August 6, 2024, as part of the Russian invasion of Ukraine. The Ukrainian military launched an incursion into Russia's Kursk Oblast. The article mentions the involvement of Ukrainian brigades, Russian forces, and North Korean forces. The article also mentions the capture of territory, casualties, and the response from Russian authorities, including the declaration of a state of emergency. The article also includes images of damaged buildings and a captured tank. (<image:26>)
+
+Reuters reports on August 26, 2024, that Russia said it had struck Ukrainian forces in the Kursk region. The article mentions an incursion by Ukraine into the Kursk region. The article also mentions that Russia said that Ukraine had lost 73 tanks, 61 armored personnel carriers and 404 armored combat vehicles in the Kursk region. (<image:4884>) An Al Jazeera article, published on August 29, 2024, discusses Ukraine's ground offensive inside Russian territory, specifically in the Kursk region. (<image:k>) shows a building on fire in Sudzha, Russia, after a cross-border incursion of Ukrainian troops into the Kursk region on August 7, 2024. The article mentions that Russia was moving its aircraft back from airfields near the Ukrainian border. The article also mentions that the Kursk offensive had greatly reduced Russia’s use of aviation against northeastern Ukraine.
+
+_________________________
+
+
+
+DevelopPrompt - QUERY:
+
+# Instructions
+You just retrieved new Evidence. Now, **analyze the Claim's veracity using the evidence**. Always adhere to the following rules:
+* Focus on developing new insights. Do not repeat larger parts from the Record. Do not restate the Claim.
+* Write down your thoughts step-by-step. Whenever necessary, you may elaborate in more detail.
+* Depending on the topic's complexity, invest one to three paragraphs. The fewer, the better.
+* If you find that there is insufficient information to verify the Claim, explicitly state what information is missing.
+* If you cite web sources, always refer to them by including their URL as a Markdown hyperlink.
+* **Use information only from the recorded evidence**: Avoid inserting information that is not implied by the evidence. You may use commonsense knowledge, though.
+
+# Record
+## Claim
+Claim: "<image:26> This image shows destroyed Ukrainian tanks during Ukraine's incursion into Russia's Kursk Oblast in August 2024."
+
+## Actions
+```
+reverse_search(<image:26>)
+web_search("Ukraine Russia Kursk Oblast August 2024 tanks")
+```
+
+## Evidence
+### Evidence from `reverse_search`
+The image of destroyed tanks (<image:26>) appears in multiple sources. One source, from Sputnik Africa, published on October 17, 2024, reports that Ukraine has lost around 40 Leopard tanks since February 2022. The Moscow Times published an article on June 13, 2023, stating that Russia had captured German Leopard tanks in the Zaporizhzhia region. Defence Security Asia published an article on May 19, 2024, discussing the destruction of German-made Leopard tanks in Ukraine.
+
+The sources do not mention any Ukrainian incursion into Russia's Kursk Oblast in August 2024.
+
+
+### Evidence from `web_search`
+The search results discuss the 2024 Kursk offensive, which began on August 6, 2024, as part of the Russian invasion of Ukraine. The Ukrainian military launched an incursion into Russia's Kursk Oblast. The article mentions the involvement of Ukrainian brigades, Russian forces, and North Korean forces. The article also mentions the capture of territory, casualties, and the response from Russian authorities, including the declaration of a state of emergency. The article also includes images of damaged buildings and a captured tank. (<image:26>)
+
+Reuters reports on August 26, 2024, that Russia said it had struck Ukrainian forces in the Kursk region. The article mentions an incursion by Ukraine into the Kursk region. The article also mentions that Russia said that Ukraine had lost 73 tanks, 61 armored personnel carriers and 404 armored combat vehicles in the Kursk region. (<image:4884>) An Al Jazeera article, published on August 29, 2024, discusses Ukraine's ground offensive inside Russian territory, specifically in the Kursk region. (<image:k>) shows a building on fire in Sudzha, Russia, after a cross-border incursion of Ukrainian troops into the Kursk region on August 7, 2024. The article mentions that Russia was moving its aircraft back from airfields near the Ukrainian border. The article also mentions that the Kursk offensive had greatly reduced Russia’s use of aviation against northeastern Ukraine.
+
+
+# Your Analysis
+
+
+
+===== > RESPONSE:  < =====
+The claim that the image shows destroyed Ukrainian tanks during Ukraine's incursion into Russia's Kursk Oblast in August 2024 is supported by the evidence. The web search confirms that an incursion did occur in August 2024. Reuters reported that Russia said Ukraine had lost 73 tanks in the Kursk region.
+
+The reverse image search confirms that the image is related to the conflict. The evidence does not explicitly state that the tanks in the image are Ukrainian.
+
+Based on the evidence, the claim is likely true. However, the exact origin of the tanks in the image is not confirmed.
+
+_________________________
+
+
+
+JudgePrompt - QUERY:
+
+# Instructions
+**Determine the Claim's veracity** by following these steps:
+1. Briefly summarize the key insights from the fact-check (see Record) in at most one paragraph.
+2. Write one paragraph about which one of the Decision Options applies best. Include the most appropriate decision option at the end and enclose it in backticks like `this`.
+
+
+
+
+## Decision Options
+* `false`: The claim is not factually accurate. This is the case if one of the following three conditions is met:(1) The claim is demonstrably false when it is disproven by evidence from multiple and reliable sources,(2) The claim or image is taken out of context, i.e. the origin, content and/or meaning of a statement or an image is misrepresented. For example, an old claim or an old image is mispresented in a new context in a misleading way,(3) There is not enough evidence to verify the claim or the evidence is conflicting or self-contradictory.
+* `not enough information`: The fact-check does not contain sufficient information to come to an conclusion. For example,there is substantial lack of evidence or the evidence is inconclusive, conflicting or self-contradictory. In the case of a lack of evidence, state which information exactly is missing. In particular, if no RESULTS or sources are available, pick this decision.
+* `true`: The claim is factually accurate when it is confirmed by evidence from multiple and reliable sources.
+
+# Record
+## Claim
+Claim: "<image:26> This image shows destroyed Ukrainian tanks during Ukraine's incursion into Russia's Kursk Oblast in August 2024."
+
+## Actions
+```
+reverse_search(<image:26>)
+web_search("Ukraine Russia Kursk Oblast August 2024 tanks")
+```
+
+## Evidence
+### Evidence from `reverse_search`
+The image of destroyed tanks (<image:26>) appears in multiple sources. One source, from Sputnik Africa, published on October 17, 2024, reports that Ukraine has lost around 40 Leopard tanks since February 2022. The Moscow Times published an article on June 13, 2023, stating that Russia had captured German Leopard tanks in the Zaporizhzhia region. Defence Security Asia published an article on May 19, 2024, discussing the destruction of German-made Leopard tanks in Ukraine.
+
+The sources do not mention any Ukrainian incursion into Russia's Kursk Oblast in August 2024.
+
+
+### Evidence from `web_search`
+The search results discuss the 2024 Kursk offensive, which began on August 6, 2024, as part of the Russian invasion of Ukraine. The Ukrainian military launched an incursion into Russia's Kursk Oblast. The article mentions the involvement of Ukrainian brigades, Russian forces, and North Korean forces. The article also mentions the capture of territory, casualties, and the response from Russian authorities, including the declaration of a state of emergency. The article also includes images of damaged buildings and a captured tank. (<image:26>)
+
+Reuters reports on August 26, 2024, that Russia said it had struck Ukrainian forces in the Kursk region. The article mentions an incursion by Ukraine into the Kursk region. The article also mentions that Russia said that Ukraine had lost 73 tanks, 61 armored personnel carriers and 404 armored combat vehicles in the Kursk region. (<image:4884>) An Al Jazeera article, published on August 29, 2024, discusses Ukraine's ground offensive inside Russian territory, specifically in the Kursk region. (<image:k>) shows a building on fire in Sudzha, Russia, after a cross-border incursion of Ukrainian troops into the Kursk region on August 7, 2024. The article mentions that Russia was moving its aircraft back from airfields near the Ukrainian border. The article also mentions that the Kursk offensive had greatly reduced Russia’s use of aviation against northeastern Ukraine.
+
+
+## Elaboration
+The claim that the image shows destroyed Ukrainian tanks during Ukraine's incursion into Russia's Kursk Oblast in August 2024 is supported by the evidence. The web search confirms that an incursion did occur in August 2024. Reuters reported that Russia said Ukraine had lost 73 tanks in the Kursk region.
+
+The reverse image search confirms that the image is related to the conflict. The evidence does not explicitly state that the tanks in the image are Ukrainian.
+
+Based on the evidence, the claim is likely true. However, the exact origin of the tanks in the image is not confirmed.
+
+
+# Your Judgement
+
+
+
+===== > RESPONSE:  < =====
+The image shows destroyed tanks, and the web search confirms that an incursion by Ukraine into Russia's Kursk Oblast occurred in August 2024, with reports of tank losses. While the image's origin is not explicitly confirmed, the context supports the claim.
+
+`true`
+_________________________
+
+
+
+SummarizeDocPrompt - QUERY:
+
+# Instructions
+You are provided with the record of a fact-check. It contains the Claim to be verified and a documentation of all the fact-checking work along the gathered evidence. Your task is to **summarize the fact-check**. That is, you provide a concise, one-paragraph justification for the final VERDICT based on the knowledge from the Record. Note:
+* Be truthful, brief, do not add any additional information besides the information given in the Record. 
+* Link key sources in your summary. Use Markdown notation for that. You may link them in-line.
+* Don't state the Claim again. Rather focus on the key insights of the fact-check.
+* Simply print just the summary.
+
+# Record
+## Claim
+Claim: "<image:26> This image shows destroyed Ukrainian tanks during Ukraine's incursion into Russia's Kursk Oblast in August 2024."
+
+## Actions
+```
+reverse_search(<image:26>)
+web_search("Ukraine Russia Kursk Oblast August 2024 tanks")
+```
+
+## Evidence
+### Evidence from `reverse_search`
+The image of destroyed tanks (<image:26>) appears in multiple sources. One source, from Sputnik Africa, published on October 17, 2024, reports that Ukraine has lost around 40 Leopard tanks since February 2022. The Moscow Times published an article on June 13, 2023, stating that Russia had captured German Leopard tanks in the Zaporizhzhia region. Defence Security Asia published an article on May 19, 2024, discussing the destruction of German-made Leopard tanks in Ukraine.
+
+The sources do not mention any Ukrainian incursion into Russia's Kursk Oblast in August 2024.
+
+
+### Evidence from `web_search`
+The search results discuss the 2024 Kursk offensive, which began on August 6, 2024, as part of the Russian invasion of Ukraine. The Ukrainian military launched an incursion into Russia's Kursk Oblast. The article mentions the involvement of Ukrainian brigades, Russian forces, and North Korean forces. The article also mentions the capture of territory, casualties, and the response from Russian authorities, including the declaration of a state of emergency. The article also includes images of damaged buildings and a captured tank. (<image:26>)
+
+Reuters reports on August 26, 2024, that Russia said it had struck Ukrainian forces in the Kursk region. The article mentions an incursion by Ukraine into the Kursk region. The article also mentions that Russia said that Ukraine had lost 73 tanks, 61 armored personnel carriers and 404 armored combat vehicles in the Kursk region. (<image:4884>) An Al Jazeera article, published on August 29, 2024, discusses Ukraine's ground offensive inside Russian territory, specifically in the Kursk region. (<image:k>) shows a building on fire in Sudzha, Russia, after a cross-border incursion of Ukrainian troops into the Kursk region on August 7, 2024. The article mentions that Russia was moving its aircraft back from airfields near the Ukrainian border. The article also mentions that the Kursk offensive had greatly reduced Russia’s use of aviation against northeastern Ukraine.
+
+
+## Elaboration
+The claim that the image shows destroyed Ukrainian tanks during Ukraine's incursion into Russia's Kursk Oblast in August 2024 is supported by the evidence. The web search confirms that an incursion did occur in August 2024. Reuters reported that Russia said Ukraine had lost 73 tanks in the Kursk region.
+
+The reverse image search confirms that the image is related to the conflict. The evidence does not explicitly state that the tanks in the image are Ukrainian.
+
+Based on the evidence, the claim is likely true. However, the exact origin of the tanks in the image is not confirmed.
+
+
+## Final Judgement
+The image shows destroyed tanks, and the web search confirms that an incursion by Ukraine into Russia's Kursk Oblast occurred in August 2024, with reports of tank losses. While the image's origin is not explicitly confirmed, the context supports the claim.
+
+`true`
+
+## Summary
+
+
+
+===== > RESPONSE:  < =====
+The image depicts destroyed tanks, and the web search confirms a Ukrainian incursion into Russia's Kursk Oblast in August 2024, with reports of tank losses, supporting the claim's context. While the exact origin of the tanks in the image is not explicitly confirmed, the evidence supports the claim.
+
+_________________________
+
+
+

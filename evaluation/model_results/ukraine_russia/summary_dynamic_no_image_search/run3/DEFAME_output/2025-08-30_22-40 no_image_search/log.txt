@@ -1,0 +1,57 @@
+Configuration summary:
+Available actions: web_search, geolocate, image_search, reverse_search
+llm: gemini-2.0-flash-lite-001
+benchmark_name: ukraine_russia
+tools_config:
+    searcher:
+        limit_per_search: 3
+        search_engine_config:
+            google: null
+            google_vision: null
+    geolocator: null
+experiment_name: no_image_search
+fact_checker_kwargs:
+    decompose: false
+    decontextualize: false
+    filter_check_worthy: false
+    interpret: false
+    max_iterations: 3
+    max_result_len: 64000
+    procedure_variant: summary/dynamic
+llm_kwargs:
+    temperature: 0.01
+benchmark_kwargs:
+    variant: dev
+allowed_actions:
+- web_search
+- reverse_search
+- geolocate
+n_samples: null
+sample_ids: null
+random_sampling: false
+print_log_level: info
+continue_experiment_dir: null
+n_workers: 4
+
+Started Worker 0 with PID 490.
+Started Worker 1 with PID 491.
+Started Worker 2 with PID 492.
+Started Worker 3 with PID 493.
+Worker 0 encountered an error while processing claim 10:
+Traceback (most recent call last):
+  File "/defame/defame/eval/evaluate.py", line 847, in fact_check
+    _, docs, metas = fc.check_content(content)
+  File "/defame/defame/fact_checker.py", line 126, in check_content
+    doc, meta = self.verify_claim(claim)
+  File "/defame/defame/fact_checker.py", line 160, in verify_claim
+    label, meta = self.procedure.apply_to(doc)
+  File "/defame/defame/procedure/variants/summary_based/dynamic.py", line 26, in apply_to
+    label = self.judge.judge(doc, is_final=n_iterations == self.max_iterations or not actions)
+  File "/defame/defame/modules/judge.py", line 42, in judge
+    return self._generate_verdict(prompt)
+  File "/defame/defame/modules/judge.py", line 55, in _generate_verdict
+    if not response["verdict"]:
+TypeError: 'NoneType' object is not subscriptable
+
+All workers are terminated.
+All outputs saved in /defame/out/ukraine_russia/ukraine_russia/summary/dynamic/gemini-2.0-flash-lite-001/2025-08-30_22-40 no_image_search.

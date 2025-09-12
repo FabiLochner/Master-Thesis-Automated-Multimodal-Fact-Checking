@@ -1,0 +1,17 @@
+Extracting claims from Content: The Guardian published an article with the headline: 'Gaza will rise from the ashes to become a city of the future to rival Bradford.'
+'Claim: "The Guardian published an article with the headline: 'Gaza will rise from the ashes to become a city of the future to rival Bradford.'"'
+Verifying Claim: "The Guardian published an article with the headline: 'Gaza will rise from the ashes to become a city of the future to rival Bradford.'"
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Guardian Gaza city of the future Bradford')
+Skipping fact-checking website: https://www.reuters.com/fact-check/guardian-headline-gaza-becoming-city-rivalling-bradford-is-fake-2024-11-27/
+Skipping fact-checking website: https://fullfact.org/online/fake-guardian-article-gaza-bradford/
+Got 1 new web source(s):
+	1. https://www.theguardian.com/commentisfree/2025/aug/20/the-guardian-view-on-gazas-future-israel-should-end-the-killing-its-allies-must-not-remain-complicit
+Useful result: From [Source](https://www.theguardian.com/commentisfree/2025/aug/20/the-guardian-view-on-gazas-future-israel-should-end-the-killing-its-allies-must-not-remain-complicit): 
+Content: The Guardian published an article titled "The Guardian view on Gaza’s future: Israel should end the killing". The article discusses the ongoing conflict in Gaza, the casualties, and the international response. It also mentions a plan for Gaza City and the views of various parties involved. The article was published on August 20, 2025.
+
+The claim 'The Guardian published an article with the headline: 'Gaza will rise from the ashes to become a city of the future to rival Bradford.'' is false.
+Justification: The Guardian did publish an article about Gaza's future, but the headline was "The Guardian view on Gaza’s future: Israel should end the killing" ([Source](https://www.theguardian.com/commentisfree/2025/aug/20/the-guardian-view-on-gazas-future-israel-should-end-the-killing-its-allies-must-not-remain-complicit)), which does not match the claim.
+
+So, the overall veracity is: false
+Fact-check took 0:06 min.

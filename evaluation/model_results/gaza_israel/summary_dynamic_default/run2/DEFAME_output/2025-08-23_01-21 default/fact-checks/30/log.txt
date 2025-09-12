@@ -1,0 +1,50 @@
+Extracting claims from Content: <image:21> This image shows a screenshot of an authentic BBC article from February 2025 with the title 'Hamas just wanted to protect the Bibas family but Israel killed them - Hamas said.'
+'Claim: "<image:21> This image shows a screenshot of an authentic BBC article from February 2025 with the title 'Hamas just wanted to protect the Bibas family but Israel killed them - Hamas said.'"'
+Verifying Claim: "<image:21> This image shows a screenshot of an authentic BBC article from February 2025 with the title 'Hamas just wanted to protect the Bibas family but Israel killed them - Hamas said.'"
+Not enough information yet. Continuing fact-check...
+Got 1 new web source(s):
+	1. February 21, 2025 https://www.bbc.com/news/articles/cjry3jzedl1o
+Useful result: From [Source](https://www.bbc.com/news/articles/cjry3jzedl1o): 
+Content: The BBC published an article on February 21, 2025, discussing the Bibas family. <image:1071>, <image:1072>. The article states that Israel said forensic findings suggested that the Bibas children were killed by their captors in Gaza. Hamas said the children and their mother were killed by Israeli bombing. The article also mentions that the bodies of the two boys were returned to Israel. The article is authored by George Wright & Mallory Moench.
+
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='BBC Israel killed Bibas family')
+Skipping unsupported website: https://www.youtube.com/watch?v=ZVAiwB2fF78&pp=0gcJCfwAo7VqN5tD
+Got 1 new web source(s):
+	1. https://en.wikipedia.org/wiki/Kidnapping_and_killing_of_the_Bibas_family
+Useful result: From [Source](https://en.wikipedia.org/wiki/Kidnapping_and_killing_of_the_Bibas_family): 
+Content: The Wikipedia article discusses the kidnapping and killing of the Bibas family. It mentions that Hamas claimed the family was killed by an Israeli airstrike, while Israel stated they were killed by their captors. The article also includes images of the Bibas family and their home after the kidnapping. <image:21> The article also mentions the BBC's reporting on the events.
+
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='BBC Bibas family article')
+Got 3 new web source(s):
+	1. https://www.bbc.com/news/articles/ckg897l99dgo
+	2. https://www.abc.net.au/news/2025-02-21/israel-formally-identifies-remains-of-two-bibas-children-but-sai/104964730
+	3. https://www.theguardian.com/world/2025/feb/18/hamas-says-it-will-hand-over-bodies-of-bibas-family-and-six-hostages
+Useful result: From [Source](https://www.bbc.com/news/articles/ckg897l99dgo): 
+Content: The BBC published an article about the Bibas family. <image:5061>
+
+Useful result: From [Source](https://www.abc.net.au/news/2025-02-21/israel-formally-identifies-remains-of-two-bibas-children-but-sai/104964730): 
+Content: The ABC News published an article on February 21, 2025, discussing the Bibas family. <image:5062>
+
+Useful result: From [Source](https://www.theguardian.com/world/2025/feb/18/hamas-says-it-will-hand-over-bodies-of-bibas-family-and-six-hostages): 
+Content: The Guardian published an article on February 18, 2025, discussing the Bibas family. <image:5063>
+
+Not enough information yet. Continuing fact-check...
+Got 3 new web source(s):
+	1. https://www.bbc.com/news/articles/czdnp4ly5d1o
+	2. https://www.cnn.com/2025/06/07/middleeast/israel-killed-leader-palestinian-mujahideen-brigades-gaza-latam-intl
+	3. https://www.ndtv.com/world-news/gazas-youngest-hostage-hamas-says-hes-dead-family-hoping-against-hope-7557381
+Useful result: From [Source](https://www.bbc.com/news/articles/czdnp4ly5d1o): Found exact image on website with title: Hamas says it will return bodies of four hostages including ... - BBC
+Content: The BBC published an article on February 19, 2025, with the title "Hamas says it will return bodies of four hostages including Bibas family." <image:1073>, <image:1074>. The article discusses Hamas's claim that the Bibas family was killed in an Israeli bombardment. The article was written by Gabriela Pomeroy.
+
+Useful result: From [Source](https://www.cnn.com/2025/06/07/middleeast/israel-killed-leader-palestinian-mujahideen-brigades-gaza-latam-intl): Found exact image on website with title: Israel says it has killed leader of Palestinian militant group ... - CNN
+Content: The reverse image search found the image on CNN. The article, published on June 7, 2025, discusses the killing of Asaad Abu Sharia, the leader of the Palestinian Mujahideen Movement, by the Israeli military. The article mentions Sharia's involvement in the abduction and murder of the Bibas family. <image:21>
+
+Useful result: From [Source](https://www.ndtv.com/world-news/gazas-youngest-hostage-hamas-says-hes-dead-family-hoping-against-hope-7557381): Found exact image on website with title: Gaza's Youngest Hostage: Hamas Says He's Dead, Family Hoping ...
+Content: The NDTV article, "Gaza's Youngest Hostage: Hamas Says He's Dead, Family Hoping Against Hope," discusses the Bibas family, who were kidnapped by Hamas on October 7, 2023. The article mentions conflicting claims about the family's fate, with Hamas claiming the mother and children are dead, while Israeli authorities have not confirmed this. The article includes an image of the Bibas family.
+
+The claim '<image:21> This image shows a screenshot of an authentic BBC article from February 2025 with the title 'Hamas just wanted to protect the Bibas family but Israel killed them - Hamas said.'' is false.
+Justification: The claim is **partially accurate**. While the BBC did publish an article about the Bibas family, the title presented in the image is not the actual title of the BBC article. The correct title, as revealed by a reverse image search, was "Hamas says it will return bodies of four hostages including Bibas family" ([BBC article](https://www.bbc.com/news/articles/cjry3jzedl1o)).
+
+So, the overall veracity is: false
+Fact-check took 1:46 min.

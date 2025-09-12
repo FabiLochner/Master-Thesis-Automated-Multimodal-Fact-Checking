@@ -1,0 +1,33 @@
+Extracting claims from Content: <image:15> This image shows Gal Gadot’s star on the Hollywood Walk of Fame being destroyed in March 2025 just hours after being placed.
+'Claim: "<image:15> This image shows Gal Gadot’s star on the Hollywood Walk of Fame being destroyed in March 2025 just hours after being placed."'
+Verifying Claim: "<image:15> This image shows Gal Gadot’s star on the Hollywood Walk of Fame being destroyed in March 2025 just hours after being placed."
+Not enough information yet. Continuing fact-check...
+Got 3 new web source(s):
+	1. https://abcnews.go.com/US/trumps-hollywood-walk-fame-star-vandalized/story?id=56808440
+	2. https://www.hollywoodreporter.com/movies/movie-features/hollywood-walk-fame-why-20-stars-are-disrepair-951150/
+	3. https://people.com/politics/50-fake-trump-stars-walk-of-fame/
+Useful result: From [Source](https://abcnews.go.com/US/trumps-hollywood-walk-fame-star-vandalized/story?id=56808440): 
+Content: ABC News published an article about the vandalism of Donald Trump's star on the Hollywood Walk of Fame. <image:5946>
+
+Useful result: From [Source](https://www.hollywoodreporter.com/movies/movie-features/hollywood-walk-fame-why-20-stars-are-disrepair-951150/): 
+Content: The Hollywood Reporter published an article about the Hollywood Walk of Fame. <image:5947>
+
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Gal Gadot Hollywood Walk of Fame star damage')
+Got 3 new web source(s):
+	1. March 20, 2025 https://ew.com/fact-check-was-gal-gadot-s-hollywood-star-destroyed-11700747?srsltid=AfmBOoookYM2dMEeENpB8mXewNFNCfRHYSyCutz18PvD3UMpYrniFpy-
+	2. May 29, 2025 https://www.foxla.com/news/gal-gadot-star-walk-of-fame-vandalized
+	3. March 20, 2025 https://tribune.com.pk/story/2535393/fact-checking-viral-image-was-gal-gadots-walk-of-fame-star-destroyed-after-protests-at-her-ceremony
+Useful result: From [Source](https://ew.com/fact-check-was-gal-gadot-s-hollywood-star-destroyed-11700747?srsltid=AfmBOoookYM2dMEeENpB8mXewNFNCfRHYSyCutz18PvD3UMpYrniFpy-): 
+Content: Entertainment Weekly reports that Gal Gadot's Hollywood Walk of Fame star ceremony was disrupted by protestors. The article mentions a viral post depicting a vandalized Hollywood Walk of Fame star, but it is unclear if the images are original or manipulated. <image:15> The article also includes an image of Gal Gadot at her Hollywood Walk of Fame induction ceremony. The article was published on March 18, 2025.
+
+Useful result: From [Source](https://www.foxla.com/news/gal-gadot-star-walk-of-fame-vandalized): 
+Content: The search result from FOX 11 reports that Gal Gadot's star on the Hollywood Walk of Fame was vandalized with the words "baby killer" and a sticker that read "Israeli snipers target children." <image:9261> The vandalism occurred after Gadot received the star on March 18. The American Jewish Committee posted a photo of the vandalized star online.
+
+Useful result: From [Source](https://tribune.com.pk/story/2535393/fact-checking-viral-image-was-gal-gadots-walk-of-fame-star-destroyed-after-protests-at-her-ceremony): 
+Content: The image shows a damaged Hollywood Walk of Fame star. The article, published on March 20, 2025, states that the image was a marketing move by singer Tate McRae and not Gal Gadot's star. <image:15>
+
+The claim '<image:15> This image shows Gal Gadot’s star on the Hollywood Walk of Fame being destroyed in March 2025 just hours after being placed.' is false.
+Justification: The image in the claim does not depict Gal Gadot's star being destroyed. According to an article by Entertainment Weekly ([https://ew.com/fact-check-was-gal-gadot-s-hollywood-star-destroyed-11700747?srsltid=AfmBOoookYM2dMEeENpB8mXewNFNCfRHYSyCutz18PvD3UMpYrniFpy-](https://ew.com/fact-check-was-gal-gadot-s-hollywood-star-destroyed-11700747?srsltid=AfmBOoookYM2dMEeENpB8mXewNFNCfRHYSyCutz18PvD3UMpYrniFpy-)), the image was a marketing move by singer Tate McRae.
+
+So, the overall veracity is: false
+Fact-check took 1:57 min.

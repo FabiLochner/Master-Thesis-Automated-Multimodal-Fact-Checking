@@ -1,0 +1,57 @@
+Extracting claims from Content: The Huthi rebels announced the final cessation of their military operations in international waters after Trump won the 2024 US presidential election.
+'Claim: "The Huthi rebels announced the final cessation of their military operations in international waters after Trump won the 2024 US presidential election."'
+Verifying Claim: "The Huthi rebels announced the final cessation of their military operations in international waters after Trump won the 2024 US presidential election."
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Huthi rebels military operations international waters')
+Failed to download or open image: HTTPSConnectionPool(host='i.cbc.ca', port=443): Read timed out. (read timeout=10)
+Got 3 new web source(s):
+	1. https://indiashippingnews.com/houthi-rebels-to-halt-military-operations-against-most-ships-in-red-sea/
+	2. https://www.cbc.ca/news/world/houthi-attacks-red-sea-1.7060673
+	3. https://www.aljazeera.com/news/2023/12/19/us-announces-10-nation-force-to-counter-houthi-attacks-in-red-sea
+Useful result: From [Source](https://indiashippingnews.com/houthi-rebels-to-halt-military-operations-against-most-ships-in-red-sea/): 
+Content: The search result from [Source](https://indiashippingnews.com/houthi-rebels-to-halt-military-operations-against-most-ships-in-red-sea/) contains an image of a boat with armed people in the sea, with a large ship in the background. <image:14052>
+
+Useful result: From [Source](https://www.aljazeera.com/news/2023/12/19/us-announces-10-nation-force-to-counter-houthi-attacks-in-red-sea): 
+Content: Al Jazeera published an article on December 19, 2023, stating that the United States announced a 10-nation force to counter Houthi attacks in the Red Sea. <image:14053> The article mentions that the attacks by Yemen's Houthi rebels forced shipping companies to halt operations.
+
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Huthi rebels cease military operations Trump election')
+Failed to download or open image: cannot identify image file <_io.BytesIO object at 0x7ffee150b3d0>
+Got 3 new web source(s):
+	1. https://foreignpolicy.com/2025/05/08/us-houthi-cease-fire-yemen-trump/
+	2. https://www.foxnews.com/world/trump-announces-decisive-powerful-airstrikes-against-houthi-terrorists-yemen
+	3. https://apnews.com/article/trump-yemen-houthis-rebels-attack-airstrike-11b0e080b3982542dd621338a7b18afd
+Useful result: From [Source](https://www.foxnews.com/world/trump-announces-decisive-powerful-airstrikes-against-houthi-terrorists-yemen): 
+Content: Fox News published an article with an image of Huthi rebels and Donald Trump <image:14054>.
+
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Huthi rebels cease military operations after Trump election')
+Got 2 new web source(s):
+	1. https://www.cnn.com/2025/03/15/politics/trump-houthis-military-action
+	2. https://www.nbcnews.com/politics/national-security/trump-operation-houthis-cost-1-billion-rcna205333
+Useful result: From [Source](https://www.cnn.com/2025/03/15/politics/trump-houthis-military-action): 
+Content: CNN published an article with an image of a destroyed building and people, with the title "Trump and Houthis military action" <image:14056>.
+
+Useful result: From [Source](https://www.nbcnews.com/politics/national-security/trump-operation-houthis-cost-1-billion-rcna205333): 
+Content: NBC News published an article with an image of destruction <image:14058>. The article discusses the cost of Trump's operation against the Houthis.
+
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Huthi rebels statement cease military operations')
+Skipping fact-checking website: https://factcheck.afp.com/doc.afp.com.36MT424
+Got 3 new web source(s):
+	1. https://www.aljazeera.com/news/2024/1/25/us-uk-sanction-senior-houthis-as-rebels-say-red-sea-attacks-will-continue
+	2. https://www.nytimes.com/2022/04/17/world/middleeast/yemen-houthis-gulf.html
+	3. https://www.pbs.org/newshour/world/u-n-says-yemens-houthi-rebels-have-agreed-to-stop-using-child-soldiers
+Useful result: From [Source](https://www.aljazeera.com/news/2024/1/25/us-uk-sanction-senior-houthis-as-rebels-say-red-sea-attacks-will-continue): 
+Content: Al Jazeera published an article stating that the Houthi rebels said that Red Sea attacks will continue <image:14059>.
+
+Useful result: From [Source](https://www.nytimes.com/2022/04/17/world/middleeast/yemen-houthis-gulf.html): 
+Content: The New York Times published an article with an image of Houthi rebels <image:14060>.
+
+Useful result: From [Source](https://www.pbs.org/newshour/world/u-n-says-yemens-houthi-rebels-have-agreed-to-stop-using-child-soldiers): 
+Content: PBS reports that the UN says Yemen's Houthi rebels have agreed to stop using child soldiers. <image:14061>
+
+The claim 'The Huthi rebels announced the final cessation of their military operations in international waters after Trump won the 2024 US presidential election.' is false.
+Justification: The claim is false. Evidence from multiple sources, including Al Jazeera ([https://www.aljazeera.com/news/2024/1/25/us-uk-sanction-senior-houthis-as-rebels-say-red-sea-attacks-will-continue](https://www.aljazeera.com/news/2024/1/25/us-uk-sanction-senior-houthis-as-rebels-say-red-sea-attacks-will-continue)), indicates that the Houthi rebels have stated that their attacks in the Red Sea will continue, directly contradicting the claim. There is no evidence to support the assertion that they ceased operations after Trump's election.
+
+So, the overall veracity is: false
+Fact-check took 1:01 min.

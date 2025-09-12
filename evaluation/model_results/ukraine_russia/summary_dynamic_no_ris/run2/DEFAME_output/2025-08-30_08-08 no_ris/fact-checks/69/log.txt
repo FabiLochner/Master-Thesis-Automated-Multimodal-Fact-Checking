@@ -1,0 +1,40 @@
+Extracting claims from Content: <image:21> This image shows an authentic Russian passport of deposed Syrian dictator Bashar al-Assad.
+'Claim: "<image:21> This image shows an authentic Russian passport of deposed Syrian dictator Bashar al-Assad."'
+Verifying Claim: "<image:21> This image shows an authentic Russian passport of deposed Syrian dictator Bashar al-Assad."
+Not enough information yet. Continuing fact-check...
+Got 3 new web source(s):
+	1. January 08, 2025 https://www.aol.com/fact-check-assad-passport-image-140122086.html
+	2. https://en.wikipedia.org/wiki/Bashar_al-Assad
+	3. December 28, 2024 https://english.nv.ua/nation/relatives-of-bashar-al-assad-arrested-at-beirut-airport-using-fake-passports-50477670.html
+Useful result: From [Source](https://www.aol.com/fact-check-assad-passport-image-140122086.html): 
+Content: The AOL article, published on January 8, 2025, fact-checks an image of a Russian passport purportedly belonging to Bashar al-Assad. The article states that the image is fake and has been photoshopped. The article also mentions that Logically Facts debunked the claim. <image:2651>
+
+Useful result: From [Source](https://en.wikipedia.org/wiki/Bashar_al-Assad): 
+Content: The Wikipedia article discusses the Syrian civil war, including the 2024 Syrian opposition offensives and the fall of the Assad regime. It mentions Bashar al-Assad's birthdate (September 11, 1965) and his family. The article also mentions that in November 2024, Assad fled to Moscow and was granted political asylum. The article includes a timeline of the war, including events in 2024 and 2025. <image:21>
+
+Useful result: From [Source](https://english.nv.ua/nation/relatives-of-bashar-al-assad-arrested-at-beirut-airport-using-fake-passports-50477670.html): 
+Content: The search result from NV.ua discusses the arrest of relatives of Bashar al-Assad at Beirut's airport on December 28, who were attempting to leave using fake passports. It also mentions that Bashar al-Assad's regime collapsed and he fled to Moscow. <image:2674>
+
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Bashar al-Assad passport')
+Unable to reach Serper API: Connection timed out. Retrying after 4.384886480762708 seconds.
+Unable to reach Serper API: Connection timed out. Retrying after 8.769772961525415 seconds.
+Unable to reach Serper API: Connection timed out. Retrying after 17.53954592305083 seconds.
+Unable to reach Serper API: Connection timed out. Retrying after 35.07909184610166 seconds.
+Skipping fact-checking website: https://www.misbar.com/en/factcheck/2024/12/20/the-image-allegedly-featuring-assads-passport-is-digitally-altered
+Skipping unsupported website: https://x.com/QUSAY_NOOR_/status/1880459299006345620
+Failed to download or open image: cannot identify image file <_io.BytesIO object at 0x7ffed15dd170>
+Got 3 new web source(s):
+	1. https://en.wikipedia.org/wiki/Syrian_passport
+	2. https://www.alestiklal.net/en/article/bashar-al-assad-regime-no-more-passports-to-syrians
+	3. https://libyaobserver.ly/news/bashar-al-assads-cousin-granted-libyan-diplomatic-passport
+Useful result: From [Source](https://www.alestiklal.net/en/article/bashar-al-assad-regime-no-more-passports-to-syrians): 
+Content: The search result from Alestiklal.net contains an image of Syrian passports. <image:8300>
+
+Useful result: From [Source](https://libyaobserver.ly/news/bashar-al-assads-cousin-granted-libyan-diplomatic-passport): 
+Content: The search result from Libya Observer shows an image of a Libyan diplomatic passport. <image:8301>
+
+The claim '<image:21> This image shows an authentic Russian passport of deposed Syrian dictator Bashar al-Assad.' is false.
+Justification: The claim is false. An AOL article, citing Logically Facts, states that the image of the Russian passport is fake and photoshopped.
+
+So, the overall veracity is: false
+Fact-check took 1:40 min.

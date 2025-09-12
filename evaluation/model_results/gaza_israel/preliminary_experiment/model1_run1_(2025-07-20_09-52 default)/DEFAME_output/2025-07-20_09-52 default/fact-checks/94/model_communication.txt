@@ -1,0 +1,1613 @@
+PlanPrompt - QUERY:
+
+# Instructions
+The available knowledge is insufficient to assess the Claim. Therefore, **propose a set of actions** to retrieve new and helpful evidence. Adhere to the following rules:
+* The actions available are listed under Valid Actions, including a short description for each action. No other actions are possible at this moment. 
+* For each action, use the formatting as specified in Valid Actions.
+* Include all actions in a single Markdown code block at the end of your answer.
+* Propose as few actions as possible, but as much as needed. Do not propose similar or previously used actions.
+
+
+
+## Valid Actions
+* `web_search`
+   * Description: Run an open web search on Google or DuckDuckGO to retrieve any related webpage.
+   * How to use: Do not use this with a previously used or similar query from previous web searches. If a previous web search did not yield any results, use a very different query.
+   * Format: web_search("your web search query goes here")
+
+* `geolocate`
+   * Description: Performs geolocation to determine the country where an image was taken.
+   * How to use: Provide an image and the model will determine the most likely countries where it was taken.
+   * Format: geolocate(<image:k>), where `k` is the image's ID
+
+* `reverse_search`
+   * Description: Performs a reverse image search to find similar images on the web.
+   * How to use: Provide an image and the model will perform a reverse search to find similar images.
+   * Format: reverse_search(<image:k>), where `k` is the image's ID
+
+* `image_search`
+   * Description: Run an image search on Google to retrieve related images for a given query.
+   * How to use: This is a helpful tool for fact-checking images. Use this to retrieve images associated with a specific keyword or phrase. Ensure that the query is clear and specific to improve search accuracy. If no relevant images are found, refine the query or use more descriptive terms.
+   * Format: image_search("your image search query goes here")
+
+# Example: web_search()
+
+## Claim
+Text: "New Zealand’s new Food Bill bans gardening"
+Claim date: October 29, 2020
+
+...
+
+## Actions
+```
+web_search("New Zealand Food Bill 2020")
+web_search("New Zealand Food Bill gardening ban")
+```
+
+# Example: geolocate()
+
+## Claim
+Text: "<image:k> shows a nuclear weapons facility in Usbekistan."
+
+...
+
+## Actions
+```
+geolocate(<image:k>)
+```
+
+# Example: reverse_search()
+
+## Claim
+Text: "<image:k> shows a rare event of a solar eclipse with a double ring."
+
+...
+
+## Actions
+```
+reverse_search(<image:k>)
+```
+
+# Example: image_search()
+
+## Claim
+Text: "Chinese officials in white protective hazmat suits carried people down a hallway to be quarantined for having COVID-19 in November 2022."
+
+...
+
+ACTIONS:
+```
+image_search("China officials white suits carry people")
+image_search("China officials carry people COVID quarantine 2022")
+```
+
+# Record
+## Claim
+Claim: "<image:61> This image shows a Palestinian girl in the Gaza war in July 2024. She was holding her sister's oxygen mask inside the ambulance. She had already passed away, yet her hand remained on the mask firmly."
+
+# Your Actions
+
+
+
+===== > RESPONSE:  < =====
+```
+reverse_search(<image:61>)
+```
+_________________________
+
+
+
+SummarizeResultPrompt - QUERY:
+
+# Instructions
+In order to find evidence that helps your fact-check, you just ran a web search which yielded a Search Result. **Your task right now is to summarize the Search Result.** What to include:
+* information that might be useful for the fact-check (see Record)
+* relevant images (refer to images by inserting their reference <image:k>)
+* if available: the release date as well as the author or the publisher (e.g. the media company) of the search result.
+
+Do NOT include:
+* advertisements
+* any other information not related to the Record or the Claim
+
+Additional rules:
+* Do not add any additional information besides the information in the Search Result.
+* If the Search Result doesn't contain any relevant information for the fact-checking work, simply print one word in capital letters: "NONE".
+* Keep your writing style like in the Examples 1, 2 and 3 provided to you.
+* Try to filter out relevant information even if the search result is in a different language.
+
+# Example 1
+The search result from America Today provides several photographs of the Notre-Dame Cathedral fire on April 15, 2019. <image:i>, <image:j>, <image:k>. None of the images show the Eiffel Tower in the background. 
+
+# Example 2
+NONE
+
+# Example 3
+The Guardian discusses a report blaming the Syrian government for a toxic gas attack and condemning their use of chemical weapons. The Guardian mentions the Chemical Weapons Convention and the responsibilities of Syria under the convention. According to The Guardian, The White House condemned the Assad regime for defying the norm against chemical weapons use.
+
+# Record
+## Claim
+Claim: "<image:61> This image shows a Palestinian girl in the Gaza war in July 2024. She was holding her sister's oxygen mask inside the ambulance. She had already passed away, yet her hand remained on the mask firmly."
+
+## Actions
+```
+reverse_search(<image:61>)
+```
+
+# Search Result
+From [Source](https://www.voanews.com/a/syria-russia-us-chemical-attacks/4221637.html): Found exact image on website with title: Syria, Russia Accuse US of Lying About Chemical Weapons Attacks
+Content: "Accessibility links
+-------------------
+
+*   [Skip to main content](#content)
+    
+*   [Skip to main Navigation](#navigation)
+    
+*   [Skip to Search](#txtHeaderSearch)
+    
+
+##### Follow Us
+
+[](https://www.facebook.com/VOANews "Follow us on Facebook")
+[](https://twitter.com/voanews "Follow us on Twitter")
+[](https://www.youtube.com/user/VOAvideo "Follow us on YouTube")
+[](https://www.instagram.com/voanews/ "Follow us on Instagram")
+
+[Languages](/navigation/allsites)
+
+Search 
+
+ [![site logo](/Content/responsive/VOA/en-US/img/logo-compact.svg) ![site logo](/Content/responsive/VOA/en-US/img/logo.svg)](/)
+
+[](/p/5340.html "Latest Newscast ")
+[](/p/7755.html "Videos")
+[](/navigation/allsites "Languages")
+[](/s)
+
+Search 
+
+![site logo](/Content/responsive/VOA/en-US/img/logo-print.gif) ![site logo](/Content/responsive/VOA/en-US/img/logo-print_color.png)
+
+[Previous](# "Previous")
+ [Next](# "Next")
+
+Breaking News
+
+[Middle East](/z/598)
+
+Syria, Russia Accuse US of Lying About Chemical Weapons Attacks
+===============================================================
+
+January 24, 2018 6:03 AM
+
+*   By [Nike Ching](/author/nike-ching/kigmi "Nike Ching")
+    
+
+* * *
+
+!A Syrian girl holds an oxygen mask over the face of an infant at a make-shift hospital following a reported gas attack on the rebel-held besieged town of Douma in the eastern Ghouta region on the outskirts of the capital Damascus on January 22, 2018.  <image:2538>
+
+A Syrian girl holds an oxygen mask over the face of an infant at a make-shift hospital following a reported gas attack on the rebel-held besieged town of Douma in the eastern Ghouta region on the outskirts of the capital Damascus on January 22, 2018.
+
+ [](https://www.voanews.com)
+
+Syria, Russia Accuse US of Lying About Chemical Weapons Attacks
+
+Print
+
+STATE DEPARTMENT — 
+
+Syria and Russia on Wednesday accused the United States of lying about chemical weapons attacks in the Syrian conflict as a way of derailing efforts to bring an end to the fighting.
+
+Syria's state-run SANA news agency carried comments from a Foreign Ministry source condemning what it called "lies and allegations" by U.S. Secretary of State Rex Tillerson and French Foreign Minister Jean-Yves Le Drian.
+
+Russian Deputy Foreign Minister Sergei Ryabkov told the Interfax news agency that whenever peace efforts advance, the United States promotes "rigged, unverified reports" of chemical weapons attacks in Syria.
+
+Those comments came a day after the United States joined its NATO allies in launching a pressure campaign against the use of chemical weapons in Syria, while singling out Russia for protecting Syrian President Bashar al-Assad's government.
+
+"The recent attacks in East Ghouta raise serious concerns that Bashar al-Assad’s Syrian regime might be continuing its use of chemical weapons against its own people," Tillerson said at a Paris conference hosted by Le Drian.
+
+Tillerson said at least 20 people were killed Monday in an apparent chlorine gas attack in rebel-held East Ghouta, near Damascus.  
+  
+"Whoever conducted the attacks, Russia ultimately bears responsibility for the victims in East Ghouta and countless other Syrians targeted with chemical weapons since Russia became involved in Syria," he said.
+
+!A Syrian boy holds an oxygen mask over the face of an infant at a makeshift hospital following a reported gas attack on the rebel-held besieged town of Douma in the eastern Ghouta region on the outskirts of the capital Damascus, Jan. 22, 2018. <image:2539>
+
+A Syrian boy holds an oxygen mask over the face of an infant at a makeshift hospital following a reported gas attack on the rebel-held besieged town of Douma in the eastern Ghouta region on the outskirts of the capital Damascus, Jan. 22, 2018.
+
+Tillerson, along with foreign ministers from France, Germany and Turkey, were among those who launched the International Partnership Against Impunity for Use of Chemical Weapons on Tuesday. More than two dozen like-minded nations endorsed a political commitment to share information on combating the use of chemical weapons worldwide.
+
+!U.S. Secretary of State Rex Tillerson delivers a speech during a foreign ministers' meeting on the International Partnership against Impunity for the Use of Chemical Weapons, in Paris, Jan. 23, 2018. <image:2540>
+
+U.S. Secretary of State Rex Tillerson delivers a speech during a foreign ministers' meeting on the International Partnership against Impunity for the Use of Chemical Weapons, in Paris, Jan. 23, 2018.
+
+The U.S. secretary of state noted Russia's failure to resolve the chemical weapons issue in Syria calls into question its commitment to the resolution of the overall crisis.
+
+"At a very minimum, Russia must stop vetoing and at least abstain from future security council votes on this issue," Tillerson said.
+
+In November, Russia vetoed the renewal of an independent and technical group created by the U.N. Security Council, the so-called Joint Investigative Mechanism (JIM), to look into the perpetrators of chemical weapons attacks in Syria.  
+  
+"When Russia killed the JIM, they sent a dangerous message to the world — one that not only said chemical weapons use is acceptable but also that those who use chemical weapons don’t need to be identified or held accountable," U.S. Ambassador to the United Nations Nikki Haley said in a statement Tuesday.  
+  
+**Concern about Turkey's Afrin offensive**  
+  
+Turkey's offensive in the northern Syrian enclave of Afrin was also a focus of Tuesday's talks in Paris, with Tillerson meeting with his Turkish counterpart, Mevlut Cavusoglu. A day earlier, during remarks in London, the top U.S. diplomat said the United States is "concerned" about the offensive against U.S.-backed Kurdish YPG fighters in Syria.
+
+!Turkish army tanks enter Afrin, an enclave in northern Syria controlled by U.S.-allied Kurdish fighters, in Hassa, Hatay, Turkey, Jan. 22, 2018. <image:2541>
+
+Turkish army tanks enter Afrin, an enclave in northern Syria controlled by U.S.-allied Kurdish fighters, in Hassa, Hatay, Turkey, Jan. 22, 2018.
+
+  
+Turkish forces intensified military operations on Monday to push the Kurdish militia out of the Afrin area.
+
+The Turkish operation is aimed at ousting from Afrin the Syrian Kurdish group that has controlled territory in northern Syria and proven effective in the U.S.-coalition-led fight against Islamic State militants.
+
+Turkey considers the YPG to be a terrorist organization associated with the outlawed Kurdistan Workers' Party or PKK, which has fought for Kurdish autonomy in Turkey.
+
+French Foreign Minister Le Drian on Tuesday joined Tillerson in expressing his concern about Turkey’s military operation in Afrin.
+
+"I had the opportunity to tell my Turkish colleague that this offensive worries us," Le Drian said.
+
+!FILE - France's Foreign Minister Jean-Yves Le Drian listens during a news conference after his talks with Russian counterpart Sergey Lavrov, in Moscow, Sept. 8, 2017. <image:2542>
+
+FILE - France's Foreign Minister Jean-Yves Le Drian listens during a news conference after his talks with Russian counterpart Sergey Lavrov, in Moscow, Sept. 8, 2017.
+
+"While we understand the concerns Turkey has about border security, we cannot but call on Turkey to show the greatest level restraint on this issue," the French foreign minister added.
+
+Turkey's shelling into Afrin came after the U.S.-led coalition said it would form a 30,000-strong Kurdish-led border security force in northern Syria.
+
+Washington later said the effort had been mischaracterized and that the United States was not creating a border force, but that the coalition would provide security to liberated areas, blocking escape routes for Islamic State militants.
+
+Related
+-------
+
+*   [](/a/us-russia-responsibility-syria-chemical-attacks-civilians/4220715.html "US: Russia 'Bears Responsibility' for Syrian Regime's Chemical Attacks on Civilians")
+    
+    [#### US: Russia 'Bears Responsibility' for Syrian Regime's Chemical Attacks on Civilians](/a/us-russia-responsibility-syria-chemical-attacks-civilians/4220715.html)
+    
+*   [](/a/us-getting-conflicting-signals-on-turkey-syria-ops/4221476.html "US Getting 'Conflicting Signals' on Turkey's Syria Ops")
+    
+    [#### US Getting 'Conflicting Signals' on Turkey's Syria Ops](/a/us-getting-conflicting-signals-on-turkey-syria-ops/4221476.html)
+    
+*   [](/a/precision-strikes-kill-one-hundred-fifty-terrorists-syria/4221006.html "Precision Strikes Kill 150 IS Terrorists in Syria, Coalition Says")
+    
+    [#### Precision Strikes Kill 150 IS Terrorists in Syria, Coalition Says](/a/precision-strikes-kill-one-hundred-fifty-terrorists-syria/4221006.html)
+    
+*   [](/a/syria-rebels-backed-turkey-say-kurds-now-face-payback/4220216.html "Syrian Rebels Backed by Turkey Say Kurds Now Face Payback")
+    
+    [#### Syrian Rebels Backed by Turkey Say Kurds Now Face Payback](/a/syria-rebels-backed-turkey-say-kurds-now-face-payback/4220216.html)
+    
+
+More Middle East News
+---------------------
+
+*   [](/a/un-iran-using-drones-to-enforce-hijab-law/8011563.html "UN: Iran using drones to enforce hijab law")
+    
+    [#### UN: Iran using drones to enforce hijab law](/a/un-iran-using-drones-to-enforce-hijab-law/8011563.html)
+    
+*   [](/a/voa-kurdish-senior-isis-leader-killed-in-iraqi-intelligence-operation/8011284.html "Senior ISIS leader Abu Khadija killed in Iraqi intelligence operation")
+    
+    [#### Senior ISIS leader Abu Khadija killed in Iraqi intelligence operation](/a/voa-kurdish-senior-isis-leader-killed-in-iraqi-intelligence-operation/8011284.html)
+    
+
+*   [#### Public release of man’s confession sparks legal concerns](/a/voa-kurdish-release-of-man-s-confession-sparks-legal-concerns-/8011458.html)
+    
+*   [#### Syria’s interim constitution raises fears of sectarian division](/a/voa-kurdish-syria-s-interim-constitution-raises-fears-of-sectarian-division-/8011267.html)
+    
+*   [#### Kurds in Iran celebrate Nowruz despite threats from Iranian Guards](/a/voa-kurdish-kurds-in-iran-celebrate-nowruz-despite-threats-from-iranian-guards-/8011468.html)
+    
+
+*   [](/a/israel-and-palestine-weighing-the-solutions/7430865.html "Israel & Palestine: Weighing the Solutions")
+    
+    [#### Israel & Palestine: Weighing the Solutions](/a/israel-and-palestine-weighing-the-solutions/7430865.html)
+    
+
+[The Day in Photos](/z/3413)
+
+-----------------------------
+
+*   [](/a/march-13-2025-day-in-photos/8009663.html "March 13, 2025")
+    
+    [#### March 13, 2025](/a/march-13-2025-day-in-photos/8009663.html)
+    
+
+[​](/p/9228.html "Continue reading")
+
+XS
+
+SM
+
+MD
+
+LG"
+
+# Your Summary
+
+
+
+===== > RESPONSE:  < =====
+The image <image:61> appears in a VOA News article titled "Syria, Russia Accuse US of Lying About Chemical Weapons Attacks," published on January 24, 2018. The article discusses a reported gas attack in the rebel-held town of Douma in the eastern Ghouta region of Syria on January 22, 2018. The article also contains another image of a Syrian boy holding an oxygen mask over the face of an infant <image:2539>.
+
+_________________________
+
+
+
+SummarizeResultPrompt - QUERY:
+
+# Instructions
+In order to find evidence that helps your fact-check, you just ran a web search which yielded a Search Result. **Your task right now is to summarize the Search Result.** What to include:
+* information that might be useful for the fact-check (see Record)
+* relevant images (refer to images by inserting their reference <image:k>)
+* if available: the release date as well as the author or the publisher (e.g. the media company) of the search result.
+
+Do NOT include:
+* advertisements
+* any other information not related to the Record or the Claim
+
+Additional rules:
+* Do not add any additional information besides the information in the Search Result.
+* If the Search Result doesn't contain any relevant information for the fact-checking work, simply print one word in capital letters: "NONE".
+* Keep your writing style like in the Examples 1, 2 and 3 provided to you.
+* Try to filter out relevant information even if the search result is in a different language.
+
+# Example 1
+The search result from America Today provides several photographs of the Notre-Dame Cathedral fire on April 15, 2019. <image:i>, <image:j>, <image:k>. None of the images show the Eiffel Tower in the background. 
+
+# Example 2
+NONE
+
+# Example 3
+The Guardian discusses a report blaming the Syrian government for a toxic gas attack and condemning their use of chemical weapons. The Guardian mentions the Chemical Weapons Convention and the responsibilities of Syria under the convention. According to The Guardian, The White House condemned the Assad regime for defying the norm against chemical weapons use.
+
+# Record
+## Claim
+Claim: "<image:61> This image shows a Palestinian girl in the Gaza war in July 2024. She was holding her sister's oxygen mask inside the ambulance. She had already passed away, yet her hand remained on the mask firmly."
+
+## Actions
+```
+reverse_search(<image:61>)
+```
+
+# Search Result
+From [Source](https://www.csis.org/analysis/emerging-trends-chemical-weapons-usage-middle-east): Found exact image on website with title: Emerging Trends in Chemical Weapons Usage in the Middle East
+Content: "[Skip to main content](#main-content)
+
+Emerging Trends in Chemical Weapons Usage in the Middle East
+============================================================
+
+     !Photo: JM LOPEZ/JM LOPEZ/AFP via Getty Images <image:2543>
+
+Photo: JM LOPEZ/JM LOPEZ/AFP via Getty Images
+
+Table of Contents
+-----------------
+
+Table of Contents
+-----------------
+
+*   [](https://www.facebook.com/sharer/sharer.php?u=https://www.csis.org/analysis/emerging-trends-chemical-weapons-usage-middle-east)
+    
+*   [](https://x.com/intent/post?url=https://www.csis.org/analysis/emerging-trends-chemical-weapons-usage-middle-east)
+    
+*   [](https://www.linkedin.com/sharing/share-offsite/?url=https://www.csis.org/analysis/emerging-trends-chemical-weapons-usage-middle-east)
+    
+*   [](mailto:?subject=Page from CSIS.org&body=https://www.csis.org/analysis/emerging-trends-chemical-weapons-usage-middle-east)
+    
+*   [](javascript:window.print())
+    
+
+[Report](/taxonomy/term/3013)
+ by [Natasha Hall](/people/natasha-hall)
+
+Published October 16, 2024
+
+### Available Downloads
+
+*   [Download the Brief 2267kb](https://csis-website-prod.s3.amazonaws.com/s3fs-public/2024-10/241011_Hall_Chemical_Weapons.pdf?VersionId=LyF6U0vFP_2r5ffIQ79nkpqqgFPpIgey)
+    
+*   [Download the Two Pager 568kb](https://csis-website-prod.s3.amazonaws.com/s3fs-public/2024-10/241011_Hall_Chemical_twopage.pdf?VersionId=QmWs8zqNCaVppnhpb1MkU_MX2i9hVy2R)
+    
+
+#### **The Issue**
+
+*   _The international community’s failure to deter or punish Syrian president Bashar al-Assad’s use of chemical weapons risks incentivizing the use of chemical weapons by others._
+    *   _Assad’s use of chemical weapons has highlighted their military effectiveness and undermined the norms prohibiting their use._
+*   _Increasing multipolarity has made international accountability more challenging._
+*   _Actors are likely to challenge existing norms by gradually escalating their chemical weapons use from riot-control agents to toxic industrial chemicals or pharmaceutical-based agents while spreading disinformation and impeding evidence collection._
+*   _The United States should strengthen detection and accountability mechanisms to deter future chemical weapons usage._
+    *   _It should work with allies and partners to prioritize the early detection and prevention of chemical weapons development, develop backchannels to establish deterrence, and define clear red lines against chemical weapons usage._
+
+#### **Introduction**
+
+On August 21, 2013, Syrian president Bashar al-Assad’s army killed an estimated 1,400 people in Eastern Ghouta with sarin gas. It was the first use of chemical weapons in the Middle East in 25 years, but not the last. As he battled a dogged insurgency, Assad used sarin in another mass casualty event; he has used chlorine gas nearly 350 times.\[1\]
+
+Following the 2013 Ghouta attack, international outrage prompted efforts to eliminate Syria’s chemical arsenal with Russia’s cooperation. Yet, accountability for war crimes has faded from the international spotlight, as has Russian cooperation to investigate and attribute chemical weapons attacks in Syria. Assad won back most of his territory and has reentered the Arab League. He transgressed international norms and survived. Assad’s success may push adversaries and allies of the United States alike to consider using chemical weapons as he did.
+
+> Assad’s success may push adversaries and allies of the United States alike to consider using chemical weapons as he did.
+
+If such a thing happened, it would have a precedent. During the Cold War, four Arab states embarked on chemical weapons programs, with Egypt taking a pioneering role in both development and usage in the 1960s. The Egyptian military used chemical weapons on Yemeni royalists sheltering in caves in Yemen as early as June 1963, and it eventually launched around 40 separate chemical weapons attacks in the country.\[2\] Libya, Syria, and Iraq subsequently began chemical weapons programs, Iraq with Egyptian assistance. Saddam Hussein’s regime would eventually use such weapons extensively in the Iran-Iraq war of the 1980s.\[3\] Muammar Gaddafi decided to pursue a similar capability in the 1970s and eventually used the chemical weapons developed in Chad. Syria also began developing chemical weapons in the 1970s, and with Egypt’s and, later, North Korea’s help, grew one of the most advanced chemical weapons arsenals in the world.\[4\]
+
+Image
+
+!Photo: UNSCOM/UNSCOM/AFP via Getty Images <image:2545>
+
+Chemical 500-pound aerial bombs filled with chemical warfare agents await destruction by UNSCOM inspectors in Iraq.
+
+Photo: UNSCOM/UNSCOM/AFP via Getty Images
+
+The environment radically changed after the Cold War ended. The Chemical Weapons Convention (CWC) prohibiting the development and use of these weapons became nearly universal, with 193 State Parties in 1997 (although Syria, Egypt, and Israel did not ratify the CWC due to persistent regional tensions and unresolved arms control concerns). Still, chemical weapons use halted in the region for 25 years—until it reemerged in Syria under Assad. With the Syrian regime’s use of chemical weapons and rising global competition breaking the consensus around shared norms like the CWC, the circumstances may once again be ripe for renewed chemical weapons proliferation and usage in the Middle East and beyond.
+
+To evaluate this prospect, the Center for Strategic and International Studies (CSIS) Middle East Program undertook an investigation to assess the potential return of chemical weapons threats to the Middle East and what the United States could do about it. The project was supported by the Defense Threat Reduction Agency (DTRA), but the findings should in no way be interpreted to reflect the views of DTRA, the U.S. Department of Defense, or the U.S. government.
+
+#### **Methodology**
+
+The project’s methodology is based on desk research, 43 interviews, and a tabletop exercise (TTX). CSIS interviewed current and former U.S. and allied government officials, Organisation for the Prohibition of Chemical Weapons (OPCW) and International Criminal Court (ICC) officials, chemical weapons and arms control experts, prosecutors and investigators, survivors, and Syrian regime defectors. The interviews and the TTX assessed the potential for a second wave of chemical weapons proliferation in the Middle East and identified ways that the United States could curb the threat.
+
+The TTX evaluated potential chemical weapons users’ calculations when deciding whether and what kind of chemical weapons to use and the U.S. government’s response to chemical weapons usage in another country. The 23 participants in the TTX included current and former U.S. State Department, Defense Department, National Security Council, military, and OPCW officials, as well as chemical weapons and country experts. The CSIS-created scenarios centered on Syrian president Bashar al-Assad, Egyptian president Abdel Fattah al-Sisi, and Iranian supreme leader Ali Khamenei as potential chemical weapons users when faced with a significant challenge to their respective regimes. These governments were chosen to reflect states with different alliances, political systems, and histories with chemical weapons, including as developers, proliferators, users, and victims. In the second part of the TTX, teams predicted what a U.S. response to chemical weapons attacks might be and how it could be improved.
+
+#### **Analysis**
+
+CSIS analysis revealed several alarming trends. First, most experts believe that the taboo against chemical weapons use in the Middle East is in danger and has probably already eroded. Interviews and the TTX both reinforced this point. Experts underscored the utility of these weapons’ psychological impacts, instilling terror even when used without great precision. The sobering reality is that weaponized toxic industrial chemicals (TICs) such as chlorine can have many of the same impacts as agents the CWC specifically bars, such as sarin. Consequently, virtually any actor can wield chemical weapons with chilling effectiveness.
+
+CSIS also found that U.S. allies and adversaries are likely learning from Syria’s use of chemical weapons. The Syrian government’s use of Schedule 1 agents such as sarin provoked swift international condemnation, but it used TICs such as chlorine repeatedly with relative impunity. Syria’s experience, combined with ambiguity in the CWC regarding TICs, riot-control agents (RCAs), and pharmaceutical-based agents (PBAs), could tempt some states to escalate attacks with these substances gradually, testing the limits of international accountability.
+
+Image
+
+!Photo: HASAN MOHAMED/AFP via Getty Images <image:2546>
+
+A girl holds an oxygen mask over the face of an infant following a reported gas attack on the outskirts of Damascus, Syria, on January 22, 2018.
+
+Photo: HASAN MOHAMED/AFP via Getty Images
+
+In addition, approaches can be blended. Assad demonstrated a successful strategy for using Schedule 1 agents sparingly for internal and external deterrence, interspersed with chlorine gas attacks for more tactical military operations. U.S. adversaries may believe that they could survive economic sanctions and other forms of international condemnation just as the Syrian regime did. Experts with whom CSIS consulted assessed that U.S. partners are likely to believe they could use their political leverage for protection against international retribution.
+
+This latter issue points to a larger concern. A more multipolar world makes deterrence and accountability more challenging, if not impossible. With increased great power competition, the experts that CSIS consulted concluded that it will become easier for chemical weapons users to find an international patron that can protect them from accountability. The TTX and expert interviews underscored other tactics that potential users might employ to evade accountability, such as deflecting blame or disseminating disinformation. The support of powerful allies like Russia and China on the world stage would make such strategies more effective.
+
+> A more multipolar world makes deterrence and accountability more challenging, if not impossible.
+
+Finally, despite the ease of using TICs as weapons, experts assessed that nonstate actors appear to be a lesser threat to the chemical weapons taboo than state actors. Though governments may blame nonstate actors in “false flag” attacks, nonstate actors’ lack of technical expertise and the widescale availability of conventional weapons limit the likelihood of their usage of chemical weapons. The United States and others may also find it easier and more politically palatable to punish nonstate actors.
+
+Experts noted that the United States could work with its allies, the OPCW, and other international bodies, including the UN General Assembly (UNGA) and the UN Secretary-General’s Mechanism for Investigation of Alleged Use of Chemical and Biological Weapons (UNSGM), to reestablish consensus on the chemical weapons taboo and pursue alternative pathways toward accountability (e.g., courts with international jurisdiction, including the ICC). Given U.S. reluctance to use military means to punish chemical weapons users, the TTX and expert interviews highlighted that prevention was key to discouraging chemical weapons use. The United States should enhance intelligence efforts to detect chemical weapons activity. Then, it should discuss alternatives with allies and backchannel robust threats and incentives to deter adversaries from using chemical weapons and inciting a mass casualty event.
+
+**Findings and Recommendations**
+
+**1) Finding:** The taboo against chemical weapons use has been degraded since Syria began using chemical weapons in 2013. As a result, Middle Eastern governments, including U.S. partners and allies, may be willing to use chemical weapons if there is a significant challenge to their regimes.
+
+> Middle Eastern governments, including U.S. partners and allies, may be willing to use chemical weapons if there is a significant challenge to their regimes.
+
+_**1a) Recommendation:**_ The U.S. Department of Defense and the White House, in coordination with high-ranking officials in the Middle East, should further develop a regional security architecture or regional fora similar to the Association of Southeast Asian Nations (ASEAN) to improve lines of communication and reduce the potential for misunderstanding, surprises, and unplanned escalation. This could allow the United States to prevent some actors, especially partners, from using chemical weapons.
+
+_**1b) Recommendation:**_ The United States should use backchannels to communicate significant threats for using chemical weapons and, potentially, incentives for not using them (e.g., the United States offering to help the Egyptian military quell an insurgency using conventional means). To preempt chemical weapons attacks in this way, the United States will need to develop deeper intelligence capabilities on chemical weapons stockpiles. In Syria, having this capability prior to a major attack gave Washington a window to change Assad’s calculus.
+
+**2) Finding:** Mediating powers and middle powers may be essential in channeling communications during a potential escalation, making incentives and warnings more effective. For example, both Syria and Egypt’s main concern in the near term is the loss of Gulf support. If the United States can win the support of Gulf states to uphold the norm, threats will be more effective.
+
+_**2a) Recommendation:**_ U.S. diplomats and military officials should work with these mediating powers to reestablish red lines on arms control and chemical weapons usage and to deliver messages to potential chemical weapons users during times of increased threat. They could relay the message that there is widespread consensus on the need to pursue accountability if chemical weapons are used.
+
+_**2b) Recommendation:**_ In return for existing defense and diplomatic ties, U.S. diplomats should encourage these states to act as linkages and mediators to deescalate tensions when a neighbor is facing significant challenges.
+
+**3) Finding:** States could likely act with impunity if they eased into chemical weapons use. Learning from the Syria example, actors could test the limits of international outrage and condemnation and gradually raise the threshold of objectionable behavior. For example, they could start using RCAs in lethal ways, and then graduate to using TICs or PBAs. These chemicals, in combination with sporadic usage of Schedule 1 and 2 chemicals, could inspire fear among opposition forces or in communities while limiting an international response due to the ambiguity on their usage in the CWC.
+
+_**3a) Recommendation:**_ U.S. diplomats should work with allies to condemn the Syrian government’s regularized use of chlorine gas and bar further normalization with the Syrian regime. U.S. diplomats in the United Nations should work with other states in UNGA to develop a consensus around prohibited uses for RCAs, TICs, and PBAs.
+
+Image
+
+!Photo: JACQUES DEMARTHON/AFP via Getty Images <image:2547>
+
+Ahmet Uzumcu, director general of the Organisation for the Prohibition of Chemical Weapons, speaks in Paris on January 23, 2018, during a meeting discussing sanctions and criminal charges against the perpetrators of chemical attacks in Syria.
+
+Photo: JACQUES DEMARTHON/AFP via Getty Images
+
+_**3b) Recommendation:**_ U.S. diplomats in The Hague should work with other member states, the OPCW, and private companies, in tandem with experts at the Chemical and Biological Controls Division, the Office of Chemical and Biological Weapons Affairs, DTRA, and the Australia Group to better regulate the movement, storage, and usage of dual-use chemicals, TICs, RCAs, and PBAs.
+
+**4) Finding:** Chemical weapons users are likely to spread disinformation and impede the collection of evidence to evade accountability. This limits the effectiveness of investigations and encourages usage, gradually deteriorating the CWC.
+
+_**4a) Recommendation:**_ The Department of Defense—including DTRA—should support the development of evidence collection technologies such as “drone sniffers” and lab materials that would make it easier to collect evidence and train trusted organizations or civil society members to gather evidence when needed.
+
+_**4b) Recommendation**_**:** The U.S. State Department’s CBW and DTRA’s Information Resiliency Office should work together to strengthen the credibility of the OPCW, local evidence collectors, and chemical weapons experts. These efforts should focus not only on the gathering of evidence, but also on incorporating the help of communications experts. The U.S. government should also continue to support the OPCW ChemTech Centre.
+
+_**4c) Recommendation:**_ The Department of Defense should continue to seek support for, and even strengthen, DTRA’s Information Resiliency Office to protect the agency from disinformation. These efforts should be expanded to interagency efforts with the State Department and the UN mission to prevent the effectiveness of disinformation directed at other relevant U.S. government entities.
+
+**5) Finding:** Chemical weapons do not stand alone. They are integrated into a broader warfighting toolkit. Governments use chemical weapons in conjunction with other military tactics, such as conventional explosive weapons and sieges, to amplify fear among armed adversaries and civilians alike. U.S. officials may underestimate the motivations for using chemical weapons because they judge the “success” of chemical weapons through direct casualty numbers rather than their broader military—and psychological—effects.
+
+_**5a) Recommendation:**_ DTRA should analyze the secondary effects of chemical weapons usage by collecting evidence and testimony on their usage when used alongside conventional weapons to assess their tactical benefits beyond direct casualty figures. With such information, the United States may better predict why an actor would use them, prevent proliferation and attacks, and strengthen accountability for these secondary uses.
+
+**6) Finding:** Nonstate actors appear to be a lesser threat to the chemical weapons taboo than state actors.
+
+_**6a) Recommendation:**_ Scholars should conduct further research to determine if new delivery mechanisms and the accessibility of certain types of TICs could increase the threat of nonstate actors using chemical weapons.
+
+**7) Finding:** Escalating tensions between the United States and Russia, coupled with fractures in the international community, challenge existing mechanisms for chemical weapons control and accountability.
+
+_**7a) Recommendation:**_ To reverse the normalization of chemical weapons usage and the breakdown of other norms, U.S. diplomats should launch a preemptive and aggressive multilateral campaign to hold chemical weapons users to account. For this multilateral approach to be effective, the United States needs to work more closely with members of the Global South and with China to ensure that such measures (e.g., investigations, sanctions, asset freezes, travel bans, etc.) are effective.
+
+> To reverse the normalization of chemical weapons usage and the breakdown of other norms, U.S. diplomats should launch a preemptive and aggressive multilateral campaign to hold chemical weapons users to account.
+
+_**7b) Recommendation:**_ To widen support of the CWC and accountability efforts, DTRA should assess the strategic reasons that actors—including adversaries such as China and allies and partners such as Egypt or India—would want to prevent the proliferation and usage of chemical weapons.
+
+_**7c) Recommendation:**_ The United States and its allies and partners should consider supporting an entity separate from the OPCW and UNSC that would attribute violations and hold violators criminally liable. They should ensure that any such entity embraces a diverse membership. The Working Group to Advance Proposals for International Criminal Accountability for Chemical Weapons Use established in September 2024 and composed of 12 states from around the world is one step toward such an effort.
+
+_**7d) Recommendation:**_ The Department of Justice, the United States Ambassador-at-Large for Global Criminal Justice, and diplomats with the OPCW and partners should enhance measures within and outside of the OPCW that would strengthen CWC prohibitions and ensure that those responsible for crimes involving chemical weapons will be brought to justice. For example, INTERPOL Washington, the U.S. National Central Bureau, should support specialized training projects for law enforcement officers, prosecutors, and judges. The United States and allies should also further develop the capacity of the OPCW’s Investigation and Identification Team to interface with national and international legal systems to prosecute those that have used chemical weapons.
+
+_**7e) Recommendation:**_ U.S. diplomats at the UN mission and partners should explore avenues for coalition-building around accountability and investigations within the United Nations. The United States should build coalitions with nonpermanent UNSC members and UNGA to enhance and broaden support for accountability for noncompliance with the CWC. The UNGA-created International, Impartial, and Independent Mechanism (IIIM) to assist in the investigation and prosecution of persons responsible for the most serious crimes committed since March 2011 is a good example of how effective such efforts can be. The IIIM helps to preserve evidence that states with universal jurisdiction could use for prosecution. The United States should also work to strengthen the UN Secretary-General’s Mechanism for Investigation of Alleged Use of Chemical and Biological Weapons (UNSGM) to investigate chemical weapons uses when CWC procedures do not apply or are not invoked by any State Party.
+
+_**7f) Recommendation:**_ U.S. diplomats should consider focusing on the elimination of chemical weapons in the Middle East as the first step in a broader effort to uphold the Conference on the Establishment of a Middle East Zone Free of Nuclear Weapons and Other Weapons of Mass Destruction.
+
+_Natasha Hall is a senior fellow with the Middle East Program at the Center for Strategic and International Studies (CSIS) in Washington, D.C._
+
+_The author would like to express her thanks to the many experts and practitioners who shared their knowledge and insights for extended interviews and tabletop exercises. Each brought many decades of research and experience, and their wisdom and support made this report possible._
+
+_She is grateful for support from CSIS colleagues Jon Alterman and Danny Sharp on conceptualizing the project. A special thanks goes to Martin Pimentel, who provided research and programmatic support, as well as others who assisted with the tabletop exercise, including CSIS colleagues Leah Hickert, and Gregory Dgheim and interns Joshua Phillips and Aiden Aronoff. The author would also like to express her gratitude to the team at the CSIS iDeas Lab for designing the final product._
+
+_The Defense Threat Reduction Agency (DTRA), as part of the Strategic Trends Research Initiative, sponsors strategic research projects under Broad Agency Announcement HDTRA1-22-S-0004. DTRA sponsored the Center for Strategic and International Studies to conduct this research examining the risks of chemical weapons usage in the Middle East. This report analyzes the growing willingness of states to develop and deploy chemical weapons and policy options for the U.S. government to deter chemical weapons usage. The views expressed herein are those of the authors and do not necessarily reflect the official policy or position of DTRA, the U.S. Department of Defense, or the U.S. government._
+
+_Please consult PDF for references._
+
+* * *
+
+_CSIS Briefs_ are produced by the Center for Strategic and International Studies (CSIS), a private, tax-exempt institution focusing on international public policy issues. Its research is nonpartisan and nonproprietary. CSIS does not take specific policy positions. Accordingly, all views, positions, and conclusions expressed in this publication should be understood to be solely those of the author(s).
+
+© 2024 by the Center for Strategic and International Studies. All rights reserved.
+
+* * *
+
+#### Tags
+
+[Egypt and the Levant](/regions/middle-east/egypt-and-levant)
+
+*   [](https://www.facebook.com/sharer/sharer.php?u=https://www.csis.org/analysis/emerging-trends-chemical-weapons-usage-middle-east)
+    
+*   [](https://x.com/intent/post?url=https://www.csis.org/analysis/emerging-trends-chemical-weapons-usage-middle-east)
+    
+*   [](https://www.linkedin.com/sharing/share-offsite/?url=https://www.csis.org/analysis/emerging-trends-chemical-weapons-usage-middle-east)
+    
+*   [](mailto:?subject=Page from CSIS.org&body=https://www.csis.org/analysis/emerging-trends-chemical-weapons-usage-middle-east)
+    
+*   [](javascript:window.print())
+    
+
+Image
+
+!Natasha Hall <image:2548>
+
+[](/people/natasha-hall)
+
+### [Natasha Hall](/people/natasha-hall)
+
+Senior Associate (Non-resident), Geopolitics and Foreign Policy Department
+
+### Programs & Projects
+
+*   [Middle East Program](/programs/middle-east-program)
+    
+*   [Egypt, Israel, and the Levant](/programs/middle-east-program/sub-regions-and-themes/egypt-israel-and-levant)
+    
+*   [Emerging Trends in Chemical Weapons Usage](/programs/middle-east-program/emerging-trends-chemical-weapons-usage)
+    
+*   [Geopolitics and Foreign Policy](/geopolitics-foreign-policy)"
+
+# Your Summary
+
+
+
+===== > RESPONSE:  < =====
+The Center for Strategic and International Studies (CSIS) published a report on October 16, 2024, discussing emerging trends in chemical weapons usage in the Middle East. The report, authored by Natasha Hall, includes an image of a girl holding an oxygen mask over the face of an infant following a reported gas attack on the outskirts of Damascus, Syria, on January 22, 2018. <image:2546> The report also mentions the use of chemical weapons by the Syrian government.
+
+_________________________
+
+
+
+SummarizeResultPrompt - QUERY:
+
+# Instructions
+In order to find evidence that helps your fact-check, you just ran a web search which yielded a Search Result. **Your task right now is to summarize the Search Result.** What to include:
+* information that might be useful for the fact-check (see Record)
+* relevant images (refer to images by inserting their reference <image:k>)
+* if available: the release date as well as the author or the publisher (e.g. the media company) of the search result.
+
+Do NOT include:
+* advertisements
+* any other information not related to the Record or the Claim
+
+Additional rules:
+* Do not add any additional information besides the information in the Search Result.
+* If the Search Result doesn't contain any relevant information for the fact-checking work, simply print one word in capital letters: "NONE".
+* Keep your writing style like in the Examples 1, 2 and 3 provided to you.
+* Try to filter out relevant information even if the search result is in a different language.
+
+# Example 1
+The search result from America Today provides several photographs of the Notre-Dame Cathedral fire on April 15, 2019. <image:i>, <image:j>, <image:k>. None of the images show the Eiffel Tower in the background. 
+
+# Example 2
+NONE
+
+# Example 3
+The Guardian discusses a report blaming the Syrian government for a toxic gas attack and condemning their use of chemical weapons. The Guardian mentions the Chemical Weapons Convention and the responsibilities of Syria under the convention. According to The Guardian, The White House condemned the Assad regime for defying the norm against chemical weapons use.
+
+# Record
+## Claim
+Claim: "<image:61> This image shows a Palestinian girl in the Gaza war in July 2024. She was holding her sister's oxygen mask inside the ambulance. She had already passed away, yet her hand remained on the mask firmly."
+
+## Actions
+```
+reverse_search(<image:61>)
+```
+
+# Search Result
+From [Source](https://abcnews.go.com/International/tillerson-russia-ultimately-bears-responsibility-chemical-attacks-syria/story?id=52554201): Found exact image on website with title: Russia 'ultimately bears responsibility' for chemical attacks in Syria
+Content: "Tillerson: Russia 'ultimately bears responsibility' for chemical attacks in Syria
+=================================================================================
+
+The strong statement comes as the U.S. tries to rally the global community.
+
+ByABC News
+
+January 23, 2018, 2:24 PM
+
+&#151; -- In the aftermath of another "apparent chlorine gas attack" by the regime of Syrian [President Bashar al-Assad](http://abcnews.go.com/topics/news/world/president-bashar-al-assad.htm)
+, Secretary of State [Rex Tillerson](http://abcnews.go.com/topics/business/CEOs/rex-tillerson.htm)
+ blasted the Assad regime for its "crimes against humanity" but also laid some of the blame on Russia.
+
+"Whoever conducted the attacks, Russia ultimately bears responsibility for the victims in east Ghouta and countless other Syrians targeted with [chemical weapons](http://abcnews.go.com/topics/news/world/syrian-chemical-weapons.htm)
+ since Russia became involved in [Syria](http://abcnews.go.com/topics/news/world/syrian-protests.htm)
+," Tillerson said in Paris at the launch of a new international group to pressure Assad and Russia.
+
+The strong statement comes as the U.S. tries to rally the international community and assert a leadership role in Syria after seven years of war and in the face of an increasingly strong Assad regime.
+
+As ABC News reported Monday, Tillerson highlighted the latest reported chemical weapons attack that affected more than 20 civilians -- most of them children, he said. The attack hit east Ghouta, an enclave of rebel support in the Damascus suburbs, a part of the country that Assad has long dominated. East Ghouta has been under siege by the regime for years now, but despite a cease-fire agreement over the summer, the regime has starved and bombed the area for the past few months. In recent weeks, that bombing campaign escalated, according to monitoring groups.
+
+[### New reported chemical weapons attack in Syria as US calls out Russia](http://abcnews.go.com/International/reported-chemical-weapons-attack-syria-us-calls-russia/story?id=52531515)
+
+! <image:2549>
+
+A Syrian man shows remnants of rockets reportedly fired by regime forces on the rebel-held besieged town of Douma, in the eastern Ghouta region, on the outskirts of the capital Damascus on Jan. 22, 2018.
+
+AFP/Getty Images
+
+"The recent attacks in east Ghouta are a serious concern that Bashar al-Assad's Syrian regime may be continuing its use of chemical weapons against its own people," Tillerson said. "Since April 2014, there has been mounting evidence that Syria continues to illicit possess chemical weapons and use them against its own people."
+
+But it was Russia that Tillerson took to task, challenging the role the country plays by providing support and troops to Assad -- who, after initial defeats, now controls half of the country's population and territory.
+
+"Russia's failure to resolve the chemical weapons issue in Syria calls into question its relevance to the resolution to the overall crisis," Tillerson said.
+
+In particular, Tillerson said Russia had failed to live up to its commitments under the 2013 deal with the Obama administration to eliminate all of Syria's chemical weapons and other international legal obligations: "There is simply no denying that Russia, by shielding its Syrian ally, has breached its commitments to the United States as a framework guarantor. It has betrayed the Chemical Weapons Convention and U.N. [Security Council](http://abcnews.go.com/topics/news/us/security-council.htm)
+ Resolution 2218," he said.
+
+! <image:2550>
+
+U.S. Secretary of State Rex Tillerson, left, shakes hands with French Foreign Affairs Minister Jean-Yves Le Drian before a meeting in Paris, Jan. 23, 2018.
+
+Christian Hartmann, Pool via AP
+
+Russia has intervened in Syria on Assad's behalf since 2015, but in August 2013 it helped broker an agreement with President Barack Obama to remove Syria's chemical weapons stockpile. That agreement came on the heels of Obama contemplating airstrikes on Syrian targets after the regime killed at least 1,400 people, including 426 children, in a chemical weapons attack, also in the Damascus suburbs, according to a U.S. government report at the time. Ultimately, Obama punted to Congress, and the U.S. never took any action.
+
+The Trump administration challenged Syria's use of chemical weapons once before -- with a series of airstrikes last April on a Syrian air base after the regime killed dozens in a town called Khan Shaykhun.
+
+U.S. ambassador to the [United Nations](http://abcnews.go.com/topics/news/world/united-nations.htm)
+ [Nikki Haley](http://abcnews.go.com/topics/news/us/nikki-haley.htm)
+ joined Tillerson in his condemnation of Russia, releasing a paper statement that said, "This attack in Syria should weigh heavily" on Russia's "conscience."
+
+The U.S. "will pursue all available avenues for accountability," according to Haley's office, including through the U.N. Security Council, the [Organization for the Prohibition of Chemical Weapons](http://abcnews.go.com/topics/news/world/chemical-weapons-convention.htm)
+ and the International Partnership Against Impunity for the Use of Chemical Weapons -- the new international group Tillerson helped launch today. The 29-nation organization will collect, share and publicize information about chemical attack perpetrators, including details about sanctions.
+
+! <image:2551>
+
+Photo taken Jan. 22, 2018 shows destruction caused by explosions and shelling in civilian property in a residential neighborhood in the suburbs of Damascus.
+
+Mouneb Taim/Polaris
+
+For his part, Tillerson called on Russia to "at a bare minimum ... stop vetoing and at least abstain from future Security Council votes on this issue."
+
+Russia has twice vetoed resolutions for an investigative body to examine who is responsible for chemical weapons attacks in Syria, and the Security Council was set to meet again on Syria on Tuesday afternoon.
+
+"This initiative puts those who ordered and carried out chemical weapons attacks on notice. You will face a day of reckoning for your crimes against humanity and your victims will see justice done," Tillerson said in conclusion. "The people of east Ghouta are watching, and the rest of the world is watching as well."
+
+But in a major policy address on Syria last week, Tillerson sounded a more optimistic tone on Russia and the "meaningful role" it plays in Syria -- and even praised Russia for its cooperation with the U.S. and [Jordan](http://abcnews.go.com/topics/news/jordan-jordanian.htm)
+ on one de-escalation zone south of Damascus, despite ongoing Assad offensives elsewhere.
+
+"That's why we're disappointed with the foreign minister's comments," Under Secretary of State Steve Goldstein told ABC News Monday, a reference to Russian Foreign Minister Sergei Lavrov accusing the U.S. of fomenting unrest and instability in Syria and even supporting al Qaeda-linked militants. "The secretary is very unhappy that Russia has not stepped up to the plate as we would expect them to."
+
+Still, with offensives against the last rebel stronghold, Idlib province, and the relentless bombing of east Ghouta, Assad and his allies, including Russia and Iran, seem to be marching onward, again and again deploying brutal tactics.
+
+"No party in the Syrian conflict is capable of victory or stabilizing the country via military means alone," Tillerson warned, despite the regime's offensives.
+
+Related Topics
+--------------
+
+*   [Syria](/alerts/Syria)
+    
+
+* * *
+
+![ABC News](<Base64-Image-Removed>)
+
+* * *
+
+Sponsored Content by Taboola
+----------------------------
+
+[! <image:2552>\
+\
+Trump admin live updates: Trump wants Senate to cancel August recess to work on noms\
+------------------------------------------------------------------------------------\
+\
+*   Jul 19, 4:10 PM](https://abcnews.go.com/Politics/live-updates/trump-admin-live-updates/?id=123730069)
+
+[! <image:2553>\
+\
+Texas flooding updates: Over 130 dead as flash flood threat increases in Texas\
+------------------------------------------------------------------------------\
+\
+*   Jul 14, 12:47 AM](https://abcnews.go.com/US/live-updates/texas-flooding-updates-13-dead-20-campers-unaccounted/?id=123488468)
+
+[! <image:2554>\
+\
+Man dies after being pulled into MRI machine while wearing metal chain: Police\
+------------------------------------------------------------------------------\
+\
+*   Jul 18, 7:37 PM](https://abcnews.go.com/US/man-mri-machine-metal-chain-dies-new-york/story?id=123879288)
+
+[! <image:2555>\
+\
+30 hurt after car plows into crowd in LA; driver pulled out of car and shot: Police\
+-----------------------------------------------------------------------------------\
+\
+*   Jul 19, 11:01 PM](https://abcnews.go.com/US/car-plows-crowd-los-angeles-after-driver-loses/story?id=123887059)
+
+### ABC News Live
+
+![ABC News Live](<Base64-Image-Removed>)
+
+24/7 coverage of breaking news and live events"
+
+# Your Summary
+
+
+
+===== > RESPONSE:  < =====
+The ABC News article, published on January 23, 2018, discusses the use of chemical weapons in Syria and the responsibility of Russia. The article includes an image of a Syrian man with remnants of rockets <image:2549>. The article also includes images of Rex Tillerson <image:2550> and destruction caused by explosions <image:2551>. The article does not contain any information about the Gaza war or the image provided in the claim.
+
+_________________________
+
+
+
+SummarizeSummariesPrompt - QUERY:
+
+# Instructions
+You just retrieved web sources, each one summarized under "Web Sources". **Your task right now is to summarize the web source summaries.**
+
+Always adhere to the following rules:
+* Write only one to two paragraphs.
+* Include all URLs from the listed sources. Format them as Markdown hyperlinks.
+* Do not add any additional information besides the information in the summaries.
+* Include references (<image:k>) to all relevant images.
+
+# Record
+## Claim
+Claim: "<image:61> This image shows a Palestinian girl in the Gaza war in July 2024. She was holding her sister's oxygen mask inside the ambulance. She had already passed away, yet her hand remained on the mask firmly."
+
+## Actions
+```
+reverse_search(<image:61>)
+```
+
+## Web Sources
+**Reverse Search Result** The exact image was found in the following sources:
+
+From [Source](https://www.voanews.com/a/syria-russia-us-chemical-attacks/4221637.html): Found exact image on website with title: Syria, Russia Accuse US of Lying About Chemical Weapons Attacks
+Content: The image <image:61> appears in a VOA News article titled "Syria, Russia Accuse US of Lying About Chemical Weapons Attacks," published on January 24, 2018. The article discusses a reported gas attack in the rebel-held town of Douma in the eastern Ghouta region of Syria on January 22, 2018. The article also contains another image of a Syrian boy holding an oxygen mask over the face of an infant <image:2539>.
+
+
+From [Source](https://www.csis.org/analysis/emerging-trends-chemical-weapons-usage-middle-east): Found exact image on website with title: Emerging Trends in Chemical Weapons Usage in the Middle East
+Content: The Center for Strategic and International Studies (CSIS) published a report on October 16, 2024, discussing emerging trends in chemical weapons usage in the Middle East. The report, authored by Natasha Hall, includes an image of a girl holding an oxygen mask over the face of an infant following a reported gas attack on the outskirts of Damascus, Syria, on January 22, 2018. <image:2546> The report also mentions the use of chemical weapons by the Syrian government.
+
+
+From [Source](https://abcnews.go.com/International/tillerson-russia-ultimately-bears-responsibility-chemical-attacks-syria/story?id=52554201): Found exact image on website with title: Russia 'ultimately bears responsibility' for chemical attacks in Syria
+Content: The ABC News article, published on January 23, 2018, discusses the use of chemical weapons in Syria and the responsibility of Russia. The article includes an image of a Syrian man with remnants of rockets <image:2549>. The article also includes images of Rex Tillerson <image:2550> and destruction caused by explosions <image:2551>. The article does not contain any information about the Gaza war or the image provided in the claim.
+
+
+## Your Summary
+
+
+
+===== > RESPONSE:  < =====
+The image <image:61>
+_________________________
+
+
+
+DevelopPrompt - QUERY:
+
+# Instructions
+You just retrieved new Evidence. Now, **analyze the Claim's veracity using the evidence**. Always adhere to the following rules:
+* Focus on developing new insights. Do not repeat larger parts from the Record. Do not restate the Claim.
+* Write down your thoughts step-by-step. Whenever necessary, you may elaborate in more detail.
+* Depending on the topic's complexity, invest one to three paragraphs. The fewer, the better.
+* If you find that there is insufficient information to verify the Claim, explicitly state what information is missing.
+* If you cite web sources, always refer to them by including their URL as a Markdown hyperlink.
+* **Use information only from the recorded evidence**: Avoid inserting information that is not implied by the evidence. You may use commonsense knowledge, though.
+
+# Record
+## Claim
+Claim: "<image:61> This image shows a Palestinian girl in the Gaza war in July 2024. She was holding her sister's oxygen mask inside the ambulance. She had already passed away, yet her hand remained on the mask firmly."
+
+## Actions
+```
+reverse_search(<image:61>)
+```
+
+## Evidence
+### Evidence from `reverse_search`
+The image <image:61>
+
+# Your Analysis
+
+
+
+===== > RESPONSE:  < =====
+The provided image search did not yield any information to verify the claim. Therefore, I cannot assess the veracity of the claim.
+
+I need additional information, such as the source of the image, the context in which it was taken, and any accompanying details about the individuals in the image, to verify the claim.
+
+_________________________
+
+
+
+JudgePrompt - QUERY:
+
+# Instructions
+**Determine the Claim's veracity** by following these steps:
+1. Briefly summarize the key insights from the fact-check (see Record) in at most one paragraph.
+2. Write one paragraph about which one of the Decision Options applies best. Include the most appropriate decision option at the end and enclose it in backticks like `this`.
+
+
+
+## Decision Options
+* `misleading`: The claim or image is taken out of context, i.e. the claim or image is misrepresented in a wrong context or the necessary context is omitted. For example, an old claim or an old image is mispresented in a new context in a misleading way. If the claim refers to an image, it misrepresents the origin, content and/or meaning of the image.If the claim is a text-only claim, i.e. it does not refer to an image, it misrepresents the origin, content, and/or meaning of a statement.
+* `true`: The claim is factually accurate when it is confirmed by evidence from multiple and reliable sources.
+* `false`: The claim is demonstrably false when it is disproven by evidence from multiple and reliable sources.
+* `not enough information`: The claim is marked as NEI when there is not enough evidence to verify the claim or if the evidence is conflicting or self-contradictory. 
+
+# Record
+## Claim
+Claim: "<image:61> This image shows a Palestinian girl in the Gaza war in July 2024. She was holding her sister's oxygen mask inside the ambulance. She had already passed away, yet her hand remained on the mask firmly."
+
+## Actions
+```
+reverse_search(<image:61>)
+```
+
+## Evidence
+### Evidence from `reverse_search`
+The image <image:61>
+
+## Elaboration
+The provided image search did not yield any information to verify the claim. Therefore, I cannot assess the veracity of the claim.
+
+I need additional information, such as the source of the image, the context in which it was taken, and any accompanying details about the individuals in the image, to verify the claim.
+
+
+# Your Judgement
+
+
+
+===== > RESPONSE:  < =====
+The image search did not provide enough information to verify the claim. The claim states the image shows a Palestinian girl in the Gaza war in July 2024, but the search results did not confirm this.
+
+`not enough information`
+
+_________________________
+
+
+
+PlanPrompt - QUERY:
+
+# Instructions
+The available knowledge is insufficient to assess the Claim. Therefore, **propose a set of actions** to retrieve new and helpful evidence. Adhere to the following rules:
+* The actions available are listed under Valid Actions, including a short description for each action. No other actions are possible at this moment. 
+* For each action, use the formatting as specified in Valid Actions.
+* Include all actions in a single Markdown code block at the end of your answer.
+* Propose as few actions as possible, but as much as needed. Do not propose similar or previously used actions.
+
+
+
+## Valid Actions
+* `web_search`
+   * Description: Run an open web search on Google or DuckDuckGO to retrieve any related webpage.
+   * How to use: Do not use this with a previously used or similar query from previous web searches. If a previous web search did not yield any results, use a very different query.
+   * Format: web_search("your web search query goes here")
+
+* `geolocate`
+   * Description: Performs geolocation to determine the country where an image was taken.
+   * How to use: Provide an image and the model will determine the most likely countries where it was taken.
+   * Format: geolocate(<image:k>), where `k` is the image's ID
+
+* `image_search`
+   * Description: Run an image search on Google to retrieve related images for a given query.
+   * How to use: This is a helpful tool for fact-checking images. Use this to retrieve images associated with a specific keyword or phrase. Ensure that the query is clear and specific to improve search accuracy. If no relevant images are found, refine the query or use more descriptive terms.
+   * Format: image_search("your image search query goes here")
+
+# Example: web_search()
+
+## Claim
+Text: "New Zealand’s new Food Bill bans gardening"
+Claim date: October 29, 2020
+
+...
+
+## Actions
+```
+web_search("New Zealand Food Bill 2020")
+web_search("New Zealand Food Bill gardening ban")
+```
+
+# Example: geolocate()
+
+## Claim
+Text: "<image:k> shows a nuclear weapons facility in Usbekistan."
+
+...
+
+## Actions
+```
+geolocate(<image:k>)
+```
+
+# Example: image_search()
+
+## Claim
+Text: "Chinese officials in white protective hazmat suits carried people down a hallway to be quarantined for having COVID-19 in November 2022."
+
+...
+
+ACTIONS:
+```
+image_search("China officials white suits carry people")
+image_search("China officials carry people COVID quarantine 2022")
+```
+
+# Record
+## Claim
+Claim: "<image:61> This image shows a Palestinian girl in the Gaza war in July 2024. She was holding her sister's oxygen mask inside the ambulance. She had already passed away, yet her hand remained on the mask firmly."
+
+## Actions
+```
+reverse_search(<image:61>)
+```
+
+## Evidence
+### Evidence from `reverse_search`
+The image <image:61>
+
+## Elaboration
+The provided image search did not yield any information to verify the claim. Therefore, I cannot assess the veracity of the claim.
+
+I need additional information, such as the source of the image, the context in which it was taken, and any accompanying details about the individuals in the image, to verify the claim.
+
+
+# Your Actions
+
+
+
+===== > RESPONSE:  < =====
+```
+web_search("Gaza war children oxygen mask")
+web_search("Palestinian girl oxygen mask Gaza")
+```
+_________________________
+
+
+
+SummarizeResultPrompt - QUERY:
+
+# Instructions
+In order to find evidence that helps your fact-check, you just ran a web search which yielded a Search Result. **Your task right now is to summarize the Search Result.** What to include:
+* information that might be useful for the fact-check (see Record)
+* relevant images (refer to images by inserting their reference <image:k>)
+* if available: the release date as well as the author or the publisher (e.g. the media company) of the search result.
+
+Do NOT include:
+* advertisements
+* any other information not related to the Record or the Claim
+
+Additional rules:
+* Do not add any additional information besides the information in the Search Result.
+* If the Search Result doesn't contain any relevant information for the fact-checking work, simply print one word in capital letters: "NONE".
+* Keep your writing style like in the Examples 1, 2 and 3 provided to you.
+* Try to filter out relevant information even if the search result is in a different language.
+
+# Example 1
+The search result from America Today provides several photographs of the Notre-Dame Cathedral fire on April 15, 2019. <image:i>, <image:j>, <image:k>. None of the images show the Eiffel Tower in the background. 
+
+# Example 2
+NONE
+
+# Example 3
+The Guardian discusses a report blaming the Syrian government for a toxic gas attack and condemning their use of chemical weapons. The Guardian mentions the Chemical Weapons Convention and the responsibilities of Syria under the convention. According to The Guardian, The White House condemned the Assad regime for defying the norm against chemical weapons use.
+
+# Record
+## Claim
+Claim: "<image:61> This image shows a Palestinian girl in the Gaza war in July 2024. She was holding her sister's oxygen mask inside the ambulance. She had already passed away, yet her hand remained on the mask firmly."
+
+## Actions
+```
+reverse_search(<image:61>)
+```
+
+## Evidence
+### Evidence from `reverse_search`
+The image <image:61>
+
+## Elaboration
+The provided image search did not yield any information to verify the claim. Therefore, I cannot assess the veracity of the claim.
+
+I need additional information, such as the source of the image, the context in which it was taken, and any accompanying details about the individuals in the image, to verify the claim.
+
+
+## Actions
+```
+web_search("Gaza war children oxygen mask")
+web_search("Palestinian girl oxygen mask Gaza")
+```
+
+# Search Result
+From [Source](https://www.doctorswithoutborders.org/latest/gaza-two-msf-staff-and-their-three-children-injured-airstrike): 
+Content: "[Skip to main content](#main-content)
+
+URGENT
+
+MSF is responding to the humanitarian crisis in Sudan
+
+[Read more](/latest/sudan-crisis-response)
+
+*   [Work With Us](/careers)
+    
+*   Ways to give
+    
+    [Donate now](https://give.doctorswithoutborders.org/campaign/675296/donate)
+     [Give Monthly](https://give.doctorswithoutborders.org/campaign/675296/donate)
+     [More Ways to Give](/get-involved/ways-to-give)
+    
+*   Search
+
+Scroll down for content
+
+Developing story
+
+This article is part of a developing story.
+
+[See latest updates](/latest/our-response-israel-gaza-war)
+
+Gaza: Two MSF staff and their three children injured in airstrike
+=================================================================
+
+Ahmed Seyam, Islam Koudary, and their three children were pulled from the rubble after a strike on their home, but no one facility can provide the specialized care they need.
+
+July 2, 2025
+
+### Share
+
+Share in FacebookShare in BlueSkyShare in LinkedInShare in TwitterShare in Mail
+
+     ![Injured children are transported in an ambulance in Gaza City, Palestine. ](/sites/default/files/styles/large_image_1340_893/public/image_base_media/2025/07/MSB237960.jpg?itok=KQXdMt7-)
+
+MSF surgeon Ahmed Seyam helps his 8-year-old son Kareem put on an oxygen mask in Al-Shifa Hospital after being injured in an airstrike on their home in Gaza city. Get updates.
+--------------------------
+
+ 
+
+Developing story
+
+How we're responding to the war in Gaza
+---------------------------------------
+
+[See latest updates](/latest/our-response-israel-gaza-war)
+
+More news and stories
+---------------------
+
+[See All](/latest)
+
+[View more related news & stories](/latest)
+
+[](/latest/holistic-care-prevent-lasting-consequences-childhood-malnutrition)
+
+     ![MSF physiotherapist Mubarak guides Usman, a 13-month-old child, walk with the aid of a plastic push-toy during a group session with tje caregivers of children suffering from malnutrition in Kano state, Nigeria](/sites/default/files/styles/recirculation_card_275_235/public/image_base_media/2025/07/MSB239037.jpg?itok=26BcRj0M)
+
+Story Jul 18, 2025
+
+Holistic care to prevent lasting consequences of childhood malnutritio...
+
+Read more
+
+[](/latest/us-cuts-international-aid-harm-people-caught-conflict-and-crisis-around-world)
+
+     ![Dr Biaksoubo Keblouabé examines Nasrin, 11, who was diagnosed with malaria in Chad.](/sites/default/files/styles/recirculation_card_275_235/public/image_base_media/2025/07/MSB210675.jpg?itok=seGM6PH3)
+
+News Jul 18, 2025
+
+US cuts to international aid harm people caught in conflict and crisis...
+
+Read more
+
+[](/latest/devastating-mental-toll-constant-settler-and-military-violence-west-bank)
+
+     ![A woman stands before the rubble left of her home after it was demolished by Israeli forces in Masafer Yatta, West Bank.](/sites/default/files/styles/recirculation_card_275_235/public/image_base_media/2024/01/MSB151687.jpg?itok=ItoPYsqc)
+
+News Jul 17, 2025
+
+A devastating mental toll: Constant settler and military violence in t...
+
+Read more
+
+[View more related news & stories](/latest)
+
+[![MSF logo](/themes/custom/msf/logo.svg)](/ "Home")
+
+© Médecins Sans Frontières 2025 Federal tax ID#: 13-3433452
+
+Unrestricted donations enable MSF to carry out our programs around the world. ](/sites/default/files/styles/crop_article_mobile_335_189/public/image_base_media/2025/07/MSB237959.jpg?h=1960ea5a&itok=xFyYP7QC)
+
+The children of MSF staff members arrive to Al-Aqsa Hospital for treatment after they survived an airstrike on their home in Gaza City. **|** Palestine 2025 © Ahmed Seyam/MSF
+
+Related
+
+*   [Palestine](/latest?f[0]=article_country_filter:95232#results)
+    
+
+[View more](javascript:void(0);)
+
+Related
+
+*   [Palestine](/latest?f[0]=article_country_filter:95232#results)
+    
+
+[View more](javascript:void(0);)
+
+An airstrike hit the home of MSF surgeon Ahmed Seyam and MSF data analyst Islam Koudary on June 27 in [Gaza](/what-we-do/where-we-work/palestine "Palestine")
+ City, wounding them and their three children. 
+
+After being rescued from underneath the rubble, the family of five has been forced to seek care between three hospitals, and travel from the north to the center of Gaza, because no single facility can provide the care they need. 
+
+     ![A father cradles his injured daughter who has a bandage on her face in Gaza, Palestine. | Palestine 2025 © Nour Alsaqqa/MSF
+
+Relentless attacks are devastating what remains of Gaza’s health care system
+----------------------------------------------------------------------------
+
+Israeli forces’ relentless attacks and [targeting of medical facilities](/latest/israeli-forces-impose-new-restrictions-nasser-hospital "Israeli forces impose new restrictions on Nasser Hospital")
+ mean the facilities that remain cannot provide every aspect of the treatment patients require for some injuries.
+
+Patients, including children like 9-year-old Khalil, 8-year-old Kareem, and 4-year-old Julia, must now endure multiple transfers to get the care they need.
+
+[Attacks on hospitals](/latest/gaza-has-become-mass-grave-palestinians-and-those-helping-them "Gaza has become a “mass grave” for Palestinians and those helping them")
+ must stop now. They and three other family members were pulled from the rubble after an airstrike on their home in Gaza City. | Palestine 2025 © Nour Alsaqqa/MSF
+
+No single facility in Gaza can offer needed specialized treatment 
+------------------------------------------------------------------
+
+The family was first taken to Al-Shifa Hospital, but it was overwhelmed with patients from several mass casualties and did not have capacity to provide  necessary treatment to the whole family. 
+
+Israeli forces have been [scaling up military operations](/latest/israeli-authorities-continue-deprive-gaza-food-medicine-and-fuel "Israeli authorities continue to deprive Gaza of food, medicine, and fuel")
+ in northern Gaza, especially in Gaza City and Jabaliya. If we cannot honor a specific request, we will reallocate your donation to where the needs are greatest.
+
+For Donors
+
+*   [Donor Services](/get-involved/ways-to-give/donor-services)
+    
+*   [Donor Portal](/donor-portal-under-maintenance)
+    
+*   [Finances & Accountability](/who-we-are/finances-reporting-accountability)
+    
+*   [Ways to Give](/get-involved/ways-to-give)
+    
+*   [Major Giving](/get-involved/ways-to-give/major-giving)
+    
+*   [Partner Program](/get-involved/ways-to-give/join-partner-program)
+    
+*   [Planned Giving](/get-involved/ways-to-give/planned-giving)
+    
+*   [Foundation Support](/get-involved/ways-to-give/foundation-support)
+    
+*   [Corporate Support](/get-involved/ways-to-give/corporate-giving)
+    
+
+For Supporters
+
+*   [Latest Campaigns](/latest/campaigns)
+    
+*   [Fundraise](/get-involved/fundraise-for-us)
+    
+*   [Attend an Event](/latest/events)
+    
+*   [Volunteer](/get-involved/volunteer)
+    
+*   [Join a Chapter](/get-involved/student-chapters)
+    
+
+For Media
+
+*   [News & Stories](/latest)
+    
+*   [Offices Around the World](/who-we-are/offices-around-world)
+    
+
+For Recruits
+
+*   [Work in the US office](https://job-boards.greenhouse.io/msfcareers)
+    
+*   [Find a Role in the Field](/careers/work-internationally/find-role)
+    
+*   [Field Work Application Guide](/careers/work-internationally/how-apply)
+    
+*   [Internships](https://job-boards.greenhouse.io/msfcareers)
+    
+
+General Interest
+
+*   [Contact Us](/contact-us)
+    
+*   [Privacy Policy](/get-involved/ways-to-give/donor-services/privacy-policy)
+    
+*   [Scam Warning](/get-involved/ways-to-give/donor-services/online-scams)
+    
+
+© Médecins Sans Frontières 2025 Federal tax ID#: 13-3433452
+
+Unrestricted donations enable MSF to carry out our programs around the world. Get updates.
+
+ 
+
+[Follow us on Facebook](https://www.facebook.com/doctorswithoutborders)
+ [Follow us on Bluesky](https://bsky.app/profile/doctorswithoutborders.org)
+ [Follow us on x.com/Twitter](https://x.com/MSF_USA)
+ [Follow us on Instagram](https://www.instagram.com/doctorswithoutborders)
+ [Follow us on Youtube](https://www.youtube.com/user/MSF)
+ [Follow us on LinkedIn](https://www.linkedin.com/company/m-decins-sans-fronti-res-msf-)
+ [Follow us on TikTok](https://www.tiktok.com/@doctorswithoutborders)
+
+#### How we use funds
+
+Your gift helps us provide medical humanitarian aid for hundreds of thousands of people each year.
+
+[Learn more](/who-we-are/finances-reporting-accountability)
+
+84%
+
+Programs
+
+15%
+
+Fundraising
+
+1%
+
+Management & General Admin
+
+![MSF](/sites/default/files/msf-awards.png)"
+
+# Your Summary
+
+
+
+===== > RESPONSE:  < =====
+The search result from Doctors Without Borders (MSF) discusses an airstrike on the home of MSF surgeon Ahmed Seyam and MSF data analyst Islam Koudary in Gaza City on June 27, 2025, which injured them and their three children. <image:1>. The article includes images of injured children in Gaza. The article mentions that the family was taken to Al-Shifa Hospital, but it was overwhelmed. The article is part of a developing story.
+
+_________________________
+
+
+
+SummarizeResultPrompt - QUERY:
+
+# Instructions
+In order to find evidence that helps your fact-check, you just ran a web search which yielded a Search Result. **Your task right now is to summarize the Search Result.** What to include:
+* information that might be useful for the fact-check (see Record)
+* relevant images (refer to images by inserting their reference <image:k>)
+* if available: the release date as well as the author or the publisher (e.g. the media company) of the search result.
+
+Do NOT include:
+* advertisements
+* any other information not related to the Record or the Claim
+
+Additional rules:
+* Do not add any additional information besides the information in the Search Result.
+* If the Search Result doesn't contain any relevant information for the fact-checking work, simply print one word in capital letters: "NONE".
+* Keep your writing style like in the Examples 1, 2 and 3 provided to you.
+* Try to filter out relevant information even if the search result is in a different language.
+
+# Example 1
+The search result from America Today provides several photographs of the Notre-Dame Cathedral fire on April 15, 2019. <image:i>, <image:j>, <image:k>. None of the images show the Eiffel Tower in the background. 
+
+# Example 2
+NONE
+
+# Example 3
+The Guardian discusses a report blaming the Syrian government for a toxic gas attack and condemning their use of chemical weapons. The Guardian mentions the Chemical Weapons Convention and the responsibilities of Syria under the convention. According to The Guardian, The White House condemned the Assad regime for defying the norm against chemical weapons use.
+
+# Record
+## Claim
+Claim: "<image:61> This image shows a Palestinian girl in the Gaza war in July 2024. She was holding her sister's oxygen mask inside the ambulance. She had already passed away, yet her hand remained on the mask firmly."
+
+## Actions
+```
+reverse_search(<image:61>)
+```
+
+## Evidence
+### Evidence from `reverse_search`
+The image <image:61>
+
+## Elaboration
+The provided image search did not yield any information to verify the claim. Therefore, I cannot assess the veracity of the claim.
+
+I need additional information, such as the source of the image, the context in which it was taken, and any accompanying details about the individuals in the image, to verify the claim.
+
+
+## Actions
+```
+web_search("Gaza war children oxygen mask")
+web_search("Palestinian girl oxygen mask Gaza")
+```
+
+# Search Result
+From [Source](https://www.pbs.org/newshour/world/international-team-of-doctors-visiting-a-gaza-hospital-are-stunned-by-the-wars-toll-on-palestinian-children): 
+Content: "<image:2603>
+
+By —
+
+[Wafaa Shurafa, Associated Press](https://www.pbs.org/newshour/author/wafaa-shurafa-associated-press)
+ [Wafaa Shurafa, Associated Press](https://www.pbs.org/newshour/author/wafaa-shurafa-associated-press)
+
+[Leave your feedback](https://www.pbs.org/newshour/about/contact-us/)
+
+International team of doctors visiting a Gaza hospital are stunned by the war’s toll on Palestinian children
+============================================================================================================
+
+[World](https://www.pbs.org/newshour/world)
+ Mar 28, 2024 1:59 PM EDT
+
+DEIR AL-BALAH, Gaza (AP) — An international team of doctors visiting a hospital in central Gaza was prepared for the worst. The majority of its intensive care unit beds are occupied by children, including infants wrapped in bandages and wearing oxygen masks.
+
+“I spend most of my time here resuscitating children,” Haj-Hassan said after a recent shift. But the gruesome impact Israel’s war against Hamas is having on Palestinian children still left them stunned.
+
+One toddler died from a brain injury caused by an Israeli strike that fractured his skull. Beside him was his sister, but he didn’t recognize her because burns covered almost her entire body.
+
+These gut-wrenching casualties were described to The Associated Press by Tanya Haj-Hassan, a pediatric intensive-care doctor from Jordan, following a 10-hour overnight shift at Al-Aqsa Martyrs Hospital in the town of Deir al-Balah.
+
+Haj-Hassan, who has extensive experience in Gaza and regularly speaks out about the war’s devastating effects, was part of a team that recently finished a two-week stint there.
+
+[**WATCH:** Experts warn of ‘imminent’ famine in Gaza with lack of aid reaching Palestinians](https://www.pbs.org/newshour/show/experts-warn-of-imminent-famine-in-gaza-with-lack-of-aid-reaching-palestinians)
+
+After nearly six months of war, Gaza’s health sector has been decimated. Many bring their children with them to the hospital to keep them close, Abu Qassim said.
+
+“It’s just miserable,” he said.
+
+Thousands of people driven from their homes by the war are also living in the hospital grounds, hoping it will be safe. Now, many Israelis must decide whether to go back](https://www.pbs.org/newshour/world/they-fled-kibbutzim-after-hamas-attacked-now-many-israelis-must-decide-whether-to-go-back)
+
+Roughly half of Gaza’s 2.3 million people are 17 or younger, the U.N.’s agency for children estimates.
+
+Israel holds Hamas responsible for non-combatants’ deaths and injuries because the militants in Gaza operate from within civilian areas. The Israeli government believes around 100 hostages being held in Gaza are still alive.
+
+In the early stages of the war, Israel severely limited the entry of food, fuel and medical supplies into Gaza. Al-Aqsa Martyrs has also been short on anesthetics, meaning surgeries and other procedures are frequently performed without painkillers.
+
+Haj-Hassan says there is only one way to end Gaza’s health care crisis.
+
+“They need the war to stop,” she said.
+
+_Chehayeb reported from Beirut._
+
+Support PBS News Hour
+
+Safeguard the independent, trusted journalism millions rely on at PBS News Hour.
+
+[Donate now](https://give.newshour.org/page/85597/donate/1?ea.tracking.id=nh_july_2025_rescission_article&supporter.appealCode=N2507QW07000AA)
+
+By —
+
+[Wafaa Shurafa, Associated Press](https://www.pbs.org/newshour/author/wafaa-shurafa-associated-press)
+ [Wafaa Shurafa, Associated Press](https://www.pbs.org/newshour/author/wafaa-shurafa-associated-press)
+
+[Israeli holiday celebrations subdued by loss of loved ones and war in Gaza](https://www.pbs.org/newshour/show/israeli-holiday-celebrations-subdued-by-loss-of-loved-ones-and-war-in-gaza)
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+[World](https://www.pbs.org/newshour/world)
+ Mar 27 Roughly a dozen of Gaza’s 36 hospitals are only partially functioning. “What does that tell you about every other hospital in the Gaza Strip?”
+
+A different team of international doctors working at Al-Aqsa Martyrs in January stayed at a nearby guesthouse."
+
+# Your Summary
+
+
+
+===== > RESPONSE:  < =====
+The PBS NewsHour article, published on March 28, 2024, discusses the impact of the war on Palestinian children in Gaza. <image:2603> shows a child's hand holding another's hand in a hospital. The article mentions an international team of doctors visiting a hospital in central Gaza, where many children are in intensive care, some with oxygen masks. The article is written by Wafaa Shurafa from the Associated Press.
+
+_________________________
+
+
+
+SummarizeResultPrompt - QUERY:
+
+# Instructions
+In order to find evidence that helps your fact-check, you just ran a web search which yielded a Search Result. **Your task right now is to summarize the Search Result.** What to include:
+* information that might be useful for the fact-check (see Record)
+* relevant images (refer to images by inserting their reference <image:k>)
+* if available: the release date as well as the author or the publisher (e.g. the media company) of the search result.
+
+Do NOT include:
+* advertisements
+* any other information not related to the Record or the Claim
+
+Additional rules:
+* Do not add any additional information besides the information in the Search Result.
+* If the Search Result doesn't contain any relevant information for the fact-checking work, simply print one word in capital letters: "NONE".
+* Keep your writing style like in the Examples 1, 2 and 3 provided to you.
+* Try to filter out relevant information even if the search result is in a different language.
+
+# Example 1
+The search result from America Today provides several photographs of the Notre-Dame Cathedral fire on April 15, 2019. <image:i>, <image:j>, <image:k>. None of the images show the Eiffel Tower in the background. 
+
+# Example 2
+NONE
+
+# Example 3
+The Guardian discusses a report blaming the Syrian government for a toxic gas attack and condemning their use of chemical weapons. The Guardian mentions the Chemical Weapons Convention and the responsibilities of Syria under the convention. According to The Guardian, The White House condemned the Assad regime for defying the norm against chemical weapons use.
+
+# Record
+## Claim
+Claim: "<image:61> This image shows a Palestinian girl in the Gaza war in July 2024. She was holding her sister's oxygen mask inside the ambulance. She had already passed away, yet her hand remained on the mask firmly."
+
+## Actions
+```
+reverse_search(<image:61>)
+```
+
+## Evidence
+### Evidence from `reverse_search`
+The image <image:61>
+
+## Elaboration
+The provided image search did not yield any information to verify the claim. Therefore, I cannot assess the veracity of the claim.
+
+I need additional information, such as the source of the image, the context in which it was taken, and any accompanying details about the individuals in the image, to verify the claim.
+
+
+## Actions
+```
+web_search("Gaza war children oxygen mask")
+web_search("Palestinian girl oxygen mask Gaza")
+```
+
+# Search Result
+From [Source](https://www.npr.org/2024/04/26/1247453317/gaza-baby-girl-mother-killed-israel-airstrike): 
+Content: "children's fund, UNICEF, says more than [13,000 children have been killed](https://www.unicefusa.org/stories/more-13000-children-reported-dead-gaza-famine-nears#:~:text=A%20new%20report%20warns%20famine,UNICEF%20Executive%20Director%20Catherine%20Russell.)
+ in Gaza since Oct. UNICEF says 13,000 children have been killed in Gaza since Oct. The baby, two months premature, was given an oxygen mask that engulfed her small face, and was transported to a larger hospital that has incubators.
+
+  ! **Reuters TV/via REUTERS** ****hide caption****
+
+****toggle caption****
+
+Reuters TV/via REUTERS
+
+### The sole survivor of her family
+
+The baby's mother, her father Shukri Jouda, and toddler sister Malak — Arabic for angel — were also killed in the Israeli airstrike that hit the family's home in Rafah, according to information from the hospital morgue and extended family.
+
+The day after the strike that killed the family, the baby's [uncle, Rami al-Sheikh, told cameras](https://news.sky.com/story/israel-hamas-war-sabreen-jouda-the-baby-girl-saved-from-dead-mothers-womb-in-gaza-dies-13123248#:~:text=Sabreen%20Jouda%20was%20born%20prematurely,care%20unit%20at%20another%20hospital.)
+ he was ready to care for her. She was 5 days old.
+
+### Increased airstrikes on Rafah kill mostly women and children
+
+The newborn's death comes during an uptick in Israeli airstrikes on Rafah, where an estimated 1.4 million Palestinians have sought shelter in the nearly seven-month-long war that erupted Oct. More than 34,000 Palestinians have been killed in the war since then, according to Gaza health officials.
+
+[!What to know about a possible Israeli military offensive in Rafah <image:2634>](https://www.npr.org/2024/04/26/1246857306/rafah-gaza-israel-military-offensive)
+
+### [Middle East crisis — explained](https://www.npr.org/series/1205445976/middle-east-crisis)
+
+### [What to know about a possible Israeli military offensive in Rafah](https://www.npr.org/2024/04/26/1246857306/rafah-gaza-israel-military-offensive)
+
+Israel's military says it is planning an [assault on Rafah](https://www.npr.org/2024/04/26/1246857306/rafah-gaza-israel-military-offensive)
+ to go after Hamas, but it has not said when that might happen. The [Biden administration says](https://www.npr.org/2024/03/18/1239298104/biden-speaks-with-netanyahu-as-tensions-rise-over-the-war-in-gaza)
+ it is concerned about the toll an offensive in Rafah could have on civilians, even if they are told to evacuate.
+
+Israel has said that Hamas battalions operate in Rafah. Women says, on average, two mothers have been [killed per hour](https://www.unwomen.org/en/news-stories/press-release/2024/01/press-release-two-mothers-are-killed-in-gaza-every-hour-as-fighting-exceeds-100-days)
+ in Gaza since the start of the war.
+
+_Anas Baba reported from Rafah. Aya Batrawy reported from Dubai, in the United Arab Emirates._
+
+*   [Gaza](https://www.npr.org/tags/125940537/gaza)
+    
+*   [Israel](https://www.npr.org/tags/125940539/israel)
+    
+*   [Palestinians](https://www.npr.org/tags/135984151/palestinians)
+    
+*   [Gaza Strip](https://www.npr.org/tags/165114710/gaza-strip)
+    
+*   [civilian casualties](https://www.npr.org/tags/664362852/civilian-casualties)
+    
+*   [Israel-Hamas war](https://www.npr.org/tags/1209140715/israel-hamas-war)
+    
+*   [Israel Hamas War](https://www.npr.org/tags/1210791928/israel-hamas-war)
+    
+
+*   **Facebook**
+*   **Flipboard**
+*   **Email** Accessibility links
+
+*   [Skip to main content](#mainContent)
+    
+*   [Keyboard shortcuts for audio player](https://help.npr.org/contact/s/article?name=what-are-the-keyboard-shortcuts-for-using-the-npr-org-audio-player)
+    
+
+**Baby girl born in Gaza after her mother was killed has died** **The newborn died after five days in an incubator."
+
+# Your Summary
+
+
+
+===== > RESPONSE:  < =====
+The NPR article discusses the death of a baby girl in Gaza who was born prematurely after her mother was killed in an Israeli airstrike. The baby was given an oxygen mask. The article also mentions that more than 13,000 children have been killed in Gaza since October. <image:2634>
+
+_________________________
+
+
+
+SummarizeSummariesPrompt - QUERY:
+
+# Instructions
+You just retrieved web sources, each one summarized under "Web Sources". **Your task right now is to summarize the web source summaries.**
+
+Always adhere to the following rules:
+* Write only one to two paragraphs.
+* Include all URLs from the listed sources. Format them as Markdown hyperlinks.
+* Do not add any additional information besides the information in the summaries.
+* Include references (<image:k>) to all relevant images.
+
+# Record
+## Claim
+Claim: "<image:61> This image shows a Palestinian girl in the Gaza war in July 2024. She was holding her sister's oxygen mask inside the ambulance. She had already passed away, yet her hand remained on the mask firmly."
+
+## Actions
+```
+reverse_search(<image:61>)
+```
+
+## Evidence
+### Evidence from `reverse_search`
+The image <image:61>
+
+## Elaboration
+The provided image search did not yield any information to verify the claim. Therefore, I cannot assess the veracity of the claim.
+
+I need additional information, such as the source of the image, the context in which it was taken, and any accompanying details about the individuals in the image, to verify the claim.
+
+
+## Actions
+```
+web_search("Gaza war children oxygen mask")
+web_search("Palestinian girl oxygen mask Gaza")
+```
+
+## Web Sources
+**Web Search Result**
+
+From [Source](https://www.doctorswithoutborders.org/latest/gaza-two-msf-staff-and-their-three-children-injured-airstrike): 
+Content: The search result from Doctors Without Borders (MSF) discusses an airstrike on the home of MSF surgeon Ahmed Seyam and MSF data analyst Islam Koudary in Gaza City on June 27, 2025, which injured them and their three children. <image:1>. The article includes images of injured children in Gaza. The article mentions that the family was taken to Al-Shifa Hospital, but it was overwhelmed. The article is part of a developing story.
+
+
+From [Source](https://www.pbs.org/newshour/world/international-team-of-doctors-visiting-a-gaza-hospital-are-stunned-by-the-wars-toll-on-palestinian-children): 
+Content: The PBS NewsHour article, published on March 28, 2024, discusses the impact of the war on Palestinian children in Gaza. <image:2603> shows a child's hand holding another's hand in a hospital. The article mentions an international team of doctors visiting a hospital in central Gaza, where many children are in intensive care, some with oxygen masks. The article is written by Wafaa Shurafa from the Associated Press.
+
+
+From [Source](https://www.npr.org/2024/04/26/1247453317/gaza-baby-girl-mother-killed-israel-airstrike): 
+Content: The NPR article discusses the death of a baby girl in Gaza who was born prematurely after her mother was killed in an Israeli airstrike. The baby was given an oxygen mask. The article also mentions that more than 13,000 children have been killed in Gaza since October. <image:2634>
+
+
+## Your Summary
+
+
+
+===== > RESPONSE:  < =====
+The Doctors Without Borders ([Source](https://www.doctorswithoutborders.org/latest/gaza-two-msf-staff-and-their-three-children-injured-airstrike)) article discusses an airstrike in Gaza that injured children and mentions images of injured children. The PBS NewsHour ([Source](https://www.pbs.org/newshour/world/international-team-of-doctors-visiting-a-gaza-hospital-are-stunned-by-the-wars-toll-on-palestinian-children)) article discusses the impact of the war on Palestinian children in Gaza, including children in intensive care with oxygen masks. The NPR article ([Source](https://www.npr.org/2024/04/26/1247453317/gaza-baby-girl-mother-killed-israel-airstrike)) discusses a baby girl in Gaza who was given an oxygen mask. <image:1>, <image:2603>, <image:2634>
+
+_________________________
+
+
+

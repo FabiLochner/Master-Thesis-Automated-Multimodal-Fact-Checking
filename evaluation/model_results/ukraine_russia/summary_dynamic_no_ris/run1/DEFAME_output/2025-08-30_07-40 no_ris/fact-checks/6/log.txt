@@ -1,0 +1,36 @@
+Extracting claims from Content: <image:5> This image shows a US F-16 fighter jet which was shot down in August 2024 in airspace over the Black Sea after refusing to obey Russian orders.
+'Claim: "<image:5> This image shows a US F-16 fighter jet which was shot down in August 2024 in airspace over the Black Sea after refusing to obey Russian orders."'
+Verifying Claim: "<image:5> This image shows a US F-16 fighter jet which was shot down in August 2024 in airspace over the Black Sea after refusing to obey Russian orders."
+Not enough information yet. Continuing fact-check...
+Got 3 new web source(s):
+	1. August 29, 2024 https://www.defensenews.com/global/europe/2024/08/29/ukraine-f-16-jet-crashes-during-russian-attack-killing-pilot/
+	2. June 09, 2025 https://www.twz.com/air/claims-swirl-around-russian-su-35s-flanker-shootdown
+	3. August 27, 2024 https://www.theguardian.com/world/article/2024/aug/28/ukraine-war-briefing-zelenskiy-says-f16s-shooting-down-russian-missiles
+Useful result: From [Source](https://www.defensenews.com/global/europe/2024/08/29/ukraine-f-16-jet-crashes-during-russian-attack-killing-pilot/): 
+Content: Defense News, published on August 29, 2024, reports that a Ukrainian F-16 jet crashed during a Russian attack, killing the pilot. <image:2853>, <image:2852>. The crash occurred on Monday during a major missile and drone barrage. The article mentions that the F-16s were provided by Western partners to help fight Russia's invasion.
+
+Useful result: From [Source](https://www.twz.com/air/claims-swirl-around-russian-su-35s-flanker-shootdown): 
+Content: The search result from The War Zone discusses claims about a Ukrainian F-16 shooting down a Russian Su-35S Flanker. It mentions that in August 2024, Ukrainian F-16 pilot Oleksiy Mes died during a Russian aerial barrage. The article also includes images of an F-16 <image:2865> and a downed Su-35 <image:2862>.
+
+Useful result: From [Source](https://www.theguardian.com/world/article/2024/aug/28/ukraine-war-briefing-zelenskiy-says-f16s-shooting-down-russian-missiles): 
+Content: The Guardian published an article on August 28, 2024, discussing the Ukraine war. The article mentions that Volodymyr Zelenskiy stated that F-16s were used to shoot down Russian missiles. The article also includes an image of Ukrainian F-16 fighter planes. <image:2868>
+
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='F-16 fighter jet crash Black Sea')
+Got 3 new web source(s):
+	1. https://www.npr.org/2024/08/30/g-s1-20234/ukraine-f16-warplane-crash
+	2. https://www.pbs.org/newshour/world/ukraine-says-one-of-its-f-16-jets-donated-by-the-west-crashed-during-russian-missile-attack
+	3. https://www.bbc.com/news/world-europe-64975766
+Useful result: From [Source](https://www.npr.org/2024/08/30/g-s1-20234/ukraine-f16-warplane-crash): 
+Content: NPR published an article about the crash of an F-16 warplane. <image:7420>
+
+Useful result: From [Source](https://www.pbs.org/newshour/world/ukraine-says-one-of-its-f-16-jets-donated-by-the-west-crashed-during-russian-missile-attack): 
+Content: PBS reports that Ukraine said one of its F-16 jets crashed during a Russian missile attack. <image:7421>
+
+Useful result: From [Source](https://www.bbc.com/news/world-europe-64975766): 
+Content: The BBC News published an article about a Russian fighter jet and a US drone incident over the Black Sea. <image:7422>
+
+The claim '<image:5> This image shows a US F-16 fighter jet which was shot down in August 2024 in airspace over the Black Sea after refusing to obey Russian orders.' is false.
+Justification: The evidence indicates that Ukrainian F-16s have been involved in the conflict, with at least one crashing in August 2024, as reported by [Defense News](https://www.defense.news/). However, the claim that the image depicts a US F-16 shot down over the Black Sea after refusing Russian orders is not supported by the evidence, which focuses on Ukrainian F-16s and does not identify the origin of the aircraft in the image.
+
+So, the overall veracity is: false
+Fact-check took 0:28 min.

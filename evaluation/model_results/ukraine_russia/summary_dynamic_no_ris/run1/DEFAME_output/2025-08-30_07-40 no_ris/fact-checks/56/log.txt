@@ -1,0 +1,49 @@
+Extracting claims from Content: <image:17> This image shows Ben Stiller and Ukrainian President Volodymyr Zelensky at their meeting on June 20, 2022, for which Stiller received $4 million from USAID.
+'Claim: "<image:17> This image shows Ben Stiller and Ukrainian President Volodymyr Zelensky at their meeting on June 20, 2022, for which Stiller received $4 million from USAID."'
+Verifying Claim: "<image:17> This image shows Ben Stiller and Ukrainian President Volodymyr Zelensky at their meeting on June 20, 2022, for which Stiller received $4 million from USAID."
+Not enough information yet. Continuing fact-check...
+Got 3 new web source(s):
+	1. June 20, 2022 https://abcnews.go.com/International/ben-stiller-meets-volodymyr-zelenskyy-ukraine-world-refugee/story?id=85517989
+	2. June 20, 2022 https://nypost.com/2022/06/20/ben-stiller-met-with-zelensky-in-ukraine-on-world-refugee-day/
+	3. June 20, 2022 https://www.bbc.com/news/av/world-61875351
+Useful result: From [Source](https://abcnews.go.com/International/ben-stiller-meets-volodymyr-zelenskyy-ukraine-world-refugee/story?id=85517989): 
+Content: The search result from ABC News states that Ben Stiller met with Ukrainian President Volodymyr Zelenskyy on June 20, 2022, in Kyiv. <image:2284>, <image:2285>. The meeting was held on World Refugee Day. Stiller visited Ukraine as a goodwill ambassador for the United Nations High Commissioner for Refugees (UNHCR). The article does not mention Stiller receiving $4 million from USAID.
+
+Useful result: From [Source](https://nypost.com/2022/06/20/ben-stiller-met-with-zelensky-in-ukraine-on-world-refugee-day/): 
+Content: The New York Post reports that Ben Stiller met with Ukrainian President Volodymyr Zelensky on June 20, 2022, in Kyiv. <image:2299>, <image:2296>. Stiller, a UNHCR Goodwill Ambassador, was visiting Ukraine on World Refugee Day. <image:2295>.
+
+Useful result: From [Source](https://www.bbc.com/news/av/world-61875351): 
+Content: The BBC reported on June 20, 2022, that Ben Stiller met with Volodymyr Zelensky in Kyiv as part of his role as a UNHCR ambassador. <image:17>
+
+Got 3 new web source(s):
+	1. February 06, 2025 https://www.vanityfair.com/hollywood/story/ben-stiller-denies-elon-musks-retweet-claiming-usaid-funded-the-stars-trip-to-ukraine?srsltid=AfmBOoqmZtyUwoMPiFsX8zL7DdXJOT30rVSXIZLNyC8z9NQ6jnf-Uufb
+	2. https://www.imdb.com/news/ni65111956/
+	3. February 06, 2025 https://www.msnbc.com/morning-joe/watch/-totally-false-actor-ben-stiller-debunks-claims-usaid-funded-ukraine-trip-231285317684
+Useful result: From [Source](https://www.vanityfair.com/hollywood/story/ben-stiller-denies-elon-musks-retweet-claiming-usaid-funded-the-stars-trip-to-ukraine?srsltid=AfmBOoqmZtyUwoMPiFsX8zL7DdXJOT30rVSXIZLNyC8z9NQ6jnf-Uufb): 
+Content: Vanity Fair reports that Ben Stiller denied claims that his trip to Ukraine was funded by USAID. Stiller stated that he self-funded his humanitarian trip to Ukraine in June 2022. The article mentions a video claiming USAID paid various actors to visit Ukraine, including Stiller, which Stiller refuted as lies from Russian media. The UNHCR confirmed that Stiller is not compensated for his work with UNHCR and self-funds his travel. <image:17>
+
+Useful result: From [Source](https://www.imdb.com/news/ni65111956/): 
+Content: The search result from Deadline Film + TV, published on February 6, 2025, discusses a claim that Ben Stiller received $4 million from USAID for his trip to Ukraine. Ben Stiller debunked the claim, stating that the allegations are lies from Russian media and that he self-funded his humanitarian trip to Ukraine. <image:1>
+
+Useful result: From [Source](https://www.msnbc.com/morning-joe/watch/-totally-false-actor-ben-stiller-debunks-claims-usaid-funded-ukraine-trip-231285317684): 
+Content: MSNBC's "Morning Joe" published an article titled "'Totally false': Actor Ben Stiller debunks claims USAID funded Ukraine trip". The article debunks a claim amplified by Elon Musk that Stiller and other actors were paid millions by USAID to make trips to Ukraine. <image:17>
+
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Ben Stiller Zelensky meeting')
+Got 3 new web source(s):
+	1. https://www.townandcountrymag.com/society/politics/a40361302/ben-stiller-volodymyr-zelensky-ukraine/
+	2. https://www.nbcnews.com/news/world/ben-stiller-meets-zelenskyy-ukraine-refugees-rcna34472
+	3. https://www.hollywoodreporter.com/video/ben-stiller-meets-with-ukraine-president-volodymyr-zelensky-thr-news/
+Useful result: From [Source](https://www.townandcountrymag.com/society/politics/a40361302/ben-stiller-volodymyr-zelensky-ukraine/): 
+Content: Town & Country Magazine published an article about Ben Stiller's meeting with Volodymyr Zelensky. <image:7645>
+
+Useful result: From [Source](https://www.nbcnews.com/news/world/ben-stiller-meets-zelenskyy-ukraine-refugees-rcna34472): 
+Content: NBC News published an article about Ben Stiller's meeting with Volodymyr Zelenskyy in Ukraine. The article includes a photograph of the meeting. <image:7646>
+
+Useful result: From [Source](https://www.hollywoodreporter.com/video/ben-stiller-meets-with-ukraine-president-volodymyr-zelensky-thr-news/): 
+Content: The Hollywood Reporter shows Ben Stiller meeting with Ukrainian President Volodymyr Zelensky. <image:7647>
+
+The claim '<image:17> This image shows Ben Stiller and Ukrainian President Volodymyr Zelensky at their meeting on June 20, 2022, for which Stiller received $4 million from USAID.' is false.
+Justification: The image accurately depicts Ben Stiller and Volodymyr Zelenskyy meeting on June 20, 2022, as confirmed by multiple sources, including [ABC News](https://abcnews.go.com/International/ben-stiller-meets-volodymyr-zelenskyy-ukraine-world-refugee/story?id=85517989). However, the claim that Stiller received $4 million from USAID is false, as Stiller denied receiving any such funding, as reported by [Vanity Fair](https://www.vanityfair.com/hollywood/story/ben-stiller-denies-elon-musks-retweet-claiming-usaid-funded-the-stars-trip-to-ukraine?srsltid=AfmBOoqmZtyUwoMPiFsX8zL7DdXJOT30rVSXIZLNyC8z9NQ6jnf-Uufb).
+
+So, the overall veracity is: false
+Fact-check took 0:39 min.

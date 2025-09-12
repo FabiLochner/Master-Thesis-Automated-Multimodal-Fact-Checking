@@ -1,0 +1,43 @@
+Extracting claims from Content: In a phone call with Benjamin Netanyahu on August 14, 2024, Donald Trump told the Israeli prime minister to stop a Gaza ceasefire deal because it would help Vice President Kamala Harris' 2024 presidential campaign.
+'Claim: "In a phone call with Benjamin Netanyahu on August 14, 2024, Donald Trump told the Israeli prime minister to stop a Gaza ceasefire deal because it would help Vice President Kamala Harris' 2024 presidential campaign."'
+Verifying Claim: "In a phone call with Benjamin Netanyahu on August 14, 2024, Donald Trump told the Israeli prime minister to stop a Gaza ceasefire deal because it would help Vice President Kamala Harris' 2024 presidential campaign."
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Donald Trump Benjamin Netanyahu phone call August 14 2024 Gaza ceasefire')
+Got 3 new web source(s):
+	1. August 15, 2024 https://www.reuters.com/world/trump-netanyahu-speak-about-gaza-hostage-ceasefire-deal-axios-reports-2024-08-15/
+	2. August 21, 2024 https://www.newsweek.com/donald-trump-accused-crime-benjamin-netanyahu-call-ceasefire-hamas-1942248
+	3. August 14, 2024 https://www.npr.org/2024/08/14/g-s1-16958/gaza-ceasefire-talks-israel-hamas
+Useful result: From [Source](https://www.reuters.com/world/trump-netanyahu-speak-about-gaza-hostage-ceasefire-deal-axios-reports-2024-08-15/): 
+Content: Reuters reports that Donald Trump spoke with Benjamin Netanyahu on August 14, 2024, and discussed the Gaza ceasefire and hostage release deal. <image:4075> The article mentions that one source told Axios that Trump's call was intended to encourage Netanyahu to take the deal, but it does not mention the reason for Trump's alleged position. The article was published on August 15, 2024.
+
+Useful result: From [Source](https://www.newsweek.com/donald-trump-accused-crime-benjamin-netanyahu-call-ceasefire-hamas-1942248): 
+Content: Newsweek published an article on August 22, 2024, written by Jordan King, reporting that Donald Trump allegedly called Benjamin Netanyahu on August 14 to discuss a ceasefire deal. The article states that Trump denied the call took place and that Netanyahu's office also denied the call. The article mentions that the claim was reported by PBS host Judy Woodruff, who said that Trump urged Netanyahu not to make a deal because it would help the Harris campaign. <image:4080>
+
+Useful result: From [Source](https://www.npr.org/2024/08/14/g-s1-16958/gaza-ceasefire-talks-israel-hamas): 
+Content: NPR published an article on August 14, 2024, discussing the Gaza cease-fire talks. <image:4091>, <image:4092>, <image:4093>. The talks are based on a three-phase proposal that President Biden laid out in May. The article mentions that Netanyahu has been inflexible in recent talks.
+
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Trump Netanyahu call August 14 2024 Harris campaign')
+Skipping fact-checking website: https://www.snopes.com/fact-check/trump-netanyahu-ceasefire-harris/
+Skipping unsupported website: https://www.youtube.com/watch?v=rixEDI6UAHI
+Got 1 new web source(s):
+	1. August 20, 2024 https://www.yahoo.com/news/trump-latest-scheme-beat-harris-191201451.html
+Useful result: From [Source](https://www.yahoo.com/news/trump-latest-scheme-beat-harris-191201451.html): 
+Content: Yahoo News reports that Donald Trump allegedly spoke with Benjamin Netanyahu to avert a cease-fire deal, fearing it could help Vice President Kamala Harris win in November. PBS reported this, and both Netanyahu's office and Trump denied the report. <image:4108>
+
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Donald Trump Benjamin Netanyahu Gaza ceasefire deal Kamala Harris')
+Got 2 new web source(s):
+	1. July 26, 2024 https://www.theguardian.com/us-news/article/2024/jul/26/trump-calls-kamala-harris-statement-on-gaza-war-disrespectful
+	2. July 26, 2024 https://www.bbc.com/news/articles/czq6v9jx939o
+Useful result: From [Source](https://www.theguardian.com/us-news/article/2024/jul/26/trump-calls-kamala-harris-statement-on-gaza-war-disrespectful): 
+Content: The Guardian reports that Donald Trump criticized Kamala Harris's remarks on the Gaza war before meeting with Benjamin Netanyahu. The article mentions a meeting between Trump and Netanyahu in Florida to discuss the conflict. The article is more than one year old. <image:4111>, <image:4112>.
+
+Useful result: From [Source](https://www.bbc.com/news/articles/czq6v9jx939o): 
+Content: The BBC reports that on July 26, 2024, Benjamin Netanyahu visited Donald Trump at Mar-a-Lago. During the visit, Trump criticized Kamala Harris's remarks on Israel as "disrespectful." Netanyahu stated that Israel would send negotiators to Rome for talks aimed at ending the war with Hamas. The article also mentions that Trump said he would seek peace if re-elected.
+
+The claim 'In a phone call with Benjamin Netanyahu on August 14, 2024, Donald Trump told the Israeli prime minister to stop a Gaza ceasefire deal because it would help Vice President Kamala Harris' 2024 presidential campaign.' is false.
+Justification: The claim that Donald Trump told Benjamin Netanyahu to stop a Gaza ceasefire deal because it would help Kamala Harris's 2024 presidential campaign is unverified. While reports from Reuters ([Source](https://www.reuters.com/world/trump-netanyahu-speak-about-gaza-hostage-ceasefire-deal-axios-reports-2024-08-15/)) and Yahoo News ([Source](https://www.yahoo.com/news/trump-latest-scheme-beat-harris-191201451.html)) indicate a phone call between Trump and Netanyahu discussing a ceasefire, the specific details about Trump's motivations are disputed, with both Trump and Netanyahu's offices denying the report, as reported by Newsweek ([Source](https://www.newsweek.com/donald-trump-accused-crime-benjamin-netanyahu-call-ceasefire-hamas-1942248)).
+
+So, the overall veracity is: false
+Fact-check took 1:24 min.

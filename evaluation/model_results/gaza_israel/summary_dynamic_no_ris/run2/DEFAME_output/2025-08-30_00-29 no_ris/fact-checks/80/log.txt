@@ -1,0 +1,32 @@
+Extracting claims from Content: <image:49> This image shows coffins of dead Israeli soldiers in September, 2024.
+'Claim: "<image:49> This image shows coffins of dead Israeli soldiers in September, 2024."'
+Verifying Claim: "<image:49> This image shows coffins of dead Israeli soldiers in September, 2024."
+Not enough information yet. Continuing fact-check...
+Got 3 new web source(s):
+	1. February 20, 2025 https://www.bbc.com/news/articles/c93npgqlzvpo
+	2. September 06, 2024 https://www.timesofisrael.com/government-of-blood-protesters-stage-mock-funeral-for-slain-hostages-demand-deal/
+	3. September 05, 2024 https://www.euronews.com/2024/09/05/protesters-march-in-tel-aviv-with-makeshift-coffins-to-demand-release-of-gaza-hostages
+Useful result: From [Source](https://www.bbc.com/news/articles/c93npgqlzvpo): 
+Content: The BBC article discusses the return of the bodies of Israeli hostages, including Oded Lifschitz, Shiri Bibas and her two young sons, Ariel and Kfir. The article mentions the handover of the bodies on February 20, 2025. <image:4533>, <image:4535>.
+
+Useful result: From [Source](https://www.timesofisrael.com/government-of-blood-protesters-stage-mock-funeral-for-slain-hostages-demand-deal/): 
+Content: The Times of Israel reports on a protest in Tel Aviv on September 5, 2024, where Israelis carried 27 mock coffins representing hostages killed in Gaza. <image:4537>, <image:4538>, <image:4539>. The protesters demanded a deal to secure the release of the remaining hostages.
+
+Useful result: From [Source](https://www.euronews.com/2024/09/05/protesters-march-in-tel-aviv-with-makeshift-coffins-to-demand-release-of-gaza-hostages): 
+Content: The Euronews article, published on September 5, 2024, reports on a protest in Tel Aviv where demonstrators carried makeshift coffins draped with Israeli flags to symbolize hostages held by Hamas in Gaza. <image:49> The protesters are angry with the Israeli government.
+
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Israeli flag coffins protest')
+Failed to download or open image: cannot identify image file <_io.BytesIO object at 0x7ffed9df2ca0>
+Got 2 new web source(s):
+	1. https://www.ynetnews.com/article/rjzi00tqqkl
+	2. https://cufi.org/issue/coffins-draped-in-us-and-israeli-flags-seen-at-tehran-protest-exhibition/
+Useful result: From [Source](https://www.ynetnews.com/article/rjzi00tqqkl): 
+Content: Ynetnews.com published an image of a protest. <image:9851>
+
+Most likely location: Israel
+Top 10 locations: Israel, Palestine, Albania, Andorra, Argentina, Australia, Austria, Bangladesh, Belgium, Bermuda
+The claim '<image:49> This image shows coffins of dead Israeli soldiers in September, 2024.' is false.
+Justification: The image shows mock coffins used in a protest in Tel Aviv on September 5, 2024, as reported by the [Times of Israel](https://www.timesofisrael.com/government-of-blood-protesters-stage-mock-funeral-for-slain-hostages-demand-deal/) and [Euronews](https://www.euronews.com/2024/09/05/protesters-march-in-tel-aviv-with-makeshift-coffins-to-demand-release-of-gaza-hostages), to demand the release of hostages, not coffins of dead Israeli soldiers.
+
+So, the overall veracity is: false
+Fact-check took 0:32 min.

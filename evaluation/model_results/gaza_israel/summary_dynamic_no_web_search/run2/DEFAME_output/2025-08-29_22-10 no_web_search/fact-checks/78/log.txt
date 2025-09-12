@@ -1,0 +1,50 @@
+Extracting claims from Content: Netanyahu left Israel and fled to Poland amid Iran's missile attack on Israel on October 1, 2024.
+'Claim: "Netanyahu left Israel and fled to Poland amid Iran's missile attack on Israel on October 1, 2024."'
+Verifying Claim: "Netanyahu left Israel and fled to Poland amid Iran's missile attack on Israel on October 1, 2024."
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Netanyahu Poland October 1 2024')
+Got 3 new web source(s):
+	1. https://www.latimes.com/world-nation/story/2025-01-09/polish-president-seeks-protection-for-netanyahu-if-he-attends-auschwitz-anniversary-event
+	2. https://theintercept.com/2025/01/23/netanyahu-auschwitz-memorial-poland-icc-warrant/
+	3. https://www.reuters.com/world/polish-president-wants-icc-indictee-netanyahu-be-able-go-auschwitz-anniversary-2025-01-09/
+Useful result: From [Source](https://www.latimes.com/world-nation/story/2025-01-09/polish-president-seeks-protection-for-netanyahu-if-he-attends-auschwitz-anniversary-event): 
+Content: The Los Angeles Times published an article on January 9, 2025, about the Polish president seeking protection for Netanyahu if he attends an Auschwitz anniversary event. The article includes an image of Netanyahu <image:8187>.
+
+Useful result: From [Source](https://theintercept.com/2025/01/23/netanyahu-auschwitz-memorial-poland-icc-warrant/): 
+Content: The Intercept published an article on January 23, 2025, about Netanyahu. The article includes an image of Netanyahu. <image:8188>
+
+Useful result: From [Source](https://www.reuters.com/world/polish-president-wants-icc-indictee-netanyahu-be-able-go-auschwitz-anniversary-2025-01-09/): 
+Content: Reuters published an article about the Polish president's wish for Netanyahu to be able to attend the Auschwitz anniversary. <image:8189>
+
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Iran missile attack Israel October 1 2024')
+Got 3 new web source(s):
+	1. https://www.understandingwar.org/backgrounder/iran-update-october-1-2024
+	2. https://www.theguardian.com/world/2024/oct/02/iranian-strikes-on-israel-what-happened-why-did-iran-attack-missiles-damage-what-next
+	3. https://www.timesofisrael.com/israel-warns-of-consequences-after-iran-launches-181-missiles-in-major-attack/
+Useful result: From [Source](https://www.understandingwar.org/backgrounder/iran-update-october-1-2024): 
+Content: The Institute for the Study of War published an article about an Iranian ballistic missile attack on Israel on October 1, 2024, including a map of the attack <image:8195>.
+
+Useful result: From [Source](https://www.theguardian.com/world/2024/oct/02/iranian-strikes-on-israel-what-happened-why-did-iran-attack-missiles-damage-what-next): 
+Content: The Guardian published an article on October 2, 2024, about Iranian strikes on Israel, including an image of the attack <image:8196>.
+
+Useful result: From [Source](https://www.timesofisrael.com/israel-warns-of-consequences-after-iran-launches-181-missiles-in-major-attack/): 
+Content: The Times of Israel published an article with an image of a missile attack. <image:8197>
+
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Netanyahu Israel October 1 2024')
+Failed to download or open image: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+Got 3 new web source(s):
+	1. https://www.timesofisrael.com/liveblog_entry/netanyahu-says-iran-made-a-big-mistake-with-missile-attack-and-will-pay-for-it/
+	2. https://www.aa.com.tr/en/middle-east/israel-s-netanyahu-again-vows-to-respond-to-iranian-missile-attack/3352612
+	3. https://www.cnn.com/2024/10/23/middleeast/netanyahu-endgame-israel-gaza-lebanon-intl
+Useful result: From [Source](https://www.timesofisrael.com/liveblog_entry/netanyahu-says-iran-made-a-big-mistake-with-missile-attack-and-will-pay-for-it/): 
+Content: The Times of Israel published an article with an image of Netanyahu. <image:8198>
+
+Useful result: From [Source](https://www.cnn.com/2024/10/23/middleeast/netanyahu-endgame-israel-gaza-lebanon-intl): 
+Content: CNN published an article on October 23, 2024, about Netanyahu <image:8200>.
+
+The claim 'Netanyahu left Israel and fled to Poland amid Iran's missile attack on Israel on October 1, 2024.' is false.
+Justification: The claim is false. While evidence confirms an Iranian missile attack on Israel on October 1, 2024, and Netanyahu's presence in Israel during that time, there is no evidence to support the assertion that he left Israel and fled to Poland.
+
+So, the overall veracity is: false
+Fact-check took 0:48 min.

@@ -1,0 +1,34 @@
+Extracting claims from Content: After a call with Russia's President Vladimir Putin on February 12, 2025, US President Donald Trump announced that he had reached an agreement to end the war in Ukraine.
+'Claim: "After a call with Russia's President Vladimir Putin on February 12, 2025, US President Donald Trump announced that he had reached an agreement to end the war in Ukraine."'
+Verifying Claim: "After a call with Russia's President Vladimir Putin on February 12, 2025, US President Donald Trump announced that he had reached an agreement to end the war in Ukraine."
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Donald Trump Vladimir Putin call February 12 2025 Ukraine war')
+Got 3 new web source(s):
+	1. https://en.wikipedia.org/wiki/February_2025_Putin%E2%80%93Trump_phone_call
+	2. February 13, 2025 https://www.reuters.com/world/trump-says-he-discussed-ending-ukraine-war-with-russias-putin-2025-02-12/
+	3. February 12, 2025 http://en.kremlin.ru/events/president/news/76259
+Useful result: From [Source](https://en.wikipedia.org/wiki/February_2025_Putin%E2%80%93Trump_phone_call): 
+Content: The search result is from Wikipedia and discusses the February 12, 2025, phone call between Donald Trump and Vladimir Putin. The call was followed by a meeting where Trump agreed to begin peace talks. The foreign ministers of Ukraine, France, Germany, the United Kingdom, Italy, Spain, Poland, and the head of the European External Action Service supported Ukraine and the EU's participation in the negotiation process.
+
+Useful result: From [Source](https://www.reuters.com/world/trump-says-he-discussed-ending-ukraine-war-with-russias-putin-2025-02-12/): 
+Content: Reuters reports that on February 12, 2025, Donald Trump spoke with both Vladimir Putin and Volodymyr Zelenskiy, who expressed a desire for peace in Ukraine. Trump ordered top U.S. officials to begin talks on ending the war. The article mentions a meeting between Trump and Putin, likely in Saudi Arabia. <image:7643>
+
+Useful result: From [Source](http://en.kremlin.ru/events/president/news/76259): 
+Content: The Kremlin's website reports on a telephone conversation between Vladimir Putin and Donald Trump on February 12, 2025. The leaders discussed a possible Ukraine settlement. The publication date is February 12, 2025, 20:00.
+
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Donald Trump announcement agreement Ukraine war February 12 2025')
+Got 2 new web source(s):
+	1. August 21, 2025 https://www.theguardian.com/us-news/2025/aug/21/trump-ukraine-russia-peace-talks
+	2. March 26, 2025 https://www.cnn.com/2025/03/26/europe/timeline-trumps-pledge-to-end-ukraine-war
+Useful result: From [Source](https://www.theguardian.com/us-news/2025/aug/21/trump-ukraine-russia-peace-talks): 
+Content: The Guardian, published on August 21, 2025, reports that Trump is taking a step back from direct involvement in peace talks, intending for Putin and Zelenskyy to meet first. The article mentions a phone call between Trump and Putin, but it does not state that Trump announced an agreement to end the war. <image:7644>
+
+Useful result: From [Source](https://www.cnn.com/2025/03/26/europe/timeline-trumps-pledge-to-end-ukraine-war): 
+Content: CNN reports that on February 12, 2025, Trump announced he had called Putin to discuss a possible ceasefire deal. <image:1> The article also mentions that on the same day, Trump called Zelensky. The article was updated on March 31, 2025.
+
+The claim 'After a call with Russia's President Vladimir Putin on February 12, 2025, US President Donald Trump announced that he had reached an agreement to end the war in Ukraine.' is false.
+Justification: The claim is partially inaccurate. While Donald Trump and Vladimir Putin did have a phone call on February 12, 2025, and Trump announced he had called Putin to discuss a possible ceasefire deal, there is no evidence to support the claim that Trump announced he had reached an agreement to end the war.
+
+So, the overall veracity is: false
+Fact-check took 1:07 min.

@@ -1,0 +1,31 @@
+Extracting claims from Content: <image:32> This image shows Palestinian baby Sham Imad Muhareb which did not lose her arm in an Israeli airstrike on the Shejaeya neighborhood, east of Gaza City, in April 2025.
+'Claim: "<image:32> This image shows Palestinian baby Sham Imad Muhareb which did not lose her arm in an Israeli airstrike on the Shejaeya neighborhood, east of Gaza City, in April 2025."'
+Verifying Claim: "<image:32> This image shows Palestinian baby Sham Imad Muhareb which did not lose her arm in an Israeli airstrike on the Shejaeya neighborhood, east of Gaza City, in April 2025."
+Not enough information yet. Continuing fact-check...
+Got 0 new web source(s):
+Not enough information yet. Continuing fact-check...
+INFO: Dropping action 'reverse_search' as it was already performed.
+Got 0 new web source(s):
+Got 3 new web source(s):
+	1. https://en.wikipedia.org/wiki/April_2025_Shuja%27iyya_airstrike
+	2. April 03, 2025 https://www.pbs.org/newshour/world/israeli-strikes-on-gaza-kill-at-least-100-including-many-sheltering-at-school
+	3. April 03, 2025 https://www.theguardian.com/world/2025/apr/03/at-least-27-killed-in-israeli-bombing-of-shelter-in-gaza-city-rescuers-say
+Useful result: From [Source](https://en.wikipedia.org/wiki/April_2025_Shuja%27iyya_airstrike): 
+Content: The Wikipedia article "April 2025 Shuja'iyya airstrike" describes an Israeli airstrike on April 9, 2025, in Shuja'iyya, Gaza City, during the 2025 Gaza war. The attack targeted a four-story residential building, resulting in over 35 Palestinian deaths, including women and children, and over 70 injuries. The article mentions the displacement of thousands of residents and the subsequent initiation of a renewed offensive by Israel. The article also mentions the date of the attack, April 9, 2025.
+
+Useful result: From [Source](https://www.pbs.org/newshour/world/israeli-strikes-on-gaza-kill-at-least-100-including-many-sheltering-at-school): 
+Content: PBS News reports on Israeli airstrikes in Gaza on April 3, 2025, which killed at least 100 Palestinians. The strikes included attacks on a school in the Tuffah neighborhood of Gaza City and homes in the Shijaiyah neighborhood. <image:5386> The article mentions the death toll could rise and that the Israeli military ordered residents to move to shelters. The article also mentions the Israeli military promised an independent investigation of a March 23 operation in which its forces opened fire on ambulances in Gaza.
+
+Useful result: From [Source](https://www.theguardian.com/world/2025/apr/03/at-least-27-killed-in-israeli-bombing-of-shelter-in-gaza-city-rescuers-say): 
+Content: The Guardian published an article on April 3, 2025, reporting on an Israeli bombing of a school turned shelter in the al-Tuffah neighborhood of Gaza City, which resulted in at least 27 deaths. <image:5389> The article also mentions an airstrike on the Shuja’iya suburb of Gaza City.
+
+Not enough information yet. Continuing fact-check...
+INFO: Dropping action 'reverse_search' as it was already performed.
+Got 2 new web source(s):
+	1. https://www.threads.com/@beritaalhijrah/post/DIWEkp4ySW2/bermainlah-di-taman-syurga-duhai-anakbayi-perempuan-sham-imad-muhareb-yang-ceder
+	2. https://www.ifj.org/war-in-gaza
+The claim '<image:32> This image shows Palestinian baby Sham Imad Muhareb which did not lose her arm in an Israeli airstrike on the Shejaeya neighborhood, east of Gaza City, in April 2025.' is false.
+Justification: The claim cannot be fully verified. While the evidence confirms that there were Israeli airstrikes in the Shejaeya neighborhood in Gaza in April 2025, as reported by [Wikipedia](https://en.wikipedia.org/wiki/April_2025_Shuja%27iyya_airstrike), [PBS News](https://www.pbs.org/newshour/world/israeli-strikes-on-gaza-kill-at-least-100-including-many-sheltering-at-school), and [The Guardian](https://www.theguardian.com/world/2025/apr/03/at-least-27-killed-in-israeli-bombing-of-shelter-in-gaza-city-rescuers-say), it does not provide any information about Sham Imad Muhareb or whether she lost her arm.
+
+So, the overall veracity is: false
+Fact-check took 0:29 min.

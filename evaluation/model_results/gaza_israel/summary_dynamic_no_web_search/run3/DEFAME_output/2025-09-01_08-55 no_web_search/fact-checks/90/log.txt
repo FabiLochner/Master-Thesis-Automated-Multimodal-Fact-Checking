@@ -1,0 +1,23 @@
+Extracting claims from Content: An Algerian judo athlete withdrew from his Olympics 2024 match against an Israeli opponent.
+'Claim: "An Algerian judo athlete withdrew from his Olympics 2024 match against an Israeli opponent."'
+Verifying Claim: "An Algerian judo athlete withdrew from his Olympics 2024 match against an Israeli opponent."
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Algerian judo athlete withdraw Israeli opponent Olympics 2024')
+Got 3 new web source(s):
+	1. https://www.nytimes.com/2021/07/24/sports/olympics/an-algerian-judoka-was-suspended-after-withdrawing-to-avoid-meeting-an-israeli-opponent.html
+	2. https://www.bbc.com/sport/olympics/articles/cp68x1xp05eo
+	3. https://www.reuters.com/sports/olympics/judo-algerian-dris-removed-draw-ahead-fight-against-israels-butbul-2024-07-28/
+Useful result: From [Source](https://www.nytimes.com/2021/07/24/sports/olympics/an-algerian-judoka-was-suspended-after-withdrawing-to-avoid-meeting-an-israeli-opponent.html): 
+Content: The New York Times published an article about an Algerian judoka who was suspended after withdrawing to avoid meeting an Israeli opponent. <image:14333>
+
+Useful result: From [Source](https://www.bbc.com/sport/olympics/articles/cp68x1xp05eo): 
+Content: The BBC Sport website contains an image of a judo athlete. <image:14335>
+
+Useful result: From [Source](https://www.reuters.com/sports/olympics/judo-algerian-dris-removed-draw-ahead-fight-against-israels-butbul-2024-07-28/): 
+Content: Reuters reports that an Algerian judo athlete was removed from the draw ahead of a fight against Israel's Butbul. <image:14337>
+
+The claim 'An Algerian judo athlete withdrew from his Olympics 2024 match against an Israeli opponent.' is false.
+Justification: The claim is false. While an Algerian judoka did withdraw from a match against an Israeli opponent, as reported by the New York Times and Reuters, the event occurred during the 2020 Olympics, not the 2024 Olympics.
+
+So, the overall veracity is: false
+Fact-check took 0:18 min.

@@ -1,0 +1,51 @@
+Extracting claims from Content: <image:9> This image shows an Israeli missile attack on Iran in the early hours of October 26, 2024.
+'Claim: "<image:9> This image shows an Israeli missile attack on Iran in the early hours of October 26, 2024."'
+Verifying Claim: "<image:9> This image shows an Israeli missile attack on Iran in the early hours of October 26, 2024."
+Not enough information yet. Continuing fact-check...
+Got 3 new web source(s):
+	1. https://jcpa.org/irans-kamikaze-doctrine-strategic-suicide-as-deterrence/
+	2. https://www.timesnownews.com/world/middle-east/video-irans-air-defense-systems-in-action-as-israel-pounds-tehran-article-114609870
+	3. https://www.ncr-iran.org/en/news/page/132/
+Useful result: From [Source](https://jcpa.org/irans-kamikaze-doctrine-strategic-suicide-as-deterrence/): Found exact image on website with title: Iran's Kamikaze Doctrine: Strategic Suicide as Deterrence
+Content: The Jerusalem Center for Public Affairs published an article titled "Iran’s Kamikaze Doctrine: Strategic Suicide as Deterrence" on June 19, 2025, by Catherine Perez-Shakdam. The article discusses Iran's strategic doctrine, which the author calls the "Kamikaze protocol," and includes an image of an explosion at Isfahan <image:132>. The article claims that the regime is prepared to transform the country into a giant trap, and that the aim is threefold: ensure maximum civilian casualties, provoke environmental collapse, and blame Jerusalem.
+
+Useful result: From [Source](https://www.timesnownews.com/world/middle-east/video-irans-air-defense-systems-in-action-as-israel-pounds-tehran-article-114609870): Found exact image on website with title: Video: Iran's Air Defence Systems In Action As Israel Pounds Tehran
+Content: The search result from Times Now News, authored by Apoorva Shukla and published on October 26, 2024, discusses an Israeli attack on Iran. The article includes an image <image:9> and states that the attack targeted military bases in Iran. The article also mentions that the attack was in retaliation for an earlier missile attack by Iran on Israel.
+
+Useful result: From [Source](https://www.ncr-iran.org/en/news/page/132/): Found exact image on website with title: Iran News Now - Breaking Iran News & Headlines | NCRI
+Content: The search result is from the website of the National Council of Resistance of Iran (NCRI). The website contains news articles and statements about Iran, including articles about protests, human rights, and the economy. The website also has a section on terrorism. The website was last updated on July 18, 2025. The website contains the image in the claim. <image:9>
+
+Not enough information yet. Continuing fact-check...
+INFO: Dropping action 'reverse_search' as it was already performed.
+Got 3 new web source(s):
+	1. https://www.understandingwar.org/backgrounder/iran-update-october-26-2024
+	2. https://www.cnn.com/2024/10/26/middleeast/israel-strikes-iran-explainer-intl-hnk
+	3. https://www.aljazeera.com/news/liveblog/2024/10/26/live-israel-attacks-targets-across-iran-warns-tehran-against-retaliation
+Useful result: From [Source](https://www.understandingwar.org/backgrounder/iran-update-october-26-2024): 
+Content: The Institute for the Study of War and AEI's Critical Threats Project published a map showing IDF strikes around Tehran. <image:6927> The map shows strike locations. The article was published on October 26, 2024.
+
+Useful result: From [Source](https://www.cnn.com/2024/10/26/middleeast/israel-strikes-iran-explainer-intl-hnk): 
+Content: CNN published an article about Israeli strikes in Iran. The article contains an image of a city at night <image:6928>.
+
+Useful result: From [Source](https://www.aljazeera.com/news/liveblog/2024/10/26/live-israel-attacks-targets-across-iran-warns-tehran-against-retaliation): 
+Content: Al Jazeera published an article about Israeli attacks on Iran on October 26, 2024. The article contains an image of a damaged ambulance. <image:6929>
+
+Not enough information yet. Continuing fact-check...
+INFO: Dropping action 'reverse_search' as it was already performed.
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Iran explosion October 26 2024')
+Skipping unsupported website: https://x.com/trtworld/status/1850096288152301598
+Skipping unsupported website: https://twitter.com/Shayan86/status/1849956798327119933
+Got 2 new web source(s):
+	1. https://www.timesofisrael.com/liveblog-october-26-2024/
+	2. https://www.nytimes.com/live/2024/10/25/world/israel-lebanon-gaza-iran
+Useful result: From [Source](https://www.timesofisrael.com/liveblog-october-26-2024/): 
+Content: The Times of Israel published an image of a damaged ambulance. <image:7869>
+
+Useful result: From [Source](https://www.nytimes.com/live/2024/10/25/world/israel-lebanon-gaza-iran): 
+Content: The New York Times published an article about the conflict between Israel and Iran. The article includes an image of destruction <image:7870>.
+
+The claim '<image:9> This image shows an Israeli missile attack on Iran in the early hours of October 26, 2024.' is false.
+Justification: The claim cannot be verified. While there is evidence of Israeli strikes in Iran on October 26, 2024, and related destruction, the image in the claim was not found in the search results.
+
+So, the overall veracity is: false
+Fact-check took 1:45 min.

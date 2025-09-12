@@ -1,0 +1,22 @@
+Extracting claims from Content: The US reinstituted draft in 2024 for the Israel-Hamas war.
+'Claim: "The US reinstituted draft in 2024 for the Israel-Hamas war."'
+Verifying Claim: "The US reinstituted draft in 2024 for the Israel-Hamas war."
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='US draft 2024 Israel-Hamas war')
+Skipping fact-checking website: https://www.usatoday.com/story/news/factcheck/2024/07/12/us-draft-israel-hamas-war-fact-check/74359207007/
+Got 3 new web source(s):
+	1. https://en.wikipedia.org/wiki/United_States_support_for_Israel_in_the_Gaza_war
+	2. November 19, 2024 https://www.securitycouncilreport.org/whatsinblue/2024/11/vote-on-a-draft-resolution-on-the-war-in-gaza.php
+	3. https://www.aljazeera.com/news/2024/3/22/un-security-council-does-not-pass-us-resolution-calling-for-gaza-ceasefire
+Useful result: From [Source](https://www.securitycouncilreport.org/whatsinblue/2024/11/vote-on-a-draft-resolution-on-the-war-in-gaza.php): 
+Content: The Security Council Report published on November 19, 2024, discusses a draft resolution on the war in Gaza between Israel and Hamas. The US was expected to vote on the draft resolution on November 20. The article mentions negotiations and disagreements, particularly regarding the US's stance on the resolution.
+
+Useful result: From [Source](https://www.aljazeera.com/news/2024/3/22/un-security-council-does-not-pass-us-resolution-calling-for-gaza-ceasefire): 
+Content: Al Jazeera published an article on March 22, 2024, discussing a US draft resolution for a ceasefire in the Israel-Gaza conflict that did not pass. <image:k>. The article does not mention the US reinstituting the draft.
+
+The claim 'The US reinstituted draft in 2024 for the Israel-Hamas war.' is false.
+Justification: The search results, including articles from the Security Council Report ([https://www.securitycouncilreport.org/whatsinblue/2024/11/vote-on-a-draft-resolution-on-the-war-in-gaza.php](https://www.securitycouncilreport.org/whatsinblue/2024/11/vote-on-a-draft-resolution-on-the-war-in-gaza.php)) and Al Jazeera ([https://www.aljazeera.com/news/2024/3/22/un-security-council-does-not-pass-us-resolution-calling-for-gaza-ceasefire](https://www.aljazeera.com/news/2024/3/22/un-security-council-does-not-pass-us-resolution-calling-for-gaza-ceasefire)), do not support the claim. They focus on US diplomatic efforts and resolutions related to the conflict, without any mention of the draft being reinstituted.
+
+So, the overall veracity is: false
+Fact-check took 3:47 min.
+Worker 2 is done and terminates gracefully.

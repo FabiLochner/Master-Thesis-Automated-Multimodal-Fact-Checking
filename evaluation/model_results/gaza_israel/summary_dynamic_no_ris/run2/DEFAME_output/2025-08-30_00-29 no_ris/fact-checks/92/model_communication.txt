@@ -1,0 +1,1886 @@
+PlanPrompt - QUERY:
+
+# Instructions
+The available knowledge is insufficient to assess the Claim. Therefore, **propose a set of actions** to retrieve new and helpful evidence. Adhere to the following rules:
+* The actions available are listed under Valid Actions, including a short description for each action. No other actions are possible at this moment. 
+* For each action, use the formatting as specified in Valid Actions.
+* Include all actions in a single Markdown code block at the end of your answer.
+* Propose as few actions as possible, but as much as needed. Do not propose similar or previously used actions.
+
+
+
+## Valid Actions
+* `image_search`
+   * Description: Run an image search on Google to retrieve related images for a given query.
+   * How to use: This is a helpful tool for fact-checking images. Use this to retrieve images associated with a specific keyword or phrase. Ensure that the query is clear and specific to improve search accuracy. If no relevant images are found, refine the query or use more descriptive terms.
+   * Format: image_search("your image search query goes here")
+
+* `web_search`
+   * Description: Run an open web search on Google or DuckDuckGO to retrieve any related webpage.
+   * How to use: Do not use this with a previously used or similar query from previous web searches. If a previous web search did not yield any results, use a very different query.
+   * Format: web_search("your web search query goes here")
+
+* `geolocate`
+   * Description: Performs geolocation to determine the country where an image was taken.
+   * How to use: Provide an image and the model will determine the most likely countries where it was taken.
+   * Format: geolocate(<image:k>), where `k` is the image's ID
+
+# Example: image_search()
+
+## Claim
+Text: "Chinese officials in white protective hazmat suits carried people down a hallway to be quarantined for having COVID-19 in November 2022."
+
+...
+
+ACTIONS:
+```
+image_search("China officials white suits carry people")
+image_search("China officials carry people COVID quarantine 2022")
+```
+
+# Example: web_search()
+
+## Claim
+Text: "New Zealand’s new Food Bill bans gardening"
+Claim date: October 29, 2020
+
+...
+
+## Actions
+```
+web_search("New Zealand Food Bill 2020")
+web_search("New Zealand Food Bill gardening ban")
+```
+
+# Example: geolocate()
+
+## Claim
+Text: "<image:k> shows a nuclear weapons facility in Usbekistan."
+
+...
+
+## Actions
+```
+geolocate(<image:k>)
+```
+
+# Record
+## Claim
+Claim: "<image:59> This image shows a palestinian child stuck under the rubble in Gaza after an Israeli airstrike in July 2024."
+
+# Your Actions
+
+
+
+===== > RESPONSE:  < =====
+```
+web_search("Palestinian child rubble Gaza Israeli airstrike July 2024")
+geolocate(<image:59>)
+```
+_________________________
+
+
+
+SummarizeResultPrompt - QUERY:
+
+# Instructions
+In order to find evidence that helps your fact-check, you just ran a web search which yielded a Search Result. **Your task right now is to summarize the Search Result.** What to include:
+* information that might be useful for the fact-check (see Record)
+* relevant images (refer to images by inserting their reference <image:k>)
+* if available: the release date as well as the author or the publisher (e.g. the media company) of the search result.
+
+Do NOT include:
+* advertisements
+* any other information not related to the Record or the Claim
+
+Additional rules:
+* Do not add any additional information besides the information in the Search Result.
+* If the Search Result doesn't contain any relevant information for the fact-checking work, simply print one word in capital letters: "NONE".
+* Keep your writing style like in the Examples 1, 2 and 3 provided to you.
+* Try to filter out relevant information even if the search result is in a different language.
+
+# Example 1
+The search result from America Today provides several photographs of the Notre-Dame Cathedral fire on April 15, 2019. <image:i>, <image:j>, <image:k>. None of the images show the Eiffel Tower in the background. 
+
+# Example 2
+NONE
+
+# Example 3
+The Guardian discusses a report blaming the Syrian government for a toxic gas attack and condemning their use of chemical weapons. The Guardian mentions the Chemical Weapons Convention and the responsibilities of Syria under the convention. According to The Guardian, The White House condemned the Assad regime for defying the norm against chemical weapons use.
+
+# Record
+## Claim
+Claim: "<image:59> This image shows a palestinian child stuck under the rubble in Gaza after an Israeli airstrike in July 2024."
+
+## Actions
+```
+web_search("Palestinian child rubble Gaza Israeli airstrike July 2024")
+geolocate(<image:59>)
+```
+
+# Search Result
+From [Source](https://www.cnn.com/2024/07/27/middleeast/israel-gaza-deir-al-balah-school-intl): 
+Content: "[](#maincontent)
+
+[World](https://www.cnn.com/world)
+ [Middle East](https://www.cnn.com/world/middle-east)
+ • 4 min read
+
+At least 30 killed in an Israeli airstrike on a school in Gaza, Palestinian officials say
+=========================================================================================
+
+By Lucas Lilieholm, Abeer Salman, Ibrahim Dahman, Benjamin Brown, and Mohammad Al Sawalhi, CNN
+
+4 min read
+
+Updated 12:12 PM EDT, Sat July 27, 2024
+
+[](mailto:?subject=CNN%20content%20share&body=Check%20out%20this%20article%3A%0Ahttps%3A%2F%2Fwww.cnn.com%2F2024%2F07%2F27%2Fmiddleeast%2Fisrael-gaza-deir-al-balah-school-intl "Share with email")
+
+Link Copied!
+
+Follow:
+
+The Middle East [See your latest updates](/follow?iid=follow_see_all_article&source=acq_web_experiments_follow_card-social-bar-all)
+
+![Smoke rises during an Israeli strike in Deir el-Balah in the central Gaza Strip on July 27, 2024, amid the ongoing conflict between Israel and the Palestinian militant group Hamas.](https://media.cnn.com/api/v1/images/stellar/prod/gettyimages-2163054712-copy.jpg?c=16x9&q=h_833,w_1480,c_fill)
+
+Smoke rises during an Israeli strike in Deir el-Balah in the central Gaza Strip on July 27, 2024, amid the ongoing conflict between Israel and the Palestinian militant group Hamas.
+
+Bashar Taleb/AFP/Getty Images
+
+CNN  — 
+
+At least 30 people have been killed and over 100 injured in an Israeli airstrike on a school in Deir-al Balah, central Gaza, where thousands were sheltering, Palestinian officials said.
+
+The Israeli military said it had launched the strike in order to destroy a Hamas command and control center inside the compound.
+
+Most of the victims from the school arriving to Al-Aqsa Martyrs Hospital in the aftermath of the attack were women and children, according to Dr. Khalil Al-Daqran, a spokesperson for the hospital.
+
+Footage filmed by CNN inside the hospital morgue showed dead bodies on the floor and people coming in to identify their loved ones, with children among the deceased.
+
+The emergency room is seen to be overwhelmed by casualties and has no more space for patients. One young man was seen receiving medical treatment on the floor.
+
+Most of those brought to the hospital with injuries are children, including one young boy who was receiving treatment and soon after died with the word “unidentified” written on his stomach.
+
+The strike came soon after Israeli’s military issued fresh evacuation orders further south, in the city of Khan Younis, where Israel launched a fresh offensive earlier in the week which has killed dozens of Palestinians.
+
+Residents in southern neighborhoods were told to leave after being warned that the Israel Defense Forces (IDF) would “forcefully operate” in the area.
+
+![Bodies of Palestinian, including children, are brought to al-Aqsa Martyrs Hospital after Israeli attack on Al-Qashtat family house in Deir al-Balah, Gaza on July 27, 2024.](https://media.cnn.com/api/v1/images/stellar/prod/gettyimages-2163034087-copy.jpg?q=w_1110,c_fill)
+
+Bodies of Palestinian, including children, are brought to al-Aqsa Martyrs Hospital after Israeli attack on Al-Qashtat family house in Deir al-Balah, Gaza on July 27, 2024.
+
+Ashraf Amra/Anadolu Agency/Getty Images
+
+![Palestinians flee from a school where they had taken refuge, after it was hit by an Israeli strike, in Deir el-Balah in the central Gaza Strip on July 27, 2024, amid the ongoing conflict between Israel and the Palestinian militant group Hamas.](https://media.cnn.com/api/v1/images/stellar/prod/gettyimages-2163054990-copy.jpg?q=w_1110,c_fill)
+
+Palestinians flee from a school where they had taken refuge, after it was hit by an Israeli strike, in Deir el-Balah in the central Gaza Strip on July 27, 2024, amid the ongoing conflict between Israel and the Palestinian militant group Hamas.
+
+Bashar Taleb/AFP/Getty Images
+
+Fighting has been ongoing on Gaza for months, and the renewed offensive shows Israel’s challenges in achieving its goal of eliminating Hamas. Israel said that about 100 militants had been killed during recent fighting.
+
+The United Nations estimated that about 150,000 people fled Khan Younis on Monday alone, intensifying pressure on meager supplies of food and water, and places to seek shelter.
+
+[![Palestinian children search through the rubble of their home a day after an operation by the Israeli Special Forces in the Nuseirat camp, in the central Gaza Strip on June 9.](https://media.cnn.com/api/v1/images/stellar/prod/c-gettyimages-2156163946.jpg?c=16x9&q=h_144,w_256,c_fill)\
+\
+Palestinian children search through the rubble of their home a day after an operation by the Israeli Special Forces in the Nuseirat camp, in the central Gaza Strip on June 9.\
+\
+Eyad Baba/AFP/Getty Images\
+\
+Related article ‘We cannot remain silent about what we saw.’ US doctors who volunteered in Gaza demand ceasefire in letter to White House](/2024/07/26/world/open-letter-45-us-physicians-gaza)
+
+Signaling another campaign was imminent, the IDF wrote on Telegram it was “about to forcefully operate against the terrorist organizations and therefore calls on the remaining population left in the southern neighborhoods of Khan Yunis to temporarily evacuate to the adjusted Humanitarian Area in Al-Mawasi.”
+
+The statement said the move was in retaliation to “significant terrorist activity and rocket fire” emanating from southern Khan Younis. At least 1,200 people were killed and more than 250 others abducted, according to Israeli authorities.
+
+![A man squats next to a fire, as Palestinians flee the eastern part of Khan Younis, after orders by Israeli army to evacuate their neighborhoods, in Khan Younis, in the southern Gaza Strip, on July 22, 2024.](https://media.cnn.com/api/v1/images/stellar/prod/2024-07-22t230552z-1199657593-rc2f09aiu8a9-rtrmadp-3-israel-palestinians.jpg?q=w_1110,c_fill)
+
+A man squats next to a fire, as Palestinians flee the eastern part of Khan Younis, after orders by Israeli army to evacuate their neighborhoods, in Khan Younis, in the southern Gaza Strip, on July 22, 2024.
+
+Mohammed Salem/Reuters
+
+Israeli military action in Gaza has since killed 39,258 Palestinians and injured another 90,589, according to the Ministry of Health there. As of early July, [nearly 2 million people](https://www.cnn.com/2024/07/06/middleeast/palestinians-displaced-gaza-israel-intl/index.html)
+ had been displaced in Gaza – almost the entire population, according to figures from the UN.
+
+Aid agencies working in Gaza have warned previously that new rounds of evacuation orders are making the delivery of emergency rations even more difficult.
+
+“People in Gaza are exhausted, living in inhumane conditions, with no safety at all,” the UN Relief and Works Agency posted on X on Monday.
+
+On Thursday, the IDF said it had recovered the bodies of five Israeli hostages the previous day from a tunnel in an area of Khan Younis which it had previously designated as a “humanitarian area.”
+
+Despite the fighting, US and Israeli officials expressed optimism [this week](https://www.cnn.com/2024/07/23/politics/gaza-ceasefire-prospects-netanyahu-congress/index.html)
+ over the possibility of a ceasefire and hostage deal being reached.
+
+US Secretary of State Antony Blinken said Friday that the different parties are “inside the 10-yard line and driving toward the goal line.”
+
+Negotiations are set to resume in Rome on Sunday, two sources familiar with the meeting told CNN.
+
+The US team will be led by CIA Director Bill Burns, who will be joined by his counterparts from Qatar, Egypt, and Israel.
+
+Israel’s Prime Minister Benjamin Netanyahu was in Washington this week and met with the presumptive Democratic presidential nominee, Vice President Kamala Harris, who urged him to seal an agreement.
+
+“As I just told Prime Minister Netanyahu, it is time to get this deal done,” said Harris. It added that the location previously defined as a humanitarian area “will be adjusted.”
+
+Al-Mawasi has come under repeated Israeli attacks, including a strike on July 14 which [reportedly](https://www.cnn.com/2024/07/13/middleeast/mawasi-deif-israel-hamas-gaza-intl/index.html)
+ killed 90 people and injured 300 more.
+
+An eyewitness in Khan Younis told CNN that she was “woken up by the screams” of people as they fled the area following the evacuation order, saying she heard explosions and saw flares in the sky.
+
+Scenes filmed by CNN in Khan Younis show people fleeing by car, motorbike, and donkey cart with all of their belongings. I don’t know where to go,” said one man.
+
+Israel launched its military offensive in Gaza on October 7 after Hamas attacked southern Israel."
+
+# Your Summary
+
+
+
+===== > RESPONSE:  < =====
+The CNN article, published on July 27, 2024, reports on an Israeli airstrike on a school in Deir al-Balah, central Gaza, on July 27, 2024. <image:59> The article states that the strike resulted in at least 30 deaths and over 100 injuries. The article includes images of the aftermath, including images of dead bodies and injured people at Al-Aqsa Martyrs Hospital. The article also mentions a strike on an Al-Qashtat family house in Deir al-Balah. <image:59>
+
+_________________________
+
+
+
+SummarizeResultPrompt - QUERY:
+
+# Instructions
+In order to find evidence that helps your fact-check, you just ran a web search which yielded a Search Result. **Your task right now is to summarize the Search Result.** What to include:
+* information that might be useful for the fact-check (see Record)
+* relevant images (refer to images by inserting their reference <image:k>)
+* if available: the release date as well as the author or the publisher (e.g. the media company) of the search result.
+
+Do NOT include:
+* advertisements
+* any other information not related to the Record or the Claim
+
+Additional rules:
+* Do not add any additional information besides the information in the Search Result.
+* If the Search Result doesn't contain any relevant information for the fact-checking work, simply print one word in capital letters: "NONE".
+* Keep your writing style like in the Examples 1, 2 and 3 provided to you.
+* Try to filter out relevant information even if the search result is in a different language.
+
+# Example 1
+The search result from America Today provides several photographs of the Notre-Dame Cathedral fire on April 15, 2019. <image:i>, <image:j>, <image:k>. None of the images show the Eiffel Tower in the background. 
+
+# Example 2
+NONE
+
+# Example 3
+The Guardian discusses a report blaming the Syrian government for a toxic gas attack and condemning their use of chemical weapons. The Guardian mentions the Chemical Weapons Convention and the responsibilities of Syria under the convention. According to The Guardian, The White House condemned the Assad regime for defying the norm against chemical weapons use.
+
+# Record
+## Claim
+Claim: "<image:59> This image shows a palestinian child stuck under the rubble in Gaza after an Israeli airstrike in July 2024."
+
+## Actions
+```
+web_search("Palestinian child rubble Gaza Israeli airstrike July 2024")
+geolocate(<image:59>)
+```
+
+# Search Result
+From [Source](https://www.bbc.com/news/articles/ce9zxlpz5evo): 
+Content: "<image:9901>!Reuters Palestinians inspect damage following an Israeli strike on Mustafa Hafez school, which was sheltering displaced people, in Gaza City, in the northern Gaza Strip (20 August 2024) <image:9902>Reuters
+
+The UN condemned earlier this month what it called the “increasing frequency” of Israeli strikes on schools
+
+At least 12 Palestinians have been killed in an Israeli air strike on a school housing displaced people in Gaza City, the Hamas-run Civil Defence authority says.
+
+A spokesman said rescuers were struggling to recover a number of missing people believed to be trapped under the rubble at Mustafa Hafez school in the western Rimal neighbourhood.
+
+The Israeli military said it had targeted a Hamas command and control centre inside the school, and that it had taken steps to mitigate risk of harming civilians.
+
+Earlier, it announced that troops had recovered the bodies of six Israeli hostages being held in the Khan Younis area.
+
+The men were among the 251 people kidnapped by Hamas-led gunmen in the 7 October attacks on southern Israel last year, when about 1,200 people were also killed.
+
+Israel launching an air and ground campaign to destroy Hamas in response, during which more than 40,170 people have been killed in Gaza, according to the territory's Hamas-run health ministry.
+
+[Six hostages' bodies retrieved, Israel's military says\
+------------------------------------------------------](https://www.bbc.co.uk/news/articles/c23lgy1k22zo)
+
+[Israel accepts 'bridging proposal' for ceasefire deal - Blinken\
+---------------------------------------------------------------](https://www.bbc.co.uk/news/articles/c5y3xzex72no)
+
+Women and children can be heard screaming and seen running from the dust-enveloped Mustafa Hafez school in a video posted on social media showing the immediate aftermath of Tuesday morning’s strike.
+
+The camera then pans to show rubble on the ground beside the completely flattened remains of a two-storey building.
+
+"We were sitting safely, we did not see the explosion," witness Umm Mohammed later told Reuters news agency.
+
+"The people are gone, they're dead. They are under the rubble."
+
+Civil Defence spokesman Mahmoud Basal said in the afternoon that rescue crews had so far recovered the bodies of 12 people.
+
+He said the strike had targeted the entire wing of the school, where he estimated that 700 displaced people had been living.
+
+The Israel Defense Forces (IDF) said aircraft had conducted a “a precise strike on terrorists who were operating within a Hamas command and control centre” which had been embedded inside the school and used to plan and launch attacks against its troops and Israel.
+
+"Prior to the strike, numerous steps were taken to mitigate the risk of harming civilians, including the use of precise munitions, aerial surveillance and additional intelligence," it added.
+
+The IDF accused Hamas of violating international law by operating within civilian infrastructure and exploiting Gaza’s civilian population - allegations which Hamas has previously denied.
+
+Earlier this month, the UN Human Rights Office condemned what it called the "increasing frequency" of Israeli strikes on schools sheltering displaced people and accused the IDF of conducting them "with apparent disregard for the high rate of civilian fatalities".
+
+The warning after [at least 70 Palestinians were killed in an air strike on al-Taba’een school in Gaza City](https://www.bbc.co.uk/news/articles/c8erk37yn2no)
+, according to the director of a local hospital.
+
+The IDF said the school had "served as an active Hamas and Islamic Jihad military facility", and that it had confirmed the identities of 31 "terrorists" who were killed.
+
+The UN said at the time that it had been at least the 21st strike on a school serving as a shelter since 4 July and that they had resulted in at least 274 fatalities.
+
+! <image:9901>!EPA US Secretary of State Antony Blinken (L) walks with Egyptian President Abdul Fattah al-Sisi (R) in El-Alamein, Egypt (20 August 2024) <image:9904>EPA
+
+The US secretary of state discussed the ceasefire talks with Egypt's president
+
+Also on Tuesday, the civil defence said five people had been killed in a strike on a house in Bureij refugee camp, in central Gaza, while Palestinian news agency Wafa cited medical sources as saying four had been killed in nearby Deir al-Balah.
+
+The IDF said its troops and aircraft had "eliminated numerous terrorists" operating in central Gaza, including two who exited an underground tunnel and attempted to plant an explosive device.
+
+It came as the US Secretary of State, Antony Blinken, visited Egypt to continue to apply diplomatic pressure to try to secure a ceasefire and hostage release deal between Israel and Hamas.
+
+The BBC's Tom Bateman, who is travelling with Mr Blinken, says the Americans hope for some sort of breakthrough within the next week or so, but that the mood on the ground in the region has not matched that expectation.
+
+After talks with Israeli Prime Minister Benjamin Netanyahu on Monday, Mr Blinken said Israel had accepted a US proposal aimed at bridging the remaining gaps between the warring parties.
+
+But Hamas accused the US of "acquiescing" to what it called Mr Netanyahu's "new conditions". 
+
+[Home](/)
+
+News
+
+[Sport](/sport)
+
+Business
+
+Innovation
+
+Culture
+
+Arts
+
+Travel
+
+Earth
+
+Audio
+
+[Video](/video)
+
+Live
+
+[Weather](https://www.bbc.com/weather)
+
+[Newsletters](https://www.bbc.com/newsletters)
+
+Twelve killed in Israeli strike on Gaza school, civil defence says
+==================================================================
+
+20 August 2024
+
+ShareSave
+
+David GrittenBBC News
+
+ShareSave
+
+! The group also criticised as misleading President Joe Biden’s claim that it seemed to be “backing away” from an agreement.
+
+A major sticking point is Mr Netanyahu's insistence that Israeli troops remain in the Philadelphi corridor, a narrow strip of land running along Gaza’s border with Egypt, which Hamas has rejected.
+
+He says it is necessary to prevent smuggling and Hamas rearming itself, but Hamas says it would amount to continued Israeli occupation and not an end to the war.
+
+[Middle East](/news/world/middle_east)
+
+[Israel-Gaza war](/news/topics/c2vdnvdg6xxt)
+
+[Israel](/news/topics/c302m85q5ljt)
+
+[Palestinian territories](/news/topics/cdl8n2eder8t)
+
+[Hamas](/news/topics/cnx753jen5zt)
+
+* * *"
+
+# Your Summary
+
+
+
+===== > RESPONSE:  < =====
+The BBC published an article on August 20, 2024, reporting on an Israeli strike on a school in Gaza City, which was sheltering displaced people. <image:9902> The article mentions that the strike on Mustafa Hafez school resulted in at least 12 Palestinian deaths. The IDF stated that they targeted a Hamas command and control center inside the school. The UN condemned the "increasing frequency" of Israeli strikes on schools. The article also mentions the recovery of six Israeli hostages' bodies.
+
+_________________________
+
+
+
+SummarizeResultPrompt - QUERY:
+
+# Instructions
+In order to find evidence that helps your fact-check, you just ran a web search which yielded a Search Result. **Your task right now is to summarize the Search Result.** What to include:
+* information that might be useful for the fact-check (see Record)
+* relevant images (refer to images by inserting their reference <image:k>)
+* if available: the release date as well as the author or the publisher (e.g. the media company) of the search result.
+
+Do NOT include:
+* advertisements
+* any other information not related to the Record or the Claim
+
+Additional rules:
+* Do not add any additional information besides the information in the Search Result.
+* If the Search Result doesn't contain any relevant information for the fact-checking work, simply print one word in capital letters: "NONE".
+* Keep your writing style like in the Examples 1, 2 and 3 provided to you.
+* Try to filter out relevant information even if the search result is in a different language.
+
+# Example 1
+The search result from America Today provides several photographs of the Notre-Dame Cathedral fire on April 15, 2019. <image:i>, <image:j>, <image:k>. None of the images show the Eiffel Tower in the background. 
+
+# Example 2
+NONE
+
+# Example 3
+The Guardian discusses a report blaming the Syrian government for a toxic gas attack and condemning their use of chemical weapons. The Guardian mentions the Chemical Weapons Convention and the responsibilities of Syria under the convention. According to The Guardian, The White House condemned the Assad regime for defying the norm against chemical weapons use.
+
+# Record
+## Claim
+Claim: "<image:59> This image shows a palestinian child stuck under the rubble in Gaza after an Israeli airstrike in July 2024."
+
+## Actions
+```
+web_search("Palestinian child rubble Gaza Israeli airstrike July 2024")
+geolocate(<image:59>)
+```
+
+# Search Result
+From [Source](https://www.hrw.org/report/2024/09/30/they-destroyed-what-was-inside-us/children-disabilities-amid-israels-attacks-gaza): 
+Content: "Agence France-Presse said it assessed that 815 civilians were killed during and after the attack, including 36 children—at least two of whom had a disability—and the taking of 251 hostages, including 40 children.[\[12\]](#_ftn12)
+ Human Rights Watch concluded that during the attack, Palestinian armed groups committed war crimes and crimes against humanity of murder and unlawful imprisonment.[\[13\]](#_ftn13)
+ Israeli forces responded with almost a year-long military assault on Gaza that has resulted in the killing of more than 41,000 Palestinians as of mid-September 2024, according to the Ministry of Health in Gaza, including more than 16,750 children, the UN Committee on the Rights of the Child reported.[\[14\]](#_ftn14)
+
+Thousands more children are reported missing and may be trapped under the rubble of destroyed buildings.[\[15\]](#_ftn15)
+ More than 95,500 people have reportedly been injured, according to the Gaza Ministry of Health.[\[16\]](#_ftn16)
+ The Palestinian NGOs Network (PNGO) reported on June 29 that about 10,000 people, half of them children, are estimated to have acquired a disability since October 2023.[\[17\]](#_ftn17)
+ The World Health Organization estimates that more than 22,500 people of those injured as of July 23, 2024, have sustained “life-changing injuries,” requiring rehabilitation services “now and for years to come”.[\[18\]](#_ftn18)
+ Save the Children reported in January that more than 10 children were losing one or both legs per day.[\[19\]](#_ftn19)
+  
+
+Since the October 7 attacks, Israeli authorities cut off essential services, including water and electricity, to Gaza and blocked the entry of all but a trickle of fuel and critical humanitarian aid, acts of collective punishment that amount to war crimes.[\[20\]](#_ftn20)
+ Israeli authorities have also been using starvation of civilians as a method of warfare in Gaza, which constitutes a war crime.[\[21\]](#_ftn21)
+
+Israeli forces continue to conduct numerous airstrikes and large-scale ground operations in the hostilities in Gaza with Palestinian armed groups. On April 4, she developed fourth-degree bedsores—the most severe type of pressure ulcer and can be life-threatening—due to lack of access to physiotherapy and prosthetic.[\[172\]](#_ftn172)
+ Heals Palestine, a non-profit organization, evacuated Layan to the USA for treatment in July 2024.
+
+Since May 7, when Israeli forces closed the Rafah crossings as part of its military operations against Rafah, Palestinians faced further difficulties to be evacuated for medical care, leaving tens of thousands of Palestinians in need of urgent medical care unable to receive treatment in Gaza or abroad.[\[173\]](#_ftn173)
+
+  
+ 
+
+Unique Risks for Children with Disabilities during Attacks, Evacuations, and Forcible Transfers
+===============================================================================================
+
+According to the United Nations Office for the Coordination of Humanitarian Affairs (OCHA), as of August 7, 1.9 million people were internally displaced, amounting to 90 percent of Gaza’s population.[\[174\]](#_ftn174)
+ Civilians typically flee their homes during armed conflict to avoid fighting or reach safer areas, on the orders of a party to the conflict to evacuate for lawful security or military reasons, or because a party to the conflict unlawfully forcibly transfers them.[\[175\]](#_ftn175)
+ Human Rights Watch previously documented the severe difficulties civilians with disabilities face when fleeing buildings that Israeli forces attacked during fighting between 2009 and 2014, as well as their need for help to reach safety.[\[176\]](#_ftn176)
+
+Under the Fourth Geneva Convention applicable to occupied territory, a party to the conflict may not forcibly transfer the civilian population in whole or in part, unless required by the security of the civilians affected or for imperative military reasons.[\[177\]](#_ftn177)
+ 
+
+Evacuations and the war crime of forced displacement disproportionately affect people with disabilities.[\[178\]](#_ftn178)
+ According to the International Committee of the Red Cross, when international humanitarian law permits such evacuations, “all possible measures must be taken in order that the civilians concerned are received under satisfactory conditions of shelter, hygiene, health, safety and nutrition and that members of the same family are not separated.” [\[179\]](#_ftn179)
+ In this regard, the specific needs of persons with disabilities must be taken into account when evaluating what is satisfactory from their perspective.”
+
+The CRPD requires governments to take “all necessary measures” to ensure the safety and protection of people with disabilities, such as by providing necessary transportation and accommodation. The challenges faced by Ghazal highlight some of the unique risks faced by children with disabilities in Gaza.
+
+![Gaza Children with Disabilities](/sites/default/files/styles/16x9_large/public/media_2024/09/202408DRD_Gaza_Children_With_Disabilities_Thumbnail.jpg?h=d1cb525d&itok=CHz-tOSH)
+
+Play Video
+
+The actions by the Israeli military and the government’s blockade of Gaza, including severe restrictions on humanitarian aid, have inflicted profound trauma and suffering on Palestinian children, which has had a disproportionate impact on children with disabilities. The secretary-general noted reported but unverified grave violations against 3,900 Israeli children and 19,887 Palestinian children during 2023.
+
+Guterres said, “I am appalled by the dramatic increase and unprecedented scale and intensity of grave violations against children in the Gaza Strip, Israel and the occupied West Bank, including East Jerusalem, despite my repeated calls for parties to implement measures to end grave violations.” He “urge\[d\] all parties to the conflict to immediately end and prevent grave violations against children … and to adopt immediately clear, time-bound commitments to end and prevent grave violations against children, as proposed by the United Nations, and to comply with international humanitarian law and international human rights law.”[\[33\]](#_ftn33)
+
+Save the Children reported in June that up to 21,000 children were estimated to be missing, including many dead under rubble, detained, buried in unmarked graves, or separated from their families.[\[34\]](#_ftn34)
+ The UN Committee on the Rights of the Child reported in mid-September the “outrageously high number of children in Gaza who continue to be killed, maimed, injured, missing, displaced, orphaned and subjected to famine, malnutrition and disease,“ citing Israel‘s “attacks on Gaza using explosive weapons with wide-area effects in densely populated areas and its denial of humanitarian access,“ which has displaced at least 1 million children and pushed 3,500 children to risk death from malnutrition.[\[35\]](#_ftn35)
+
+While the Israeli government has repeatedly stated that its war aims are to destroy Hamas and to free the hostages taken during the Hamas-led attacks on Israel on October 7, several statements by Israeli officials, indicate an intent to inflict harm on the civilian population, including children.  
+
+Family members told Human Rights Watch about injuries sustained by their children from Israeli forces’ use of explosive weapons.[\[51\]](#_ftn51)
+
+### Malek, 13 (Traumatic Amputation)
+
+[![A boy with injuries/blood](/sites/default/files/styles/embed_xxl/public/media_2024/09/202409mena_gaza_malek_injury.jpeg?itok=sbqCbmcq)\
+\
+Click to expand Image](/modal/107652)
+
+Malek Al-Kafarna, 13, following his injury in the Israeli airstrike. This would entail, among other things, ensuring people with disabilities have access to the means necessary for their survival, including food, water, medication, health care, and assistive devices, all of which have mostly been absent in Gaza due to the blockade.
+
+Impact of Starvation as a Method of Warfare on Children with Disabilities
+-------------------------------------------------------------------------
+
+Israeli forces have been using starvation of the civilian population as a method of warfare.[\[208\]](#_ftn208)
+
+In March UNICEF reported that 31 percent children under 2 in northern Gaza “suffer from acute malnutrition” and that 4.5 percent of children in the north suffer from “severe wasting,” the most life-threatening form of malnutrition.[\[209\]](#_ftn209)
+ Also, in March, WHO officials reported “children dying of starvation” in both Kamal Adwan and al Awda hospitals in northern Gaza.[\[210\]](#_ftn210)
+ On April 3, Oxfam said people in northern Gaza have been forced to survive on an average of 245 calories a day, “less than a can of fava beans,” since January.[\[211\]](#_ftn211)
+ 
+
+Save the Children confirmed that 27 children died from starvation and disease in April.[\[212\]](#_ftn212)
+ As of September 16, 38 Palestinians, the majority being children, have died of malnutrition and dehydration in hospitals, according to Gaza’s Health Ministry.[\[213\]](#_ftn213)
+ Also in June, the WHO stated that 8,000 children under 5 have been diagnosed and treated for acute malnutrition, including 1,600 children with severe acute malnutrition.[\[214\]](#_ftn214)
+ UNRWA stated that more than 50,000 children of all ages required treatment for acute malnutrition.[\[215\]](#_ftn215)
+ According to the WHO, only two stabilization centers for severely malnourished patients were able to operate because of insecurity and lack of access.[\[216\]](#_ftn216)
+
+While there is no official data on the number of children with disabilities among the children who have died or are acutely malnourished, existing research demonstrates that children with disabilities are in general at a higher risk of malnutrition.[\[217\]](#_ftn217)
+
+In March, Reuters news agency reported finding 10 seriously malnourished children—including Isra, a 5-year-old girl who has quadriplegia and epilepsy—during a visit to al-Awda Health Centre, Rafah.[\[218\]](#_ftn218)
+ Photographs and videos showing signs of acute malnourishment in Fadi al-Zant, a 6-year-old boy with cystic fibrosis, lying in a bed at Kamal Adwan Hospital, northern Gaza, were posted on social media and by Reuters and other media outlets in mid-March.[\[219\]](#_ftn219)
+ Media outlets and social media have also reported that several children with disabilities have died from starvation-related complications, including malnutrition and dehydration, including Yazan al-Kafarna, 12, who had cerebral palsy and died on March 4.[\[220\]](#_ftn220)
+
+[![A boy sitting in an adult wheelchair](/sites/default/files/styles/embed_xxl/public/media_2024/09/202409mena_gaza_muhammad_wheelchair.jpeg?itok=hccOMBMG)\
+\
+Click to expand Image](/modal/107655)
+
+Muhammed, 5, sitting in an adult wheelchair in a camp in Rafah, Gaza. As of September 18, ongoing Israeli strikes and ground operations have killed more than 41,000 Palestinians, including more than 16,750 children according to the Ministry of Health in Gaza. Previously, the Palestinian Civil Defense estimated more than 10,000 adults and children were missing under the rubble of destroyed buildings in Gaza. Israeli airstrikes and ground attacks on Gaza, and resistance by Palestinian armed groups, including rocket strikes on Israel, have continued since then. “I would buy it regardless of the cost if I could just find it.”
+
+The International Court of Justice, in its July 19, 2024 Advisory Opinion on the Occupied Palestinian Territory, held that the law of occupation still applies to Israel’s conduct in Gaza."
+
+# Your Summary
+
+
+
+===== > RESPONSE:  < =====
+The Human Rights Watch report, published on September 30, 2024, discusses the impact of Israeli attacks on Gaza, including the killing of over 16,750 children as of mid-September 2024. The report mentions children missing and potentially trapped under rubble. The report also includes information about children with disabilities and the challenges they face. The report mentions the use of starvation as a method of warfare. The report also includes images of injured children. <image:59> is not included in the report.
+
+_________________________
+
+
+
+SummarizeSummariesPrompt - QUERY:
+
+# Instructions
+You just retrieved web sources, each one summarized under "Web Sources". **Your task right now is to summarize the web source summaries.**
+
+Always adhere to the following rules:
+* Write only one to two paragraphs.
+* Include all URLs from the listed sources. Format them as Markdown hyperlinks.
+* Do not add any additional information besides the information in the summaries.
+* Include references (<image:k>) to all relevant images.
+
+# Record
+## Claim
+Claim: "<image:59> This image shows a palestinian child stuck under the rubble in Gaza after an Israeli airstrike in July 2024."
+
+## Actions
+```
+web_search("Palestinian child rubble Gaza Israeli airstrike July 2024")
+geolocate(<image:59>)
+```
+
+## Web Sources
+**Web Search Result**
+
+From [Source](https://www.cnn.com/2024/07/27/middleeast/israel-gaza-deir-al-balah-school-intl): 
+Content: The CNN article, published on July 27, 2024, reports on an Israeli airstrike on a school in Deir al-Balah, central Gaza, on July 27, 2024. <image:59> The article states that the strike resulted in at least 30 deaths and over 100 injuries. The article includes images of the aftermath, including images of dead bodies and injured people at Al-Aqsa Martyrs Hospital. The article also mentions a strike on an Al-Qashtat family house in Deir al-Balah. <image:59>
+
+
+From [Source](https://www.bbc.com/news/articles/ce9zxlpz5evo): 
+Content: The BBC published an article on August 20, 2024, reporting on an Israeli strike on a school in Gaza City, which was sheltering displaced people. <image:9902> The article mentions that the strike on Mustafa Hafez school resulted in at least 12 Palestinian deaths. The IDF stated that they targeted a Hamas command and control center inside the school. The UN condemned the "increasing frequency" of Israeli strikes on schools. The article also mentions the recovery of six Israeli hostages' bodies.
+
+
+From [Source](https://www.hrw.org/report/2024/09/30/they-destroyed-what-was-inside-us/children-disabilities-amid-israels-attacks-gaza): 
+Content: The Human Rights Watch report, published on September 30, 2024, discusses the impact of Israeli attacks on Gaza, including the killing of over 16,750 children as of mid-September 2024. The report mentions children missing and potentially trapped under rubble. The report also includes information about children with disabilities and the challenges they face. The report mentions the use of starvation as a method of warfare. The report also includes images of injured children. <image:59> is not included in the report.
+
+
+## Your Summary
+
+
+
+===== > RESPONSE:  < =====
+The CNN article from July 27, 2024, reports on an Israeli airstrike on a school in Deir al-Balah, central Gaza, resulting in at least 30 deaths and over 100 injuries. The BBC article from August 20, 2024, reports on an Israeli strike on a school in Gaza City, which was sheltering displaced people, resulting in at least 12 Palestinian deaths. The Human Rights Watch report, published on September 30, 2024, discusses the impact of Israeli attacks on Gaza, including the killing of over 16,750 children as of mid-September 2024.
+
+The CNN article can be found here: [https://www.cnn.com/2024/07/27/middleeast/israel-gaza-deir-al-balah-school-intl](https://www.cnn.com/2024/07/27/middleeast/israel-gaza-deir-al-balah-school-intl). The BBC article can be found here: [https://www.bbc.com/news/articles/ce9zxlpz5evo](https://www.bbc.com/news/articles/ce9zxlpz5evo). The Human Rights Watch report can be found here: [https://www.hrw.org/report/2024/09/30/they-destroyed-what-was-inside-us/children-disabilities-amid-israels-attacks-gaza](https://www.hrw.org/report/2024/09/30/they-destroyed-what-was-inside-us/children-disabilities-amid-israels-attacks-gaza). The image <image:59>
+_________________________
+
+
+
+DevelopPrompt - QUERY:
+
+# Instructions
+You just retrieved new Evidence. Now, **analyze the Claim's veracity using the evidence**. Always adhere to the following rules:
+* Focus on developing new insights. Do not repeat larger parts from the Record. Do not restate the Claim.
+* Write down your thoughts step-by-step. Whenever necessary, you may elaborate in more detail.
+* Depending on the topic's complexity, invest one to three paragraphs. The fewer, the better.
+* If you find that there is insufficient information to verify the Claim, explicitly state what information is missing.
+* If you cite web sources, always refer to them by including their URL as a Markdown hyperlink.
+* **Use information only from the recorded evidence**: Avoid inserting information that is not implied by the evidence. You may use commonsense knowledge, though.
+
+# Record
+## Claim
+Claim: "<image:59> This image shows a palestinian child stuck under the rubble in Gaza after an Israeli airstrike in July 2024."
+
+## Actions
+```
+web_search("Palestinian child rubble Gaza Israeli airstrike July 2024")
+geolocate(<image:59>)
+```
+
+## Evidence
+### Evidence from `web_search`
+The CNN article from July 27, 2024, reports on an Israeli airstrike on a school in Deir al-Balah, central Gaza, resulting in at least 30 deaths and over 100 injuries. The BBC article from August 20, 2024, reports on an Israeli strike on a school in Gaza City, which was sheltering displaced people, resulting in at least 12 Palestinian deaths. The Human Rights Watch report, published on September 30, 2024, discusses the impact of Israeli attacks on Gaza, including the killing of over 16,750 children as of mid-September 2024.
+
+The CNN article can be found here: [https://www.cnn.com/2024/07/27/middleeast/israel-gaza-deir-al-balah-school-intl](https://www.cnn.com/2024/07/27/middleeast/israel-gaza-deir-al-balah-school-intl). The BBC article can be found here: [https://www.bbc.com/news/articles/ce9zxlpz5evo](https://www.bbc.com/news/articles/ce9zxlpz5evo). The Human Rights Watch report can be found here: [https://www.hrw.org/report/2024/09/30/they-destroyed-what-was-inside-us/children-disabilities-amid-israels-attacks-gaza](https://www.hrw.org/report/2024/09/30/they-destroyed-what-was-inside-us/children-disabilities-amid-israels-attacks-gaza). The image <image:59>
+
+### Evidence from `geolocate`
+The most likely countries where the image was taken are: {'Palestine': 0.51, 'Israel': 0.24, 'Jordan': 0.11, 'Russia': 0.02, 'Canada': 0.01, 'Colombia': 0.01, 'France': 0.01, 'Sweden': 0.01, 'Turkey': 0.01, 'Ukraine': 0.01}
+
+# Your Analysis
+
+
+
+===== > RESPONSE:  < =====
+The evidence confirms that Israeli airstrikes in Gaza resulted in casualties, including children, in July and August 2024. The Human Rights Watch report indicates a high number of child fatalities by mid-September 2024. The geolocation data suggests the image was most likely taken in Palestine.
+
+Based on the evidence, the claim that the image depicts a Palestinian child under rubble in Gaza after an Israeli airstrike is plausible. However, the exact date and location within Gaza cannot be confirmed.
+
+To fully verify the claim, additional information is needed to confirm the specific date and location of the event depicted in the image.
+
+_________________________
+
+
+
+JudgePrompt - QUERY:
+
+# Instructions
+**Determine the Claim's veracity** by following these steps:
+1. Briefly summarize the key insights from the fact-check (see Record) in at most one paragraph.
+2. Write one paragraph about which one of the Decision Options applies best. Include the most appropriate decision option at the end and enclose it in backticks like `this`.
+
+
+
+
+## Decision Options
+* `not enough information`: The fact-check does not contain sufficient information to come to an conclusion. For example,there is substantial lack of evidence or the evidence is inconclusive, conflicting or self-contradictory. In the case of a lack of evidence, state which information exactly is missing. In particular, if no RESULTS or sources are available, pick this decision.
+* `false`: The claim is not factually accurate. This is the case if one of the following three conditions is met:(1) The claim is demonstrably false when it is disproven by evidence from multiple and reliable sources,(2) The claim or image is taken out of context, i.e. the origin, content and/or meaning of a statement or an image is misrepresented. For example, an old claim or an old image is mispresented in a new context in a misleading way,(3) There is not enough evidence to verify the claim or the evidence is conflicting or self-contradictory.
+* `true`: The claim is factually accurate when it is confirmed by evidence from multiple and reliable sources.
+
+# Record
+## Claim
+Claim: "<image:59> This image shows a palestinian child stuck under the rubble in Gaza after an Israeli airstrike in July 2024."
+
+## Actions
+```
+web_search("Palestinian child rubble Gaza Israeli airstrike July 2024")
+geolocate(<image:59>)
+```
+
+## Evidence
+### Evidence from `web_search`
+The CNN article from July 27, 2024, reports on an Israeli airstrike on a school in Deir al-Balah, central Gaza, resulting in at least 30 deaths and over 100 injuries. The BBC article from August 20, 2024, reports on an Israeli strike on a school in Gaza City, which was sheltering displaced people, resulting in at least 12 Palestinian deaths. The Human Rights Watch report, published on September 30, 2024, discusses the impact of Israeli attacks on Gaza, including the killing of over 16,750 children as of mid-September 2024.
+
+The CNN article can be found here: [https://www.cnn.com/2024/07/27/middleeast/israel-gaza-deir-al-balah-school-intl](https://www.cnn.com/2024/07/27/middleeast/israel-gaza-deir-al-balah-school-intl). The BBC article can be found here: [https://www.bbc.com/news/articles/ce9zxlpz5evo](https://www.bbc.com/news/articles/ce9zxlpz5evo). The Human Rights Watch report can be found here: [https://www.hrw.org/report/2024/09/30/they-destroyed-what-was-inside-us/children-disabilities-amid-israels-attacks-gaza](https://www.hrw.org/report/2024/09/30/they-destroyed-what-was-inside-us/children-disabilities-amid-israels-attacks-gaza). The image <image:59>
+
+### Evidence from `geolocate`
+The most likely countries where the image was taken are: {'Palestine': 0.51, 'Israel': 0.24, 'Jordan': 0.11, 'Russia': 0.02, 'Canada': 0.01, 'Colombia': 0.01, 'France': 0.01, 'Sweden': 0.01, 'Turkey': 0.01, 'Ukraine': 0.01}
+
+## Elaboration
+The evidence confirms that Israeli airstrikes in Gaza resulted in casualties, including children, in July and August 2024. The Human Rights Watch report indicates a high number of child fatalities by mid-September 2024. The geolocation data suggests the image was most likely taken in Palestine.
+
+Based on the evidence, the claim that the image depicts a Palestinian child under rubble in Gaza after an Israeli airstrike is plausible. However, the exact date and location within Gaza cannot be confirmed.
+
+To fully verify the claim, additional information is needed to confirm the specific date and location of the event depicted in the image.
+
+
+# Your Judgement
+
+
+
+===== > RESPONSE:  < =====
+The evidence supports the claim that the image depicts a Palestinian child in Gaza after an Israeli airstrike, as confirmed by multiple sources reporting on Israeli attacks in Gaza during the specified timeframe. The geolocation data also supports this. However, the exact date and location of the event in the image cannot be confirmed. `true`
+_________________________
+
+
+
+SummarizeDocPrompt - QUERY:
+
+# Instructions
+You are provided with the record of a fact-check. It contains the Claim to be verified and a documentation of all the fact-checking work along the gathered evidence. Your task is to **summarize the fact-check**. That is, you provide a concise, one-paragraph justification for the final VERDICT based on the knowledge from the Record. Note:
+* Be truthful, brief, do not add any additional information besides the information given in the Record. 
+* Link key sources in your summary. Use Markdown notation for that. You may link them in-line.
+* Don't state the Claim again. Rather focus on the key insights of the fact-check.
+* Simply print just the summary.
+
+# Record
+## Claim
+Claim: "<image:59> This image shows a palestinian child stuck under the rubble in Gaza after an Israeli airstrike in July 2024."
+
+## Actions
+```
+web_search("Palestinian child rubble Gaza Israeli airstrike July 2024")
+geolocate(<image:59>)
+```
+
+## Evidence
+### Evidence from `web_search`
+The CNN article from July 27, 2024, reports on an Israeli airstrike on a school in Deir al-Balah, central Gaza, resulting in at least 30 deaths and over 100 injuries. The BBC article from August 20, 2024, reports on an Israeli strike on a school in Gaza City, which was sheltering displaced people, resulting in at least 12 Palestinian deaths. The Human Rights Watch report, published on September 30, 2024, discusses the impact of Israeli attacks on Gaza, including the killing of over 16,750 children as of mid-September 2024.
+
+The CNN article can be found here: [https://www.cnn.com/2024/07/27/middleeast/israel-gaza-deir-al-balah-school-intl](https://www.cnn.com/2024/07/27/middleeast/israel-gaza-deir-al-balah-school-intl). The BBC article can be found here: [https://www.bbc.com/news/articles/ce9zxlpz5evo](https://www.bbc.com/news/articles/ce9zxlpz5evo). The Human Rights Watch report can be found here: [https://www.hrw.org/report/2024/09/30/they-destroyed-what-was-inside-us/children-disabilities-amid-israels-attacks-gaza](https://www.hrw.org/report/2024/09/30/they-destroyed-what-was-inside-us/children-disabilities-amid-israels-attacks-gaza). The image <image:59>
+
+### Evidence from `geolocate`
+The most likely countries where the image was taken are: {'Palestine': 0.51, 'Israel': 0.24, 'Jordan': 0.11, 'Russia': 0.02, 'Canada': 0.01, 'Colombia': 0.01, 'France': 0.01, 'Sweden': 0.01, 'Turkey': 0.01, 'Ukraine': 0.01}
+
+## Elaboration
+The evidence confirms that Israeli airstrikes in Gaza resulted in casualties, including children, in July and August 2024. The Human Rights Watch report indicates a high number of child fatalities by mid-September 2024. The geolocation data suggests the image was most likely taken in Palestine.
+
+Based on the evidence, the claim that the image depicts a Palestinian child under rubble in Gaza after an Israeli airstrike is plausible. However, the exact date and location within Gaza cannot be confirmed.
+
+To fully verify the claim, additional information is needed to confirm the specific date and location of the event depicted in the image.
+
+
+## Final Judgement
+The evidence supports the claim that the image depicts a Palestinian child in Gaza after an Israeli airstrike, as confirmed by multiple sources reporting on Israeli attacks in Gaza during the specified timeframe. The geolocation data also supports this. However, the exact date and location of the event in the image cannot be confirmed. `true`
+
+## Summary
+
+
+
+===== > RESPONSE:  < =====
+The image likely depicts a Palestinian child in Gaza after an Israeli airstrike, as supported by reports of Israeli attacks in Gaza during July and August 2024, including a [CNN article](https://www.cnn.com/2024/07/27/middleeast/israel-gaza-deir-al-balah-school-intl) and a [BBC article](https://www.bbc.com/news/articles/ce9zxlpz5evo). The geolocation data also supports this. However, the exact date and location of the event in the image cannot be confirmed.
+
+_________________________
+
+
+
+PlanPrompt - QUERY:
+
+# Instructions
+The available knowledge is insufficient to assess the Claim. Therefore, **propose a set of actions** to retrieve new and helpful evidence. Adhere to the following rules:
+* The actions available are listed under Valid Actions, including a short description for each action. No other actions are possible at this moment. 
+* For each action, use the formatting as specified in Valid Actions.
+* Include all actions in a single Markdown code block at the end of your answer.
+* Propose as few actions as possible, but as much as needed. Do not propose similar or previously used actions.
+
+
+
+## Valid Actions
+* `image_search`
+   * Description: Run an image search on Google to retrieve related images for a given query.
+   * How to use: This is a helpful tool for fact-checking images. Use this to retrieve images associated with a specific keyword or phrase. Ensure that the query is clear and specific to improve search accuracy. If no relevant images are found, refine the query or use more descriptive terms.
+   * Format: image_search("your image search query goes here")
+
+* `web_search`
+   * Description: Run an open web search on Google or DuckDuckGO to retrieve any related webpage.
+   * How to use: Do not use this with a previously used or similar query from previous web searches. If a previous web search did not yield any results, use a very different query.
+   * Format: web_search("your web search query goes here")
+
+* `geolocate`
+   * Description: Performs geolocation to determine the country where an image was taken.
+   * How to use: Provide an image and the model will determine the most likely countries where it was taken.
+   * Format: geolocate(<image:k>), where `k` is the image's ID
+
+# Example: image_search()
+
+## Claim
+Text: "Chinese officials in white protective hazmat suits carried people down a hallway to be quarantined for having COVID-19 in November 2022."
+
+...
+
+ACTIONS:
+```
+image_search("China officials white suits carry people")
+image_search("China officials carry people COVID quarantine 2022")
+```
+
+# Example: web_search()
+
+## Claim
+Text: "New Zealand’s new Food Bill bans gardening"
+Claim date: October 29, 2020
+
+...
+
+## Actions
+```
+web_search("New Zealand Food Bill 2020")
+web_search("New Zealand Food Bill gardening ban")
+```
+
+# Example: geolocate()
+
+## Claim
+Text: "<image:k> shows a nuclear weapons facility in Usbekistan."
+
+...
+
+## Actions
+```
+geolocate(<image:k>)
+```
+
+# Record
+## Claim
+Claim: "<image:62> This image shows a man from Gaza holding the hand of his son killed in an Israeli bombing in July, 2024."
+
+# Your Actions
+
+
+
+===== > RESPONSE:  < =====
+```
+geolocate(<image:62>)
+web_search("man orange jacket rubble")
+web_search("earthquake rubble man")
+```
+_________________________
+
+
+
+SummarizeResultPrompt - QUERY:
+
+# Instructions
+In order to find evidence that helps your fact-check, you just ran a web search which yielded a Search Result. **Your task right now is to summarize the Search Result.** What to include:
+* information that might be useful for the fact-check (see Record)
+* relevant images (refer to images by inserting their reference <image:k>)
+* if available: the release date as well as the author or the publisher (e.g. the media company) of the search result.
+
+Do NOT include:
+* advertisements
+* any other information not related to the Record or the Claim
+
+Additional rules:
+* Do not add any additional information besides the information in the Search Result.
+* If the Search Result doesn't contain any relevant information for the fact-checking work, simply print one word in capital letters: "NONE".
+* Keep your writing style like in the Examples 1, 2 and 3 provided to you.
+* Try to filter out relevant information even if the search result is in a different language.
+
+# Example 1
+The search result from America Today provides several photographs of the Notre-Dame Cathedral fire on April 15, 2019. <image:i>, <image:j>, <image:k>. None of the images show the Eiffel Tower in the background. 
+
+# Example 2
+NONE
+
+# Example 3
+The Guardian discusses a report blaming the Syrian government for a toxic gas attack and condemning their use of chemical weapons. The Guardian mentions the Chemical Weapons Convention and the responsibilities of Syria under the convention. According to The Guardian, The White House condemned the Assad regime for defying the norm against chemical weapons use.
+
+# Record
+## Claim
+Claim: "<image:62> This image shows a man from Gaza holding the hand of his son killed in an Israeli bombing in July, 2024."
+
+## Actions
+```
+geolocate(<image:62>)
+web_search("man orange jacket rubble")
+web_search("earthquake rubble man")
+```
+
+# Search Result
+From [Source](https://www.vecteezy.com/photo/59962955-a-man-in-an-orange-jacket-and-hard-hat-is-walking-through-rubble): 
+Content: "   
+
+[](/signups/pricing)
+![A man in an orange jacket and hard hat is walking through rubble photo](https://static.vecteezy.com/system/resources/previews/059/962/955/non_2x/a-man-in-an-orange-jacket-and-hard-hat-is-walking-through-rubble-photo.jpg "A man in an orange jacket and hard hat is walking through rubble")
+
+A man in an orange jacket and hard hat is walking through rubble Pro Photo
+==========================================================================
+
+[!Click to view uploads for Pavlo Lys <image:4729>\
+\
+**Pavlo Lys** 37,602 Resources](/members/pavlofox)
+[Follow](/users/sign_in?modal_trigger_elem_id=follow_button_2266&referring_conversions_category=Trigger-Contributor_Follow)
+
+Pro DownloadNo Attribution Required
+
+*   Original (2688 pixels wide)
+*   Large (2400 pixels wide)
+*   Medium (1920 pixels wide)
+*   Small (640 pixels wide)
+
+Bookmark icon Collection 
+
+Similar icon Similar 
+
+Share icon Share
+
+Checkmark icon
+
+Pro License [What's This?](javascript:void(0);)
+
+Pro Content[Why Pro?](javascript:void(0);)
+
+ File Info
+
+|     |     |
+| --- | --- |
+| Resolution: | 2688x1792 |
+| File Type: | JPG |
+| AI Generated: | True |
+
+Related Keywords
+----------------
+
+!5000+ Backgrounds Mega Bundle <image:4730>
+
+Free Download for Pro Subscribers!
+
+5000+ Backgrounds Mega Bundle
+-----------------------------
+
+[View & Download](/bundle/24605323-5000-backgrounds-mega-bundle)
+
+Available For:"
+
+# Your Summary
+
+
+
+===== > RESPONSE:  < =====
+The search result contains an image of a man in an orange jacket walking through rubble <image:4729>. The image is available on Vecteezy. The image is a pro photo.
+
+_________________________
+
+
+
+SummarizeResultPrompt - QUERY:
+
+# Instructions
+In order to find evidence that helps your fact-check, you just ran a web search which yielded a Search Result. **Your task right now is to summarize the Search Result.** What to include:
+* information that might be useful for the fact-check (see Record)
+* relevant images (refer to images by inserting their reference <image:k>)
+* if available: the release date as well as the author or the publisher (e.g. the media company) of the search result.
+
+Do NOT include:
+* advertisements
+* any other information not related to the Record or the Claim
+
+Additional rules:
+* Do not add any additional information besides the information in the Search Result.
+* If the Search Result doesn't contain any relevant information for the fact-checking work, simply print one word in capital letters: "NONE".
+* Keep your writing style like in the Examples 1, 2 and 3 provided to you.
+* Try to filter out relevant information even if the search result is in a different language.
+
+# Example 1
+The search result from America Today provides several photographs of the Notre-Dame Cathedral fire on April 15, 2019. <image:i>, <image:j>, <image:k>. None of the images show the Eiffel Tower in the background. 
+
+# Example 2
+NONE
+
+# Example 3
+The Guardian discusses a report blaming the Syrian government for a toxic gas attack and condemning their use of chemical weapons. The Guardian mentions the Chemical Weapons Convention and the responsibilities of Syria under the convention. According to The Guardian, The White House condemned the Assad regime for defying the norm against chemical weapons use.
+
+# Record
+## Claim
+Claim: "<image:62> This image shows a man from Gaza holding the hand of his son killed in an Israeli bombing in July, 2024."
+
+## Actions
+```
+geolocate(<image:62>)
+web_search("man orange jacket rubble")
+web_search("earthquake rubble man")
+```
+
+# Search Result
+From [Source](https://www.llbean.com/buy/mens-orange-jackets): 
+Content: "Embrace the vibrant spirit of the outdoors with a versatile layer that stands out in both urban and wilderness settings.
+
+Read More
+
+Sort by:
+
+SORT
+
+*   Recommended
+*   Price: Low to High
+*   Price: High to Low
+*   Bestselling
+*   Newest
+*   Customer Rating
+
+Sort by: Recommended Price (lowest to highest) Price (highest to lowest) Bestselling Newest Customer Rating
+
+Filter & Sort
+
+298 Items
+
+*   [!Men's Trail Model Rain Jacket <image:4736>](https://www.llbean.com/llb/shop/121904)
+    
+    [Men's Trail Model Rain Jacket](https://www.llbean.com/llb/shop/121904)
+    
+    $99
+    
+    An amber orange, packable, waterproof rain jacket made from 100% recycled nylon with adjustable hood and cuffs.
+    
+    Pros: Lightweight and packable Durable material Effective rain protection High quality construction Comfortable fit
+    
+*   [!Men's Katahdin Performance Flannel Shirt-Jacket, Hi-Pile Fleece-Lined Plaid <image:4737>](https://www.llbean.com/llb/shop/127885)
+    
+    [Men's Katahdin Performance Flannel Shirt-Jacket, Hi-Pile Fleece-Lined Plaid](https://www.llbean.com/llb/shop/127885)
+    
+    Price was from: $130 now: $54.99 $130 $54.99
+    
+    A sienna orange wool flannel shirt-jacket with hi-pile fleece lining for optimal warmth and durability.
+    
+    Pros: Optimal warmth High quality Durable construction Great color Perfect for layering
+    
+*   [!Men's Warm-Up Jacket, Fleece Lined <image:4740>](https://www.llbean.com/llb/shop/32937)
+    
+    [Men's Warm-Up Jacket, Fleece Lined](https://www.llbean.com/llb/shop/32937)
+    
+    $99
+    
+    A rust orange, fleece-lined jacket offering water and wind resistance with Thinsulate™ insulated sleeves.
+    
+    Pros: Perfect fit Durable construction Versatile use Water resistant Excellent warmth
+    
+*   [!Men's Quilted Sweatshirt, Mockneck <image:4741>](https://www.llbean.com/llb/shop/123793)
+    
+    [Men's Quilted Sweatshirt, Mockneck](https://www.llbean.com/llb/shop/123793)
+    
+    Price was from: $89.95 now: $69.99 $89.95 $69.99
+    
+    An orange quilted pullover with raglan sleeves and kangaroo pocket, made from polyester-cotton blend.
+    
+    Pros: Great quality Warmth Stylish True to size Comfortable
+    
+*   [!Men's Mountain Classic Anorak <image:4743>](https://www.llbean.com/llb/shop/115663)
+    
+    [Men's Mountain Classic Anorak](https://www.llbean.com/llb/shop/115663)
+    
+    $69.95
+    
+    An orange wind- and water-resistant anorak made from durable Supplex nylon with an attached hood and packable design.
+    
+*   [!Men's Waterproof PrimaLoft Packaway Jacket <image:4744>](https://www.llbean.com/llb/shop/119862)
+    
+    [Men's Waterproof PrimaLoft Packaway Jacket](https://www.llbean.com/llb/shop/119862)
+    
+    $280
+    
+    An orange, waterproof, windproof jacket with PrimaLoft insulation, packable design, and multiple zippered pockets.
+    
+    Pros: Waterproof Lightweight Well-made Warmth Comfortable
+    
+*   [!Men's Adventure Grid Fleece, Quarter-Zip <image:4745>](https://www.llbean.com/llb/shop/123567)
+    
+    [Men's Adventure Grid Fleece, Quarter-Zip](https://www.llbean.com/llb/shop/123567)
+    
+    $84.95
+    
+    An orange quarter-zip fleece with UPF 50+ protection, moisture-wicking fabric, and thumb holes.
+    
+    Pros: High quality Great warmth Lightweight design Stylish color Comfortable fit
+    
+*   [!Men's Waterproof Ultralight Down Jacket <image:4746>](https://www.llbean.com/llb/shop/124872)
+    
+    [Men's Waterproof Ultralight Down Jacket](https://www.llbean.com/llb/shop/124872)
+    
+    Price was from: $350 now: $239 $350 $239
+    
+    A warm, waterproof down jacket in dark terracotta, featuring recycled materials and multiple zippered pockets.
+    
+    Pros: Multiple pockets Waterproofness Lightweight Warmth Comfortable fit
+    
+*   [!Men's Mountain Classic Full-Zip Jacket <image:4747>](https://www.llbean.com/llb/shop/121903)
+    
+    [Men's Mountain Classic Full-Zip Jacket](https://www.llbean.com/llb/shop/121903)
+    
+    $79.95
+    
+    A windproof, water-resistant orange jacket made from lightweight Supplex nylon with an attached hood and full-zip design.
+    
+*   [!Men's Double L Field Shirt, Hunter Orange <image:4749>](https://www.llbean.com/llb/shop/122747)
+    
+    [Men's Double L Field Shirt, Hunter Orange](https://www.llbean.com/llb/shop/122747)
+    
+    $89.95
+    
+    A rugged, hunter orange cotton-acrylic shirt with reinforced forearms and bi-swing articulation for full motion.
+    
+    Pros: High quality Good fit Great warmth Excellent cuff design Ideal weight
+    
+*   [!Men's Northwoods Rain Jacket <image:4750>](https://www.llbean.com/llb/shop/124358)
+    
+    [Men's Northwoods Rain Jacket](https://www.llbean.com/llb/shop/124358)
+    
+    Price was from: $139 now: $69.99 $139 $69.99
+    
+    A lightweight, durable hunting rain jacket in hunter orange with a TEK 2.5 waterproof, breathable membrane.
+    
+    Pros: Good price Waterproof protection Quiet material
+    
+*   [!Men's Pathfinder GORE-TEX Shell Jacket <image:4751>](https://www.llbean.com/llb/shop/1000010396)
+    
+    [Men's Pathfinder GORE-TEX Shell Jacket](https://www.llbean.com/llb/shop/1000010396)
+    
+    $300
+    
+    An orange, windproof, waterproof jacket made from recycled polyester with GORE-TEX ePE fabric for year-round wear.
+    
+*   [!Men's PrimaLoft Packaway Hooded Jacket <image:4752>](https://www.llbean.com/llb/shop/20010133)
+    
+    [Men's PrimaLoft Packaway Hooded Jacket](https://www.llbean.com/llb/shop/20010133)
+    
+    $220
+    
+    An orange, water- and wind-resistant puffer jacket with recycled polyester and innovative PrimaLoft® insulation.
+    
+*   [!Men's PrimaLoft Packaway Jacket <image:4753>](https://www.llbean.com/llb/shop/20010126)
+    
+    [Men's PrimaLoft Packaway Jacket](https://www.llbean.com/llb/shop/20010126)
+    
+    $200
+    
+    An orange, lightweight insulated jacket with recycled polyester, wind and water resistance, and packable convenience.
+    
+*   [!Men's Northwoods II Rain Jacket <image:4754>](https://www.llbean.com/llb/shop/20010171)
+    
+    [Men's Northwoods II Rain Jacket](https://www.llbean.com/llb/shop/20010171)
+    
+    $150
+    
+    A lightweight orange hunting jacket made from quiet, waterproof TEK polyester with adjustable hood and cuffs.
+    
+*   [!Men's Organic Cotton Waffle Sweater, Quarter Zip <image:4755>](https://www.llbean.com/llb/shop/123583)
+    
+    [Men's Organic Cotton Waffle Sweater, Quarter Zip](https://www.llbean.com/llb/shop/123583)
+    
+    Price was from: $99.95 now: $74.99 $99.95 $74.99
+    
+    A cozy, rust orange quarter-zip sweater made from 100% organic cotton with a thick waffle-stitch knit.
+    
+    Pros: Beautiful design High quality Warm and cozy True to size Comfortable fit
+    
+*   [!Big Game Hunting Safety Vest <image:4756>](https://www.llbean.com/llb/shop/111743)
+    
+    [Big Game Hunting Safety Vest](https://www.llbean.com/llb/shop/111743)
+    
+    $39.95
+    
+    A blaze orange safety vest made of 100% polyester with dual side cargo pockets for easy gear access.
+    
+    Pros: Easy-to-use zipper Convenient pockets High visibility
+    
+*   [!Men's Double L Waxed-Cotton Upland Vest, Hunter Orange <image:4757>](https://www.llbean.com/llb/shop/122740)
+    
+    [Men's Double L Waxed-Cotton Upland Vest, Hunter Orange](https://www.llbean.com/llb/shop/122740)
+    
+    $180
+    
+    A machine-washable, waxed-cotton hunting vest in hunter orange with large game pouch and ammo loops.
+    
+*   [!Men's Lakewashed Double-Knit Quarter-Zip Pullover <image:4758>](https://www.llbean.com/llb/shop/128947)
+    
+    [Men's Lakewashed Double-Knit Quarter-Zip Pullover](https://www.llbean.com/llb/shop/128947)
+    
+    Price was from: $79.95 now: $64.99 $79.95 $64.99
+    
+    A versatile brick orange heather pullover with ribbed texture, made from a comfortable polyester-cotton blend.
+    
+*   [!Men's Ridge Runner Hunter's Vest <image:4759>](https://www.llbean.com/llb/shop/128445)
+    
+    [Men's Ridge Runner Hunter's Vest](https://www.llbean.com/llb/shop/128445)
+    
+    Price was from: $59.95 now: $24.99 $59.95 $24.99
+    
+    A blaze orange Polartec vest with dual cargo pockets, perfect for hunters, runners, and hikers.
+    
+
+Men's Orange Jackets
+--------------------
+
+There’s something unmistakably bold and timeless about a men’s orange jacket. Please upgrade to one of the following for a smoother, safer shopping experience with us:
+
+[![Chrome's Logo](/dept_resources/shared/dept_images/chrome_logo.png)\
+\
+CHROME](https://www.google.com/chrome/)
+
+[![Firefox's Logo](/dept_resources/shared/dept_images/firefox_logo.png)\
+\
+FIREFOX](https://www.mozilla.org/en-US/firefox/new/)
+
+[![Safari's Logo](/dept_resources/shared/dept_images/safari_logo.png)\
+\
+SAFARI](https://support.apple.com/downloads/safari)
+
+[![Microsoft Edge's Logo](/dept_resources/shared/dept_images/edge_logo.png)\
+\
+MICROSOFT EDGE](https://www.microsoft.com/en-us/edge)
+
+[Skip to product results](#thumbnail-header-title)
+
+Men's Orange Jackets
+====================
+
+Brighten up your outdoor adventures with our collection of men's orange jackets. Whether it’s a lightweight layer for a breezy June evening or a trusty companion for early-morning hikes, orange jackets bring a pop of color to any outdoor adventure. For those who like to keep their wardrobe versatile, an orange jacket offers a fresh alternative to more muted tones, brightening up everyday outings and weekend getaways alike. 
+  
+When shopping for a men’s orange jacket, comfort and durability should be top of mind. A well-made orange jacket can be the go-to layer for early morning walks with the dog, cool nights around the campfire, or even just running errands on a blustery day. And as the weather shifts, it’s easy to layer an orange jacket over a favorite sweatshirt or under a rain shell, making it a year-round staple. If you’re looking ahead to colder months, you might want to explore the full selection of [Orange Winter Jackets](https://www.llbean.com/buy/orange-winter-jackets)
+ for options designed to keep you warm when the temperature drops. 
+  
+No matter where the day leads, a men’s orange jacket is up for the challenge—ready to handle a spontaneous weekend getaway, a quick run to the farmer’s market, or a leisurely stroll through the park. The best orange jackets are built to last, with classic designs and thoughtful touches that never go out of style."
+
+# Your Summary
+
+
+
+===== > RESPONSE:  < =====
+The search result from LLBean.com features various orange jackets and vests for men. <image:4736>, <image:4737>, <image:4740>, <image:4741>, <image:4743>, <image:4744>, <image:4745>, <image:4746>, <image:4747>, <image:4749>, <image:4750>, <image:4751>, <image:4752>, <image:4753>, <image:4754>, <image:4755>, <image:4756>, <image:4757>, <image:4758>, <image:4759>. The jackets are described as suitable for outdoor activities and everyday use.
+
+_________________________
+
+
+
+SummarizeResultPrompt - QUERY:
+
+# Instructions
+In order to find evidence that helps your fact-check, you just ran a web search which yielded a Search Result. **Your task right now is to summarize the Search Result.** What to include:
+* information that might be useful for the fact-check (see Record)
+* relevant images (refer to images by inserting their reference <image:k>)
+* if available: the release date as well as the author or the publisher (e.g. the media company) of the search result.
+
+Do NOT include:
+* advertisements
+* any other information not related to the Record or the Claim
+
+Additional rules:
+* Do not add any additional information besides the information in the Search Result.
+* If the Search Result doesn't contain any relevant information for the fact-checking work, simply print one word in capital letters: "NONE".
+* Keep your writing style like in the Examples 1, 2 and 3 provided to you.
+* Try to filter out relevant information even if the search result is in a different language.
+
+# Example 1
+The search result from America Today provides several photographs of the Notre-Dame Cathedral fire on April 15, 2019. <image:i>, <image:j>, <image:k>. None of the images show the Eiffel Tower in the background. 
+
+# Example 2
+NONE
+
+# Example 3
+The Guardian discusses a report blaming the Syrian government for a toxic gas attack and condemning their use of chemical weapons. The Guardian mentions the Chemical Weapons Convention and the responsibilities of Syria under the convention. According to The Guardian, The White House condemned the Assad regime for defying the norm against chemical weapons use.
+
+# Record
+## Claim
+Claim: "<image:62> This image shows a man from Gaza holding the hand of his son killed in an Israeli bombing in July, 2024."
+
+## Actions
+```
+geolocate(<image:62>)
+web_search("man orange jacket rubble")
+web_search("earthquake rubble man")
+```
+
+# Search Result
+From [Source](https://www.freepik.com/premium-ai-image/arafed-man-orange-black-jacket-walking-through-rubble-generative-ai_47607490.htm): 
+Content: "Close menu[Freepik](https://www.freepik.com)
+
+Search by image
+
+Search
+
+PremiumAI-generated
+
+!arafed man in orange and black jacket walking through rubble generative ai <image:4775>!arafed man in orange and black jacket walking through rubble generative ai <image:4775>
+
+This resource was generated with [AI](/ai#from_element=resource_detail)
+. You can create your own using our [AI Image Generator.](https://www.freepik.com/ai/image-generator#from_element=resource_detail)
+
+[!avatar <image:4777>](https://www.freepik.com/author/tryona)
+
+Arafed man in orange and black jacket walking through rubble generative ai
+==========================================================================
+
+[Tryona](https://www.freepik.com/author/tryona)
+
+You might also like these photos
+
+*   [man walking](https://www.freepik.com/photos/man-walking#referrer=detail&resource=47607490)
+    
+*   [walking](https://www.freepik.com/photos/walking#referrer=detail&resource=47607490)
+    
+*   [jacket](https://www.freepik.com/photos/jacket#referrer=detail&resource=47607490)
+    
+*   [man](https://www.freepik.com/photos/man#referrer=detail&resource=47607490)
+    
+*   [black](https://www.freepik.com/photos/black#referrer=detail&resource=47607490)"
+
+# Your Summary
+
+
+
+===== > RESPONSE:  < =====
+The search result from Freepik shows an AI-generated image of a man in an orange and black jacket walking through rubble. <image:4775>
+
+_________________________
+
+
+
+SummarizeSummariesPrompt - QUERY:
+
+# Instructions
+You just retrieved web sources, each one summarized under "Web Sources". **Your task right now is to summarize the web source summaries.**
+
+Always adhere to the following rules:
+* Write only one to two paragraphs.
+* Include all URLs from the listed sources. Format them as Markdown hyperlinks.
+* Do not add any additional information besides the information in the summaries.
+* Include references (<image:k>) to all relevant images.
+
+# Record
+## Claim
+Claim: "<image:62> This image shows a man from Gaza holding the hand of his son killed in an Israeli bombing in July, 2024."
+
+## Actions
+```
+geolocate(<image:62>)
+web_search("man orange jacket rubble")
+web_search("earthquake rubble man")
+```
+
+## Web Sources
+**Web Search Result**
+
+From [Source](https://www.vecteezy.com/photo/59962955-a-man-in-an-orange-jacket-and-hard-hat-is-walking-through-rubble): 
+Content: The search result contains an image of a man in an orange jacket walking through rubble <image:4729>. The image is available on Vecteezy. The image is a pro photo.
+
+
+From [Source](https://www.llbean.com/buy/mens-orange-jackets): 
+Content: The search result from LLBean.com features various orange jackets and vests for men. <image:4736>, <image:4737>, <image:4740>, <image:4741>, <image:4743>, <image:4744>, <image:4745>, <image:4746>, <image:4747>, <image:4749>, <image:4750>, <image:4751>, <image:4752>, <image:4753>, <image:4754>, <image:4755>, <image:4756>, <image:4757>, <image:4758>, <image:4759>. The jackets are described as suitable for outdoor activities and everyday use.
+
+
+From [Source](https://www.freepik.com/premium-ai-image/arafed-man-orange-black-jacket-walking-through-rubble-generative-ai_47607490.htm): 
+Content: The search result from Freepik shows an AI-generated image of a man in an orange and black jacket walking through rubble. <image:4775>
+
+
+## Your Summary
+
+
+
+===== > RESPONSE:  < =====
+The search results include images of a man in an orange jacket walking through rubble, available on [Vecteezy](https://www.vecteezy.com/photo/59962955-a-man-in-an-orange-jacket-and-hard-hat-is-walking-through-rubble) <image:4729> and an AI-generated image from [Freepik](https://www.freepik.com/premium-ai-image/arafed-man-orange-black-jacket-walking-through-rubble-generative-ai_47607490.htm) <image:4775>. Additionally, there are various orange jackets and vests for men available on [LLBean.com](https://www.llbean.com/buy/mens-orange-jackets) <image:4736>, <image:4737>, <image:4740>, <image:4741>, <image:4743>, <image:4744>, <image:4745>, <image:4746>, <image:4747>, <image:4749>, <image:4750>, <image:4751>, <image:4752>, <image:4753>, <image:4754>, <image:4755>, <image:4756>, <image:4757>, <image:4758>, <image:4759>.
+
+_________________________
+
+
+
+SummarizeResultPrompt - QUERY:
+
+# Instructions
+In order to find evidence that helps your fact-check, you just ran a web search which yielded a Search Result. **Your task right now is to summarize the Search Result.** What to include:
+* information that might be useful for the fact-check (see Record)
+* relevant images (refer to images by inserting their reference <image:k>)
+* if available: the release date as well as the author or the publisher (e.g. the media company) of the search result.
+
+Do NOT include:
+* advertisements
+* any other information not related to the Record or the Claim
+
+Additional rules:
+* Do not add any additional information besides the information in the Search Result.
+* If the Search Result doesn't contain any relevant information for the fact-checking work, simply print one word in capital letters: "NONE".
+* Keep your writing style like in the Examples 1, 2 and 3 provided to you.
+* Try to filter out relevant information even if the search result is in a different language.
+
+# Example 1
+The search result from America Today provides several photographs of the Notre-Dame Cathedral fire on April 15, 2019. <image:i>, <image:j>, <image:k>. None of the images show the Eiffel Tower in the background. 
+
+# Example 2
+NONE
+
+# Example 3
+The Guardian discusses a report blaming the Syrian government for a toxic gas attack and condemning their use of chemical weapons. The Guardian mentions the Chemical Weapons Convention and the responsibilities of Syria under the convention. According to The Guardian, The White House condemned the Assad regime for defying the norm against chemical weapons use.
+
+# Record
+## Claim
+Claim: "<image:62> This image shows a man from Gaza holding the hand of his son killed in an Israeli bombing in July, 2024."
+
+## Actions
+```
+geolocate(<image:62>)
+web_search("man orange jacket rubble")
+web_search("earthquake rubble man")
+```
+
+# Search Result
+From [Source](https://www.theguardian.com/world/2025/apr/02/myanmar-earthquake-death-toll-monsoon-rain-forecast-mandalay-sagaing): 
+Content: "[Skip to main content](#maincontent)
+[Skip to navigation](#navigation)
+[Skip to navigation](#navigation)
+
+!A joint team of Myanmar and Turkish rescuers pull a man alive from the rubble of a hotel in the capital Naypyidaw, five days after a major earthquake struck central Myanmar. <image:9915>
+
+0:56
+
+Myanmar earthquake: man pulled alive from rubble after five days – video
+
+This article is more than **4 months old**
+
+Man pulled alive from Myanmar earthquake rubble after five days
+===============================================================
+
+This article is more than 4 months old
+
+Twenty-six-year-old rescued from hotel in Naypyidaw as agencies call for increased aid before monsoon
+
+A man has been pulled alive from the rubble of a hotel in [Myanmar](https://www.theguardian.com/world/myanmar)
+, five days after the country’s worst earthquake in a century flattened entire neighbourhoods and tore through temples, bridges and highways.
+
+A joint team of rescuers from [Myanmar](https://www.theguardian.com/world/myanmar)
+ and Turkey found the 26-year-old in the ruins of the building in the capital, Naypyidaw, after midnight, the fire service and the country’s ruling junta said.
+
+The disaster has killed more than 2,700 people, and the death toll is expected to surpass 3,000 on Wednesday, according to Myanmar’s military ruler, Min Aung Hlaing. Humanitarian agencies urged other countries to increase aid before the monsoon rains.
+
+Close to the epicentre, in the [devastated cities of Mandalay](https://www.theguardian.com/world/2025/mar/28/a-hospital-collapsed-right-in-front-of-me-myanmar-reels-after-earthquake)
+ and Sagaing, traumatised survivors slept in the street, with the stench of corpses trapped under the rubble permeating the disaster zone. Photograph: Nyein Chan Naing/EPA
+
+“The devastating impact of Friday’s earthquake is becoming clearer by the hour – this is a crisis on top of a crisis for Myanmar, where the humanitarian situation is already dire,” said Arif Noor, the Myanmar country director for the humanitarian agency Care.
+
+“[Rescue teams are still recovering](https://www.theguardian.com/world/2025/mar/29/myanmar-volunteers-dig-earthquake-victims)
+ those trapped under the rubble, and hospitals are overwhelmed. “You cannot ask for aid with one hand and bomb with the other,” said Amnesty’s Myanmar researcher Joe Freeman.
+
+The junta has declared a week of national mourning, with flags to fly at half mast on official buildings until 6 April “in sympathy for the loss of life and damages”.
+
+Explore more on these topics
+
+*   [Myanmar](/world/myanmar)
+    
+*   [Earthquakes](/world/earthquakes)
+    
+*   [Asia Pacific](/world/asia-pacific)
+    
+*   [Natural disasters](/world/natural--disasters)
+    
+*   [South and central Asia](/world/south-and-central-asia)
+    
+*   [news](/tone/news)
+    
+
+[Share](mailto:?subject=Man pulled alive from Myanmar earthquake rubble after five days&body=https://www.theguardian.com/world/2025/apr/02/myanmar-earthquake-death-toll-monsoon-rain-forecast-mandalay-sagaing?CMP=share_btn_url)
+
+[Reuse this content](https://syndication.theguardian.com/?url=https%3A%2F%2Fwww.theguardian.com%2Fworld%2F2025%2Fapr%2F02%2Fmyanmar-earthquake-death-toll-monsoon-rain-forecast-mandalay-sagaing&type=article&internalpagecode=world/2025/apr/02/myanmar-earthquake-death-toll-monsoon-rain-forecast-mandalay-sagaing "Reuse this content")
+
+More on this story
+------------------
+
+More on this story
+------------------
+
+*   [](https://www.theguardian.com/world/2025/apr/05/myanmar-earthquake-rebuild-junta-civil-war)
+    
+    ! <image:9936>
+    
+    ### Myanmar earthquake: woman trapped for days pulled alive from the rubble
+    
+*   [](https://www.theguardian.com/world/2025/mar/30/collapsed-buildings-myanmar-quake-rescuers-medics-struggle-task)
+    
+    ! There is a narrow chance for them to remain alive,” he said in a speech.
+
+Some agencies say the unofficial death toll could be as high as 10,000.
+
+[Aftermath of the Myanmar earthquake – a visual guide\
+\
+Read more](https://www.theguardian.com/world/2025/mar/31/aftermath-of-the-myanmar-earthquake-a-visual-guide)
+
+UN agencies said hospitals were overwhelmed and rescue efforts hindered by infrastructure damage and the civil war.
+
+Julie Bishop, the UN special envoy for Myanmar, urged all sides to immediately cease fire, permit humanitarian access and ensure aid workers are safe. <image:9935>
+    
+    ### Myanmar earthquake: China and others step into aid gap left by Trump cuts
+    
+*   [](https://www.theguardian.com/world/2025/mar/31/myanmar-earthquake-woman-rescued-alive-great-wall-hotel-mandalay)
+    
+    ! Water, food and medicine are in short supply, and the monsoon could hit in May.
+
+!A woman lies on a blanket on a pavement with boxes of belongings behind her <image:9919>[View image in fullscreen](#img-1)
+
+A woman resting at a temporary roadside shelter in Mandalay. The physical and mental scars of this catastrophe will last for decades.”
+
+Friday’s powerful quake is the latest in a succession of blows for the impoverished country of 53 million, which has been plagued by a civil war since the military seized power in a 2021 coup.
+
+[‘It’s beyond description’: Bodies pile up in mass graves as Myanmar grapples with quake toll\
+\
+Read more](https://www.theguardian.com/world/2025/apr/01/myanmar-earthquake-death-toll-unmarked-graves)
+
+The junta said on Wednesday that it was declaring a temporary ceasefire until 22 April to facilitate relief efforts, a day after armed resistance groups opposed to military rule declared unilateral temporary ceasefires.
+
+In its nightly news bulletin on Tuesday, the state-controlled MRTV quoted Min Aung Hlaing as saying the military had halted its offensives but that unspecified minority ethnic armies were planning to exploit the disaster."
+
+# Your Summary
+
+
+
+===== > RESPONSE:  < =====
+The Guardian published an article on April 2, 2025, about an earthquake in Myanmar. The article mentions a 26-year-old man pulled alive from the rubble of a hotel in Naypyidaw <image:9915>. The article also includes images of rescuers in orange jackets <image:9935>. The earthquake has killed more than 2,700 people.
+
+_________________________
+
+
+
+SummarizeResultPrompt - QUERY:
+
+# Instructions
+In order to find evidence that helps your fact-check, you just ran a web search which yielded a Search Result. **Your task right now is to summarize the Search Result.** What to include:
+* information that might be useful for the fact-check (see Record)
+* relevant images (refer to images by inserting their reference <image:k>)
+* if available: the release date as well as the author or the publisher (e.g. the media company) of the search result.
+
+Do NOT include:
+* advertisements
+* any other information not related to the Record or the Claim
+
+Additional rules:
+* Do not add any additional information besides the information in the Search Result.
+* If the Search Result doesn't contain any relevant information for the fact-checking work, simply print one word in capital letters: "NONE".
+* Keep your writing style like in the Examples 1, 2 and 3 provided to you.
+* Try to filter out relevant information even if the search result is in a different language.
+
+# Example 1
+The search result from America Today provides several photographs of the Notre-Dame Cathedral fire on April 15, 2019. <image:i>, <image:j>, <image:k>. None of the images show the Eiffel Tower in the background. 
+
+# Example 2
+NONE
+
+# Example 3
+The Guardian discusses a report blaming the Syrian government for a toxic gas attack and condemning their use of chemical weapons. The Guardian mentions the Chemical Weapons Convention and the responsibilities of Syria under the convention. According to The Guardian, The White House condemned the Assad regime for defying the norm against chemical weapons use.
+
+# Record
+## Claim
+Claim: "<image:62> This image shows a man from Gaza holding the hand of his son killed in an Israeli bombing in July, 2024."
+
+## Actions
+```
+geolocate(<image:62>)
+web_search("man orange jacket rubble")
+web_search("earthquake rubble man")
+```
+
+# Search Result
+From [Source](https://www.thehindu.com/news/international/man-rescued-from-rubble-five-days-after-myanmar-earthquake/article69404754.ece): 
+Content: "Man rescued from rubble five days after Myanmar earthquake
+==========================================================
+
+Shirtless and covered in dust, Naing Lin Tun appeared weak but conscious in a video released by the local fire department, as he was fitted with an IV drip and taken away
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Published \- April 02, 2025 08:16 pm IST - Bangkok
+
+AP
+
+READ LATER
+
+Remove [SEE ALL](https://www.thehindu.com/myaccount/?tab=bookmarks)
+
+PRINT
+
+![Earthquake survivor Tin Maung Htwe, who was rescued after five days of being trapped under the rubble of a collapsed building, is treated by medical personnel on an outdoor bed in the compound of a hospital in Sagaing on April 2, 2025](https://www.thehindu.com/theme/images/th-online/1x1_spacer.png "Earthquake survivor Tin Maung Htwe, who was rescued after five days of being trapped under the rubble of a collapsed building, is treated by medical personnel on an outdoor bed in the compound of a hospital in Sagaing on April 2, 2025")
+
+Earthquake survivor Tin Maung Htwe, who was rescued after five days of being trapped under the rubble of a collapsed building, is treated by medical personnel on an outdoor bed in the compound of a hospital in Sagaing on April 2, 2025 | Photo Credit: AFP
+
+Rescue crews in Myanmar pulled a 26-year-old man out alive from the rubble of the capital city hotel where he worked early on Wednesday (April 2, 2025), but most teams were finding only bodies five days after a massive earthquake hit the country.
+
+After using an endoscopic camera to pinpoint Naing Lin Tun's location in the rubble and confirm that he was alive, the man was gingerly pulled through a hole jackhammered through a floor and loaded on to a gurney nearly 108 hours after he was trapped in the hotel where he worked.
+
+[China urges firms to follow laws after Bangkok building collapse](https://www.thehindu.com/news/international/china-urges-firms-to-follow-laws-after-bangkok-building-collapse/article69402804.ece)
+
+! One body was removed from the rubble early Wednesday (April 2, 2025), raising the death total in Bangkok to 22 with 34 injured, primarily at the construction site.
+
+Myanmar has been wracked by civil war and the earthquake is making a dire humanitarian crisis even worse, with more than 3 million people displaced from their homes and nearly 20 million in need even before it hit, according to the United Nations.
+
+#### Claims of an attack on a Chinese Red Cross convoy
+
+The Three Brotherhood Alliance, one of a powerful group of militias that has taken a large swath of the country from the military, announced a unilateral one-month ceasefire on Tuesday (April 1, 2025) to facilitate the humanitarian response. State-run MRTV reported that the rescue in the city of Naypyitaw was carried out by a Turkish and local team and took more than nine hours.
+
+[The 7.7 magnitude earthquake](https://www.thehindu.com/news/international/myanmars-earthquake-death-toll-jumps-as-more-bodies-recovered-from-the-rubble/article69389350.ece)
+ hit midday Friday (March 28, 2025), toppling thousands of buildings, collapsing bridges and buckling roads. While not mentioning the Red Cross, he said security forces had fired into the air to deter a convoy that refused to stop near Ohn Ma Tee village, the site of recent fighting with the TNLA.
+
+Asked about he incident, Chinese Foreign Ministry spokesperson Guo Jiakun did not comment on the attack, but said “relief supplies provided by the Red Cross Society of China to Myanmar have arrived in Myanmar and are on the way to Mandalay,” adding that “rescue personnel and supplies are safe.”
+
+China is incredibly economically important to Myanmar, and also one of the military's largest suppliers with weapons, along with Russia.
+
+On Tuesday (April 1, 2025), Tom Andrews, a monitor on rights in Myanmar commissioned by the UN-backed Human Rights Council, said on X that military attacks must stop to facilitate aid.
+
+“The focus in Myanmar must be on saving lives, not taking them,” he said.
+
+[Myanmar earthquake: Survivors still being found but hopes begin to fade as deaths exceed 2,700](https://www.thehindu.com/news/international/myanmar-earthquake-survivors-still-being-found-but-hopes-begin-to-fade-as-deaths-exceed-2700/article69402785.ece)
+
+! <image:9948>
+
+#### Extent of devastation beyond major cities is still unclear
+
+Most of the details so far have come from Mandalay, Myanmar's second-largest city, which was near the epicentre of the earthquake, and the capital Naypyitaw, about 270 kilometres north of Mandalay.
+
+Many areas are without power, telephone or cell connections, and difficult to reach by road, but more reports are beginning to trickle in.
+
+In Singu township, about 65 kilometres north of Mandalay, 27 gold miners were killed were killed in a cave-in, the independent Democratic Voice of Burma reported.
+
+In the area of Inle Lake, northeast of the capital, many people died when homes built on wooden stilts in the water collapsed in the earthquake, the government's official Global New Light of Myanmar reported without providing specific figures.
+
+Published \- April 02, 2025 08:16 pm IST
+
+Read Comments
+
+READ LATER
+
+Remove [SEE ALL](https://www.thehindu.com/myaccount/?tab=bookmarks)
+
+PRINT
+
+### Related Topics
+
+[Myanmar](https://www.thehindu.com/tag/361-244/)
+ / [earthquake](https://www.thehindu.com/tag/667-663-651/)
+ / [World](https://www.thehindu.com/tag/244/)
+ / [Environmental disasters](https://www.thehindu.com/topic/Environmental_disasters_/)
+
+### Top News Today
+
+![](https://www.thehindu.com/theme/images/th-online/close-image-icon.svg)
+
+0 / 0
+
+Read in App
+
+![The Hindu](https://www.thehindu.com/theme/images/google-signin/th-online-icon.svg)
+
+Sign in to unlock member-only benefits!
+
+*   Access 10 free stories every month
+*   Save stories to read later
+*   Access to comment on every story
+*   Sign-up/manage your newsletter subscriptions with a single click
+*   Get notified by email for early access to discounts & offers on our products
+
+![Sign in](https://www.thehindu.com/theme/images/google-signin/group-12945.svg)
+
+! So far, 2,886 people have been reported dead in Myanmar and another 4,639 injured, according to state television MRTV, but local reports suggest much higher figures.
+
+The earthquake also rocked neighbouring Thailand, causing the collapse of a high-rise building under construction in Bangkok. The shadow opposition National Unity Government had already called a ceasefire for its forces.
+
+[Myanmar earthquake: Survivors still being found but hopes begin to fade as deaths exceed 2,700](https://www.thehindu.com/news/international/myanmar-earthquake-survivors-still-being-found-but-hopes-begin-to-fade-as-deaths-exceed-2700/article69402785.ece)
+
+! Most recently, an opposition militia belonging to the Brotherhood Alliance reported that the military fired on a relief convoy of nine Chinese Red Cross vehicles late Tuesday (April 1, 2025) on a road in the northern part of Shan state near Ohn Ma Tee village.
+
+The Ta'ang National Liberation Army said the Chinese Red Cross was bringing supplies to Mandalay and had reported its route to the military.
+
+But Major General Zaw Min Tun, spokesman for the military regime, told state-run MRTV that the convoy had not notified authorities of its route ahead of time. <image:9948>
+
+#### More international aid heads to Myanmar
+
+Countries have pledged millions in assistance to help Myanmar and humanitarian aid organisations with the monumental task ahead.
+
+Australia on Wednesday (April 2, 2025) said it was providing another $4.5 million, in addition to $1.25 million it had already committed, and had a rapid response team on the ground.
+
+India has flown in aid and sent two Navy ships with supplies as well as providing some 200 rescue workers. Agency for International Development arrived Tuesday (April 1, 2025) to determine how best to respond given limited US resources due to the slashing of the foreign aid budget and dismantling of the agency as an independent operation."
+
+# Your Summary
+
+
+
+===== > RESPONSE:  < =====
+The Hindu published an article on April 2, 2025, about a 7.7 magnitude earthquake in Myanmar. The article includes a photograph of an earthquake survivor being treated by medical personnel <image:9948>. The article also mentions a man rescued from the rubble five days after the earthquake. The article states that the earthquake also caused the collapse of a high-rise building under construction in Bangkok.
+
+_________________________
+
+
+
+SummarizeSummariesPrompt - QUERY:
+
+# Instructions
+You just retrieved web sources, each one summarized under "Web Sources". **Your task right now is to summarize the web source summaries.**
+
+Always adhere to the following rules:
+* Write only one to two paragraphs.
+* Include all URLs from the listed sources. Format them as Markdown hyperlinks.
+* Do not add any additional information besides the information in the summaries.
+* Include references (<image:k>) to all relevant images.
+
+# Record
+## Claim
+Claim: "<image:62> This image shows a man from Gaza holding the hand of his son killed in an Israeli bombing in July, 2024."
+
+## Actions
+```
+geolocate(<image:62>)
+web_search("man orange jacket rubble")
+web_search("earthquake rubble man")
+```
+
+## Web Sources
+**Web Search Result**
+
+From [Source](https://www.theguardian.com/world/2025/apr/02/myanmar-earthquake-death-toll-monsoon-rain-forecast-mandalay-sagaing): 
+Content: The Guardian published an article on April 2, 2025, about an earthquake in Myanmar. The article mentions a 26-year-old man pulled alive from the rubble of a hotel in Naypyidaw <image:9915>. The article also includes images of rescuers in orange jackets <image:9935>. The earthquake has killed more than 2,700 people.
+
+
+From [Source](https://www.thehindu.com/news/international/man-rescued-from-rubble-five-days-after-myanmar-earthquake/article69404754.ece): 
+Content: The Hindu published an article on April 2, 2025, about a 7.7 magnitude earthquake in Myanmar. The article includes a photograph of an earthquake survivor being treated by medical personnel <image:9948>. The article also mentions a man rescued from the rubble five days after the earthquake. The article states that the earthquake also caused the collapse of a high-rise building under construction in Bangkok.
+
+
+## Your Summary
+
+
+
+===== > RESPONSE:  < =====
+The Guardian published an article on April 2, 2025, about an earthquake in Myanmar, mentioning a 26-year-old man pulled alive from the rubble of a hotel in Naypyidaw <image:9915>. The article also includes images of rescuers in orange jackets <image:9935> and states that the earthquake has killed more than 2,700 people. The Hindu also published an article on April 2, 2025, about a 7.7 magnitude earthquake in Myanmar, including a photograph of an earthquake survivor being treated by medical personnel <image:9948>. The article mentions a man rescued from the rubble five days after the earthquake and the collapse of a high-rise building under construction in Bangkok.
+
+The articles can be found here: [https://www.theguardian.com/world/2025/apr/02/myanmar-earthquake-death-toll-monsoon-rain-forecast-mandalay-sagaing](https://www.theguardian.com/world/2025/apr/02/myanmar-earthquake-death-toll-monsoon-rain-forecast-mandalay-sagaing) and [https://www.thehindu.com/news/international/man-rescued-from-rubble-five-days-after-myanmar-earthquake/article69404754.ece](https://www.thehindu.com/news/international/man-rescued-from-rubble-five-days-after-myanmar-earthquake/article69404754.ece).
+
+_________________________
+
+
+
+DevelopPrompt - QUERY:
+
+# Instructions
+You just retrieved new Evidence. Now, **analyze the Claim's veracity using the evidence**. Always adhere to the following rules:
+* Focus on developing new insights. Do not repeat larger parts from the Record. Do not restate the Claim.
+* Write down your thoughts step-by-step. Whenever necessary, you may elaborate in more detail.
+* Depending on the topic's complexity, invest one to three paragraphs. The fewer, the better.
+* If you find that there is insufficient information to verify the Claim, explicitly state what information is missing.
+* If you cite web sources, always refer to them by including their URL as a Markdown hyperlink.
+* **Use information only from the recorded evidence**: Avoid inserting information that is not implied by the evidence. You may use commonsense knowledge, though.
+
+# Record
+## Claim
+Claim: "<image:62> This image shows a man from Gaza holding the hand of his son killed in an Israeli bombing in July, 2024."
+
+## Actions
+```
+geolocate(<image:62>)
+web_search("man orange jacket rubble")
+web_search("earthquake rubble man")
+```
+
+## Evidence
+### Evidence from `geolocate`
+The most likely countries where the image was taken are: {'Turkey': 0.8, 'Italy': 0.09, 'Albania': 0.01, 'Bulgaria': 0.01, 'France': 0.01, 'Netherlands': 0.01, 'Ukraine': 0.01, 'Andorra': 0.0, 'Argentina': 0.0, 'Australia': 0.0}
+
+### Evidence from `web_search`
+The search results include images of a man in an orange jacket walking through rubble, available on [Vecteezy](https://www.vecteezy.com/photo/59962955-a-man-in-an-orange-jacket-and-hard-hat-is-walking-through-rubble) <image:4729> and an AI-generated image from [Freepik](https://www.freepik.com/premium-ai-image/arafed-man-orange-black-jacket-walking-through-rubble-generative-ai_47607490.htm) <image:4775>. Additionally, there are various orange jackets and vests for men available on [LLBean.com](https://www.llbean.com/buy/mens-orange-jackets) <image:4736>, <image:4737>, <image:4740>, <image:4741>, <image:4743>, <image:4744>, <image:4745>, <image:4746>, <image:4747>, <image:4749>, <image:4750>, <image:4751>, <image:4752>, <image:4753>, <image:4754>, <image:4755>, <image:4756>, <image:4757>, <image:4758>, <image:4759>.
+
+
+### Evidence from `web_search`
+The Guardian published an article on April 2, 2025, about an earthquake in Myanmar, mentioning a 26-year-old man pulled alive from the rubble of a hotel in Naypyidaw <image:9915>. The article also includes images of rescuers in orange jackets <image:9935> and states that the earthquake has killed more than 2,700 people. The Hindu also published an article on April 2, 2025, about a 7.7 magnitude earthquake in Myanmar, including a photograph of an earthquake survivor being treated by medical personnel <image:9948>. The article mentions a man rescued from the rubble five days after the earthquake and the collapse of a high-rise building under construction in Bangkok.
+
+The articles can be found here: [https://www.theguardian.com/world/2025/apr/02/myanmar-earthquake-death-toll-monsoon-rain-forecast-mandalay-sagaing](https://www.theguardian.com/world/2025/apr/02/myanmar-earthquake-death-toll-monsoon-rain-forecast-mandalay-sagaing) and [https://www.thehindu.com/news/international/man-rescued-from-rubble-five-days-after-myanmar-earthquake/article69404754.ece](https://www.thehindu.com/news/international/man-rescued-from-rubble-five-days-after-myanmar-earthquake/article69404754.ece).
+
+
+# Your Analysis
+
+
+
+===== > RESPONSE:  < =====
+The claim is not supported by the evidence. The image's geolocation data suggests it was taken in Turkey. The search results show that the image could be related to an earthquake. The Guardian and The Hindu published articles about an earthquake in Myanmar in April 2025. The articles do not mention the image in the claim. Therefore, the claim is not supported by the evidence.
+
+The claim is also contradicted by the evidence, as the image is likely from Turkey, not Gaza. The evidence does not mention any Israeli bombing in July 2024.
+
+_________________________
+
+
+
+JudgePrompt - QUERY:
+
+# Instructions
+**Determine the Claim's veracity** by following these steps:
+1. Briefly summarize the key insights from the fact-check (see Record) in at most one paragraph.
+2. Write one paragraph about which one of the Decision Options applies best. Include the most appropriate decision option at the end and enclose it in backticks like `this`.
+
+
+
+
+## Decision Options
+* `not enough information`: The fact-check does not contain sufficient information to come to an conclusion. For example,there is substantial lack of evidence or the evidence is inconclusive, conflicting or self-contradictory. In the case of a lack of evidence, state which information exactly is missing. In particular, if no RESULTS or sources are available, pick this decision.
+* `false`: The claim is not factually accurate. This is the case if one of the following three conditions is met:(1) The claim is demonstrably false when it is disproven by evidence from multiple and reliable sources,(2) The claim or image is taken out of context, i.e. the origin, content and/or meaning of a statement or an image is misrepresented. For example, an old claim or an old image is mispresented in a new context in a misleading way,(3) There is not enough evidence to verify the claim or the evidence is conflicting or self-contradictory.
+* `true`: The claim is factually accurate when it is confirmed by evidence from multiple and reliable sources.
+
+# Record
+## Claim
+Claim: "<image:62> This image shows a man from Gaza holding the hand of his son killed in an Israeli bombing in July, 2024."
+
+## Actions
+```
+geolocate(<image:62>)
+web_search("man orange jacket rubble")
+web_search("earthquake rubble man")
+```
+
+## Evidence
+### Evidence from `geolocate`
+The most likely countries where the image was taken are: {'Turkey': 0.8, 'Italy': 0.09, 'Albania': 0.01, 'Bulgaria': 0.01, 'France': 0.01, 'Netherlands': 0.01, 'Ukraine': 0.01, 'Andorra': 0.0, 'Argentina': 0.0, 'Australia': 0.0}
+
+### Evidence from `web_search`
+The search results include images of a man in an orange jacket walking through rubble, available on [Vecteezy](https://www.vecteezy.com/photo/59962955-a-man-in-an-orange-jacket-and-hard-hat-is-walking-through-rubble) <image:4729> and an AI-generated image from [Freepik](https://www.freepik.com/premium-ai-image/arafed-man-orange-black-jacket-walking-through-rubble-generative-ai_47607490.htm) <image:4775>. Additionally, there are various orange jackets and vests for men available on [LLBean.com](https://www.llbean.com/buy/mens-orange-jackets) <image:4736>, <image:4737>, <image:4740>, <image:4741>, <image:4743>, <image:4744>, <image:4745>, <image:4746>, <image:4747>, <image:4749>, <image:4750>, <image:4751>, <image:4752>, <image:4753>, <image:4754>, <image:4755>, <image:4756>, <image:4757>, <image:4758>, <image:4759>.
+
+
+### Evidence from `web_search`
+The Guardian published an article on April 2, 2025, about an earthquake in Myanmar, mentioning a 26-year-old man pulled alive from the rubble of a hotel in Naypyidaw <image:9915>. The article also includes images of rescuers in orange jackets <image:9935> and states that the earthquake has killed more than 2,700 people. The Hindu also published an article on April 2, 2025, about a 7.7 magnitude earthquake in Myanmar, including a photograph of an earthquake survivor being treated by medical personnel <image:9948>. The article mentions a man rescued from the rubble five days after the earthquake and the collapse of a high-rise building under construction in Bangkok.
+
+The articles can be found here: [https://www.theguardian.com/world/2025/apr/02/myanmar-earthquake-death-toll-monsoon-rain-forecast-mandalay-sagaing](https://www.theguardian.com/world/2025/apr/02/myanmar-earthquake-death-toll-monsoon-rain-forecast-mandalay-sagaing) and [https://www.thehindu.com/news/international/man-rescued-from-rubble-five-days-after-myanmar-earthquake/article69404754.ece](https://www.thehindu.com/news/international/man-rescued-from-rubble-five-days-after-myanmar-earthquake/article69404754.ece).
+
+
+## Elaboration
+The claim is not supported by the evidence. The image's geolocation data suggests it was taken in Turkey. The search results show that the image could be related to an earthquake. The Guardian and The Hindu published articles about an earthquake in Myanmar in April 2025. The articles do not mention the image in the claim. Therefore, the claim is not supported by the evidence.
+
+The claim is also contradicted by the evidence, as the image is likely from Turkey, not Gaza. The evidence does not mention any Israeli bombing in July 2024.
+
+
+# Your Judgement
+
+
+
+===== > RESPONSE:  < =====
+The image is likely from Turkey, and the claim misrepresents the context. The image is not related to Gaza or an Israeli bombing. `false`
+_________________________
+
+
+
+SummarizeDocPrompt - QUERY:
+
+# Instructions
+You are provided with the record of a fact-check. It contains the Claim to be verified and a documentation of all the fact-checking work along the gathered evidence. Your task is to **summarize the fact-check**. That is, you provide a concise, one-paragraph justification for the final VERDICT based on the knowledge from the Record. Note:
+* Be truthful, brief, do not add any additional information besides the information given in the Record. 
+* Link key sources in your summary. Use Markdown notation for that. You may link them in-line.
+* Don't state the Claim again. Rather focus on the key insights of the fact-check.
+* Simply print just the summary.
+
+# Record
+## Claim
+Claim: "<image:62> This image shows a man from Gaza holding the hand of his son killed in an Israeli bombing in July, 2024."
+
+## Actions
+```
+geolocate(<image:62>)
+web_search("man orange jacket rubble")
+web_search("earthquake rubble man")
+```
+
+## Evidence
+### Evidence from `geolocate`
+The most likely countries where the image was taken are: {'Turkey': 0.8, 'Italy': 0.09, 'Albania': 0.01, 'Bulgaria': 0.01, 'France': 0.01, 'Netherlands': 0.01, 'Ukraine': 0.01, 'Andorra': 0.0, 'Argentina': 0.0, 'Australia': 0.0}
+
+### Evidence from `web_search`
+The search results include images of a man in an orange jacket walking through rubble, available on [Vecteezy](https://www.vecteezy.com/photo/59962955-a-man-in-an-orange-jacket-and-hard-hat-is-walking-through-rubble) <image:4729> and an AI-generated image from [Freepik](https://www.freepik.com/premium-ai-image/arafed-man-orange-black-jacket-walking-through-rubble-generative-ai_47607490.htm) <image:4775>. Additionally, there are various orange jackets and vests for men available on [LLBean.com](https://www.llbean.com/buy/mens-orange-jackets) <image:4736>, <image:4737>, <image:4740>, <image:4741>, <image:4743>, <image:4744>, <image:4745>, <image:4746>, <image:4747>, <image:4749>, <image:4750>, <image:4751>, <image:4752>, <image:4753>, <image:4754>, <image:4755>, <image:4756>, <image:4757>, <image:4758>, <image:4759>.
+
+
+### Evidence from `web_search`
+The Guardian published an article on April 2, 2025, about an earthquake in Myanmar, mentioning a 26-year-old man pulled alive from the rubble of a hotel in Naypyidaw <image:9915>. The article also includes images of rescuers in orange jackets <image:9935> and states that the earthquake has killed more than 2,700 people. The Hindu also published an article on April 2, 2025, about a 7.7 magnitude earthquake in Myanmar, including a photograph of an earthquake survivor being treated by medical personnel <image:9948>. The article mentions a man rescued from the rubble five days after the earthquake and the collapse of a high-rise building under construction in Bangkok.
+
+The articles can be found here: [https://www.theguardian.com/world/2025/apr/02/myanmar-earthquake-death-toll-monsoon-rain-forecast-mandalay-sagaing](https://www.theguardian.com/world/2025/apr/02/myanmar-earthquake-death-toll-monsoon-rain-forecast-mandalay-sagaing) and [https://www.thehindu.com/news/international/man-rescued-from-rubble-five-days-after-myanmar-earthquake/article69404754.ece](https://www.thehindu.com/news/international/man-rescued-from-rubble-five-days-after-myanmar-earthquake/article69404754.ece).
+
+
+## Elaboration
+The claim is not supported by the evidence. The image's geolocation data suggests it was taken in Turkey. The search results show that the image could be related to an earthquake. The Guardian and The Hindu published articles about an earthquake in Myanmar in April 2025. The articles do not mention the image in the claim. Therefore, the claim is not supported by the evidence.
+
+The claim is also contradicted by the evidence, as the image is likely from Turkey, not Gaza. The evidence does not mention any Israeli bombing in July 2024.
+
+
+## Final Judgement
+The image is likely from Turkey, and the claim misrepresents the context. The image is not related to Gaza or an Israeli bombing. `false`
+
+## Summary
+
+
+
+===== > RESPONSE:  < =====
+The image likely depicts a scene in Turkey, not Gaza, and is unrelated to an Israeli bombing, as suggested by the geolocation data and search results. The claim is further contradicted by the fact that the image is not related to the events described in the claim. Therefore, the claim is false.
+
+_________________________
+
+
+

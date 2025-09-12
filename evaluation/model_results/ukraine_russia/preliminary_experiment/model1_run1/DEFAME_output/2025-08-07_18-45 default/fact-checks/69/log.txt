@@ -1,0 +1,44 @@
+Extracting claims from Content: <image:21> This image shows an authentic Russian passport of deposed Syrian dictator Bashar al-Assad.
+'Claim: "<image:21> This image shows an authentic Russian passport of deposed Syrian dictator Bashar al-Assad."'
+Verifying Claim: "<image:21> This image shows an authentic Russian passport of deposed Syrian dictator Bashar al-Assad."
+Not enough information yet. Continuing fact-check...
+Searching google_vision with query: ImageQuery(limit=3, start_date=None, end_date=None, search_type='reverse', text='', image=<defame.common.medium.Image object at 0x7ffed2a647f0>)
+Skipping unsupported website: https://www.reddit.com/r/PassportPorn/comments/1268mgm/luhansk_passport/
+Skipping fact-checking website: https://www.misbar.com/en/factcheck/2024/12/20/the-image-allegedly-featuring-assads-passport-is-digitally-altered
+Got 7 new web source(s):
+	1. https://en.wikipedia.org/wiki/East_Slavic_name
+	2. https://commons.wikimedia.org/wiki/File:Pasport_RF.jpg
+	3. https://ukrainian-passport.com/blog/internal-russian-passport/
+	4. https://ringfree.com/?r=74661317
+	5. https://www.finatec-expertise.com/?f=74661317
+	6. https://www.ninjacart.com/?n=74661317
+	7. https://indiabr.com/products5.aspx?JFNO=Nu189246207&cid=119&m=1&g=11
+Useful result: From [Source](https://en.wikipedia.org/wiki/East_Slavic_name): Found exact image on website with title: East Slavic name - Wikipedia
+Content: The Wikipedia article "East Slavic name" discusses the traditional naming customs in East Slavic cultures, including Russia, Ukraine, and Belarus. It covers given names, patronymics, and family names, detailing their derivation, usage, and historical context. The article also touches on the Slavicization of foreign names and forms of address. The article includes an image of a Russian internal passport. <image:21>
+
+Useful result: From [Source](https://commons.wikimedia.org/wiki/File:Pasport_RF.jpg): Found exact image on website with title: File:Pasport RF.jpg - Wikimedia Commons
+Content: The search result is from Wikimedia Commons and shows a Russian passport. The passport was issued on December 17, 2004, by the Oktyabrsky District of Arkhangelsk. <image:2593> The passport's owner is Yevgeni Aleksandrovich Imyarek. The image is a public domain file.
+Useful result: From [Source](https://ukrainian-passport.com/blog/internal-russian-passport/): Found exact image on website with title: Internal Russian passport – Ukrainian background check
+Content: The website discusses Russian internal passports, including their format, how to read them, and how to identify fake ones. It provides examples of passport numbers and explains how to verify a passport's validity. The website also offers a service to verify passports. <image:21> is an example of a Russian internal passport.
+
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Bashar al-Assad Russian passport')
+Skipping unsupported website: https://x.com/QUSAY_NOOR_/status/1880459299006345620
+Skipping fact-checking website: https://www.misbar.com/en/factcheck/2024/12/20/the-image-allegedly-featuring-assads-passport-is-digitally-altered
+Got 3 new web source(s):
+	1. January 08, 2025 https://www.aol.com/fact-check-assad-passport-image-140122086.html
+	2. https://en.wikipedia.org/wiki/Bashar_al-Assad
+	3. December 28, 2024 https://english.nv.ua/nation/relatives-of-bashar-al-assad-arrested-at-beirut-airport-using-fake-passports-50477670.html
+Useful result: From [Source](https://www.aol.com/fact-check-assad-passport-image-140122086.html): 
+Content: The AOL article, published on January 8, 2025, fact-checks an image of a passport claimed to belong to Bashar al-Assad. The article states that the image is fake and has been photoshopped. The original passport image was found on Wikipedia. <image:2651>
+
+Useful result: From [Source](https://en.wikipedia.org/wiki/Bashar_al-Assad): 
+Content: The Wikipedia article discusses the Syrian civil war, including the fall of the Assad regime in 2024. It mentions Bashar al-Assad's birthdate (September 11, 1965) and his family. The article also mentions that in November 2024, Assad fled to Moscow and was granted political asylum. <image:21> is not mentioned in the search result.
+
+Useful result: From [Source](https://english.nv.ua/nation/relatives-of-bashar-al-assad-arrested-at-beirut-airport-using-fake-passports-50477670.html): 
+Content: The article from NV.ua discusses the arrest of relatives of Bashar al-Assad at Beirut airport on December 28, who were attempting to leave using fake passports. The article also mentions that Bashar al-Assad's regime collapsed and he fled to Moscow. <image:2674>
+
+The claim '<image:21> This image shows an authentic Russian passport of deposed Syrian dictator Bashar al-Assad.' is false.
+Justification: The claim is false. The image of the passport has been identified as photoshopped by an AOL article, and the original image was found on Wikipedia. Furthermore, there is evidence of Bashar al-Assad's relatives using fake passports, as reported by NV.ua.
+
+So, the overall veracity is: false
+Fact-check took 9:09 min.

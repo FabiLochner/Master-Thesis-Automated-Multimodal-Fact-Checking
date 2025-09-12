@@ -1,0 +1,30 @@
+Extracting claims from Content: <image:10200> This image shows the U.S. bombarding Yemen on December 22, 2024 in reprisal after Yemen launched an attack on Israel's capital.
+'Claim: "<image:10200> This image shows the U.S. bombarding Yemen on December 22, 2024 in reprisal after Yemen launched an attack on Israel's capital."'
+Verifying Claim: "<image:10200> This image shows the U.S. bombarding Yemen on December 22, 2024 in reprisal after Yemen launched an attack on Israel's capital."
+Not enough information yet. Continuing fact-check...
+Searching google_vision with query: ImageQuery(limit=3, start_date=None, end_date=None, search_type='reverse', text='', image=<defame.common.medium.Image object at 0x7ffed164b370>)
+Skipping unsupported website: https://www.youtube.com/watch?v=HBByGi57BRk
+Got 1 new web source(s):
+	1. https://www.aa.com.tr/ar/%D8%A7%D9%84%D8%AF%D9%88%D9%84-%D8%A7%D9%84%D8%B9%D8%B1%D8%A8%D9%8A%D8%A9/%D8%A5%D8%B3%D8%B1%D8%A7%D8%A6%D9%8A%D9%84-%D8%AA%D8%AF%D9%85%D8%B1-%D9%85%D9%82%D8%B1-%D9%81%D8%B6%D8%A7%D8%A6%D9%8A%D8%A9-%D8%A7%D9%84%D8%A3%D9%82%D8%B5%D9%89-%D8%A8%D8%BA%D8%B2%D8%A9/1309486
+Useful result: From [Source](https://www.aa.com.tr/ar/%D8%A7%D9%84%D8%AF%D9%88%D9%84-%D8%A7%D9%84%D8%B9%D8%B1%D8%A8%D9%8A%D8%A9/%D8%A5%D8%B3%D8%B1%D8%A7%D8%A6%D9%8A%D9%84-%D8%AA%D8%AF%D9%85%D8%B1-%D9%85%D9%82%D8%B1-%D9%81%D8%B6%D8%A7%D8%A6%D9%8A%D8%A9-%D8%A7%D9%84%D8%A3%D9%82%D8%B5%D9%89-%D8%A8%D8%BA%D8%B2%D8%A9/1309486): Found exact image on website with title: إسرائيل تدمر مقر فضائية الأقصى بغزة - Anadolu Ajansı
+Content: The image is from Anadolu Agency and shows the destruction of Al-Aqsa TV headquarters in Gaza by Israeli warplanes on November 12, 2018. <image:10200>
+
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='U.S. bombing Yemen December 22, 2024')
+Got 3 new web source(s):
+	1. December 23, 2024 https://www.theguardian.com/world/2024/dec/22/us-launches-airstrikes-against-houthi-targets-in-yemen
+	2. December 22, 2024 https://www.aljazeera.com/news/2024/12/22/us-army-says-two-navy-pilots-shot-down-over-red-sea-in-friendly-fire
+	3. December 16, 2024 https://www.reuters.com/world/us-airstrike-hits-houthi-command-control-facility-yemen-2024-12-16/
+Useful result: From [Source](https://www.theguardian.com/world/2024/dec/22/us-launches-airstrikes-against-houthi-targets-in-yemen): 
+Content: The Guardian published an article on December 22, 2024, reporting that the U.S. launched airstrikes against Houthi targets in Yemen. The strikes were in response to Houthi attacks against U.S. navy warships and merchant vessels. The article mentions that Israel launched strikes against ports and energy infrastructure in Houthi-held parts of Yemen on Thursday. <image:10344>
+
+Useful result: From [Source](https://www.aljazeera.com/news/2024/12/22/us-army-says-two-navy-pilots-shot-down-over-red-sea-in-friendly-fire): 
+Content: Al Jazeera published an article on December 22, 2024, stating that two U.S. Navy pilots were shot down over the Red Sea in a "friendly fire" incident. The article also mentions that Yemen's Houthi fighters claimed to have targeted the USS Harry S Truman. The article includes a link to a story about the Houthis hitting Tel Aviv, Israel, with a missile. <image:10200> is not in the search result.
+
+Useful result: From [Source](https://www.reuters.com/world/us-airstrike-hits-houthi-command-control-facility-yemen-2024-12-16/): 
+Content: Reuters reports that the U.S. military conducted an airstrike on December 16, 2024, against a Houthi command and control facility in Yemen. The article mentions that the Houthis have been attacking commercial shipping in the Red Sea.
+
+The claim '<image:10200> This image shows the U.S. bombarding Yemen on December 22, 2024 in reprisal after Yemen launched an attack on Israel's capital.' is false.
+Justification: The image in the claim is from 2018 and shows the destruction of Al-Aqsa TV headquarters in Gaza, as confirmed by a reverse image search ([Source](https://www.aa.com.tr/ar/%D8%A7%D9%84%D8%AF%D9%88%D9%84-%D8%A7%D9%84%D8%B9%D8%B1%D8%A8%D9%8A%D8%A9/%D8%A5%D8%B3%D8%B1%D8%A7%D8%A6%D9%8A%D9%84-%D8%AA%D8%AF%D9%85%D8%B1-%D9%85%D9%82%D8%B1-%D9%81%D8%B6%D8%A7%D8%A6%D9%8A%D8%A9-%D8%A7%D9%84%D8%A3%D9%82%D8%B5%D9%89-%D8%A8%D8%BA%D8%B2%D8%A9/1309486)). While the U.S. did conduct airstrikes in Yemen on December 22, 2024, the image does not depict this event.
+
+So, the overall veracity is: false
+Fact-check took 1:14 min.

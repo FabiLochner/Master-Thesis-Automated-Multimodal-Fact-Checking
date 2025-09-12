@@ -1,0 +1,23 @@
+Extracting claims from Content: Ukrainian President Volodymyr Zelenskyy started the 2022 war in Ukraine with Russia.
+'Claim: "Ukrainian President Volodymyr Zelenskyy started the 2022 war in Ukraine with Russia."'
+Verifying Claim: "Ukrainian President Volodymyr Zelenskyy started the 2022 war in Ukraine with Russia."
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Volodymyr Zelenskyy start war Ukraine Russia 2022')
+Got 3 new web source(s):
+	1. February 20, 2025 https://www.aljazeera.com/news/2025/2/20/fact-check-did-ukraine-start-its-war-with-russia-as-trump-claims
+	2. https://en.wikipedia.org/wiki/Russian_invasion_of_Ukraine
+	3. February 25, 2025 https://www.voanews.com/a/russia-uk-ambassador-falsely-claims-zelenskyy-started-russia-ukraine-war/7987874.html
+Useful result: From [Source](https://www.aljazeera.com/news/2025/2/20/fact-check-did-ukraine-start-its-war-with-russia-as-trump-claims): 
+Content: The Al Jazeera article, published on February 20, 2025, discusses claims that Ukraine started the 2022 war with Russia. <image:0> The article states that on February 24, 2022, Russian forces launched an invasion of Ukraine. The article mentions that Donald Trump has offered a false version of history. The article also includes a response from Ukrainian President Volodymyr Zelenskyy.
+
+Useful result: From [Source](https://en.wikipedia.org/wiki/Russian_invasion_of_Ukraine): 
+Content: The Wikipedia article "Russian invasion of Ukraine" states that the conflict began on February 24, 2022, with Russia's invasion of Ukraine. The article mentions that the conflict between the two countries began in 2014. The article also mentions that in December 2014, Ukraine's parliament voted to revoke the country's neutral status and seek membership of NATO. The article also mentions that the Normandy Format meeting in December 2019 would be the first and only meeting between Zelenskyy and Putin. <image:i>
+
+Useful result: From [Source](https://www.voanews.com/a/russia-uk-ambassador-falsely-claims-zelenskyy-started-russia-ukraine-war/7987874.html): 
+Content: Voice of America (VOA) published an article on February 25, 2025, stating that the Russian Ambassador to the UK falsely claimed that Zelenskyy started the war. The article states that the conflict began in 2014 when Russia annexed Crimea and covertly invaded eastern Ukraine. <image:2119>
+
+The claim 'Ukrainian President Volodymyr Zelenskyy started the 2022 war in Ukraine with Russia.' is false.
+Justification: The claim is false. Multiple sources, including Al Jazeera ([https://www.aljazeera.com/news/2025/2/20/fact-check-did-ukraine-start-its-war-with-russia-as-trump-claims](https://www.aljazeera.com/news/2025/2/20/fact-check-did-ukraine-start-its-war-with-russia-as-trump-claims)) and Wikipedia ([https://en.wikipedia.org/wiki/Russian_invasion_of_Ukraine](https://en.wikipedia.org/wiki/Russian_invasion_of_Ukraine)), indicate that the 2022 war began with Russia's invasion. The Voice of America ([https://www.voanews.com/a/russia-uk-ambassador-falsely-claims-zelenskyy-started-russia-ukraine-war/7987874.html](https://www.voanews.com/a/russia-uk-ambassador-falsely-claims-zelenskyy-started-russia-ukraine-war/7987874.html)) also supports this by reporting that the claim that Zelenskyy started the war is false.
+
+So, the overall veracity is: false
+Fact-check took 8:09 min.

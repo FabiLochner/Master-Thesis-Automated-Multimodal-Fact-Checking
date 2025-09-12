@@ -1,0 +1,38 @@
+Extracting claims from Content: <image:6> This image shows an Israeli helicopter shot down by Hezbollah amid clashes in Southern Lebanon on November 23, 2024.
+'Claim: "<image:6> This image shows an Israeli helicopter shot down by Hezbollah amid clashes in Southern Lebanon on November 23, 2024."'
+Verifying Claim: "<image:6> This image shows an Israeli helicopter shot down by Hezbollah amid clashes in Southern Lebanon on November 23, 2024."
+Not enough information yet. Continuing fact-check...
+Got 3 new web source(s):
+	1. https://www.timesofisrael.com/hamas-tried-to-down-an-idf-helicopter-during-fighting-this-month-report/
+	2. https://pesacheck.org/archive/2024/12/03
+	3. https://www.arabnews.pk/node/1472406/middle-east
+Useful result: From [Source](https://www.timesofisrael.com/hamas-tried-to-down-an-idf-helicopter-during-fighting-this-month-report/): Found exact image on website with title: Islamic Jihad tried to down an IDF chopper during fighting this month
+Content: The Times of Israel published an article about a Palestinian Islamic Jihad cell attempting to down an Israeli military helicopter in May 2019. The article includes an image of an Israeli helicopter shooting flares over the Gaza Strip <image:586>. The article also mentions that Israeli Air Force helicopters are equipped with anti-missile systems.
+
+Useful result: From [Source](https://pesacheck.org/archive/2024/12/03): Found exact image on website with title: All stories published by PesaCheck on December 03, 2024
+Content: The search result is from PesaCheck, published on December 3, 2024. It contains an article titled "MISSING CONTEXT: This image is not of an Israeli helicopter shot down in southern Lebanon". <image:6> is included in the article.
+
+Useful result: From [Source](https://www.arabnews.pk/node/1472406/middle-east): Found exact image on website with title: Gaza under fire: Israeli jets strike Hamas targets after Tel Aviv attack
+Content: The search result from Arab News PK contains an article about Israeli strikes on Hamas targets in Gaza on March 25, 2019. <image:588>, <image:589>, <image:590>. The article also includes an image of an Israeli helicopter shooting flares over the Gaza Strip on March 25, 2019. <image:590>. The article was updated on March 26, 2019. The search result also contains articles about the Israeli military intercepting a missile launched from Yemen on July 18, 2025. <image:606>. The search result also contains an article about the armed wing of Hamas accusing Israel of blocking a deal in talks for a temporary ceasefire and the release of hostages in Gaza on July 18, 2025.
+
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Israeli helicopter shot down Hezbollah Lebanon November 2024')
+Skipping fact-checking website: https://factcheck.afp.com/doc.afp.com.36NF2UW
+Skipping unsupported website: https://www.facebook.com/StandWithUs/videos/breaking-dramatic-footage-of-israeli-air-force-helicopter-shooting-down-explosiv/1281038736403820/
+Skipping fact-checking website: https://newsmeter.in/fact-check/israeli-copter-shot-down-in-south-lebanon-no-viral-image-is-old-739516
+Got 3 new web source(s):
+	1. November 02, 2024 https://www.timesofisrael.com/liveblog_entry/footage-shows-hezbollah-drone-from-lebanon-being-shot-down-by-iaf-helicopter-south-of-haifa/
+	2. https://en.wikipedia.org/wiki/2024_Israeli_invasion_of_Lebanon
+	3. November 27, 2024 https://factly.in/an-old-2019-photo-of-hamass-attack-on-israeli-helicopter-shared-as-hezbollah-attack-on-israel/
+Useful result: From [Source](https://www.timesofisrael.com/liveblog_entry/footage-shows-hezbollah-drone-from-lebanon-being-shot-down-by-iaf-helicopter-south-of-haifa/): 
+Content: The Times of Israel reports that an Israeli Air Force attack helicopter shot down a Hezbollah drone in the Binyamina area, south of Haifa. The event occurred on November 2, 2024. <image:6>
+
+Useful result: From [Source](https://en.wikipedia.org/wiki/2024_Israeli_invasion_of_Lebanon): 
+Content: The Wikipedia article discusses the 2024 Israeli invasion of Lebanon, which began on October 1, 2024, and ended with a ceasefire agreement on November 26, 2024. The conflict involved Israel and Hezbollah, with other groups also participating. The article details the timeline of events, including military engagements, airstrikes, and casualties. The article mentions that on November 23, 2024, an Israeli airstrike on a building in the Basta area of Beirut killed at least 29 people and injured 67 others. The article also mentions that on December 9, 2024, four IDF soldiers were killed in a tunnel explosion.
+
+Useful result: From [Source](https://factly.in/an-old-2019-photo-of-hamass-attack-on-israeli-helicopter-shared-as-hezbollah-attack-on-israel/): 
+Content: The search result from Factly.in states that the image <image:6> is from 2019 and shows a Hamas attack on an Israeli helicopter, not a recent Hezbollah attack. The article mentions that there are no recent reports of Israeli helicopters being shot down by Hezbollah. The article was published on November 23, 2024.
+
+The claim '<image:6> This image shows an Israeli helicopter shot down by Hezbollah amid clashes in Southern Lebanon on November 23, 2024.' is false.
+Justification: The claim is false. The image in the claim (<image:6>
+So, the overall veracity is: false
+Fact-check took 7:35 min.

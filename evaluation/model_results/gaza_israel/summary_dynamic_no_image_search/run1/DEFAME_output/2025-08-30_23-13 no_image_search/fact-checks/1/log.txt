@@ -1,0 +1,52 @@
+Extracting claims from Content: <image:10197> This image shows the ruins after a 7.9-magnitude earthquake in Myanmar on March 28, 2025.
+'Claim: "<image:10197> This image shows the ruins after a 7.9-magnitude earthquake in Myanmar on March 28, 2025."'
+Verifying Claim: "<image:10197> This image shows the ruins after a 7.9-magnitude earthquake in Myanmar on March 28, 2025."
+Not enough information yet. Continuing fact-check...
+Searching google_vision with query: ImageQuery(limit=3, start_date=None, end_date=None, search_type='reverse', text='', image=<defame.common.medium.Image object at 0x7ffee8271ba0>)
+Skipping fact-checking website: https://factcheck.afp.com/doc.afp.com.39432WD
+Skipping unsupported website: https://www.facebook.com/IQFact/posts/iknow-%C4%91%E1%BB%99ng-%C4%91%E1%BA%A5t-x%E1%BA%A3y-ra-do-nhi%E1%BB%81u-nguy%C3%AAn-nh%C3%A2n-kh%C3%A1c-nhau-nh%C6%B0ng-nh%C3%ACn-chung-c%C3%B3-th%E1%BB%83-chi/1077532197745936/
+Got 2 new web source(s):
+	1. https://hakkanews.tw/2025/04/02/190682/
+	2. https://tw.news.yahoo.com/%E9%8C%AF%E8%AA%A4-%E7%B6%B2%E5%82%B3%E7%B7%AC%E7%94%B87-9%E7%B4%9A%E5%9C%B0%E9%9C%87-%E6%BB%BF%E7%9B%AE%E7%98%A1%E7%97%8D%E7%9A%84%E5%A4%9A%E5%BC%B5%E7%85%A7%E7%89%87-%E6%97%A9%E6%96%BC%E7%B7%AC%E7%94%B8%E5%9C%B0%E9%9C%87%E7%81%BD%E6%83%85%E5%89%8D%E5%87%BA%E7%8F%BE-050500537.html
+Useful result: From [Source](https://hakkanews.tw/2025/04/02/190682/): Found exact image on website with title: 【錯誤】網傳緬甸7.9級地震？滿目瘡痍的多張照片？早於 ... - 客新聞
+Content: The search result from 客新聞 (hakkanews.tw) on April 2, 2025, states that the image <image:10197> is a screenshot from a video that was circulating on Facebook and TikTok as early as March 20, 2025, and was claimed to be from the Gaza region. The article states that the image is unrelated to the Myanmar earthquake on March 28, 2025. <image:10267>, <image:10269>, <image:10270>.
+
+Useful result: From [Source](https://tw.news.yahoo.com/%E9%8C%AF%E8%AA%A4-%E7%B6%B2%E5%82%B3%E7%B7%AC%E7%94%B87-9%E7%B4%9A%E5%9C%B0%E9%9C%87-%E6%BB%BF%E7%9B%AE%E7%98%A1%E7%97%8D%E7%9A%84%E5%A4%9A%E5%BC%B5%E7%85%A7%E7%89%87-%E6%97%A9%E6%96%BC%E7%B7%AC%E7%94%B8%E5%9C%B0%E9%9C%87%E7%81%BD%E6%83%85%E5%89%8D%E5%87%BA%E7%8F%BE-050500537.html): Found exact image on website with title: 【錯誤】網傳緬甸7.9級地震？滿目瘡痍的多張照片？早於緬甸地震 ...
+Content: The search result from Yahoo News contains an article that mentions an image that is circulating online, claiming to show the aftermath of a 7.9-magnitude earthquake in Myanmar on March 28, 2025. However, the article states that the image is actually a screenshot from a video that was circulating on Facebook and TikTok as early as March 20, 2025, and was claimed to be from the Gaza region. The article concludes that the image is unrelated to the Myanmar earthquake. <image:10322>, <image:10323>, <image:10324>.
+
+Not enough information yet. Continuing fact-check...
+INFO: Dropping action 'reverse_search' as it was already performed.
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='earthquake Myanmar March 28, 2025')
+Skipping unsupported website: https://www.usgs.gov/news/featured-story/m77-mandalay-burma-myanmar-earthquake
+Got 3 new web source(s):
+	1. https://en.wikipedia.org/wiki/2025_Myanmar_earthquake
+	2. August 11, 2025 https://disasterphilanthropy.org/disasters/2025-myanmar-and-thailand-earthquake/
+	3. https://www.sciencedirect.com/science/article/pii/S2950576325000017
+Useful result: From [Source](https://en.wikipedia.org/wiki/2025_Myanmar_earthquake): 
+Content: The search result is from Wikipedia and describes the 2025 Myanmar earthquake that occurred on March 28, 2025, with a magnitude of 7.7-7.9. <image:10197> is likely related to the earthquake. The earthquake's epicenter was near Mandalay, Myanmar. The article mentions damage in Myanmar, Thailand, and parts of China, with significant casualties and economic losses. The article also details international aid efforts and the impact of the Myanmar civil war.
+
+Useful result: From [Source](https://disasterphilanthropy.org/disasters/2025-myanmar-and-thailand-earthquake/): 
+Content: The search result from disasterphilanthropy.org discusses a 7.7-magnitude earthquake that struck central Myanmar on March 28, 2025. <image:10485>, <image:10489>, <image:10487>. The earthquake caused a high-rise building to collapse in Bangkok, Thailand. The article mentions that nearly 22 million people in Myanmar require humanitarian assistance.
+
+Useful result: From [Source](https://www.sciencedirect.com/science/article/pii/S2950576325000017): 
+Content: The search result from ScienceDirect discusses a case study about the March 28, 2025, Myanmar earthquake. The earthquake had a magnitude of Mw 7.7 and struck along the Sagaing Fault. The article is from the "Journal of Dynamic Disasters," Volume 1, Issue 2, published in June 2025. <image:10493>, <image:10494>
+
+Not enough information yet. Continuing fact-check...
+INFO: Dropping action 'reverse_search' as it was already performed.
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='image ruins after 7.9-magnitude earthquake Myanmar March 28, 2025')
+Skipping unsupported website: https://www.facebook.com/EarthSky/posts/this-may-be-the-1st-fault-rupture-from-an-earthquake-ever-caught-on-video-on-mar/1201928475310191/
+Skipping unsupported website: https://www.reddit.com/r/myanmar/comments/1kmc4na/before_and_after_photos_of_the_earthquake_by/
+Got 2 new web source(s):
+	1. March 29, 2025 https://www.npr.org/2025/03/29/g-s1-57186/photos-see-the-aftermath-of-the-earthquake-in-myanmar-and-thailand
+	2. March 29, 2025 https://www.cnn.com/2025/03/29/asia/before-after-myanmar-earthquake-intl-hnk
+Useful result: From [Source](https://www.npr.org/2025/03/29/g-s1-57186/photos-see-the-aftermath-of-the-earthquake-in-myanmar-and-thailand): 
+Content: The NPR article, published on March 29, 2025, features several photos documenting the aftermath of the earthquake in Myanmar and Thailand. The images show collapsed buildings, rescue efforts, and damage to historical sites. <image:10496>, <image:10513>, <image:10519>, <image:10497>, <image:10503>, <image:10505>, <image:10507>, <image:10508>, <image:10509>.
+
+Useful result: From [Source](https://www.cnn.com/2025/03/29/asia/before-after-myanmar-earthquake-intl-hnk): 
+Content: CNN published an article on March 29, 2025, discussing the destruction caused by a 7.7-magnitude earthquake in Myanmar on March 28, 2025. The article includes satellite images showing the damage in Mandalay, Myanmar. <image:10197>
+
+The claim '<image:10197> This image shows the ruins after a 7.9-magnitude earthquake in Myanmar on March 28, 2025.' is true.
+Justification: The claim is supported by the evidence. The CNN article from March 29, 2025, includes the image, confirming that it depicts the aftermath of the 7.7-magnitude earthquake in Myanmar on March 28, 2025 ([https://www.cnn.com/2025/03/29/asia/before-after-myanmar-earthquake-intl-hnk](https://www.cnn.com/2025/03/29/asia/before-after-myanmar-earthquake-intl-hnk)).
+
+So, the overall veracity is: true
+Fact-check took 12:49 min.

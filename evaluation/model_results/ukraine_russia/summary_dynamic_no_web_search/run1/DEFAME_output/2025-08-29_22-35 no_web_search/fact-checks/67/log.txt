@@ -1,0 +1,45 @@
+Extracting claims from Content: Russia offered assistance for the California wildfires from January 2025.
+'Claim: "Russia offered assistance for the California wildfires from January 2025."'
+Verifying Claim: "Russia offered assistance for the California wildfires from January 2025."
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='California wildfires January 2025 Russia assistance')
+Skipping fact-checking website: https://www.newsweek.com/fact-check-has-russia-offered-assistance-california-wildfire-disaster-2014213
+Got 3 new web source(s):
+	1. https://securingdemocracy.gmfus.org/inflaming-divides-russian-narratives-on-the-california-wildfires/
+	2. https://www.npr.org/2025/01/18/nx-s1-5265301/california-wildfires-private-firefighters
+	3. https://www.voanews.com/a/russia-exploits-wildfires-in-los-angeles-to-push-anti-u-s-anti-ukraine-propaganda/7938909.html
+Useful result: From [Source](https://securingdemocracy.gmfus.org/inflaming-divides-russian-narratives-on-the-california-wildfires/): 
+Content: The search result from securingdemocracy.gmfus.org contains an image from Sputnik <image:6560> that discusses California wildfires and Ukraine. The image's text mentions the LA County Fire Department donating equipment to Ukraine in 2022.
+
+Useful result: From [Source](https://www.npr.org/2025/01/18/nx-s1-5265301/california-wildfires-private-firefighters): 
+Content: The NPR article, published on January 18, 2025, discusses California wildfires. <image:6561>
+
+Useful result: From [Source](https://www.voanews.com/a/russia-exploits-wildfires-in-los-angeles-to-push-anti-u-s-anti-ukraine-propaganda/7938909.html): 
+Content: The Voice of America published an article about Russia exploiting wildfires in Los Angeles. <image:6563>
+
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Russia assistance California wildfires')
+Failed to download or open image: cannot identify image file <_io.BytesIO object at 0x7ffed161b650>
+Skipping unsupported website: https://www.youtube.com/watch?v=q3IjARUdgIY
+Got 3 new web source(s):
+	1. https://www.capradio.org/articles/2020/08/28/politifact-california-yes-trump-said-he-offered-russia-help-with-wildfires-no-he-didnt-deny-california-fire-assistance/
+	2. https://whyy.org/articles/california-wildfire-help-victims-los-angeles/
+	3. https://www.pbs.org/newshour/nation/how-to-help-the-victims-of-the-california-wildfires
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Russia offer assistance California wildfires January 2025')
+Skipping unsupported website: https://www.instagram.com/p/DE5MvyBzbYu/
+Skipping fact-checking website: https://www.newsweek.com/fact-check-has-russia-offered-assistance-california-wildfire-disaster-2014213
+Got 2 new web source(s):
+	1. https://www.cnn.com/weather/live-news/los-angeles-wildfires-palisades-eaton-california-01-10-25-hnk
+	2. https://united24media.com/latest-news/russian-occupation-head-in-kherson-offers-shelter-to-california-wildfire-victims-with-conditions-5056
+Useful result: From [Source](https://www.cnn.com/weather/live-news/los-angeles-wildfires-palisades-eaton-california-01-10-25-hnk): 
+Content: CNN published an article about the Los Angeles wildfires in January 2025 <image:6577>.
+
+Useful result: From [Source](https://united24media.com/latest-news/russian-occupation-head-in-kherson-offers-shelter-to-california-wildfire-victims-with-conditions-5056): 
+Content: The search result from united24media.com discusses a Russian occupation head in Kherson offering shelter to California wildfire victims. <image:6579>
+
+The claim 'Russia offered assistance for the California wildfires from January 2025.' is false.
+Justification: The fact-check reveals that while there were California wildfires in January 2025, and Russia was involved in exploiting the situation, there is no evidence to support the claim that Russia offered assistance for the wildfires. The search results show a Russian official offering shelter to victims, but not direct assistance for the fires. Therefore, the claim is unverified.
+
+So, the overall veracity is: false
+Fact-check took 0:39 min.

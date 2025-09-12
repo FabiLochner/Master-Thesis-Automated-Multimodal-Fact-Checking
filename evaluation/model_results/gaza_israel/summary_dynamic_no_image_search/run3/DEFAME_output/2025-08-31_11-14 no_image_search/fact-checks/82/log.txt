@@ -1,0 +1,40 @@
+Extracting claims from Content: <image:51> This image shows Israeli Finance Minister Smotrich, who previously threatened to invade Lebanon, taking shelter in an Israeli bomb shelter during Hezbollah's attack on Israel on August 25, 2024.
+'Claim: "<image:51> This image shows Israeli Finance Minister Smotrich, who previously threatened to invade Lebanon, taking shelter in an Israeli bomb shelter during Hezbollah's attack on Israel on August 25, 2024."'
+Verifying Claim: "<image:51> This image shows Israeli Finance Minister Smotrich, who previously threatened to invade Lebanon, taking shelter in an Israeli bomb shelter during Hezbollah's attack on Israel on August 25, 2024."
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Israeli Finance Minister Smotrich bomb shelter Hezbollah attack')
+Got 3 new web source(s):
+	1. July 28, 2024 https://www.bbc.com/news/articles/c2e4m6m1r4eo
+	2. https://en.wikipedia.org/wiki/Majdal_Shams_attack
+	3. July 28, 2024 https://www.timesofisrael.com/ministers-okay-netanyahu-gallant-to-decide-on-retaliation-for-deadly-rocket-strike/
+Useful result: From [Source](https://www.bbc.com/news/articles/c2e4m6m1r4eo): 
+Content: The BBC News article, published on July 28, 2024, discusses the escalating tensions between Israel and Hezbollah. It mentions Israeli Finance Minister Bezalel Smotrich's warning about Israel approaching all-out war with Hezbollah. The article also includes images of the aftermath of a rocket attack and the mourning of victims. <image:12261>, <image:12264>
+
+Useful result: From [Source](https://en.wikipedia.org/wiki/Majdal_Shams_attack): 
+Content: The Wikipedia article discusses the Majdal Shams attack that occurred on July 27, 2024, in the Israeli-occupied Golan Heights. The attack, a rocket strike on a football pitch, resulted in the deaths of 12 Syrian Druze children and injured at least 42 others. Israel blamed Hezbollah for the attack, while Hezbollah denied responsibility, claiming the pitch was hit by an errant Israeli Iron Dome projectile. The article is part of the Middle Eastern crisis (2023–present) and the Israel–Hezbollah conflict (2023–present). <image:51> shows a picture of Israeli Finance Minister Bezalel Smotrich visiting the site of the attack.
+
+Useful result: From [Source](https://www.timesofisrael.com/ministers-okay-netanyahu-gallant-to-decide-on-retaliation-for-deadly-rocket-strike/): 
+Content: The Times of Israel reports on a rocket strike in the Golan Heights on July 27, 2024, which Israel and the United States blamed on Hezbollah. <image:12268>, <image:12269>, <image:12270>. The article mentions that Finance Minister Bezalel Smotrich abstained from the vote on the response to the attack.
+
+Got 0 new web source(s):
+Not enough information yet. Continuing fact-check...
+INFO: Dropping action 'reverse_search' as it was already performed.
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Bezalel Smotrich Hezbollah attack August 25 2024 bomb shelter')
+Skipping fact-checking website: https://www.misbar.com/en/factcheck/2024/08/26/this-image-does-not-show-bezalel-smotrich-taking-shelter-following-the-recent-hezbollah-attack
+Got 3 new web source(s):
+	1. August 25, 2024 https://kashif.ps/en/index.php/2024/08/25/old-photo-of-israeli-ministers-in-shelter-republished-as-during-hezbollahs-recent-bombing-of-sites-in-israel/
+	2. August 25, 2024 https://www.theguardian.com/commentisfree/article/2024/aug/25/israels-attack-lebanon-peace-further-out-of-reach
+	3. September 27, 2024 https://www.timesofisrael.com/liveblog-september-27-2024/
+Useful result: From [Source](https://kashif.ps/en/index.php/2024/08/25/old-photo-of-israeli-ministers-in-shelter-republished-as-during-hezbollahs-recent-bombing-of-sites-in-israel/): 
+Content: The article from Kashif, published on August 25, 2024, discusses an old photo of Israeli ministers in a shelter, including Finance Minister Bezalel Smotrich. The article states that the photo was taken on October 7, 2023, and was republished with the false claim that it was taken during Hezbollah's recent bombing of sites in Israel. <image:12287>, <image:12285>. The article mentions that the Israeli occupation army launched preemptive strikes on southern Lebanon on August 25, 2024.
+
+Useful result: From [Source](https://www.theguardian.com/commentisfree/article/2024/aug/25/israels-attack-lebanon-peace-further-out-of-reach): 
+Content: The Guardian published an article on August 25, 2024, discussing the escalation of fighting between Israel and Hezbollah in Lebanon. The article mentions Israeli Finance Minister Bezalel Smotrich. <image:12289>, <image:12290>.
+
+Useful result: From [Source](https://www.timesofisrael.com/liveblog-september-27-2024/): 
+Content: The Times of Israel's live blog from September 27, 2024, reports on the ongoing conflict between Israel and Hezbollah. It mentions rocket sirens in several areas, including Tel Aviv and Safed, and an Israeli airstrike in Beirut. The IDF announced airstrikes against Hezbollah targets in southern Lebanon. The article also mentions that Prime Minister Benjamin Netanyahu's far-right allies, including Bezalel Smotrich, hailed his UN speech. <image:51>
+The claim '<image:51> This image shows Israeli Finance Minister Smotrich, who previously threatened to invade Lebanon, taking shelter in an Israeli bomb shelter during Hezbollah's attack on Israel on August 25, 2024.' is false.
+Justification: The claim is false. The image depicts Israeli Finance Minister Smotrich, but the photo was taken on October 7, 2023, not during an attack on August 25, 2024, as stated in the claim, according to the [Kashif article](https://kashif.ps/en/index.php/2024/08/25/old-photo-of-israeli-ministers-in-shelter-republished-as-during-hezbollahs-recent-bombing-of-sites-in-israel/).
+
+So, the overall veracity is: false
+Fact-check took 4:33 min.

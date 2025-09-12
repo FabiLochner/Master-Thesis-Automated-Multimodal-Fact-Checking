@@ -1,0 +1,33 @@
+Extracting claims from Content: <image:10233> This image shows two children in Gaza in April 2025 found dead under the rubble of their home two months after an Israeli airstrike destroyed it.
+'Claim: "<image:10233> This image shows two children in Gaza in April 2025 found dead under the rubble of their home two months after an Israeli airstrike destroyed it."'
+Verifying Claim: "<image:10233> This image shows two children in Gaza in April 2025 found dead under the rubble of their home two months after an Israeli airstrike destroyed it."
+Not enough information yet. Continuing fact-check...
+Searching google_vision with query: ImageQuery(limit=3, start_date=None, end_date=None, search_type='reverse', text='', image=<defame.common.medium.Image object at 0x7ffeca3524a0>)
+Skipping unsupported website: https://www.facebook.com/ONENewsPH/posts/baguio-museums-the-mummyvisitors-can-catch-a-glimpse-of-a-real-mummy-in-the-bagu/1526199084452639/
+Skipping fact-checking website: https://www.misbar.com/en/factcheck/2025/04/14/photo-mummified-children-bolivia-falsely-circulated-dead-children-gaza
+Skipping unsupported website: https://www.instagram.com/p/DNjeaRCtR_B/
+Got 1 new web source(s):
+	1. https://kashif.ps/en/index.php/2025/04/14/image-of-two-mummified-children-in-a-bolivian-museum-goes-viral-as-from-gaza/
+Useful result: From [Source](https://kashif.ps/en/index.php/2025/04/14/image-of-two-mummified-children-in-a-bolivian-museum-goes-viral-as-from-gaza/): Found exact image on website with title: Image of two mummified children in a Bolivian museum goes viral as ...
+Content: The image in the claim shows two mummified children from a Bolivian museum, not children found under the rubble in Gaza. The image was posted on Instagram with the caption "Two children found two months later under the rubble of their home." The article was published on April 14, 2025, by Nadeen. <image:10233>, <image:11636>, <image:11637>.
+
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='children found under rubble Gaza')
+Skipping unsupported website: https://www.youtube.com/watch?v=hFoGwBHP1V8
+Got 3 new web source(s):
+	1. June 24, 2024 https://reliefweb.int/report/occupied-palestinian-territory/gazas-missing-children-over-20000-children-estimated-be-lost-disappeared-detained-buried-under-rubble-or-mass-graves-0
+	2. https://www.savethechildren.net/gaza-missing-children
+	3. December 04, 2023 https://www.bbc.com/news/world-middle-east-67614139
+Useful result: From [Source](https://reliefweb.int/report/occupied-palestinian-territory/gazas-missing-children-over-20000-children-estimated-be-lost-disappeared-detained-buried-under-rubble-or-mass-graves-0): 
+Content: The search result from Reliefweb, published on June 25, 2024, discusses the situation of children in Gaza. It estimates that approximately 4,000 children are likely missing under the rubble. The article also mentions that over 14,000 children have been killed in Gaza since October.
+
+Useful result: From [Source](https://www.savethechildren.net/gaza-missing-children): 
+Content: The Save the Children website discusses the missing children of Gaza. It states that at least 10,000 people are reported missing under the rubble, and it is estimated that at least 5,160 children are dead under the rubble. The website also mentions mass graves and the detention of children. <image:10233> is not mentioned.
+
+Useful result: From [Source](https://www.bbc.com/news/world-middle-east-67614139): 
+Content: The BBC News article, published on December 4, 2023, discusses the plight of children in Gaza who have lost their families due to the conflict. It mentions the phrase "WCNSF - wounded child, no surviving family" used by medics. The article includes images of children injured in airstrikes, including Muna Alwan and Ahmed Shabat. <image:11655>, <image:11656>, <image:11658>.
+
+The claim '<image:10233> This image shows two children in Gaza in April 2025 found dead under the rubble of their home two months after an Israeli airstrike destroyed it.' is false.
+Justification: The image in the claim, which purports to show children found in Gaza, actually depicts mummified children from a Bolivian museum, as confirmed by a reverse image search ([Source](https://kashif.ps/en/index.php/2025/04/14/image-of-two-mummified-children-in-a-bolivian-museum-goes-viral-as-from-gaza/)). Therefore, the claim is false.
+
+So, the overall veracity is: false
+Fact-check took 1:06 min.

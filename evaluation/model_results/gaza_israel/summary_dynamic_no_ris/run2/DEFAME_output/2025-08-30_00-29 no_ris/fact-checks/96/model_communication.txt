@@ -1,0 +1,2188 @@
+PlanPrompt - QUERY:
+
+# Instructions
+The available knowledge is insufficient to assess the Claim. Therefore, **propose a set of actions** to retrieve new and helpful evidence. Adhere to the following rules:
+* The actions available are listed under Valid Actions, including a short description for each action. No other actions are possible at this moment. 
+* For each action, use the formatting as specified in Valid Actions.
+* Include all actions in a single Markdown code block at the end of your answer.
+* Propose as few actions as possible, but as much as needed. Do not propose similar or previously used actions.
+
+
+
+## Valid Actions
+* `web_search`
+   * Description: Run an open web search on Google or DuckDuckGO to retrieve any related webpage.
+   * How to use: Do not use this with a previously used or similar query from previous web searches. If a previous web search did not yield any results, use a very different query.
+   * Format: web_search("your web search query goes here")
+
+* `image_search`
+   * Description: Run an image search on Google to retrieve related images for a given query.
+   * How to use: This is a helpful tool for fact-checking images. Use this to retrieve images associated with a specific keyword or phrase. Ensure that the query is clear and specific to improve search accuracy. If no relevant images are found, refine the query or use more descriptive terms.
+   * Format: image_search("your image search query goes here")
+
+* `geolocate`
+   * Description: Performs geolocation to determine the country where an image was taken.
+   * How to use: Provide an image and the model will determine the most likely countries where it was taken.
+   * Format: geolocate(<image:k>), where `k` is the image's ID
+
+# Example: web_search()
+
+## Claim
+Text: "New Zealand’s new Food Bill bans gardening"
+Claim date: October 29, 2020
+
+...
+
+## Actions
+```
+web_search("New Zealand Food Bill 2020")
+web_search("New Zealand Food Bill gardening ban")
+```
+
+# Example: image_search()
+
+## Claim
+Text: "Chinese officials in white protective hazmat suits carried people down a hallway to be quarantined for having COVID-19 in November 2022."
+
+...
+
+ACTIONS:
+```
+image_search("China officials white suits carry people")
+image_search("China officials carry people COVID quarantine 2022")
+```
+
+# Example: geolocate()
+
+## Claim
+Text: "<image:k> shows a nuclear weapons facility in Usbekistan."
+
+...
+
+## Actions
+```
+geolocate(<image:k>)
+```
+
+# Record
+## Claim
+Claim: "<image:63> This image shows Mayar Hamida (9 years old) and Bilal Hamida (6 years old) who were killed by Israel along with their mother and grandmother at Al-Jaoni UN school in Al-Nuseirat refugee camp on July, 6 2024."
+
+# Your Actions
+
+
+
+===== > RESPONSE:  < =====
+```
+geolocate(<image:63>)
+web_search("Mayar Hamida Bilal Hamida Al-Nuseirat refugee camp")
+```
+_________________________
+
+
+
+SummarizeResultPrompt - QUERY:
+
+# Instructions
+In order to find evidence that helps your fact-check, you just ran a web search which yielded a Search Result. **Your task right now is to summarize the Search Result.** What to include:
+* information that might be useful for the fact-check (see Record)
+* relevant images (refer to images by inserting their reference <image:k>)
+* if available: the release date as well as the author or the publisher (e.g. the media company) of the search result.
+
+Do NOT include:
+* advertisements
+* any other information not related to the Record or the Claim
+
+Additional rules:
+* Do not add any additional information besides the information in the Search Result.
+* If the Search Result doesn't contain any relevant information for the fact-checking work, simply print one word in capital letters: "NONE".
+* Keep your writing style like in the Examples 1, 2 and 3 provided to you.
+* Try to filter out relevant information even if the search result is in a different language.
+
+# Example 1
+The search result from America Today provides several photographs of the Notre-Dame Cathedral fire on April 15, 2019. <image:i>, <image:j>, <image:k>. None of the images show the Eiffel Tower in the background. 
+
+# Example 2
+NONE
+
+# Example 3
+The Guardian discusses a report blaming the Syrian government for a toxic gas attack and condemning their use of chemical weapons. The Guardian mentions the Chemical Weapons Convention and the responsibilities of Syria under the convention. According to The Guardian, The White House condemned the Assad regime for defying the norm against chemical weapons use.
+
+# Record
+## Claim
+Claim: "<image:63> This image shows Mayar Hamida (9 years old) and Bilal Hamida (6 years old) who were killed by Israel along with their mother and grandmother at Al-Jaoni UN school in Al-Nuseirat refugee camp on July, 6 2024."
+
+## Actions
+```
+geolocate(<image:63>)
+web_search("Mayar Hamida Bilal Hamida Al-Nuseirat refugee camp")
+```
+
+# Search Result
+From [Source](https://www.cnn.com/2024/07/19/middleeast/gaza-neighborhood-israeli-hostages-intl-cmd): 
+Content: "They describe being confined among the civilian population, rather than in Hamas’ vast tunnel network under Gaza.
+
+In the aftermath of last month’s rescue, neighbors in Nuseirat, a refugee camp in central Gaza, told CNN they were shocked to learn that Ahmed Aljamal, a physician, and his family had kept hostages in their midst.
+
+“Had we known, had he told us, we would have taken safety precautions, hide or move to somewhere else,” one neighbor, Abu Muhammad El Tahrawi, said.
+
+Dr. [](#maincontent)
+
+[World](https://www.cnn.com/world)
+ [Middle East](https://www.cnn.com/world/middle-east)
+ • 8 min read
+
+‘He was a pious man’: The Gaza neighborhood shocked to find Israeli hostages in their midst
+===========================================================================================
+
+ [![Florence Davey-Attlee](https://media.cnn.com/api/v1/images/stellar/prod/230706143854-florence-davey-attlee.jpg?c=16x9&q=h_270,w_480,c_fill/c_thumb,g_face,w_100,h_100)](https://www.cnn.com/profiles/florence-davey-attlee)
+[![Jeremy Diamond](https://media.cnn.com/api/v1/images/stellar/prod/220324100636-diamond22.jpg?c=16x9&q=h_270,w_480,c_fill/c_thumb,g_face,w_100,h_100)](https://www.cnn.com/profiles/jeremy-diamond)
+
+By [Florence Davey-Attlee](https://www.cnn.com/profiles/florence-davey-attlee)
+, Ibrahim Dahman, Eyad Kourdi, [Jeremy Diamond](https://www.cnn.com/profiles/jeremy-diamond)
+ and Avery Schmitz, CNN
+
+8 min read
+
+Updated 8:25 AM EDT, Fri July 19, 2024
+
+[](mailto:?subject=CNN%20content%20share&body=Check%20out%20this%20article%3A%0Ahttps%3A%2F%2Fwww.cnn.com%2F2024%2F07%2F19%2Fmiddleeast%2Fgaza-neighborhood-israeli-hostages-intl-cmd "Share with email")
+
+Link Copied!
+
+Follow:
+
+The Middle East [See your latest updates](/follow?iid=follow_see_all_article&source=acq_web_experiments_follow_card-social-bar-all)
+
+![Palestinians walk past debris a day after an operation by the Israeli Special Forces in the Nuseirat camp, in the central Gaza Strip, on June 9, 2024.](https://media.cnn.com/api/v1/images/stellar/prod/gettyimages-2156191524.jpg?c=16x9&q=h_833,w_1480,c_fill)
+
+Palestinians walk past debris a day after an operation by the Israeli Special Forces in the Nuseirat camp, in the central Gaza Strip, on June 9, 2024.
+
+Majdi Fathi/NurPhoto/Getty Images
+
+CNN  — 
+
+The Aljamal family was widely respected in Gaza’s Nuseirat camp. Mkhaimar Abusada, associate professor of Political Science at Al-Azhar University in Gaza, who is now based in the Egyptian capital of Cairo.
+
+A higher proportion of Gazans are more broadly supportive of armed resistance, the polling suggests, despite more than nine months of war that has obliterated the strip.
+
+![Civil defense teams and locals investigate the rubble after the Israeli operation in Nuseirat camp, Gaza, on June 8, 2024.](https://media.cnn.com/api/v1/images/stellar/prod/gettyimages-2156035860.jpg?q=w_1110,c_fill)
+
+Civil defense teams and locals investigate the rubble after the Israeli operation in Nuseirat camp, Gaza, on June 8, 2024.
+
+Ashraf Amra/Anadolu/Getty Images
+
+Some people who were not affiliated with Hamas or other Palestinian militant groups took part in the October 7 incursion into southern Israel, streaming through the border fence after it was breached by fighters – some stealing from Israeli communities and others taking hostages back into Gaza. We did not know how it would come and in what horrific way it would happen, but we were aware that it would inevitably come.”
+
+As the three hostages were rescued from the Aljamal house, around 200 meters (650 feet) away Israeli forces carried out a simultaneous raid on a second apartment block – which was home to the Abu Nar family, according to Israeli officials – to retrieve Argamani.
+
+Argamani had become one of the most recognized Israeli hostages when widely circulated footage showed her being hoisted onto the back of a motorcycle and driven away from the Nova music festival on October 7 as her partner was seized and made to walk with his hands behind his back.
+
+[![Palestinians inspect the damage and debris a day after an operation by the Israeli Special Forces in the Nuseirat camp, in the central Gaza Strip on June 9, 2024, amid the ongoing conflict between Israel and the Palestinian Hamas militant group. (Photo by Eyad BABA / AFP) (Photo by EYAD BABA/AFP via Getty Images)](https://media.cnn.com/api/v1/images/stellar/prod/gettyimages-2156163697.jpg?c=16x9&q=h_144,w_256,c_fill)\
+\
+Palestinians inspect the damage and debris a day after an operation by the Israeli Special Forces in the Nuseirat camp, in the central Gaza Strip on June 9, 2024, amid the ongoing conflict between Israel and the Palestinian Hamas militant group. Three relatives of Abu Nar also posted on social media announcing he had been killed by Israeli forces that day.
+
+CNN cannot independently confirm whether Abu Nar was involved in holding Argamani and his relatives have not responded to requests for comment.
+
+‘A normal man’
+--------------
+
+Neighbors of the Abu Nar house in Nuseirat told CNN they saw Israeli special forces enter and leave the building without much of a fight.
+
+Bilal Mazhar, a 16-year-old student, said his window was opposite the window of the apartment in which Argamani was being held, just half a meter away, but he never saw any sign of her presence until Israeli forces brought her out.
+
+“They pulled her out normally and no one intervened, and there was no shooting at them,” Mazhar said.
+
+Mohamed Ahmad Abu Nar seemed to share very little online about his life, and local people were reluctant to share many details about the Abu Nar family, but they did express surprise and concern that a hostage had been held in their midst.
+
+“He had young children at home,” said Khalil Al-Kahlot, a civil servant in Gaza. In the weeks before Israel’s hostage raid, the Aljamal family had been continuing as usual, outwardly at least, and Abdallah’s most recent article for the Palestine Chronicle was published just the day before.
+
+Then, on the morning of June 8, Israeli forces stormed Nuseirat.
+
+Zainab Aljamal, Abdallah’s sister, who was in the family house at the time of the raid, wrote a Facebook post that day describing what happened. Her family members told Israeli media she had been held by a relatively well-off family who made Argamani wash dishes for the household, reportedly telling her she was lucky to be held by them as other hostages were experiencing much worse.
+
+In a video released by the Israel Defense Forces (IDF) that shows Argamani’s rescue, troops are seen inside an apartment on the upper floor of a building, passing a small kitchen.
+
+The Israeli Prime Minister’s Office told CNN she was held by the Abu Nar family but did not provide further details.
+
+According to unofficial lists of those killed circulated on Arabic-language media and social media, Mohamed Ahmad Abu Nar died alongside his wife and child in Israel’s  Nuseirat operation last month. “No one would expect him to hold a hostage like this, in homes and among people.”
+
+![Noa Argamani, a rescued hostage, embraces her father, Yakov Argamani, after her rescue from central Gaza by Israeli forces on June 8, 2024.](https://media.cnn.com/api/v1/images/stellar/prod/08-2024-06-08t143954z-1974139584-rc2278asyjze-rtrmadp-3-israel-palestinians-hostages-jpg.jpg?q=w_1110,c_fill)
+
+Noa Argamani, a rescued hostage, embraces her father, Yakov Argamani, after her rescue from central Gaza by Israeli forces on June 8, 2024.
+
+Israeli Army/Handout/Reuters
+
+Al-Kahlot, who told CNN he’d been in Nuseirat for the past four months, said Mohamed Ahmed was “ordinary” and “a normal man,” adding that he had never suspected he was affiliated with Hamas.
+
+“They are people in Hamas, but we did not know that,” said another neighbor of the Abu Nar family. “If we had known there was something there, no one would have stayed in the area.”
+
+After Israeli forces evacuated the hostages, airstrikes hit both of the buildings they were rescued from and now only rubble remains at each site.
+
+More than 270 Palestinians were killed in Nuseirat on June 8, according to Gaza health ministry officials, which doesn’t distinguish between militants and civilians, and hundreds more were injured."
+
+# Your Summary
+
+
+
+===== > RESPONSE:  < =====
+The CNN article, published on July 19, 2024, discusses an Israeli operation in the Nuseirat refugee camp in Gaza on June 8, 2024, during which hostages were rescued. The article mentions that over 270 Palestinians were killed in Nuseirat on June 8, according to Gaza health ministry officials. <image:63> is not mentioned in the article.
+
+_________________________
+
+
+
+SummarizeResultPrompt - QUERY:
+
+# Instructions
+In order to find evidence that helps your fact-check, you just ran a web search which yielded a Search Result. **Your task right now is to summarize the Search Result.** What to include:
+* information that might be useful for the fact-check (see Record)
+* relevant images (refer to images by inserting their reference <image:k>)
+* if available: the release date as well as the author or the publisher (e.g. the media company) of the search result.
+
+Do NOT include:
+* advertisements
+* any other information not related to the Record or the Claim
+
+Additional rules:
+* Do not add any additional information besides the information in the Search Result.
+* If the Search Result doesn't contain any relevant information for the fact-checking work, simply print one word in capital letters: "NONE".
+* Keep your writing style like in the Examples 1, 2 and 3 provided to you.
+* Try to filter out relevant information even if the search result is in a different language.
+
+# Example 1
+The search result from America Today provides several photographs of the Notre-Dame Cathedral fire on April 15, 2019. <image:i>, <image:j>, <image:k>. None of the images show the Eiffel Tower in the background. 
+
+# Example 2
+NONE
+
+# Example 3
+The Guardian discusses a report blaming the Syrian government for a toxic gas attack and condemning their use of chemical weapons. The Guardian mentions the Chemical Weapons Convention and the responsibilities of Syria under the convention. According to The Guardian, The White House condemned the Assad regime for defying the norm against chemical weapons use.
+
+# Record
+## Claim
+Claim: "<image:63> This image shows Mayar Hamida (9 years old) and Bilal Hamida (6 years old) who were killed by Israel along with their mother and grandmother at Al-Jaoni UN school in Al-Nuseirat refugee camp on July, 6 2024."
+
+## Actions
+```
+geolocate(<image:63>)
+web_search("Mayar Hamida Bilal Hamida Al-Nuseirat refugee camp")
+```
+
+# Search Result
+From [Source](https://en.wikipedia.org/wiki/Nuseirat_rescue_and_massacre): 
+Content: "[Jump to content](#bodyContent)
+
+[![Page extended-confirmed-protected](//upload.wikimedia.org/wikipedia/en/thumb/8/8c/Extended-protection-shackle.svg/20px-Extended-protection-shackle.svg.png)](/wiki/Wikipedia:Protection_policy#extended "This article is extended-confirmed-protected.")
+
+From Wikipedia, the free encyclopedia
+
+2024 Israeli operation and mass killings
+
+| Nuseirat rescue and massacre |     |
+| --- | --- |
+| Part of the [Gaza war](/wiki/Gaza_war "Gaza war") |     |
+| [![Nuseirat refugee camp is located in the Gaza Strip](//upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Israel_outline_northwest_negev.png/250px-Israel_outline_northwest_negev.png)](/wiki/File:Israel_outline_northwest_negev.png "Nuseirat refugee camp is located in the Gaza Strip")<br><br>![Nuseirat refugee camp](//upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Red_pog.svg/20px-Red_pog.svg.png)<br><br>Nuseirat refugee camp<br><br>Location within the Gaza Strip |     |
+| Location | [Nuseirat refugee camp](/wiki/Nuseirat_refugee_camp "Nuseirat refugee camp")<br>, [Gaza Strip](/wiki/Gaza_Strip "Gaza Strip")<br>, [Palestine](/wiki/Palestine "Palestine") |
+| Date | 8 June 2024 ([UTC+02:00](/wiki/UTC%2B02:00 "UTC+02:00")<br>) |
+| Attack type | [Raid](/wiki/Raid_(military) "Raid (military)")<br>, [airstrikes](/wiki/Airstrikes "Airstrikes")<br>, [massacre](/wiki/Massacre "Massacre") |
+| Deaths | *   At least 276 Palestinians killed (per Palestinian health officials)[\[1\]](#cite_note-1)<br>    [\[2\]](#cite_note-2)<br>    [\[3\]](#cite_note-3)<br>    [\[a\]](#cite_note-5)<br>    <br>*   Less than 100 Palestinian casualties (Per IDF)[\[5\]](#cite_note-The_Times_of_Israel-2024a-6) |
+| Injured | Over 698 Palestinians[\[6\]](#cite_note-7) |
+| Victims | [Palestinian](/wiki/Palestinians "Palestinians")<br> civilians and militants |
+| Perpetrators | ![](//upload.wikimedia.org/wikipedia/commons/thumb/d/de/Flag_of_the_Israel_Defense_Forces.svg/40px-Flag_of_the_Israel_Defense_Forces.svg.png)[Israel Defense Forces](/wiki/Israel_Defense_Forces "Israel Defense Forces")<br>  <br> ![](//upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/40px-Flag_of_the_United_States.svg.png)[United States](/wiki/United_States "United States")<br> (alleged support)[\[7\]](#cite_note-8) |
+
+| 2024 Nuseirat rescue operation and massacre |     |
+| --- | --- |
+| Part of the [Gaza war](/wiki/Gaza_war "Gaza war") |     |
+| [![](//upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Operation-Summer-Seeds-0002.jpg/330px-Operation-Summer-Seeds-0002.jpg)](/wiki/File:Operation-Summer-Seeds-0002.jpg)<br><br>The landing of the rescued hostages at [Sheba Hospital](/wiki/Sheba_Hospital "Sheba Hospital") |     |
+| Location | [Nuseirat refugee camp](/wiki/Nuseirat_refugee_camp "Nuseirat refugee camp") |
+| Objective | Rescue [Israeli hostages](/wiki/Gaza_war_hostage_crisis "Gaza war hostage crisis")<br> held by [Hamas](/wiki/Hamas "Hamas") |
+| Date | 8 June 2024 |
+| Executed by | [Yamam](/wiki/Yamam "Yamam")<br>, [Shin Bet](/wiki/Shin_Bet "Shin Bet")<br>, [Israel Defense Forces](/wiki/Israel_Defense_Forces "Israel Defense Forces")<br>, [Israel Air Force](/wiki/Israel_Air_Force "Israel Air Force")<br>[\[8\]](#cite_note-Fabian-2024-9)<br>, [Israeli Navy](/wiki/Israeli_Navy "Israeli Navy")<br>[\[9\]](#cite_note-10) |
+| Outcome | *   Four Israeli hostages rescued |
+| Casualties | *   One Yamam officer killed<br>*   Per [Gaza Health Ministry](/wiki/Gaza_Health_Ministry "Gaza Health Ministry")<br>    , 276 Palestinians killed and 698+ injured[\[10\]](#cite_note-11)<br>    <br>*   Per IDF, less than 100 Palestinian casualties[\[5\]](#cite_note-The_Times_of_Israel-2024a-6) |
+
+On 8 June 2024, during an operation to rescue hostages held in the [Nuseirat refugee camp](/wiki/Nuseirat_refugee_camp "Nuseirat refugee camp")
+, the Israeli military killed at least 276 people and injured over 698, according to the [Gaza Health Ministry](/wiki/Gaza_Health_Ministry "Gaza Health Ministry")
+ and Palestinian health officials.[\[b\]](#cite_note-12)
+[\[11\]](#cite_note-13)
+ The operation's objective was to recover hostages taken during the [7 October Hamas-led attack on Israel](/wiki/7_October_Hamas-led_attack_on_Israel "7 October Hamas-led attack on Israel")
+. No evidence for this claim was provided.[\[21\]](#cite_note-Ferguson-2024-23)
+[\[22\]](#cite_note-Al_Jazeera_Arabic-2024-24)
+ The [OHCHR](/wiki/Office_of_the_United_Nations_High_Commissioner_for_Human_Rights "Office of the United Nations High Commissioner for Human Rights")
+ said that both Israeli forces and Palestinian armed groups may have committed [war crimes](/wiki/War_crime "War crime")
+.
+
+Background
+----------
+
+The Nuseirat refugee camp was established in the Gaza Strip after the [Palestinians were expelled or fled from Israel](/wiki/1948_Palestinian_expulsion "1948 Palestinian expulsion")
+ during the [1948 Palestine war](/wiki/1948_Palestine_war "1948 Palestine war")
+. On 7 October 2023, the Qassam Brigades (the militant wing of the [Hamas](/wiki/Hamas "Hamas")
+ party) launched [an attack on Israel](/wiki/2023_Hamas-led_attack_on_Israel "2023 Hamas-led attack on Israel")
+.[\[23\]](#cite_note-25)
+ As part of the attack, in which other Palestinian militant groups were also involved, Hamas, [Palestinian Islamic Jihad](/wiki/Palestinian_Islamic_Jihad "Palestinian Islamic Jihad")
+ and other Palestinian militant groups kidnapped 251 Israeli civilians and soldiers.[\[24\]](#cite_note-Reliefweb-2023-26)
+ This attack led to the [Gaza war](/wiki/Gaza_war "Gaza war")
+.[\[24\]](#cite_note-Reliefweb-2023-26)
+
+The [Nuseirat refugee camp](/wiki/Nuseirat_refugee_camp "Nuseirat refugee camp")
+ is a long-standing [UNRWA](/wiki/UNRWA "UNRWA")
+ refugee camp located in the middle of the Gaza Strip, in [Deir al-Balah](/wiki/Deir_al-Balah "Deir al-Balah")
+.[\[25\]](#cite_note-27)
+ The camp has been repeatedly bombed during the Israel-Hamas war, with over a hundred Palestinians killed in the attacks. All of them need to be released immediately." He also pledged to continue "all efforts" to secure the release of hostage Tal Shoham, who holds Austrian citizenship.[\[89\]](#cite_note-The_Times_of_Israel-2024d-92)
+    
+*    ![](//upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Flag_of_Cuba.svg/40px-Flag_of_Cuba.svg.png)[Cuba](/wiki/Cuba "Cuba")
+    : Foreign minister [Bruno Rodriguez](/wiki/Bruno_Rodr%C3%ADguez_Parrilla "Bruno Rodríguez Parrilla")
+     stated, "We condemn in the strongest terms the massacre carried out by the Israeli army in the Nuseirat refugee camp, Gaza."[\[90\]](#cite_note-93)
+    
+*    ![](//upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Flag_of_Egypt.svg/40px-Flag_of_Egypt.svg.png)[Egypt](/wiki/Egypt "Egypt")
+    : the country denounced the killing of civilians, calling it "a flagrant violation of all rules of international law".[\[91\]](#cite_note-94)
+    
+*    ![](//upload.wikimedia.org/wikipedia/en/thumb/c/c3/Flag_of_France.svg/40px-Flag_of_France.svg.png)[France](/wiki/France "France")
+    : President [Emmanuel Macron](/wiki/Emmanuel_Macron "Emmanuel Macron")
+     Macron praised the hostage rescue and called for a lasting political solution to the war in Gaza.[\[92\]](#cite_note-95)
+    
+*    ![](//upload.wikimedia.org/wikipedia/en/thumb/b/ba/Flag_of_Germany.svg/40px-Flag_of_Germany.svg.png)[Germany](/wiki/Germany "Germany")
+    : Chancellor [Olaf Scholz](/wiki/Olaf_Scholz "Olaf Scholz")
+     wrote that the rescue of the hostages was an "important sign of hope", adding that "four hostages are now free. The war must end".[\[93\]](#cite_note-96)
+    
+*    ![](//upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Flag_of_Indonesia.svg/40px-Flag_of_Indonesia.svg.png)[Indonesia](/wiki/Indonesia "Indonesia")
+    : the country condemned the "repeated atrocities" committed by Israel in Gaza, including in the Nuseirat refugee camp, and called for an immediate ceasefire.[\[94\]](#cite_note-97)
+    
+*    ![](//upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Flag_of_Jordan.svg/40px-Flag_of_Jordan.svg.png)[Jordan](/wiki/Jordan "Jordan")
+    : the country denounced the killing of civilians and called "on the international community and especially the Security Council to take immediate and urgent action to stop Israel's war crimes in Gaza."[\[95\]](#cite_note-Eichner-2024-98)
+    
+*    ![](//upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Flag_of_Kuwait.svg/40px-Flag_of_Kuwait.svg.png)[Kuwait](/wiki/Kuwait "Kuwait")
+    : the country denounced the killing of civilians, calling it a "heinous crime".[\[96\]](#cite_note-99)
+    
+*    ![](//upload.wikimedia.org/wikipedia/commons/thumb/5/59/Flag_of_Lebanon.svg/40px-Flag_of_Lebanon.svg.png)[Lebanon](/wiki/Lebanon "Lebanon")
+    : The [Lebanese Ministry of Foreign Affairs](/wiki/Ministry_of_Foreign_Affairs_and_Emigrants_(Lebanon) "Ministry of Foreign Affairs and Emigrants (Lebanon)")
+     called the operation a massacre.[\[97\]](#cite_note-100)
+    
+*    ![](//upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Flag_of_Norway.svg/40px-Flag_of_Norway.svg.png)[Norway](/wiki/Norway "Norway")
+    : Deputy Foreign Minister Andreas Motzfeldt Kravik condemned the attack on civilians and called for the release of all hostages.[\[95\]](#cite_note-Eichner-2024-98)
+    
+*    ![](//upload.wikimedia.org/wikipedia/en/thumb/1/12/Flag_of_Poland.svg/40px-Flag_of_Poland.svg.png)[Poland](/wiki/Poland "Poland")
+    : Foreign Minister [Radosław Sikorski](/wiki/Rados%C5%82aw_Sikorski "Radosław Sikorski")
+     wrote: "Bravo, IDF. human rights body."[\[102\]](#cite_note-Jewish_News_Syndicate-2024-105)
+    
+*    ![](//upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Flag_of_Europe.svg/40px-Flag_of_Europe.svg.png)[European Union](/wiki/European_Union "European Union")
+    : A top European Union diplomat [Josep Borrell](/wiki/Josep_Borrell "Josep Borrell")
+     condemned the level of casualties in the Nuseirat refugee camp as a result of the rescue, calling it "...another massacre of civilians". Israel has shown itself time and time again that it does not care about international and humanitarian laws."[\[112\]](#cite_note-115)
+    
+*   [Kenneth Roth](/wiki/Kenneth_Roth "Kenneth Roth")
+    , the former director of [Human Rights Watch](/wiki/Human_Rights_Watch "Human Rights Watch")
+     and a professor at [Princeton University](/wiki/Princeton_University "Princeton University")
+    , stated the attack was "inconsistent with the duty to take all feasible precautions to spare civilians harm."[\[113\]](#cite_note-116)
+    
+
+See also
+--------
+
+*   [Rescue of Ori Megidish](/wiki/Rescue_of_Ori_Megidish "Rescue of Ori Megidish")
+    
+*   [Operation Golden Hand](/wiki/Operation_Golden_Hand "Operation Golden Hand")
+    
+*   [Operation Entebbe](/wiki/Entebbe_raid "Entebbe raid")
+    
+*   [December 2024 Nuseirat refugee camp attack](/wiki/December_2024_Nuseirat_refugee_camp_attack "December 2024 Nuseirat refugee camp attack")
+    
+
+Notes
+-----
+
+1. **[^](#cite_ref-30)
+    ** ["Israeli bombing of Nuseirat refugee camp targets homes of medical staff"](https://www.middleeasteye.net/live-blog/live-blog-update/israeli-bombing-nuseirat-refugee-camp-targets-homes-medical-staff?nid=316601&topic=Israel-Palestine%2520war&fid=489896#:~:text=Israeli%20bombing%20of%20Nuseirat%20refugee%20camp%20targets%20homes%20of%20medical%20staff,-21%20November%202023&text=An%20Israeli%20air%20strike%20on,Jazeera%20journalist%20on%20the%20ground.)
+    . [Archived](https://web.archive.org/web/20240104204912/https://www.middleeasteye.net/live-blog/live-blog-update/israeli-bombing-nuseirat-refugee-camp-targets-homes-medical-staff?nid=316601&topic=Israel-Palestine%2520war&fid=489896#:~:text=Israeli%20bombing%20of%20Nuseirat%20refugee%20camp%20targets%20homes%20of%20medical%20staff,-21%20November%202023&text=An%20Israeli%20air%20strike%20on,Jazeera%20journalist%20on%20the%20ground.)
+     from the original on 4 January 2024. **[^](#cite_ref-31)
+    ** ["Israeli attack kills 13 in Nuseirat refugee camp: Wafa"](https://www.aljazeera.com/news/liveblog/2023/12/3/israel-gaza-war-live-israel-bombards-gaza-as-talks-break-down?update=2530525)
+    ."
+
+# Your Summary
+
+
+
+===== > RESPONSE:  < =====
+The Wikipedia article discusses the 2024 Nuseirat rescue operation and massacre, which took place on June 8, 2024, in the Nuseirat refugee camp in the Gaza Strip. The operation, conducted by the Israel Defense Forces, aimed to rescue Israeli hostages. According to the Gaza Health Ministry, at least 276 Palestinians were killed and over 698 were injured. The article also mentions international reactions to the event, including condemnations from Cuba, Egypt, Indonesia, Jordan, Kuwait, Lebanon, and the EU. <image:63> is not mentioned in the search result.
+
+_________________________
+
+
+
+SummarizeSummariesPrompt - QUERY:
+
+# Instructions
+You just retrieved web sources, each one summarized under "Web Sources". **Your task right now is to summarize the web source summaries.**
+
+Always adhere to the following rules:
+* Write only one to two paragraphs.
+* Include all URLs from the listed sources. Format them as Markdown hyperlinks.
+* Do not add any additional information besides the information in the summaries.
+* Include references (<image:k>) to all relevant images.
+
+# Record
+## Claim
+Claim: "<image:63> This image shows Mayar Hamida (9 years old) and Bilal Hamida (6 years old) who were killed by Israel along with their mother and grandmother at Al-Jaoni UN school in Al-Nuseirat refugee camp on July, 6 2024."
+
+## Actions
+```
+geolocate(<image:63>)
+web_search("Mayar Hamida Bilal Hamida Al-Nuseirat refugee camp")
+```
+
+## Web Sources
+**Web Search Result**
+
+From [Source](https://www.cnn.com/2024/07/19/middleeast/gaza-neighborhood-israeli-hostages-intl-cmd): 
+Content: The CNN article, published on July 19, 2024, discusses an Israeli operation in the Nuseirat refugee camp in Gaza on June 8, 2024, during which hostages were rescued. The article mentions that over 270 Palestinians were killed in Nuseirat on June 8, according to Gaza health ministry officials. <image:63> is not mentioned in the article.
+
+
+From [Source](https://en.wikipedia.org/wiki/Nuseirat_rescue_and_massacre): 
+Content: The Wikipedia article discusses the 2024 Nuseirat rescue operation and massacre, which took place on June 8, 2024, in the Nuseirat refugee camp in the Gaza Strip. The operation, conducted by the Israel Defense Forces, aimed to rescue Israeli hostages. According to the Gaza Health Ministry, at least 276 Palestinians were killed and over 698 were injured. The article also mentions international reactions to the event, including condemnations from Cuba, Egypt, Indonesia, Jordan, Kuwait, Lebanon, and the EU. <image:63> is not mentioned in the search result.
+
+
+## Your Summary
+
+
+
+===== > RESPONSE:  < =====
+The CNN article ([https://www.cnn.com/2024/07/19/middleeast/gaza-neighborhood-israeli-hostages-intl-cmd](https://www.cnn.com/2024/07/19/middleeast/gaza-neighborhood-israeli-hostages-intl-cmd)) discusses an Israeli operation in the Nuseirat refugee camp on June 8, 2024, where hostages were rescued. The article mentions over 270 Palestinians were killed. The image <image:63>
+_________________________
+
+
+
+DevelopPrompt - QUERY:
+
+# Instructions
+You just retrieved new Evidence. Now, **analyze the Claim's veracity using the evidence**. Always adhere to the following rules:
+* Focus on developing new insights. Do not repeat larger parts from the Record. Do not restate the Claim.
+* Write down your thoughts step-by-step. Whenever necessary, you may elaborate in more detail.
+* Depending on the topic's complexity, invest one to three paragraphs. The fewer, the better.
+* If you find that there is insufficient information to verify the Claim, explicitly state what information is missing.
+* If you cite web sources, always refer to them by including their URL as a Markdown hyperlink.
+* **Use information only from the recorded evidence**: Avoid inserting information that is not implied by the evidence. You may use commonsense knowledge, though.
+
+# Record
+## Claim
+Claim: "<image:63> This image shows Mayar Hamida (9 years old) and Bilal Hamida (6 years old) who were killed by Israel along with their mother and grandmother at Al-Jaoni UN school in Al-Nuseirat refugee camp on July, 6 2024."
+
+## Actions
+```
+geolocate(<image:63>)
+web_search("Mayar Hamida Bilal Hamida Al-Nuseirat refugee camp")
+```
+
+## Evidence
+### Evidence from `geolocate`
+The most likely countries where the image was taken are: {'United Arab Emirates': 0.25, 'Jordan': 0.23, 'Pakistan': 0.17, 'Tunisia': 0.13, 'Palestine': 0.05, 'Israel': 0.04, 'Malta': 0.02, 'India': 0.01, 'Nigeria': 0.01, 'Rwanda': 0.01}
+
+### Evidence from `web_search`
+The CNN article ([https://www.cnn.com/2024/07/19/middleeast/gaza-neighborhood-israeli-hostages-intl-cmd](https://www.cnn.com/2024/07/19/middleeast/gaza-neighborhood-israeli-hostages-intl-cmd)) discusses an Israeli operation in the Nuseirat refugee camp on June 8, 2024, where hostages were rescued. The article mentions over 270 Palestinians were killed. The image <image:63>
+
+# Your Analysis
+
+
+
+===== > RESPONSE:  < =====
+The CNN article ([https://www.cnn.com/2024/07/19/middleeast/gaza-neighborhood-israeli-hostages-intl-cmd](https://www.cnn.com/2024/07/19/middleeast/gaza-neighborhood-israeli-hostages-intl-cmd)) mentions an Israeli operation in the Nuseirat refugee camp on June 8, 2024, which resulted in over 270 Palestinian deaths. The claim states the children were killed on July 6, 2024, which is after the date of the operation mentioned in the CNN article.
+
+The geolocation of the image suggests the image was most likely taken in the United Arab Emirates, Jordan, Pakistan, or Tunisia, with a low probability of being taken in Palestine or Israel.
+
+The claim cannot be verified with the provided information. More information is needed to confirm the children's deaths, including the date and location.
+
+_________________________
+
+
+
+JudgePrompt - QUERY:
+
+# Instructions
+**Determine the Claim's veracity** by following these steps:
+1. Briefly summarize the key insights from the fact-check (see Record) in at most one paragraph.
+2. Write one paragraph about which one of the Decision Options applies best. Include the most appropriate decision option at the end and enclose it in backticks like `this`.
+
+
+
+
+## Decision Options
+* `true`: The claim is factually accurate when it is confirmed by evidence from multiple and reliable sources.
+* `false`: The claim is not factually accurate. This is the case if one of the following three conditions is met:(1) The claim is demonstrably false when it is disproven by evidence from multiple and reliable sources,(2) The claim or image is taken out of context, i.e. the origin, content and/or meaning of a statement or an image is misrepresented. For example, an old claim or an old image is mispresented in a new context in a misleading way,(3) There is not enough evidence to verify the claim or the evidence is conflicting or self-contradictory.
+* `not enough information`: The fact-check does not contain sufficient information to come to an conclusion. For example,there is substantial lack of evidence or the evidence is inconclusive, conflicting or self-contradictory. In the case of a lack of evidence, state which information exactly is missing. In particular, if no RESULTS or sources are available, pick this decision.
+
+# Record
+## Claim
+Claim: "<image:63> This image shows Mayar Hamida (9 years old) and Bilal Hamida (6 years old) who were killed by Israel along with their mother and grandmother at Al-Jaoni UN school in Al-Nuseirat refugee camp on July, 6 2024."
+
+## Actions
+```
+geolocate(<image:63>)
+web_search("Mayar Hamida Bilal Hamida Al-Nuseirat refugee camp")
+```
+
+## Evidence
+### Evidence from `geolocate`
+The most likely countries where the image was taken are: {'United Arab Emirates': 0.25, 'Jordan': 0.23, 'Pakistan': 0.17, 'Tunisia': 0.13, 'Palestine': 0.05, 'Israel': 0.04, 'Malta': 0.02, 'India': 0.01, 'Nigeria': 0.01, 'Rwanda': 0.01}
+
+### Evidence from `web_search`
+The CNN article ([https://www.cnn.com/2024/07/19/middleeast/gaza-neighborhood-israeli-hostages-intl-cmd](https://www.cnn.com/2024/07/19/middleeast/gaza-neighborhood-israeli-hostages-intl-cmd)) discusses an Israeli operation in the Nuseirat refugee camp on June 8, 2024, where hostages were rescued. The article mentions over 270 Palestinians were killed. The image <image:63>
+
+## Elaboration
+The CNN article ([https://www.cnn.com/2024/07/19/middleeast/gaza-neighborhood-israeli-hostages-intl-cmd](https://www.cnn.com/2024/07/19/middleeast/gaza-neighborhood-israeli-hostages-intl-cmd)) mentions an Israeli operation in the Nuseirat refugee camp on June 8, 2024, which resulted in over 270 Palestinian deaths. The claim states the children were killed on July 6, 2024, which is after the date of the operation mentioned in the CNN article.
+
+The geolocation of the image suggests the image was most likely taken in the United Arab Emirates, Jordan, Pakistan, or Tunisia, with a low probability of being taken in Palestine or Israel.
+
+The claim cannot be verified with the provided information. More information is needed to confirm the children's deaths, including the date and location.
+
+
+# Your Judgement
+
+
+
+===== > RESPONSE:  < =====
+The CNN article mentions an Israeli operation in the Nuseirat refugee camp on June 8, 2024, which resulted in over 270 Palestinian deaths. The claim states the children were killed on July 6, 2024, which is after the date of the operation mentioned in the CNN article. The geolocation of the image suggests the image was most likely taken in the United Arab Emirates, Jordan, Pakistan, or Tunisia, with a low probability of being taken in Palestine or Israel.
+
+The claim cannot be verified with the provided information. More information is needed to confirm the children's deaths, including the date and location. `not enough information`
+
+_________________________
+
+
+
+PlanPrompt - QUERY:
+
+# Instructions
+The available knowledge is insufficient to assess the Claim. Therefore, **propose a set of actions** to retrieve new and helpful evidence. Adhere to the following rules:
+* The actions available are listed under Valid Actions, including a short description for each action. No other actions are possible at this moment. 
+* For each action, use the formatting as specified in Valid Actions.
+* Include all actions in a single Markdown code block at the end of your answer.
+* Propose as few actions as possible, but as much as needed. Do not propose similar or previously used actions.
+
+
+
+## Valid Actions
+* `web_search`
+   * Description: Run an open web search on Google or DuckDuckGO to retrieve any related webpage.
+   * How to use: Do not use this with a previously used or similar query from previous web searches. If a previous web search did not yield any results, use a very different query.
+   * Format: web_search("your web search query goes here")
+
+* `image_search`
+   * Description: Run an image search on Google to retrieve related images for a given query.
+   * How to use: This is a helpful tool for fact-checking images. Use this to retrieve images associated with a specific keyword or phrase. Ensure that the query is clear and specific to improve search accuracy. If no relevant images are found, refine the query or use more descriptive terms.
+   * Format: image_search("your image search query goes here")
+
+# Example: web_search()
+
+## Claim
+Text: "New Zealand’s new Food Bill bans gardening"
+Claim date: October 29, 2020
+
+...
+
+## Actions
+```
+web_search("New Zealand Food Bill 2020")
+web_search("New Zealand Food Bill gardening ban")
+```
+
+# Example: image_search()
+
+## Claim
+Text: "Chinese officials in white protective hazmat suits carried people down a hallway to be quarantined for having COVID-19 in November 2022."
+
+...
+
+ACTIONS:
+```
+image_search("China officials white suits carry people")
+image_search("China officials carry people COVID quarantine 2022")
+```
+
+# Record
+## Claim
+Claim: "<image:63> This image shows Mayar Hamida (9 years old) and Bilal Hamida (6 years old) who were killed by Israel along with their mother and grandmother at Al-Jaoni UN school in Al-Nuseirat refugee camp on July, 6 2024."
+
+## Actions
+```
+geolocate(<image:63>)
+web_search("Mayar Hamida Bilal Hamida Al-Nuseirat refugee camp")
+```
+
+## Evidence
+### Evidence from `geolocate`
+The most likely countries where the image was taken are: {'United Arab Emirates': 0.25, 'Jordan': 0.23, 'Pakistan': 0.17, 'Tunisia': 0.13, 'Palestine': 0.05, 'Israel': 0.04, 'Malta': 0.02, 'India': 0.01, 'Nigeria': 0.01, 'Rwanda': 0.01}
+
+### Evidence from `web_search`
+The CNN article ([https://www.cnn.com/2024/07/19/middleeast/gaza-neighborhood-israeli-hostages-intl-cmd](https://www.cnn.com/2024/07/19/middleeast/gaza-neighborhood-israeli-hostages-intl-cmd)) discusses an Israeli operation in the Nuseirat refugee camp on June 8, 2024, where hostages were rescued. The article mentions over 270 Palestinians were killed. The image <image:63>
+
+## Elaboration
+The CNN article ([https://www.cnn.com/2024/07/19/middleeast/gaza-neighborhood-israeli-hostages-intl-cmd](https://www.cnn.com/2024/07/19/middleeast/gaza-neighborhood-israeli-hostages-intl-cmd)) mentions an Israeli operation in the Nuseirat refugee camp on June 8, 2024, which resulted in over 270 Palestinian deaths. The claim states the children were killed on July 6, 2024, which is after the date of the operation mentioned in the CNN article.
+
+The geolocation of the image suggests the image was most likely taken in the United Arab Emirates, Jordan, Pakistan, or Tunisia, with a low probability of being taken in Palestine or Israel.
+
+The claim cannot be verified with the provided information. More information is needed to confirm the children's deaths, including the date and location.
+
+
+# Your Actions
+
+
+
+===== > RESPONSE:  < =====
+```
+web_search("Mayar Hamida Bilal Hamida killed Israel Al-Jaoni UN school")
+web_search("Al-Nuseirat refugee camp July 6 2024 deaths")
+```
+_________________________
+
+
+
+SummarizeResultPrompt - QUERY:
+
+# Instructions
+In order to find evidence that helps your fact-check, you just ran a web search which yielded a Search Result. **Your task right now is to summarize the Search Result.** What to include:
+* information that might be useful for the fact-check (see Record)
+* relevant images (refer to images by inserting their reference <image:k>)
+* if available: the release date as well as the author or the publisher (e.g. the media company) of the search result.
+
+Do NOT include:
+* advertisements
+* any other information not related to the Record or the Claim
+
+Additional rules:
+* Do not add any additional information besides the information in the Search Result.
+* If the Search Result doesn't contain any relevant information for the fact-checking work, simply print one word in capital letters: "NONE".
+* Keep your writing style like in the Examples 1, 2 and 3 provided to you.
+* Try to filter out relevant information even if the search result is in a different language.
+
+# Example 1
+The search result from America Today provides several photographs of the Notre-Dame Cathedral fire on April 15, 2019. <image:i>, <image:j>, <image:k>. None of the images show the Eiffel Tower in the background. 
+
+# Example 2
+NONE
+
+# Example 3
+The Guardian discusses a report blaming the Syrian government for a toxic gas attack and condemning their use of chemical weapons. The Guardian mentions the Chemical Weapons Convention and the responsibilities of Syria under the convention. According to The Guardian, The White House condemned the Assad regime for defying the norm against chemical weapons use.
+
+# Record
+## Claim
+Claim: "<image:63> This image shows Mayar Hamida (9 years old) and Bilal Hamida (6 years old) who were killed by Israel along with their mother and grandmother at Al-Jaoni UN school in Al-Nuseirat refugee camp on July, 6 2024."
+
+## Actions
+```
+geolocate(<image:63>)
+web_search("Mayar Hamida Bilal Hamida Al-Nuseirat refugee camp")
+```
+
+## Evidence
+### Evidence from `geolocate`
+The most likely countries where the image was taken are: {'United Arab Emirates': 0.25, 'Jordan': 0.23, 'Pakistan': 0.17, 'Tunisia': 0.13, 'Palestine': 0.05, 'Israel': 0.04, 'Malta': 0.02, 'India': 0.01, 'Nigeria': 0.01, 'Rwanda': 0.01}
+
+### Evidence from `web_search`
+The CNN article ([https://www.cnn.com/2024/07/19/middleeast/gaza-neighborhood-israeli-hostages-intl-cmd](https://www.cnn.com/2024/07/19/middleeast/gaza-neighborhood-israeli-hostages-intl-cmd)) discusses an Israeli operation in the Nuseirat refugee camp on June 8, 2024, where hostages were rescued. The article mentions over 270 Palestinians were killed. The image <image:63>
+
+## Elaboration
+The CNN article ([https://www.cnn.com/2024/07/19/middleeast/gaza-neighborhood-israeli-hostages-intl-cmd](https://www.cnn.com/2024/07/19/middleeast/gaza-neighborhood-israeli-hostages-intl-cmd)) mentions an Israeli operation in the Nuseirat refugee camp on June 8, 2024, which resulted in over 270 Palestinian deaths. The claim states the children were killed on July 6, 2024, which is after the date of the operation mentioned in the CNN article.
+
+The geolocation of the image suggests the image was most likely taken in the United Arab Emirates, Jordan, Pakistan, or Tunisia, with a low probability of being taken in Palestine or Israel.
+
+The claim cannot be verified with the provided information. More information is needed to confirm the children's deaths, including the date and location.
+
+
+## Actions
+```
+web_search("Mayar Hamida Bilal Hamida killed Israel Al-Jaoni UN school")
+web_search("Al-Nuseirat refugee camp July 6 2024 deaths")
+```
+
+# Search Result
+From [Source](https://countercurrents.org/2024/07/israel-bombs-un-school-in-nuseirat/): 
+Content: "Systematic and calculated extermination of the survivors in the shelters where they starve with no access to water and healthcare [pic.twitter.com/p2Izk6vtwo](https://t.co/p2Izk6vtwo)
+> 
+> — Nicola Perugini (@PeruginiNic) [July 6, 2024](https://twitter.com/PeruginiNic/status/1809638986685550749?ref_src=twsrc%5Etfw)
+
+The UNRWA Media Advisor Adnan Abu Hasna told Al Jazeera he estimated that the number of displaced people sheltering at the school stood at 2000 however this figure was far too low according to other experts on the ground.
+
+https://twitter.com/NourNaim88/status/1809664477719335209
+
+Director of Logistics at Civil Defense told Al Jazeera that the number of families at the school was 1,200 with around 7000 people.
+
+[https://t.me/QudsNen/112596](https://t.me/QudsNen/112596)
+
+Some of those killed included [9-year-old Mayar Haidar and 6-year-old Bilal Hamida](https://t.me/QudsNen/112595)
+. They were killed with their grandmother at the school.
+
+> NUSEIRAT  
+>   
+> The targeted school in Al-Nuseirat is home to 1,200 families, representing around 7,000 displaced people  
+> Many children, like Mayar and Bilal, who were killed by the Israeli bombing, along with their mother and grandmother in the school that was supposed to be safe [https://t.co/oqEGO8MbW6](https://t.co/oqEGO8MbW6)
+>  [pic.twitter.com/QTYZiM8wgD](https://t.co/QTYZiM8wgD)
+> 
+> — Nina🐝 (@papel\_em\_branco) [July 6, 2024](https://twitter.com/papel_em_branco/status/1809632675491119282?ref_src=twsrc%5Etfw)
+
+Many children have also been [injured](https://t.me/QudsNen/112596)
+ since the strikes were carried out at a time when children go out to play in the yards at the school to escape the heat of the classrooms.
+
+> Breaking news  
+> Several displaced persons have been KILLED and tens WOUNDED in [#Israeli\_bombing](https://twitter.com/hashtag/Israeli_bombing?src=hash&ref_src=twsrc%5Etfw)
+>  of UNRWA School —refugee shelter— in Al Nuseirat refugee camp![#StopGazaGenocide](https://twitter.com/hashtag/StopGazaGenocide?src=hash&ref_src=twsrc%5Etfw)
+>  [pic.twitter.com/b4luSLq8Rf](https://t.co/b4luSLq8Rf)
+> 
+> — Motasem A Dalloul (@AbujomaaGaza) [July 6, 2024](https://twitter.com/AbujomaaGaza/status/1809614805235560660?ref_src=twsrc%5Etfw)
+
+As well as those that died because of Israeli strikes, the number of those injured was injured at 75.
+
+> At least 16 Palestinians have been killed in an Israeli attack on a UN-run school sheltering forcibly displaced people in Gaza's Nuseirat refugee camp, says the Gaza Government Media Office [https://t.co/0WtR64gtm9](https://t.co/0WtR64gtm9)
+>  [pic.twitter.com/8e0mNnLaYu](https://t.co/8e0mNnLaYu)
+> 
+> — Al Jazeera English (@AJEnglish) [July 6, 2024](https://twitter.com/AJEnglish/status/1809656057045872753?ref_src=twsrc%5Etfw)
+
+The Government Media Office in Gaza said this is the 43rd massacre committed by the Israelis. [Skip to main content](#brx-content)
+ [Skip to footer](#brx-footer)
+
+Israel Bombs UN School in Nuseirat
+==================================
+
+in [Palestine](https://countercurrents.org/topics/palestine/)
+
+by [Dr Marwan Asmar](https://countercurrents.org/author/dr-marwan-asmar/)
+
+07/07/2024
+
+### Share:
+
+[Share on WhatsApp](https://api.whatsapp.com/send?text=Israel%20Bombs%20UN%20School%20in%20Nuseirat%20%E2%80%94%20https%3A%2F%2Fcountercurrents.org%2F2024%2F07%2Fisrael-bombs-un-school-in-nuseirat%2F)
+[Share on Facebook](https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fcountercurrents.org%2F2024%2F07%2Fisrael-bombs-un-school-in-nuseirat%2F)
+[Share on X (Twitter)](https://twitter.com/intent/tweet?text=Israel%20Bombs%20UN%20School%20in%20Nuseirat&url=https%3A%2F%2Fcountercurrents.org%2F2024%2F07%2Fisrael-bombs-un-school-in-nuseirat%2F&via=countercurrents&related=countercurrents)
+[Share on Telegram](https://telegram.me/share/url?url=https%3A%2F%2Fcountercurrents.org%2F2024%2F07%2Fisrael-bombs-un-school-in-nuseirat%2F&text=Israel%20Bombs%20UN%20School%20in%20Nuseirat)
+[Share on Reddit](https://www.reddit.com/submit?url=https%3A%2F%2Fcountercurrents.org%2F2024%2F07%2Fisrael-bombs-un-school-in-nuseirat%2F)
+[Share on Email](/cdn-cgi/l/email-protection#625d000d061b5f2b47505210070306475052160a0b11475052120d1116475052030c0647505215030c160706475052160d475052110a0310074750520b16475052150b160a4750521b0d174c4750522a07100747505511475052160a074750520e0b0c094751234750520a16161211475123475024475024010d170c16071001171010070c16114c0d10054750245052505647502452554750240b111003070e4f000d0f00114f170c4f11010a0d0d0e4f0b0c4f0c1711070b100316475024444152515a59111700080701165f23475052120d1116475052150d10160a475052110a03100b0c054751234750522b111003070e475052200d0f0011475052372c47505231010a0d0d0e4750520b0c4750522c1711070b100316)
+
+Israeli warplanes bombed Al Jaoni School in Nuseirat, Saturday afternoon, where thousands of displaced Palestinians are taking refuge. At least 16 people were killed in this latest massacre at a UN school that was previously announced as a safe area by the Israeli military.
+
+https://twitter.com/QudsNen/status/1809622090565251139
+
+Some of the victims were displaced people from Khan Younis ordered to leave from there by the Israeli military.
+
+> Difficult scenes from the targeting of an UNRWA school in the Nuseirat camp in the central Gaza Strip – a large number of martyrs and injuries, the majority of whom are children. First it was 11, 14, 15 and finally 16 as announced by the Gaza Ministry of Health.
+
+> The Israeli bombardment of the UN Al Jaoni school in Gaza’s Nuseirat refugee camp. He writes at [https://crossfirearabia.com/](https://crossfirearabia.com/)
+
+### Share:
+
+[Share on WhatsApp](https://api.whatsapp.com/send?text=Israel%20Bombs%20UN%20School%20in%20Nuseirat%20%E2%80%94%20https%3A%2F%2Fcountercurrents.org%2F2024%2F07%2Fisrael-bombs-un-school-in-nuseirat%2F)
+[Share on Facebook](https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fcountercurrents.org%2F2024%2F07%2Fisrael-bombs-un-school-in-nuseirat%2F)
+[Share on X (Twitter)](https://twitter.com/intent/tweet?text=Israel%20Bombs%20UN%20School%20in%20Nuseirat&url=https%3A%2F%2Fcountercurrents.org%2F2024%2F07%2Fisrael-bombs-un-school-in-nuseirat%2F&via=countercurrents&related=countercurrents)
+[Share on Telegram](https://telegram.me/share/url?url=https%3A%2F%2Fcountercurrents.org%2F2024%2F07%2Fisrael-bombs-un-school-in-nuseirat%2F&text=Israel%20Bombs%20UN%20School%20in%20Nuseirat)
+[Share on Reddit](https://www.reddit.com/submit?url=https%3A%2F%2Fcountercurrents.org%2F2024%2F07%2Fisrael-bombs-un-school-in-nuseirat%2F)
+[Share on Email](/cdn-cgi/l/email-protection#f5ca979a918cc8bcd0c7c587909491d0c7c5819d9c86d0c7c5859a8681d0c7c5949b91d0c7c582949b819091d0c7c5819ad0c7c5869d948790d0c7c59c81d0c7c5829c819dd0c7c58c9a80dbd0c7c5bd908790d0c7c286d0c7c5819d90d0c7c5999c9b9ed0c6b4d0c7c59d81818586d0c6b4d0c7b3d0c7b3969a809b81908796808787909b8186db9a8792d0c7b3c7c5c7c1d0c7b3c5c2d0c7b39c8687949099d8979a989786d8809bd886969d9a9a99d89c9bd89b8086909c879481d0c7b3d3d6c5c6cdce8680979f909681c8b4d0c7c5859a8681d0c7c5829a87819dd0c7c5869d94879c9b92d0c6b4d0c7c5bc8687949099d0c7c5b79a989786d0c7c5a0bbd0c7c5a6969d9a9a99d0c7c59c9bd0c7c5bb8086909c879481)
+
+#### Tags:
+
+[Gaza](https://countercurrents.org/subtopics/gaza/)
+, [Palestine](https://countercurrents.org/subtopics/palestine/)
+
+### Support Countercurrents
+
+Countercurrents is answerable only to our readers. It added that since the beginning of the genocide on Gazathe Israeli army has boombed more than [17 schools and shelter centers](https://t.me/warfareanalysis/60889)
+ inside the Nuseirat refugee camp.
+
+**Dr Asmar** is an Amman-based writer covering Middle East affairs. Tatreez—the traditional art of Palestinian…
+
+[![](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20800%20798'%3E%3C/svg%3E)](https://countercurrents.org/2025/08/tatreez-as-testimony-palestinian-identity-in-every-stitch/)
+
+### [Israeli Attacks Intensify in Northern Gaza, Declares Gaza City “Dangerous Combat Zone”](https://countercurrents.org/2025/08/israeli-attacks-intensify-in-northern-gaza-declares-gaza-city-dangerous-combat-zone/)
+
+Gaza (Quds News Network)- Israel has intensified its attacks on Gaza City and northern Gaza, destroying entire neighborhoods and killing more civilians. On Friday, the military declared the city a…
+
+[![](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20800%20488'%3E%3C/svg%3E)](https://countercurrents.org/2025/08/israeli-attacks-intensify-in-northern-gaza-declares-gaza-city-dangerous-combat-zone/)
+
+### [The Price of Genocide: How US Funding Sustains an Unravelling Israeli Economy](https://countercurrents.org/2025/08/the-price-of-genocide-how-us-funding-sustains-an-unravelling-israeli-economy/)
+
+In an important step toward the economic isolation of Israel due to its genocide in Gaza, Norway's Government Pension Fund Global has decided to divest from yet more Israeli companies. …
+
+[![](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20800%20449'%3E%3C/svg%3E)](https://countercurrents.org/2025/08/the-price-of-genocide-how-us-funding-sustains-an-unravelling-israeli-economy/)
+
+### [A Life between Fires](https://countercurrents.org/2025/08/a-life-between-fires/)
+
+After much reflection, I decided to write my memoirs covering the first part of my life, a period that can truly be described as a life between fires. Families…
+
+[![](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20800%20450'%3E%3C/svg%3E)](https://countercurrents.org/2025/08/the-gaza-plight-rethinking-divine-intervention-in-contemporary-crises/)
+
+ 🔍
+
+### Join Our Newsletter
+
+Get the latest CounterCurrents updates straight to your inbox.
+
+        
+
+Join Our Newsletter
+
+### Annual Subscription
+
+Join Countercurrents Annual Fund Raising Campaign and help us
+
+[Subscribe Now](https://countercurrents.org/subscription/)
+
+### Latest News
+
+*   #### [Tatreez as Testimony: Palestinian Identity in Every Stitch](https://countercurrents.org/2025/08/tatreez-as-testimony-palestinian-identity-in-every-stitch/)
+    
+    by [Azmat Ali](https://countercurrents.org/author/azmat-ali/)
+    
+    29/08/2025
+    
+    [![](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20800%20798'%3E%3C/svg%3E)](https://countercurrents.org/2025/08/tatreez-as-testimony-palestinian-identity-in-every-stitch/)
+    
+*   #### [The Destruction of the Socialist Federal Republic of Yugoslavia (Titoslavia/Titonic)](https://countercurrents.org/2025/08/the-destruction-of-the-socialist-federal-republic-of-yugoslavia-titoslavia-titonic/)
+    
+    by [Dr Vladislav B Sotirovic](https://countercurrents.org/author/dr-vladislavb-sotirovic/)
+    
+    29/08/2025
+    
+    [![](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20800%20400'%3E%3C/svg%3E)](https://countercurrents.org/2025/08/the-destruction-of-the-socialist-federal-republic-of-yugoslavia-titoslavia-titonic/)
+    
+*   #### [The Silent Singing Bird of Flamboyant Plumage](https://countercurrents.org/2025/08/the-silent-singing-bird-of-flamboyant-plumage/)
+    
+    by [Edward Curtin](https://countercurrents.org/author/edward-curtin/)
+    
+    29/08/2025
+    
+    [![](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20800%20519'%3E%3C/svg%3E)](https://countercurrents.org/2025/08/the-silent-singing-bird-of-flamboyant-plumage/)
+    
+*   #### [The Quranic Declaration of Human Rights](https://countercurrents.org/2025/08/the-quranic-declaration-of-human-rights/)
+    
+    by [V A Mohamad Ashrof](https://countercurrents.org/author/v-a-mohamad-ashrof/)
+    
+    29/08/2025
+    
+    [![](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20800%20450'%3E%3C/svg%3E)](https://countercurrents.org/2025/08/the-quranic-declaration-of-human-rights/)
+    
+*   #### [Israeli Attacks Intensify in Northern Gaza, Declares Gaza City “Dangerous Combat Zone”](https://countercurrents.org/2025/08/israeli-attacks-intensify-in-northern-gaza-declares-gaza-city-dangerous-combat-zone/)
+    
+    by [Quds News Network](https://countercurrents.org/author/quds-news-network/)
+    
+    29/08/2025
+    
+    [![](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20800%20488'%3E%3C/svg%3E)](https://countercurrents.org/2025/08/israeli-attacks-intensify-in-northern-gaza-declares-gaza-city-dangerous-combat-zone/)
+    
+*   #### [The Price of Genocide: How US Funding Sustains an Unravelling Israeli Economy](https://countercurrents.org/2025/08/the-price-of-genocide-how-us-funding-sustains-an-unravelling-israeli-economy/)
+    
+    by [Dr Ramzy Baroud](https://countercurrents.org/author/dr-ramzy-baroud/)
+    
+    29/08/2025
+    
+    [![](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20800%20449'%3E%3C/svg%3E)](https://countercurrents.org/2025/08/the-price-of-genocide-how-us-funding-sustains-an-unravelling-israeli-economy/)
+    
+*   #### [Antarctica on Alert!](https://countercurrents.org/2025/08/antarctica-on-alert/)
+    
+    by [Robert Hunziker](https://countercurrents.org/author/robert-hunziker/)
+    
+    29/08/2025
+    
+    [![](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20800%20450'%3E%3C/svg%3E)](https://countercurrents.org/2025/08/antarctica-on-alert/)
+    
+*   #### [A Life between Fires](https://countercurrents.org/2025/08/a-life-between-fires/)
+    
+    by [Dr Salim Nazzal](https://countercurrents.org/author/dr-salim-nazzal/)
+    
+    29/08/2025
+    
+    [![](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20800%20450'%3E%3C/svg%3E)](https://countercurrents.org/2025/08/a-life-between-fires/)
+    
+*   #### [From Guernica to Gaza:Mass Killers Have Been Above It All](https://countercurrents.org/2025/08/from-guernica-to-gazamass-killers-have-been-above-it-all/)
+    
+    by [Norman Solomon](https://countercurrents.org/author/norman-solomon/)
+    
+    29/08/2025
+    
+    [![](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20799%20533'%3E%3C/svg%3E)](https://countercurrents.org/2025/08/from-guernica-to-gazamass-killers-have-been-above-it-all/)
+    
+*   #### [Tariffs, Power, and India’s Mislaid Compass](https://countercurrents.org/2025/08/tariffs-power-and-indias-mislaid-compass/)
+    
+    by [Dr Ranjan Solomon](https://countercurrents.org/author/ranjan-solomon/)
+    
+    29/08/2025
+    
+    [![](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20718%20999'%3E%3C/svg%3E)](https://countercurrents.org/2025/08/tariffs-power-and-indias-mislaid-compass/)
+    
+*   #### [From Paper to Pixels: Protecting Nature in a Digital Age](https://countercurrents.org/2025/08/from-paper-to-pixels-protecting-nature-in-a-digital-age/)
+    
+    by [Srinivas Katherasala](https://countercurrents.org/author/srinivas-katherasala/)
+    
+    29/08/2025
+    
+    [![](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20800%20533'%3E%3C/svg%3E)](https://countercurrents.org/2025/08/from-paper-to-pixels-protecting-nature-in-a-digital-age/)
+    
+*   #### [From Tears of Anguish to Smiles of Livelihood Security](https://countercurrents.org/2025/08/from-tears-of-anguish-to-smiles-of-livelihood-security/)
+    
+    by [Bharat Dogra](https://countercurrents.org/author/bharat-dogra/)
+    
+    29/08/2025
+    
+    [![](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20800%201067'%3E%3C/svg%3E)](https://countercurrents.org/2025/08/from-tears-of-anguish-to-smiles-of-livelihood-security/)
+    
+*   #### [Trump’s tariff war and Modi government on two crutches!](https://countercurrents.org/2025/08/trumps-tariff-war-and-modi-government-on-two-crutches/)
+    
+    by [Sanjay Parate](https://countercurrents.org/author/sanjay-parate/)
+    
+    29/08/2025
+    
+    [![](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20800%20622'%3E%3C/svg%3E)](https://countercurrents.org/2025/08/trumps-tariff-war-and-modi-government-on-two-crutches/)
+    
+*   #### [NACEJ condemns diversion of 1,740 hectares of dense Hasdeo forest land for Kente Extension coal block](https://countercurrents.org/2025/08/nacej-condemns-diversion-of-1740-hectares-of-dense-hasdeo-forest-land-for-kente-extension-coal-block/)
+    
+    by [National Alliance for Climate and Ecological Justice](https://countercurrents.org/author/national-alliance-for-climate-and-ecological-justi/)
+    
+    28/08/2025
+    
+    [![](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20800%20449'%3E%3C/svg%3E)](https://countercurrents.org/2025/08/nacej-condemns-diversion-of-1740-hectares-of-dense-hasdeo-forest-land-for-kente-extension-coal-block/)
+    
+*   #### [Women Scientists in Media: Why Interstellar’s Murph still matters?](https://countercurrents.org/2025/08/women-scientists-in-media-why-interstellars-murph-still-matters/)
+    
+    by [Krishnapriya T K](https://countercurrents.org/author/krishnapriya-t-k/)
+    
+    28/08/2025
+    
+    [![](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20800%20440'%3E%3C/svg%3E)](https://countercurrents.org/2025/08/women-scientists-in-media-why-interstellars-murph-still-matters/)
+    
+*   #### [The Gaza Plight: Rethinking Divine Intervention in Contemporary Crises](https://countercurrents.org/2025/08/the-gaza-plight-rethinking-divine-intervention-in-contemporary-crises/)
+    
+    by [Azmat Ali](https://countercurrents.org/author/azmat-ali/)
+    
+    28/08/2025
+    
+    [![](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20800%20450'%3E%3C/svg%3E)](https://countercurrents.org/2025/08/the-gaza-plight-rethinking-divine-intervention-in-contemporary-crises/)
+    
+*   #### [Mustafa Kamal Sherwani: The Man and his Magnificence (February 2, 1952-March 3, 2025)](https://countercurrents.org/2025/08/mustafa-kamal-sherwani-the-man-and-his-magnificence-february-2-1952-march-3-2025/)
+    
+    by [Haider Abbas](https://countercurrents.org/author/haider-abbas/)
+    
+    28/08/2025
+    
+    [![](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20800%20575'%3E%3C/svg%3E)](https://countercurrents.org/2025/08/mustafa-kamal-sherwani-the-man-and-his-magnificence-february-2-1952-march-3-2025/)
+    
+*   #### [Agra’s Footwear Industry in Crisis due to US Tariffs](https://countercurrents.org/2025/08/agras-footwear-industry-in-crisis-due-to-us-tariffs/)
+    
+    by [Dinkar Kapoor](https://countercurrents.org/author/dinkar-kapoor/)
+    
+    28/08/2025
+    
+    [![](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20800%20500'%3E%3C/svg%3E)](https://countercurrents.org/2025/08/agras-footwear-industry-in-crisis-due-to-us-tariffs/)
+    
+*   #### [Death toll from Gaza mass starvation hits 313](https://countercurrents.org/2025/08/death-toll-from-gaza-mass-starvation-hits-313/)
+    
+    by [Andre Damon](https://countercurrents.org/author/andre-damon/)
+    
+    28/08/2025
+    
+    [![](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20800%20482'%3E%3C/svg%3E)](https://countercurrents.org/2025/08/death-toll-from-gaza-mass-starvation-hits-313/)
+    
+*   #### [Bioregioning Is Our Future](https://countercurrents.org/2025/08/bioregioning-is-our-future/)
+    
+    by [Richard Heinberg](https://countercurrents.org/author/richard-heinberg/)
+    
+    28/08/2025
+    
+    [![](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20800%20533'%3E%3C/svg%3E)](https://countercurrents.org/2025/08/bioregioning-is-our-future/)
+    
+*   #### [Genocide Prevention: What Can Be Done Should be Done by Persons, Governments, and the UN](https://countercurrents.org/2025/08/genocide-prevention-what-can-be-done-should-be-done-by-persons-governments-and-the-un/)
+    
+    by [Richard Falk](https://countercurrents.org/author/richard-falk/)
+    
+    28/08/2025
+    
+    [![](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20800%20800'%3E%3C/svg%3E)](https://countercurrents.org/2025/08/genocide-prevention-what-can-be-done-should-be-done-by-persons-governments-and-the-un/)
+    
+*   #### [Useful Expedient: Expelling Iran’s Ambassador to Australia](https://countercurrents.org/2025/08/useful-expedient-expelling-irans-ambassador-to-australia/)
+    
+    by [Dr Binoy Kampmark](https://countercurrents.org/author/binoy-kampmark/)
+    
+    28/08/2025
+    
+    [![](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20800%20593'%3E%3C/svg%3E)](https://countercurrents.org/2025/08/useful-expedient-expelling-irans-ambassador-to-australia/)
+    
+*   #### [A Black Hole in Collective Memory: China and WW II](https://countercurrents.org/2025/08/a-black-hole-in-collective-memory-china-and-ww-ii/)
+    
+    by [Biljana Vankovska](https://countercurrents.org/author/biljana-vankovska/)
+    
+    28/08/2025
+    
+    [![](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20800%20523'%3E%3C/svg%3E)](https://countercurrents.org/2025/08/a-black-hole-in-collective-memory-china-and-ww-ii/)
+    
+*   #### [Monitor Progress of Forest Rights Law to Ensure Adequate Benefit to Tribal Communities](https://countercurrents.org/2025/08/monitor-progress-of-forest-rights-law-to-ensure-adequate-benefit-to-tribal-communities/)
+    
+    by [Bharat Dogra](https://countercurrents.org/author/bharat-dogra/)
+    
+    28/08/2025
+    
+    [![](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20800%201063'%3E%3C/svg%3E)](https://countercurrents.org/2025/08/monitor-progress-of-forest-rights-law-to-ensure-adequate-benefit-to-tribal-communities/)
+    
+*   #### [The Three Faces of Friendship in Our Times](https://countercurrents.org/2025/08/the-three-faces-of-friendship-in-our-times/)
+    
+    by [Ashish Singh](https://countercurrents.org/author/ashish-singh/)
+    
+    28/08/2025
+    
+    [![](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20756%20504'%3E%3C/svg%3E)](https://countercurrents.org/2025/08/the-three-faces-of-friendship-in-our-times/)
+    
+*   #### [An Open Letter to the Honorable Prime Minister Shri Narendra Modi Ji](https://countercurrents.org/2025/08/an-open-letter-to-the-honorable-prime-minister-shri-narendra-modi-ji/)
+    
+    by [Dr Suresh Khairnar](https://countercurrents.org/author/dr-suresh-khairnar/)
+    
+    28/08/2025
+    
+    [![](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20800%20576'%3E%3C/svg%3E)](https://countercurrents.org/2025/08/an-open-letter-to-the-honorable-prime-minister-shri-narendra-modi-ji/)
+    
+*   #### [Photo Essay: Stories from the Streets](https://countercurrents.org/2025/08/photo-essay-stories-from-the-streets/)
+    
+    by [Sreejith K](https://countercurrents.org/author/sreejith-k/)
+    
+    28/08/2025
+    
+    [![](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20753%20502'%3E%3C/svg%3E)](https://countercurrents.org/2025/08/photo-essay-stories-from-the-streets/)
+    
+*   #### [Dark Cloud Hovers in Israel Over Gaza City Invasion](https://countercurrents.org/2025/08/dark-cloud-hovers-in-israel-over-gaza-city-invasion/)
+    
+    by [Dr Marwan Asmar](https://countercurrents.org/author/dr-marwan-asmar/)
+    
+    27/08/2025
+    
+    [![](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20800%20534'%3E%3C/svg%3E)](https://countercurrents.org/2025/08/dark-cloud-hovers-in-israel-over-gaza-city-invasion/)
+    
+*   #### [Return of the Raj and the Need for Global Resistance](https://countercurrents.org/2025/08/return-of-the-raj-and-the-need-for-global-resistance/)
+    
+    by [Satya Sagar](https://countercurrents.org/author/satya-sagar/)
+    
+    27/08/2025
+    
+    [![](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20800%20534'%3E%3C/svg%3E)](https://countercurrents.org/2025/08/return-of-the-raj-and-the-need-for-global-resistance/)
+    
+*   #### [False Promises: US Officials Have Claimed for Months That Israel’s Gaza Genocide Would End Soon](https://countercurrents.org/2025/08/false-promises-us-officials-have-claimed-for-months-that-israels-gaza-genocide-would-end-soon/)
+    
+    by [Quds News Network](https://countercurrents.org/author/quds-news-network/)
+    
+    27/08/2025
+    
+    [![](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20800%20482'%3E%3C/svg%3E)](https://countercurrents.org/2025/08/false-promises-us-officials-have-claimed-for-months-that-israels-gaza-genocide-would-end-soon/)
+    
+*   #### [Questioning the Corporation](https://countercurrents.org/2025/08/questioning-the-corporation/)
+    
+    by [John P Ruehl](https://countercurrents.org/author/john-p-ruehl/)
+    
+    27/08/2025
+    
+    [![](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20800%20531'%3E%3C/svg%3E)](https://countercurrents.org/2025/08/questioning-the-corporation/)
+    
+*   #### [Degrowth and Liberty: Being Free With Less](https://countercurrents.org/2025/08/degrowth-and-liberty-being-free-with-less/)
+    
+    by [Florent Marcellesi](https://countercurrents.org/author/florent-marcellesi/)
+    
+    27/08/2025
+    
+    [![](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20800%20532'%3E%3C/svg%3E)](https://countercurrents.org/2025/08/degrowth-and-liberty-being-free-with-less/)
+    
+*   #### [A Himalayan Crisis](https://countercurrents.org/2025/08/a-himalayan-crisis/)
+     
+    
+    by [Soumya Dutta](https://countercurrents.org/author/soumya-dutta/)
+    
+    27/08/2025
+    
+    [![](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20720%201280'%3E%3C/svg%3E)](https://countercurrents.org/2025/08/a-himalayan-crisis/)
+    
+*   #### [Medals for Massacres: Pakistan’s Generals and Their Zionist Fantasies](https://countercurrents.org/2025/08/zionist-dreams-pakistani-nightmares/)
+    
+    by [Junaid S Ahmad](https://countercurrents.org/author/junaid-s-ahmad/)
+    
+    27/08/2025
+    
+    [![](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20800%20543'%3E%3C/svg%3E)](https://countercurrents.org/2025/08/zionist-dreams-pakistani-nightmares/)
+    
+*   #### [Apathy to Peace and War:  Palestine](https://countercurrents.org/2025/08/apathy-to-peace-and-war-palestine/)
+    
+    by [Dr Mahboob A Khawaja](https://countercurrents.org/author/dr-mahboob-a-khawaja/)
+    
+    27/08/2025
+    
+    [![](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20800%20533'%3E%3C/svg%3E)](https://countercurrents.org/2025/08/apathy-to-peace-and-war-palestine/)
+    
+*   #### [India’s Perennial Air Pollution Crisis](https://countercurrents.org/2025/08/indias-perennial-air-pollution-crisis/)
+    
+    by [Walt Gelles](https://countercurrents.org/author/walt-gelles/)
+    
+    27/08/2025
+    
+    [![](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20800%20529'%3E%3C/svg%3E)](https://countercurrents.org/2025/08/indias-perennial-air-pollution-crisis/)
+    
+*   #### [The World Will Change When the Press Understands Its Power](https://countercurrents.org/2025/08/the-world-will-change-when-the-press-understands-its-power/)
+    
+    by [David Andersson](https://countercurrents.org/author/david-andersson/)
+    
+    27/08/2025
+    
+    [![](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20800%20400'%3E%3C/svg%3E)](https://countercurrents.org/2025/08/the-world-will-change-when-the-press-understands-its-power/)
+    
+*   #### [The Bully in Donald Trump’s Bully Pulpit-How MAGA Uses Violence to Consolidate Power](https://countercurrents.org/2025/08/the-bully-in-donald-trumps-bully-pulpit-how-maga-uses-violence-to-consolidate-power/)
+    
+    by [Andrea Mazzarino](https://countercurrents.org/author/andrea-mazzarino/)
+    
+    27/08/2025
+    
+    [![](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20800%20533'%3E%3C/svg%3E)](https://countercurrents.org/2025/08/the-bully-in-donald-trumps-bully-pulpit-how-maga-uses-violence-to-consolidate-power/)
+    
+*   #### [Friendships in the Age of Digital Capitalism](https://countercurrents.org/2025/08/friendships-in-the-age-of-digital-capitalism/)
+    
+    by [Bhabani Shankar Nayak](https://countercurrents.org/author/bhabani-shankar-nayak/)
+    
+    27/08/2025
+    
+    [![](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20800%20377'%3E%3C/svg%3E)](https://countercurrents.org/2025/08/friendships-in-the-age-of-digital-capitalism/)
+    
+*   #### [Remembering the Great Efforts of Saving Himalayan Forests in Tehri Garhwal](https://countercurrents.org/2025/08/remembering-the-great-efforts-of-saving-himalayan-forests-in-tehri-garhwal/)
+    
+    by [Bharat Dogra](https://countercurrents.org/author/bharat-dogra/)
+    
+    27/08/2025
+    
+    [![](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20800%201156'%3E%3C/svg%3E)](https://countercurrents.org/2025/08/remembering-the-great-efforts-of-saving-himalayan-forests-in-tehri-garhwal/)
+    
+
+### [Editor’s Picks](/editors-picks/)
+
+*   #### [Solidarity journalism and solidarity economy are the need of the hour](https://countercurrents.org/2025/08/solidarity-journalism-and-solidarity-economy-are-the-need-of-the-hour/)
+    
+    by [Binu Mathew](https://countercurrents.org/author/binu-mathew/)
+    
+    25/08/2025
+    
+    [![](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20800%20800'%3E%3C/svg%3E)](https://countercurrents.org/2025/08/solidarity-journalism-and-solidarity-economy-are-the-need-of-the-hour/)
+    
+*   #### [K.P Sasi Memorial Webinar: “15th August: The Hindu Rashtra is here."
+
+# Your Summary
+
+
+
+===== > RESPONSE:  < =====
+The search result from Countercurrents.org, published on July 7, 2024, discusses an Israeli bombing of a UN school in the Nuseirat refugee camp on July 6, 2024. The article states that Mayar Haidar (9 years old) and Bilal Hamida (6 years old) were killed in the bombing, along with their grandmother. <image:63> The article also mentions that the school was sheltering displaced people.
+
+_________________________
+
+
+
+SummarizeResultPrompt - QUERY:
+
+# Instructions
+In order to find evidence that helps your fact-check, you just ran a web search which yielded a Search Result. **Your task right now is to summarize the Search Result.** What to include:
+* information that might be useful for the fact-check (see Record)
+* relevant images (refer to images by inserting their reference <image:k>)
+* if available: the release date as well as the author or the publisher (e.g. the media company) of the search result.
+
+Do NOT include:
+* advertisements
+* any other information not related to the Record or the Claim
+
+Additional rules:
+* Do not add any additional information besides the information in the Search Result.
+* If the Search Result doesn't contain any relevant information for the fact-checking work, simply print one word in capital letters: "NONE".
+* Keep your writing style like in the Examples 1, 2 and 3 provided to you.
+* Try to filter out relevant information even if the search result is in a different language.
+
+# Example 1
+The search result from America Today provides several photographs of the Notre-Dame Cathedral fire on April 15, 2019. <image:i>, <image:j>, <image:k>. None of the images show the Eiffel Tower in the background. 
+
+# Example 2
+NONE
+
+# Example 3
+The Guardian discusses a report blaming the Syrian government for a toxic gas attack and condemning their use of chemical weapons. The Guardian mentions the Chemical Weapons Convention and the responsibilities of Syria under the convention. According to The Guardian, The White House condemned the Assad regime for defying the norm against chemical weapons use.
+
+# Record
+## Claim
+Claim: "<image:63> This image shows Mayar Hamida (9 years old) and Bilal Hamida (6 years old) who were killed by Israel along with their mother and grandmother at Al-Jaoni UN school in Al-Nuseirat refugee camp on July, 6 2024."
+
+## Actions
+```
+geolocate(<image:63>)
+web_search("Mayar Hamida Bilal Hamida Al-Nuseirat refugee camp")
+```
+
+## Evidence
+### Evidence from `geolocate`
+The most likely countries where the image was taken are: {'United Arab Emirates': 0.25, 'Jordan': 0.23, 'Pakistan': 0.17, 'Tunisia': 0.13, 'Palestine': 0.05, 'Israel': 0.04, 'Malta': 0.02, 'India': 0.01, 'Nigeria': 0.01, 'Rwanda': 0.01}
+
+### Evidence from `web_search`
+The CNN article ([https://www.cnn.com/2024/07/19/middleeast/gaza-neighborhood-israeli-hostages-intl-cmd](https://www.cnn.com/2024/07/19/middleeast/gaza-neighborhood-israeli-hostages-intl-cmd)) discusses an Israeli operation in the Nuseirat refugee camp on June 8, 2024, where hostages were rescued. The article mentions over 270 Palestinians were killed. The image <image:63>
+
+## Elaboration
+The CNN article ([https://www.cnn.com/2024/07/19/middleeast/gaza-neighborhood-israeli-hostages-intl-cmd](https://www.cnn.com/2024/07/19/middleeast/gaza-neighborhood-israeli-hostages-intl-cmd)) mentions an Israeli operation in the Nuseirat refugee camp on June 8, 2024, which resulted in over 270 Palestinian deaths. The claim states the children were killed on July 6, 2024, which is after the date of the operation mentioned in the CNN article.
+
+The geolocation of the image suggests the image was most likely taken in the United Arab Emirates, Jordan, Pakistan, or Tunisia, with a low probability of being taken in Palestine or Israel.
+
+The claim cannot be verified with the provided information. More information is needed to confirm the children's deaths, including the date and location.
+
+
+## Actions
+```
+web_search("Mayar Hamida Bilal Hamida killed Israel Al-Jaoni UN school")
+web_search("Al-Nuseirat refugee camp July 6 2024 deaths")
+```
+
+# Search Result
+From [Source](https://www.aljazeera.com/news/2021/8/24/global-outcry-over-israels-targeting-of-palestinian-children): 
+Content: "This is not the first time we have been targeted by the Israeli authorities.
+
+“Previously they would attack through proxy, pro-Israel organisations trying to slander us and undermine our reputation with our partners and donors but that never worked,” Abu Eqtaish told Al Jazeera.
+
+Manal Tamimi, an activist from another family of Nabi Saleh’s Tamimi clan, said children in the village were regularly targeted and some of this targeting was to punish their parents for their political activism.
+
+Manal’s husband Bilal has been regularly assaulted by Israeli soldiers for documenting their abuses during previous clashes with Palestinian youths in the village.
+
+Several years ago, Manal was shot in the leg with live ammunition at the beginning of one demonstration.
+
+“I was warned on my Facebook page prior to the protest that my blood would be spilled that day and at the beginning of the protest I was shot in the leg with a .22 bullet, which caused the bone to break,” she told Al Jazeera.
+
+Her son Osama was previously imprisoned for nine months for allegedly taking part in protests.
+
+However, it was the arrest and detention of her son Samer several years ago, when he was 11 years old, that really stressed the family.
+
+“Samer and two other boys of the same age were arrested from Nabi Saleh and another village,” said Manal.
+
+“The soldiers had come into the village, despite everything being quiet and they snatched two of the boys when they were near the supermarket and put them into a military jeep.
+
+“I and several other women tried to physically stop the jeep but we couldn’t.
+
+“We then went to the military checkpoint at the entrance of the village and shouted at the soldiers to tell us where the boys were but they wouldn’t.
+
+“My husband and I were extremely worried as we didn’t know where he was or whether he’d been injured.”
+
+![](/wp-content/uploads/2021/08/Samer-Tamimi.jpg?w=770&resize=770%2C578&quality=80)
+
+Samer Tamimi was arrested even though he was only 11 years old at the time \[Al Jazeera\]
+
+Blindfolds and handcuffs
+------------------------
+
+Samer recalled his frightening experience.
+
+“I was blindfolded and handcuffed and taken to a military base where we were all made to sit on the floor for six hours and questioned,” Samer told Al Jazeera.
+
+During this time, none of the boys was given any food or water, and neither were their blindfolds or handcuffs removed.
+
+Samer was also shown a video by the soldiers of his mother protesting at the checkpoint to frighten him. The boys were eventually released later that night following intervention by Palestinian officials.
+
+“But now my son has a file and he is not allowed to cross through Israeli checkpoints even though he is only 15,” said Manal.
+
+Manal said about 85 children from the village had been arrested over the years, 10 of them under 15. “More than 500 villagers had also been wounded, and five people were killed.”
+
+She said soldiers in the village made life hard for the children by erecting regular checkpoints and stopping children from going to school, in addition to the beatings and arrests.
+
+Source: Al Jazeera
+
+* * *
+
+aj-logo
+
+aj-logo
+
+aj-logo A short while later I heard three gunshots.”
+
+![](/wp-content/uploads/2021/08/Baraa-Tamimi.jpg?w=770&resize=770%2C578&quality=80)
+
+Bara’a Tamimi stands by a poster of her son, Muhammad, who was shot and killed by Israeli forces \[Al Jazeera\]
+
+‘Willful killings’
+------------------
+
+On July 28, Muhammad Abu Sara, 11, [died from a gunshot](https://www.dci-palestine.org/israeli_forces_shoot_and_kill_11_year_old_palestinian_boy_in_hebron)
+ wound to the chest after Israeli soldiers fired 13 rounds at his father’s car in the Palestinian village of Beit Ummar in the southern West Bank.
+
+Again, there were no clashes in the village that day.
+
+The Israeli soldiers said the vehicle failed to stop when ordered to do so. But Defense for Children International-Palestine (DCIP) said that under international law, intentional lethal force was only justified in circumstances where a direct threat to life or of serious injury was present.
+
+“However, investigations and evidence collected by DCIP regularly suggest that Israeli forces use lethal force against Palestinian children in circumstances that may amount to extrajudicial or willful killings,” said DCIP.
+
+On Tuesday, a 15-year-old Palestinian was killed by Israeli live fire in the occupied West Bank. The Palestinian health ministry said Imad Khaled Saleh Hashash died after sustaining a gunshot wound to the head.
+
+The deaths of the three boys were among 12 children killed in the Israeli-occupied West Bank this year, according to the UN Office of the High Commissioner for Human Rights (OHCHR).
+
+Another 67 children were killed in Gaza during Israel’s attack in May.
+
+According to DCIP, seven children were killed in Gaza and the West Bank in 2020.
+
+‘Rights of children’
+--------------------
+
+This spike in the number of child fatalities, and a raid on the DCIP offices in Al Bireh by Israeli security forces at the end of July, led human rights experts from the Office of the United Nations High Commissioner for Human Rights (OHCHR) to call on the Israeli government to “immediately return confidential documents and office equipment that its military seized from the offices of the DCIP”.
+
+“We are deeply concerned by the Israeli military’s interference with the human rights work of a well-known and well-regarded NGO,” said the experts.
+
+Computers, hard drives, binders and other materials were taken from DCIP’s offices during the nighttime raid.
+
+“The indispensable work of Palestinian, Israeli and international civil society organisations has provided a measure of much-needed accountability in documenting and scrutinising the dispiriting human rights trends in the occupied Palestinian territory,” OHCHR said.
+
+DCIP provided critical and reliable reporting on the patterns of arrests, maimings, and killings of Palestinian children by the Israeli military in the occupied West Bank, including East Jerusalem, and Gaza, the organisation added.
+
+“All civilian lives under occupation are protected under international law. ![Palestine air strike 16 july 2014](/wp-content/uploads/2018/08/a04f5e23c755494ab522d6d44b31f181_18.jpeg?resize=770%2C513&quality=80)
+
+A spike in the number of child fatalities led to condemnation by the Office of the United Nations High Commissioner for Human Rights \[File: Mohammed Talatene/Reuters\]
+
+[![](/wp-content/uploads/2025/08/images-1-1754468937.jpg?resize=96%2C96&quality=80)](/author/al_jazeera_201312178595491377)
+
+By [Al Jazeera](/author/al_jazeera_201312178595491377)
+
+Published On 24 Aug 202124 Aug 2021
+
+**Nabi Saleh, Occupied West Bank** – “Mama, mama where is Muhammad?” an agitated Omar Tamimi, 3, repeatedly asked his mother.
+
+Trying hard not to break down in front of her children, Bara’a Tamimi, from the village of Nabi Saleh, near Ramallah, tried to comfort her son before breaking down and weeping.
+
+Recommended Stories
+-------------------
+
+list of 4 items
+
+list 1 of 4
+
+### [Israeli attack on Gaza Strip ‘apparently broke the law’, HRW says](/news/2021/8/23/israeli-strikes-on-gaza-strip-apparently-broke-law-hrw-says)
+
+list 2 of 4
+
+### [Israel-Palestine conflict looms large as Biden meets Jordan King](/news/2021/7/19/israel-palestine-conflict-looms-large-biden-meets-jordan-king)
+
+list 3 of 4
+
+### [Palestine runs dry: ‘Our water they steal and sell to us’](/news/2021/7/15/water-war-palestinians-demand-more-water-access-from-israel)
+
+list 4 of 4
+
+### [Palestine football criticises planned Barcelona game in Jerusalem](/sports/2021/7/9/palestine-football-criticises-planned-barcelona-game-in-jerusalem)
+
+end of list
+
+Last month her other son Muhammad Tamimi, 17, died after Israeli soldiers [shot him in the back](/news/2021/7/24/palestinian-shot-in-by-israeli-troops-dies-says-ministry)
+ three times with live ammunition.
+
+“We rushed him to hospital but he died less than an hour after he was shot. They couldn’t save him,” Bara’a told Al Jazeera.
+
+There were no clashes in the village that day on July 23, but Israeli soldiers had been coming into the village on an almost daily basis and provoking the locals, shooting tear gas canisters into homes and swearing at the villagers.
+
+Nabi Saleh is home to about 600 people, mostly from the Tamimi clan, and has a history of activism, which included regular Friday protests in the past.
+
+“Muhammad was in the backyard when the soldiers shot tear gas into our home, forcing me to take the other young children into the inner rooms of the home for their safety,” said Bara’a as she recalled the events leading up to Muhammad’s killing.
+
+“A verbal confrontation then ensued between Muhammad and the soldiers before he later went out to look for one of his brothers who has cancer in one of his eyes and can’t see properly. This is particularly true for the rights of children,” the OHCHR experts said.
+
+![](/wp-content/uploads/2021/08/Manal-Tamimi.jpg?w=770&resize=770%2C578&quality=80)
+
+Manal Tamimi say children in her village are regularly targeted by Israeli troops \[Al Jazeera\]
+
+‘Attack through proxy’
+----------------------
+
+DCIP is waiting for a military court hearing on Tuesday to determine whether the files and equipment confiscated from their office will be returned.
+
+“On the same day the military raided our office our lawyers notified Ofer Military Court of the issue and they contacted the military legal adviser requesting the files and equipment be returned by August 16,” DCIP spokesman Ayed Abu Eqtaish told Al Jazeera.
+
+“The legal adviser twice refused to return the stuff saying an investigation was being carried out, so we are taking the matter to court."
+
+# Your Summary
+
+
+
+===== > RESPONSE:  < =====
+The Al Jazeera article, published on August 24, 2021, discusses the targeting of Palestinian children by Israeli forces. It mentions the deaths of Muhammad Abu Sara (11 years old) on July 28, and Imad Khaled Saleh Hashash (15 years old). The article also mentions the arrest and detention of Samer Tamimi (11 years old). <image:63> is not mentioned in the article.
+
+_________________________
+
+
+
+SummarizeResultPrompt - QUERY:
+
+# Instructions
+In order to find evidence that helps your fact-check, you just ran a web search which yielded a Search Result. **Your task right now is to summarize the Search Result.** What to include:
+* information that might be useful for the fact-check (see Record)
+* relevant images (refer to images by inserting their reference <image:k>)
+* if available: the release date as well as the author or the publisher (e.g. the media company) of the search result.
+
+Do NOT include:
+* advertisements
+* any other information not related to the Record or the Claim
+
+Additional rules:
+* Do not add any additional information besides the information in the Search Result.
+* If the Search Result doesn't contain any relevant information for the fact-checking work, simply print one word in capital letters: "NONE".
+* Keep your writing style like in the Examples 1, 2 and 3 provided to you.
+* Try to filter out relevant information even if the search result is in a different language.
+
+# Example 1
+The search result from America Today provides several photographs of the Notre-Dame Cathedral fire on April 15, 2019. <image:i>, <image:j>, <image:k>. None of the images show the Eiffel Tower in the background. 
+
+# Example 2
+NONE
+
+# Example 3
+The Guardian discusses a report blaming the Syrian government for a toxic gas attack and condemning their use of chemical weapons. The Guardian mentions the Chemical Weapons Convention and the responsibilities of Syria under the convention. According to The Guardian, The White House condemned the Assad regime for defying the norm against chemical weapons use.
+
+# Record
+## Claim
+Claim: "<image:63> This image shows Mayar Hamida (9 years old) and Bilal Hamida (6 years old) who were killed by Israel along with their mother and grandmother at Al-Jaoni UN school in Al-Nuseirat refugee camp on July, 6 2024."
+
+## Actions
+```
+geolocate(<image:63>)
+web_search("Mayar Hamida Bilal Hamida Al-Nuseirat refugee camp")
+```
+
+## Evidence
+### Evidence from `geolocate`
+The most likely countries where the image was taken are: {'United Arab Emirates': 0.25, 'Jordan': 0.23, 'Pakistan': 0.17, 'Tunisia': 0.13, 'Palestine': 0.05, 'Israel': 0.04, 'Malta': 0.02, 'India': 0.01, 'Nigeria': 0.01, 'Rwanda': 0.01}
+
+### Evidence from `web_search`
+The CNN article ([https://www.cnn.com/2024/07/19/middleeast/gaza-neighborhood-israeli-hostages-intl-cmd](https://www.cnn.com/2024/07/19/middleeast/gaza-neighborhood-israeli-hostages-intl-cmd)) discusses an Israeli operation in the Nuseirat refugee camp on June 8, 2024, where hostages were rescued. The article mentions over 270 Palestinians were killed. The image <image:63>
+
+## Elaboration
+The CNN article ([https://www.cnn.com/2024/07/19/middleeast/gaza-neighborhood-israeli-hostages-intl-cmd](https://www.cnn.com/2024/07/19/middleeast/gaza-neighborhood-israeli-hostages-intl-cmd)) mentions an Israeli operation in the Nuseirat refugee camp on June 8, 2024, which resulted in over 270 Palestinian deaths. The claim states the children were killed on July 6, 2024, which is after the date of the operation mentioned in the CNN article.
+
+The geolocation of the image suggests the image was most likely taken in the United Arab Emirates, Jordan, Pakistan, or Tunisia, with a low probability of being taken in Palestine or Israel.
+
+The claim cannot be verified with the provided information. More information is needed to confirm the children's deaths, including the date and location.
+
+
+## Actions
+```
+web_search("Mayar Hamida Bilal Hamida killed Israel Al-Jaoni UN school")
+web_search("Al-Nuseirat refugee camp July 6 2024 deaths")
+```
+
+# Search Result
+From [Source](https://english.palinfo.com/Zionist-Terrorism/2023/11/18/82751/): 
+Content: "[Featured](https://english.palinfo.com/category/featured/)
+ | [Zionist Terrorism](https://english.palinfo.com/category/Zionist-Terrorism/)
+
+Israeli airstrikes kill girl along with her dream to become journalist
+======================================================================
+
+Saturday 18-November-2023
+
+![](https://english.palinfo.com/wp-content/uploads/Models/Media/Images/2023/11/18/2113423514.jpeg "Israeli airstrikes kill girl along with her dream to become journalist")
+
+[+](javascript:void(0);)
+ [\-](javascript:void(0);)
+
+Mayar and Bilal are two children of Palestine TV correspondent Nidal Hamida. They were though attached to each other always playing together and having fun at home while enjoying the love of their parents. 
+
+All those who knew Mayar said she was a smart girl as she excelled in her school subjects and was dreaming of becoming a journalist just like her father but the Israeli hideous bombardment ended her dream by killing her along with her brother Bilal and their mother in October 2023. 
+
+Their father who has been covering the Israeli aggression on Gaza as many other journalists was left alone to continue his job with grief and pain for his great loss and concern over losing more of his family members. 
+
+Since October 7 Israel has been waging a heinous genocide in Gaza Strip via air ground and sea attacks resulting in more than 40000 martyrs wounded and missing people. 
+
+“We Are Not Numbers” is a series that reviews part of the available stories of some Palestinian martyrs who have fallen in the Israeli aggression on Gaza.
+
+[Israeli aggression](https://english.palinfo.com/tag/Israeli-aggression/)
+
+Related
+-------
+
+[! Like thousands of Palestinian children in Gaza the Israeli brutal airstrikes ended up their lives along with their dreams. 
+
+Mayar was a few years older than her brother Bilal. <image:9987>\
+\
+Aqsa Martyrs Hospital issues urgent appeal for electricity generator to save thousands of patients\
+--------------------------------------------------------------------------------------------------](https://english.palinfo.com/news/2025/08/29/346670/)
+[! <image:9988>\
+\
+Hamas commends Türkiye’s support for the Palestinian people\
+-----------------------------------------------------------](https://english.palinfo.com/news/2025/08/29/346668/)
+[! <image:9989>\
+\
+Abu Obeida: The enemy’s plans to occupy Gaza will bring catastrophe upon its political and military leadership\
+--------------------------------------------------------------------------------------------------------------](https://english.palinfo.com/news/2025/08/29/346666/)
+[! <image:9990>\
+\
+Norway calls for immediate ceasefire in Gaza\
+--------------------------------------------](https://english.palinfo.com/news/2025/08/29/346640/)
+
+[](#)"
+
+# Your Summary
+
+
+
+===== > RESPONSE:  < =====
+The article from Palinfo, published on November 18, 2023, reports that Mayar and Bilal Hamida, children of Palestine TV correspondent Nidal Hamida, were killed along with their mother in October 2023 by Israeli airstrikes. <image:9987>, <image:9988>, <image:9989>, <image:9990>.
+
+_________________________
+
+
+
+SummarizeSummariesPrompt - QUERY:
+
+# Instructions
+You just retrieved web sources, each one summarized under "Web Sources". **Your task right now is to summarize the web source summaries.**
+
+Always adhere to the following rules:
+* Write only one to two paragraphs.
+* Include all URLs from the listed sources. Format them as Markdown hyperlinks.
+* Do not add any additional information besides the information in the summaries.
+* Include references (<image:k>) to all relevant images.
+
+# Record
+## Claim
+Claim: "<image:63> This image shows Mayar Hamida (9 years old) and Bilal Hamida (6 years old) who were killed by Israel along with their mother and grandmother at Al-Jaoni UN school in Al-Nuseirat refugee camp on July, 6 2024."
+
+## Actions
+```
+geolocate(<image:63>)
+web_search("Mayar Hamida Bilal Hamida Al-Nuseirat refugee camp")
+```
+
+## Evidence
+### Evidence from `geolocate`
+The most likely countries where the image was taken are: {'United Arab Emirates': 0.25, 'Jordan': 0.23, 'Pakistan': 0.17, 'Tunisia': 0.13, 'Palestine': 0.05, 'Israel': 0.04, 'Malta': 0.02, 'India': 0.01, 'Nigeria': 0.01, 'Rwanda': 0.01}
+
+### Evidence from `web_search`
+The CNN article ([https://www.cnn.com/2024/07/19/middleeast/gaza-neighborhood-israeli-hostages-intl-cmd](https://www.cnn.com/2024/07/19/middleeast/gaza-neighborhood-israeli-hostages-intl-cmd)) discusses an Israeli operation in the Nuseirat refugee camp on June 8, 2024, where hostages were rescued. The article mentions over 270 Palestinians were killed. The image <image:63>
+
+## Elaboration
+The CNN article ([https://www.cnn.com/2024/07/19/middleeast/gaza-neighborhood-israeli-hostages-intl-cmd](https://www.cnn.com/2024/07/19/middleeast/gaza-neighborhood-israeli-hostages-intl-cmd)) mentions an Israeli operation in the Nuseirat refugee camp on June 8, 2024, which resulted in over 270 Palestinian deaths. The claim states the children were killed on July 6, 2024, which is after the date of the operation mentioned in the CNN article.
+
+The geolocation of the image suggests the image was most likely taken in the United Arab Emirates, Jordan, Pakistan, or Tunisia, with a low probability of being taken in Palestine or Israel.
+
+The claim cannot be verified with the provided information. More information is needed to confirm the children's deaths, including the date and location.
+
+
+## Actions
+```
+web_search("Mayar Hamida Bilal Hamida killed Israel Al-Jaoni UN school")
+web_search("Al-Nuseirat refugee camp July 6 2024 deaths")
+```
+
+## Web Sources
+**Web Search Result**
+
+From [Source](https://countercurrents.org/2024/07/israel-bombs-un-school-in-nuseirat/): 
+Content: The search result from Countercurrents.org, published on July 7, 2024, discusses an Israeli bombing of a UN school in the Nuseirat refugee camp on July 6, 2024. The article states that Mayar Haidar (9 years old) and Bilal Hamida (6 years old) were killed in the bombing, along with their grandmother. <image:63> The article also mentions that the school was sheltering displaced people.
+
+
+From [Source](https://www.aljazeera.com/news/2021/8/24/global-outcry-over-israels-targeting-of-palestinian-children): 
+Content: The Al Jazeera article, published on August 24, 2021, discusses the targeting of Palestinian children by Israeli forces. It mentions the deaths of Muhammad Abu Sara (11 years old) on July 28, and Imad Khaled Saleh Hashash (15 years old). The article also mentions the arrest and detention of Samer Tamimi (11 years old). <image:63> is not mentioned in the article.
+
+
+From [Source](https://english.palinfo.com/Zionist-Terrorism/2023/11/18/82751/): 
+Content: The article from Palinfo, published on November 18, 2023, reports that Mayar and Bilal Hamida, children of Palestine TV correspondent Nidal Hamida, were killed along with their mother in October 2023 by Israeli airstrikes. <image:9987>, <image:9988>, <image:9989>, <image:9990>.
+
+
+## Your Summary
+
+
+
+===== > RESPONSE:  < =====
+Countercurrents.org ([https://countercurrents.org/2024/07/israel-bombs-un-school-in-nuseirat/](https://countercurrents.org/2024/07/israel-bombs-un-school-in-nuseirat/)) reports that Mayar Haidar (9 years old) and Bilal Hamida (6 years old) were killed in an Israeli bombing of a UN school in the Nuseirat refugee camp on July 6, 2024. The Al Jazeera article ([https://www.aljazeera.com/news/2021/8/24/global-outcry-over-israels-targeting-of-palestinian-children](https://www.aljazeera.com/news/2021/8/24/global-outcry-over-israels-targeting-of-palestinian-children)) discusses the targeting of Palestinian children by Israeli forces, but does not mention the children in the claim.
+
+Palinfo ([https://english.palinfo.com/Zionist-Terrorism/2023/11/18/82751/](https://english.palinfo.com/Zionist-Terrorism/2023/11/18/82751/)) reports that Mayar and Bilal Hamida were killed along with their mother in October 2023 by Israeli airstrikes. <image:63>
+_________________________
+
+
+
+SummarizeResultPrompt - QUERY:
+
+# Instructions
+In order to find evidence that helps your fact-check, you just ran a web search which yielded a Search Result. **Your task right now is to summarize the Search Result.** What to include:
+* information that might be useful for the fact-check (see Record)
+* relevant images (refer to images by inserting their reference <image:k>)
+* if available: the release date as well as the author or the publisher (e.g. the media company) of the search result.
+
+Do NOT include:
+* advertisements
+* any other information not related to the Record or the Claim
+
+Additional rules:
+* Do not add any additional information besides the information in the Search Result.
+* If the Search Result doesn't contain any relevant information for the fact-checking work, simply print one word in capital letters: "NONE".
+* Keep your writing style like in the Examples 1, 2 and 3 provided to you.
+* Try to filter out relevant information even if the search result is in a different language.
+
+# Example 1
+The search result from America Today provides several photographs of the Notre-Dame Cathedral fire on April 15, 2019. <image:i>, <image:j>, <image:k>. None of the images show the Eiffel Tower in the background. 
+
+# Example 2
+NONE
+
+# Example 3
+The Guardian discusses a report blaming the Syrian government for a toxic gas attack and condemning their use of chemical weapons. The Guardian mentions the Chemical Weapons Convention and the responsibilities of Syria under the convention. According to The Guardian, The White House condemned the Assad regime for defying the norm against chemical weapons use.
+
+# Record
+## Claim
+Claim: "<image:63> This image shows Mayar Hamida (9 years old) and Bilal Hamida (6 years old) who were killed by Israel along with their mother and grandmother at Al-Jaoni UN school in Al-Nuseirat refugee camp on July, 6 2024."
+
+## Actions
+```
+geolocate(<image:63>)
+web_search("Mayar Hamida Bilal Hamida Al-Nuseirat refugee camp")
+```
+
+## Evidence
+### Evidence from `geolocate`
+The most likely countries where the image was taken are: {'United Arab Emirates': 0.25, 'Jordan': 0.23, 'Pakistan': 0.17, 'Tunisia': 0.13, 'Palestine': 0.05, 'Israel': 0.04, 'Malta': 0.02, 'India': 0.01, 'Nigeria': 0.01, 'Rwanda': 0.01}
+
+### Evidence from `web_search`
+The CNN article ([https://www.cnn.com/2024/07/19/middleeast/gaza-neighborhood-israeli-hostages-intl-cmd](https://www.cnn.com/2024/07/19/middleeast/gaza-neighborhood-israeli-hostages-intl-cmd)) discusses an Israeli operation in the Nuseirat refugee camp on June 8, 2024, where hostages were rescued. The article mentions over 270 Palestinians were killed. The image <image:63>
+
+## Elaboration
+The CNN article ([https://www.cnn.com/2024/07/19/middleeast/gaza-neighborhood-israeli-hostages-intl-cmd](https://www.cnn.com/2024/07/19/middleeast/gaza-neighborhood-israeli-hostages-intl-cmd)) mentions an Israeli operation in the Nuseirat refugee camp on June 8, 2024, which resulted in over 270 Palestinian deaths. The claim states the children were killed on July 6, 2024, which is after the date of the operation mentioned in the CNN article.
+
+The geolocation of the image suggests the image was most likely taken in the United Arab Emirates, Jordan, Pakistan, or Tunisia, with a low probability of being taken in Palestine or Israel.
+
+The claim cannot be verified with the provided information. More information is needed to confirm the children's deaths, including the date and location.
+
+
+## Actions
+```
+web_search("Mayar Hamida Bilal Hamida killed Israel Al-Jaoni UN school")
+web_search("Al-Nuseirat refugee camp July 6 2024 deaths")
+```
+
+# Search Result
+From [Source](https://www.aljazeera.com/news/2024/7/6/israeli-attack-on-un-school-used-as-shelter-in-gaza-kills-at-least-16): 
+Content: "![Palestinians gather at the site of an Israeli attack on a UN school sheltering displaced people in central Gaza](/wp-content/uploads/2024/07/2024-07-06T172243Z_1772248985_RC2RP8ASQ2H1_RTRMADP_3_ISRAEL-PALESTINIANS-NUSAIRAT-STRIKE-1720289264.jpg?resize=770%2C513&quality=80)
+
+Palestinians gather at the site of an Israeli attack on a UN school sheltering displaced people in Nuseirat refugee camp in central Gaza, July 6 \[Ramadan Abed/Reuters\]
+
+[![](/wp-content/uploads/2024/05/2017-06-08T131939Z_1189275883_RC11B0FE7F20_RTRMADP_3_GULF-QATAR-JAZEERA-1714943623.jpg?resize=96%2C96&quality=80)](/author/al_jazeera_staff_150119130629458)
+
+By [Al Jazeera Staff](/author/al_jazeera_staff_150119130629458)
+
+Published On 6 Jul 20246 Jul 2024
+
+At least 16 Palestinians have been killed in an Israeli attack on a United Nations-run school sheltering displaced people in the Gaza Strip, the Gaza Government Media Office said, as Israel continues to pound the besieged coastal territory.
+
+In a statement on Saturday, the Government Media Office said more than 75 people also were injured in the attack on al-Jaouni school in central Gaza’s Nuseirat refugee camp.
+
+Recommended Stories
+-------------------
+
+list of 3 items
+
+list 1 of 3
+
+### [Video: Palestinian house targeted near Gaza’s Nasser Hospital](/video/newsfeed/2024/7/4/video-palestinian-house-targeted-near-gazas-nasser-hospital)
+
+list 2 of 3
+
+### [What does Israel want in Gaza?](/news/2024/7/4/what-does-israels-want-gaza)
+
+list 3 of 3
+
+### [Gaza girl inspires with cooking videos despite Israel’s siege](/video/newsfeed/2024/7/4/gaza-10-year-old-inspires-with-cooking-videos-despite-israels-siege)
+
+end of list
+
+“We condemn the Israeli occupation \[for\] committing these ongoing crimes and massacres against civilians, children and women,” it said.
+
+The Nuseirat facility, run by the UN agency for Palestinian refugees (UNRWA), is [the latest school to be bombed](/news/2024/1/24/how-israel-has-destroyed-gazas-schools-and-universities)
+ by the Israeli military since the Gaza war began in early October.
+
+At least 38,098 Palestinians have been killed in Israeli attacks across Gaza since October 7 and the besieged enclave faces dire shortages of food, water, medicine and other humanitarian supplies.
+
+On Saturday, dozens of Palestinians, [including five journalists](/news/2024/7/6/five-journalists-killed-as-israel-steps-up-bombardment-across-gaza)
+, were killed as the Israeli military stepped up its bombardment of the territory.
+
+Videos taken at the scene of the attack on the UNRWA school-turned-shelter in Nuseirat showed twisted metal at the collapsed building. Emergency workers also tried to cover two bodies as they were quickly brought into the medical complex.
+
+The Palestinian Ministry of Health in Gaza said in a statement that 50 injured Palestinians were taken to the hospital.
+
+In a [statement](https://x.com/IDF/status/1809662855660360020)
+ shared on social media on Saturday night, the Israeli army said its air force “struck several terrorists” in the area of al-Jaouni school.
+
+Reporting from Deir el-Balah, Al Jazeera’s Hind Khoudary said hundreds of Palestinian families had sought shelter at the school after they were forced to flee Israel’s bombardment in other parts of Gaza.
+
+The families “chose the middle area \[of the Gaza Strip\] because Israeli forces said the middle area is a safe zone”, Khoudary said.
+
+“Everyone in the Gaza Strip believes that they are not safe, wherever they go.”
+
+Last month, an Israeli attack on an UN-linked school – also in Nuseirat refugee camp – [killed at least 40 people](/news/2024/6/6/israel-bombs-unrwa-school-in-gaza-kills-32-displaced-palestinians)
+ and injured dozens more, according to local authorities.
+
+Musab, a 17-year-old survivor of the early June bombing of the UNRWA Nuseirat Boys’ Preparatory School, told the UN agency that his father was killed after “missiles rained down” on the family.
+
+“Concrete slabs fell on us, and suddenly, we found ourselves surrounded by the dead and injured. All of my family members were either injured or killed,” [Musab said](https://www.unrwa.org/newsroom/features/no-shelter-war-bombing-block-2-unrwa-nuseirat-school)
+ in testimony shared by UNRWA.
+
+“We were sleeping, and at two in the morning, missiles rained down on us. A young boy could be seen sifting through pools of blood on the ground.
+
+Footage shot at Al-Aqsa Martyrs Hospital in nearby Deir el-Balah and verified by Al Jazeera’s Sanad agency also showed children and young people being rushed from ambulances.
+
+They included a girl with a bandaged arm, another with a bloodied face and a boy bandage across his head. They pulled us from under the rubble, and all we saw were shrapnel, debris, and dust. How will we live?”
+
+Source: Al Jazeera
+
+* * *
+
+aj-logo
+
+aj-logo
+
+aj-logo"
+
+# Your Summary
+
+
+
+===== > RESPONSE:  < =====
+Al Jazeera reports that on July 6, 2024, an Israeli attack on a UN-run school sheltering displaced people in the Nuseirat refugee camp in central Gaza killed at least 16 Palestinians and injured over 75. <image:1>. The article mentions the attack occurred at al-Jaouni school. The Israeli army stated they struck "several terrorists" in the area. The article also mentions a previous attack in early June on an UN-linked school in Nuseirat refugee camp that killed at least 40 people. The article was published on July 6, 2024, by Al Jazeera Staff.
+
+_________________________
+
+
+
+SummarizeResultPrompt - QUERY:
+
+# Instructions
+In order to find evidence that helps your fact-check, you just ran a web search which yielded a Search Result. **Your task right now is to summarize the Search Result.** What to include:
+* information that might be useful for the fact-check (see Record)
+* relevant images (refer to images by inserting their reference <image:k>)
+* if available: the release date as well as the author or the publisher (e.g. the media company) of the search result.
+
+Do NOT include:
+* advertisements
+* any other information not related to the Record or the Claim
+
+Additional rules:
+* Do not add any additional information besides the information in the Search Result.
+* If the Search Result doesn't contain any relevant information for the fact-checking work, simply print one word in capital letters: "NONE".
+* Keep your writing style like in the Examples 1, 2 and 3 provided to you.
+* Try to filter out relevant information even if the search result is in a different language.
+
+# Example 1
+The search result from America Today provides several photographs of the Notre-Dame Cathedral fire on April 15, 2019. <image:i>, <image:j>, <image:k>. None of the images show the Eiffel Tower in the background. 
+
+# Example 2
+NONE
+
+# Example 3
+The Guardian discusses a report blaming the Syrian government for a toxic gas attack and condemning their use of chemical weapons. The Guardian mentions the Chemical Weapons Convention and the responsibilities of Syria under the convention. According to The Guardian, The White House condemned the Assad regime for defying the norm against chemical weapons use.
+
+# Record
+## Claim
+Claim: "<image:63> This image shows Mayar Hamida (9 years old) and Bilal Hamida (6 years old) who were killed by Israel along with their mother and grandmother at Al-Jaoni UN school in Al-Nuseirat refugee camp on July, 6 2024."
+
+## Actions
+```
+geolocate(<image:63>)
+web_search("Mayar Hamida Bilal Hamida Al-Nuseirat refugee camp")
+```
+
+## Evidence
+### Evidence from `geolocate`
+The most likely countries where the image was taken are: {'United Arab Emirates': 0.25, 'Jordan': 0.23, 'Pakistan': 0.17, 'Tunisia': 0.13, 'Palestine': 0.05, 'Israel': 0.04, 'Malta': 0.02, 'India': 0.01, 'Nigeria': 0.01, 'Rwanda': 0.01}
+
+### Evidence from `web_search`
+The CNN article ([https://www.cnn.com/2024/07/19/middleeast/gaza-neighborhood-israeli-hostages-intl-cmd](https://www.cnn.com/2024/07/19/middleeast/gaza-neighborhood-israeli-hostages-intl-cmd)) discusses an Israeli operation in the Nuseirat refugee camp on June 8, 2024, where hostages were rescued. The article mentions over 270 Palestinians were killed. The image <image:63>
+
+## Elaboration
+The CNN article ([https://www.cnn.com/2024/07/19/middleeast/gaza-neighborhood-israeli-hostages-intl-cmd](https://www.cnn.com/2024/07/19/middleeast/gaza-neighborhood-israeli-hostages-intl-cmd)) mentions an Israeli operation in the Nuseirat refugee camp on June 8, 2024, which resulted in over 270 Palestinian deaths. The claim states the children were killed on July 6, 2024, which is after the date of the operation mentioned in the CNN article.
+
+The geolocation of the image suggests the image was most likely taken in the United Arab Emirates, Jordan, Pakistan, or Tunisia, with a low probability of being taken in Palestine or Israel.
+
+The claim cannot be verified with the provided information. More information is needed to confirm the children's deaths, including the date and location.
+
+
+## Actions
+```
+web_search("Mayar Hamida Bilal Hamida killed Israel Al-Jaoni UN school")
+web_search("Al-Nuseirat refugee camp July 6 2024 deaths")
+```
+
+# Search Result
+From [Source](https://news.un.org/en/story/2024/06/1150856): 
+Content: "[Skip to main content / navigation](#main-content)
+
+[![United Nations](/en/themes/custom/un3/un3_base/images/logos/UN_logo_en.svg)](/en/ "United Nations")
+
+[UN News](/en/ "UN News")
+
+Global perspective Human stories
+
+English Search
+
+ 
+
+Search
+
+[Advanced Search](/en/advanced-search)
+
+[UN News](/en/ "UN News")
+
+Global perspective Human stories
+
+Gaza: Deaths and devastation during hostage rescue operation show ‘seismic trauma’ of ongoing war
+=================================================================================================
+
+     ![The aftermath of an attack on a UN school-turned shelter in Nuseirat on 6 June, where at least 35 displaced people were killed during an Israeli airstrike.](https://global.unitednations.entermediadb.net/assets/mediadb/services/module/asset/downloads/preset/Libraries/Production%20Library/06-06-24_UNRWA_Nuseirat-02.jpg/image1170x530cropped.jpg "The aftermath of an attack on a UN school-turned shelter in Nuseirat on 6 June, where at least 35 displaced people were killed during an Israeli airstrike.")
+
+© UNRWA
+
+The aftermath of an attack on a UN school-turned shelter in Nuseirat on 6 June, where at least 35 displaced people were killed during an Israeli airstrike.
+
+[Facebook](https://www.facebook.com/sharer.php?u=https://news.un.org/en/story/2024/06/1150856 "Share this via Facebook")
+ [Twitter](https://twitter.com/intent/tweet?text= Gaza: Deaths and devastation during hostage rescue operation show ‘seismic trauma’ of ongoing war&url=https://news.un.org/en/story/2024/06/1150856 "Share this via Twitter")
+ Print [Email](mailto:?subject= Gaza: Deaths and devastation during hostage rescue operation show ‘seismic trauma’ of ongoing war&body=https://news.un.org/en/story/2024/06/1150856 "Share this via Email")
+
+Gaza: Deaths and devastation during hostage rescue operation show ‘seismic trauma’ of ongoing war
+=================================================================================================
+
+9 June 2024 [Peace and Security](/en/news/topic/peace-and-security)
+
+The scenes of devastation witnessed in the aftermath of Israel’s military operation to release hostages from the Nuseirat refugee camp proves that each day the war continues “it only grows more horrific” the UN’s [top humanitarian official](https://www.unocha.org/our-leadership/martin-griffiths)
+ said on Sunday.
+
+According to Gaza’s health ministry, more than 270 people including children and other non-combatants were killed during intense fighting between Israeli forces and Hamas militants in and around the Nuseirat refugee camp on Saturday, in the middle area of the war-torn enclave. More than 40 of the hostages are believed to have died so far with more than 110 reportedly remaining.
+
+**Healthcare ‘hanging by a thread’**
+------------------------------------
+
+“Seeing bloodied patients being treated on hospital floors, **we are reminded that healthcare in Gaza is hanging by a thread**.”
+
+Video from Al-Aqsa Hospital in the aftermath of the fighting and bombardment shows numerous casualties lying on the floor while the director of Al-Adwa Hospital in Nuseirat reported that no morgue is available at the hospital to house the bodies of the dead.
+
+Negotiations continue for a comprehensive ceasefire and hostage deal between Israel and Hamas but a United States-led proposal presented on 31 May has not been accepted by either side.
+
+♦ Receive daily updates directly in your inbox - [**Subscribe here**](https://news.un.org/en/content/un-newsletter-subscribe?utm_source=UN News&utm_medium=email&utm_campaign=un_news_newsletter)
+ to a topic.
+
+♦ Download the UN News app for your [**iOS**](https://itunes.apple.com/us/app/un-news-reader/id496893005?mt=8)
+ or [**Android**](https://play.google.com/store/apps/details?id=org.un.mobile.news&hl=en)
+ devices.
+
+*   [Gaza](/en/tags/gaza)
+    
+
+[Facebook](https://www.facebook.com/sharer.php?u=https://news.un.org/en/story/2024/06/1150856 "Share this via Facebook")
+ [Twitter](https://twitter.com/intent/tweet?text= Gaza: Deaths and devastation during hostage rescue operation show ‘seismic trauma’ of ongoing war&url=https://news.un.org/en/story/2024/06/1150856 "Share this via Twitter")
+ Print [Email](mailto:?subject= Gaza: Deaths and devastation during hostage rescue operation show ‘seismic trauma’ of ongoing war&body=https://news.un.org/en/story/2024/06/1150856 "Share this via Email") More than 600 were reportedly injured with hospitals overwhelmed.
+
+Emergency Relief Coordinator Martin Griffiths said [in a post on X](https://twitter.com/UNReliefChief/status/1799628590323003821)
+ that the Nuseirat camp “is **the epicentre of the seismic trauma that civilians in Gaza continue to suffer**.”
+
+Tweet URL
+
+> [](https://twitter.com/UN_News_Centre/statuses/1799899971514220726)
+
+“Seeing shrouded bodies on the ground, we are reminded that **nowhere is safe** in Gaza”, he continued.
+
+Saturday's carnage followed on from [an Israeli attack on a UN school](https://news.un.org/en/story/2024/06/1150721)
+ building-turned shelter in the same area on Thursday, which left dozens dead. This collective agony can and must end now.”
+
+The emergency relief chief added that seeing the video footage from the scene of shrouded bodies in Nuseirat camp was a reminder that nowhere is safe in the enclave, where Israel has carried out a nine months long offensive since the Hamas-led terror attacks of 7 October.
+
+Palestinian militants took over 250 hostage in southern Israel that day, massacring some 1,200 people. All of them must be released.”
+
+[In a tweet](https://twitter.com/antonioguterres/status/1799463765634941127)
+ on Saturday following news of the hostages being freed, UN chief António Guterres said he had sent messages to the relatives of Noa Argamani and Shalomi Ziv - some of whose family members he had received at the UN last week - to express his relief.
+
+“**I renew my appeal for the immediate and unconditional release of all hostages and for an end to this war**”, said the Secretary-General.
+
+Mr. Local officials reported that 37 people were killed in the school building attack, including 14 children.
+
+**Scores of hostages still held**
+---------------------------------
+
+The Humanitarian Affairs chief said that even as the four hostages were reunited with their families in Israel thanks to the military operation “scores are still being held captive. Griffiths asserted that “all civilians must be protected."
+
+# Your Summary
+
+
+
+===== > RESPONSE:  < =====
+The UN News article, published on June 9, 2024, discusses the aftermath of an Israeli military operation in the Nuseirat refugee camp on June 8, 2024, where over 270 people, including children, were killed. The article also mentions an Israeli attack on a UN school-turned shelter in the same area on June 6, 2024, which resulted in the deaths of dozens, including 14 children. <image:k>
+
+_________________________
+
+
+
+SummarizeSummariesPrompt - QUERY:
+
+# Instructions
+You just retrieved web sources, each one summarized under "Web Sources". **Your task right now is to summarize the web source summaries.**
+
+Always adhere to the following rules:
+* Write only one to two paragraphs.
+* Include all URLs from the listed sources. Format them as Markdown hyperlinks.
+* Do not add any additional information besides the information in the summaries.
+* Include references (<image:k>) to all relevant images.
+
+# Record
+## Claim
+Claim: "<image:63> This image shows Mayar Hamida (9 years old) and Bilal Hamida (6 years old) who were killed by Israel along with their mother and grandmother at Al-Jaoni UN school in Al-Nuseirat refugee camp on July, 6 2024."
+
+## Actions
+```
+geolocate(<image:63>)
+web_search("Mayar Hamida Bilal Hamida Al-Nuseirat refugee camp")
+```
+
+## Evidence
+### Evidence from `geolocate`
+The most likely countries where the image was taken are: {'United Arab Emirates': 0.25, 'Jordan': 0.23, 'Pakistan': 0.17, 'Tunisia': 0.13, 'Palestine': 0.05, 'Israel': 0.04, 'Malta': 0.02, 'India': 0.01, 'Nigeria': 0.01, 'Rwanda': 0.01}
+
+### Evidence from `web_search`
+The CNN article ([https://www.cnn.com/2024/07/19/middleeast/gaza-neighborhood-israeli-hostages-intl-cmd](https://www.cnn.com/2024/07/19/middleeast/gaza-neighborhood-israeli-hostages-intl-cmd)) discusses an Israeli operation in the Nuseirat refugee camp on June 8, 2024, where hostages were rescued. The article mentions over 270 Palestinians were killed. The image <image:63>
+
+## Elaboration
+The CNN article ([https://www.cnn.com/2024/07/19/middleeast/gaza-neighborhood-israeli-hostages-intl-cmd](https://www.cnn.com/2024/07/19/middleeast/gaza-neighborhood-israeli-hostages-intl-cmd)) mentions an Israeli operation in the Nuseirat refugee camp on June 8, 2024, which resulted in over 270 Palestinian deaths. The claim states the children were killed on July 6, 2024, which is after the date of the operation mentioned in the CNN article.
+
+The geolocation of the image suggests the image was most likely taken in the United Arab Emirates, Jordan, Pakistan, or Tunisia, with a low probability of being taken in Palestine or Israel.
+
+The claim cannot be verified with the provided information. More information is needed to confirm the children's deaths, including the date and location.
+
+
+## Actions
+```
+web_search("Mayar Hamida Bilal Hamida killed Israel Al-Jaoni UN school")
+web_search("Al-Nuseirat refugee camp July 6 2024 deaths")
+```
+
+## Web Sources
+**Web Search Result**
+
+From [Source](https://www.aljazeera.com/news/2024/7/6/israeli-attack-on-un-school-used-as-shelter-in-gaza-kills-at-least-16): 
+Content: Al Jazeera reports that on July 6, 2024, an Israeli attack on a UN-run school sheltering displaced people in the Nuseirat refugee camp in central Gaza killed at least 16 Palestinians and injured over 75. <image:1>. The article mentions the attack occurred at al-Jaouni school. The Israeli army stated they struck "several terrorists" in the area. The article also mentions a previous attack in early June on an UN-linked school in Nuseirat refugee camp that killed at least 40 people. The article was published on July 6, 2024, by Al Jazeera Staff.
+
+
+From [Source](https://news.un.org/en/story/2024/06/1150856): 
+Content: The UN News article, published on June 9, 2024, discusses the aftermath of an Israeli military operation in the Nuseirat refugee camp on June 8, 2024, where over 270 people, including children, were killed. The article also mentions an Israeli attack on a UN school-turned shelter in the same area on June 6, 2024, which resulted in the deaths of dozens, including 14 children. <image:k>
+
+
+## Your Summary
+
+
+
+===== > RESPONSE:  < =====
+On July 6, 2024, Al Jazeera reported that an Israeli attack on a UN-run school sheltering displaced people in the Nuseirat refugee camp killed at least 16 Palestinians and injured over 75. The attack occurred at al-Jaouni school. The Israeli army stated they struck "several terrorists" in the area. ([https://www.aljazeera.com/news/2024/7/6/israeli-attack-on-un-school-used-as-shelter-in-gaza-kills-at-least-16](https://www.aljazeera.com/news/2024/7/6/israeli-attack-on-un-school-used-as-shelter-in-gaza-kills-at-least-16)) <image:1>
+
+A UN News article published on June 9, 2024, discusses an Israeli military operation in the Nuseirat refugee camp on June 8, 2024, where over 270 people, including children, were killed. The article also mentions an Israeli attack on a UN school-turned shelter in the same area on June 6, 2024, which resulted in the deaths of dozens, including 14 children. ([https://news.un.org/en/story/2024/06/1150856](https://news.un.org/en/story/2024/06/1150856)) <image:k>
+
+_________________________
+
+
+
+DevelopPrompt - QUERY:
+
+# Instructions
+You just retrieved new Evidence. Now, **analyze the Claim's veracity using the evidence**. Always adhere to the following rules:
+* Focus on developing new insights. Do not repeat larger parts from the Record. Do not restate the Claim.
+* Write down your thoughts step-by-step. Whenever necessary, you may elaborate in more detail.
+* Depending on the topic's complexity, invest one to three paragraphs. The fewer, the better.
+* If you find that there is insufficient information to verify the Claim, explicitly state what information is missing.
+* If you cite web sources, always refer to them by including their URL as a Markdown hyperlink.
+* **Use information only from the recorded evidence**: Avoid inserting information that is not implied by the evidence. You may use commonsense knowledge, though.
+
+# Record
+## Claim
+Claim: "<image:63> This image shows Mayar Hamida (9 years old) and Bilal Hamida (6 years old) who were killed by Israel along with their mother and grandmother at Al-Jaoni UN school in Al-Nuseirat refugee camp on July, 6 2024."
+
+## Actions
+```
+geolocate(<image:63>)
+web_search("Mayar Hamida Bilal Hamida Al-Nuseirat refugee camp")
+```
+
+## Evidence
+### Evidence from `geolocate`
+The most likely countries where the image was taken are: {'United Arab Emirates': 0.25, 'Jordan': 0.23, 'Pakistan': 0.17, 'Tunisia': 0.13, 'Palestine': 0.05, 'Israel': 0.04, 'Malta': 0.02, 'India': 0.01, 'Nigeria': 0.01, 'Rwanda': 0.01}
+
+### Evidence from `web_search`
+The CNN article ([https://www.cnn.com/2024/07/19/middleeast/gaza-neighborhood-israeli-hostages-intl-cmd](https://www.cnn.com/2024/07/19/middleeast/gaza-neighborhood-israeli-hostages-intl-cmd)) discusses an Israeli operation in the Nuseirat refugee camp on June 8, 2024, where hostages were rescued. The article mentions over 270 Palestinians were killed. The image <image:63>
+
+## Elaboration
+The CNN article ([https://www.cnn.com/2024/07/19/middleeast/gaza-neighborhood-israeli-hostages-intl-cmd](https://www.cnn.com/2024/07/19/middleeast/gaza-neighborhood-israeli-hostages-intl-cmd)) mentions an Israeli operation in the Nuseirat refugee camp on June 8, 2024, which resulted in over 270 Palestinian deaths. The claim states the children were killed on July 6, 2024, which is after the date of the operation mentioned in the CNN article.
+
+The geolocation of the image suggests the image was most likely taken in the United Arab Emirates, Jordan, Pakistan, or Tunisia, with a low probability of being taken in Palestine or Israel.
+
+The claim cannot be verified with the provided information. More information is needed to confirm the children's deaths, including the date and location.
+
+
+## Actions
+```
+web_search("Mayar Hamida Bilal Hamida killed Israel Al-Jaoni UN school")
+web_search("Al-Nuseirat refugee camp July 6 2024 deaths")
+```
+
+## Evidence
+### Evidence from `web_search`
+Countercurrents.org ([https://countercurrents.org/2024/07/israel-bombs-un-school-in-nuseirat/](https://countercurrents.org/2024/07/israel-bombs-un-school-in-nuseirat/)) reports that Mayar Haidar (9 years old) and Bilal Hamida (6 years old) were killed in an Israeli bombing of a UN school in the Nuseirat refugee camp on July 6, 2024. The Al Jazeera article ([https://www.aljazeera.com/news/2021/8/24/global-outcry-over-israels-targeting-of-palestinian-children](https://www.aljazeera.com/news/2021/8/24/global-outcry-over-israels-targeting-of-palestinian-children)) discusses the targeting of Palestinian children by Israeli forces, but does not mention the children in the claim.
+
+Palinfo ([https://english.palinfo.com/Zionist-Terrorism/2023/11/18/82751/](https://english.palinfo.com/Zionist-Terrorism/2023/11/18/82751/)) reports that Mayar and Bilal Hamida were killed along with their mother in October 2023 by Israeli airstrikes. <image:63>
+
+### Evidence from `web_search`
+On July 6, 2024, Al Jazeera reported that an Israeli attack on a UN-run school sheltering displaced people in the Nuseirat refugee camp killed at least 16 Palestinians and injured over 75. The attack occurred at al-Jaouni school. The Israeli army stated they struck "several terrorists" in the area. ([https://www.aljazeera.com/news/2024/7/6/israeli-attack-on-un-school-used-as-shelter-in-gaza-kills-at-least-16](https://www.aljazeera.com/news/2024/7/6/israeli-attack-on-un-school-used-as-shelter-in-gaza-kills-at-least-16)) <image:1>
+
+A UN News article published on June 9, 2024, discusses an Israeli military operation in the Nuseirat refugee camp on June 8, 2024, where over 270 people, including children, were killed. The article also mentions an Israeli attack on a UN school-turned shelter in the same area on June 6, 2024, which resulted in the deaths of dozens, including 14 children. ([https://news.un.org/en/story/2024/06/1150856](https://news.un.org/en/story/2024/06/1150856)) <image:k>
+
+
+# Your Analysis
+
+
+
+===== > RESPONSE:  < =====
+The claim is partially supported by the evidence. Countercurrents.org ([https://countercurrents.org/2024/07/israel-bombs-un-school-in-nuseirat/](https://countercurrents.org/2024/07/israel-bombs-un-school-in-nuseirat/)) reports that Mayar and Bilal Hamida were killed in an Israeli bombing of a UN school in the Nuseirat refugee camp on July 6, 2024. Al Jazeera ([https://www.aljazeera.com/news/2024/7/6/israeli-attack-on-un-school-used-as-shelter-in-gaza-kills-at-least-16](https://www.aljazeera.com/news/2024/7/6/israeli-attack-on-un-school-used-as-shelter-in-gaza-kills-at-least-16)) also reports an Israeli attack on a UN-run school in the Nuseirat refugee camp on July 6, 2024, which resulted in casualties. However, Palinfo ([https://english.palinfo.com/Zionist-Terrorism/2023/11/18/82751/](https://english.palinfo.com/Zionist-Terrorism/2023/11/18/82751/)) reports that the children were killed in October 2023.
+
+The claim is partially supported by the evidence, but there are conflicting reports regarding the date of the children's deaths.
+
+_________________________
+
+
+
+JudgePrompt - QUERY:
+
+# Instructions
+**Determine the Claim's veracity** by following these steps:
+1. Briefly summarize the key insights from the fact-check (see Record) in at most one paragraph.
+2. Write one paragraph about which one of the Decision Options applies best. Include the most appropriate decision option at the end and enclose it in backticks like `this`.
+
+
+
+
+## Decision Options
+* `true`: The claim is factually accurate when it is confirmed by evidence from multiple and reliable sources.
+* `false`: The claim is not factually accurate. This is the case if one of the following three conditions is met:(1) The claim is demonstrably false when it is disproven by evidence from multiple and reliable sources,(2) The claim or image is taken out of context, i.e. the origin, content and/or meaning of a statement or an image is misrepresented. For example, an old claim or an old image is mispresented in a new context in a misleading way,(3) There is not enough evidence to verify the claim or the evidence is conflicting or self-contradictory.
+* `not enough information`: The fact-check does not contain sufficient information to come to an conclusion. For example,there is substantial lack of evidence or the evidence is inconclusive, conflicting or self-contradictory. In the case of a lack of evidence, state which information exactly is missing. In particular, if no RESULTS or sources are available, pick this decision.
+
+# Record
+## Claim
+Claim: "<image:63> This image shows Mayar Hamida (9 years old) and Bilal Hamida (6 years old) who were killed by Israel along with their mother and grandmother at Al-Jaoni UN school in Al-Nuseirat refugee camp on July, 6 2024."
+
+## Actions
+```
+geolocate(<image:63>)
+web_search("Mayar Hamida Bilal Hamida Al-Nuseirat refugee camp")
+```
+
+## Evidence
+### Evidence from `geolocate`
+The most likely countries where the image was taken are: {'United Arab Emirates': 0.25, 'Jordan': 0.23, 'Pakistan': 0.17, 'Tunisia': 0.13, 'Palestine': 0.05, 'Israel': 0.04, 'Malta': 0.02, 'India': 0.01, 'Nigeria': 0.01, 'Rwanda': 0.01}
+
+### Evidence from `web_search`
+The CNN article ([https://www.cnn.com/2024/07/19/middleeast/gaza-neighborhood-israeli-hostages-intl-cmd](https://www.cnn.com/2024/07/19/middleeast/gaza-neighborhood-israeli-hostages-intl-cmd)) discusses an Israeli operation in the Nuseirat refugee camp on June 8, 2024, where hostages were rescued. The article mentions over 270 Palestinians were killed. The image <image:63>
+
+## Elaboration
+The CNN article ([https://www.cnn.com/2024/07/19/middleeast/gaza-neighborhood-israeli-hostages-intl-cmd](https://www.cnn.com/2024/07/19/middleeast/gaza-neighborhood-israeli-hostages-intl-cmd)) mentions an Israeli operation in the Nuseirat refugee camp on June 8, 2024, which resulted in over 270 Palestinian deaths. The claim states the children were killed on July 6, 2024, which is after the date of the operation mentioned in the CNN article.
+
+The geolocation of the image suggests the image was most likely taken in the United Arab Emirates, Jordan, Pakistan, or Tunisia, with a low probability of being taken in Palestine or Israel.
+
+The claim cannot be verified with the provided information. More information is needed to confirm the children's deaths, including the date and location.
+
+
+## Actions
+```
+web_search("Mayar Hamida Bilal Hamida killed Israel Al-Jaoni UN school")
+web_search("Al-Nuseirat refugee camp July 6 2024 deaths")
+```
+
+## Evidence
+### Evidence from `web_search`
+Countercurrents.org ([https://countercurrents.org/2024/07/israel-bombs-un-school-in-nuseirat/](https://countercurrents.org/2024/07/israel-bombs-un-school-in-nuseirat/)) reports that Mayar Haidar (9 years old) and Bilal Hamida (6 years old) were killed in an Israeli bombing of a UN school in the Nuseirat refugee camp on July 6, 2024. The Al Jazeera article ([https://www.aljazeera.com/news/2021/8/24/global-outcry-over-israels-targeting-of-palestinian-children](https://www.aljazeera.com/news/2021/8/24/global-outcry-over-israels-targeting-of-palestinian-children)) discusses the targeting of Palestinian children by Israeli forces, but does not mention the children in the claim.
+
+Palinfo ([https://english.palinfo.com/Zionist-Terrorism/2023/11/18/82751/](https://english.palinfo.com/Zionist-Terrorism/2023/11/18/82751/)) reports that Mayar and Bilal Hamida were killed along with their mother in October 2023 by Israeli airstrikes. <image:63>
+
+### Evidence from `web_search`
+On July 6, 2024, Al Jazeera reported that an Israeli attack on a UN-run school sheltering displaced people in the Nuseirat refugee camp killed at least 16 Palestinians and injured over 75. The attack occurred at al-Jaouni school. The Israeli army stated they struck "several terrorists" in the area. ([https://www.aljazeera.com/news/2024/7/6/israeli-attack-on-un-school-used-as-shelter-in-gaza-kills-at-least-16](https://www.aljazeera.com/news/2024/7/6/israeli-attack-on-un-school-used-as-shelter-in-gaza-kills-at-least-16)) <image:1>
+
+A UN News article published on June 9, 2024, discusses an Israeli military operation in the Nuseirat refugee camp on June 8, 2024, where over 270 people, including children, were killed. The article also mentions an Israeli attack on a UN school-turned shelter in the same area on June 6, 2024, which resulted in the deaths of dozens, including 14 children. ([https://news.un.org/en/story/2024/06/1150856](https://news.un.org/en/story/2024/06/1150856)) <image:k>
+
+
+## Elaboration
+The claim is partially supported by the evidence. Countercurrents.org ([https://countercurrents.org/2024/07/israel-bombs-un-school-in-nuseirat/](https://countercurrents.org/2024/07/israel-bombs-un-school-in-nuseirat/)) reports that Mayar and Bilal Hamida were killed in an Israeli bombing of a UN school in the Nuseirat refugee camp on July 6, 2024. Al Jazeera ([https://www.aljazeera.com/news/2024/7/6/israeli-attack-on-un-school-used-as-shelter-in-gaza-kills-at-least-16](https://www.aljazeera.com/news/2024/7/6/israeli-attack-on-un-school-used-as-shelter-in-gaza-kills-at-least-16)) also reports an Israeli attack on a UN-run school in the Nuseirat refugee camp on July 6, 2024, which resulted in casualties. However, Palinfo ([https://english.palinfo.com/Zionist-Terrorism/2023/11/18/82751/](https://english.palinfo.com/Zionist-Terrorism/2023/11/18/82751/)) reports that the children were killed in October 2023.
+
+The claim is partially supported by the evidence, but there are conflicting reports regarding the date of the children's deaths.
+
+
+# Your Judgement
+
+
+
+===== > RESPONSE:  < =====
+The claim that Mayar and Bilal Hamida were killed by Israel on July 6, 2024, is supported by some sources, such as Countercurrents.org and Al Jazeera, which report an Israeli attack on a UN school in the Nuseirat refugee camp on that date. However, Palinfo reports that the children were killed in October 2023.
+
+`false`
+_________________________
+
+
+
+SummarizeDocPrompt - QUERY:
+
+# Instructions
+You are provided with the record of a fact-check. It contains the Claim to be verified and a documentation of all the fact-checking work along the gathered evidence. Your task is to **summarize the fact-check**. That is, you provide a concise, one-paragraph justification for the final VERDICT based on the knowledge from the Record. Note:
+* Be truthful, brief, do not add any additional information besides the information given in the Record. 
+* Link key sources in your summary. Use Markdown notation for that. You may link them in-line.
+* Don't state the Claim again. Rather focus on the key insights of the fact-check.
+* Simply print just the summary.
+
+# Record
+## Claim
+Claim: "<image:63> This image shows Mayar Hamida (9 years old) and Bilal Hamida (6 years old) who were killed by Israel along with their mother and grandmother at Al-Jaoni UN school in Al-Nuseirat refugee camp on July, 6 2024."
+
+## Actions
+```
+geolocate(<image:63>)
+web_search("Mayar Hamida Bilal Hamida Al-Nuseirat refugee camp")
+```
+
+## Evidence
+### Evidence from `geolocate`
+The most likely countries where the image was taken are: {'United Arab Emirates': 0.25, 'Jordan': 0.23, 'Pakistan': 0.17, 'Tunisia': 0.13, 'Palestine': 0.05, 'Israel': 0.04, 'Malta': 0.02, 'India': 0.01, 'Nigeria': 0.01, 'Rwanda': 0.01}
+
+### Evidence from `web_search`
+The CNN article ([https://www.cnn.com/2024/07/19/middleeast/gaza-neighborhood-israeli-hostages-intl-cmd](https://www.cnn.com/2024/07/19/middleeast/gaza-neighborhood-israeli-hostages-intl-cmd)) discusses an Israeli operation in the Nuseirat refugee camp on June 8, 2024, where hostages were rescued. The article mentions over 270 Palestinians were killed. The image <image:63>
+
+## Elaboration
+The CNN article ([https://www.cnn.com/2024/07/19/middleeast/gaza-neighborhood-israeli-hostages-intl-cmd](https://www.cnn.com/2024/07/19/middleeast/gaza-neighborhood-israeli-hostages-intl-cmd)) mentions an Israeli operation in the Nuseirat refugee camp on June 8, 2024, which resulted in over 270 Palestinian deaths. The claim states the children were killed on July 6, 2024, which is after the date of the operation mentioned in the CNN article.
+
+The geolocation of the image suggests the image was most likely taken in the United Arab Emirates, Jordan, Pakistan, or Tunisia, with a low probability of being taken in Palestine or Israel.
+
+The claim cannot be verified with the provided information. More information is needed to confirm the children's deaths, including the date and location.
+
+
+## Actions
+```
+web_search("Mayar Hamida Bilal Hamida killed Israel Al-Jaoni UN school")
+web_search("Al-Nuseirat refugee camp July 6 2024 deaths")
+```
+
+## Evidence
+### Evidence from `web_search`
+Countercurrents.org ([https://countercurrents.org/2024/07/israel-bombs-un-school-in-nuseirat/](https://countercurrents.org/2024/07/israel-bombs-un-school-in-nuseirat/)) reports that Mayar Haidar (9 years old) and Bilal Hamida (6 years old) were killed in an Israeli bombing of a UN school in the Nuseirat refugee camp on July 6, 2024. The Al Jazeera article ([https://www.aljazeera.com/news/2021/8/24/global-outcry-over-israels-targeting-of-palestinian-children](https://www.aljazeera.com/news/2021/8/24/global-outcry-over-israels-targeting-of-palestinian-children)) discusses the targeting of Palestinian children by Israeli forces, but does not mention the children in the claim.
+
+Palinfo ([https://english.palinfo.com/Zionist-Terrorism/2023/11/18/82751/](https://english.palinfo.com/Zionist-Terrorism/2023/11/18/82751/)) reports that Mayar and Bilal Hamida were killed along with their mother in October 2023 by Israeli airstrikes. <image:63>
+
+### Evidence from `web_search`
+On July 6, 2024, Al Jazeera reported that an Israeli attack on a UN-run school sheltering displaced people in the Nuseirat refugee camp killed at least 16 Palestinians and injured over 75. The attack occurred at al-Jaouni school. The Israeli army stated they struck "several terrorists" in the area. ([https://www.aljazeera.com/news/2024/7/6/israeli-attack-on-un-school-used-as-shelter-in-gaza-kills-at-least-16](https://www.aljazeera.com/news/2024/7/6/israeli-attack-on-un-school-used-as-shelter-in-gaza-kills-at-least-16)) <image:1>
+
+A UN News article published on June 9, 2024, discusses an Israeli military operation in the Nuseirat refugee camp on June 8, 2024, where over 270 people, including children, were killed. The article also mentions an Israeli attack on a UN school-turned shelter in the same area on June 6, 2024, which resulted in the deaths of dozens, including 14 children. ([https://news.un.org/en/story/2024/06/1150856](https://news.un.org/en/story/2024/06/1150856)) <image:k>
+
+
+## Elaboration
+The claim is partially supported by the evidence. Countercurrents.org ([https://countercurrents.org/2024/07/israel-bombs-un-school-in-nuseirat/](https://countercurrents.org/2024/07/israel-bombs-un-school-in-nuseirat/)) reports that Mayar and Bilal Hamida were killed in an Israeli bombing of a UN school in the Nuseirat refugee camp on July 6, 2024. Al Jazeera ([https://www.aljazeera.com/news/2024/7/6/israeli-attack-on-un-school-used-as-shelter-in-gaza-kills-at-least-16](https://www.aljazeera.com/news/2024/7/6/israeli-attack-on-un-school-used-as-shelter-in-gaza-kills-at-least-16)) also reports an Israeli attack on a UN-run school in the Nuseirat refugee camp on July 6, 2024, which resulted in casualties. However, Palinfo ([https://english.palinfo.com/Zionist-Terrorism/2023/11/18/82751/](https://english.palinfo.com/Zionist-Terrorism/2023/11/18/82751/)) reports that the children were killed in October 2023.
+
+The claim is partially supported by the evidence, but there are conflicting reports regarding the date of the children's deaths.
+
+
+## Final Judgement
+The claim that Mayar and Bilal Hamida were killed by Israel on July 6, 2024, is supported by some sources, such as Countercurrents.org and Al Jazeera, which report an Israeli attack on a UN school in the Nuseirat refugee camp on that date. However, Palinfo reports that the children were killed in October 2023.
+
+`false`
+
+## Summary
+
+
+
+===== > RESPONSE:  < =====
+The claim that Mayar and Bilal Hamida were killed by Israel on July 6, 2024, is partially supported by evidence. While some sources, like Countercurrents.org ([https://countercurrents.org/2024/07/israel-bombs-un-school-in-nuseirat/](https://countercurrents.org/2024/07/israel-bombs-un-school-in-nuseirat/)) and Al Jazeera ([https://www.aljazeera.com/news/2024/7/6/israeli-attack-on-un-school-used-as-shelter-in-gaza-kills-at-least-16](https://www.aljazeera.com/news/2024/7/6/israeli-attack-on-un-school-used-as-shelter-in-gaza-kills-at-least-16)), support the claim, other sources, such as Palinfo, report the children were killed in October 2023.
+
+_________________________
+
+
+

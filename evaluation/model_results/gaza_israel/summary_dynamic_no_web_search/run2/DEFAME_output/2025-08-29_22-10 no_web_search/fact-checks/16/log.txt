@@ -1,0 +1,25 @@
+Extracting claims from Content: <image:14> This image shows the Israeli Olympic team spelling out 'Bring Them Home' at the 2024 Olympic games because they were not allowed to wear their yellow 'Bring Them Home' pins.
+'Claim: "<image:14> This image shows the Israeli Olympic team spelling out 'Bring Them Home' at the 2024 Olympic games because they were not allowed to wear their yellow 'Bring Them Home' pins."'
+Verifying Claim: "<image:14> This image shows the Israeli Olympic team spelling out 'Bring Them Home' at the 2024 Olympic games because they were not allowed to wear their yellow 'Bring Them Home' pins."
+Not enough information yet. Continuing fact-check...
+Got 1 new web source(s):
+	1. https://www.ynetnews.com/culture/article/skmg5e5ma
+Useful result: From [Source](https://www.ynetnews.com/culture/article/skmg5e5ma): 
+Content: The search result from Ynetnews.com contains an image of synchronized swimmers. <image:763>
+
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Israeli synchronized swimmers Bring Them Home pins')
+Skipping fact-checking website: https://www.reuters.com/fact-check/collage-israeli-swimmers-calling-hostage-release-predates-paris-olympics-2024-07-30/
+Skipping unsupported website: https://x.com/AdamMilstein/status/1817568269475402173
+Skipping unsupported website: https://www.facebook.com/photo.php?fbid=1042494220566301&id=100044171992378&set=a.269883607827370
+Skipping unsupported website: https://www.tiktok.com/@jews_of_ny/video/7396170041667964190
+Got 1 new web source(s):
+	1. https://www.thv11.com/article/news/verify/olympics-verify/image-israeli-swimmers-bring-them-home-not-from-paris-2024-olympics/536-5f25fcff-c857-495b-8eba-3d6c5fb46ce9
+Useful result: From [Source](https://www.thv11.com/article/news/verify/olympics-verify/image-israeli-swimmers-bring-them-home-not-from-paris-2024-olympics/536-5f25fcff-c857-495b-8eba-3d6c5fb46ce9): 
+Content: The search result from THV11.com contains an image of synchronized swimmers spelling out "Bring Them Home". <image:7889> The article states that the image is not from the 2024 Olympics and that the Israeli Olympic team was not allowed to wear their yellow "Bring Them Home" pins at the Olympic games.
+
+The claim '<image:14> This image shows the Israeli Olympic team spelling out 'Bring Them Home' at the 2024 Olympic games because they were not allowed to wear their yellow 'Bring Them Home' pins.' is false.
+Justification: The image does depict synchronized swimmers spelling out "Bring Them Home," but it is not from the 2024 Olympics, as confirmed by a fact-check from [THV11.com](https://www.thv11.com/article/news/verify/olympics-verify/image-israeli-swimmers-bring-them-home-not-from-paris-2024-olympics/536-5f25fcff-c857-495b-8eba-3d6c5fb46ce9). The Israeli Olympic team was also not allowed to wear their yellow "Bring Them Home" pins at the Olympic games.
+
+So, the overall veracity is: false
+Fact-check took 0:16 min.

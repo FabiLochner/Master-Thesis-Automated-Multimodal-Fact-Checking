@@ -1,0 +1,31 @@
+Extracting claims from Content: <image:18> This image shows an authentic list realeased by Ukraine showing US politicians taking bribes from Ukraine. The highest bribe was 92 Million US-$ for Joe Biden.
+'Claim: "<image:18> This image shows an authentic list realeased by Ukraine showing US politicians taking bribes from Ukraine. The highest bribe was 92 Million US-$ for Joe Biden."'
+Verifying Claim: "<image:18> This image shows an authentic list realeased by Ukraine showing US politicians taking bribes from Ukraine. The highest bribe was 92 Million US-$ for Joe Biden."
+Not enough information yet. Continuing fact-check...
+Got 0 new web source(s):
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Joe Biden Ukraine bribe list')
+Unable to reach Serper API: Connection timed out. Retrying after 4.610689018381494 seconds.
+Unable to reach Serper API: Connection timed out. Retrying after 9.221378036762989 seconds.
+Unable to reach Serper API: Connection timed out. Retrying after 18.442756073525977 seconds.
+Unable to reach Serper API: Connection timed out. Retrying after 36.885512147051955 seconds.
+Unable to reach Serper API: Connection timed out. Retrying after 73.77102429410391 seconds.
+Unable to reach Serper API: Connection timed out. Retrying after 147.54204858820782 seconds.
+Skipping unsupported website: https://oversight.house.gov/the-bidens-influence-peddling-timeline/
+Got 3 new web source(s):
+	1. July 21, 2023 https://www.bbc.com/news/world-us-canada-66272217
+	2. https://en.wikipedia.org/wiki/Biden%E2%80%93Ukraine_conspiracy_theory
+	3. December 16, 2024 https://www.aljazeera.com/news/2024/12/16/former-fbi-informant-pleads-guilty-to-phony-bribery-scheme-involving-bidens
+Useful result: From [Source](https://www.bbc.com/news/world-us-canada-66272217): 
+Content: The BBC News article, published on July 21, 2023, discusses an FBI document released by a top Senate Republican detailing an allegation that President Joe Biden and his son accepted bribes from a Ukrainian firm. <image:10075>, <image:10077>. The document is an internal FBI report from June 2020 outlining claims by a foreign informant. The article mentions that there is no evidence that Joe Biden received any payments from Ukraine. The article also mentions that the allegations detailed in the FBI document are similar to ones aired over the past several years by Mr Biden's political opponents.
+
+Useful result: From [Source](https://en.wikipedia.org/wiki/Biden%E2%80%93Ukraine_conspiracy_theory): 
+Content: The Wikipedia article discusses the Biden–Ukraine conspiracy theory, which alleges that Joe Biden improperly withheld a loan guarantee and took a bribe to pressure Ukraine into firing a prosecutor to protect his son, Hunter Biden. The article states that this theory is a series of false allegations and that a joint investigation by two Republican Senate committees found no evidence of wrongdoing by Joe Biden. The article also mentions that a confidential informant told the FBI that Burisma's owner said he was coerced to pay bribes to both Bidens, though the informant was indicted in 2024 on charges he had fabricated the account. The article also mentions Andrii Derkach, a former Ukrainian politician, who played a central role in spreading falsehoods about Biden and Ukraine. The article includes images of Joe Biden, Viktor Shokin, and Hunter Biden.
+
+Useful result: From [Source](https://www.aljazeera.com/news/2024/12/16/former-fbi-informant-pleads-guilty-to-phony-bribery-scheme-involving-bidens): 
+Content: Al Jazeera published an article on December 16, 2024, stating that a former FBI informant pleaded guilty to lying about a bribery scheme involving Joe Biden and his son Hunter. The informant, Alexander Smirnov, claimed that executives from the Ukrainian energy company Burisma had paid Joe and Hunter Biden $5 million each around 2015. The FBI found no evidence of corruption or bribes. <image:1>.
+
+The claim '<image:18> This image shows an authentic list realeased by Ukraine showing US politicians taking bribes from Ukraine. The highest bribe was 92 Million US-$ for Joe Biden.' is false.
+Justification: The claim that the image depicts an authentic list released by Ukraine showing US politicians taking bribes is false. Investigations into alleged bribery schemes involving Joe Biden and Ukraine, as reported by the BBC News ([https://www.bbc.com/news/world-us-canada-66272217](https://www.bbc.com/news/world-us-canada-66272217)) and Al Jazeera ([https://www.aljazeera.com/news/2024/12/16/former-fbi-informant-pleads-guilty-to-phony-bribery-scheme-involving-bidens](https://www.aljazeera.com/news/2024/12/16/former-fbi-informant-pleads-guilty-to-phony-bribery-scheme-involving-bidens)), found no evidence of wrongdoing.
+
+So, the overall veracity is: false
+Fact-check took 7:21 min.

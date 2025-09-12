@@ -1,0 +1,67 @@
+Number of workers: 4
+Total run duration: 0:15:48 h
+Time per claim: 0:36 min
+Model:
+  Calls: 1280
+  Input tokens: 8.5M
+  Output tokens: 98K
+  Input tokens cost: $0.64
+  Output tokens cost: $0.03
+  Total cost: $0.67
+Tools:
+  searcher:
+    Total searches: 227
+    Search engine calls:
+      google: 168
+      google_vision: 59
+Predictions:
+  Dataset_Metrics:
+    Total: 99
+    Refused: 0
+    Balanced_Accuracy: 0.7
+    Matthew_Correlation_Coefficient: 0.28
+    True_Negative_Rate_Specificity: 0.89
+    Macro_Averaged_F1_Score: 0.62
+    Macro_Averaged_F0.5_Score: 0.6
+    Correct_Predictions: 86
+    Wrong_Predictions: 13
+  Claim_Type_Metrics:
+    Claim_Type_Metrics:
+      Claims_Text_Only:
+        Balanced_Accuracy: 0.54
+        Matthews_Correlation_Coefficient: 0.07
+        True_Negative_Rate/Specificity: 0.84
+        False_Precision: 0.9
+        False_Recall: 0.84
+        False_F1_Score: 0.87
+        False_F0.5_Score: 0.88
+        True_Precision: 0.17
+        True_Recall: 0.25
+        True_F1_Score: 0.2
+        True_F0.5_Score: 0.18
+        Correct_Predictions: 27
+        Wrong_Predictions: 8
+      Claims_Normal_Images:
+        Balanced_Accuracy: 0.96
+        Matthews_Correlation_Coefficient: 0.55
+        True_Negative_Rate/Specificity: 0.91
+        False_Precision: 1.0
+        False_Recall: 0.91
+        False_F1_Score: 0.96
+        False_F0.5_Score: 0.98
+        True_Precision: 0.33
+        True_Recall: 1.0
+        True_F1_Score: 0.5
+        True_F0.5_Score: 0.38
+        Correct_Predictions: 45
+        Wrong_Predictions: 4
+      Claims_AI_Images:
+        Balanced_Accuracy: 1.0
+        True_Negative_Rate/Specificity: 1.0
+        Correct_Predictions: 8
+        Wrong_Predictions: 0
+      Claims_Altered_Images:
+        Balanced_Accuracy: 0.86
+        True_Negative_Rate/Specificity: 0.86
+        Correct_Predictions: 6
+        Wrong_Predictions: 1

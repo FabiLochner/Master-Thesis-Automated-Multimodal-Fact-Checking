@@ -1,0 +1,36 @@
+Extracting claims from Content: <image:62> This image shows a man from Gaza holding the hand of his son killed in an Israeli bombing in July, 2024.
+'Claim: "<image:62> This image shows a man from Gaza holding the hand of his son killed in an Israeli bombing in July, 2024."'
+Verifying Claim: "<image:62> This image shows a man from Gaza holding the hand of his son killed in an Israeli bombing in July, 2024."
+Not enough information yet. Continuing fact-check...
+Got 3 new web source(s):
+	1. https://www.independent.co.uk/news/world/middle-east/turkey-earthquake-father-daughter-hold-hands-b2277655.html
+	2. https://www.sbs.com.au/news/article/the-story-behind-this-turkey-earthquake-photo-that-many-will-never-forget/2ijedstvo
+	3. https://www.cnn.com/2023/02/13/middleeast/turkey-quake-man-daughter-hand-photo-intl
+Useful result: From [Source](https://www.independent.co.uk/news/world/middle-east/turkey-earthquake-father-daughter-hold-hands-b2277655.html): Found exact image on website with title: Heartbreaking photos show father clutching hand of dead daughter ...
+Content: The image shows Mesut Hancer holding the hand of his 15-year-old daughter Irmak, who died in the earthquake in Kahramanmaras, Turkey. <image:2593>, <image:2599>. The earthquake occurred on February 6, 2023.
+
+Useful result: From [Source](https://www.sbs.com.au/news/article/the-story-behind-this-turkey-earthquake-photo-that-many-will-never-forget/2ijedstvo): Found exact image on website with title: Turkey earthquake: Story behind photo that 'many will never forget'
+Content: The image <image:62> shows a man holding the hand of his 15-year-old daughter, who died in the earthquake in Turkey. The photo was taken by Adem Altan, a photographer with AFP. The article was published on February 10, 2023, by SBS News. <image:2601>, <image:2602>
+
+Useful result: From [Source](https://www.cnn.com/2023/02/13/middleeast/turkey-quake-man-daughter-hand-photo-intl): Found exact image on website with title: Behind the defining image of the Turkey earthquake | CNN
+Content: The image shows Mesut Hancer holding the hand of his 15-year-old daughter, Irmak, who died in the earthquake in Kahramanmaras, Turkey, on February 7, 2023. <image:62>. The article was published on February 13, 2023, by CNN.
+
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Gaza Israeli bombing July 2024')
+Got 3 new web source(s):
+	1. https://en.wikipedia.org/wiki/13_July_2024_al-Mawasi_attack
+	2. July 16, 2024 https://www.aljazeera.com/news/2024/7/16/israeli-attacks-kill-dozens-of-palestinians-in-southern-and-central-gaza
+	3. July 11, 2024 https://www.reuters.com/world/middle-east/bodies-trapped-gaza-city-under-israeli-assault-mediators-push-truce-2024-07-11/
+Useful result: From [Source](https://en.wikipedia.org/wiki/13_July_2024_al-Mawasi_attack): 
+Content: The Wikipedia article discusses the 13 July 2024 al-Mawasi attack in Gaza, where Israeli airstrikes killed at least 90 Palestinians and injured over 300. <image:62> The article mentions that the attack targeted Hamas leaders and that the EU called for an independent investigation, describing the attack as a possible war crime. The article also mentions that an arrest warrant was issued for Mohammed Deif by the International Criminal Court (ICC) on 21 November 2024, but the warrant was cancelled in February 2025 after Hamas confirmed Deif's death.
+
+Useful result: From [Source](https://www.aljazeera.com/news/2024/7/16/israeli-attacks-kill-dozens-of-palestinians-in-southern-and-central-gaza): 
+Content: Al Jazeera published an article on July 16, 2024, reporting on Israeli attacks in Gaza that killed at least 42 Palestinians and wounded dozens. The attacks targeted a UN-run school in the Nuseirat refugee camp and a main street in al-Mawasi. <image:1>. The article mentions that the bombing of al-Razi is the sixth Israeli attack on UN schools in the past 10 days.
+
+Useful result: From [Source](https://www.reuters.com/world/middle-east/bodies-trapped-gaza-city-under-israeli-assault-mediators-push-truce-2024-07-11/): 
+Content: The Reuters article, published on July 11, 2024, discusses the ongoing conflict in Gaza, including Israeli airstrikes and the failure of peace talks. <image:13439> The article mentions that the war has been going on for 10 months and has resulted in the deaths of over 38,000 Palestinians.
+
+The claim '<image:62> This image shows a man from Gaza holding the hand of his son killed in an Israeli bombing in July, 2024.' is false.
+Justification: The image in the claim is of a man in Turkey after the February 2023 earthquake, not in Gaza after an Israeli bombing, as evidenced by reverse image searches and articles from sources like The Independent ([https://www.independent.co.uk/news/world/middle-east/turkey-earthquake-father-daughter-hold-hands-b2277655.html](https://www.independent.co.uk/news/world/middle-east/turkey-earthquake-father-daughter-hold-hands-b2277655.html)).
+
+So, the overall veracity is: false
+Fact-check took 1:56 min.

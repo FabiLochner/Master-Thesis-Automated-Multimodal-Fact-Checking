@@ -1,0 +1,54 @@
+Extracting claims from Content: In March 2025, U.S. Immigration and Customs Enforcement (ICE) agents arrested and detained Palestinian activist Mahmoud Khalil, a lawful permanent resident of the U.S.
+'Claim: "In March 2025, U.S. Immigration and Customs Enforcement (ICE) agents arrested and detained Palestinian activist Mahmoud Khalil, a lawful permanent resident of the U.S."'
+Verifying Claim: "In March 2025, U.S. Immigration and Customs Enforcement (ICE) agents arrested and detained Palestinian activist Mahmoud Khalil, a lawful permanent resident of the U.S."
+Not enough information yet. Continuing fact-check...
+Got 3 new web source(s):
+	1. https://www.npr.org/2025/03/10/g-s1-52923/immigration-agents-arrest-palestinian-activist-columbia-protests
+	2. https://www.theguardian.com/us-news/2025/mar/12/who-is-mahmoud-khalil-arrest-palestinian-activist-columbia
+	3. https://www.nbcnews.com/news/us-news/ice-arrests-palestinian-activist-helped-lead-columbia-university-prote-rcna195562
+Useful result: From [Source](https://www.npr.org/2025/03/10/g-s1-52923/immigration-agents-arrest-palestinian-activist-columbia-protests): 
+Content: NPR published an article about the arrest of Palestinian activist Mahmoud Khalil. <image:7560>
+
+Useful result: From [Source](https://www.theguardian.com/us-news/2025/mar/12/who-is-mahmoud-khalil-arrest-palestinian-activist-columbia): 
+Content: The Guardian published an article about Mahmoud Khalil. <image:7561> The article was published on March 12, 2025.
+
+Useful result: From [Source](https://www.nbcnews.com/news/us-news/ice-arrests-palestinian-activist-helped-lead-columbia-university-prote-rcna195562): 
+Content: NBC News reports on the arrest of Palestinian activist Mahmoud Khalil by ICE. <image:7562>
+
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='ICE arrest Palestinian activist March 2025')
+Got 2 new web source(s):
+	1. https://www.nytimes.com/2025/03/09/nyregion/ice-arrests-palestinian-activist-columbia-protests.html
+	2. https://mondoweiss.net/2025/03/ice-arrests-palestinian-student-for-involvement-in-columbia-protests/
+Useful result: From [Source](https://www.nytimes.com/2025/03/09/nyregion/ice-arrests-palestinian-activist-columbia-protests.html): 
+Content: The New York Times published an article on March 9, 2025, about ICE arrests of a Palestinian activist. <image:14171>
+
+Useful result: From [Source](https://mondoweiss.net/2025/03/ice-arrests-palestinian-student-for-involvement-in-columbia-protests/): 
+Content: The search result from Mondoweiss.net contains an image of Mahmoud Khalil. <image:14172>
+
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Mahmoud Khalil lawful permanent resident ICE')
+Failed to download or open image: cannot identify image file <_io.BytesIO object at 0x7ffee15c3970>
+Got 2 new web source(s):
+	1. https://www.npr.org/2025/04/08/nx-s1-5356477/mahmoud-khalil-immigration-judge-ruling-ice-louisiana
+	2. https://ca.cair.com/spotlight/u-s-efforts-to-deport-mahmoud-khalil-are-unjust-unconstitutional/
+Useful result: From [Source](https://www.npr.org/2025/04/08/nx-s1-5356477/mahmoud-khalil-immigration-judge-ruling-ice-louisiana): 
+Content: NPR published an article about Mahmoud Khalil. The article does not mention whether he is a lawful permanent resident. <image:14176>
+
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Mahmoud Khalil permanent resident status')
+Failed to download or open image: cannot identify image file <_io.BytesIO object at 0x7ffee15db5b0>
+Got 3 new web source(s):
+	1. https://www.opb.org/article/2025/04/11/mahmoud-khalil-can-be-deported-judge-rules/
+	2. https://www.usatoday.com/story/news/nation/2025/03/11/green-card-details-mahmoud-khalil-residency-status/82267137007/
+	3. https://abcnews.go.com/US/trump-administration-claims-palestinian-activist-mahmoud-khalil-misrepresented/story?id=120108978
+Useful result: From [Source](https://www.opb.org/article/2025/04/11/mahmoud-khalil-can-be-deported-judge-rules/): 
+Content: OPB published an article stating that an immigration judge ruled that Mahmoud Khalil can be deported. <image:14178>
+
+Useful result: From [Source](https://abcnews.go.com/US/trump-administration-claims-palestinian-activist-mahmoud-khalil-misrepresented/story?id=120108978): 
+Content: ABC News published an article about Mahmoud Khalil. <image:14179>
+
+The claim 'In March 2025, U.S. Immigration and Customs Enforcement (ICE) agents arrested and detained Palestinian activist Mahmoud Khalil, a lawful permanent resident of the U.S.' is false.
+Justification: The claim is partially supported. Multiple sources confirm that Mahmoud Khalil, a Palestinian activist, was arrested by ICE in March 2025. However, the evidence does not explicitly confirm that he was a lawful permanent resident of the U.S. The fact that an immigration judge ruled that he can be deported suggests that his permanent resident status is in question.
+
+So, the overall veracity is: false
+Fact-check took 1:06 min.

@@ -1,0 +1,47 @@
+Extracting claims from Content: <image:64> This is an authentic image of Dwayne Johnson waring the Israeli flag in support of Israel.
+'Claim: "<image:64> This is an authentic image of Dwayne Johnson waring the Israeli flag in support of Israel."'
+Verifying Claim: "<image:64> This is an authentic image of Dwayne Johnson waring the Israeli flag in support of Israel."
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Dwayne Johnson Israeli flag')
+Skipping unsupported website: https://www.facebook.com/IsraelBondsDCI/posts/we-extend-our-heartfelt-thanks-to-dwayne-the-rock-johnson-for-his-strong-stance-/930322965801732/
+Got 3 new web source(s):
+	1. https://www.wionews.com/entertainment/dwayne-johnson-on-israel-hamas-conflict-im-heartbroken-angry-and-sickened-645300
+	2. https://www.euronews.com/culture/2023/11/14/dwayne-the-rock-johnson-says-political-parties-asked-him-to-run-for-president
+	3. https://www.yahoo.com/news/articles/fact-check-fake-dwayne-johnson-234700368.html
+Useful result: From [Source](https://www.wionews.com/entertainment/dwayne-johnson-on-israel-hamas-conflict-im-heartbroken-angry-and-sickened-645300): 
+Content: WIONews published an article about Dwayne Johnson's reaction to the Israel-Hamas conflict. The article includes an image of Dwayne Johnson with a statement about the conflict. <image:10776>
+
+Useful result: From [Source](https://www.euronews.com/culture/2023/11/14/dwayne-the-rock-johnson-says-political-parties-asked-him-to-run-for-president): 
+Content: The Euronews article features a picture of Dwayne Johnson with the American flag. <image:10777>
+
+Useful result: From [Source](https://www.yahoo.com/news/articles/fact-check-fake-dwayne-johnson-234700368.html): 
+Content: The Yahoo News article fact-checks a fake image of Dwayne Johnson. <image:10778>
+
+Got 3 new web source(s):
+	1. October 11, 2023 https://www.marca.com/en/lifestyle/world-news/2023/10/11/6526c4cc22601d2d748b45da.html
+	2. February 18, 2025 https://shopisrael.com/blogs/support/does-dwayne-johnson-support-israel?srsltid=AfmBOopy4n2f7lxTWWqdiE6_xSd1XeW0AbQOVlP76nNPJQ6KrktIHL3X
+	3. October 09, 2023 https://variety.com/2023/film/news/hollywood-stars-support-israel-palestine-conflict-1235749537/
+Useful result: From [Source](https://www.marca.com/en/lifestyle/world-news/2023/10/11/6526c4cc22601d2d748b45da.html): 
+Content: The search result from Marca.com, published on October 11, 2023, discusses Dwayne "The Rock" Johnson's views on the Israel-Palestine war. <image:2699> Johnson expressed his heartbreak and outrage at the acts of Hamas, mentioning the loss of innocent Israeli and Palestinian lives. The article mentions that Johnson does not appear to be showing a clear allegiance with either side of the conflict.
+
+Useful result: From [Source](https://shopisrael.com/blogs/support/does-dwayne-johnson-support-israel?srsltid=AfmBOopy4n2f7lxTWWqdiE6_xSd1XeW0AbQOVlP76nNPJQ6KrktIHL3X): 
+Content: The article from shopisrael.com states that Dwayne Johnson has not been noted for direct engagements with Israel, but has expressed his views on the Israel-Palestine conflict. He has made public statements condemning terrorism and expressing sympathy for innocent lives lost in the conflict. <image:0> The article was published on February 28, 2025.
+
+Useful result: From [Source](https://variety.com/2023/film/news/hollywood-stars-support-israel-palestine-conflict-1235749537/): 
+Content: The article from Variety, published on October 9, 2023, reports that Dwayne "The Rock" Johnson, along with other Hollywood stars, has expressed support for Israel amid the conflict. <image:2700> The article includes a post from Dwayne Johnson on Instagram.
+
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Dwayne Johnson holding sign Hebrew')
+Skipping unsupported website: https://www.facebook.com/photo.php?fbid=768522592153782&id=100069881451207&set=a.544529364553107
+Skipping unsupported website: https://www.instagram.com/reel/DImf9ncz-We/
+Got 2 new web source(s):
+	1. https://mythdetector.com/en/dwayne-johnson-about-israel/
+	2. https://www.forbes.com/sites/forbesdigitalcovers/2018/07/12/why-the-rocks-social-media-muscle-made-him-hollywoods-highest-paid-actor/
+Useful result: From [Source](https://mythdetector.com/en/dwayne-johnson-about-israel/): 
+Content: Myth Detector fact-checked a fabricated quote attributed to Dwayne Johnson, which included an image of him with the Israeli flag. <image:10779>
+
+The claim '<image:64> This is an authentic image of Dwayne Johnson waring the Israeli flag in support of Israel.' is false.
+Justification: The image of Dwayne Johnson holding the Israeli flag is a fabricated image, as confirmed by a fact-check from Myth Detector ([https://mythdetector.com/en/dwayne-johnson-about-israel/](https://mythdetector.com/en/dwayne-johnson-about-israel/)). While Johnson has expressed support for Israel, the specific image is not authentic.
+
+So, the overall veracity is: false
+Fact-check took 0:34 min.

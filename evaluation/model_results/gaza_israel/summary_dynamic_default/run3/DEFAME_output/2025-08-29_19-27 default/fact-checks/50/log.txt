@@ -1,0 +1,28 @@
+Extracting claims from Content: It is illegal to do a DNA test in Israel.
+'Claim: "It is illegal to do a DNA test in Israel."'
+Verifying Claim: "It is illegal to do a DNA test in Israel."
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='is it illegal to do a DNA test in Israel')
+Skipping unsupported website: https://pmc.ncbi.nlm.nih.gov/articles/PMC5034383/
+Skipping fact-checking website: https://www.yahoo.com/news/fact-check-no-dna-tests-230000258.html
+Skipping unsupported website: https://www.reddit.com/r/Israel/comments/1j2hf7j/where_can_i_find_dna_tests_here_in_israel/
+Skipping unsupported website: https://www.facebook.com/snopes/posts/no-it-isnt-illegal-to-do-a-dna-test-in-israel/911413301022726/
+Skipping unsupported website: https://x.com/marclamonthill/status/1751299449622585385?lang=en
+Got 3 new web source(s):
+	1. https://ideas.repec.org/p/hrv/hksfac/29408321.html
+	2. October 01, 2024 https://welcome-israel.com/blog/repatriation-to-israel-through-a-dna-test
+	3. https://dash.harvard.edu/entities/publication/73120379-1b48-6bd4-e053-0100007fdf3b
+Useful result: From [Source](https://ideas.repec.org/p/hrv/hksfac/29408321.html): 
+Content: The search result from Harvard Kennedy School of Government discusses DNA testing and the Israeli Law of Return. The Israeli State may begin to use genetic tests to determine whether potential immigrants are Jewish or not. The article discusses the historical and legal context of secular and religious definitions of Jewishness and rights to immigration in the State of Israel.
+
+Useful result: From [Source](https://welcome-israel.com/blog/repatriation-to-israel-through-a-dna-test): 
+Content: The article from welcome-israel.com, updated August 14, 2025, discusses DNA testing in Israel. It states that DNA testing is not banned in Israel, but it is not sufficient on its own to prove Jewish ancestry for citizenship or repatriation. DNA tests can be used as an additional tool to demonstrate a connection to Jewish heritage. <image:1>
+
+Useful result: From [Source](https://dash.harvard.edu/entities/publication/73120379-1b48-6bd4-e053-0100007fdf3b): 
+Content: The search result from Harvard University discusses the use of genetic tests in Israel to determine whether potential immigrants are Jewish. The article, published in 2015 by Oxford University Press, is titled "Genetic citizenship: DNA testing and the Israeli Law of Return." It explores the historical and legal context of Jewishness and immigration rights in Israel.
+
+The claim 'It is illegal to do a DNA test in Israel.' is true.
+Justification: DNA testing is not illegal in Israel, according to sources like the Harvard Kennedy School of Government ([https://ideas.repec.org/p/hrv/hksfac/29408321.html](https://ideas.repec.org/p/hrv/hksfac/29408321.html)) and welcome-israel.com ([https://welcome-israel.com/blog/repatriation-to-israel-through-a-dna-test](https://welcome-israel.com/blog/repatriation-to-israel-through-a-dna-test)). These sources discuss the use of DNA testing in the context of immigration and Jewish identity, but do not mention any legal restrictions on performing such tests.
+
+So, the overall veracity is: true
+Fact-check took 0:45 min.

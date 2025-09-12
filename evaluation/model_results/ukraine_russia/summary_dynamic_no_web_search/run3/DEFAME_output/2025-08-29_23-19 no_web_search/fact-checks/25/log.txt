@@ -1,0 +1,35 @@
+Extracting claims from Content: U.S. Vice President JD Vance's cousin Nate Vance fought in Ukraine for three years during its war with Russia.
+'Claim: "U.S. Vice President JD Vance's cousin Nate Vance fought in Ukraine for three years during its war with Russia."'
+Verifying Claim: "U.S. Vice President JD Vance's cousin Nate Vance fought in Ukraine for three years during its war with Russia."
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='JD Vance Nate Vance Ukraine')
+Got 3 new web source(s):
+	1. https://www.cnn.com/2025/03/11/politics/video/jd-vance-cousin-nate-ukraine-ebof-digvid
+	2. https://www.lefigaro.fr/en/world/le-figaro-speaks-with-nate-jd-vance-s-first-cousin-and-a-volunteer-fighter-in-ukraine-20250310
+	3. https://www.scmp.com/magazines/style/entertainment/article/3303271/who-us-vice-president-jd-vances-cousin-nate-former-us-marine-who-fought-ukraine-made-headlines-when
+Useful result: From [Source](https://www.cnn.com/2025/03/11/politics/video/jd-vance-cousin-nate-ukraine-ebof-digvid): 
+Content: CNN has an image of Nate Vance. <image:7126>
+
+Useful result: From [Source](https://www.lefigaro.fr/en/world/le-figaro-speaks-with-nate-jd-vance-s-first-cousin-and-a-volunteer-fighter-in-ukraine-20250310): 
+Content: Le Figaro speaks with Nate Vance, JD Vance's first cousin, who is a volunteer fighter in Ukraine. <image:7127>
+
+Useful result: From [Source](https://www.scmp.com/magazines/style/entertainment/article/3303271/who-us-vice-president-jd-vances-cousin-nate-former-us-marine-who-fought-ukraine-made-headlines-when): 
+Content: The search result from SCMP.com includes an image of Nate Vance. <image:7128>
+
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Nate Vance Ukraine war duration')
+Skipping unsupported website: https://www.reddit.com/r/Military/comments/1j7hxmv/cousin_of_jd_vance_fighting_on_the_frontlines_in/
+Got 1 new web source(s):
+	1. https://sofrep.com/news/the-war-of-the-vances-ukraine-war-vet-and-cousin-of-the-vice-president-nate-vance-speaks-out/
+Useful result: From [Source](https://sofrep.com/news/the-war-of-the-vances-ukraine-war-vet-and-cousin-of-the-vice-president-nate-vance-speaks-out/): 
+Content: SOFREP has an image of Nate Vance (<image:7157>). The article discusses Nate Vance, a Ukraine war vet.
+
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Nate Vance Ukraine war service length')
+Got 1 new web source(s):
+	1. https://www.theguardian.com/us-news/2025/mar/10/trump-vance-putin
+The claim 'U.S. Vice President JD Vance's cousin Nate Vance fought in Ukraine for three years during its war with Russia.' is false.
+Justification: The claim that JD Vance's cousin, Nate Vance, fought in Ukraine for three years cannot be verified. While evidence confirms that Nate Vance is a volunteer fighter and a veteran of the war in Ukraine, the provided sources do not specify the duration of his service.
+
+So, the overall veracity is: false
+Fact-check took 2:15 min.

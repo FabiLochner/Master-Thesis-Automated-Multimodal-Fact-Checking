@@ -1,0 +1,49 @@
+Extracting claims from Content: <image:9> This is an authentic image of world leaders taking off their suits to symbolically support Ukraine at the London summit on Ukraine on March 2, 2025.
+'Claim: "<image:9> This is an authentic image of world leaders taking off their suits to symbolically support Ukraine at the London summit on Ukraine on March 2, 2025."'
+Verifying Claim: "<image:9> This is an authentic image of world leaders taking off their suits to symbolically support Ukraine at the London summit on Ukraine on March 2, 2025."
+Not enough information yet. Continuing fact-check...
+Got 0 new web source(s):
+Got 3 new web source(s):
+	1. https://en.wikipedia.org/wiki/2025_London_Summit_on_Ukraine
+	2. March 03, 2025 https://www.lemonde.fr/en/international/article/2025/03/03/at-london-summit-starmer-defends-french-british-peace-plan-for-ukraine_6738743_4.html
+	3. March 02, 2025 https://www.reuters.com/world/europe/russian-lawmaker-says-ukraine-can-only-count-improved-moscow-washington-ties-2025-03-02/
+Useful result: From [Source](https://en.wikipedia.org/wiki/2025_London_Summit_on_Ukraine): 
+Content: The 2025 London Summit on Ukraine, officially named the Securing Our Future London Summit, was held on March 2, 2025, in London, hosted by British Prime Minister Keir Starmer. The summit aimed to create a "coalition of the willing" in Europe to present a peace plan for the Russian invasion of Ukraine. Participants included leaders from 16 states, the EU, and NATO. The summit resulted in a four-point plan and commitments, including £1.6 billion in UK export finances for air defense missiles manufactured in Belfast and a previously announced £2.2 billion loan for military aid to Ukraine. The summit followed a meeting between Ukrainian President Volodymyr Zelenskyy and U.S. President Donald Trump. <image:9> shows a photo of the participants.
+
+Useful result: From [Source](https://www.lemonde.fr/en/international/article/2025/03/03/at-london-summit-starmer-defends-french-british-peace-plan-for-ukraine_6738743_4.html): 
+Content: The article from Le Monde discusses a summit in London on March 2, 2025, attended by leaders including Keir Starmer, Emmanuel Macron, and Volodymyr Zelensky. <image:1760> The article mentions a peace plan for Ukraine.
+
+Useful result: From [Source](https://www.reuters.com/world/europe/russian-lawmaker-says-ukraine-can-only-count-improved-moscow-washington-ties-2025-03-02/): 
+Content: The Reuters article discusses a summit of European leaders in London on March 2, 2025. The article mentions that Russian parliamentarians dismissed the summit, stating it produced no plan to settle the war in Ukraine. The article also mentions that Ukrainian President Volodymyr Zelenskiy and British Prime Minister Keir Starmer hosted the meeting. The article includes a file photo. <image:1761>
+
+Not enough information yet. Continuing fact-check...
+INFO: Dropping action 'reverse_search' as it was already performed.
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='London summit on Ukraine March 2 2023 suits')
+Skipping fact-checking website: https://www.reuters.com/fact-check/photo-suited-zelenskiy-wef-summit-predates-ukraine-war-2025-03-04/
+Got 3 new web source(s):
+	1. https://en.wikipedia.org/wiki/2025_Trump%E2%80%93Zelenskyy_Oval_Office_meeting
+	2. March 02, 2025 https://www.newsweek.com/uk-france-ukraine-ceasefire-plan-russia-us-trump-zelensky-2038350
+	3. March 02, 2025 https://www.theguardian.com/world/2025/mar/01/uk-gives-royal-welcome-to-zelenskyy-after-white-house-meltdown
+Useful result: From [Source](https://en.wikipedia.org/wiki/2025_Trump%E2%80%93Zelenskyy_Oval_Office_meeting): 
+Content: The search result from Wikipedia discusses the 2025 Trump–Zelenskyy Oval Office meeting, which took place against the backdrop of the ongoing Russo-Ukrainian War. The meeting occurred after the 2025 London Summit on Ukraine. The article mentions that the Trump administration suspended military aid and intelligence provision to Ukraine shortly after the meeting. The article also mentions a YouGov poll where 51% of Americans felt Trump was disrespectful toward Zelenskyy. The article also mentions that on March 4, Ursula von der Leyen proposed ReArm Europe, a five-point plan to boost defense spending. The article also mentions that NATO Secretary General Mark Rutte described the outcome of the meeting as "very unfortunate". The article also includes a photo of participants at the March 2 2025 London Summit on Ukraine. <image:9>
+
+Useful result: From [Source](https://www.newsweek.com/uk-france-ukraine-ceasefire-plan-russia-us-trump-zelensky-2038350): 
+Content: The Newsweek article, published on March 2, 2025, discusses the European leaders' summit in London to discuss ending Russia's war in Ukraine. <image:8978>, <image:8985>, and <image:8983> are included in the article. The article does not mention the leaders taking off their suits.
+
+Not enough information yet. Continuing fact-check...
+INFO: Dropping action 'reverse_search' as it was already performed.
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='London summit on Ukraine March 2 2023 symbolic gesture')
+Got 2 new web source(s):
+	1. March 03, 2025 https://www.cnn.com/2025/03/03/politics/zelensky-trump-europe-summit-starmer
+	2. https://www.ukrainianworldcongress.org/london-holds-significant-summit-to-address-russo-ukrainian-war/
+Useful result: From [Source](https://www.cnn.com/2025/03/03/politics/zelensky-trump-europe-summit-starmer): 
+Content: The CNN article discusses the London summit on Ukraine, held on March 2, 2025, and the symbolic embrace of Zelensky by European leaders. The article does not mention any specific symbolic gestures, such as removing suits. The article includes images of the summit and mentions the presence of Zelensky, Starmer, and Macron. <image:9>
+
+Useful result: From [Source](https://www.ukrainianworldcongress.org/london-holds-significant-summit-to-address-russo-ukrainian-war/): 
+Content: The Ukrainian World Congress website published an article about the London Summit on March 3, 2025. The summit was held on March 2, 2025, and hosted by Keir Starmer. The summit was attended by leaders from 18 countries, including Volodymyr Zelenskyy, Mark Rutte, and Ursula von der Leyen. The leaders discussed financial support for Ukraine's defense and agreed to form a "coalition of the willing." The article includes a photo of the summit. <image:9>
+
+The claim '<image:9> This is an authentic image of world leaders taking off their suits to symbolically support Ukraine at the London summit on Ukraine on March 2, 2025.' is false.
+Justification: The image is authentic and depicts the London Summit on Ukraine on March 2, 2025, as confirmed by multiple sources ([https://www.cnn.com/2025/03/03/politics/zelensky-trump-europe-summit-starmer](https://www.cnn.com/2025/03/03/politics/zelensky-trump-europe-summit-starmer), [https://www.ukrainianworldcongress.org/london-holds-significant-summit-to-address-russo-ukrainian-war/](https://www.ukrainianworldcongress.org/london-holds-significant-summit-to-address-russo-ukrainian-war/)). However, there is no evidence to support the claim that European leaders took off their suits to support Ukraine.
+
+So, the overall veracity is: false
+Fact-check took 3:49 min.

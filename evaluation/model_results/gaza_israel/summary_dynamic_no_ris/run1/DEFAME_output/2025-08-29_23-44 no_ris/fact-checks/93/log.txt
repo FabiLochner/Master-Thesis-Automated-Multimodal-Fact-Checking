@@ -1,0 +1,24 @@
+Extracting claims from Content: <image:60> This image shows Israelis fleeing the airport after the Houthis attack on July 19, 2024.
+'Claim: "<image:60> This image shows Israelis fleeing the airport after the Houthis attack on July 19, 2024."'
+Verifying Claim: "<image:60> This image shows Israelis fleeing the airport after the Houthis attack on July 19, 2024."
+Not enough information yet. Continuing fact-check...
+Most likely location: Israel
+Top 10 locations: Israel, Palestine, Jordan, United Arab Emirates, Albania, Andorra, Argentina, Australia, Austria, Bangladesh
+Got 3 new web source(s):
+	1. https://www.reuters.com/world/middle-east/israeli-military-says-tel-aviv-blast-apparently-caused-by-drone-2024-07-19/
+	2. July 19, 2024 https://www.theguardian.com/world/article/2024/jul/19/yemen-houthis-claim-deadly-drone-attack-on-tel-aviv-israel
+	3. July 19, 2024 https://www.nytimes.com/2024/07/19/world/middleeast/houthis-drone-strike-tel-aviv.html
+Useful result: From [Source](https://www.reuters.com/world/middle-east/israeli-military-says-tel-aviv-blast-apparently-caused-by-drone-2024-07-19/): 
+Content: Reuters reports that a long-range Iranian-made drone hit Tel Aviv on July 19, 2024, in an attack claimed by the Yemen-based Houthi militia. The attack killed one man and wounded four others. <image:2525>
+
+Useful result: From [Source](https://www.theguardian.com/world/article/2024/jul/19/yemen-houthis-claim-deadly-drone-attack-on-tel-aviv-israel): 
+Content: The Guardian reports on a Houthi drone attack on Tel Aviv on July 19, 2024. The Houthis claimed responsibility for the attack. <image:2533> shows the aftermath of the attack. The article mentions that police urged residents to "respect safety instructions and not to approach or touch debris or shrapnel that may contain explosives".
+
+Useful result: From [Source](https://www.nytimes.com/2024/07/19/world/middleeast/houthis-drone-strike-tel-aviv.html): 
+Content: The New York Times reports on a Houthi drone strike in Tel Aviv on July 19, 2024. The Houthis claimed responsibility for the strike. <image:60>
+
+The claim '<image:60> This image shows Israelis fleeing the airport after the Houthis attack on July 19, 2024.' is false.
+Justification: The image was taken in Israel, and a Houthi attack occurred in Tel Aviv on July 19, 2024, as reported by [Reuters](https://www.reuters.com/world/middle-east/israeli-military-says-tel-aviv-blast-apparently-caused-by-drone-2024-07-19/) and other news outlets. The image is likely related to the aftermath of the attack, but the claim that people are fleeing the airport is not explicitly supported by the evidence.
+
+So, the overall veracity is: false
+Fact-check took 0:28 min.

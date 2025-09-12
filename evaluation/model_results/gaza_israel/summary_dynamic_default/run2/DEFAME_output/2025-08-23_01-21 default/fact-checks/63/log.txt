@@ -1,0 +1,34 @@
+Extracting claims from Content: <image:38> This image shows two children in Gaza in April 2025 found dead under the rubble of their home two months after an Israeli airstrike destroyed it.
+'Claim: "<image:38> This image shows two children in Gaza in April 2025 found dead under the rubble of their home two months after an Israeli airstrike destroyed it."'
+Verifying Claim: "<image:38> This image shows two children in Gaza in April 2025 found dead under the rubble of their home two months after an Israeli airstrike destroyed it."
+Not enough information yet. Continuing fact-check...
+Searching google_vision with query: ImageQuery(limit=3, start_date=None, end_date=None, search_type='reverse', text='', image=<defame.common.medium.Image object at 0x7ffed175ec20>)
+Skipping unsupported website: https://www.instagram.com/qarandoon_/reels/?__d=1
+Skipping fact-checking website: https://www.misbar.com/en/factcheck/2025/04/14/photo-mummified-children-bolivia-falsely-circulated-dead-children-gaza
+Skipping unsupported website: https://m.facebook.com/cienciasforenses2.0/photos/momificaci%C3%B3n-en-la-casa-de-la-moneda-de-bolivia-ubicada-en-potos%C3%AD-los-visitantes/979509420946963/
+Got 1 new web source(s):
+	1. https://kashif.ps/en/index.php/2025/04/14/image-of-two-mummified-children-in-a-bolivian-museum-goes-viral-as-from-gaza/
+Useful result: From [Source](https://kashif.ps/en/index.php/2025/04/14/image-of-two-mummified-children-in-a-bolivian-museum-goes-viral-as-from-gaza/): Found exact image on website with title: Image of two mummified children in a Bolivian museum goes viral as ...
+Content: The image in the claim is of two mummified children in a Bolivian museum, not children found in Gaza. The image was posted on Instagram with the caption "Two children found two months later under the rubble of their home." The image was originally posted on Fliker on December 25, 2006, and shows two mummified Spanish children from the 19th century at the Mint Museum in Potosi, Bolivia. <image:38>, <image:5448>, <image:5452>. The article was published on April 14, 2025.
+
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='children found rubble home Gaza Israeli airstrike')
+Skipping unsupported website: https://www.youtube.com/watch?v=hFoGwBHP1V8&pp=0gcJCfwAo7VqN5tD
+Skipping unsupported website: https://www.facebook.com/aljazeera/videos/palestinian-child-rescued-from-rubble-after-israeli-strike/1256645362879579/
+Got 3 new web source(s):
+	1. March 20, 2025 https://www.pbs.org/newshour/world/month-old-girl-pulled-from-rubble-in-gaza-after-airstrike-killed-her-parents
+	2. June 03, 2025 https://www.newarab.com/news/baby-pulled-alive-rubble-after-israeli-strike-gaza
+	3. January 30, 2024 https://www.bbc.com/news/world-middle-east-68141039
+Useful result: From [Source](https://www.pbs.org/newshour/world/month-old-girl-pulled-from-rubble-in-gaza-after-airstrike-killed-her-parents): 
+Content: PBS News published an article on March 20, 2025, about an Israeli airstrike in Khan Younis, Gaza, that killed at least 16 people, mostly women and children. <image:5481> The article mentions a month-old girl was pulled from the rubble, while her parents and brother were killed.
+
+Useful result: From [Source](https://www.newarab.com/news/baby-pulled-alive-rubble-after-israeli-strike-gaza): 
+Content: The New Arab published on June 3, 2025, reports on a baby rescued from the rubble of a home in Gaza after an Israeli airstrike. <image:i>. The article mentions that civil defense teams rescued a baby, a mother, and three children from the Sabra neighborhood in Gaza City. The article also mentions that over 50,000 Palestinian children have been killed or wounded since October 2023.
+
+Useful result: From [Source](https://www.bbc.com/news/world-middle-east-68141039): 
+Content: The BBC News article, published on January 31, 2024, discusses the situation of orphaned children in Gaza due to the ongoing war. It mentions that many children have been found under the rubble or have lost their parents in bombings. The article includes an image of a newborn baby girl <image:5485> and a photo of Abed Hussein <image:5491>, an orphaned child.
+
+The claim '<image:38> This image shows two children in Gaza in April 2025 found dead under the rubble of their home two months after an Israeli airstrike destroyed it.' is false.
+Justification: The claim is false. The image depicts mummified children from a Bolivian museum, not children found in Gaza, as evidenced by a reverse image search ([Source](https://kashif.ps/en/index.php/2025/04/14/image-of-two-mummified-children-in-a-bolivian-museum-goes-viral-as/)).
+
+So, the overall veracity is: false
+Fact-check took 0:56 min.

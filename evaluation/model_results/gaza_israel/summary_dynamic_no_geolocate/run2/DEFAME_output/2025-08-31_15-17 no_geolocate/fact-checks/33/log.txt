@@ -1,0 +1,37 @@
+Extracting claims from Content: The assassination plot to kill Donald Trump in 2024 was orchestrated by two Jewish Americans. Israel wants war with Iran but wants American money to fund it and American servicemen to fight it.
+'Claim: "The assassination plot to kill Donald Trump in 2024 was orchestrated by two Jewish Americans. Israel wants war with Iran but wants American money to fund it and American servicemen to fight it."'
+Verifying Claim: "The assassination plot to kill Donald Trump in 2024 was orchestrated by two Jewish Americans. Israel wants war with Iran but wants American money to fund it and American servicemen to fight it."
+Not enough information yet. Continuing fact-check...
+Got 3 new web source(s):
+	1. https://en.wikipedia.org/wiki/Attempted_assassination_of_Donald_Trump_in_Pennsylvania
+	2. November 08, 2024 https://www.npr.org/2024/11/08/nx-s1-5184549/iran-donald-trump-murder-for-hire-plot-justice-department
+	3. November 08, 2024 https://www.bbc.com/news/articles/cx28x187rmko
+Useful result: From [Source](https://en.wikipedia.org/wiki/Attempted_assassination_of_Donald_Trump_in_Pennsylvania): 
+Content: The search result is from Wikipedia and discusses the attempted assassination of Donald Trump on July 13, 2024, in Pennsylvania. The perpetrator, Thomas Matthew Crooks, shot Trump and others. The article mentions that the Secret Service had increased Trump's security due to intelligence suggesting Iran was plotting to assassinate him. The article also mentions conspiracy theories and misinformation that spread after the shooting. <image:i>
+
+Useful result: From [Source](https://www.npr.org/2024/11/08/nx-s1-5184549/iran-donald-trump-murder-for-hire-plot-justice-department): 
+Content: NPR reports that the Justice Department disclosed an Iranian murder-for-hire plot to kill Donald Trump. The plot was allegedly orchestrated by an Iranian government official. The article mentions that the accused, Farhad Shakeri, was tasked with planning the assassination. Shakeri also told investigators that he was tasked with plotting the killings of two Jewish-Americans living in New York and Israeli tourists in Sri Lanka. The article was published on November 8, 2024. <image:12022>, <image:12023>, <image:12024>
+
+Useful result: From [Source](https://www.bbc.com/news/articles/cx28x187rmko): 
+Content: The BBC News published on November 9, 2024, reports that the US government has charged an Afghan national in connection with an alleged Iranian plot to assassinate Donald Trump. <image:12026>. The indictment also alleges that the Iranian government sought to kill two Jewish American businesspeople living in New York City. The article mentions that Mr. Shakeri was asked to plan a mass shooting to target Israeli tourists in Sri Lanka in October 2024.
+
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Israel Iran war American money')
+Skipping unsupported website: https://www.youtube.com/watch?v=ZfjvXKZ4iL4
+Got 3 new web source(s):
+	1. June 25, 2025 https://trt.global/world/article/334e2e1ae7a3
+	2. June 16, 2025 https://www.reuters.com/markets/europe/israel-iran-conflict-highlights-dollars-tarnished-safe-haven-appeal-2025-06-16/
+	3. https://en.wikipedia.org/wiki/Economic_impact_of_the_Iran%E2%80%93Israel_war
+Useful result: From [Source](https://trt.global/world/article/334e2e1ae7a3): 
+Content: The search result from TRT Global discusses the economic impact of a 12-day war between Israel and Iran in June 2025. The article mentions that the war cost the US, Israel, and Iran. The article also mentions that Israel's government imposed a travel ban on Jewish citizens. The article was published on June 25, 2025. <image:13061>, <image:13063>.
+
+Useful result: From [Source](https://www.reuters.com/markets/europe/israel-iran-conflict-highlights-dollars-tarnished-safe-haven-appeal-2025-06-16/): 
+Content: Reuters discusses the potential impact of an Israel-Iran conflict on the U.S. dollar. The article, published on June 16, 2025, notes that the dollar's response to recent events was "feeble," unlike in previous conflicts. The author is a columnist for Reuters. <image:k>
+
+Useful result: From [Source](https://en.wikipedia.org/wiki/Economic_impact_of_the_Iran%E2%80%93Israel_war): 
+Content: The search result from Wikipedia discusses the economic impact of the Iran–Israel war, including military spending, sanctions, and currency devaluation. It mentions the 2024 and 2025 conflicts, including attacks and assassinations. The article also mentions the historical context of hostility and sanctions between Iran and Israel.
+
+The claim 'The assassination plot to kill Donald Trump in 2024 was orchestrated by two Jewish Americans. Israel wants war with Iran but wants American money to fund it and American servicemen to fight it.' is false.
+Justification: The claim is partially inaccurate. Evidence suggests an Iranian government official orchestrated a plot to assassinate Donald Trump, not Jewish Americans, as stated in the claim. While the provided sources discuss the economic impact of an Iran-Israel war, they do not support the assertion that Israel desires American funding or servicemen for the conflict.
+
+So, the overall veracity is: false
+Fact-check took 1:16 min.

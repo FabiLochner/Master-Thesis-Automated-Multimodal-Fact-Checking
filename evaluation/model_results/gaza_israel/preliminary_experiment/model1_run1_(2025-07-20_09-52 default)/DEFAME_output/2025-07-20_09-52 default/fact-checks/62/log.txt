@@ -1,0 +1,29 @@
+Extracting claims from Content: <image:37> This image shows thousands gathering at Sohrawardi Park in Kolkata, India, in April 2025 to show solidarity with the Palestinian people amid the ongoing Israeli assault on Gaza.
+'Claim: "<image:37> This image shows thousands gathering at Sohrawardi Park in Kolkata, India, in April 2025 to show solidarity with the Palestinian people amid the ongoing Israeli assault on Gaza."'
+Verifying Claim: "<image:37> This image shows thousands gathering at Sohrawardi Park in Kolkata, India, in April 2025 to show solidarity with the Palestinian people amid the ongoing Israeli assault on Gaza."
+Not enough information yet. Continuing fact-check...
+Most likely location: Bangladesh
+Top 10 locations: Bangladesh, Pakistan, India, Palestine, Albania, Andorra, Argentina, Australia, Austria, Belgium
+Searching google_vision with query: ImageQuery(limit=3, start_date=None, end_date=None, search_type='reverse', text='', image=<defame.common.medium.Image object at 0x7ffeb81be080>)
+Skipping fact-checking website: https://www.misbar.com/en/factcheck/2025/04/15/photos-show-recent-pro-palestine-protests-bangladesh-not-india
+Got 0 new web source(s):
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='protest Kolkata India Palestine')
+Skipping unsupported website: https://www.youtube.com/watch?v=bNLYyD6Zk24
+Got 3 new web source(s):
+	1. https://thewire.in/rights/genocide-in-palestine-left-parties-march-in-kolkata-question-indian-govts-stand
+	2. https://www.indiatoday.in/cities/kolkata/story/protestors-in-kolkata-march-in-support-of-palestine-2448209-2023-10-12
+	3. https://www.gettyimages.com/editorial-images/news/event/pro-palestine-protest-in-kolkata/776058436
+Useful result: From [Source](https://thewire.in/rights/genocide-in-palestine-left-parties-march-in-kolkata-question-indian-govts-stand): 
+Content: The Wire published an article about a march in Kolkata against the "genocide in Palestine". <image:1746> shows a march in Kolkata. The march was organized by left parties. The march took place in 2023.
+
+Useful result: From [Source](https://www.indiatoday.in/cities/kolkata/story/protestors-in-kolkata-march-in-support-of-palestine-2448209-2023-10-12): 
+Content: India Today reports that protestors in Kolkata marched in support of Palestine. <image:1747>
+
+Useful result: From [Source](https://www.gettyimages.com/editorial-images/news/event/pro-palestine-protest-in-kolkata/776058436): 
+Content: Getty Images shows images of a pro-Palestine protest in Kolkata, India. <image:1748>
+
+The claim '<image:37> This image shows thousands gathering at Sohrawardi Park in Kolkata, India, in April 2025 to show solidarity with the Palestinian people amid the ongoing Israeli assault on Gaza.' is misleading.
+Justification: The image likely depicts a pro-Palestine protest in Kolkata, India, as supported by the `geolocate` results and image search results, which found reports of similar protests in Kolkata ([https://thewire.in/rights/genocide-in-palestine-left-parties-march-in-kolkata-question-indian-govts-stand](https://thewire.in/rights/genocide-in-palestine-left-parties-march-in-kolkata-question-indian-govts-stand), [https://www.indiatoday.in/cities/kolkata/story/protestors-in-kolkata-march-in-support-of-palestine-2448209-2023-10-12](https://www.indiatoday.in/cities/kolkata/story/protestors-in-kolkata-march-in-support-of-palestine-2448209-2023-10-12)). However, the claim's specific details about the location (Sohrawardi Park) and the date (April 2025) are not confirmed.
+
+So, the overall veracity is: misleading
+Fact-check took 0:38 min.

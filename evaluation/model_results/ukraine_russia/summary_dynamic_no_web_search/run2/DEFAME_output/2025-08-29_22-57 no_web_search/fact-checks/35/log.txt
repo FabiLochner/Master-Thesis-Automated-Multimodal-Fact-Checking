@@ -1,0 +1,47 @@
+Extracting claims from Content: In January 2025, Russian President Vladimir Putin was seeking to have Dr. Anthony Fauci in the U.S. extradited to Russia in exchange for ending the war in Ukraine.
+'Claim: "In January 2025, Russian President Vladimir Putin was seeking to have Dr. Anthony Fauci in the U.S. extradited to Russia in exchange for ending the war in Ukraine."'
+Verifying Claim: "In January 2025, Russian President Vladimir Putin was seeking to have Dr. Anthony Fauci in the U.S. extradited to Russia in exchange for ending the war in Ukraine."
+Not enough information yet. Continuing fact-check...
+Got 3 new web source(s):
+	1. https://abcnews.go.com/US/fauci-doubts-russias-covid-19-vaccine-safe-effective/story?id=72309297
+	2. https://dhvi.duke.edu/news/experts-express-doubts-over-russias-vaccine-claim
+	3. https://www.nationalgeographic.com/science/article/fauci-seriously-doubts-russia-coronavirus-vaccine-is-ready-cvd
+Useful result: From [Source](https://abcnews.go.com/US/fauci-doubts-russias-covid-19-vaccine-safe-effective/story?id=72309297): 
+Content: The search result from ABC News contains an image of Dr. Anthony Fauci. <image:6317>
+
+Useful result: From [Source](https://dhvi.duke.edu/news/experts-express-doubts-over-russias-vaccine-claim): 
+Content: The search result contains an image of Vladimir Putin. <image:6318>
+
+Useful result: From [Source](https://www.nationalgeographic.com/science/article/fauci-seriously-doubts-russia-coronavirus-vaccine-is-ready-cvd): 
+Content: The search result from National Geographic contains an image of Dr. Anthony Fauci. <image:6319>
+
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Putin Fauci extradition Ukraine war')
+Skipping fact-checking website: https://www.yahoo.com/news/fact-check-no-evidence-vladimir-224900291.html
+Got 3 new web source(s):
+	1. https://www.cnn.com/2021/06/13/europe/putin-russia-cyber-criminals-intl
+	2. https://www.economist.com/europe/2022/12/23/making-sense-of-vladimir-putins-war
+	3. https://mwi.westpoint.edu/what-is-russias-theory-of-victory-in-ukraine/
+Useful result: From [Source](https://www.cnn.com/2021/06/13/europe/putin-russia-cyber-criminals-intl): 
+Content: The search result from CNN includes an image of Vladimir Putin. <image:6815>
+
+Useful result: From [Source](https://www.economist.com/europe/2022/12/23/making-sense-of-vladimir-putins-war): 
+Content: The search result from The Economist includes an image of Ukrainian soldiers. <image:6816>
+
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Anthony Fauci Russia extradition Ukraine war')
+Skipping fact-checking website: https://www.yahoo.com/news/fact-check-no-evidence-vladimir-224900291.html
+Got 2 new web source(s):
+	1. https://www.bbc.com/news/articles/cvg49jz7v8no
+	2. https://www.reuters.com/world/us/trump-says-he-ended-security-former-top-covid-official-anthony-fauci-2025-01-24/
+Useful result: From [Source](https://www.bbc.com/news/articles/cvg49jz7v8no): 
+Content: The BBC News article includes an image of Dr. Anthony Fauci. <image:6825>
+
+Useful result: From [Source](https://www.reuters.com/world/us/trump-says-he-ended-security-former-top-covid-official-anthony-fauci-2025-01-24/): 
+Content: Reuters published an article on January 24, 2025, featuring an image of Dr. Anthony Fauci (<image:6827>). The article discusses Trump's actions regarding Fauci's security.
+
+The claim 'In January 2025, Russian President Vladimir Putin was seeking to have Dr. Anthony Fauci in the U.S. extradited to Russia in exchange for ending the war in Ukraine.' is false.
+Justification: The fact-check, using multiple image searches, found no evidence to support the claim that Vladimir Putin sought to extradite Dr. Anthony Fauci in January 2025 in exchange for ending the war in Ukraine. While images of both individuals and information about the war were found, no source mentioned the alleged extradition attempt. The Reuters article from January 24, 2025, discussed Trump's actions regarding Fauci's security, but did not mention any Russian involvement. Therefore, the claim is unsupported.
+
+So, the overall veracity is: false
+Fact-check took 0:56 min.

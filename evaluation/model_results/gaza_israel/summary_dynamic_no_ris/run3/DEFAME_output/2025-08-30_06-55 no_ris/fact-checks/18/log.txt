@@ -1,0 +1,37 @@
+Extracting claims from Content: <image:15> This image shows Gal Gadot’s star on the Hollywood Walk of Fame being destroyed in March 2025 just hours after being placed.
+'Claim: "<image:15> This image shows Gal Gadot’s star on the Hollywood Walk of Fame being destroyed in March 2025 just hours after being placed."'
+Verifying Claim: "<image:15> This image shows Gal Gadot’s star on the Hollywood Walk of Fame being destroyed in March 2025 just hours after being placed."
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Gal Gadot Hollywood Walk of Fame star damage')
+Failed to download or open image: cannot identify image file <_io.BytesIO object at 0x7ffed1765530>
+Got 3 new web source(s):
+	1. https://www.ndtv.com/world-news/gal-gadots-hollywood-walk-of-fame-star-smashed-amid-pro-palestinian-protests-photo-is-viral-7966341
+	2. https://ew.com/fact-check-was-gal-gadot-s-hollywood-star-destroyed-11700747?srsltid=AfmBOopi5B_4SFyMzbFXffAmqa_7xa_aZ2Vfvsn4yz9Ml3DFGpY9xM1O
+	3. https://www.latimes.com/entertainment-arts/story/2025-03-18/gal-gadot-walk-of-fame-pro-palestine-pro-israel-protesters-snow-white
+Useful result: From [Source](https://www.ndtv.com/world-news/gal-gadots-hollywood-walk-of-fame-star-smashed-amid-pro-palestinian-protests-photo-is-viral-7966341): 
+Content: The search result shows an image of Gal Gadot's star on the Hollywood Walk of Fame being damaged. <image:10134>
+
+Useful result: From [Source](https://www.latimes.com/entertainment-arts/story/2025-03-18/gal-gadot-walk-of-fame-pro-palestine-pro-israel-protesters-snow-white): 
+Content: The Los Angeles Times published an article about Gal Gadot's star on the Hollywood Walk of Fame. <image:10135>
+
+Got 0 new web source(s):
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Gal Gadot Hollywood Walk of Fame star damage date')
+Got 3 new web source(s):
+	1. March 20, 2025 https://ew.com/fact-check-was-gal-gadot-s-hollywood-star-destroyed-11700747?srsltid=AfmBOopT0yFnScU7IaqK2jEgMeN47liwGjl9qSlO0HrjDlZY1vIfCpJY
+	2. March 31, 2025 https://thelogicalindian.com/debunking-the-viral-photo-gal-gadots-star-wasnt-damaged-in-2025/
+	3. March 19, 2025 https://www.yahoo.com/entertainment/gal-gadot-walk-fame-star-093000872.html
+Useful result: From [Source](https://ew.com/fact-check-was-gal-gadot-s-hollywood-star-destroyed-11700747?srsltid=AfmBOopT0yFnScU7IaqK2jEgMeN47liwGjl9qSlO0HrjDlZY1vIfCpJY): 
+Content: Entertainment Weekly reports that Gal Gadot's Hollywood Walk of Fame star ceremony took place on March 18, 2025. The article mentions that the ceremony was disrupted by protestors. <image:10134> shows damage to a star, and the article questions whether it is Gadot's star.
+
+Useful result: From [Source](https://thelogicalindian.com/debunking-the-viral-photo-gal-gadots-star-wasnt-damaged-in-2025/): 
+Content: The Logical Indian published an article on March 31, 2025, debunking the claim that Gal Gadot's Hollywood Walk of Fame star was damaged in 2025. The article states that the photo circulating online actually depicts damage to Donald Trump’s star from an incident in 2018. The article classifies the claim as "False Content". <image:10136>, <image:10138>
+
+Useful result: From [Source](https://www.yahoo.com/entertainment/gal-gadot-walk-fame-star-093000872.html): 
+Content: The Yahoo search result states that Gal Gadot received her star on the Hollywood Walk of Fame on March 18, 2025. The ceremony was disrupted by pro-Palestinian and pro-Israel supporters. An image went viral on X (formerly Twitter) seemingly hinting at Gal Gadot’s Hollywood Walk of Fame star being destroyed. The image has not been verified. <image:10149>
+
+The claim '<image:15> This image shows Gal Gadot’s star on the Hollywood Walk of Fame being destroyed in March 2025 just hours after being placed.' is false.
+Justification: The claim is false. While Gal Gadot received her star on the Hollywood Walk of Fame on March 18, 2025, the image of the damaged star circulating online is actually of Donald Trump's star from a 2018 incident, as reported by [The Logical Indian](https://thelogicalindian.com/debunking-the-viral-photo-gal-gadots-star-wasnt-damaged-in-2025/).
+
+So, the overall veracity is: false
+Fact-check took 1:15 min.

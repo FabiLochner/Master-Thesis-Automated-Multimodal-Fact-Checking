@@ -1,0 +1,53 @@
+Extracting claims from Content: <image:35> This image shows an Israeli attack on Lebanon on October 21, 2024.
+'Claim: "<image:35> This image shows an Israeli attack on Lebanon on October 21, 2024."'
+Verifying Claim: "<image:35> This image shows an Israeli attack on Lebanon on October 21, 2024."
+Not enough information yet. Continuing fact-check...
+Got 3 new web source(s):
+	1. October 21, 2024 https://www.cnn.com/world/live-news/israel-iran-lebanon-gaza-war-10-21-24-intl-hnk
+	2. https://en.wikipedia.org/wiki/2024_Israeli_invasion_of_Lebanon
+	3. October 21, 2024 https://www.theguardian.com/world/2024/oct/21/israeli-airstrikes-on-lebanon-hit-branches-of-hezbollah-linked-bank-al-qard-al-hassan
+Useful result: From [Source](https://www.cnn.com/world/live-news/israel-iran-lebanon-gaza-war-10-21-24-intl-hnk): 
+Content: The CNN article, updated on October 22, 2024, reports on the ongoing conflict between Israel and Hezbollah, including attacks and counterattacks. It mentions an Israeli strike near Rafik Hariri University Hospital in Beirut on Monday, October 21, 2024, which resulted in casualties. <image:35> The article also discusses the US's involvement, including Secretary of State Antony Blinken's trip to the Middle East and the US's concerns regarding the leak of classified intelligence on Israel's plans to attack Iran. The article also mentions that the IDF has hit over 3,200 Hezbollah targets since ground operations started in southern Lebanon on October 1.
+
+Useful result: From [Source](https://en.wikipedia.org/wiki/2024_Israeli_invasion_of_Lebanon): 
+Content: The Wikipedia article discusses the 2024 Israeli invasion of Lebanon, which began on October 1, 2024, and was part of the ongoing Israel–Hezbollah conflict. The invasion resulted in an Israeli victory and a ceasefire agreement. The article details the background of the conflict, including the involvement of Hezbollah and various other groups. It also mentions the involvement of UNIFIL. The article provides a timeline of events, including airstrikes, clashes, and attacks on various locations, including civilian areas, UNIFIL positions, and medical facilities. The article also provides casualty figures for both sides, including civilians, soldiers, and UN peacekeepers. <image:35>
+
+Useful result: From [Source](https://www.theguardian.com/world/2024/oct/21/israeli-airstrikes-on-lebanon-hit-branches-of-hezbollah-linked-bank-al-qard-al-hassan): 
+Content: The Guardian published an article on October 21, 2024, reporting on Israeli airstrikes on Lebanon that hit branches of the Hezbollah-linked bank Al-Qard Al-Hassan. <image:1786>. The article mentions that the strikes targeted buildings in Beirut's southern suburbs, south Lebanon, and the Bekaa valley. The article also includes a video and a map showing the strikes.
+
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='explosion building night lebanon')
+Got 3 new web source(s):
+	1. https://www.aljazeera.com/video/newsfeed/2024/10/24/israeli-air-attack-causes-huge-explosions-in-southern-beirut
+	2. https://apnews.com/article/lebanon-israel-hezbollah-airstrikes-suburb-617575d9c5d7c711bc02e7b81d2ba4ad
+	3. https://www.theguardian.com/world/video/2025/jun/05/explosions-heard-in-beirut-as-israel-carries-out-airstrikes-video
+Useful result: From [Source](https://www.aljazeera.com/video/newsfeed/2024/10/24/israeli-air-attack-causes-huge-explosions-in-southern-beirut): 
+Content: Al Jazeera published an image of an explosion over buildings at night. <image:9608>
+
+Useful result: From [Source](https://apnews.com/article/lebanon-israel-hezbollah-airstrikes-suburb-617575d9c5d7c711bc02e7b81d2ba4ad): 
+Content: The Associated Press published an image of an explosion over a building at night in Lebanon. <image:9609>
+
+Useful result: From [Source](https://www.theguardian.com/world/video/2025/jun/05/explosions-heard-in-beirut-as-israel-carries-out-airstrikes-video): 
+Content: The Guardian published a video on June 5, 2025, showing explosions in Beirut as Israel carried out airstrikes. <image:9610>
+
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='GettyImages MAHMOD HAMS explosion building')
+Skipping unsupported website: https://x.com/talhagin/status/1961557717564215789
+Got 3 new web source(s):
+	1. https://www.gettyimages.com/detail/news-photo/picture-shows-israeli-air-strikes-in-the-gaza-strip-news-photo/1232810997
+	2. https://www.amnesty.org/en/latest/news/2023/10/israel-opt-urgent-call-for-an-immediate-ceasefire-by-all-parties-to-end-unprecedented-civilian-suffering/
+	3. https://fox47.com/news/local/hamas-accepts-cease-fire-proposal-for-gaza-but-israels-stance-still-uncertain
+Useful result: From [Source](https://www.gettyimages.com/detail/news-photo/picture-shows-israeli-air-strikes-in-the-gaza-strip-news-photo/1232810997): 
+Content: GettyImages published an image of Israeli air strikes in the Gaza Strip. <image:9611>
+
+Useful result: From [Source](https://www.amnesty.org/en/latest/news/2023/10/israel-opt-urgent-call-for-an-immediate-ceasefire-by-all-parties-to-end-unprecedented-civilian-suffering/): 
+Content: The Amnesty International website published an image of an explosion over buildings at night. <image:9612>
+
+Useful result: From [Source](https://fox47.com/news/local/hamas-accepts-cease-fire-proposal-for-gaza-but-israels-stance-still-uncertain): 
+Content: The search result from fox47.com includes an image of an explosion over a building, credited to MAHMOD HAMS. <image:9613>
+
+The claim '<image:35> This image shows an Israeli attack on Lebanon on October 21, 2024.' is false.
+Justification: The claim that the image depicts an Israeli attack on Lebanon on October 21, 2024, is not supported by the evidence. While there were indeed Israeli attacks on Lebanon on that date, as reported by sources like [CNN](https://www.cnn.com/world/live-news/israel-iran-lebanon-gaza-war-10-21-24-intl-hnk) and [The Guardian](https://www.theguardian.com/world/2024/oct/21/israeli-airstrikes-on-lebanon-hit-branches-of-hezbollah-linked-bank-al-qard-al-hassan), the image itself, credited to MAHMOD HAMS, is associated with Israeli air strikes in the Gaza Strip, according to image search results.
+
+So, the overall veracity is: false
+Fact-check took 1:02 min.

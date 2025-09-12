@@ -1,0 +1,71 @@
+Extracting claims from Content: China and Japan plan to invade the Russian Federation.
+'Claim: "China and Japan plan to invade the Russian Federation."'
+Verifying Claim: "China and Japan plan to invade the Russian Federation."
+Not enough information yet. Continuing fact-check...
+Got 0 new web source(s):
+Got 0 new web source(s):
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Japan Russia relations')
+Got 3 new web source(s):
+	1. https://en.wikipedia.org/wiki/Japan%E2%80%93Russia_relations
+	2. January 27, 2025 https://www.scmp.com/week-asia/politics/article/3296430/rock-bottom-100-years-japan-russia-ties-come-full-circle
+	3. https://www.mofa.go.jp/region/n-america/us/q&a/declaration.html
+Useful result: From [Source](https://en.wikipedia.org/wiki/Japan%E2%80%93Russia_relations): 
+Content: The search result from Wikipedia discusses the history of Japan-Russia relations, including the Russo-Japanese War, the Soviet era, and current relations. <image:i>, <image:j>, <image:k>, <image:l>, <image:m>. It mentions that Japan imposed sanctions against Russia following the 2022 Russian invasion of Ukraine.
+
+Useful result: From [Source](https://www.scmp.com/week-asia/politics/article/3296430/rock-bottom-100-years-japan-russia-ties-come-full-circle): 
+Content: The South China Morning Post published an article on January 27, 2025, discussing the strained relationship between Japan and Russia. The article mentions that relations have deteriorated since 2022, when Japan imposed sanctions on Russia due to the invasion of Ukraine.
+
+Useful result: From [Source](https://www.mofa.go.jp/region/n-america/us/q&a/declaration.html): 
+Content: The Tokyo Declaration on Japan-Russia Relations, from the Ministry of Foreign Affairs of Japan, discusses the relationship between Japan and Russia. It mentions the importance of normalizing relations, promoting peace and stability in the Asia-Pacific region, and continuing dialogue. The declaration also touches upon arms control, disarmament, and environmental concerns.
+
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='China Russia military conflict')
+Skipping unsupported website: https://www.youtube.com/watch?v=2OahvfCgDws
+Got 3 new web source(s):
+	1. https://en.wikipedia.org/wiki/Sino-Soviet_border_conflict
+	2. June 16, 2025 https://cepa.org/comprehensive-reports/partnership-short-of-alliance-military-cooperation-between-russia-and-china/
+	3. July 04, 2025 https://www.cnn.com/2025/07/04/europe/china-ukraine-eu-war-intl
+Useful result: From [Source](https://en.wikipedia.org/wiki/Sino-Soviet_border_conflict): 
+Content: The Wikipedia article discusses the Sino-Soviet border conflict of 1969, a military conflict between the Soviet Union and China. The conflict, also known as the Sino-Soviet crisis, lasted for seven months. The main event was the Battle of Zhenbao (Damansky) Island. The article mentions that the conflict was a result of the Sino-Soviet split and the tensions between the two countries. The article also mentions that the conflict resulted in a Soviet victory. <image:i>
+
+Useful result: From [Source](https://cepa.org/comprehensive-reports/partnership-short-of-alliance-military-cooperation-between-russia-and-china/): 
+Content: The Center for European Policy Analysis (CEPA) published an article on June 16, 2025, discussing the military cooperation between Russia and China. The article states that China has not recognized the annexation of Crimea or the Ukrainian regions and that China is cautious about being associated too closely with Russia in military engagements. The article also mentions joint military exercises between Russia and China. <image:13630>
+
+Useful result: From [Source](https://www.cnn.com/2025/07/04/europe/china-ukraine-eu-war-intl): 
+Content: The CNN article, published on July 4, 2025, discusses China's stance on the war in Ukraine. It reports that China's Foreign Minister Wang Yi told the EU that China cannot accept Russia losing the war. The article also mentions that China has strengthened political and economic ties with Russia and has been accused of providing support to Russia, which China denies. <image:1>, <image:2>.
+
+Got 2 new web source(s):
+	1. https://en.wikipedia.org/wiki/Russo-Japanese_War
+	2. https://www.asianstudies.org/publications/eaa/archives/the-russo-japanese-war-and-world-history/
+Useful result: From [Source](https://en.wikipedia.org/wiki/Russo-Japanese_War): 
+Content: The Wikipedia article discusses the Russo-Japanese War (1904-1905), fought over Manchuria and Korea. It resulted in a Japanese victory, marking Japan's emergence as a great power. The article mentions the involvement of Emperor Meiji of Japan and Nicholas II of Russia. It also details the involvement of Germany, with Kaiser Wilhelm's actions potentially influencing Russia's decisions. The article provides information on the war's location, date, results, casualties, and key battles. The article also mentions the Qing Empire's support for Japan. The article was last edited on 2024-05-07.
+
+Useful result: From [Source](https://www.asianstudies.org/publications/eaa/archives/the-russo-japanese-war-and-world-history/): 
+Content: The search result discusses the Russo-Japanese War, highlighting its global impact and considering it a precursor to World War I. It mentions the involvement of other nations through loans and the impact on international relations. The article includes images of soldiers <image:2517>, <image:2519> and <image:2521>.
+
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='China Russia military threat')
+Got 3 new web source(s):
+	1. https://www.aljazeera.com/news/2025/8/30/russia-china-blast-deployment-of-us-typhon-missiles-to-japan
+	2. August 04, 2025 https://www.newsweek.com/china-russia-drills-trump-2108410
+	3. July 16, 2025 https://www.cnn.com/2025/07/16/asia/japan-defense-white-paper-china-russia-north-korea-intl-hnk-ml
+Useful result: From [Source](https://www.aljazeera.com/news/2025/8/30/russia-china-blast-deployment-of-us-typhon-missiles-to-japan): 
+Content: Al Jazeera reports that Russia and China have warned Japan about the deployment of US "Typhon" intermediate-range missiles during joint military exercises in Japan, viewing it as a threat to regional stability. <image:i>. Russia stated it would take military-technical measures if Japan doesn't reconsider. China urged Japan to act prudently and not undermine regional peace. The article was published on August 30, 2025.
+
+Useful result: From [Source](https://www.newsweek.com/china-russia-drills-trump-2108410): 
+Content: Newsweek reports on joint military drills between China and Russia in the Sea of Japan, following comments by Donald Trump. The drills include artillery fire exercises, anti-submarine warfare training, air defense operations, and joint search and rescue missions. The article mentions that Japan's Ministry of Defense warned that China's military cooperation with Russia poses serious security concerns. <image:13647>, <image:13650>. The article was written by Brendan Cole.
+
+Useful result: From [Source](https://www.cnn.com/2025/07/16/asia/japan-defense-white-paper-china-russia-north-korea-intl-hnk-ml): 
+Content: The CNN article, published on July 16, 2025, discusses Japan's defense white paper, which identifies China, Russia, and North Korea as the biggest security challenges since World War II. <image:i>, <image:13630>, <image:1>, <image:2>, <image:2517>, <image:2519>, <image:2521>. The paper highlights increased military activities by China, including joint bomber flights and naval patrols with Russia near Japan. The article also mentions Japan's concerns about Russia's military buildup and North Korea's missile capabilities. The article does not mention any invasion plans by China or Japan against Russia.
+
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Japan Russia military threat')
+Got 1 new web source(s):
+	1. July 12, 2025 https://www.nbcnews.com/world/russia/russia-warns-us-south-korea-japan-forming-security-alliance-targeting-rcna217967
+Useful result: From [Source](https://www.nbcnews.com/world/russia/russia-warns-us-south-korea-japan-forming-security-alliance-targeting-rcna217967): 
+Content: The NBC News article, published on July 12, 2025, reports that Russia warned the U.S., South Korea, and Japan against forming a security alliance targeting North Korea. <image:1> <image:2> The article mentions that Russia and North Korea are strengthening their ties, with North Korea supporting Russia's war against Ukraine. The article does not mention any invasion plans by China or Japan against Russia.
+
+The claim 'China and Japan plan to invade the Russian Federation.' is false.
+Justification: The fact-check found no evidence to support the claim that China and Japan plan to invade Russia. While there are documented military tensions and activities involving these countries, including joint military drills between China and Russia and strained relations between Japan and Russia, the provided sources do not mention any invasion plans ([https://www.aljazeera.com/news/2025/8/30/russia-china-blast-deployment-of-us-typhon-missiles-to-japan](https://www.aljazeera.com/news/2025/8/30/russia-china-blast-deployment-of-us-typhon-missiles-to-japan), [https://www.newsweek.com/china-russia-drills-trump-2108410](https://www.newsweek.com/china-russia-drills-trump-2108410)).
+
+So, the overall veracity is: false
+Fact-check took 5:01 min.

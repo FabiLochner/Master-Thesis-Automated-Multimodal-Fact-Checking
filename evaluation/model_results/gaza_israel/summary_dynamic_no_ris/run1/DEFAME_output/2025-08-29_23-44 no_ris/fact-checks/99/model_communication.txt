@@ -1,0 +1,833 @@
+PlanPrompt - QUERY:
+
+# Instructions
+The available knowledge is insufficient to assess the Claim. Therefore, **propose a set of actions** to retrieve new and helpful evidence. Adhere to the following rules:
+* The actions available are listed under Valid Actions, including a short description for each action. No other actions are possible at this moment. 
+* For each action, use the formatting as specified in Valid Actions.
+* Include all actions in a single Markdown code block at the end of your answer.
+* Propose as few actions as possible, but as much as needed. Do not propose similar or previously used actions.
+
+
+
+## Valid Actions
+* `image_search`
+   * Description: Run an image search on Google to retrieve related images for a given query.
+   * How to use: This is a helpful tool for fact-checking images. Use this to retrieve images associated with a specific keyword or phrase. Ensure that the query is clear and specific to improve search accuracy. If no relevant images are found, refine the query or use more descriptive terms.
+   * Format: image_search("your image search query goes here")
+
+* `geolocate`
+   * Description: Performs geolocation to determine the country where an image was taken.
+   * How to use: Provide an image and the model will determine the most likely countries where it was taken.
+   * Format: geolocate(<image:k>), where `k` is the image's ID
+
+* `web_search`
+   * Description: Run an open web search on Google or DuckDuckGO to retrieve any related webpage.
+   * How to use: Do not use this with a previously used or similar query from previous web searches. If a previous web search did not yield any results, use a very different query.
+   * Format: web_search("your web search query goes here")
+
+# Example: image_search()
+
+## Claim
+Text: "Chinese officials in white protective hazmat suits carried people down a hallway to be quarantined for having COVID-19 in November 2022."
+
+...
+
+ACTIONS:
+```
+image_search("China officials white suits carry people")
+image_search("China officials carry people COVID quarantine 2022")
+```
+
+# Example: geolocate()
+
+## Claim
+Text: "<image:k> shows a nuclear weapons facility in Usbekistan."
+
+...
+
+## Actions
+```
+geolocate(<image:k>)
+```
+
+# Example: web_search()
+
+## Claim
+Text: "New Zealand’s new Food Bill bans gardening"
+Claim date: October 29, 2020
+
+...
+
+## Actions
+```
+web_search("New Zealand Food Bill 2020")
+web_search("New Zealand Food Bill gardening ban")
+```
+
+# Record
+## Claim
+Claim: "<image:65> This is an authentic image of an elderly Palestinian women being attacked by an Israeli army dog in June 2024."
+
+# Your Actions
+
+
+
+===== > RESPONSE:  < =====
+```
+image_search("Israeli army dog attack Palestinian woman")
+web_search("Israeli army dog attack Palestinian woman June 2024")
+```
+_________________________
+
+
+
+SummarizeResultPrompt - QUERY:
+
+# Instructions
+In order to find evidence that helps your fact-check, you just ran a web search which yielded a Search Result. **Your task right now is to summarize the Search Result.** What to include:
+* information that might be useful for the fact-check (see Record)
+* relevant images (refer to images by inserting their reference <image:k>)
+* if available: the release date as well as the author or the publisher (e.g. the media company) of the search result.
+
+Do NOT include:
+* advertisements
+* any other information not related to the Record or the Claim
+
+Additional rules:
+* Do not add any additional information besides the information in the Search Result.
+* If the Search Result doesn't contain any relevant information for the fact-checking work, simply print one word in capital letters: "NONE".
+* Keep your writing style like in the Examples 1, 2 and 3 provided to you.
+* Try to filter out relevant information even if the search result is in a different language.
+
+# Example 1
+The search result from America Today provides several photographs of the Notre-Dame Cathedral fire on April 15, 2019. <image:i>, <image:j>, <image:k>. None of the images show the Eiffel Tower in the background. 
+
+# Example 2
+NONE
+
+# Example 3
+The Guardian discusses a report blaming the Syrian government for a toxic gas attack and condemning their use of chemical weapons. The Guardian mentions the Chemical Weapons Convention and the responsibilities of Syria under the convention. According to The Guardian, The White House condemned the Assad regime for defying the norm against chemical weapons use.
+
+# Record
+## Claim
+Claim: "<image:65> This is an authentic image of an elderly Palestinian women being attacked by an Israeli army dog in June 2024."
+
+## Actions
+```
+image_search("Israeli army dog attack Palestinian woman")
+web_search("Israeli army dog attack Palestinian woman June 2024")
+```
+
+# Search Result
+From [Source](https://www.chinadaily.com.cn/world/2007-03/22/content_833702.htm): 
+Content: "
+<image:7844>"
+
+# Your Summary
+
+
+
+===== > RESPONSE:  < =====
+The China Daily published an image of a dog attacking an elderly Palestinian woman. <image:7844>
+
+_________________________
+
+
+
+SummarizeResultPrompt - QUERY:
+
+# Instructions
+In order to find evidence that helps your fact-check, you just ran a web search which yielded a Search Result. **Your task right now is to summarize the Search Result.** What to include:
+* information that might be useful for the fact-check (see Record)
+* relevant images (refer to images by inserting their reference <image:k>)
+* if available: the release date as well as the author or the publisher (e.g. the media company) of the search result.
+
+Do NOT include:
+* advertisements
+* any other information not related to the Record or the Claim
+
+Additional rules:
+* Do not add any additional information besides the information in the Search Result.
+* If the Search Result doesn't contain any relevant information for the fact-checking work, simply print one word in capital letters: "NONE".
+* Keep your writing style like in the Examples 1, 2 and 3 provided to you.
+* Try to filter out relevant information even if the search result is in a different language.
+
+# Example 1
+The search result from America Today provides several photographs of the Notre-Dame Cathedral fire on April 15, 2019. <image:i>, <image:j>, <image:k>. None of the images show the Eiffel Tower in the background. 
+
+# Example 2
+NONE
+
+# Example 3
+The Guardian discusses a report blaming the Syrian government for a toxic gas attack and condemning their use of chemical weapons. The Guardian mentions the Chemical Weapons Convention and the responsibilities of Syria under the convention. According to The Guardian, The White House condemned the Assad regime for defying the norm against chemical weapons use.
+
+# Record
+## Claim
+Claim: "<image:65> This is an authentic image of an elderly Palestinian women being attacked by an Israeli army dog in June 2024."
+
+## Actions
+```
+image_search("Israeli army dog attack Palestinian woman")
+web_search("Israeli army dog attack Palestinian woman June 2024")
+```
+
+# Search Result
+From [Source](https://www.aljazeera.com/video/newsfeed/2024/6/26/video-israeli-military-dog-attacks-elderly-palestinian-woman): 
+Content: "
+<image:7845>"
+
+# Your Summary
+
+
+
+===== > RESPONSE:  < =====
+Al Jazeera published a video about an Israeli military dog attacking an elderly Palestinian woman. <image:7845>
+
+_________________________
+
+
+
+SummarizeResultPrompt - QUERY:
+
+# Instructions
+In order to find evidence that helps your fact-check, you just ran a web search which yielded a Search Result. **Your task right now is to summarize the Search Result.** What to include:
+* information that might be useful for the fact-check (see Record)
+* relevant images (refer to images by inserting their reference <image:k>)
+* if available: the release date as well as the author or the publisher (e.g. the media company) of the search result.
+
+Do NOT include:
+* advertisements
+* any other information not related to the Record or the Claim
+
+Additional rules:
+* Do not add any additional information besides the information in the Search Result.
+* If the Search Result doesn't contain any relevant information for the fact-checking work, simply print one word in capital letters: "NONE".
+* Keep your writing style like in the Examples 1, 2 and 3 provided to you.
+* Try to filter out relevant information even if the search result is in a different language.
+
+# Example 1
+The search result from America Today provides several photographs of the Notre-Dame Cathedral fire on April 15, 2019. <image:i>, <image:j>, <image:k>. None of the images show the Eiffel Tower in the background. 
+
+# Example 2
+NONE
+
+# Example 3
+The Guardian discusses a report blaming the Syrian government for a toxic gas attack and condemning their use of chemical weapons. The Guardian mentions the Chemical Weapons Convention and the responsibilities of Syria under the convention. According to The Guardian, The White House condemned the Assad regime for defying the norm against chemical weapons use.
+
+# Record
+## Claim
+Claim: "<image:65> This is an authentic image of an elderly Palestinian women being attacked by an Israeli army dog in June 2024."
+
+## Actions
+```
+image_search("Israeli army dog attack Palestinian woman")
+web_search("Israeli army dog attack Palestinian woman June 2024")
+```
+
+# Search Result
+From [Source](https://www.alhaq.org/monitoring-documentation/6941.html): 
+Content: "
+<image:7846>"
+
+# Your Summary
+
+
+
+===== > RESPONSE:  < =====
+The search result from Al-Haq contains an image of a dog attacking a woman. <image:7846>
+
+_________________________
+
+
+
+SummarizeSummariesPrompt - QUERY:
+
+# Instructions
+You just retrieved web sources, each one summarized under "Web Sources". **Your task right now is to summarize the web source summaries.**
+
+Always adhere to the following rules:
+* Write only one to two paragraphs.
+* Include all URLs from the listed sources. Format them as Markdown hyperlinks.
+* Do not add any additional information besides the information in the summaries.
+* Include references (<image:k>) to all relevant images.
+
+# Record
+## Claim
+Claim: "<image:65> This is an authentic image of an elderly Palestinian women being attacked by an Israeli army dog in June 2024."
+
+## Actions
+```
+image_search("Israeli army dog attack Palestinian woman")
+web_search("Israeli army dog attack Palestinian woman June 2024")
+```
+
+## Web Sources
+**Web Search Result**
+
+From [Source](https://www.chinadaily.com.cn/world/2007-03/22/content_833702.htm): 
+Content: The China Daily published an image of a dog attacking an elderly Palestinian woman. <image:7844>
+
+
+From [Source](https://www.aljazeera.com/video/newsfeed/2024/6/26/video-israeli-military-dog-attacks-elderly-palestinian-woman): 
+Content: Al Jazeera published a video about an Israeli military dog attacking an elderly Palestinian woman. <image:7845>
+
+
+From [Source](https://www.alhaq.org/monitoring-documentation/6941.html): 
+Content: The search result from Al-Haq contains an image of a dog attacking a woman. <image:7846>
+
+
+## Your Summary
+
+
+
+===== > RESPONSE:  < =====
+The China Daily published an image of a dog attacking an elderly Palestinian woman (<image:7844>). Al Jazeera published a video about an Israeli military dog attacking an elderly Palestinian woman (<image:7845>).
+
+The search result from Al-Haq contains an image of a dog attacking a woman (<image:7846>).
+
+_________________________
+
+
+
+SummarizeResultPrompt - QUERY:
+
+# Instructions
+In order to find evidence that helps your fact-check, you just ran a web search which yielded a Search Result. **Your task right now is to summarize the Search Result.** What to include:
+* information that might be useful for the fact-check (see Record)
+* relevant images (refer to images by inserting their reference <image:k>)
+* if available: the release date as well as the author or the publisher (e.g. the media company) of the search result.
+
+Do NOT include:
+* advertisements
+* any other information not related to the Record or the Claim
+
+Additional rules:
+* Do not add any additional information besides the information in the Search Result.
+* If the Search Result doesn't contain any relevant information for the fact-checking work, simply print one word in capital letters: "NONE".
+* Keep your writing style like in the Examples 1, 2 and 3 provided to you.
+* Try to filter out relevant information even if the search result is in a different language.
+
+# Example 1
+The search result from America Today provides several photographs of the Notre-Dame Cathedral fire on April 15, 2019. <image:i>, <image:j>, <image:k>. None of the images show the Eiffel Tower in the background. 
+
+# Example 2
+NONE
+
+# Example 3
+The Guardian discusses a report blaming the Syrian government for a toxic gas attack and condemning their use of chemical weapons. The Guardian mentions the Chemical Weapons Convention and the responsibilities of Syria under the convention. According to The Guardian, The White House condemned the Assad regime for defying the norm against chemical weapons use.
+
+# Record
+## Claim
+Claim: "<image:65> This is an authentic image of an elderly Palestinian women being attacked by an Israeli army dog in June 2024."
+
+## Actions
+```
+image_search("Israeli army dog attack Palestinian woman")
+web_search("Israeli army dog attack Palestinian woman June 2024")
+```
+
+# Search Result
+From [Source](https://pchrgaza.org/israeli-military-dog-attacked-me-while-asleep-and-viciously-bit-my-shoulder/): 
+Content: "I am still suffering from severe pain in my shoulder and hand and in a drastic mental state. 
+
+Note: Al-Jazeera has obtained a [video](https://www.youtube.com/watch?v=yWJ8PgMx0r8)
+ showing an Israeli military dog attacking an old Palestinian woman. [](#)
+
+July 7, 2024
+
+“Israeli Military Dog Attacked Me While Asleep and Viciously Bit My Shoulder”
+
+Share
+
+[](https://www.facebook.com/sharer.php?u=https://pchrgaza.org/israeli-military-dog-attacked-me-while-asleep-and-viciously-bit-my-shoulder/)
+[](https://wa.me/?text=https://pchrgaza.org/israeli-military-dog-attacked-me-while-asleep-and-viciously-bit-my-shoulder/)
+[](https://twitter.com/intent/tweet?url=https://pchrgaza.org/israeli-military-dog-attacked-me-while-asleep-and-viciously-bit-my-shoulder/)
+[](#)
+[](#)
+[](https://pchrgaza.org/ar/%d9%87%d8%a7%d8%ac%d9%85%d9%86%d9%8a-%d9%83%d9%84%d8%a8-%d9%84%d9%84%d8%a7%d8%ad%d8%aa%d9%84%d8%a7%d9%84-%d9%88%d8%a3%d9%86%d8%a7-%d9%86%d8%a7%d8%a6%d9%85%d8%a9-%d9%88%d9%86%d9%87%d8%b4-%d9%83%d8%aa/)
+
+!“Israeli Military Dog Attacked Me While Asleep and Viciously Bit My Shoulder” <image:9097>
+
+**“Israeli Military Dog Attacked Me While Asleep and Viciously Bit My Shoulder”**
+
+Dawlat ‘Abdullah Mohammed al-Tanani (58) from northern Gaza’s refugee camps
+
+I live on the ground floor in a 90-sqm 3-story house belonging to my brother, Maher ‘Abdullah Mohammed al-Tanani. Only few minutes later at around 22:00, I heard the Israeli soldiers exploding the house fence overlooking Jaber ‘Atiyah al-Tanani’s house and suddenly an Israeli military dog raided the house and attacked me while I was asleep in my bed.  The leaked video was captured by a camera mounted onto the dog. 
+
+### Leave a Reply [Cancel reply](/israeli-military-dog-attacked-me-while-asleep-and-viciously-bit-my-shoulder/#respond)
+
+Your email address will not be published.  I was crying and screaming so loud while I could hear the Israeli soldiers outside the room laughing and mocking me in Hebrew because the dog mauled me.  Last May, the Israeli Occupying Forces (IOF) moved into Jabalia Refugee Camp, so my brother fled with his family to another area due to the brutal and indiscriminate bombardment on Jabalia.  However, I refused to leave and stayed home alone, and there is our neighbor and relative, Jaber ‘Atiyah al-Tanani (60), who lives next-door with his 22-year-old son, Mohammed Jaber ‘Atiyah al-Tanani.
+
+During the incursion, Jaber and his son came to stay with me in the house because I was all alone; they arrived at 10:00 on Tuesday, 14 May 2024.   We all stayed in the same room while hearing the Israeli brutal bombardment in our area amid the harrowing roaring of nearby Israeli military vehicles and tanks.  The dog viciously bit my shoulder and hands and broke my right shoulder’s skin until his teeth reached my shoulder’s bone and fractured it.  I could not defend myself and push the dog off, so it dragged me all the way outside the room."
+
+# Your Summary
+
+
+
+===== > RESPONSE:  < =====
+The Palestinian Centre for Human Rights (PCHR) published an article on July 7, 2024, titled "Israeli Military Dog Attacked Me While Asleep and Viciously Bit My Shoulder". The article describes an attack on Dawlat ‘Abdullah Mohammed al-Tanani (58) by an Israeli military dog in May 2024. The article includes a video of the attack and a photograph of the woman with an injured arm <image:9097>.
+
+_________________________
+
+
+
+SummarizeResultPrompt - QUERY:
+
+# Instructions
+In order to find evidence that helps your fact-check, you just ran a web search which yielded a Search Result. **Your task right now is to summarize the Search Result.** What to include:
+* information that might be useful for the fact-check (see Record)
+* relevant images (refer to images by inserting their reference <image:k>)
+* if available: the release date as well as the author or the publisher (e.g. the media company) of the search result.
+
+Do NOT include:
+* advertisements
+* any other information not related to the Record or the Claim
+
+Additional rules:
+* Do not add any additional information besides the information in the Search Result.
+* If the Search Result doesn't contain any relevant information for the fact-checking work, simply print one word in capital letters: "NONE".
+* Keep your writing style like in the Examples 1, 2 and 3 provided to you.
+* Try to filter out relevant information even if the search result is in a different language.
+
+# Example 1
+The search result from America Today provides several photographs of the Notre-Dame Cathedral fire on April 15, 2019. <image:i>, <image:j>, <image:k>. None of the images show the Eiffel Tower in the background. 
+
+# Example 2
+NONE
+
+# Example 3
+The Guardian discusses a report blaming the Syrian government for a toxic gas attack and condemning their use of chemical weapons. The Guardian mentions the Chemical Weapons Convention and the responsibilities of Syria under the convention. According to The Guardian, The White House condemned the Assad regime for defying the norm against chemical weapons use.
+
+# Record
+## Claim
+Claim: "<image:65> This is an authentic image of an elderly Palestinian women being attacked by an Israeli army dog in June 2024."
+
+## Actions
+```
+image_search("Israeli army dog attack Palestinian woman")
+web_search("Israeli army dog attack Palestinian woman June 2024")
+```
+
+# Search Result
+From [Source](https://www.aa.com.tr/en/middle-east/elderly-palestinian-woman-recounts-terrifying-attack-by-israeli-army-dog-in-gaza/3262376): 
+Content: "The \[Israeli\] dog then began dragging me, sinking all its teeth into my hand❞  
+>   
+> ❝I swear I had seen death with my own eyes❞  
+>   
+> Dawlat Al Tanani, an elderly Palestinian woman attacked by an Israeli army police dog during a raid on her home in… [pic.twitter.com/BrFsJ5o6E9](https://t.co/BrFsJ5o6E9)
+> 
+> — Anadolu English (@anadoluagency) [June 30, 2024](https://twitter.com/anadoluagency/status/1807381079382192389?ref_src=twsrc%5Etfw)
+
+Alone, she was left bleeding until morning.
+
+Despite suffering severe injuries, al-Tanani could not seek medical help immediately due to the ongoing bombardment. [Middle East](https://www.aa.com.tr/en/middle-east)
+  
+  
+
+Elderly Palestinian woman recounts terrifying attack by Israeli army dog in Gaza
+================================================================================
+
+#### In Jabalia refugee camp, 'I screamed for help, I lay there bleeding, waiting for help until dawn,' 70-year-old Dawlat al-Tanani tells Anadolu
+
+Mehmet Nuri Uçar, Mohad Majed  | 30.06.2024 - Update : 30.06.2024
+
+![Elderly Palestinian woman recounts terrifying attack by Israeli army dog in Gaza](https://cdnuploads.aa.com.tr/uploads/Contents/2024/06/30/thumbs_b_c_bc82d300bc885843889a7caa3be1f720.jpg?v=204836)  
+  
+
+[![](https://cdnassets.aa.com.tr/assets/newVersion/images/next-sosyal-icon.png)](https://sosyal.teknofest.app/share?url=http://v.aa.com.tr/3262376&text=Elderly+Palestinian+woman+recounts+terrifying+attack+by+Israeli+army+dog+in+Gaza)
+[](http://www.facebook.com/sharer.php?u=http://v.aa.com.tr/3262376&p[images][0]=https://cdnuploads.aa.com.tr/uploads/Contents/2024/06/30/thumbs_b_c_bc82d300bc885843889a7caa3be1f720.jpg?v=204836&p[title]=Elderly Palestinian woman recounts terrifying attack by Israeli army dog in Gaza&p[summary]=In Jabalia refugee camp, 'I screamed for help, I lay there bleeding, waiting for help until dawn,' 70-year-old Dawlat al-Tanani tells Anadolu)
+[](https://twitter.com/intent/tweet?url=http://v.aa.com.tr/3262376&text=Elderly+Palestinian+woman+recounts+terrifying+attack+by+Israeli+army+dog+in+Gaza)
+[](https://www.linkedin.com/shareArticle?mini=true&url=http://v.aa.com.tr/3262376&title=Elderly+Palestinian+woman+recounts+terrifying+attack+by+Israeli+army+dog+in+Gaza)
+[](mailto:?subject=Elderly+Palestinian+woman+recounts+terrifying+attack+by+Israeli+army+dog+in+Gaza&body=Elderly+Palestinian+woman+recounts+terrifying+attack+by+Israeli+army+dog+in+Gaza http://v.aa.com.tr/3262376)
+[](#!)
+
+**GAZA CITY, Palestine**
+
+A 70-year-old Palestinian woman, Dawlat al-Tanani, still grapples with the trauma of being viciously attacked by an Israeli army dog in her small home In Gaza’s Jabalia refugee camp, located in the northern Gaza Strip. 
+
+While lying in bed after her night prayers, she was suddenly attacked by an Israeli army dog, which stormed into her room and bit deeply into her arm.
+
+This incident occurred during a 20-day attack by the Israeli military on the camp from May 12 to May 31.
+
+Recounting her ordeal to Anadolu, the elderly woman said: "As I was drifting off to sleep, the dog wearing a camera on its back entered the room and attacked me. **Please contact us for subscription options.**](https://www.aa.com.tr/en/p/subscription/1001)
+
+###### Related topics
+
+[Dawlat al-Tanani](https://www.aa.com.tr/en/search/?s=Dawlat%c2%a0al-Tanani&tag=1)
+ [Dog](https://www.aa.com.tr/en/search/?s=Dog&tag=1)
+ [Gaza](https://www.aa.com.tr/en/search/?s=Gaza&tag=1)
+ [Israel](https://www.aa.com.tr/en/search/?s=Israel&tag=1)
+ [Jabalia](https://www.aa.com.tr/en/search/?s=Jabalia&tag=1)
+
+###### Bu haberi paylaşın
+
+[![](https://cdnassets.aa.com.tr/assets/newVersion/images/next-sosyal-icon.png)](https://sosyal.teknofest.app/share?url=http://v.aa.com.tr/3262376&text=Elderly+Palestinian+woman+recounts+terrifying+attack+by+Israeli+army+dog+in+Gaza)
+ [](http://www.facebook.com/sharer.php?u=http://v.aa.com.tr/3262376&p[images][0]=https://cdnuploads.aa.com.tr/uploads/Contents/2024/06/30/thumbs_b_c_bc82d300bc885843889a7caa3be1f720.jpg?v=204836&p[title]=Elderly Palestinian woman recounts terrifying attack by Israeli army dog in Gaza&p[summary]=In Jabalia refugee camp, 'I screamed for help, I lay there bleeding, waiting for help until dawn,' 70-year-old Dawlat al-Tanani tells Anadolu)
+[](https://twitter.com/intent/tweet?url=http://v.aa.com.tr/3262376&text=Elderly+Palestinian+woman+recounts+terrifying+attack+by+Israeli+army+dog+in+Gaza)
+[](https://www.linkedin.com/shareArticle?mini=true&url=https://www.aa.com.tr/en/middle-east/elderly-palestinian-woman-recounts-terrifying-attack-by-israeli-army-dog-in-gaza/3262376&title=Elderly+Palestinian+woman+recounts+terrifying+attack+by+Israeli+army+dog+in+Gaza)
+[](mailto:?subject=Elderly+Palestinian+woman+recounts+terrifying+attack+by+Israeli+army+dog+in+Gaza&body=Elderly+Palestinian+woman+recounts+terrifying+attack+by+Israeli+army+dog+in+Gaza https://www.aa.com.tr/en/middle-east/elderly-palestinian-woman-recounts-terrifying-attack-by-israeli-army-dog-in-gaza/3262376)
+![](https://cdnassets.aa.com.tr/assets/newVersion/images/bip.png)
+
+![Analysis](https://cdnassets.aa.com.tr/assets/newVersion/images/analiz.png)
+
+[World](https://www.aa.com.tr/en/world)
+
+[###### Asylum seekers can stay at UK hotel after government wins appeal](https://www.aa.com.tr/en/world/asylum-seekers-can-stay-at-uk-hotel-after-government-wins-appeal/3673067)
+
+* * *
+
+[###### Microsoft fires 4 employees after protest over Israel ties, break-in at Washington office](https://www.aa.com.tr/en/world/microsoft-fires-4-employees-after-protest-over-israel-ties-break-in-at-washington-office/3673035)
+
+* * *
+
+[###### Each AI chat prompt consumes 5 drops of water, Google claims](https://www.aa.com.tr/en/world/each-ai-chat-prompt-consumes-5-drops-of-water-google-claims/3673029)
+
+* * *
+
+[###### Kremlin outlines Putin’s key meetings with world leaders in China](https://www.aa.com.tr/en/asia-pacific/kremlin-outlines-putin-s-key-meetings-with-world-leaders-in-china/3673006)
+
+* * *
+
+[###### US blocks Palestinian officials from attending UNGA as countries prepare to recognize Palestine](https://www.aa.com.tr/en/world/us-blocks-palestinian-officials-from-attending-unga-as-countries-prepare-to-recognize-palestine/3673000)
+
+Related news
+============
+
+[![Scorched-earth tactics: Israel pushes ahead with plan to occupy Gaza City](https://cdnuploads.aa.com.tr/uploads/Contents/2025/08/30/thumbs_m_c_65973113dd8147a8824d1362301ca837.jpg?v=005856)](https://www.aa.com.tr/en/middle-east/scorched-earth-tactics-israel-pushes-ahead-with-plan-to-occupy-gaza-city/3673256)
+
+[Scorched-earth tactics: Israel pushes ahead with plan to occupy Gaza City](https://www.aa.com.tr/en/middle-east/scorched-earth-tactics-israel-pushes-ahead-with-plan-to-occupy-gaza-city/3673256)
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+[![](https://cdnuploads.aa.com.tr/uploads/Contents/2025/08/30/thumbs_m_c_02643dee6b7e0537c45c42d2fc27e6bb.jpg?v=003305)](https://www.aa.com.tr/en/europe/greek-health-care-workers-protest-israels-attack-on-hospital-in-gaza/3673249)
+[#### Greek health care workers protest Israel's attack on hospital in Gaza](https://www.aa.com.tr/en/europe/greek-health-care-workers-protest-israels-attack-on-hospital-in-gaza/3673249)
+
+[![](https://cdnuploads.aa.com.tr/uploads/Contents/2025/08/29/thumbs_m_c_9c505b03625a7eed6dfa2c3384e346dd.jpg?v=225959)](https://www.aa.com.tr/en/asia-pacific/dhaka-protesters-march-for-gaza-demand-global-action-on-israel/3673219)
+[#### Dhaka protesters march for Gaza, demand global action on Israel](https://www.aa.com.tr/en/asia-pacific/dhaka-protesters-march-for-gaza-demand-global-action-on-israel/3673219)
+
+[![Israel plans to halt Gaza City aid drops to force Palestinians' evacuation ahead of city assault](https://cdnuploads.aa.com.tr/uploads/Contents/2025/08/29/thumbs_m_c_4c5ba57a18666d394b4294fa9f49b02b.jpg?v=222048)](https://www.aa.com.tr/en/middle-east/israel-plans-to-halt-gaza-city-aid-drops-to-force-palestinians-evacuation-ahead-of-city-assault/3673203)
+[#### Israel plans to halt Gaza City aid drops to force Palestinians' evacuation ahead of city assault](https://www.aa.com.tr/en/middle-east/israel-plans-to-halt-gaza-city-aid-drops-to-force-palestinians-evacuation-ahead-of-city-assault/3673203)
+
+[![Turkish parliament passes motion condemning Israel’s Gaza actions as genocide](https://cdnuploads.aa.com.tr/uploads/Contents/2025/08/29/thumbs_m_c_e5215522e187a0ca48e7df77a290bf3c.jpg?v=212619)](https://www.aa.com.tr/en/turkiye/turkish-parliament-passes-motion-condemning-israel-s-gaza-actions-as-genocide/3673159)
+[#### Turkish parliament passes motion condemning Israel’s Gaza actions as genocide](https://www.aa.com.tr/en/turkiye/turkish-parliament-passes-motion-condemning-israel-s-gaza-actions-as-genocide/3673159)
+
+[![Hamas welcomes Türkiye’s severing of trade with Israel, urges Arab, Muslim states to take similar steps](https://cdnuploads.aa.com.tr/uploads/Contents/2025/08/29/thumbs_m_c_0fa54c72e01fb863634df9f5a99841e7.jpg?v=210512)](https://www.aa.com.tr/en/middle-east/hamas-welcomes-turkiye-s-severing-of-trade-with-israel-urges-arab-muslim-states-to-take-similar-steps/3673141)
+[#### Hamas welcomes Türkiye’s severing of trade with Israel, urges Arab, Muslim states to take similar steps](https://www.aa.com.tr/en/middle-east/hamas-welcomes-turkiye-s-severing-of-trade-with-israel-urges-arab-muslim-states-to-take-similar-steps/3673141)
+
+[We use cookies in a limited and restricted manner for specific purposes. The footage, which quickly went viral, sparked outrage among social media activists.
+
+The Geneva-based civil society organization Euro-Med Human Rights Monitor on Thursday condemned the systematic use of trained dogs by the Israeli military to attack Palestinian civilians and detainees.
+
+In a statement, Euro-Med said this is one of the Israeli army’s many crimes of systematic violence against Palestinian detainees, including sexual harassment, and threats of rape.
+
+They documented numerous incidents where Israeli forces used large police and military dogs during raids on homes, hospitals, and shelters, often mocking civilians as the dogs attacked them.
+
+The statement also emphasized that al-Tanani’s case is not isolated, with many similar incidents occurring in Gaza. We need aid to be allowed in," she said.
+
+This attack drew widespread condemnation after Al Jazeera broadcast a video of the incident on Tuesday, showing Israeli forces unleashing a trained dog on a sleeping woman. She was eventually noticed by a young man near al-Yemen al-Saeed Hospital in Jabalia, who helped her get to the hospital for treatment.
+
+The elderly woman expressed her hope for the end of Israeli attacks on Gaza, entry of aid into the region, and return to normalcy.
+
+"Northern Gaza is experiencing a severe shortage of food and vegetables."
+
+# Your Summary
+
+
+
+===== > RESPONSE:  < =====
+Anadolu Agency published an article on June 30, 2024, about a 70-year-old Palestinian woman, Dawlat al-Tanani, who was attacked by an Israeli army dog in Gaza's Jabalia refugee camp. <image:65> The article includes a photograph of the woman and states that the attack occurred during a 20-day Israeli military attack from May 12 to May 31. The article also mentions that the woman was left bleeding until morning and could not seek immediate medical help due to the ongoing bombardment.
+
+_________________________
+
+
+
+SummarizeResultPrompt - QUERY:
+
+# Instructions
+In order to find evidence that helps your fact-check, you just ran a web search which yielded a Search Result. **Your task right now is to summarize the Search Result.** What to include:
+* information that might be useful for the fact-check (see Record)
+* relevant images (refer to images by inserting their reference <image:k>)
+* if available: the release date as well as the author or the publisher (e.g. the media company) of the search result.
+
+Do NOT include:
+* advertisements
+* any other information not related to the Record or the Claim
+
+Additional rules:
+* Do not add any additional information besides the information in the Search Result.
+* If the Search Result doesn't contain any relevant information for the fact-checking work, simply print one word in capital letters: "NONE".
+* Keep your writing style like in the Examples 1, 2 and 3 provided to you.
+* Try to filter out relevant information even if the search result is in a different language.
+
+# Example 1
+The search result from America Today provides several photographs of the Notre-Dame Cathedral fire on April 15, 2019. <image:i>, <image:j>, <image:k>. None of the images show the Eiffel Tower in the background. 
+
+# Example 2
+NONE
+
+# Example 3
+The Guardian discusses a report blaming the Syrian government for a toxic gas attack and condemning their use of chemical weapons. The Guardian mentions the Chemical Weapons Convention and the responsibilities of Syria under the convention. According to The Guardian, The White House condemned the Assad regime for defying the norm against chemical weapons use.
+
+# Record
+## Claim
+Claim: "<image:65> This is an authentic image of an elderly Palestinian women being attacked by an Israeli army dog in June 2024."
+
+## Actions
+```
+image_search("Israeli army dog attack Palestinian woman")
+web_search("Israeli army dog attack Palestinian woman June 2024")
+```
+
+# Search Result
+From [Source](https://www.middleeasteye.net/news/israeli-army-dog-mauled-palestinian-pregnant-woman-then-she-lost-baby): 
+Content: " [Skip to main content](#main-content)
+
+[News](/news)
+ |
+
+[Israel's genocide in Gaza](/topics/israel-genocide-gaza)
+
+An Israeli army dog mauled a pregnant Palestinian woman.  
+
+In December, Tel Aviv University shared a video on social media revealing the establishment of an “engineering war room” on its campus to support Israeli military operations.
+
+The facility has been developing technologies for the army, including a live-streaming system for [dog-mounted cameras](https://www.middleeasteye.net/news/tel-aviv-university-developed-dog-cameras-army-unit-linked-gaza-attacks)
+ used by canine units linked to deadly attacks on Palestinian civilians in Gaza.
+
+The video highlighted the university’s collaboration with hundreds of academics and students serving as reservists in the Israeli military.
+
+In July, MEE reported the death of a [Palestinian with Down syndrome](https://www.middleeasteye.net/news/gaza-palestinian-down-syndrome-left-die-israeli-soldiers-after-combat-dog-attack)
+ who was attacked by an Israeli combat dog in Gaza City and left to die by Israeli soldiers.  
+
+[![](/sites/default/files/styles/read_more/public/images-story/WhatsApp%20Image%202024-07-12%20at%2075439%20AM%20%281%29.jpg.webp?itok=at9bzwDz)](/news/gaza-palestinian-down-syndrome-left-die-israeli-soldiers-after-combat-dog-attack)
+
+Gaza: Palestinian with Down syndrome 'left to die' by Israeli soldiers after combat dog attack
+
+[Read More »](/news/gaza-palestinian-down-syndrome-left-die-israeli-soldiers-after-combat-dog-attack)
+
+As Arian’s condition worsened, the soldiers did little to help. More about MEE can be found [here](https://middleeasteye.net/about-middle-east-eye)
+> .
+
+### Read more
+
+[![](/sites/default/files/styles/landing_tile/public/images-story/tel-aviv-university-dog-camera-screengrab-facebook-3.jpg.webp?itok=dqLUXuDd)](/news/tel-aviv-university-developed-dog-cameras-army-unit-linked-gaza-attacks)
+
+[Israel's genocide in Gaza](/topics/israel-genocide-gaza)
+
+[Tel Aviv University developed dog cameras for army unit linked to Gaza attacks](/news/tel-aviv-university-developed-dog-cameras-army-unit-linked-gaza-attacks)
+
+[![](/sites/default/files/styles/landing_tile/public/2023-12-10T184248Z_1309229175_RC26T4AXXFNJ_RTRMADP_3_ISRAEL-PALESTINIANS-GAZA%20%281%29.jpg.webp?itok=tOrtqf_c)](/news/iron-bars-electric-shocks-dogs-and-cigarette-burns-how-palestinians-are-tortured-israeli-detention)
+
+[Israel's genocide in Gaza](/topics/israel-genocide-gaza)
+
+[Iron bars, electric shocks, dogs and cigarette burns: How Palestinians are tortured in Israeli detention](/news/iron-bars-electric-shocks-dogs-and-cigarette-burns-how-palestinians-are-tortured-israeli-detention)
+
+[![](/sites/default/files/styles/landing_tile/public/images-story/Untitled%20design%20%284%29%20%281%29.jpg.webp?itok=eCTiTJoX)](/news/neonatal-doctor-killed-central-gaza-strike)
+
+[Israel's genocide in Gaza](/topics/israel-genocide-gaza)
+
+[Neonatal doctor Thabat Saleem killed by Israel in central Gaza strike](/news/neonatal-doctor-killed-central-gaza-strike) Then she lost the baby
+===============================================================================
+
+[](#main-content)
+
+Tahrir Husni al-Arian's world has been shattered by a brutal attack that contributed to the death of her newborn baby in Gaza
+
+ ![](/sites/default/files/styles/max_2600x2600/public/images-story/ABDH3389%20%281%29.jpg.jpg?itok=rc44w9ry)
+
+Tahrir Husni al-Arian, 34, told her story to Middle East Eye from her family's home in Khan Younis in the Gaza Strip (MEE/Mohammed al-Hajjar)
+
+By [Maha Hussaini](/users/maha-hussaini "View user profile.")
+ in Khan Younis, occupied Palestine
+
+Published date: 6 January 2025 15:16 GMT | Last update: 7 months 3 weeks ago
+
+Tahrir Husni al-Arian, nine-months pregnant, could see pieces of her flesh falling to the ground as an [Israeli](https://www.middleeasteye.net/countries/israel)
+ combat dog savaged her thigh.
+
+The [Palestinian](https://www.middleeasteye.net/countries/palestine)
+ mother of three was at home with her husband and children in Khan Younis in the southern Gaza Strip when the Israeli military invaded al-Manara, their neighbourhood. It left the bathroom and just sat on the couch in the living room."  
+
+[![](/sites/default/files/styles/read_more/public/images-story/UKgazamainreuters.jpg.webp?itok=0zklVYPA)](/news/gaza-palestine-uk-rage-clarity-devastation-north)
+
+Rage and clarity as Palestinians detail devastation in northern Gaza
+
+[Read More »](/news/gaza-palestine-uk-rage-clarity-devastation-north)
+
+Since the start of the Israeli ground invasion of the Gaza Strip in late October 2023, the release of combat dog attacks on civilians has become common, with the Israeli military systematically deploying them to search buildings using cameras. It dragged me down the corridor, and I could feel pieces of my flesh falling as it bit into me."  
+
+![Sham al-Arian, xx's daughter, holds a phone showing a photo of the house were the dog attack took place in Khan Younis (MEE/Mohammed al-Hajjar) ](/sites/default/files/ABDH3415%20%281%29.jpg)
+
+A phone showing a photo of the house were the dog attack took place in Khan Younis (MEE/Mohammed al-Hajjar)
+
+![](<Base64-Image-Removed>)
+
+![](<Base64-Image-Removed>)
+
+![](<Base64-Image-Removed>)
+
+![](<Base64-Image-Removed>)
+
+![](<Base64-Image-Removed>)
+
+![](<Base64-Image-Removed>)Israeli soldiers, who had been outside the bathroom, intervened.  
+
+The dog attack, which lasted about 10 minutes, left Arian in unbearable pain and caused complications that would last for months, ultimately leading to the loss of her newborn. "It's the army," he said.
+
+### ‘It wasn’t a regular dog’
+
+But when the house suddenly lit up, they realised it wasn’t soldiers, but a dog, with a light and a camera on its head, entering each room in the house.  
+
+The dog broke through the door and attacked her 17-year-old sister, who was seven-months pregnant."
+
+# Your Summary
+
+
+
+===== > RESPONSE:  < =====
+The Middle East Eye published an article on January 6, 2025, about an Israeli army dog attack on a pregnant Palestinian woman in Khan Younis, Gaza Strip. The attack, which occurred in late October 2023, caused complications that led to the loss of her newborn. The article includes images of the woman and the house where the attack took place. The article also mentions that the Israeli military has been systematically deploying combat dogs with cameras to search buildings. <image:1>, <image:2>, <image:3>, <image:4>, <image:5>, <image:6>, <image:7>.
+
+_________________________
+
+
+
+SummarizeSummariesPrompt - QUERY:
+
+# Instructions
+You just retrieved web sources, each one summarized under "Web Sources". **Your task right now is to summarize the web source summaries.**
+
+Always adhere to the following rules:
+* Write only one to two paragraphs.
+* Include all URLs from the listed sources. Format them as Markdown hyperlinks.
+* Do not add any additional information besides the information in the summaries.
+* Include references (<image:k>) to all relevant images.
+
+# Record
+## Claim
+Claim: "<image:65> This is an authentic image of an elderly Palestinian women being attacked by an Israeli army dog in June 2024."
+
+## Actions
+```
+image_search("Israeli army dog attack Palestinian woman")
+web_search("Israeli army dog attack Palestinian woman June 2024")
+```
+
+## Web Sources
+**Web Search Result**
+
+From [Source](https://pchrgaza.org/israeli-military-dog-attacked-me-while-asleep-and-viciously-bit-my-shoulder/): 
+Content: The Palestinian Centre for Human Rights (PCHR) published an article on July 7, 2024, titled "Israeli Military Dog Attacked Me While Asleep and Viciously Bit My Shoulder". The article describes an attack on Dawlat ‘Abdullah Mohammed al-Tanani (58) by an Israeli military dog in May 2024. The article includes a video of the attack and a photograph of the woman with an injured arm <image:9097>.
+
+
+From [Source](https://www.aa.com.tr/en/middle-east/elderly-palestinian-woman-recounts-terrifying-attack-by-israeli-army-dog-in-gaza/3262376): 
+Content: Anadolu Agency published an article on June 30, 2024, about a 70-year-old Palestinian woman, Dawlat al-Tanani, who was attacked by an Israeli army dog in Gaza's Jabalia refugee camp. <image:65> The article includes a photograph of the woman and states that the attack occurred during a 20-day Israeli military attack from May 12 to May 31. The article also mentions that the woman was left bleeding until morning and could not seek immediate medical help due to the ongoing bombardment.
+
+
+From [Source](https://www.middleeasteye.net/news/israeli-army-dog-mauled-palestinian-pregnant-woman-then-she-lost-baby): 
+Content: The Middle East Eye published an article on January 6, 2025, about an Israeli army dog attack on a pregnant Palestinian woman in Khan Younis, Gaza Strip. The attack, which occurred in late October 2023, caused complications that led to the loss of her newborn. The article includes images of the woman and the house where the attack took place. The article also mentions that the Israeli military has been systematically deploying combat dogs with cameras to search buildings. <image:1>, <image:2>, <image:3>, <image:4>, <image:5>, <image:6>, <image:7>.
+
+
+## Your Summary
+
+
+
+===== > RESPONSE:  < =====
+The Palestinian Centre for Human Rights ([https://pchrgaza.org/israeli-military-dog-attacked-me-while-asleep-and-viciously-bit-my-shoulder/](https://pchrgaza.org/israeli-military-dog-attacked-me-while-asleep-and-viciously-bit-my-shoulder/)) published an article on July 7, 2024, about an attack on Dawlat ‘Abdullah Mohammed al-Tanani by an Israeli military dog in May 2024, including a video and a photograph of the injured woman <image:9097>. Anadolu Agency ([https://www.aa.com.tr/en/middle-east/elderly-palestinian-woman-recounts-terrifying-attack-by-israeli-army-dog-in-gaza/3262376](https://www.aa.com.tr/en/middle-east/elderly-palestinian-woman-recounts-terrifying-attack-by-israeli-army-dog-in-gaza/3262376)) published an article on June 30, 2024, about a 70-year-old Palestinian woman, Dawlat al-Tanani, attacked by an Israeli army dog in Gaza's Jabalia refugee camp, including a photograph <image:65>. The Middle East Eye ([https://www.middleeasteye.net/news/israeli-army-dog-mauled-palestinian-pregnant-woman-then-she-lost-baby](https://www.middleeasteye.net/news/israeli-army-dog-mauled-palestinian-pregnant-woman-then-she-lost-baby)) published an article on January 6, 2025, about an Israeli army dog attack on a pregnant Palestinian woman in late October 2023, which led to the loss of her newborn, including images <image:1>, <image:2>, <image:3>, <image:4>, <image:5>, <image:6>, <image:7>.
+
+_________________________
+
+
+
+DevelopPrompt - QUERY:
+
+# Instructions
+You just retrieved new Evidence. Now, **analyze the Claim's veracity using the evidence**. Always adhere to the following rules:
+* Focus on developing new insights. Do not repeat larger parts from the Record. Do not restate the Claim.
+* Write down your thoughts step-by-step. Whenever necessary, you may elaborate in more detail.
+* Depending on the topic's complexity, invest one to three paragraphs. The fewer, the better.
+* If you find that there is insufficient information to verify the Claim, explicitly state what information is missing.
+* If you cite web sources, always refer to them by including their URL as a Markdown hyperlink.
+* **Use information only from the recorded evidence**: Avoid inserting information that is not implied by the evidence. You may use commonsense knowledge, though.
+
+# Record
+## Claim
+Claim: "<image:65> This is an authentic image of an elderly Palestinian women being attacked by an Israeli army dog in June 2024."
+
+## Actions
+```
+image_search("Israeli army dog attack Palestinian woman")
+web_search("Israeli army dog attack Palestinian woman June 2024")
+```
+
+## Evidence
+### Evidence from `image_search`
+The China Daily published an image of a dog attacking an elderly Palestinian woman (<image:7844>). Al Jazeera published a video about an Israeli military dog attacking an elderly Palestinian woman (<image:7845>).
+
+The search result from Al-Haq contains an image of a dog attacking a woman (<image:7846>).
+
+
+### Evidence from `web_search`
+The Palestinian Centre for Human Rights ([https://pchrgaza.org/israeli-military-dog-attacked-me-while-asleep-and-viciously-bit-my-shoulder/](https://pchrgaza.org/israeli-military-dog-attacked-me-while-asleep-and-viciously-bit-my-shoulder/)) published an article on July 7, 2024, about an attack on Dawlat ‘Abdullah Mohammed al-Tanani by an Israeli military dog in May 2024, including a video and a photograph of the injured woman <image:9097>. Anadolu Agency ([https://www.aa.com.tr/en/middle-east/elderly-palestinian-woman-recounts-terrifying-attack-by-israeli-army-dog-in-gaza/3262376](https://www.aa.com.tr/en/middle-east/elderly-palestinian-woman-recounts-terrifying-attack-by-israeli-army-dog-in-gaza/3262376)) published an article on June 30, 2024, about a 70-year-old Palestinian woman, Dawlat al-Tanani, attacked by an Israeli army dog in Gaza's Jabalia refugee camp, including a photograph <image:65>. The Middle East Eye ([https://www.middleeasteye.net/news/israeli-army-dog-mauled-palestinian-pregnant-woman-then-she-lost-baby](https://www.middleeasteye.net/news/israeli-army-dog-mauled-palestinian-pregnant-woman-then-she-lost-baby)) published an article on January 6, 2025, about an Israeli army dog attack on a pregnant Palestinian woman in late October 2023, which led to the loss of her newborn, including images <image:1>, <image:2>, <image:3>, <image:4>, <image:5>, <image:6>, <image:7>.
+
+
+# Your Analysis
+
+
+
+===== > RESPONSE:  < =====
+The claim is supported by the evidence. The Anadolu Agency published an article on June 30, 2024, that included the image in the claim and reported on an attack by an Israeli army dog on an elderly Palestinian woman.
+
+_________________________
+
+
+
+JudgePrompt - QUERY:
+
+# Instructions
+**Determine the Claim's veracity** by following these steps:
+1. Briefly summarize the key insights from the fact-check (see Record) in at most one paragraph.
+2. Write one paragraph about which one of the Decision Options applies best. Include the most appropriate decision option at the end and enclose it in backticks like `this`.
+
+
+
+
+## Decision Options
+* `false`: The claim is not factually accurate. This is the case if one of the following three conditions is met:(1) The claim is demonstrably false when it is disproven by evidence from multiple and reliable sources,(2) The claim or image is taken out of context, i.e. the origin, content and/or meaning of a statement or an image is misrepresented. For example, an old claim or an old image is mispresented in a new context in a misleading way,(3) There is not enough evidence to verify the claim or the evidence is conflicting or self-contradictory.
+* `true`: The claim is factually accurate when it is confirmed by evidence from multiple and reliable sources.
+* `not enough information`: The fact-check does not contain sufficient information to come to an conclusion. For example,there is substantial lack of evidence or the evidence is inconclusive, conflicting or self-contradictory. In the case of a lack of evidence, state which information exactly is missing. In particular, if no RESULTS or sources are available, pick this decision.
+
+# Record
+## Claim
+Claim: "<image:65> This is an authentic image of an elderly Palestinian women being attacked by an Israeli army dog in June 2024."
+
+## Actions
+```
+image_search("Israeli army dog attack Palestinian woman")
+web_search("Israeli army dog attack Palestinian woman June 2024")
+```
+
+## Evidence
+### Evidence from `image_search`
+The China Daily published an image of a dog attacking an elderly Palestinian woman (<image:7844>). Al Jazeera published a video about an Israeli military dog attacking an elderly Palestinian woman (<image:7845>).
+
+The search result from Al-Haq contains an image of a dog attacking a woman (<image:7846>).
+
+
+### Evidence from `web_search`
+The Palestinian Centre for Human Rights ([https://pchrgaza.org/israeli-military-dog-attacked-me-while-asleep-and-viciously-bit-my-shoulder/](https://pchrgaza.org/israeli-military-dog-attacked-me-while-asleep-and-viciously-bit-my-shoulder/)) published an article on July 7, 2024, about an attack on Dawlat ‘Abdullah Mohammed al-Tanani by an Israeli military dog in May 2024, including a video and a photograph of the injured woman <image:9097>. Anadolu Agency ([https://www.aa.com.tr/en/middle-east/elderly-palestinian-woman-recounts-terrifying-attack-by-israeli-army-dog-in-gaza/3262376](https://www.aa.com.tr/en/middle-east/elderly-palestinian-woman-recounts-terrifying-attack-by-israeli-army-dog-in-gaza/3262376)) published an article on June 30, 2024, about a 70-year-old Palestinian woman, Dawlat al-Tanani, attacked by an Israeli army dog in Gaza's Jabalia refugee camp, including a photograph <image:65>. The Middle East Eye ([https://www.middleeasteye.net/news/israeli-army-dog-mauled-palestinian-pregnant-woman-then-she-lost-baby](https://www.middleeasteye.net/news/israeli-army-dog-mauled-palestinian-pregnant-woman-then-she-lost-baby)) published an article on January 6, 2025, about an Israeli army dog attack on a pregnant Palestinian woman in late October 2023, which led to the loss of her newborn, including images <image:1>, <image:2>, <image:3>, <image:4>, <image:5>, <image:6>, <image:7>.
+
+
+## Elaboration
+The claim is supported by the evidence. The Anadolu Agency published an article on June 30, 2024, that included the image in the claim and reported on an attack by an Israeli army dog on an elderly Palestinian woman.
+
+
+# Your Judgement
+
+
+
+===== > RESPONSE:  < =====
+The claim is supported by evidence from multiple reliable sources, including the Anadolu Agency, which published the image in the claim and reported on an attack by an Israeli army dog on an elderly Palestinian woman in June 2024. `true`
+_________________________
+
+
+

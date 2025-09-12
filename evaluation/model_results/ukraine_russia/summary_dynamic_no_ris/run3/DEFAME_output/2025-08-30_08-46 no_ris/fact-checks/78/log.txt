@@ -1,0 +1,63 @@
+Extracting claims from Content: <image:26> This image shows destroyed Ukrainian tanks during Ukraine's incursion into Russia's Kursk Oblast in August 2024.
+'Claim: "<image:26> This image shows destroyed Ukrainian tanks during Ukraine's incursion into Russia's Kursk Oblast in August 2024."'
+Verifying Claim: "<image:26> This image shows destroyed Ukrainian tanks during Ukraine's incursion into Russia's Kursk Oblast in August 2024."
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='destroyed tank battlefield')
+Got 3 new web source(s):
+	1. https://motionarray.com/stock-video/destroyed-tank-on-the-battlefield-1673310/
+	2. https://www.newsweek.com/russian-tank-military-vehicles-destroyed-vuhledar-donetsk-photo-1794617
+	3. https://www.gettyimages.com/detail/news-photo/vietnam-war-battlefield-quang-tri-destroyed-tank-of-the-news-photo/548202273
+Useful result: From [Source](https://motionarray.com/stock-video/destroyed-tank-on-the-battlefield-1673310/): 
+Content: The search result from Motion Array shows a destroyed tank on the battlefield. <image:8830>
+
+Useful result: From [Source](https://www.newsweek.com/russian-tank-military-vehicles-destroyed-vuhledar-donetsk-photo-1794617): 
+Content: Newsweek published an article with an image of a destroyed tank. <image:8831>
+
+Useful result: From [Source](https://www.gettyimages.com/detail/news-photo/vietnam-war-battlefield-quang-tri-destroyed-tank-of-the-news-photo/548202273): 
+Content: The Getty Images website contains an image of a destroyed tank. <image:8832>
+
+Most likely location: Pakistan
+Top 10 locations: Pakistan, Turkey, Bhutan, Jordan, Ukraine, Kyrgyzstan, Palestine, Russia, Colombia, Montenegro
+Not enough information yet. Continuing fact-check...
+INFO: Dropping action 'geolocate' as it was already performed.
+Got 3 new web source(s):
+	1. https://en.wikipedia.org/wiki/Kursk_campaign
+	2. September 14, 2024 https://www.cnn.com/2024/09/14/europe/russia-begins-ukraine-counter-attack-kursk-intl
+	3. August 29, 2024 https://www.aljazeera.com/features/2024/8/29/russia-lashes-out-against-terrorist-incursion-in-kursk-pulls-back-planes
+Useful result: From [Source](https://en.wikipedia.org/wiki/Kursk_campaign): 
+Content: The Wikipedia article discusses the 2024 Kursk offensive, which began on August 6, 2024, as part of the Russian invasion of Ukraine. The incursion into Russia's Kursk Oblast was launched by the Armed Forces of Ukraine. The article mentions the date, location, and the result of the offensive. It also includes the names of commanders and leaders from both sides, as well as the units involved. The article also provides estimates of the strength of the forces involved and the casualties and losses. The article also mentions the reaction from the United States and Germany. <image:26> is not mentioned.
+
+Useful result: From [Source](https://www.cnn.com/2024/09/14/europe/russia-begins-ukraine-counter-attack-kursk-intl): 
+Content: The CNN article, published on September 14, 2024, discusses Ukraine's incursion into Russia's Kursk region in August 2024. <image:8833> <image:8834> The article mentions a Ukrainian offensive in Kursk, capturing settlements, and a subsequent Russian counteroffensive. The article also includes images of the conflict, including a damaged building and Ukrainian soldiers in the Kursk region.
+
+Useful result: From [Source](https://www.aljazeera.com/features/2024/8/29/russia-lashes-out-against-terrorist-incursion-in-kursk-pulls-back-planes): 
+Content: The Al Jazeera article, published on August 29, 2024, discusses a Ukrainian ground offensive inside Russian territory, specifically in the Kursk region, in August 2024. <image:8833>, <image:8834>, <image:8835>. The article mentions that Russia has been moving its aircraft back from airfields near the Ukrainian border. It also states that Russia is tapping elite units to defend Kursk. The article includes images of the conflict, including a building on fire in Sudzha, Russia, and Ukrainian servicemen in Pokrovsk, Ukraine.
+
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='destroyed Ukrainian tanks Kursk Oblast')
+Got 2 new web source(s):
+	1. https://www.bbc.com/news/articles/c0q198zyppqo
+	2. https://www.forbes.com/sites/davidaxe/2025/03/21/ukraine-lost-too-many-tanks-in-kursk/
+Useful result: From [Source](https://www.bbc.com/news/articles/c0q198zyppqo): 
+Content: The BBC published an article on March 17, 2025, discussing the retreat of Ukrainian troops from the Kursk region. The article mentions destroyed military equipment and constant attacks from Russian drones. The article includes accounts from Ukrainian soldiers who described the situation as a "catastrophic" withdrawal. The article also mentions that Russia had amassed a significant force to retake Kursk, including North Korean soldiers. The article includes images of Ukrainian soldiers and damaged vehicles. <image:8834>, <image:8838>, <image:8842>.
+
+Useful result: From [Source](https://www.forbes.com/sites/davidaxe/2025/03/21/ukraine-lost-too-many-tanks-in-kursk/): 
+Content: Forbes published an article on March 21, 2025, discussing the tank losses during the eight-month battle in Kursk. The article mentions that the Ukrainian retreat from Kursk happened last week. The article states that the Russians and Ukrainians wrote off roughly the same number of tanks. The article also mentions that the Ukrainian forces lost around 950 tanks. The article includes an image of a destroyed Ukrainian M-1 in Kursk.
+
+Not enough information yet. Continuing fact-check...
+INFO: Dropping action 'geolocate' as it was already performed.
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='image of destroyed tanks Kursk Oblast August 2024')
+Got 2 new web source(s):
+	1. https://www.pravda.com.ua/eng/news/2024/08/6/7469237/
+	2. April 03, 2025 https://defensescoop.com/2025/04/03/ukraine-russian-tanks-destroyed-attack-drones-cavoli/
+Useful result: From [Source](https://www.pravda.com.ua/eng/news/2024/08/6/7469237/): 
+Content: Pravda.com.ua published an article on August 6, 2024, reporting on the destruction of military equipment in Russia's Kursk Oblast. The article includes images from DeepState, showing a destroyed Russian Ka-52 helicopter and two destroyed Russian tanks. <image:8843>, <image:8849>. The article states that Ukrainian troops reportedly broke through the border on August 6.
+
+Useful result: From [Source](https://defensescoop.com/2025/04/03/ukraine-russian-tanks-destroyed-attack-drones-cavoli/): 
+Content: The Defense Scoop published an article on April 3, 2025, discussing the war in Ukraine. The article mentions that Russian ground forces have lost an estimated 3,000 tanks in the past year. The article also mentions that Ukraine is using one-way attack drones to destroy Russian tanks. The article does not contain the image in the claim.
+
+The claim '<image:26> This image shows destroyed Ukrainian tanks during Ukraine's incursion into Russia's Kursk Oblast in August 2024.' is false.
+Justification: The claim cannot be verified. While evidence confirms a Ukrainian incursion into Russia's Kursk region in August 2024 and the destruction of military equipment, the specific image in the claim was not found in the search results.
+
+So, the overall veracity is: false
+Fact-check took 6:15 min.
+Worker 0 is done and terminates gracefully.

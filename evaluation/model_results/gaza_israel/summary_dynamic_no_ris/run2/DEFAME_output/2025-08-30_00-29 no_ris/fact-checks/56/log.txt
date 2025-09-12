@@ -1,0 +1,24 @@
+Extracting claims from Content: <image:31> This image shows an Iphone that exploded during the pager attacks on Hezbollah devices in Lebanon in September 2024, blowing up random people.
+'Claim: "<image:31> This image shows an Iphone that exploded during the pager attacks on Hezbollah devices in Lebanon in September 2024, blowing up random people."'
+Verifying Claim: "<image:31> This image shows an Iphone that exploded during the pager attacks on Hezbollah devices in Lebanon in September 2024, blowing up random people."
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='exploded iphone lebanon september 2024')
+Skipping fact-checking website: https://www.politifact.com/factchecks/2024/sep/20/tweets/no-this-image-doesnt-show-an-iphone-that-exploded/
+Got 3 new web source(s):
+	1. https://itc.ua/en/news/not-just-pagers-iphones-laptops-electronic-locks-and-other-devices-exploded-in-lebanon-today/
+	2. https://www.indiatoday.in/world/story/hezbollah-devices-explode-lebanon-pager-blasts-beirut-israel-2602266-2024-09-18
+	3. https://www.dw.com/en/fact-check-no-iphones-solar-panels-laptops-exploded-in-lebanon/a-70281061
+Useful result: From [Source](https://itc.ua/en/news/not-just-pagers-iphones-laptops-electronic-locks-and-other-devices-exploded-in-lebanon-today/): 
+Content: The search result includes an image of an exploded iPhone. <image:9600>
+
+Useful result: From [Source](https://www.indiatoday.in/world/story/hezbollah-devices-explode-lebanon-pager-blasts-beirut-israel-2602266-2024-09-18): 
+Content: India Today published an article on September 18, 2024, about explosions of Hezbollah devices in Lebanon. The article includes images of exploded devices. <image:9601>
+
+Useful result: From [Source](https://www.dw.com/en/fact-check-no-iphones-solar-panels-laptops-exploded-in-lebanon/a-70281061): 
+Content: The search result from DW.com states that the claim is false. The image <image:9602> shows a post about sabotaged solar panels in Lebanon that have started significant electrical fires. The post claims that over 500 individuals have been reported injured. The post was published on September 18, 2024.
+
+The claim '<image:31> This image shows an Iphone that exploded during the pager attacks on Hezbollah devices in Lebanon in September 2024, blowing up random people.' is false.
+Justification: The claim is false. While there were explosions of devices, including iPhones, in Lebanon, the primary cause of injuries was attributed to sabotaged solar panels, as reported by [DW.com](https://www.dw.com/en/fact-check-no-iphones-solar-panels-laptops-exploded-in-lebanon/a-70281061).
+
+So, the overall veracity is: false
+Fact-check took 0:14 min.

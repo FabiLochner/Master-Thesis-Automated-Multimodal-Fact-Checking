@@ -1,0 +1,1198 @@
+PlanPrompt - QUERY:
+
+# Instructions
+The available knowledge is insufficient to assess the Claim. Therefore, **propose a set of actions** to retrieve new and helpful evidence. Adhere to the following rules:
+* The actions available are listed under Valid Actions, including a short description for each action. No other actions are possible at this moment. 
+* For each action, use the formatting as specified in Valid Actions.
+* Include all actions in a single Markdown code block at the end of your answer.
+* Propose as few actions as possible, but as much as needed. Do not propose similar or previously used actions.
+
+
+
+## Valid Actions
+* `image_search`
+   * Description: Run an image search on Google to retrieve related images for a given query.
+   * How to use: This is a helpful tool for fact-checking images. Use this to retrieve images associated with a specific keyword or phrase. Ensure that the query is clear and specific to improve search accuracy. If no relevant images are found, refine the query or use more descriptive terms.
+   * Format: image_search("your image search query goes here")
+
+* `reverse_search`
+   * Description: Performs a reverse image search to find similar images on the web.
+   * How to use: Provide an image and the model will perform a reverse search to find similar images.
+   * Format: reverse_search(<image:k>), where `k` is the image's ID
+
+* `web_search`
+   * Description: Run an open web search on Google or DuckDuckGO to retrieve any related webpage.
+   * How to use: Do not use this with a previously used or similar query from previous web searches. If a previous web search did not yield any results, use a very different query.
+   * Format: web_search("your web search query goes here")
+
+# Example: image_search()
+
+## Claim
+Text: "Chinese officials in white protective hazmat suits carried people down a hallway to be quarantined for having COVID-19 in November 2022."
+
+...
+
+ACTIONS:
+```
+image_search("China officials white suits carry people")
+image_search("China officials carry people COVID quarantine 2022")
+```
+
+# Example: reverse_search()
+
+## Claim
+Text: "<image:k> shows a rare event of a solar eclipse with a double ring."
+
+...
+
+## Actions
+```
+reverse_search(<image:k>)
+```
+
+# Example: web_search()
+
+## Claim
+Text: "New Zealand’s new Food Bill bans gardening"
+Claim date: October 29, 2020
+
+...
+
+## Actions
+```
+web_search("New Zealand Food Bill 2020")
+web_search("New Zealand Food Bill gardening ban")
+```
+
+# Record
+## Claim
+Claim: "<image:25> This image shows a military parade of Poland's army on August 14, 2024, preparing for war with Russia."
+
+# Your Actions
+
+
+
+===== > RESPONSE:  < =====
+```
+web_search("Poland army parade August 14 2024")
+image_search("Poland army parade August 14 2024")
+reverse_search(<image:25>)
+```
+_________________________
+
+
+
+SummarizeResultPrompt - QUERY:
+
+# Instructions
+In order to find evidence that helps your fact-check, you just ran a web search which yielded a Search Result. **Your task right now is to summarize the Search Result.** What to include:
+* information that might be useful for the fact-check (see Record)
+* relevant images (refer to images by inserting their reference <image:k>)
+* if available: the release date as well as the author or the publisher (e.g. the media company) of the search result.
+
+Do NOT include:
+* advertisements
+* any other information not related to the Record or the Claim
+
+Additional rules:
+* Do not add any additional information besides the information in the Search Result.
+* If the Search Result doesn't contain any relevant information for the fact-checking work, simply print one word in capital letters: "NONE".
+* Keep your writing style like in the Examples 1, 2 and 3 provided to you.
+* Try to filter out relevant information even if the search result is in a different language.
+
+# Example 1
+The search result from America Today provides several photographs of the Notre-Dame Cathedral fire on April 15, 2019. <image:i>, <image:j>, <image:k>. None of the images show the Eiffel Tower in the background. 
+
+# Example 2
+NONE
+
+# Example 3
+The Guardian discusses a report blaming the Syrian government for a toxic gas attack and condemning their use of chemical weapons. The Guardian mentions the Chemical Weapons Convention and the responsibilities of Syria under the convention. According to The Guardian, The White House condemned the Assad regime for defying the norm against chemical weapons use.
+
+# Record
+## Claim
+Claim: "<image:25> This image shows a military parade of Poland's army on August 14, 2024, preparing for war with Russia."
+
+## Actions
+```
+web_search("Poland army parade August 14 2024")
+image_search("Poland army parade August 14 2024")
+reverse_search(<image:25>)
+```
+
+# Search Result
+From [Source](https://en.wikipedia.org/wiki/Armed_Forces_Day_(Poland)): 
+Content: "To commemorate the republic's victory over the Red Army, Minister of Military Affairs [Stanisław Szeptycki](/wiki/Stanis%C5%82aw_Szeptycki "Stanisław Szeptycki")
+ established the Feast of the Soldier (_Święta Żołnierza_), or Soldiers Day, in 1923.[\[4\]](#cite_note-4)
+ In proclaiming the holiday, Szeptycki declared that, "\[o\]n the anniversary of the memorable defeat of the Bolshevik onslaught on Warsaw, we honor the memory of those killed in battles with enemies throughout all ages and for Polish independence."[\[5\]](#cite_note-Museum-5)
+ The date of 15 August was chosen as it coincided with the [21st Mountain Division's](/wiki/21st_Mountain_Infantry_Division_(Poland) "21st Mountain Infantry Division (Poland)")
+ evening counterattack on Russian troops, eventually forcing the Red Army's general retreat.[\[2\]](#cite_note-Kontakt24-2)
+ Additionally, the government of the Second Republic desired the military's greater integration with the new state, as well as for the armed forces to improve its image among the civilian public.[\[2\]](#cite_note-Kontakt24-2)
+
+The Feast of the Soldier remained a celebrated holiday until 1947, when the newly installed communist government of the [People's Republic of Poland](/wiki/People%27s_Republic_of_Poland "People's Republic of Poland")
+ discontinued the tradition.[\[6\]](#cite_note-Gazeta2013-6)
+ In 1950, the [Council of Ministers](/wiki/Cabinet_of_Poland "Cabinet of Poland")
+ under Prime Minister [Józef Cyrankiewicz](/wiki/J%C3%B3zef_Cyrankiewicz "Józef Cyrankiewicz")
+ passed regulations to officially celebrate the military on 12 October.[\[7\]](#cite_note-DzU1950-7)
+ Renaming the celebration as Polish Armed Forces Day (_Dzień Wojska Polskiego_), the day marked the anniversary of the Soviet-organized [Polish 1st Tadeusz Kościuszko Infantry Division](/wiki/Polish_1st_Tadeusz_Ko%C5%9Bciuszko_Infantry_Division "Polish 1st Tadeusz Kościuszko Infantry Division")
+ engaging [German](/wiki/Nazi_Germany "Nazi Germany")
+ units at the [Battle of Lenino](/wiki/Battle_of_Lenino "Battle of Lenino")
+ in October 1943.[\[7\]](#cite_note-DzU1950-7)
+ The communist government found it impossible to celebrate the original date of 15 August and its coinciding historical significance, owing to its glorification of the [Red Army](/wiki/Red_Army "Red Army")
+'s defeat.[\[8\]](#cite_note-PolskieRadio2012-8)
+ Following the return of democracy in the wake of the [events of 1989](/wiki/Revolutions_of_1989 "Revolutions of 1989")
+, the [Sejm](/wiki/Sejm "Sejm")
+ approved the restoration of Armed Forces Day to the original 15 August date and meaning on 30 July 1992, repealing the earlier communist era 1950 declaration.[\[9\]](#cite_note-Sejm1992-9)
+
+Commemorations
+--------------
+
+\[[edit](/w/index.php?title=Armed_Forces_Day_(Poland)&action=edit&section=2 "Edit section: Commemorations")\
+\]
+
+Armed Forces Day is celebrated throughout Poland, with military parades, commemorations for active personnel, veterans, and the dead. In 2019, the parade took place in the southern city of [Katowice](/wiki/Katowice "Katowice")
+ to honour the participation of [Silesia](/wiki/Silesia "Silesia")
+'s residents in the [Silesian Uprisings](/wiki/Silesian_Uprisings "Silesian Uprisings")
+ from 1919 to 1921.[\[14\]](#cite_note-14)
+
+Image gallery
+-------------
+
+\[[edit](/w/index.php?title=Armed_Forces_Day_(Poland)&action=edit&section=4 "Edit section: Image gallery")\
+\]
+
+*   [![President Lech Kaczyński reviewing troops, Warsaw, 2007](//upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Polish_president_with_army.PNG/120px-Polish_president_with_army.PNG)](/wiki/File:Polish_president_with_army.PNG "President Lech Kaczyński reviewing troops, Warsaw, 2007")
+    
+    President [Lech Kaczyński](/wiki/Lech_Kaczy%C5%84ski "Lech Kaczyński")
+     reviewing troops, Warsaw, 2007
+    
+*   [![President Andrzej Duda and Chief of Staff Gen. [Mieczyslaw Gocul](/wiki/Mieczys%C5%82aw_Gocu%C5%82 "Mieczysław Gocuł")
+     arrive at the Armed Forces Day parade in Warsaw in 2016
+    
+*   [![President Andrzej Duda and the Marshal of the Sejm together with officers of the Polish Armed Forces during the Armed Forces Day in 2019](//upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Obchody_%C5%9Awi%C4%99ta_Wojska_Polskiego_2018_w_Warszawie_%281%29.jpg/120px-Obchody_%C5%9Awi%C4%99ta_Wojska_Polskiego_2018_w_Warszawie_%281%29.jpg)](/wiki/File:Obchody_%C5%9Awi%C4%99ta_Wojska_Polskiego_2018_w_Warszawie_(1).jpg "President Andrzej Duda and the Marshal of the Sejm together with officers of the Polish Armed Forces during the Armed Forces Day in 2019")
+    
+    President Andrzej Duda and the [Marshal of the Sejm](/wiki/Marshal_of_the_Sejm "Marshal of the Sejm")
+     together with officers of the Polish Armed Forces during the Armed Forces Day in 2019
+    
+*   [![Soldiers dressed in traditional uniforms of the Polish uhlans light cavalry in 2018](//upload.wikimedia.org/wikipedia/commons/thumb/5/5e/U%C5%82ani_polscy_na_koniach_Rekonstrukcja_%C5%9Awi%C4%99to_Wojska_Polskiego_15.08.2018.jpg/120px-U%C5%82ani_polscy_na_koniach_Rekonstrukcja_%C5%9Awi%C4%99to_Wojska_Polskiego_15.08.2018.jpg)](/wiki/File:U%C5%82ani_polscy_na_koniach_Rekonstrukcja_%C5%9Awi%C4%99to_Wojska_Polskiego_15.08.2018.jpg "Soldiers dressed in traditional uniforms of the Polish uhlans light cavalry in 2018")
+    
+    Soldiers dressed in traditional uniforms of the Polish [uhlans](/wiki/Uhlan "Uhlan")
+     light cavalry in 2018
+    
+*   [![Soldiers of the Polish Land Forces in 2019](//upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Tag_der_polnischen_Streikr%C3%A4fte_%2848616463206%29.jpg/120px-Tag_der_polnischen_Streikr%C3%A4fte_%2848616463206%29.jpg)](/wiki/File:Tag_der_polnischen_Streikr%C3%A4fte_(48616463206).jpg "Soldiers of the Polish Land Forces in 2019")
+    
+    Soldiers of the [Polish Land Forces](/wiki/Polish_Land_Forces "Polish Land Forces")
+     in 2019
+    
+*   [![Polish Special Operations soldiers on Armed Forces Day in Katowice in 2019](//upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Polands_SOF_%2848560316046%29.jpg/120px-Polands_SOF_%2848560316046%29.jpg)](/wiki/File:Polands_SOF_(48560316046).jpg "Polish Special Operations soldiers on Armed Forces Day in Katowice in 2019")
+    
+    Polish Special Operations soldiers on Armed Forces Day in Katowice in 2019
+    
+*   [![Representatives of the main service branches of the Polish Armed Forces in 2019](//upload.wikimedia.org/wikipedia/commons/thumb/7/78/Tag_der_polnischen_Streikr%C3%A4fte_%2848616466996%29.jpg/120px-Tag_der_polnischen_Streikr%C3%A4fte_%2848616466996%29.jpg)](/wiki/File:Tag_der_polnischen_Streikr%C3%A4fte_(48616466996).jpg "Representatives of the main service branches of the Polish Armed Forces in 2019")
+    
+    Representatives of the main service branches of the Polish Armed Forces in 2019
+    
+*   [![Celebrations on the Piłsudski Square in 2022](//upload.wikimedia.org/wikipedia/commons/thumb/d/d9/August_15%2C_2022%2C_%C5%9Awi%C4%99to_Wojska_Polskiego%2C_Plac_Pilsudskiego%2C_Warsaw._8.jpg/120px-August_15%2C_2022%2C_%C5%9Awi%C4%99to_Wojska_Polskiego%2C_Plac_Pilsudskiego%2C_Warsaw._8.jpg)](/wiki/File:August_15,_2022,_%C5%9Awi%C4%99to_Wojska_Polskiego,_Plac_Pilsudskiego,_Warsaw._8.jpg "Celebrations on the Piłsudski Square in 2022")
+    
+    Celebrations on the [Piłsudski Square](/wiki/Pi%C5%82sudski_Square "Piłsudski Square")
+     in 2022
+    
+*   [![Honor guard of the French Army's First Artillery Regiment, Warsaw, 2007](//upload.wikimedia.org/wikipedia/commons/thumb/3/34/I_pu%C5%82k_artylerii_w_Belfort.JPG/120px-I_pu%C5%82k_artylerii_w_Belfort.JPG)](/wiki/File:I_pu%C5%82k_artylerii_w_Belfort.JPG "Honor guard of the French Army's First Artillery Regiment, Warsaw, 2007")
+    
+    Honor guard of the [French Army](/wiki/French_Army "French Army")
+    's First Artillery Regiment, Warsaw, 2007
+    
+*   [![Polish Leopard 2 tanks in 2019](//upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Tag_der_polnischen_Streikr%C3%A4fte_%2848616137668%29.jpg/120px-Tag_der_polnischen_Streikr%C3%A4fte_%2848616137668%29.jpg)](/wiki/File:Tag_der_polnischen_Streikr%C3%A4fte_(48616137668).jpg "Polish Leopard 2 tanks in 2019")
+    
+    Polish [Leopard 2](/wiki/Leopard_2 "Leopard 2")
+     tanks in 2019
+    
+
+See also
+--------
+
+\[[edit](/w/index.php?title=Armed_Forces_Day_(Poland)&action=edit&section=5 "Edit section: See also")\
+\]
+
+*   [Feast of the Assumption](/wiki/Feast_of_the_Assumption "Feast of the Assumption")
+    
+*   [Polish Independence Day](/wiki/Polish_Independence_Day "Polish Independence Day")
+    
+*   [Unity Day (Russia)](/wiki/Unity_Day_(Russia) "Unity Day (Russia)")
+    , commemorates the popular uprising which ended the Polish occupation of Moscow
+
+References
+----------
+
+\[[edit](/w/index.php?title=Armed_Forces_Day_(Poland)&action=edit&section=6 "Edit section: References")\
+\]
+
+1. **[^](#cite_ref-14)
+    ** ["Military parade to be held in Katowice in honour of Silesian insurgents"](https://www.thefirstnews.com/article/military-parade-to-be-held-in-katowice-in-honour-of-silesian-insurgents-7105)
+    .
+
+Retrieved from "[https://en.wikipedia.org/w/index.php?title=Armed\_Forces\_Day\_(Poland)&oldid=1286625577](https://en.wikipedia.org/w/index.php?title=Armed_Forces_Day_(Poland)&oldid=1286625577)
+"
+
+[Categories](/wiki/Help:Category "Help:Category")
+:
+
+*   [Victory days](/wiki/Category:Victory_days "Category:Victory days")
+    
+*   [Military of Poland](/wiki/Category:Military_of_Poland "Category:Military of Poland")
+    
+*   [Military parades in Poland](/wiki/Category:Military_parades_in_Poland "Category:Military parades in Poland")
+    
+*   [Public holidays in Poland](/wiki/Category:Public_holidays_in_Poland "Category:Public holidays in Poland")
+    
+*   [1923 establishments in Poland](/wiki/Category:1923_establishments_in_Poland "Category:1923 establishments in Poland")
+    
+*   [August observances](/wiki/Category:August_observances "Category:August observances")
+    
+*   [Annual events in Poland](/wiki/Category:Annual_events_in_Poland "Category:Annual events in Poland")
+    
+*   [Armed Forces days](/wiki/Category:Armed_Forces_days "Category:Armed Forces days")
+    
+*   [Summer in Poland](/wiki/Category:Summer_in_Poland "Category:Summer in Poland")
+    
+*   [Polish military traditions](/wiki/Category:Polish_military_traditions "Category:Polish military traditions")
+    
+
+Hidden categories:
+
+*   [Articles with short description](/wiki/Category:Articles_with_short_description "Category:Articles with short description")
+    
+*   [Short description matches Wikidata](/wiki/Category:Short_description_matches_Wikidata "Category:Short description matches Wikidata")
+    
+*   [Use dmy dates from March 2025](/wiki/Category:Use_dmy_dates_from_March_2025 "Category:Use dmy dates from March 2025")
+    
+*   [Infobox holiday fixed day (2)](/wiki/Category:Infobox_holiday_fixed_day_(2) "Category:Infobox holiday fixed day (2)")
+    
+*   [Articles containing Polish-language text](/wiki/Category:Articles_containing_Polish-language_text "Category:Articles containing Polish-language text")
+    
+
+Search
+
+Search
+
+Armed Forces Day (Poland)
+
+[](#)
+[](#)
+[](#)
+[](#)
+[](#)
+[](#)
+[](#)
+[](#)
+
+5 languages [Add topic](#) [Jump to content](#bodyContent)
+
+From Wikipedia, the free encyclopedia
+
+National holiday in Poland
+
+| Armed Forces Day |     |
+| --- | --- |
+| [![](//upload.wikimedia.org/wikipedia/commons/thumb/3/36/Polish_M1_Abrams.jpg/330px-Polish_M1_Abrams.jpg)](/wiki/File:Polish_M1_Abrams.jpg)<br><br>Armed Forces Day 2023, Warsaw |     |
+| Official name | Święto Wojska Polskiego |
+| Observed by | Poland |
+| Significance | [Battle of Warsaw (1920)](/wiki/Battle_of_Warsaw_(1920) "Battle of Warsaw (1920)") |
+| Celebrations | [Military parades](/wiki/Military_parade "Military parade")<br>, equipment reviews, silences |
+| Begins | 13:00 [CET](/wiki/Central_European_Time "Central European Time") |
+| Date | 15 August |
+| Next time | 15 August 2026 (2026-08-15) |
+| Frequency | annual |
+
+**Armed Forces Day**, known also as the **Feast of the Polish Armed Forces** ([Polish](/wiki/Polish_language "Polish language")
+: _Święto Wojska Polskiego_), is a national holiday celebrated annually on 15 August in Poland, commemorating the anniversary of the 1920 victory over [Soviet Russia](/wiki/Russian_Soviet_Federative_Socialist_Republic "Russian Soviet Federative Socialist Republic")
+ at the [Battle of Warsaw](/wiki/Battle_of_Warsaw_(1920) "Battle of Warsaw (1920)")
+ during the [Polish–Soviet War](/wiki/Polish%E2%80%93Soviet_War "Polish–Soviet War")
+.[\[1\]](#cite_note-PolskieRadio2013-1)
+ Armed Forces Day is held in conjunction with the [Day of the Assumption of the Virgin Mary](/wiki/Assumption_of_Mary "Assumption of Mary")
+, itself a separate public holiday.[\[2\]](#cite_note-Kontakt24-2)
+ The event is marked by [military parades](/wiki/Military_parade "Military parade")
+, equipment reviews, showcases and remembrances by all branches of the [Polish Armed Forces](/wiki/Polish_Armed_Forces "Polish Armed Forces")
+ across the country. Originally celebrated during the [Second Republic](/wiki/Second_Polish_Republic "Second Polish Republic")
+, the holiday was barred by authorities during the communist era beginning in 1947, only to be revived again in 1992.[\[3\]](#cite_note-3)
+
+History
+-------
+
+\[[edit](/w/index.php?title=Armed_Forces_Day_(Poland)&action=edit&section=1 "Edit section: History")\
+\]
+
+Main article: [Battle of Warsaw (1920)](/wiki/Battle_of_Warsaw_(1920) "Battle of Warsaw (1920)")
+
+In the event known by the critics as the "Miracle of the Vistula," the [Polish Army](/wiki/Polish_Army "Polish Army")
+ under the command of Marshal [Józef Piłsudski](/wiki/J%C3%B3zef_Pi%C5%82sudski "Józef Piłsudski")
+ successfully repulsed a [Red Army](/wiki/Red_Army "Red Army")
+ offensive outside of Warsaw in mid-August 1920. As head of state and [commander-in-chief](/wiki/Commander-in-chief "Commander-in-chief")
+, the [President of Poland](/wiki/President_of_Poland "President of Poland")
+ presides over promotions of high-ranking officers, including the promotion of colonels to generals at the [Presidential Palace](/wiki/Presidential_Palace,_Warsaw "Presidential Palace, Warsaw")
+.[\[1\]](#cite_note-PolskieRadio2013-1)
+ The pageantry continues with commemorations near the [Tomb of the Unknown Soldier](/wiki/Tomb_of_the_Unknown_Soldier,_Warsaw "Tomb of the Unknown Soldier, Warsaw")
+ held in [Piłsudski Square](/wiki/Pi%C5%82sudski_Square "Piłsudski Square")
+.[\[11\]](#cite_note-Prezydent-11)
+ The events in Warsaw typically involve the participation of the nation's political establishment, including the [president](/wiki/President_of_Poland "President of Poland")
+, the [prime minister](/wiki/Prime_Minister_of_Poland "Prime Minister of Poland")
+, and leading members of the [cabinet](/wiki/Cabinet_of_Poland "Cabinet of Poland")
+.[\[6\]](#cite_note-Gazeta2013-6)
+ Leading politicians also lay wreaths at the [Józef Piłsudski](/wiki/J%C3%B3zef_Pi%C5%82sudski "Józef Piłsudski")
+ Monument, as well as at the [Tomb of the Unknown Soldier](/wiki/Tomb_of_the_Unknown_Soldier,_Warsaw "Tomb of the Unknown Soldier, Warsaw")
+.[\[6\]](#cite_note-Gazeta2013-6)
+
+As a [NATO](/wiki/NATO "NATO")
+ member state, Armed Forces Day in Poland typically draws representatives from other allied militaries in attendance.[\[12\]](#cite_note-12)
+
+The centennial celebrations for 2020 were "1920 Battle of Warsaw – a Polish victory for the freedom of Europe".[\[13\]](#cite_note-13)
+
+### Armed Forces Day Parade
+
+\[[edit](/w/index.php?title=Armed_Forces_Day_(Poland)&action=edit&section=3 "Edit section: Armed Forces Day Parade")\
+\]
+
+One of the main attractions of the Warsaw festivities is a [military parade](/wiki/Military_parade "Military parade")
+ of servicemen and women, as well as a review of existing military equipment, held normally along [Ujazdów Avenue](/wiki/Ujazd%C3%B3w_Avenue "Ujazdów Avenue")
+.[\[11\]](#cite_note-Prezydent-11)
+ Active servicemen and women participate at many events, joined often by volunteers appearing in historical dress, including those donning the equipment and dress of the [Polish–Soviet War](/wiki/Polish%E2%80%93Soviet_War "Polish–Soviet War")
+ or other historical periods.[\[1\]](#cite_note-PolskieRadio2013-1)
+ The first grand military parades since the holiday was reinstated in Warsaw were in 2007 and 2008, and parades have been held yearly since 2013. **[^](#cite_ref-13)
+    ** ["Military parade to be centrepiece of Battle of Warsaw anniversary – MoD"](https://www.thefirstnews.com/article/military-parade-to-be-centrepiece-of-battle-of-warsaw-anniversary---mod-14436)
+    .
+14. One of the most prominent events of the day is in the capital Warsaw, which hosts a large military parade through the city's center. The defeat of the Russian army ensured the capital's protection and the survival of the young [Second Polish Republic](/wiki/Second_Polish_Republic "Second Polish Republic")
+."
+
+# Your Summary
+
+
+
+===== > RESPONSE:  < =====
+The search result is from Wikipedia and discusses Armed Forces Day in Poland, celebrated annually on August 15th. It commemorates the 1920 victory over Soviet Russia at the Battle of Warsaw. The event includes military parades, equipment reviews, and commemorations. The article mentions that the holiday was reinstated in 1992 and that military parades have been held yearly since 2013. <image:25> is likely related to the military parade.
+
+_________________________
+
+
+
+SummarizeResultPrompt - QUERY:
+
+# Instructions
+In order to find evidence that helps your fact-check, you just ran a web search which yielded a Search Result. **Your task right now is to summarize the Search Result.** What to include:
+* information that might be useful for the fact-check (see Record)
+* relevant images (refer to images by inserting their reference <image:k>)
+* if available: the release date as well as the author or the publisher (e.g. the media company) of the search result.
+
+Do NOT include:
+* advertisements
+* any other information not related to the Record or the Claim
+
+Additional rules:
+* Do not add any additional information besides the information in the Search Result.
+* If the Search Result doesn't contain any relevant information for the fact-checking work, simply print one word in capital letters: "NONE".
+* Keep your writing style like in the Examples 1, 2 and 3 provided to you.
+* Try to filter out relevant information even if the search result is in a different language.
+
+# Example 1
+The search result from America Today provides several photographs of the Notre-Dame Cathedral fire on April 15, 2019. <image:i>, <image:j>, <image:k>. None of the images show the Eiffel Tower in the background. 
+
+# Example 2
+NONE
+
+# Example 3
+The Guardian discusses a report blaming the Syrian government for a toxic gas attack and condemning their use of chemical weapons. The Guardian mentions the Chemical Weapons Convention and the responsibilities of Syria under the convention. According to The Guardian, The White House condemned the Assad regime for defying the norm against chemical weapons use.
+
+# Record
+## Claim
+Claim: "<image:25> This image shows a military parade of Poland's army on August 14, 2024, preparing for war with Russia."
+
+## Actions
+```
+web_search("Poland army parade August 14 2024")
+image_search("Poland army parade August 14 2024")
+reverse_search(<image:25>)
+```
+
+# Search Result
+From [Source](https://www.army.mil/article/287821/polish_news_translated_torun_zagan_boles_aug_14): 
+Content: "14
+=====================================================
+
+By Bethany HuffAugust 14, 2025
+
+*   [Share on Twitter](https://twitter.com/share?url=https%3A%2F%2Fwww.army.mil%2Farticle%2F287821%2Fpolish_news_translated_torun_zagan_boles_aug_14&text=Polish%20News%20Translated%20%E2%80%93%20Torun%2C%20Zagan%20%26%20Boles%20Aug.%2014)
+    
+*   [Share on Facebook](https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.army.mil%2Farticle%2F287821%2Fpolish_news_translated_torun_zagan_boles_aug_14)
+    
+*   [Share on Reddit](https://www.reddit.com/submit?url=https%3A%2F%2Fwww.army.mil%2Farticle%2F287821%2Fpolish_news_translated_torun_zagan_boles_aug_14)
+    
+*   [Share on LinkedIn](https://www.linkedin.com/cws/share?url=https%3A%2F%2Fwww.army.mil%2Farticle%2F287821%2Fpolish_news_translated_torun_zagan_boles_aug_14)
+    
+*   [Share via Email](mailto:?Subject=Polish%20News%20Translated%20%E2%80%93%20Torun%2C%20Zagan%20%26%20Boles%20Aug.%2014&body=https%3A%2F%2Fwww.army.mil%2Farticle%2F287821%2Fpolish_news_translated_torun_zagan_boles_aug_14)
+    
+
+[! Army) [VIEW ORIGINAL](https://api.army.mil/e2/c/images/2025/08/14/2bd37f8f/original.jpg "View original")
+
+The Bolesławiec Ceramics Festival will run until August 17th. Zgorzelecka 28/29 (9:00-18:00)
+*   12.00-17.00 Workshop "Museum Souvenir", Center of Old Pottery Techniques, Kutuzova Street 14 (11.00-18.00)
+*   12.00, 14.00, 16.00 Workshops "Jewelry from Casting" (limited number of places)
+*   14.00-18.00 Artists at work: Polish-English open-air workshop "Ceramic Cities Exchange", BOK-MCC, stage in the Market Square, green square 17.00-21.00 Performances of musical groups
+*   6:00 PM Official opening of the 31st Bolesławiec Ceramics Festival - artistic program of the Glina Da Ci Wings Theatre and invited guests (French accents - 20th anniversary of cooperation with Nogent-sur-Marne), Asnyka Street, main stage
+*   6:30 PM Pop & The
+*   20:00 Oskar Cyms
+
+August 16, Saturday
+
+*   9.30-21.00 Women's Beach Volleyball Tournament for the Cup of the Mayor of Bolesławiec, Municipal Sports and Recreation Centre, "Wspierajmy Zdrowie" Foundation, square in front of the Bolesławiec Water Park Orka
+*   10.00-14.00 " Ceramic Run for Health - Get Fit in Clay!" 2nd edition, Bankowa Street, square by the city pond
+*   11.00-15.00 Clay painting, artist performances , competitions, entertainment and other attractions
+*   16:30 Start of the artistic parade of clay figures, Museum of Ceramics in Bolesławiec, ul. <image:13752>](https://api.army.mil/e2/c/images/2025/08/14/bf7eca91/original.jpg)
+
+(Photo Credit: U.S. Army) [VIEW ORIGINAL](https://api.army.mil/e2/c/images/2025/08/14/bf7eca91/original.jpg "View original")
+
+_Editor's Note: These are courtesy translations of local news provided by the U.S. Army Garrison Poland Public Affairs team for the benefit the military community stationed here. Army._
+
+##### **Toruń to Celebrate Polish Armed Forces Day With Ceremonies and Military Picnic**
+
+We invite you to participate in the celebrations on the occasion of Polish Armed Forces Day on August 15, 2025.
+
+As every year, Toruń celebrates Polish Armed Forces Day. - Military Roll Call at the monument of Marshal Józef Piłsudski:
+
+*   submission of a report to the Garrison Commander by the ceremony commander;
+*   raising the flag and singing the National Anthem of the Republic of Poland;
+*   presenting acts of appointment to a higher military rank and distinctions;
+*   occasional speeches
+*   Roll Call of Remembrance and salute of honour;
+*   the military escort laid one common bouquet of flowers on behalf of all participants of the ceremony;
+*   Representative Song of the Polish Army;
+
+From 10:00 a.m. Numerous activities are available for children, and refreshments will be available, including the obligatory military pea soup.
+
+##### **Angel Beach Volleyball Tournament Returns to Toruń With Night Matches and Family Fun**
+
+On August 16-17, 2025, Błonia Nadwiślańskie will become the arena of volleyball competitions during the 3rd edition of "Angel's Beach" - a unique event that annually gathers beach volleyball enthusiasts from all over Poland.
+
+The competition program includes professional tournaments for women, men, and a mixed doubles tournament. There will also be an opportunity to take souvenir photos with the competitors, coaches, and your favorite mascot, Angelo.
+
+There will also be opportunities to meet experts and players:
+
+Saturday, August 16:
+
+2:00 PM - 2:45 PM - meeting with Aniołów Toruń physiotherapist, Mateusz Parulski.
+
+3:00 PM - 3:45 PM - talk with sports psychologist, Jagoda Gręźlikowska.
+
+4:00 PM - 4:45 PM - conversation with Mateusz Podborączyński, Aniołów player, bronze medalist at the 2025 ORLEN Beach Volleyball Tour and silver medalist at the 2024 Polish Beach Volleyball Championships.
+
+Sunday, August 17:
+
+2:00 PM - 2:45 PM - another talk with sports psychologist, Jagoda Gręźlikowska.
+
+3:00 PM - 3:45 PM - conversation with CUK Anioły Toruń coach, Marcin Kryś.
+
+*   4:00 PM - 4:45 PM - meeting with Toruń volleyball player, Jakub Skadorwa.
+
+##### **Electric Gingerbread Express Now Operating in Toruń Old Town**
+
+A new tourist attraction in Toruń's Old Town."
+
+# Your Summary
+
+
+
+===== > RESPONSE:  < =====
+The search result from the U.S. Army website is dated August 14, 2025. It includes information about events in Poland, such as the Bolesławiec Ceramics Festival and the Polish Armed Forces Day on August 15, 2025. <image:13752>
+
+_________________________
+
+
+
+SummarizeResultPrompt - QUERY:
+
+# Instructions
+In order to find evidence that helps your fact-check, you just ran a web search which yielded a Search Result. **Your task right now is to summarize the Search Result.** What to include:
+* information that might be useful for the fact-check (see Record)
+* relevant images (refer to images by inserting their reference <image:k>)
+* if available: the release date as well as the author or the publisher (e.g. the media company) of the search result.
+
+Do NOT include:
+* advertisements
+* any other information not related to the Record or the Claim
+
+Additional rules:
+* Do not add any additional information besides the information in the Search Result.
+* If the Search Result doesn't contain any relevant information for the fact-checking work, simply print one word in capital letters: "NONE".
+* Keep your writing style like in the Examples 1, 2 and 3 provided to you.
+* Try to filter out relevant information even if the search result is in a different language.
+
+# Example 1
+The search result from America Today provides several photographs of the Notre-Dame Cathedral fire on April 15, 2019. <image:i>, <image:j>, <image:k>. None of the images show the Eiffel Tower in the background. 
+
+# Example 2
+NONE
+
+# Example 3
+The Guardian discusses a report blaming the Syrian government for a toxic gas attack and condemning their use of chemical weapons. The Guardian mentions the Chemical Weapons Convention and the responsibilities of Syria under the convention. According to The Guardian, The White House condemned the Assad regime for defying the norm against chemical weapons use.
+
+# Record
+## Claim
+Claim: "<image:25> This image shows a military parade of Poland's army on August 14, 2024, preparing for war with Russia."
+
+## Actions
+```
+web_search("Poland army parade August 14 2024")
+image_search("Poland army parade August 14 2024")
+reverse_search(<image:25>)
+```
+
+# Search Result
+From [Source](https://apnews.com/article/poland-armed-forces-day-russia-army-parade-db5c8663bf0b6e3c403b0c8482da4aed): 
+Content: "(AP Photo/Czarek Sokolowski)
+
+Read More
+
+By  [VANESSA GERA](https://apnews.com/author/vanessa-gera)
+
+Share
+
+Share
+
+*   [Facebook](https://www.facebook.com/dialog/share?app_id=870613919693099&display=popup&href=https%3A%2F%2Fapnews.com%2Farticle%2Fpoland-armed-forces-day-russia-army-parade-db5c8663bf0b6e3c403b0c8482da4aed%3Futm_source%3DFacebook%26utm_medium%3Dshare)
+    
+*   Copy
+    
+    Link copied
+    
+*   [Print](javascript:window.print())
+    
+*   [Email](/cdn-cgi/l/email-protection#cbf4a9a4afb2f69ba4a7aaa5afeef9fbb8a3a4bca8aab8aeb8eef9fba2bfb8eef9fbacb9a4bca2a5aceef9fbaab9a6b2eef9fba4a5eef9fbaaeef9fba3a4a7a2afaab2eef9fbbfa3aabfeef9fba8aea7aea9b9aabfaeb8eef9fba2bfb8eef9fba3a2b8bfa4b9a2a8eef9fbafaeadaeaabfeef9fba4adeef9fbbfa3aeeef9fb99aeafeef9fb8ab9a6b2eefb8aeefb8aa3bfbfbbb8eef88aeef98deef98daabba5aebcb8e5a8a4a6eef98daab9bfa2a8a7aeeef98dbba4a7aaa5afe6aab9a6aeafe6ada4b9a8aeb8e6afaab2e6b9beb8b8a2aae6aab9a6b2e6bbaab9aaafaee6afa9fea8f3fdfdf8a9adfba9fdaef8a8fffbf8a9fba8f3fff3f9afaaffaaaeafeef88dbebfa694b8a4beb9a8aeeef88f8ea6aaa2a7eef9fdbebfa694a6aeafa2bea6eef88fb8a3aab9aeeefb8aeefb8a858a9f84eef9fba6aea6a9aeb9eef9fb9ba4a7aaa5afeef9fba2b8eef9fbbbaab2a2a5aceef9fbbfb9a2a9bebfaeeef9fbbfa4eef9fba2bfb8eef9fba3a2b8bfa4b9a2a8eef9fbbda2a8bfa4b9b2eef9fba4bdaeb9eef9fbbfa3aeeef9fb99aeafeef9fb8ab9a6b2eef9fba9b2eef9fba3a4a5a4b9a2a5aceef9fbadaaa7a7aea5eef9fb9ba4a7aeb8eef9fbaaa5afeef9fbafa2b8bba7aab2a2a5aceef9fba2bfb8eef9fba6a4afaeb9a5eef9fbaab9a6aeafeef9fbada4b9a8aeb8eef988eef9fbbca3a2a8a3eef9fba2bfeef9fba3a4bbaeb8eef9fbbca2a7a7eef9fbafaebfaeb9eef9fbbfa3aeeef9fbbfa3b9aeaabfeef9fba2bfeef9fbb8aeaeb8eef9fba2a5eef9fba6a4afaeb9a5e6afaab2eef9fb99beb8b8a2aae5)
+    
+*   [X](https://twitter.com/intent/tweet?url=https%3A%2F%2Fapnews.com%2Farticle%2Fpoland-armed-forces-day-russia-army-parade-db5c8663bf0b6e3c403b0c8482da4aed%3Futm_source%3Dtwitter%26utm_medium%3Dshare&text=Poland%20showcases%20its%20growing%20army%20on%20a%20holiday%20that%20celebrates%20its%20historic%20defeat%20of%20the%20Red%20Army)
+    
+*   [LinkedIn](#)
+    
+*   [Bluesky](https://bsky.app/intent/compose?text=https%3A%2F%2Fapnews.com%2Farticle%2Fpoland-armed-forces-day-russia-army-parade-db5c8663bf0b6e3c403b0c8482da4aed%3Futm_source%3Dbluesky%26utm_medium%3Dshare%26nbsp%3B%3Cbr%3EPoland%20showcases%20its%20growing%20army%20on%20a%20holiday%20that%20celebrates%20its%20historic%20defeat%20of%20the%20Red%20Army)
+    
+*   [Flipboard](https://share.flipboard.com/bookmarklet/popout?v=2&title=Poland%20showcases%20its%20growing%20army%20on%20a%20holiday%20that%20celebrates%20its%20historic%20defeat%20of%20the%20Red%20Army&url=https%3A%2F%2Fapnews.com%2Farticle%2Fpoland-armed-forces-day-russia-army-parade-db5c8663bf0b6e3c403b0c8482da4aed%3Futm_source%3DFlipboard%20Share%26utm_medium%3Dshare)
+    
+*   [Pinterest](https://pinterest.com/pin/create/bookmarklet/?url=https%3A%2F%2Fapnews.com%2Farticle%2Fpoland-armed-forces-day-russia-army-parade-db5c8663bf0b6e3c403b0c8482da4aed%3Futm_source%3DPinterest%26utm_medium%3Dshare&description=Poland%20showcases%20its%20growing%20army%20on%20a%20holiday%20that%20celebrates%20its%20historic%20defeat%20of%20the%20Red%20Army&media=https://assets.apnews.com/e5/04/eb5e37cf23bffbd052084fa8a79d/146adcaac41048eba90fdc859d09e07a)
+    
+*   [Reddit](https://www.reddit.com/submit?url=https%3A%2F%2Fapnews.com%2Farticle%2Fpoland-armed-forces-day-russia-army-parade-db5c8663bf0b6e3c403b0c8482da4aed%3Futm_source%3Dreddit%26utm_medium%3Dshare&title=Reddit Share)
+    
+
+WARSAW, Poland (AP) — NATO member Poland paid tribute Thursday to its historic 1920 victory over the Red Army by honoring fallen Poles and showing off modern tanks and other equipment that it hopes will deter [the threat it sees in modern-day Russia](https://apnews.com/article/poland-self-defense-security-ukraine-russia-war-06569fdb6f4792fd0b919a24e1d6bef1)
+.
+
+More than 2,500 Polish troops, joined by dozens of U.S. Since Poland broke free of Moscow’s control starting in 1989 and then joined NATO, it has worked to modernize its army.
+
+Those efforts moved into higher gear after Russia, under President Vladimir Putin, first invaded parts of Ukraine in 2014, and then began its full-fledged assault in 2022, with fears heightened all along the strategic stretch of NATO’s eastern flank — from the Baltic nations to Poland to Romania.
+
+Related Stories
+
+      [![Poland's Robert Lewandowski gestures during a Group D match between the France and Poland at the Euro 2024 soccer tournament in Dortmund, Germany, on June 25, 2024. Supreme Court](https://apnews.com/hub/us-supreme-court)
+            
+        *   [2025 Election Calendar](https://apnews.com/projects/election-results-2025/)
+            
+        *   [The latest AP-NORC polls](https://apnews.com/projects/polling-tracker/)
+            
+        *   [Ground Game](https://apnews.com/newsletter/ground-game/july-28-2025)
+            
+        
+    *   [Sports](https://apnews.com/sports)
+        
+        *   [AP Top 25](https://apnews.com/hub/ap-top-25-college-football-poll)
+            
+        *   [NFL](https://apnews.com/hub/nfl)
+            
+        *   [MLB](https://apnews.com/hub/mlb)
+            
+        *   [WNBA](https://apnews.com/hub/wnba-basketball)
+            
+        *   [Tennis Tennis](https://apnews.com/hub/tennis)
+            
+        *   [Golf](https://apnews.com/hub/golf)
+            
+        *   [NBA](https://apnews.com/hub/nba)
+            
+        *   [NHL](https://apnews.com/hub/nhl)
+            
+        *   [Auto Racing](https://apnews.com/hub/auto-racing)
+            
+        *   [Soccer](https://apnews.com/hub/soccer)
+            
+        
+    *   [Entertainment](https://apnews.com/entertainment)
+        
+        *   [Movies](https://apnews.com/hub/movies)
+            
+        *   [What to Stream](https://apnews.com/hub/the-stream)
+            
+        *   [Television](https://apnews.com/hub/television)
+            
+        *   [Celebrity Interviews](https://apnews.com/hub/celebrity-interviews/)
+            
+        *   [Music](https://apnews.com/hub/music)
+            
+        *   [Books](https://apnews.com/hub/books-and-literature)
+            
+        
+    *   [Business](https://apnews.com/business)
+        
+        *   [Tariffs](https://apnews.com/hub/tariffs)
+            
+        *   [Inflation](https://apnews.com/hub/inflation)
+            
+        *   [Financial Markets](https://apnews.com/hub/financial-markets)
+            
+        *   [Financial Wellness](https://apnews.com/hub/financial-wellness)
+            
+        *   [Technology](https://apnews.com/technology)
+            
+        
+    *   [Science](https://apnews.com/science)
+        
+        *   [Space](https://apnews.com/hub/space)
+            
+        *   [Animals](https://apnews.com/hub/animals)
+            
+        *   [The Ancient World](https://apnews.com/hub/archaeology-and-anthropology)
+            
+        *   [Climate](https://apnews.com/climate-and-environment)
+            
+        *   [Medicine](https://apnews.com/health)
+            
+        
+    *   [Fact Check](https://apnews.com/ap-fact-check)
+        
+    *   [Oddities](https://apnews.com/oddities)
+        
+    *   [Be Well](https://apnews.com/hub/be-well)
+        
+    *   [Newsletters](https://apnews.com/newsletters)
+        
+    *   [Photography](https://apnews.com/photography)
+        
+        *   [2024 YEAR END PHOTOS](https://apnews.com/photography/2024-year-end-photos)
+            
+        *   [Photo Essays](https://apnews.com/hub/photo-essays)
+            
+        *   [Photography](https://apnews.com/photography)
+            
+        
+    *   [AP Investigations](https://apnews.com/hub/ap-investigations/)
+        
+    *   [Climate](https://apnews.com/climate-and-environment)
+        
+        *   [**Indigenous peoples and climate**](https://apnews.com/climate-and-environment/indigenous-peoples-adapting-to-and-combatting-climate-change)
+            
+        *   [Climate Questions](https://apnews.com/hub/climate-questions)
+            
+        *   [Climate Migration](https://apnews.com/hub/climate-migration)
+            
+        *   [India Focus](https://apnews.com/hub/india-climate)
+            
+        
+    *   [Health](https://apnews.com/health)
+        
+    *   [Tech](https://apnews.com/technology)
+        
+        *   [Artificial Intelligence](https://apnews.com/hub/artificial-intelligence)
+            
+        *   [Social Media](https://apnews.com/hub/social-media)
+            
+        
+    *   [Lifestyle](https://apnews.com/lifestyle)
+        
+        *   [Food & Recipes](https://apnews.com/hub/recipes)
+            
+        *   [Gardening](https://apnews.com/hub/gardening)
+            
+        *   [Homes](https://apnews.com/hub/homes)
+            
+        *   [Travel](https://apnews.com/hub/travel)
+            
+        *   [Fashion](https://apnews.com/hub/fashion)
+            
+        *   [Pets](https://apnews.com/hub/pets)
+            
+        
+    *   [Religion](https://apnews.com/religion)
+        
+    *   [Español](https://apnews.com/hub/noticias)
+        
+    *   [Most watched videos](https://apnews.com/video)
+        
+    *   [Standards](https://apnews.com/projects/news-values-and-principles/)
+        
+    *   [Quizzes](https://apnews.com/quizzes)
+        
+    *   [Press Releases](https://apnews.com/press-releases)
+        
+    *   [My Account](https://apnews.com/login)
+        
+    *   [AP News Code of Conduct](https://apnews.com/community-guidelines)
+        
+    
+
+[Sign in](/login)
+[](/myaccount)
+
+ Search Query Submit Search
+
+Show Search Menu
+
+Submit Search 
+
+[World News](https://apnews.com/world-news)
+
+Poland showcases its growing army on a holiday that celebrates its historic defeat of the Red Army
+==================================================================================================
+
+Poland showcases its growing army on a holiday that celebrates its historic defeat of the Red Army
+--------------------------------------------------------------------------------------------------
+
+         ![Poland displays its growing and modernising military during annual observances on Poland's armed forces holiday in Warsaw, Poland, on Thursday, Aug. 15, 2024.(AP Photo/Czarek Sokolowski)
+
+Read More
+
+        ![Helicopters fly during a Polish military parade on the occasion of the armed forces day, in Warsaw, Poland, on Thursday, Aug. 15, 2024.(AP Photo/Czarek Sokolowski)
+
+Read More
+
+        ![A band plays during a Polish military parade on the occasion of the armed forces day, in Warsaw, Poland, on Thursday, Aug. 15, 2024.(AP Photo/Czarek Sokolowski)
+
+Read More
+
+        ![Poland's military parades during the annual observances on Poland's armed forces holiday in Warsaw, Poland, on Thursday, Aug. (AP Photo/Czarek Sokolowski)](https://dims.apnews.com/dims4/default/c07bf43/2147483647/strip/true/crop/3900x2600+0+0/resize/599x399!/quality/90/?url=https%3A%2F%2Fassets.apnews.com%2Fe5%2F04%2Feb5e37cf23bffbd052084fa8a79d%2F146adcaac41048eba90fdc859d09e07a)
+
+1 of 18 | 
+
+Poland displays its growing and modernising military during annual observances on Poland’s armed forces holiday in Warsaw, Poland, on Thursday, Aug. 15, 2024.(AP Photo/Czarek Sokolowski)](<Base64-Image-Removed>)
+
+5 of 18 | 
+
+Poland’s President Andrzej Duda takes part in the annual observances on Poland’s armed forces day, in Warsaw, Poland, on Thursday, Aug. (AP Photo/Czarek Sokolowski)](<Base64-Image-Removed>)
+
+6 of 18 | 
+
+Helicopters fly during a Polish military parade on the occasion of the armed forces day, in Warsaw, Poland, on Thursday, Aug. (AP Photo/Czarek Sokolowski)
+
+Read More
+
+        ![Poland military cars parade during the annual observances on Poland's armed forces holiday in Warsaw, Poland, on Thursday, Aug."
+
+# Your Summary
+
+
+
+===== > RESPONSE:  < =====
+The Associated Press published an article about Poland's Armed Forces Day on August 15, 2024. The article discusses a military parade in Warsaw, Poland, showcasing modern tanks and equipment. <image:25> is from the article and shows the parade. The article mentions that the parade is a tribute to Poland's 1920 victory over the Red Army and is meant to deter the threat Poland sees in modern-day Russia. The author is Vanessa Gera.
+
+_________________________
+
+
+
+SummarizeSummariesPrompt - QUERY:
+
+# Instructions
+You just retrieved web sources, each one summarized under "Web Sources". **Your task right now is to summarize the web source summaries.**
+
+Always adhere to the following rules:
+* Write only one to two paragraphs.
+* Include all URLs from the listed sources. Format them as Markdown hyperlinks.
+* Do not add any additional information besides the information in the summaries.
+* Include references (<image:k>) to all relevant images.
+
+# Record
+## Claim
+Claim: "<image:25> This image shows a military parade of Poland's army on August 14, 2024, preparing for war with Russia."
+
+## Actions
+```
+web_search("Poland army parade August 14 2024")
+image_search("Poland army parade August 14 2024")
+reverse_search(<image:25>)
+```
+
+## Web Sources
+**Web Search Result**
+
+From [Source](https://en.wikipedia.org/wiki/Armed_Forces_Day_(Poland)): 
+Content: The search result is from Wikipedia and discusses Armed Forces Day in Poland, celebrated annually on August 15th. It commemorates the 1920 victory over Soviet Russia at the Battle of Warsaw. The event includes military parades, equipment reviews, and commemorations. The article mentions that the holiday was reinstated in 1992 and that military parades have been held yearly since 2013. <image:25> is likely related to the military parade.
+
+
+From [Source](https://www.army.mil/article/287821/polish_news_translated_torun_zagan_boles_aug_14): 
+Content: The search result from the U.S. Army website is dated August 14, 2025. It includes information about events in Poland, such as the Bolesławiec Ceramics Festival and the Polish Armed Forces Day on August 15, 2025. <image:13752>
+
+
+From [Source](https://apnews.com/article/poland-armed-forces-day-russia-army-parade-db5c8663bf0b6e3c403b0c8482da4aed): 
+Content: The Associated Press published an article about Poland's Armed Forces Day on August 15, 2024. The article discusses a military parade in Warsaw, Poland, showcasing modern tanks and equipment. <image:25> is from the article and shows the parade. The article mentions that the parade is a tribute to Poland's 1920 victory over the Red Army and is meant to deter the threat Poland sees in modern-day Russia. The author is Vanessa Gera.
+
+
+## Your Summary
+
+
+
+===== > RESPONSE:  < =====
+The web sources discuss Poland's Armed Forces Day, celebrated on August 15th, which commemorates the 1920 victory over Soviet Russia. The event includes military parades and equipment reviews. One article from the Associated Press ([https://apnews.com/article/poland-armed-forces-day-russia-army-parade-db5c8663bf0b6e3c403b0c8482da4aed](https://apnews.com/article/poland-armed-forces-day-russia-army-parade-db5c8663bf0b6e3c403b0c8482da4aed)) mentions a military parade in Warsaw on August 15, 2024, and includes the image <image:25>
+_________________________
+
+
+
+SummarizeResultPrompt - QUERY:
+
+# Instructions
+In order to find evidence that helps your fact-check, you just ran a web search which yielded a Search Result. **Your task right now is to summarize the Search Result.** What to include:
+* information that might be useful for the fact-check (see Record)
+* relevant images (refer to images by inserting their reference <image:k>)
+* if available: the release date as well as the author or the publisher (e.g. the media company) of the search result.
+
+Do NOT include:
+* advertisements
+* any other information not related to the Record or the Claim
+
+Additional rules:
+* Do not add any additional information besides the information in the Search Result.
+* If the Search Result doesn't contain any relevant information for the fact-checking work, simply print one word in capital letters: "NONE".
+* Keep your writing style like in the Examples 1, 2 and 3 provided to you.
+* Try to filter out relevant information even if the search result is in a different language.
+
+# Example 1
+The search result from America Today provides several photographs of the Notre-Dame Cathedral fire on April 15, 2019. <image:i>, <image:j>, <image:k>. None of the images show the Eiffel Tower in the background. 
+
+# Example 2
+NONE
+
+# Example 3
+The Guardian discusses a report blaming the Syrian government for a toxic gas attack and condemning their use of chemical weapons. The Guardian mentions the Chemical Weapons Convention and the responsibilities of Syria under the convention. According to The Guardian, The White House condemned the Assad regime for defying the norm against chemical weapons use.
+
+# Record
+## Claim
+Claim: "<image:25> This image shows a military parade of Poland's army on August 14, 2024, preparing for war with Russia."
+
+## Actions
+```
+web_search("Poland army parade August 14 2024")
+image_search("Poland army parade August 14 2024")
+reverse_search(<image:25>)
+```
+
+# Search Result
+From [Source](https://militarnyi.com/en/news/a-large-scale-parade-dedicated-to-the-day-of-the-polish-army-took-place-in-poland/): 
+Content: "
+<image:13759>"
+
+# Your Summary
+
+
+
+===== > RESPONSE:  < =====
+Militarnyi.com reports on a large-scale parade dedicated to the Day of the Polish Army. <image:13759>
+
+_________________________
+
+
+
+SummarizeResultPrompt - QUERY:
+
+# Instructions
+In order to find evidence that helps your fact-check, you just ran a web search which yielded a Search Result. **Your task right now is to summarize the Search Result.** What to include:
+* information that might be useful for the fact-check (see Record)
+* relevant images (refer to images by inserting their reference <image:k>)
+* if available: the release date as well as the author or the publisher (e.g. the media company) of the search result.
+
+Do NOT include:
+* advertisements
+* any other information not related to the Record or the Claim
+
+Additional rules:
+* Do not add any additional information besides the information in the Search Result.
+* If the Search Result doesn't contain any relevant information for the fact-checking work, simply print one word in capital letters: "NONE".
+* Keep your writing style like in the Examples 1, 2 and 3 provided to you.
+* Try to filter out relevant information even if the search result is in a different language.
+
+# Example 1
+The search result from America Today provides several photographs of the Notre-Dame Cathedral fire on April 15, 2019. <image:i>, <image:j>, <image:k>. None of the images show the Eiffel Tower in the background. 
+
+# Example 2
+NONE
+
+# Example 3
+The Guardian discusses a report blaming the Syrian government for a toxic gas attack and condemning their use of chemical weapons. The Guardian mentions the Chemical Weapons Convention and the responsibilities of Syria under the convention. According to The Guardian, The White House condemned the Assad regime for defying the norm against chemical weapons use.
+
+# Record
+## Claim
+Claim: "<image:25> This image shows a military parade of Poland's army on August 14, 2024, preparing for war with Russia."
+
+## Actions
+```
+web_search("Poland army parade August 14 2024")
+image_search("Poland army parade August 14 2024")
+reverse_search(<image:25>)
+```
+
+# Search Result
+From [Source](https://www.ksat.com/news/world/2024/08/15/poland-showcases-its-growing-army-on-a-holiday-that-celebrates-its-historic-defeat-of-the-red-army/): 
+Content: "
+<image:13760>"
+
+# Your Summary
+
+
+
+===== > RESPONSE:  < =====
+The search result from KSAT.com shows a military parade in Poland on August 15, 2024. <image:13760>
+
+_________________________
+
+
+
+SummarizeResultPrompt - QUERY:
+
+# Instructions
+In order to find evidence that helps your fact-check, you just ran a web search which yielded a Search Result. **Your task right now is to summarize the Search Result.** What to include:
+* information that might be useful for the fact-check (see Record)
+* relevant images (refer to images by inserting their reference <image:k>)
+* if available: the release date as well as the author or the publisher (e.g. the media company) of the search result.
+
+Do NOT include:
+* advertisements
+* any other information not related to the Record or the Claim
+
+Additional rules:
+* Do not add any additional information besides the information in the Search Result.
+* If the Search Result doesn't contain any relevant information for the fact-checking work, simply print one word in capital letters: "NONE".
+* Keep your writing style like in the Examples 1, 2 and 3 provided to you.
+* Try to filter out relevant information even if the search result is in a different language.
+
+# Example 1
+The search result from America Today provides several photographs of the Notre-Dame Cathedral fire on April 15, 2019. <image:i>, <image:j>, <image:k>. None of the images show the Eiffel Tower in the background. 
+
+# Example 2
+NONE
+
+# Example 3
+The Guardian discusses a report blaming the Syrian government for a toxic gas attack and condemning their use of chemical weapons. The Guardian mentions the Chemical Weapons Convention and the responsibilities of Syria under the convention. According to The Guardian, The White House condemned the Assad regime for defying the norm against chemical weapons use.
+
+# Record
+## Claim
+Claim: "<image:25> This image shows a military parade of Poland's army on August 14, 2024, preparing for war with Russia."
+
+## Actions
+```
+web_search("Poland army parade August 14 2024")
+image_search("Poland army parade August 14 2024")
+reverse_search(<image:25>)
+```
+
+# Search Result
+From [Source](https://polanddaily24.com/celebrating-polands-armed-forces-parades-tributes-and-military-showcases/news/44873): 
+Content: ""
+
+# Your Summary
+
+
+
+===== > RESPONSE:  < =====
+NONE
+
+_________________________
+
+
+
+SummarizeSummariesPrompt - QUERY:
+
+# Instructions
+You just retrieved web sources, each one summarized under "Web Sources". **Your task right now is to summarize the web source summaries.**
+
+Always adhere to the following rules:
+* Write only one to two paragraphs.
+* Include all URLs from the listed sources. Format them as Markdown hyperlinks.
+* Do not add any additional information besides the information in the summaries.
+* Include references (<image:k>) to all relevant images.
+
+# Record
+## Claim
+Claim: "<image:25> This image shows a military parade of Poland's army on August 14, 2024, preparing for war with Russia."
+
+## Actions
+```
+web_search("Poland army parade August 14 2024")
+image_search("Poland army parade August 14 2024")
+reverse_search(<image:25>)
+```
+
+## Web Sources
+**Web Search Result**
+
+From [Source](https://militarnyi.com/en/news/a-large-scale-parade-dedicated-to-the-day-of-the-polish-army-took-place-in-poland/): 
+Content: Militarnyi.com reports on a large-scale parade dedicated to the Day of the Polish Army. <image:13759>
+
+
+From [Source](https://www.ksat.com/news/world/2024/08/15/poland-showcases-its-growing-army-on-a-holiday-that-celebrates-its-historic-defeat-of-the-red-army/): 
+Content: The search result from KSAT.com shows a military parade in Poland on August 15, 2024. <image:13760>
+
+
+From [Source](https://polanddaily24.com/celebrating-polands-armed-forces-parades-tributes-and-military-showcases/news/44873): 
+Content: NONE
+
+
+## Your Summary
+
+
+
+===== > RESPONSE:  < =====
+The web sources describe military parades in Poland. Militarnyi.com reports on a large-scale parade dedicated to the Day of the Polish Army ([https://militarnyi.com/en/news/a-large-scale-parade-dedicated-to-the-day-of-the-polish-army-took-place-in-poland/](https://militarnyi.com/en/news/a-large-scale-parade-dedicated-to-the-day-of-the-polish-army-took-place-in-poland/)).
+
+KSAT.com shows a military parade in Poland on August 15, 2024 ([https://www.ksat.com/news/world/2024/08/15/poland-showcases-its-growing-army-on-a-holiday-that-celebrates-its-historic-defeat-of-the-red-army/](https://www.ksat.com/news/world/2024/08/15/poland-showcases-its-growing-army-on-a-holiday-that-celebrates-its-historic-defeat-of-the-red-army/)). The image from the first source is <image:13759>, and the image from the second source is <image:13760>.
+
+_________________________
+
+
+
+DevelopPrompt - QUERY:
+
+# Instructions
+You just retrieved new Evidence. Now, **analyze the Claim's veracity using the evidence**. Always adhere to the following rules:
+* Focus on developing new insights. Do not repeat larger parts from the Record. Do not restate the Claim.
+* Write down your thoughts step-by-step. Whenever necessary, you may elaborate in more detail.
+* Depending on the topic's complexity, invest one to three paragraphs. The fewer, the better.
+* If you find that there is insufficient information to verify the Claim, explicitly state what information is missing.
+* If you cite web sources, always refer to them by including their URL as a Markdown hyperlink.
+* **Use information only from the recorded evidence**: Avoid inserting information that is not implied by the evidence. You may use commonsense knowledge, though.
+
+# Record
+## Claim
+Claim: "<image:25> This image shows a military parade of Poland's army on August 14, 2024, preparing for war with Russia."
+
+## Actions
+```
+web_search("Poland army parade August 14 2024")
+image_search("Poland army parade August 14 2024")
+reverse_search(<image:25>)
+```
+
+## Evidence
+### Evidence from `web_search`
+The web sources discuss Poland's Armed Forces Day, celebrated on August 15th, which commemorates the 1920 victory over Soviet Russia. The event includes military parades and equipment reviews. One article from the Associated Press ([https://apnews.com/article/poland-armed-forces-day-russia-army-parade-db5c8663bf0b6e3c403b0c8482da4aed](https://apnews.com/article/poland-armed-forces-day-russia-army-parade-db5c8663bf0b6e3c403b0c8482da4aed)) mentions a military parade in Warsaw on August 15, 2024, and includes the image <image:25>
+
+### Evidence from `image_search`
+The web sources describe military parades in Poland. Militarnyi.com reports on a large-scale parade dedicated to the Day of the Polish Army ([https://militarnyi.com/en/news/a-large-scale-parade-dedicated-to-the-day-of-the-polish-army-took-place-in-poland/](https://militarnyi.com/en/news/a-large-scale-parade-dedicated-to-the-day-of-the-polish-army-took-place-in-poland/)).
+
+KSAT.com shows a military parade in Poland on August 15, 2024 ([https://www.ksat.com/news/world/2024/08/15/poland-showcases-its-growing-army-on-a-holiday-that-celebrates-its-historic-defeat-of-the-red-army/](https://www.ksat.com/news/world/2024/08/15/poland-showcases-its-growing-army-on-a-holiday-that-celebrates-its-historic-defeat-of-the-red-army/)). The image from the first source is <image:13759>, and the image from the second source is <image:13760>.
+
+
+# Your Analysis
+
+
+
+===== > RESPONSE:  < =====
+The claim that the image shows a military parade on August 14, 2024, is inaccurate. The evidence indicates that the parade took place on August 15, 2024, as part of Poland's Armed Forces Day. The parade commemorates the victory over Soviet Russia.
+
+The evidence does not support the claim that the parade was preparing for war with Russia.
+
+_________________________
+
+
+
+JudgePrompt - QUERY:
+
+# Instructions
+**Determine the Claim's veracity** by following these steps:
+1. Briefly summarize the key insights from the fact-check (see Record) in at most one paragraph.
+2. Write one paragraph about which one of the Decision Options applies best. Include the most appropriate decision option at the end and enclose it in backticks like `this`.
+
+
+
+
+## Decision Options
+* `not enough information`: The fact-check does not contain sufficient information to come to an conclusion. For example,there is substantial lack of evidence or the evidence is inconclusive, conflicting or self-contradictory. In the case of a lack of evidence, state which information exactly is missing. In particular, if no RESULTS or sources are available, pick this decision.
+* `true`: The claim is factually accurate when it is confirmed by evidence from multiple and reliable sources.
+* `false`: The claim is not factually accurate. This is the case if one of the following three conditions is met:(1) The claim is demonstrably false when it is disproven by evidence from multiple and reliable sources,(2) The claim or image is taken out of context, i.e. the origin, content and/or meaning of a statement or an image is misrepresented. For example, an old claim or an old image is mispresented in a new context in a misleading way,(3) There is not enough evidence to verify the claim or the evidence is conflicting or self-contradictory.
+
+# Record
+## Claim
+Claim: "<image:25> This image shows a military parade of Poland's army on August 14, 2024, preparing for war with Russia."
+
+## Actions
+```
+web_search("Poland army parade August 14 2024")
+image_search("Poland army parade August 14 2024")
+reverse_search(<image:25>)
+```
+
+## Evidence
+### Evidence from `web_search`
+The web sources discuss Poland's Armed Forces Day, celebrated on August 15th, which commemorates the 1920 victory over Soviet Russia. The event includes military parades and equipment reviews. One article from the Associated Press ([https://apnews.com/article/poland-armed-forces-day-russia-army-parade-db5c8663bf0b6e3c403b0c8482da4aed](https://apnews.com/article/poland-armed-forces-day-russia-army-parade-db5c8663bf0b6e3c403b0c8482da4aed)) mentions a military parade in Warsaw on August 15, 2024, and includes the image <image:25>
+
+### Evidence from `image_search`
+The web sources describe military parades in Poland. Militarnyi.com reports on a large-scale parade dedicated to the Day of the Polish Army ([https://militarnyi.com/en/news/a-large-scale-parade-dedicated-to-the-day-of-the-polish-army-took-place-in-poland/](https://militarnyi.com/en/news/a-large-scale-parade-dedicated-to-the-day-of-the-polish-army-took-place-in-poland/)).
+
+KSAT.com shows a military parade in Poland on August 15, 2024 ([https://www.ksat.com/news/world/2024/08/15/poland-showcases-its-growing-army-on-a-holiday-that-celebrates-its-historic-defeat-of-the-red-army/](https://www.ksat.com/news/world/2024/08/15/poland-showcases-its-growing-army-on-a-holiday-that-celebrates-its-historic-defeat-of-the-red-army/)). The image from the first source is <image:13759>, and the image from the second source is <image:13760>.
+
+
+## Elaboration
+The claim that the image shows a military parade on August 14, 2024, is inaccurate. The evidence indicates that the parade took place on August 15, 2024, as part of Poland's Armed Forces Day. The parade commemorates the victory over Soviet Russia.
+
+The evidence does not support the claim that the parade was preparing for war with Russia.
+
+
+# Your Judgement
+
+
+
+===== > RESPONSE:  < =====
+The image is from a military parade in Poland on August 15, 2024, not August 14, 2024. The parade is part of the Armed Forces Day celebrations. The claim that the parade is preparing for war with Russia is not supported by the evidence. `false`
+_________________________
+
+
+
+SummarizeDocPrompt - QUERY:
+
+# Instructions
+You are provided with the record of a fact-check. It contains the Claim to be verified and a documentation of all the fact-checking work along the gathered evidence. Your task is to **summarize the fact-check**. That is, you provide a concise, one-paragraph justification for the final VERDICT based on the knowledge from the Record. Note:
+* Be truthful, brief, do not add any additional information besides the information given in the Record. 
+* Link key sources in your summary. Use Markdown notation for that. You may link them in-line.
+* Don't state the Claim again. Rather focus on the key insights of the fact-check.
+* Simply print just the summary.
+
+# Record
+## Claim
+Claim: "<image:25> This image shows a military parade of Poland's army on August 14, 2024, preparing for war with Russia."
+
+## Actions
+```
+web_search("Poland army parade August 14 2024")
+image_search("Poland army parade August 14 2024")
+reverse_search(<image:25>)
+```
+
+## Evidence
+### Evidence from `web_search`
+The web sources discuss Poland's Armed Forces Day, celebrated on August 15th, which commemorates the 1920 victory over Soviet Russia. The event includes military parades and equipment reviews. One article from the Associated Press ([https://apnews.com/article/poland-armed-forces-day-russia-army-parade-db5c8663bf0b6e3c403b0c8482da4aed](https://apnews.com/article/poland-armed-forces-day-russia-army-parade-db5c8663bf0b6e3c403b0c8482da4aed)) mentions a military parade in Warsaw on August 15, 2024, and includes the image <image:25>
+
+### Evidence from `image_search`
+The web sources describe military parades in Poland. Militarnyi.com reports on a large-scale parade dedicated to the Day of the Polish Army ([https://militarnyi.com/en/news/a-large-scale-parade-dedicated-to-the-day-of-the-polish-army-took-place-in-poland/](https://militarnyi.com/en/news/a-large-scale-parade-dedicated-to-the-day-of-the-polish-army-took-place-in-poland/)).
+
+KSAT.com shows a military parade in Poland on August 15, 2024 ([https://www.ksat.com/news/world/2024/08/15/poland-showcases-its-growing-army-on-a-holiday-that-celebrates-its-historic-defeat-of-the-red-army/](https://www.ksat.com/news/world/2024/08/15/poland-showcases-its-growing-army-on-a-holiday-that-celebrates-its-historic-defeat-of-the-red-army/)). The image from the first source is <image:13759>, and the image from the second source is <image:13760>.
+
+
+## Elaboration
+The claim that the image shows a military parade on August 14, 2024, is inaccurate. The evidence indicates that the parade took place on August 15, 2024, as part of Poland's Armed Forces Day. The parade commemorates the victory over Soviet Russia.
+
+The evidence does not support the claim that the parade was preparing for war with Russia.
+
+
+## Final Judgement
+The image is from a military parade in Poland on August 15, 2024, not August 14, 2024. The parade is part of the Armed Forces Day celebrations. The claim that the parade is preparing for war with Russia is not supported by the evidence. `false`
+
+## Summary
+
+
+
+===== > RESPONSE:  < =====
+The image depicts a military parade in Poland on August 15, 2024, as part of the Armed Forces Day celebrations, as confirmed by sources like the Associated Press ([https://apnews.com/article/poland-armed-forces-day-russia-army-parade-db5c8663bf0b6e3c403b0c8482da4aed](https://apnews.com/article/poland-armed-forces-day-russia-army-parade-db5c8663bf0b6e3c403b0c8482da4aed)). The parade commemorates Poland's victory over Soviet Russia, and there is no evidence to support the claim that it was preparing for war.
+
+_________________________
+
+
+

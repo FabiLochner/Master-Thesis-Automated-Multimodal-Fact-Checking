@@ -1,0 +1,23 @@
+Extracting claims from Content: Israel experienced an earthquake on October 5, 2024.
+'Claim: "Israel experienced an earthquake on October 5, 2024."'
+Verifying Claim: "Israel experienced an earthquake on October 5, 2024."
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='earthquake Israel October 5 2024')
+Got 3 new web source(s):
+	1. February 04, 2025 https://hub.jhu.edu/2025/02/04/earthquake-nuclear-test-misinformation/
+	2. October 07, 2024 https://www.ndtv.com/world-news/earthquakes-in-iran-and-israel-sparks-speculation-of-nuclear-tests-6735904
+	3. October 06, 2024 https://alphadefense.in/index.php/2024/10/07/iran-seismic-activity-nuclear-test-or-earthquake/
+Useful result: From [Source](https://hub.jhu.edu/2025/02/04/earthquake-nuclear-test-misinformation/): 
+Content: The Johns Hopkins University published an article on February 4, 2025, discussing a study that debunks claims that a magnitude 4.5 earthquake in Iran was a covert nuclear weapons test. The article mentions that misinformation linked the Iranian earthquake to a supposed seismic event in Israel on the same evening.
+
+Useful result: From [Source](https://www.ndtv.com/world-news/earthquakes-in-iran-and-israel-sparks-speculation-of-nuclear-tests-6735904): 
+Content: NDTV published an article on October 7, 2024, discussing earthquakes in Iran and Israel on October 5, 2024, which sparked speculation about covert nuclear testing. <image:k> The article mentions a moderate earthquake that struck both countries and quotes social media posts discussing the possibility of a nuclear test.
+
+Useful result: From [Source](https://alphadefense.in/index.php/2024/10/07/iran-seismic-activity-nuclear-test-or-earthquake/): 
+Content: The article from alphadefense.in, published on October 7, 2024, discusses a seismic event in Iran's Semnan province on October 5, 2024. The event sparked speculation on social media about whether it was an earthquake or an underground nuclear test. The article mentions the earthquake's magnitude of 4.6 and its shallow epicenter. <image:9777>, <image:9779>.
+
+The claim 'Israel experienced an earthquake on October 5, 2024.' is true.
+Justification: Multiple sources, including NDTV ([https://www.ndtv.com/world-news/earthquakes-in-iran-and-israel-sparks-speculation-of-nuclear-tests-6735904](https://www.ndtv.com/world-news/earthquakes-in-iran-and-israel-sparks-speculation-of-nuclear-tests-6735904)) and Johns Hopkins University ([https://hub.jhu.edu/2025/02/04/earthquake-nuclear-test-misinformation/](https://hub.jhu.edu/2025/02/04/earthquake-nuclear-test-misinformation/)), confirm that an earthquake occurred in Israel on October 5, 2024.
+
+So, the overall veracity is: true
+Fact-check took 1:46 min.

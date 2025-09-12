@@ -1,0 +1,41 @@
+Extracting claims from Content: The Iron Dome intercepted 90% of ballistic missiles fired at Israel in Iran's attack on October 1, 2024.
+'Claim: "The Iron Dome intercepted 90% of ballistic missiles fired at Israel in Iran's attack on October 1, 2024."'
+Verifying Claim: "The Iron Dome intercepted 90% of ballistic missiles fired at Israel in Iran's attack on October 1, 2024."
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Iron Dome Israel missile interception rate October 1 2024 Iran attack')
+Failed to download or open image: cannot identify image file <_io.BytesIO object at 0x7ffed0239940>
+Got 3 new web source(s):
+	1. https://www.hindustantimes.com/world-news/davids-sling-arrow-iron-dome-how-israel-intercepted-irans-200-missiles-101727829628883.html
+	2. https://abcnews.go.com/International/iran-launches-attack-israel-what-is-iron-dome/story?id=109218962
+	3. https://www.bloomberg.com/news/articles/2024-04-11/what-are-israel-s-air-defenses-as-iran-threatens-to-attack
+Useful result: From [Source](https://abcnews.go.com/International/iran-launches-attack-israel-what-is-iron-dome/story?id=109218962): 
+Content: The search result from ABC News contains an image of the Iron Dome intercepting missiles. <image:14283>
+
+Useful result: From [Source](https://www.bloomberg.com/news/articles/2024-04-11/what-are-israel-s-air-defenses-as-iran-threatens-to-attack): 
+Content: The Bloomberg article contains an image of the Iron Dome intercepting missiles. <image:14284>
+
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Iron Dome interception rate Iran attack October 1 2024')
+Failed to download or open image: cannot identify image file <_io.BytesIO object at 0x7ffed027a340>
+Got 1 new web source(s):
+	1. https://www.livemint.com/news/world/not-a-science-fiction-israel-shares-video-of-iron-dome-intercepting-iranian-missiles-israel-iran-war-news-11727844421348.html
+Useful result: From [Source](https://www.livemint.com/news/world/not-a-science-fiction-israel-shares-video-of-iron-dome-intercepting-iranian-missiles-israel-iran-war-news-11727844421348.html): 
+Content: Livemint shares a video of the Iron Dome intercepting Iranian missiles. <image:14286>
+
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Iron Dome effectiveness rate Iran attack October 1 2024')
+Failed to download or open image: cannot identify image file <_io.BytesIO object at 0x7ffed0278220>
+Got 2 new web source(s):
+	1. https://www.aljazeera.com/news/2024/10/2/iran-and-israel-what-are-their-attack-and-defence-capabilities
+	2. https://www.abc.net.au/news/2024-10-02/iran-ballistic-missile-attack-israel-iron-dome-air-defence/104420966
+Useful result: From [Source](https://www.aljazeera.com/news/2024/10/2/iran-and-israel-what-are-their-attack-and-defence-capabilities): 
+Content: Al Jazeera states that Israel claims the Iron Dome is 90 percent effective. <image:14288>
+
+Useful result: From [Source](https://www.abc.net.au/news/2024-10-02/iran-ballistic-missile-attack-israel-iron-dome-air-defence/104420966): 
+Content: ABC News published an article about the Iranian attack on Israel and the Iron Dome air defense system. <image:14289>
+
+The claim 'The Iron Dome intercepted 90% of ballistic missiles fired at Israel in Iran's attack on October 1, 2024.' is false.
+Justification: The claim cannot be verified. While [Al Jazeera](https://www.aljazeera.com/news/2024/10/2/iran-and-israel-what-are-their-attack-and-defence-capabilities) reports that Israel claims the Iron Dome is 90% effective, this is a general statement and not specific to the October 1, 2024, attack. Other sources, such as [ABC News](https://www.abc.net.au/news/2024-10-02/iran-ballistic-missile-attack-israel-iron-dome-air-defence/104420966), discuss the attack but do not provide an interception rate.
+
+So, the overall veracity is: false
+Fact-check took 0:45 min.

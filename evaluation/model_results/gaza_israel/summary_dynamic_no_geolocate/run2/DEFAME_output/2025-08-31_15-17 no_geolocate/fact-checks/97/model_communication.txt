@@ -1,0 +1,1662 @@
+PlanPrompt - QUERY:
+
+# Instructions
+The available knowledge is insufficient to assess the Claim. Therefore, **propose a set of actions** to retrieve new and helpful evidence. Adhere to the following rules:
+* The actions available are listed under Valid Actions, including a short description for each action. No other actions are possible at this moment. 
+* For each action, use the formatting as specified in Valid Actions.
+* Include all actions in a single Markdown code block at the end of your answer.
+* Propose as few actions as possible, but as much as needed. Do not propose similar or previously used actions.
+
+
+
+## Valid Actions
+* `web_search`
+   * Description: Run an open web search on Google or DuckDuckGO to retrieve any related webpage.
+   * How to use: Do not use this with a previously used or similar query from previous web searches. If a previous web search did not yield any results, use a very different query.
+   * Format: web_search("your web search query goes here")
+
+* `image_search`
+   * Description: Run an image search on Google to retrieve related images for a given query.
+   * How to use: This is a helpful tool for fact-checking images. Use this to retrieve images associated with a specific keyword or phrase. Ensure that the query is clear and specific to improve search accuracy. If no relevant images are found, refine the query or use more descriptive terms.
+   * Format: image_search("your image search query goes here")
+
+* `reverse_search`
+   * Description: Performs a reverse image search to find similar images on the web.
+   * How to use: Provide an image and the model will perform a reverse search to find similar images.
+   * Format: reverse_search(<image:k>), where `k` is the image's ID
+
+# Example: web_search()
+
+## Claim
+Text: "New Zealand’s new Food Bill bans gardening"
+Claim date: October 29, 2020
+
+...
+
+## Actions
+```
+web_search("New Zealand Food Bill 2020")
+web_search("New Zealand Food Bill gardening ban")
+```
+
+# Example: image_search()
+
+## Claim
+Text: "Chinese officials in white protective hazmat suits carried people down a hallway to be quarantined for having COVID-19 in November 2022."
+
+...
+
+ACTIONS:
+```
+image_search("China officials white suits carry people")
+image_search("China officials carry people COVID quarantine 2022")
+```
+
+# Example: reverse_search()
+
+## Claim
+Text: "<image:k> shows a rare event of a solar eclipse with a double ring."
+
+...
+
+## Actions
+```
+reverse_search(<image:k>)
+```
+
+# Record
+## Claim
+Claim: "The US reinstituted draft in 2024 for the Israel-Hamas war."
+
+# Your Actions
+
+
+
+===== > RESPONSE:  < =====
+```
+web_search("US draft Israel-Hamas war 2024")
+```
+_________________________
+
+
+
+SummarizeResultPrompt - QUERY:
+
+# Instructions
+In order to find evidence that helps your fact-check, you just ran a web search which yielded a Search Result. **Your task right now is to summarize the Search Result.** What to include:
+* information that might be useful for the fact-check (see Record)
+* relevant images (refer to images by inserting their reference <image:k>)
+* if available: the release date as well as the author or the publisher (e.g. the media company) of the search result.
+
+Do NOT include:
+* advertisements
+* any other information not related to the Record or the Claim
+
+Additional rules:
+* Do not add any additional information besides the information in the Search Result.
+* If the Search Result doesn't contain any relevant information for the fact-checking work, simply print one word in capital letters: "NONE".
+* Keep your writing style like in the Examples 1, 2 and 3 provided to you.
+* Try to filter out relevant information even if the search result is in a different language.
+
+# Example 1
+The search result from America Today provides several photographs of the Notre-Dame Cathedral fire on April 15, 2019. <image:i>, <image:j>, <image:k>. None of the images show the Eiffel Tower in the background. 
+
+# Example 2
+NONE
+
+# Example 3
+The Guardian discusses a report blaming the Syrian government for a toxic gas attack and condemning their use of chemical weapons. The Guardian mentions the Chemical Weapons Convention and the responsibilities of Syria under the convention. According to The Guardian, The White House condemned the Assad regime for defying the norm against chemical weapons use.
+
+# Record
+## Claim
+Claim: "The US reinstituted draft in 2024 for the Israel-Hamas war."
+
+## Actions
+```
+web_search("US draft Israel-Hamas war 2024")
+```
+
+# Search Result
+From [Source](https://news.un.org/en/story/2024/11/1157216): 
+Content: "[Skip to main content / navigation](#main-content)
+
+[![United Nations](/en/themes/custom/un3/un3_base/images/logos/UN_logo_en.svg)](/en/ "United Nations")
+
+[UN News](/en/ "UN News")
+
+Global perspective Human stories
+
+English Search
+
+ 
+
+Search
+
+[Advanced Search](/en/advanced-search)
+
+[UN News](/en/ "UN News")
+
+Global perspective Human stories
+
+United States vetoes Gaza ceasefire resolution at Security Council
+==================================================================
+
+     ![A wide view of the UN Security Council as members vote on a draft resolution during the meeting on the situation in the Middle East, including the Palestinian question.](https://global.unitednations.entermediadb.net/assets/mediadb/services/module/asset/downloads/preset/Libraries/Production%20Library/20-11-2024-UN-Photo-SC-wide.jpg/image1170x530cropped.jpg "A wide view of the UN Security Council as members vote on a draft resolution during the meeting on the situation in the Middle East, including the Palestinian question.")
+
+UN Photo/Evan Schneider
+
+A wide view of the UN Security Council as members vote on a draft resolution during the meeting on the situation in the Middle East, including the Palestinian question.
+
+[Facebook](https://www.facebook.com/sharer.php?u=https://news.un.org/en/story/2024/11/1157216 "Share this via Facebook")
+ [Twitter](https://twitter.com/intent/tweet?text=United States vetoes Gaza ceasefire resolution at Security Council&url=https://news.un.org/en/story/2024/11/1157216 "Share this via Twitter")
+ Print [Email](mailto:?subject=United States vetoes Gaza ceasefire resolution at Security Council&body=https://news.un.org/en/story/2024/11/1157216 "Share this via Email")
+
+United States vetoes Gaza ceasefire resolution at Security Council
+==================================================================
+
+20 November 2024 [Peace and Security](/en/news/topic/peace-and-security)
+
+The United States on Wednesday vetoed a UN Security Council draft resolution that demanded an immediate and unconditional ceasefire in the Gaza Strip.
+
+Despite having secured 14 votes in favour, the draft resolution put forward by the 10 elected members of the [Security Council](https://main.un.org/securitycouncil/)
+ (E10), failed to pass owing to the negative vote by a permanent member, the US.
+
+The text also reiterated the Council’s demand for the immediate and unconditional release of all hostages.
+
+For a resolution to be adopted, it must secure at least nine votes in favour, and no negative votes – or vetoes – by any of the five permanent members.
+
+Under the [UN Charter](http://www.un.org/en/charter-united-nations/index.html)
+, the Security Council has the primary responsibility to uphold international peace and security.
+
+The US representative Ambassador Robert Wood said in his statement that the US could not support an unconditional ceasefire unless it was tied to releasing the hostages being held in Gaza by Hamas and other militants. 
+
+Had the draft resolution been adopted, it would have demanded immediate access for civilians in the Gaza Strip to basic services.
+
+It would have rejected “any effort to starve Palestinians” – the threat of famine grows in the north as the Israeli siege there continues – while also demanding the facilitation of full, rapid, safe and unhindered entry of aid at scale to and throughout the Strip and its delivery to all those in need.
+
+The text also demanded that the parties “fully, unconditionally, and without delay” implement all the provisions of Security Council resolution 2735 (2024).
+
+This includes the release of hostages, the exchange of Palestinian prisoners, the return of the remains of hostages who have been killed, the return of Palestinian civilians to their homes and neighbourhoods in all areas of Gaza – including in the north – and a full withdrawal of Israeli forces from Gaza.
+
+The draft further underscored the role of the UN relief agency for Palestine refugees ([UNRWA](https://www.unrwa.org/)
+) as the backbone of the humanitarian response in Gaza.
+
+It called on all parties to enable UNRWA to carry out its mandate as adopted by the General Assembly, with full respect for the humanitarian principles of humanity, neutrality, impartiality, and independence.
+
+It also urged respect for international humanitarian law, including the protection of UN and humanitarian facilities, while welcoming the Secretary-General’s and UNRWA’s commitment to fully implement the recommendations of an independent review of the agency led by former French Foreign Minister Catherine Colonna.
+
+♦ Receive daily updates directly in your inbox - [**Subscribe here**](https://news.un.org/en/content/un-newsletter-subscribe?utm_source=UN News&utm_medium=email&utm_campaign=un_news_newsletter)
+ to a topic.
+
+♦ Download the UN News app for your [**iOS**](https://itunes.apple.com/us/app/un-news-reader/id496893005?mt=8)
+ or [**Android**](https://play.google.com/store/apps/details?id=org.un.mobile.news&hl=en)
+ devices.
+
+*   [Gaza](/en/tags/gaza)
+    
+*   [security council](/en/tags/security-council)
+    
+
+[Facebook](https://www.facebook.com/sharer.php?u=https://news.un.org/en/story/2024/11/1157216 "Share this via Facebook")
+ [Twitter](https://twitter.com/intent/tweet?text=United States vetoes Gaza ceasefire resolution at Security Council&url=https://news.un.org/en/story/2024/11/1157216 "Share this via Twitter")
+ Print [Email](mailto:?subject=United States vetoes Gaza ceasefire resolution at Security Council&body=https://news.un.org/en/story/2024/11/1157216 "Share this via Email")"
+
+# Your Summary
+
+
+
+===== > RESPONSE:  < =====
+The UN News published an article on November 20, 2024, stating that the United States vetoed a UN Security Council draft resolution demanding an immediate and unconditional ceasefire in the Gaza Strip. <image:1>.
+
+_________________________
+
+
+
+SummarizeResultPrompt - QUERY:
+
+# Instructions
+In order to find evidence that helps your fact-check, you just ran a web search which yielded a Search Result. **Your task right now is to summarize the Search Result.** What to include:
+* information that might be useful for the fact-check (see Record)
+* relevant images (refer to images by inserting their reference <image:k>)
+* if available: the release date as well as the author or the publisher (e.g. the media company) of the search result.
+
+Do NOT include:
+* advertisements
+* any other information not related to the Record or the Claim
+
+Additional rules:
+* Do not add any additional information besides the information in the Search Result.
+* If the Search Result doesn't contain any relevant information for the fact-checking work, simply print one word in capital letters: "NONE".
+* Keep your writing style like in the Examples 1, 2 and 3 provided to you.
+* Try to filter out relevant information even if the search result is in a different language.
+
+# Example 1
+The search result from America Today provides several photographs of the Notre-Dame Cathedral fire on April 15, 2019. <image:i>, <image:j>, <image:k>. None of the images show the Eiffel Tower in the background. 
+
+# Example 2
+NONE
+
+# Example 3
+The Guardian discusses a report blaming the Syrian government for a toxic gas attack and condemning their use of chemical weapons. The Guardian mentions the Chemical Weapons Convention and the responsibilities of Syria under the convention. According to The Guardian, The White House condemned the Assad regime for defying the norm against chemical weapons use.
+
+# Record
+## Claim
+Claim: "The US reinstituted draft in 2024 for the Israel-Hamas war."
+
+## Actions
+```
+web_search("US draft Israel-Hamas war 2024")
+```
+
+# Search Result
+From [Source](https://www.securitycouncilreport.org/whatsinblue/2024/11/vote-on-a-draft-resolution-on-the-war-in-gaza.php): 
+Content: "*   [Monthly  \
+    ForecastMonthly preview of issues in the Council](https://www.securitycouncilreport.org/monthly_forecast/2025-07)
+    
+*   [Country and  \
+    Regional IssuesPublications on country-specific and regional issues in the Council](https://www.securitycouncilreport.org/country-regional-issues)
+    
+*   [Thematic and  \
+    General IssuesCouncil thematic and structural issues and peace making, keeping and building](https://www.securitycouncilreport.org/thematic-general-issues)
+    
+*   [About the UN  \
+    Security CouncilBackground information on the Council, its subsidiary bodies and activities](https://www.securitycouncilreport.org/about-the-un-security-council)
+    
+*   [About SCR](https://www.securitycouncilreport.org/about-security-council-report)
+     [What's In Blue](https://www.securitycouncilreport.org/whatsinblue)
+     [Past Publications](https://www.securitycouncilreport.org/past-publications)
+     [Press Release](https://www.securitycouncilreport.org/atf/cf/{65BFCF9B-6D27-4E9C-8CD3-CF6E4FF96FF9}/Shamala-Kandiah-Thompson-Executive-Director.pdf)
+    
+*   [Home](https://www.securitycouncilreport.org)
+     [Contact](https://www.securitycouncilreport.org/contact)
+     [Resources](https://www.securitycouncilreport.org/resources)
+     [Donate](https://www.securitycouncilreport.org/donate?mtm_campaign=donate-landing&mtm_source=scr-web&mtm_medium=donate-interior-nav)
+    
+
+### [What's In Blue](https://www.securitycouncilreport.org/whatsinblue/)
+
+Posted Tue 19 Nov 2024
+
+*   [Print](https://www.securitycouncilreport.org/whatsinblue/2024/11/vote-on-a-draft-resolution-on-the-war-in-gaza.php?print=true)
+    
+*   [Share](https://www.addtoany.com/share)
+    
+
+Vote on a Draft Resolution on the War in Gaza\*
+===============================================
+
+Tomorrow morning (20 November), the Security Council is expected to vote on a draft resolution on the [war in Gaza between Israel and Hamas](https://www.securitycouncilreport.org/middle-east-including-the-palestinian-question/)
+, which was put forward by the Council’s ten elected members (E10). The remaining 14 members voted in favour.
+
+Tags: [Insights on the Middle East](https://www.securitycouncilreport.org/whatsinblue/insights-on-the-middle-east)
+, [Middle East including the Palestinian Question](https://www.securitycouncilreport.org/whatsinblue/israelpalestine)
+
+Sign up for What's In Blue emails
+
+Subscribe
+
+*   [Print](https://www.securitycouncilreport.org/whatsinblue/2024/11/vote-on-a-draft-resolution-on-the-war-in-gaza.php?print=true)
+    
+*   [Share](https://www.addtoany.com/share)
+    
+
+*   [Share post](https://www.addtoany.com/share)
+    
+
+ 
+
+*   [Share or print this page](https://www.addthis.com/bookmark.php?v=250&pubid=ra-4fff208a7891f522)
+    
+
+[![Security Council Report](/wp-content/themes/scr2018/_resources/img/global/scr-logo-mobile-secondary.png)](https://www.securitycouncilreport.org/)
+
+*   *   **Publications**
+    *   [Monthly Forecast](/monthly_forecast/2025-07)
+        
+    *   [Country and Regional Issues](/country-regional-issues)
+        
+    *   [Thematic and General Issues](/thematic-general-issues)
+        
+    *   [Research Reports](/research-reports/)
+        
+    *   [What's In Blue Home](https://www.securitycouncilreport.org/whatsinblue)
+        
+    *   [What's In Blue by Category](/whats-in-blue-country-theme)
+        
+    *   [UN Documents](/un-documents-all)
+        
+*   *   **About**
+    *   [The UN Security Council](/about-the-un-security-council)
+        
+    *   [Security Council Report](/about-security-council-report)
+        
+    *   [Contact](/contact)
+        
+    *   [Subscribe](/subscribe)
+        
+    *   [Sitemap](/scr-sitemap)
+        
+
+Copyright © 2025 Security Council Report
+
+#### Subscribe to receive SCR publications The frustrations of these members are apparently deepened by the possibility of the US still using its veto tomorrow.
+
+It seems that during the 16 October [closed consultations](https://www.securitycouncilreport.org/whatsinblue/2024/10/the-middle-east-including-the-palestinian-question-briefing-and-consultations-on-the-situation-in-northern-gaza.php)
+ on “The situation in the Middle East, including the Palestinian question”, Algeria asked Guyana, as the E10 coordinator for the month of October, to start consultations on a new Security Council product on the war in Gaza. (For background on the situation in Gaza, see the [brief](https://www.securitycouncilreport.org/monthly-forecast/2024-11/the-middle-east-including-the-palestinian-question-18.php)
+ on “The Middle East, including the Palestinian Question” in our November 2024 _Monthly Forecast_ and our 11 November _What’s in Blue_ [story](https://www.securitycouncilreport.org/whatsinblue/2024/11/briefing-on-risk-of-famine-in-northern-gaza.php)
+.)
+
+_Negotiations on the Draft Resolution_
+
+Negotiations on the draft resolution were difficult, with several Council members apparently disappointed with the low level of ambition of the draft text in blue following various compromises made in an attempt to secure an abstention from the US, Israel’s key ally at the Security Council. Similarly to the press statement, the draft text in blue does not include language “rejecting” actions undermining UNRWA’s mandate, but underscores that UNRWA “remains the backbone” of the humanitarian response in Gaza, calls on all parties to enable UNRWA to carry out its mandate, and welcomes the Secretary-General’s and UNRWA’s commitment to implement the recommendations of an independent review which evaluated UNRWA’s adherence to neutrality principles.
+
+At the same time, a request from the US for language establishing a standing mechanism to review allegations raised by Israel regarding UNRWA employees being affiliated with Hamas was not included in the draft resolution. This position is close to the long-held US stance that the two calls should be linked in line with the US position in the indirect negotiations between Israel and Hamas. This revision was apparently a key factor for Japan in joining the other elected members in sponsoring the draft resolution.
+
+However, the US apparently still found that this formulation, which had been used to overcome similar differences during the [negotiations](https://www.securitycouncilreport.org/whatsinblue/2024/03/the-middle-east-including-the-palestinian-question-yesterdays-adoption-and-todays-briefing-and-consultations.php)
+ on resolution 2728, fell short of its request for an explicit conditional link between the two demands, such as the one featured in resolution 2735. At the time of writing, it was unclear whether the US will accept this compromise and the draft in blue remains unchanged.
+
+Language on persons detained by the parties still features virtually unchanged in the draft in blue, but as a stand-alone paragraph, which apparently reflects a US request not to suggest “an equivalence” between the hostages taken in Israel held captive by Palestinian armed groups and Palestinians prisoners detained by Israel by addressing them in the same paragraph.
+
+Another major issue of contention was language in the early drafts of the resolution determining—in line with [Article 39](https://www.un.org/en/about-us/un-charter/chapter-7)
+ of the UN Charter—that the situation in the Gaza Strip and the regional escalation constitute a threat to international peace and security. It seems, however, that the US still sought the deletion of this language, a request that was not reflected in the draft in blue.
+
+It appears that the US also objected to language recalling the provisional orders of the International Court of Justice (ICJ) in South Africa’s [case](https://www.icj-cij.org/case/192)
+ against Israel on the Application of the Convention on the Prevention and Punishment of the Crime of Genocide in the Gaza Strip. It also rejects “any effort to starve Palestinians” and demands immediate access to basic services and humanitarian assistance for civilians in Gaza, and the facilitation of entry of humanitarian assistance at scale and its delivery, including to “civilians in besieged north Gaza”.
+
+_Background_
+
+This will be the twelfth time the Security Council votes on a draft resolution on the war in Gaza."
+
+# Your Summary
+
+
+
+===== > RESPONSE:  < =====
+The Security Council Report published on November 19, 2024, discusses a draft resolution on the war in Gaza between Israel and Hamas. The report mentions the US's stance on the resolution and its potential use of a veto.
+
+_________________________
+
+
+
+SummarizeResultPrompt - QUERY:
+
+# Instructions
+In order to find evidence that helps your fact-check, you just ran a web search which yielded a Search Result. **Your task right now is to summarize the Search Result.** What to include:
+* information that might be useful for the fact-check (see Record)
+* relevant images (refer to images by inserting their reference <image:k>)
+* if available: the release date as well as the author or the publisher (e.g. the media company) of the search result.
+
+Do NOT include:
+* advertisements
+* any other information not related to the Record or the Claim
+
+Additional rules:
+* Do not add any additional information besides the information in the Search Result.
+* If the Search Result doesn't contain any relevant information for the fact-checking work, simply print one word in capital letters: "NONE".
+* Keep your writing style like in the Examples 1, 2 and 3 provided to you.
+* Try to filter out relevant information even if the search result is in a different language.
+
+# Example 1
+The search result from America Today provides several photographs of the Notre-Dame Cathedral fire on April 15, 2019. <image:i>, <image:j>, <image:k>. None of the images show the Eiffel Tower in the background. 
+
+# Example 2
+NONE
+
+# Example 3
+The Guardian discusses a report blaming the Syrian government for a toxic gas attack and condemning their use of chemical weapons. The Guardian mentions the Chemical Weapons Convention and the responsibilities of Syria under the convention. According to The Guardian, The White House condemned the Assad regime for defying the norm against chemical weapons use.
+
+# Record
+## Claim
+Claim: "The US reinstituted draft in 2024 for the Israel-Hamas war."
+
+## Actions
+```
+web_search("US draft Israel-Hamas war 2024")
+```
+
+# Search Result
+From [Source](https://press.un.org/en/2024/sc15907.doc.htm): 
+Content: "could not support the unconditional ceasefire that failed to release the hostages.  “We heard that some desired the US veto rather than a consensus product,” he observed, emphasizing that his Government has done more than any other country to improve the humanitarian conditions in Gaza.
+
+“The draft resolution this Council failed to adopt today sought only to break its deafening silence,” stressed Algeria’s delegate, noting that the text, although far from ideal, represented a “bare minimum that should have united us”.  Instead, today’s message to Israel is that “you may continue your genocide” and “in this Chamber, you enjoy immunity”, he said, adding that the message to Palestinians is also clear:  “While the overwhelming majority of the world stands in solidarity with your plight, tragically, others remain indifferent to your suffering.”
+
+The representative of the Russian Federation stated:  “We will not allow the United States to muzzle the voice of the Council and continue emboldening further merciless operations by Israel”, calling Washington, D.C.’s “cold and cynical” opposition to saving lives — “inhumane”.  “You today have definitively shown that you are fully responsible for the death of tens of thousands of innocent civilians,” he continued, observing that, if adopted, the resolution would have sent a clear signal to the parties to end violence and move to a diplomatic settlement.
+
+In the same vein, China’s delegate said that the United States’ long use of the veto has dashed the hope of people of Gaza of survival.  Noting that “so-called” diplomatic negotiations — conducted by the United States — have seen no progress, he observed that its continued weapons supply has become a decisive factor in the war lasting so long.  “Insistence on setting a precondition to ceasefire is tantamount to giving a green light to continuing war”, he said, stating that Israel’s military operation has long exceeded the scope of rescuing hostages.
+
+Meanwhile, the representative of Ecuador pointed out that, for the second time in 2024, the 10 elected Council members “accepted the challenge” of drafting a text that would be acceptable to all the organ’s members and would allow it to fulfil its responsibilities “in the face of a pressing situation”.  “Fourteen votes in favour are a clear indication that the draft resolution put forward was ‘timely and appropriate’”, he stated. Adding to that France’s delegate stated that “international humanitarian law is being trampled underfoot”.
+
+“There is an entire generation of children in Gaza we are failing,” lamented Slovenia’s delegate, joined by the representatives of the Republic of Korea and Malta in regretting the non-adoption of the text.  Japan’s representative added that without collective action, “children in Gaza — the future of Gaza — will continue to pay the high price of this conflict”. For his part, Sierra Leone’s delegate emphasized that, if adopted, the text would have allowed the Council to “unite its strength to save humanity from destruction”.
+
+Offering a different perspective, the speaker for Switzerland underscored that Israel, as an occupying Power, has a duty to ensure that the basic needs in the occupied Palestinian territories are met.  “Israel must take urgent action to alleviate this crisis,” stressed the United Kingdom’s delegate, Council President for November, speaking in her national capacity. Voicing regret that consensus was not reached, she affirmed her country’s unwavering commitment to realize the vision of the text.
+
+However, the representative of Israel said that today’s resolution was not a path to peace — “it was a road map to more terror, more suffering and more bloodshed”. “Many of you attempted to pass this injustice,” he added, thanking the United States for using its veto and refusing to abandon the hostages and their families.  Had the text passed, the Council would have sent a message to the world that terrorists can act with impunity and would have “validated their \[Hamas\] strategy of using human shields, targeting civilians and tormenting hostages in their terror dungeons”.
+
+Further, “it would have set a horrifying precedent that terrorism pays”, he said — “that violence is met not with condemnation, but with concessions”.  The Council has already adopted four resolutions demanding the release of hostages, and Hamas has ignored them all.  While the loss of civilian life in Gaza is a tragedy, he stressed that “it is a tragedy authored by Hamas”.  He concluded:  “If Hamas were to release the hostages and surrender their weapons, not one more shot would need to be fired; but, until that day comes, Israel will do whatever it takes to protect its people and bring our loved ones home.”
+
+“The world should not grow accustomed to the death of Palestinians,” stressed the observer of the State of Palestine, adding:  “Maybe — for some — we have the wrong nationality, the wrong faith, the wrong skin colour; but we are humans, and we should be treated as such.”  Although a ceasefire “doesn’t resolve everything, but it is the first step to resolving anything”, he said.  Questioning whether international law applies differently to Israel than to the rest of the world, he asked:  “What the hell does Israel need to do more for this Council to act under Chapter VII?”  The world is witnessing an attempt to annihilate a nation, and yet the very tools designed to respond to such a situation are not being used. 
+
+“This self-inflicted powerlessness has to stop,” he urged.  The message that would have been sent by today’s resolution — trying to save lives — was not a dangerous one; rather, its veto is a dangerous message to Israel that it can continue executing its plans.  “And the messages we send do matter, and that is the wrong message at the worst possible time,” he stressed.  Adding that, one day, people will examine the records of these meetings and wonder how a genocide known to the whole world was able to continue for so long, he stated:  “It is because we are allowed to speak about the rules, but not to enforce them.”
+
+_**NEW – Follow real-time meetings coverage on our**_ [_**LIVE blog**_](https://press.un.org/en/live)
+_**.**_
+
+[Middle East](/en/middle-east)
+
+[Israel](/en/israel)
+
+[State of Palestine](/en/state-palestine)
+
+[Palestinian issues](/en/palestinian-issues)
+
+For information media. [Skip to main content / navigation](#main-content)
+
+[![United Nations](/themes/custom/un3/un3_base/images/logos/UN_logo_en.svg)](https://www.un.org/en "United Nations")
+
+[Meetings Coverage and Press Releases](/en "Meetings Coverage and Press Releases")
+
+English Search
+
+Site Search 
+
+Search
+
+[Meetings Coverage and Press Releases](/en "Meetings Coverage and Press Releases")
+
+[](#main-content)
+
+In progress at UNHQ
+-------------------
+
+[Live Meetings Coverage](/en/live)
+
+[Meetings Coverage](/en/meetings-coverage)
+
+*   [Security Council](/en/security-council)
+    
+
+9790th Meeting (AM)
+
+SC/15907
+
+20 November 2024
+
+Security Council Fails to Adopt Resolution Demanding Immediate Ceasefire in Gaza, as United States Casts Negative Vote
+======================================================================================================================
+
+The Security Council today failed to adopt a text, put forward by its 10 elected members, that called for an immediate, unconditional and permanent ceasefire in Gaza and demanded the release of all hostages, on account of a negative vote cast by a permanent member.
+
+Introducing the draft resolution, the representative of Guyana said the text was prompted by the Council’s deep concern over the catastrophic humanitarian situation in Gaza and a need for an urgent response.  She observed that the release of hostages is one of the most important provisions of the text.  Spotlighting broad consensus, she noted that, while several divergent positions have found a balance in the text, the dominant concern has been to provide a legally binding obligation to end the hostilities.
+
+Although the vote that followed garnered support for the resolution from 14 Council members, the text was not adopted due to a veto cast by the United States.
+
+If adopted, the resolution would have demanded Gaza’s civilian population be given access to basic services, while it would have rejected any effort to starve Palestinians and would have demanded humanitarian assistance at scale.  Further, it would have also demanded the release of hostages, the exchange of Palestinian prisoners and the return of Palestinian civilians to all areas in Gaza, as it would have also underscored that the UN Relief and Works Agency for Palestine Refugees in the Near East (UNRWA) remains a backbone of humanitarian response.
+
+However, the representative of the United States said that “this resolution would have sent a dangerous message to Hamas:  there is no need to come back to the negotiating table”, recalling that the group has rejected “deal after deal after deal”.  More so, Washington, D.C. Not an official record.
+
+[Facebook](https://www.facebook.com/sharer.php?u=https://press.un.org/en/2024/sc15907.doc.htm "Share this via Facebook")
+ [Twitter](https://twitter.com/intent/tweet?text=Security Council Fails to Adopt Resolution Demanding Immediate Ceasefire in Gaza, as United States Casts Negative Vote&url=https://press.un.org/en/2024/sc15907.doc.htm "Share this via Twitter")
+ [Email](mailto:?subject=Security Council Fails to Adopt Resolution Demanding Immediate Ceasefire in Gaza, as United States Casts Negative Vote&body=https://press.un.org/en/2024/sc15907.doc.htm "Share this via Email")
+ Print [LinkedIn](http://www.linkedin.com/shareArticle?mini=true&url=https://press.un.org/en/2024/sc15907.doc.htm&title=Security Council Fails to Adopt Resolution Demanding Immediate Ceasefire in Gaza, as United States Casts Negative Vote "Share this via LinkedIn")"
+
+# Your Summary
+
+
+
+===== > RESPONSE:  < =====
+The United Nations website reports on a Security Council meeting on November 20, 2024, where a resolution demanding an immediate ceasefire in Gaza and the release of hostages failed to pass due to a veto by the United States. The resolution was supported by 14 Council members. The article also mentions the US's stance on the resolution and the perspectives of other countries involved.
+
+_________________________
+
+
+
+SummarizeSummariesPrompt - QUERY:
+
+# Instructions
+You just retrieved web sources, each one summarized under "Web Sources". **Your task right now is to summarize the web source summaries.**
+
+Always adhere to the following rules:
+* Write only one to two paragraphs.
+* Include all URLs from the listed sources. Format them as Markdown hyperlinks.
+* Do not add any additional information besides the information in the summaries.
+* Include references (<image:k>) to all relevant images.
+
+# Record
+## Claim
+Claim: "The US reinstituted draft in 2024 for the Israel-Hamas war."
+
+## Actions
+```
+web_search("US draft Israel-Hamas war 2024")
+```
+
+## Web Sources
+**Web Search Result**
+
+From [Source](https://news.un.org/en/story/2024/11/1157216): 
+Content: The UN News published an article on November 20, 2024, stating that the United States vetoed a UN Security Council draft resolution demanding an immediate and unconditional ceasefire in the Gaza Strip. <image:1>.
+
+
+From [Source](https://www.securitycouncilreport.org/whatsinblue/2024/11/vote-on-a-draft-resolution-on-the-war-in-gaza.php): 
+Content: The Security Council Report published on November 19, 2024, discusses a draft resolution on the war in Gaza between Israel and Hamas. The report mentions the US's stance on the resolution and its potential use of a veto.
+
+
+From [Source](https://press.un.org/en/2024/sc15907.doc.htm): 
+Content: The United Nations website reports on a Security Council meeting on November 20, 2024, where a resolution demanding an immediate ceasefire in Gaza and the release of hostages failed to pass due to a veto by the United States. The resolution was supported by 14 Council members. The article also mentions the US's stance on the resolution and the perspectives of other countries involved.
+
+
+## Your Summary
+
+
+
+===== > RESPONSE:  < =====
+The UN News published an article on November 20, 2024, stating that the United States vetoed a UN Security Council draft resolution demanding an immediate and unconditional ceasefire in the Gaza Strip (<image:1>). The Security Council Report published on November 19, 2024, discusses a draft resolution on the war in Gaza between Israel and Hamas.
+
+The United Nations website reports on a Security Council meeting on November 20, 2024, where a resolution demanding an immediate ceasefire in Gaza and the release of hostages failed to pass due to a veto by the United States.
+
+Relevant URLs:
+*   [https://news.un.org/en/story/2024/11/1157216](https://news.un.org/en/story/2024/11/1157216)
+*   [https://www.securitycouncilreport.org/whatsinblue/2024/11/vote-on-a-draft-resolution-on-the-war-in-gaza.php](https://www.securitycouncilreport.org/whatsinblue/2024/11/vote-on-a-draft-resolution-on-the-war-in-gaza.php)
+*   [https://press.un.org/en/2024/sc15907.doc.htm](https://press.un.org/en/2024/sc15907.doc.htm)
+
+_________________________
+
+
+
+DevelopPrompt - QUERY:
+
+# Instructions
+You just retrieved new Evidence. Now, **analyze the Claim's veracity using the evidence**. Always adhere to the following rules:
+* Focus on developing new insights. Do not repeat larger parts from the Record. Do not restate the Claim.
+* Write down your thoughts step-by-step. Whenever necessary, you may elaborate in more detail.
+* Depending on the topic's complexity, invest one to three paragraphs. The fewer, the better.
+* If you find that there is insufficient information to verify the Claim, explicitly state what information is missing.
+* If you cite web sources, always refer to them by including their URL as a Markdown hyperlink.
+* **Use information only from the recorded evidence**: Avoid inserting information that is not implied by the evidence. You may use commonsense knowledge, though.
+
+# Record
+## Claim
+Claim: "The US reinstituted draft in 2024 for the Israel-Hamas war."
+
+## Actions
+```
+web_search("US draft Israel-Hamas war 2024")
+```
+
+## Evidence
+### Evidence from `web_search`
+The UN News published an article on November 20, 2024, stating that the United States vetoed a UN Security Council draft resolution demanding an immediate and unconditional ceasefire in the Gaza Strip (<image:1>). The Security Council Report published on November 19, 2024, discusses a draft resolution on the war in Gaza between Israel and Hamas.
+
+The United Nations website reports on a Security Council meeting on November 20, 2024, where a resolution demanding an immediate ceasefire in Gaza and the release of hostages failed to pass due to a veto by the United States.
+
+Relevant URLs:
+*   [https://news.un.org/en/story/2024/11/1157216](https://news.un.org/en/story/2024/11/1157216)
+*   [https://www.securitycouncilreport.org/whatsinblue/2024/11/vote-on-a-draft-resolution-on-the-war-in-gaza.php](https://www.securitycouncilreport.org/whatsinblue/2024/11/vote-on-a-draft-resolution-on-the-war-in-gaza.php)
+*   [https://press.un.org/en/2024/sc15907.doc.htm](https://press.un.org/en/2024/sc15907.doc.htm)
+
+
+# Your Analysis
+
+
+
+===== > RESPONSE:  < =====
+The provided evidence does not contain any information about the US reinstituting the draft in 2024 for the Israel-Hamas war. The search results focus on the US's actions within the UN regarding the conflict, specifically its veto of a ceasefire resolution.
+
+The evidence is insufficient to verify the claim.
+
+_________________________
+
+
+
+JudgePrompt - QUERY:
+
+# Instructions
+**Determine the Claim's veracity** by following these steps:
+1. Briefly summarize the key insights from the fact-check (see Record) in at most one paragraph.
+2. Write one paragraph about which one of the Decision Options applies best. Include the most appropriate decision option at the end and enclose it in backticks like `this`.
+
+
+
+
+## Decision Options
+* `not enough information`: The fact-check does not contain sufficient information to come to an conclusion. For example,there is substantial lack of evidence or the evidence is inconclusive, conflicting or self-contradictory. In the case of a lack of evidence, state which information exactly is missing. In particular, if no RESULTS or sources are available, pick this decision.
+* `false`: The claim is not factually accurate. This is the case if one of the following three conditions is met:(1) The claim is demonstrably false when it is disproven by evidence from multiple and reliable sources,(2) The claim or image is taken out of context, i.e. the origin, content and/or meaning of a statement or an image is misrepresented. For example, an old claim or an old image is mispresented in a new context in a misleading way,(3) There is not enough evidence to verify the claim or the evidence is conflicting or self-contradictory.
+* `true`: The claim is factually accurate when it is confirmed by evidence from multiple and reliable sources.
+
+# Record
+## Claim
+Claim: "The US reinstituted draft in 2024 for the Israel-Hamas war."
+
+## Actions
+```
+web_search("US draft Israel-Hamas war 2024")
+```
+
+## Evidence
+### Evidence from `web_search`
+The UN News published an article on November 20, 2024, stating that the United States vetoed a UN Security Council draft resolution demanding an immediate and unconditional ceasefire in the Gaza Strip (<image:1>). The Security Council Report published on November 19, 2024, discusses a draft resolution on the war in Gaza between Israel and Hamas.
+
+The United Nations website reports on a Security Council meeting on November 20, 2024, where a resolution demanding an immediate ceasefire in Gaza and the release of hostages failed to pass due to a veto by the United States.
+
+Relevant URLs:
+*   [https://news.un.org/en/story/2024/11/1157216](https://news.un.org/en/story/2024/11/1157216)
+*   [https://www.securitycouncilreport.org/whatsinblue/2024/11/vote-on-a-draft-resolution-on-the-war-in-gaza.php](https://www.securitycouncilreport.org/whatsinblue/2024/11/vote-on-a-draft-resolution-on-the-war-in-gaza.php)
+*   [https://press.un.org/en/2024/sc15907.doc.htm](https://press.un.org/en/2024/sc15907.doc.htm)
+
+
+## Elaboration
+The provided evidence does not contain any information about the US reinstituting the draft in 2024 for the Israel-Hamas war. The search results focus on the US's actions within the UN regarding the conflict, specifically its veto of a ceasefire resolution.
+
+The evidence is insufficient to verify the claim.
+
+
+# Your Judgement
+
+
+
+===== > RESPONSE:  < =====
+The search results focus on the US's actions within the UN regarding the conflict, specifically its veto of a ceasefire resolution. However, the evidence does not contain any information about the US reinstituting the draft in 2024 for the Israel-Hamas war.
+
+`not enough information`
+
+_________________________
+
+
+
+PlanPrompt - QUERY:
+
+# Instructions
+The available knowledge is insufficient to assess the Claim. Therefore, **propose a set of actions** to retrieve new and helpful evidence. Adhere to the following rules:
+* The actions available are listed under Valid Actions, including a short description for each action. No other actions are possible at this moment. 
+* For each action, use the formatting as specified in Valid Actions.
+* Include all actions in a single Markdown code block at the end of your answer.
+* Propose as few actions as possible, but as much as needed. Do not propose similar or previously used actions.
+
+
+
+## Valid Actions
+* `web_search`
+   * Description: Run an open web search on Google or DuckDuckGO to retrieve any related webpage.
+   * How to use: Do not use this with a previously used or similar query from previous web searches. If a previous web search did not yield any results, use a very different query.
+   * Format: web_search("your web search query goes here")
+
+* `image_search`
+   * Description: Run an image search on Google to retrieve related images for a given query.
+   * How to use: This is a helpful tool for fact-checking images. Use this to retrieve images associated with a specific keyword or phrase. Ensure that the query is clear and specific to improve search accuracy. If no relevant images are found, refine the query or use more descriptive terms.
+   * Format: image_search("your image search query goes here")
+
+* `reverse_search`
+   * Description: Performs a reverse image search to find similar images on the web.
+   * How to use: Provide an image and the model will perform a reverse search to find similar images.
+   * Format: reverse_search(<image:k>), where `k` is the image's ID
+
+# Example: web_search()
+
+## Claim
+Text: "New Zealand’s new Food Bill bans gardening"
+Claim date: October 29, 2020
+
+...
+
+## Actions
+```
+web_search("New Zealand Food Bill 2020")
+web_search("New Zealand Food Bill gardening ban")
+```
+
+# Example: image_search()
+
+## Claim
+Text: "Chinese officials in white protective hazmat suits carried people down a hallway to be quarantined for having COVID-19 in November 2022."
+
+...
+
+ACTIONS:
+```
+image_search("China officials white suits carry people")
+image_search("China officials carry people COVID quarantine 2022")
+```
+
+# Example: reverse_search()
+
+## Claim
+Text: "<image:k> shows a rare event of a solar eclipse with a double ring."
+
+...
+
+## Actions
+```
+reverse_search(<image:k>)
+```
+
+# Record
+## Claim
+Claim: "The US reinstituted draft in 2024 for the Israel-Hamas war."
+
+## Actions
+```
+web_search("US draft Israel-Hamas war 2024")
+```
+
+## Evidence
+### Evidence from `web_search`
+The UN News published an article on November 20, 2024, stating that the United States vetoed a UN Security Council draft resolution demanding an immediate and unconditional ceasefire in the Gaza Strip (<image:1>). The Security Council Report published on November 19, 2024, discusses a draft resolution on the war in Gaza between Israel and Hamas.
+
+The United Nations website reports on a Security Council meeting on November 20, 2024, where a resolution demanding an immediate ceasefire in Gaza and the release of hostages failed to pass due to a veto by the United States.
+
+Relevant URLs:
+*   [https://news.un.org/en/story/2024/11/1157216](https://news.un.org/en/story/2024/11/1157216)
+*   [https://www.securitycouncilreport.org/whatsinblue/2024/11/vote-on-a-draft-resolution-on-the-war-in-gaza.php](https://www.securitycouncilreport.org/whatsinblue/2024/11/vote-on-a-draft-resolution-on-the-war-in-gaza.php)
+*   [https://press.un.org/en/2024/sc15907.doc.htm](https://press.un.org/en/2024/sc15907.doc.htm)
+
+
+## Elaboration
+The provided evidence does not contain any information about the US reinstituting the draft in 2024 for the Israel-Hamas war. The search results focus on the US's actions within the UN regarding the conflict, specifically its veto of a ceasefire resolution.
+
+The evidence is insufficient to verify the claim.
+
+
+# Your Actions
+
+
+
+===== > RESPONSE:  < =====
+```
+web_search("US military draft status 2024")
+```
+_________________________
+
+
+
+SummarizeResultPrompt - QUERY:
+
+# Instructions
+In order to find evidence that helps your fact-check, you just ran a web search which yielded a Search Result. **Your task right now is to summarize the Search Result.** What to include:
+* information that might be useful for the fact-check (see Record)
+* relevant images (refer to images by inserting their reference <image:k>)
+* if available: the release date as well as the author or the publisher (e.g. the media company) of the search result.
+
+Do NOT include:
+* advertisements
+* any other information not related to the Record or the Claim
+
+Additional rules:
+* Do not add any additional information besides the information in the Search Result.
+* If the Search Result doesn't contain any relevant information for the fact-checking work, simply print one word in capital letters: "NONE".
+* Keep your writing style like in the Examples 1, 2 and 3 provided to you.
+* Try to filter out relevant information even if the search result is in a different language.
+
+# Example 1
+The search result from America Today provides several photographs of the Notre-Dame Cathedral fire on April 15, 2019. <image:i>, <image:j>, <image:k>. None of the images show the Eiffel Tower in the background. 
+
+# Example 2
+NONE
+
+# Example 3
+The Guardian discusses a report blaming the Syrian government for a toxic gas attack and condemning their use of chemical weapons. The Guardian mentions the Chemical Weapons Convention and the responsibilities of Syria under the convention. According to The Guardian, The White House condemned the Assad regime for defying the norm against chemical weapons use.
+
+# Record
+## Claim
+Claim: "The US reinstituted draft in 2024 for the Israel-Hamas war."
+
+## Actions
+```
+web_search("US draft Israel-Hamas war 2024")
+```
+
+## Evidence
+### Evidence from `web_search`
+The UN News published an article on November 20, 2024, stating that the United States vetoed a UN Security Council draft resolution demanding an immediate and unconditional ceasefire in the Gaza Strip (<image:1>). The Security Council Report published on November 19, 2024, discusses a draft resolution on the war in Gaza between Israel and Hamas.
+
+The United Nations website reports on a Security Council meeting on November 20, 2024, where a resolution demanding an immediate ceasefire in Gaza and the release of hostages failed to pass due to a veto by the United States.
+
+Relevant URLs:
+*   [https://news.un.org/en/story/2024/11/1157216](https://news.un.org/en/story/2024/11/1157216)
+*   [https://www.securitycouncilreport.org/whatsinblue/2024/11/vote-on-a-draft-resolution-on-the-war-in-gaza.php](https://www.securitycouncilreport.org/whatsinblue/2024/11/vote-on-a-draft-resolution-on-the-war-in-gaza.php)
+*   [https://press.un.org/en/2024/sc15907.doc.htm](https://press.un.org/en/2024/sc15907.doc.htm)
+
+
+## Elaboration
+The provided evidence does not contain any information about the US reinstituting the draft in 2024 for the Israel-Hamas war. The search results focus on the US's actions within the UN regarding the conflict, specifically its veto of a ceasefire resolution.
+
+The evidence is insufficient to verify the claim.
+
+
+## Actions
+```
+web_search("US military draft status 2024")
+```
+
+# Search Result
+From [Source](https://www.foxla.com/news/military-defense-bill-draft-2024): 
+Content: "[](#)
+
+!SUGGESTED COVERAGE: US sends military advisors to Israel <image:13438>
+
+#### [SUGGESTED COVERAGE: US sends military advisors to Israel](/video/1300635)
+
+The Pentagon has sent military advisers, including a Marine Corps general versed in urban warfare, to Israel to aid in its war planning and is speeding multiple sophisticated air defense systems to the Middle East days ahead of an anticipated ground assault into Gaza.
+
+**LOS ANGELES** - The House of Representatives passed a measure on Friday automatically registering men aged 18 to 26 for selective service.
+
+It was part of the annual National Defense Authorization Act (NDAA), which sets out the [U.S.](https://www.foxla.com/tag/us)
+ government’s [military](https://www.foxla.com/tag/military)
+ and national security priorities over the next fiscal year. 
+
+**RELATED:** [**House passes defense bill automatically registering men 18-26 for draft**](https://www.foxla.com/news/house-passes-defense-bill-automatically-registering-men-18-26-draft)
+
+While it hasn’t been invoked in over half a century, it’s mandatory for all male U.S. Failure to register is classified as a felony and comes with a host of legal challenges.
+
+While there isn't currently a draft in place, Congress and the president can reinstate the draft and force male citizens to serve in the military in the event of a national emergency or war that all-volunteer military can't adequately support.
+
+**RELATED:** [**US military draft: What you need to know**](https://www.foxla.com/news/us-military-draft-age-iran-israel-drone-attack)
+
+Here's what you need to know about the military draft. 
+
+What is the draft?
+------------------
+
+The military draft - officially known as the [Selective Service System -](https://www.sss.gov/)
+ requires nearly all male [U.S.](https://www.foxla.com/tag/us)
+ citizens and male immigrants ages 18 to 25 to register with the government, in accordance with federal law. 
+
+"The Selective Service System and the registration requirement for America’s young men provide our Nation with a structure and a system of guidelines which will provide the most prompt, efficient, and equitable draft possible, if the country should need it," the official website explains.
+
+The selective service is a government bureau separate from the Defense of Defense.
+
+Who needs to register?
+----------------------
+
+Almost all men who are 18-25 years old and live in the U.S. A conscientious objector is one who is opposed to serving in the [armed forces](http://www.military.com/join-armed-forces)
+ and/or bearing arms on the grounds of moral or religious principles.
+
+If you served on active duty and were discharged before your 26th birthday, you still have to register.
+
+If you are 26 or older, it's too late to register.
+
+You can see the Selective Service's [full list of requirements here.](https://www.sss.gov/register/who-needs-to-register/)
+
+Are women eligible to register for the draft?
+---------------------------------------------
+
+The law currently requires that only men register with Selective Service. Afterward, a publicly attended, nationally televised and live-streamed lottery is conducted. [You can learn more about the process here.](https://www.sss.gov/about/return-to-draft/#s1)
+
+_The Associated Press and FOX News contributed to this report._
+
+[Military](/tag/military)
+[U.S.](/tag/us)
+[Instastories](/tag/series/instastories) citizens to register for the selective service, also known as the military draft, when they turn 18. In the event that the law is changed to include registering women, "Selective Service is prepared to expand registration," the website reads.
+
+What if you don't register?
+---------------------------
+
+According to law, it is considered a federal felony, punishable by a fine of up to $250,000 or a prison term of up to five years, or a combination of both, if you fail to register with Selective Service.
+
+A felony conviction means you lose your right to vote and the right to own, possess and use a firearm, among other things.
+
+How do you register?
+--------------------
+
+The easiest way to register is [online.](https://www.sss.gov/register/)
+
+Forms are also available at post offices, high schools, and DMV locations.
+
+If implemented, how would the draft work?
+-----------------------------------------
+
+According to the Selective Service, the draft, if implemented, would have similarities to that of the Vietnam War. 
+
+That means the Selective Service would most likely hold a draft lottery based on dates of birth. Each succeeding year, a draft eligible man drops into the next lower priority group until he has reached his 26th birthday, at which time he is over the age of liability for the draft.
+
+If you're drafted, will you automatically go to combat?
+-------------------------------------------------------
+
+It's important to note that even though someone is registered and their number is called, they may not be inducted automatically into the military. They may be eligible for a deferment; categories might include married persons or college students.
+
+You may also be excluded for medical or psychological reasons, may declare yourself to be a conscientious objector, or may even be able to enlist in a specific branch or career field to avoid combat duty.
+
+In the event a national emergency required a draft, the Selective Service has protocol in place for when that happens.
+
+First, the president and Congress would need to authorize the draft. must register for Selective Service. citizens who live outside the country
+*   Immigrants (legal permanent residents and undocumented immigrants)
+*   Refugees and asylum seekers
+*   Transgender people who were assigned male gender at birth
+*   People with disabilities
+
+If you are a military veteran or a military reservist, you are still required to register with Selective Service."
+
+# Your Summary
+
+
+
+===== > RESPONSE:  < =====
+Fox LA published an article discussing the National Defense Authorization Act (NDAA), which includes a measure automatically registering men aged 18 to 26 for selective service. The article mentions that the Pentagon has sent military advisors to Israel. <image:13438>
+
+_________________________
+
+
+
+SummarizeResultPrompt - QUERY:
+
+# Instructions
+In order to find evidence that helps your fact-check, you just ran a web search which yielded a Search Result. **Your task right now is to summarize the Search Result.** What to include:
+* information that might be useful for the fact-check (see Record)
+* relevant images (refer to images by inserting their reference <image:k>)
+* if available: the release date as well as the author or the publisher (e.g. the media company) of the search result.
+
+Do NOT include:
+* advertisements
+* any other information not related to the Record or the Claim
+
+Additional rules:
+* Do not add any additional information besides the information in the Search Result.
+* If the Search Result doesn't contain any relevant information for the fact-checking work, simply print one word in capital letters: "NONE".
+* Keep your writing style like in the Examples 1, 2 and 3 provided to you.
+* Try to filter out relevant information even if the search result is in a different language.
+
+# Example 1
+The search result from America Today provides several photographs of the Notre-Dame Cathedral fire on April 15, 2019. <image:i>, <image:j>, <image:k>. None of the images show the Eiffel Tower in the background. 
+
+# Example 2
+NONE
+
+# Example 3
+The Guardian discusses a report blaming the Syrian government for a toxic gas attack and condemning their use of chemical weapons. The Guardian mentions the Chemical Weapons Convention and the responsibilities of Syria under the convention. According to The Guardian, The White House condemned the Assad regime for defying the norm against chemical weapons use.
+
+# Record
+## Claim
+Claim: "The US reinstituted draft in 2024 for the Israel-Hamas war."
+
+## Actions
+```
+web_search("US draft Israel-Hamas war 2024")
+```
+
+## Evidence
+### Evidence from `web_search`
+The UN News published an article on November 20, 2024, stating that the United States vetoed a UN Security Council draft resolution demanding an immediate and unconditional ceasefire in the Gaza Strip (<image:1>). The Security Council Report published on November 19, 2024, discusses a draft resolution on the war in Gaza between Israel and Hamas.
+
+The United Nations website reports on a Security Council meeting on November 20, 2024, where a resolution demanding an immediate ceasefire in Gaza and the release of hostages failed to pass due to a veto by the United States.
+
+Relevant URLs:
+*   [https://news.un.org/en/story/2024/11/1157216](https://news.un.org/en/story/2024/11/1157216)
+*   [https://www.securitycouncilreport.org/whatsinblue/2024/11/vote-on-a-draft-resolution-on-the-war-in-gaza.php](https://www.securitycouncilreport.org/whatsinblue/2024/11/vote-on-a-draft-resolution-on-the-war-in-gaza.php)
+*   [https://press.un.org/en/2024/sc15907.doc.htm](https://press.un.org/en/2024/sc15907.doc.htm)
+
+
+## Elaboration
+The provided evidence does not contain any information about the US reinstituting the draft in 2024 for the Israel-Hamas war. The search results focus on the US's actions within the UN regarding the conflict, specifically its veto of a ceasefire resolution.
+
+The evidence is insufficient to verify the claim.
+
+
+## Actions
+```
+web_search("US military draft status 2024")
+```
+
+# Search Result
+From [Source](https://www.military.com/join-armed-forces/will-the-military-draft-come-back): 
+Content: "The system is designed to induct draftees within 193 days of authorization.
+
+### No Current Plans for Reactivation
+
+In 2024, [The Washington Post reported](https://www.washingtonpost.com/national-security/2024/06/10/trump-military-draft-mandatory-service/)
+ that "a cluster of influential former administration officials and GOP lawmakers ... have mused aloud about a national service mandate and other measures to remedy what they see as a 'crisis' facing the all-volunteer military." However, Donald Trump responded that it was a "ridiculous idea."
+
+The same year, in an analysis for [Foreign Policy](https://foreignpolicy.com/2024/07/10/military-draft-conscription-soldiers-technology-nato-europe-russia-ukraine/)
+, political scientist Raphael S. The process would look something like this:
+
+*   **Physical and Mental Assessments:** Registrants would be evaluated at Military Entrance Processing Stations (MEPS) to check their physical and mental fitness for military service.
+*   **Eligibility Verification:** Factors such as age, health and legal status would be reviewed to confirm eligibility.
+*   **Deferments and Exemptions:** Depending on the person, some may qualify for deferments (temporary postponements) or exemptions (permanent exclusions) from service.
+
+Again, classification would only occur if Congress and the president decide to resume a draft. Any attempt to bypass Congress would be unconstitutional and almost certainly trigger massive legal, political and public pushback, including court challenges.
+
+Until that happens, registering is a precaution, not a signal that anyone's about to get called up.
+
+**Read More:** [Everything You Need to Know About the Military Draft](https://www.military.com/join-armed-forces/everything-you-need-know-about-military-selective-service-system.html)
+
+### Legal Framework for Reinstating the Draft
+
+  
+Any attempt to bring back the draft would typically be in response to the declaration of a national emergency or a large-scale war that would overburden the U.S. Cohen wrote: "After decades of becoming increasingly rare, the military draft is back in the debate."
+
+Cohen noted that, despite the fact that modern warfare often emphasizes technology and drones, many countries are reintroducing or reconsidering the military draft, because large-scale conflicts still require a significant number of people. Despite occasional public anxiety during times of global tension or military escalation, there have been no formal moves by Congress or the executive branch to bring back the draft.
+
+**Related:** [6 Reasons You Probably Won't Be Conscripted, Even if We Bring Back the Draft](https://www.military.com/join-military/contact-recruiter/6-reasons-you-probably-wont-be-conscripted-even-if-we-bring-back-draft.html)
+
+What Could Trigger a Return to the Draft?
+-----------------------------------------
+
+Although returning to the draft wouldn't happen lightly or without significant cause, possible scenarios that might trigger it include:
+
+*   A large-scale ground war that requires a big increase in troop numbers
+*   Multiple military conflicts going on around the world simultaneously, stretching U.S. At that time, those qualified for induction would have the opportunity to file claims for exemptions, deferments and postponements from military service.
+
+### Appeals and Conscientious Objection
+
+  
+Those who believe they should not be inducted due to personal beliefs or circumstances have avenues to appeal:
+
+*   **Local Draft Boards:** Registrants could present their case to a local board, which will decide whether to grant or deny their claim.
+*   **Appeal Process:** If the local board denies the claim, the individual could appeal to a district appeal board. If the district board were to deny the claim, and the vote wasn't unanimous, further appeal to the national appeal board would be possible.
+
+Those whose objections are based on moral or religious grounds -- aka conscientious objectors -- could (if approved) be assigned to noncombatant roles within the military or, in some cases, to civilian service contributing to the national health, safety or interest.
+
+For more information on conscientious objection, visit the [Conscientious Objectors](https://www.sss.gov/conscientious-objectors/)
+ page on the Selective Service System's website.
+
+You may be wondering, "What happens if you get drafted and refuse to go?" Refusing to comply with a draft order can lead to legal penalties, including fines and possible jail time.
+
+Why Are People Worried the Draft Might Come Back?
+-------------------------------------------------
+
+In recent years, a whole host of global events, political tensions and information spread online have stirred public concerns that the U.S. involvement.
+*   Heightened tensions with China over Taiwan, as regional instability could have serious international consequences.
+*   Military recruitment shortfalls, where voluntary enlistment numbers sometimes fall below targets, raising questions about future manpower.
+*   Social media misinformation and rumors, which can exaggerate or falsely claim the draft is being reinstated.
+
+The Likelihood of the Return of the Draft
+-----------------------------------------
+
+While the Selective Service System remains fully operational, the return of the military draft is considered unlikely under current circumstances. Registration was suspended in early 1975 and reinstated in 1980.
+*   All men ages 18-25 are still legally required to register with the Selective Service System.
+*   Reinstating the draft would require a new act of Congress and the president's approval.
+*   Despite online rumors and speculation, there is currently no plan or indication that a draft will be reinstated.
+*   The Selective Service System maintains a rapid activation plan to be ready if an emergency arises.
+
+Interested in Joining the Military?
+-----------------------------------
+
+We can put you in touch with recruiters from the different military branches."
+
+# Your Summary
+
+
+
+===== > RESPONSE:  < =====
+The Military.com article states that there are no current plans to reactivate the draft in 2024. It mentions discussions about a national service mandate but notes that Donald Trump called it a "ridiculous idea." The article also outlines the legal framework for reinstating the draft, which would require a declaration of national emergency or a large-scale war. It also mentions that despite online rumors, there is currently no plan or indication that a draft will be reinstated.
+
+_________________________
+
+
+
+SummarizeResultPrompt - QUERY:
+
+# Instructions
+In order to find evidence that helps your fact-check, you just ran a web search which yielded a Search Result. **Your task right now is to summarize the Search Result.** What to include:
+* information that might be useful for the fact-check (see Record)
+* relevant images (refer to images by inserting their reference <image:k>)
+* if available: the release date as well as the author or the publisher (e.g. the media company) of the search result.
+
+Do NOT include:
+* advertisements
+* any other information not related to the Record or the Claim
+
+Additional rules:
+* Do not add any additional information besides the information in the Search Result.
+* If the Search Result doesn't contain any relevant information for the fact-checking work, simply print one word in capital letters: "NONE".
+* Keep your writing style like in the Examples 1, 2 and 3 provided to you.
+* Try to filter out relevant information even if the search result is in a different language.
+
+# Example 1
+The search result from America Today provides several photographs of the Notre-Dame Cathedral fire on April 15, 2019. <image:i>, <image:j>, <image:k>. None of the images show the Eiffel Tower in the background. 
+
+# Example 2
+NONE
+
+# Example 3
+The Guardian discusses a report blaming the Syrian government for a toxic gas attack and condemning their use of chemical weapons. The Guardian mentions the Chemical Weapons Convention and the responsibilities of Syria under the convention. According to The Guardian, The White House condemned the Assad regime for defying the norm against chemical weapons use.
+
+# Record
+## Claim
+Claim: "The US reinstituted draft in 2024 for the Israel-Hamas war."
+
+## Actions
+```
+web_search("US draft Israel-Hamas war 2024")
+```
+
+## Evidence
+### Evidence from `web_search`
+The UN News published an article on November 20, 2024, stating that the United States vetoed a UN Security Council draft resolution demanding an immediate and unconditional ceasefire in the Gaza Strip (<image:1>). The Security Council Report published on November 19, 2024, discusses a draft resolution on the war in Gaza between Israel and Hamas.
+
+The United Nations website reports on a Security Council meeting on November 20, 2024, where a resolution demanding an immediate ceasefire in Gaza and the release of hostages failed to pass due to a veto by the United States.
+
+Relevant URLs:
+*   [https://news.un.org/en/story/2024/11/1157216](https://news.un.org/en/story/2024/11/1157216)
+*   [https://www.securitycouncilreport.org/whatsinblue/2024/11/vote-on-a-draft-resolution-on-the-war-in-gaza.php](https://www.securitycouncilreport.org/whatsinblue/2024/11/vote-on-a-draft-resolution-on-the-war-in-gaza.php)
+*   [https://press.un.org/en/2024/sc15907.doc.htm](https://press.un.org/en/2024/sc15907.doc.htm)
+
+
+## Elaboration
+The provided evidence does not contain any information about the US reinstituting the draft in 2024 for the Israel-Hamas war. The search results focus on the US's actions within the UN regarding the conflict, specifically its veto of a ceasefire resolution.
+
+The evidence is insufficient to verify the claim.
+
+
+## Actions
+```
+web_search("US military draft status 2024")
+```
+
+# Search Result
+From [Source](https://www.ngaus.org/newsroom/report-us-not-prepared-conduct-military-draft): 
+Content: "[Skip to main content](#main-content)
+
+×
+
+To install this webapp, tap ![share](/sites/default/files/inline-images/share-alternitive_0.png) then Add to Home Screen.
+
+×
+
+To install this webapp, please open in Safari.
+
+[![Home](/themes/custom/ngaus/logo.svg)](/)
+
+Menu
+
+Search
+
+[Advertise with Us](/advertise-us)
+
+[Advertise with Us](/advertise-us)
+
+[Advertise with Us](/advertise-us)
+
+[Advertise with Us](/advertise-us)
+
+Report: US Not Prepared to Conduct a Military Draft
+===================================================
+
+![06-25-24 WR Draft WEBSITE](/sites/default/files/styles/cover_image/public/2024-06/Mark%2006-25-24%20WR%20Draft%20WEBSITE-min_1.jpg?itok=VhLnkK25)
+
+![06-25-24 WR Draft WEBSITE](/sites/default/files/styles/cover_image/public/2024-06/Mark%2006-25-24%20WR%20Draft%20WEBSITE-min_1.jpg?itok=VhLnkK25)
+
+Washington Report
+
+June 25, 2024
+
+[](https://www.addtoany.com/share#url=https%3A%2F%2Fwww.ngaus.org%2Fnewsroom%2Freport-us-not-prepared-conduct-military-draft&title=Report%3A%20US%20Not%20Prepared%20to%20Conduct%20a%20Military%20Draft)
+
+The nation lacks the processes and systems to conduct a military draft in response to a near-peer conflict, according to a new report by a think tank based in Washington, D.C.
+
+The United States ended conscription in 1973, relying since on the all-volunteer force.
+
+But all U.S. males ages 18 to 25 are still required to register with the Selective Service System in case a draft is ever needed again.
+
+"To be clear, this report is not advocating for implementation of a draft," states the Center for a New American Security report, which was released June 18.
+
+"Rather, it is a call to ensure that if the United States ever faced an existential threat requiring the president and Congress to pass a draft, the systems, processes, and structures necessary to successfully execute it would be in place," it continues.
+
+Russia's invasion of Ukraine in 2022 demonstrates that modern conflict is still a "fundamentally human endeavor" despite technological advances, the report notes.
+
+The report cautions the draft is neither a tool to meet end-strength requirements nor achieve social policy goals, but "a matter of meeting human capital requirements for near-peer conflict."
+
+Currently, men are automatically registered for the draft when they either get a driver’s license or apply for college in at least 46 states and territories, _The Seattle Times_ reports.
+
+In 2023, the National Registration Rate was 84% for military service, and more than 15 million men had registered nationwide, [according](https://www.sss.gov/about/)
+ to the Selective Service System.
+
+CNAS's study comes as Congress is weighing changes to the SSS through provisions in the fiscal 2025 National Defense Authorization Act.
+
+The House version of the fiscal 2025 NDAA contains a provision to automatically register all eligible men, while a provision in the Senate version would require women to register for Selective Service.
+
+Neither provision is expected to survive a conference committee, which will reconcile the differences between the two bills.
+
+To develop their conclusions, CNAS officials relied on historical and comparative research, interviews with policymakers and experts, legal reviews and a draft mobilization tabletop exercise.
+
+CNAS analysts also examined past mobilization exercises conducted since the draft's end, including Nifty Nugget in 1978 and Proud Saber in 1982.
+
+The analysts additionally conducted a mock draft mobilization exercise that was geared toward implementing a draft in the wake of aggression from China.
+
+The exercise operated under the understanding that 500,000 induction notices would produce 100,000 inductees to the military services ready to ship to basic training within 193 days.
+
+Among the challenges the exercise identified: the current 18-25-year-old male population may not produce enough conscripts, the legal challenges to an all-male draft and social media playing into the perception of a draft's unfair implementation.
+
+The CNAS report made recommendations to the nation's legislative and executive branches and the SSS.
+
+Among the report's recommendations, CNAS suggests considering older individuals for a draft first as a "future combat environment" might necessitate personnel with more life experiences or advanced skills.
+
+The full CNAS report can be [found here](https://www.cnas.org/press/press-release/new-report-from-cnas-assesses-u-s-mobilization-capabilities)
+.
+
+_**— By Jennifer Hickey**_
+
+[Personnel](/topics/personnel)
+
+![](/themes/custom/ngaus/images/arrow-white.svg)
+
+Related Content
+---------------
+
+[](/newsroom/guardsmen-help-save-lives-while-dc-duty)
+
+[![GuardInDC0828251000](/sites/default/files/styles/paragraph_cta/public/2025-08/082825GuardInDC1000.jpg?h=03761151&itok=_dTVhEc8)](/newsroom/guardsmen-help-save-lives-while-dc-duty)
+
+[Guardsmen Help Save Lives While on D.C. Duty](/newsroom/guardsmen-help-save-lives-while-dc-duty)
+
+--------------------------------------------------------------------------------------------------
+
+[Read More Details](/newsroom/guardsmen-help-save-lives-while-dc-duty)
+
+[](/newsroom/ngaus-applauds-legislation-provide-medical-coverage-guardsmen-reservists)
+
+[![TRICARE0828251000](/sites/default/files/styles/paragraph_cta/public/2025-08/082825tricare1000.jpg?h=76eb16f2&itok=N5IsrC6Q)](/newsroom/ngaus-applauds-legislation-provide-medical-coverage-guardsmen-reservists)
+
+[NGAUS Applauds Legislation to Provide Medical Coverage to Guardsmen, Reservists](/newsroom/ngaus-applauds-legislation-provide-medical-coverage-guardsmen-reservists)
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+[Read More Details](/newsroom/ngaus-applauds-legislation-provide-medical-coverage-guardsmen-reservists)
+
+[](/newsroom/bill-would-provide-health-care-drilling-guardsmen)
+
+[![TRICARE0828251000](/sites/default/files/styles/paragraph_cta/public/2025-08/082825tricare1000.jpg?h=76eb16f2&itok=N5IsrC6Q)](/newsroom/bill-would-provide-health-care-drilling-guardsmen)
+
+[Bill Would Provide Health Care to Drilling Guardsmen](/newsroom/bill-would-provide-health-care-drilling-guardsmen)
+
+--------------------------------------------------------------------------------------------------------------------
+
+[Read More Details](/newsroom/bill-would-provide-health-care-drilling-guardsmen)
+
+[](/newsroom/more-guardsmen-called-support-law-enforcement)
+
+[![GuardInDC0812251000](/sites/default/files/styles/paragraph_cta/public/2025-08/081225GuardInDC1000.jpg?h=03761151&itok=7j67eVCX)](/newsroom/more-guardsmen-called-support-law-enforcement)
+
+[More Guardsmen Called to Support Law Enforcement](/newsroom/more-guardsmen-called-support-law-enforcement)
+
+------------------------------------------------------------------------------------------------------------
+
+[Read More Details](/newsroom/more-guardsmen-called-support-law-enforcement)
+
+[](/newsroom/space-force-assume-ang-space-missions)
+
+[![Space0812251000](/sites/default/files/styles/paragraph_cta/public/2025-08/081225Space1000.jpg?h=da7980be&itok=GGACJgrc)](/newsroom/space-force-assume-ang-space-missions)
+
+[Space Force to Assume ANG Space Missions](/newsroom/space-force-assume-ang-space-missions)
+
+--------------------------------------------------------------------------------------------
+
+[Read More Details](/newsroom/space-force-assume-ang-space-missions)
+
+[](/newsroom/remains-29th-id-d-day-soldier-be-buried-arlington)
+
+[![Thornton0812251000](/sites/default/files/styles/paragraph_cta/public/2025-08/081225DDay1000.jpg?h=9624e4e4&itok=KpxUfcwp)](/newsroom/remains-29th-id-d-day-soldier-be-buried-arlington)
+
+[Remains of 29th ID D-Day Soldier to be Buried at Arlington](/newsroom/remains-29th-id-d-day-soldier-be-buried-arlington)
+
+--------------------------------------------------------------------------------------------------------------------------
+
+[Read More Details](/newsroom/remains-29th-id-d-day-soldier-be-buried-arlington)
+
+[](/newsroom/bill-would-lower-health-care-some-families)
+
+[![TRICARE0729251000](/sites/default/files/styles/paragraph_cta/public/2025-07/072925TRICARE1000.jpg?h=9624e4e4&itok=FiS3aAK0)](/newsroom/bill-would-lower-health-care-some-families)
+
+[Bill Would Lower Health Care for Some Families](/newsroom/bill-would-lower-health-care-some-families)
+
+-------------------------------------------------------------------------------------------------------
+
+[Read More Details](/newsroom/bill-would-lower-health-care-some-families)
+
+[](/newsroom/ngaus-holds-second-ever-virtual-summit-retirees)
+
+[![Virtual retiree Crop](/sites/default/files/styles/paragraph_cta/public/2025-07/virtualretiree10002.jpg?h=a9f152cd&itok=v-LyCYrM)](/newsroom/ngaus-holds-second-ever-virtual-summit-retirees)
+
+[NGAUS Holds Second-ever Virtual Summit for Retirees](/newsroom/ngaus-holds-second-ever-virtual-summit-retirees)
+
+-----------------------------------------------------------------------------------------------------------------
+
+[Read More Details](/newsroom/ngaus-holds-second-ever-virtual-summit-retirees)
+
+[](/newsroom/national-guard-supports-armys-250th-birthday-celebration)
+
+[![National Guard Army Birthday 2](/sites/default/files/styles/paragraph_cta/public/2025-06/National%20Guard%20Army%20Birthday%202.jpg?h=8b29b1b4&itok=BXdiac88)](/newsroom/national-guard-supports-armys-250th-birthday-celebration)
+
+[National Guard Supports Army’s 250th Birthday Celebration](/newsroom/national-guard-supports-armys-250th-birthday-celebration)
+
+--------------------------------------------------------------------------------------------------------------------------------
+
+[Read More Details](/newsroom/national-guard-supports-armys-250th-birthday-celebration)
+
+[](/newsroom/pentagon-moves-discharge-transgender-troops)
+
+[![051325transgender1000](/sites/default/files/styles/paragraph_cta/public/2025-05/051325transgender1000.jpg?h=a9f152cd&itok=Iwe7OEwg)](/newsroom/pentagon-moves-discharge-transgender-troops)
+
+[Pentagon Moves to Discharge Transgender Troops](/newsroom/pentagon-moves-discharge-transgender-troops)
+
+--------------------------------------------------------------------------------------------------------
+
+[Read More Details](/newsroom/pentagon-moves-discharge-transgender-troops)
+
+[](/newsroom/report-no-easy-solution-overweight-troops)
+
+[![050625obesity1000](/sites/default/files/styles/paragraph_cta/public/2025-05/050625obesity1000.jpg?h=9624e4e4&itok=33Xlrqs1)](/newsroom/report-no-easy-solution-overweight-troops)
+
+[Report: No Easy Solution for Overweight Troops](/newsroom/report-no-easy-solution-overweight-troops)
+
+------------------------------------------------------------------------------------------------------
+
+[Read More Details](/newsroom/report-no-easy-solution-overweight-troops)
+
+[](/newsroom/army-leaders-outline-transformation-initiative)
+
+[![050625armytransformation1000](/sites/default/files/styles/paragraph_cta/public/2025-05/050625armytransformation1000.jpg?h=d4c354c3&itok=UuGOJ08B)](/newsroom/army-leaders-outline-transformation-initiative)
+
+[Army Leaders Outline Transformation Initiative](/newsroom/army-leaders-outline-transformation-initiative)
+
+-----------------------------------------------------------------------------------------------------------
+
+[Read More Details](/newsroom/army-leaders-outline-transformation-initiative)
+
+[Advertise with Us](/advertise-us)
+
+[Advertise with Us](/advertise-us)
+
+[Advertise with Us](/advertise-us)
+
+[Advertise with Us](/advertise-us)"
+
+# Your Summary
+
+
+
+===== > RESPONSE:  < =====
+The National Guard Association of the United States (NGAUS) published a report on June 25, 2024, stating that the U.S. is not prepared to conduct a military draft. The report mentions that the U.S. ended conscription in 1973 but that all U.S. males ages 18 to 25 are still required to register with the Selective Service System. <image:1>
+
+_________________________
+
+
+
+SummarizeSummariesPrompt - QUERY:
+
+# Instructions
+You just retrieved web sources, each one summarized under "Web Sources". **Your task right now is to summarize the web source summaries.**
+
+Always adhere to the following rules:
+* Write only one to two paragraphs.
+* Include all URLs from the listed sources. Format them as Markdown hyperlinks.
+* Do not add any additional information besides the information in the summaries.
+* Include references (<image:k>) to all relevant images.
+
+# Record
+## Claim
+Claim: "The US reinstituted draft in 2024 for the Israel-Hamas war."
+
+## Actions
+```
+web_search("US draft Israel-Hamas war 2024")
+```
+
+## Evidence
+### Evidence from `web_search`
+The UN News published an article on November 20, 2024, stating that the United States vetoed a UN Security Council draft resolution demanding an immediate and unconditional ceasefire in the Gaza Strip (<image:1>). The Security Council Report published on November 19, 2024, discusses a draft resolution on the war in Gaza between Israel and Hamas.
+
+The United Nations website reports on a Security Council meeting on November 20, 2024, where a resolution demanding an immediate ceasefire in Gaza and the release of hostages failed to pass due to a veto by the United States.
+
+Relevant URLs:
+*   [https://news.un.org/en/story/2024/11/1157216](https://news.un.org/en/story/2024/11/1157216)
+*   [https://www.securitycouncilreport.org/whatsinblue/2024/11/vote-on-a-draft-resolution-on-the-war-in-gaza.php](https://www.securitycouncilreport.org/whatsinblue/2024/11/vote-on-a-draft-resolution-on-the-war-in-gaza.php)
+*   [https://press.un.org/en/2024/sc15907.doc.htm](https://press.un.org/en/2024/sc15907.doc.htm)
+
+
+## Elaboration
+The provided evidence does not contain any information about the US reinstituting the draft in 2024 for the Israel-Hamas war. The search results focus on the US's actions within the UN regarding the conflict, specifically its veto of a ceasefire resolution.
+
+The evidence is insufficient to verify the claim.
+
+
+## Actions
+```
+web_search("US military draft status 2024")
+```
+
+## Web Sources
+**Web Search Result**
+
+From [Source](https://www.foxla.com/news/military-defense-bill-draft-2024): 
+Content: Fox LA published an article discussing the National Defense Authorization Act (NDAA), which includes a measure automatically registering men aged 18 to 26 for selective service. The article mentions that the Pentagon has sent military advisors to Israel. <image:13438>
+
+
+From [Source](https://www.military.com/join-armed-forces/will-the-military-draft-come-back): 
+Content: The Military.com article states that there are no current plans to reactivate the draft in 2024. It mentions discussions about a national service mandate but notes that Donald Trump called it a "ridiculous idea." The article also outlines the legal framework for reinstating the draft, which would require a declaration of national emergency or a large-scale war. It also mentions that despite online rumors, there is currently no plan or indication that a draft will be reinstated.
+
+
+From [Source](https://www.ngaus.org/newsroom/report-us-not-prepared-conduct-military-draft): 
+Content: The National Guard Association of the United States (NGAUS) published a report on June 25, 2024, stating that the U.S. is not prepared to conduct a military draft. The report mentions that the U.S. ended conscription in 1973 but that all U.S. males ages 18 to 25 are still required to register with the Selective Service System. <image:1>
+
+
+## Your Summary
+
+
+
+===== > RESPONSE:  < =====
+Fox LA discusses the National Defense Authorization Act (NDAA), which includes automatic registration for selective service for men aged 18-26 and mentions the Pentagon sending military advisors to Israel (<image:13438>). Military.com states there are no current plans to reactivate the draft in 2024, despite online rumors, and outlines the legal framework for reinstating it. The National Guard Association of the United States (NGAUS) published a report stating the U.S. is not prepared to conduct a military draft, although registration with the Selective Service System is still required for U.S. males ages 18 to 25 (<image:1>).
+
+Relevant URLs:
+*   [https://www.foxla.com/news/military-defense-bill-draft-2024](https://www.foxla.com/news/military-defense-bill-draft-2024)
+*   [https://www.military.com/join-armed-forces/will-the-military-draft-come-back](https://www.military.com/join-armed-forces/will-the-military-draft-come-back)
+*   [https://www.ngaus.org/newsroom/report-us-not-prepared-conduct-military-draft](https://www.ngaus.org/newsroom/report-us-not-prepared-conduct-military-draft)
+
+_________________________
+
+
+
+DevelopPrompt - QUERY:
+
+# Instructions
+You just retrieved new Evidence. Now, **analyze the Claim's veracity using the evidence**. Always adhere to the following rules:
+* Focus on developing new insights. Do not repeat larger parts from the Record. Do not restate the Claim.
+* Write down your thoughts step-by-step. Whenever necessary, you may elaborate in more detail.
+* Depending on the topic's complexity, invest one to three paragraphs. The fewer, the better.
+* If you find that there is insufficient information to verify the Claim, explicitly state what information is missing.
+* If you cite web sources, always refer to them by including their URL as a Markdown hyperlink.
+* **Use information only from the recorded evidence**: Avoid inserting information that is not implied by the evidence. You may use commonsense knowledge, though.
+
+# Record
+## Claim
+Claim: "The US reinstituted draft in 2024 for the Israel-Hamas war."
+
+## Actions
+```
+web_search("US draft Israel-Hamas war 2024")
+```
+
+## Evidence
+### Evidence from `web_search`
+The UN News published an article on November 20, 2024, stating that the United States vetoed a UN Security Council draft resolution demanding an immediate and unconditional ceasefire in the Gaza Strip (<image:1>). The Security Council Report published on November 19, 2024, discusses a draft resolution on the war in Gaza between Israel and Hamas.
+
+The United Nations website reports on a Security Council meeting on November 20, 2024, where a resolution demanding an immediate ceasefire in Gaza and the release of hostages failed to pass due to a veto by the United States.
+
+Relevant URLs:
+*   [https://news.un.org/en/story/2024/11/1157216](https://news.un.org/en/story/2024/11/1157216)
+*   [https://www.securitycouncilreport.org/whatsinblue/2024/11/vote-on-a-draft-resolution-on-the-war-in-gaza.php](https://www.securitycouncilreport.org/whatsinblue/2024/11/vote-on-a-draft-resolution-on-the-war-in-gaza.php)
+*   [https://press.un.org/en/2024/sc15907.doc.htm](https://press.un.org/en/2024/sc15907.doc.htm)
+
+
+## Elaboration
+The provided evidence does not contain any information about the US reinstituting the draft in 2024 for the Israel-Hamas war. The search results focus on the US's actions within the UN regarding the conflict, specifically its veto of a ceasefire resolution.
+
+The evidence is insufficient to verify the claim.
+
+
+## Actions
+```
+web_search("US military draft status 2024")
+```
+
+## Evidence
+### Evidence from `web_search`
+Fox LA discusses the National Defense Authorization Act (NDAA), which includes automatic registration for selective service for men aged 18-26 and mentions the Pentagon sending military advisors to Israel (<image:13438>). Military.com states there are no current plans to reactivate the draft in 2024, despite online rumors, and outlines the legal framework for reinstating it. The National Guard Association of the United States (NGAUS) published a report stating the U.S. is not prepared to conduct a military draft, although registration with the Selective Service System is still required for U.S. males ages 18 to 25 (<image:1>).
+
+Relevant URLs:
+*   [https://www.foxla.com/news/military-defense-bill-draft-2024](https://www.foxla.com/news/military-defense-bill-draft-2024)
+*   [https://www.military.com/join-armed-forces/will-the-military-draft-come-back](https://www.military.com/join-armed-forces/will-the-military-draft-come-back)
+*   [https://www.ngaus.org/newsroom/report-us-not-prepared-conduct-military-draft](https://www.ngaus.org/newsroom/report-us-not-prepared-conduct-military-draft)
+
+
+# Your Analysis
+
+
+
+===== > RESPONSE:  < =====
+The evidence indicates that there are no current plans to reactivate the draft in 2024. While the National Defense Authorization Act includes automatic registration for selective service, and the Pentagon has sent military advisors to Israel, multiple sources explicitly state that the draft has not been reinstituted.
+
+Therefore, the claim is false.
+
+_________________________
+
+
+
+JudgePrompt - QUERY:
+
+# Instructions
+**Determine the Claim's veracity** by following these steps:
+1. Briefly summarize the key insights from the fact-check (see Record) in at most one paragraph.
+2. Write one paragraph about which one of the Decision Options applies best. Include the most appropriate decision option at the end and enclose it in backticks like `this`.
+
+
+
+
+## Decision Options
+* `not enough information`: The fact-check does not contain sufficient information to come to an conclusion. For example,there is substantial lack of evidence or the evidence is inconclusive, conflicting or self-contradictory. In the case of a lack of evidence, state which information exactly is missing. In particular, if no RESULTS or sources are available, pick this decision.
+* `false`: The claim is not factually accurate. This is the case if one of the following three conditions is met:(1) The claim is demonstrably false when it is disproven by evidence from multiple and reliable sources,(2) The claim or image is taken out of context, i.e. the origin, content and/or meaning of a statement or an image is misrepresented. For example, an old claim or an old image is mispresented in a new context in a misleading way,(3) There is not enough evidence to verify the claim or the evidence is conflicting or self-contradictory.
+* `true`: The claim is factually accurate when it is confirmed by evidence from multiple and reliable sources.
+
+# Record
+## Claim
+Claim: "The US reinstituted draft in 2024 for the Israel-Hamas war."
+
+## Actions
+```
+web_search("US draft Israel-Hamas war 2024")
+```
+
+## Evidence
+### Evidence from `web_search`
+The UN News published an article on November 20, 2024, stating that the United States vetoed a UN Security Council draft resolution demanding an immediate and unconditional ceasefire in the Gaza Strip (<image:1>). The Security Council Report published on November 19, 2024, discusses a draft resolution on the war in Gaza between Israel and Hamas.
+
+The United Nations website reports on a Security Council meeting on November 20, 2024, where a resolution demanding an immediate ceasefire in Gaza and the release of hostages failed to pass due to a veto by the United States.
+
+Relevant URLs:
+*   [https://news.un.org/en/story/2024/11/1157216](https://news.un.org/en/story/2024/11/1157216)
+*   [https://www.securitycouncilreport.org/whatsinblue/2024/11/vote-on-a-draft-resolution-on-the-war-in-gaza.php](https://www.securitycouncilreport.org/whatsinblue/2024/11/vote-on-a-draft-resolution-on-the-war-in-gaza.php)
+*   [https://press.un.org/en/2024/sc15907.doc.htm](https://press.un.org/en/2024/sc15907.doc.htm)
+
+
+## Elaboration
+The provided evidence does not contain any information about the US reinstituting the draft in 2024 for the Israel-Hamas war. The search results focus on the US's actions within the UN regarding the conflict, specifically its veto of a ceasefire resolution.
+
+The evidence is insufficient to verify the claim.
+
+
+## Actions
+```
+web_search("US military draft status 2024")
+```
+
+## Evidence
+### Evidence from `web_search`
+Fox LA discusses the National Defense Authorization Act (NDAA), which includes automatic registration for selective service for men aged 18-26 and mentions the Pentagon sending military advisors to Israel (<image:13438>). Military.com states there are no current plans to reactivate the draft in 2024, despite online rumors, and outlines the legal framework for reinstating it. The National Guard Association of the United States (NGAUS) published a report stating the U.S. is not prepared to conduct a military draft, although registration with the Selective Service System is still required for U.S. males ages 18 to 25 (<image:1>).
+
+Relevant URLs:
+*   [https://www.foxla.com/news/military-defense-bill-draft-2024](https://www.foxla.com/news/military-defense-bill-draft-2024)
+*   [https://www.military.com/join-armed-forces/will-the-military-draft-come-back](https://www.military.com/join-armed-forces/will-the-military-draft-come-back)
+*   [https://www.ngaus.org/newsroom/report-us-not-prepared-conduct-military-draft](https://www.ngaus.org/newsroom/report-us-not-prepared-conduct-military-draft)
+
+
+## Elaboration
+The evidence indicates that there are no current plans to reactivate the draft in 2024. While the National Defense Authorization Act includes automatic registration for selective service, and the Pentagon has sent military advisors to Israel, multiple sources explicitly state that the draft has not been reinstituted.
+
+Therefore, the claim is false.
+
+
+# Your Judgement
+
+
+
+===== > RESPONSE:  < =====
+The search results confirm that the US has not reinstituted the draft in 2024. While there is discussion about the Selective Service System and the possibility of a draft, multiple sources explicitly state that there are no current plans to reactivate it.
+
+The claim is demonstrably false because it is directly contradicted by evidence from multiple reliable sources. `false`
+
+_________________________
+
+
+
+SummarizeDocPrompt - QUERY:
+
+# Instructions
+You are provided with the record of a fact-check. It contains the Claim to be verified and a documentation of all the fact-checking work along the gathered evidence. Your task is to **summarize the fact-check**. That is, you provide a concise, one-paragraph justification for the final VERDICT based on the knowledge from the Record. Note:
+* Be truthful, brief, do not add any additional information besides the information given in the Record. 
+* Link key sources in your summary. Use Markdown notation for that. You may link them in-line.
+* Don't state the Claim again. Rather focus on the key insights of the fact-check.
+* Simply print just the summary.
+
+# Record
+## Claim
+Claim: "The US reinstituted draft in 2024 for the Israel-Hamas war."
+
+## Actions
+```
+web_search("US draft Israel-Hamas war 2024")
+```
+
+## Evidence
+### Evidence from `web_search`
+The UN News published an article on November 20, 2024, stating that the United States vetoed a UN Security Council draft resolution demanding an immediate and unconditional ceasefire in the Gaza Strip (<image:1>). The Security Council Report published on November 19, 2024, discusses a draft resolution on the war in Gaza between Israel and Hamas.
+
+The United Nations website reports on a Security Council meeting on November 20, 2024, where a resolution demanding an immediate ceasefire in Gaza and the release of hostages failed to pass due to a veto by the United States.
+
+Relevant URLs:
+*   [https://news.un.org/en/story/2024/11/1157216](https://news.un.org/en/story/2024/11/1157216)
+*   [https://www.securitycouncilreport.org/whatsinblue/2024/11/vote-on-a-draft-resolution-on-the-war-in-gaza.php](https://www.securitycouncilreport.org/whatsinblue/2024/11/vote-on-a-draft-resolution-on-the-war-in-gaza.php)
+*   [https://press.un.org/en/2024/sc15907.doc.htm](https://press.un.org/en/2024/sc15907.doc.htm)
+
+
+## Elaboration
+The provided evidence does not contain any information about the US reinstituting the draft in 2024 for the Israel-Hamas war. The search results focus on the US's actions within the UN regarding the conflict, specifically its veto of a ceasefire resolution.
+
+The evidence is insufficient to verify the claim.
+
+
+## Actions
+```
+web_search("US military draft status 2024")
+```
+
+## Evidence
+### Evidence from `web_search`
+Fox LA discusses the National Defense Authorization Act (NDAA), which includes automatic registration for selective service for men aged 18-26 and mentions the Pentagon sending military advisors to Israel (<image:13438>). Military.com states there are no current plans to reactivate the draft in 2024, despite online rumors, and outlines the legal framework for reinstating it. The National Guard Association of the United States (NGAUS) published a report stating the U.S. is not prepared to conduct a military draft, although registration with the Selective Service System is still required for U.S. males ages 18 to 25 (<image:1>).
+
+Relevant URLs:
+*   [https://www.foxla.com/news/military-defense-bill-draft-2024](https://www.foxla.com/news/military-defense-bill-draft-2024)
+*   [https://www.military.com/join-armed-forces/will-the-military-draft-come-back](https://www.military.com/join-armed-forces/will-the-military-draft-come-back)
+*   [https://www.ngaus.org/newsroom/report-us-not-prepared-conduct-military-draft](https://www.ngaus.org/newsroom/report-us-not-prepared-conduct-military-draft)
+
+
+## Elaboration
+The evidence indicates that there are no current plans to reactivate the draft in 2024. While the National Defense Authorization Act includes automatic registration for selective service, and the Pentagon has sent military advisors to Israel, multiple sources explicitly state that the draft has not been reinstituted.
+
+Therefore, the claim is false.
+
+
+## Final Judgement
+The search results confirm that the US has not reinstituted the draft in 2024. While there is discussion about the Selective Service System and the possibility of a draft, multiple sources explicitly state that there are no current plans to reactivate it.
+
+The claim is demonstrably false because it is directly contradicted by evidence from multiple reliable sources. `false`
+
+
+## Summary
+
+
+
+===== > RESPONSE:  < =====
+The claim is false. While the US requires registration for selective service, and the Pentagon has sent military advisors to Israel, there are no current plans to reactivate the draft in 2024, according to sources like [Military.com](https://www.military.com/join-armed-forces/will-the-military-draft-come-back).
+
+_________________________
+
+
+

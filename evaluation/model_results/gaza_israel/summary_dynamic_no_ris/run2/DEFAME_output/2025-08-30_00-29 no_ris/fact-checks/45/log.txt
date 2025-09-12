@@ -1,0 +1,34 @@
+Extracting claims from Content: <image:29> This is an authentic image of Greta Thunberg from November 2024 holding a sign reading, 'Fuck Israel'.
+'Claim: "<image:29> This is an authentic image of Greta Thunberg from November 2024 holding a sign reading, 'Fuck Israel'."'
+Verifying Claim: "<image:29> This is an authentic image of Greta Thunberg from November 2024 holding a sign reading, 'Fuck Israel'."
+Not enough information yet. Continuing fact-check...
+Got 3 new web source(s):
+	1. December 09, 2024 https://nypost.com/2024/12/09/world-news/greta-thunberg-bursts-into-laughter-as-she-declares-f-k-israel-at-rally/
+	2. December 10, 2024 https://www.telegraph.co.uk/world-news/2024/12/10/watch-greta-thunberg-declares-f-israel-german-demonstration/
+	3. December 09, 2024 https://www.yahoo.com/news/greta-thunberg-giggles-while-saying-095000750.html
+Useful result: From [Source](https://nypost.com/2024/12/09/world-news/greta-thunberg-bursts-into-laughter-as-she-declares-f-k-israel-at-rally/): 
+Content: The New York Post reports that Greta Thunberg declared "f–k Israel" at an anti-Israel rally in Germany. <image:392>, <image:393>, <image:394>. The article mentions that Thunberg has faced backlash for her comments. The rally was attended by 700 people. The article was published on December 9, 2024.
+
+Useful result: From [Source](https://www.telegraph.co.uk/world-news/2024/12/10/watch-greta-thunberg-declares-f-israel-german-demonstration/): 
+Content: The Telegraph published an article on December 10, 2024, reporting that Greta Thunberg was accused of being a "Hamas shill" after footage emerged of her declaring "f--- Israel" at a rally in Mannheim, Germany. <image:1>. The article includes a photo of Thunberg at the event. <image:2>. The event was organized to show solidarity with Palestine.
+
+Useful result: From [Source](https://www.yahoo.com/news/greta-thunberg-giggles-while-saying-095000750.html): 
+Content: The New York Post reports that Greta Thunberg was filmed giggling as she declared "f–k Germany" and "f–k Israel" at an anti-Israel rally in Germany on Dec. <image:396>
+
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Greta Thunberg sign')
+Failed to download or open image: cannot identify image file <_io.BytesIO object at 0x7ffed02f6e30>
+Got 3 new web source(s):
+	1. https://commons.wikimedia.org/wiki/File:Greta_Thunberg_4.jpg
+	2. https://www.theguardian.com/commentisfree/2018/nov/26/im-striking-from-school-for-climate-change-too-save-the-world-australians-students-should-too
+	3. https://www.britannica.com/biography/Greta-Thunberg
+Useful result: From [Source](https://www.theguardian.com/commentisfree/2018/nov/26/im-striking-from-school-for-climate-change-too-save-the-world-australians-students-should-too): 
+Content: The Guardian published an article on November 26, 2018, featuring an image of Greta Thunberg holding a sign. <image:9549>
+
+Useful result: From [Source](https://www.britannica.com/biography/Greta-Thunberg): 
+Content: Britannica provides an image of Greta Thunberg holding a sign that reads "SKOLSTREJK FÖR KLIMATET". <image:9550>
+
+The claim '<image:29> This is an authentic image of Greta Thunberg from November 2024 holding a sign reading, 'Fuck Israel'.' is false.
+Justification: While Greta Thunberg did declare "f–k Israel" at a rally, as reported by the New York Post ([Source](https://nypost.com/2024/12/09/world-news/greta-thunberg-bursts-into-laughter-as-she-declares-f-k-israel-at-rally/)) and Yahoo News ([Source](https://www.yahoo.com/news/greta-thunberg-giggles-while-saying-095000750.html)), there is no evidence to support the claim that she held a sign with the phrase "Fuck Israel."
+
+So, the overall veracity is: false
+Fact-check took 0:22 min.

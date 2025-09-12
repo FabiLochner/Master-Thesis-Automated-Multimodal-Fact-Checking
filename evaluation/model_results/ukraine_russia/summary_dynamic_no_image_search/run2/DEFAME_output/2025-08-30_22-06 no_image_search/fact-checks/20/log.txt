@@ -1,0 +1,30 @@
+Extracting claims from Content: After Donald Trump won the US presidential election in 2024, NATO Secretary General Mark Rutte said that ‘If Trump surrenders Ukraine to Putin, he will personally expel the United States from the alliance’.
+'Claim: "After Donald Trump won the US presidential election in 2024, NATO Secretary General Mark Rutte said that ‘If Trump surrenders Ukraine to Putin, he will personally expel the United States from the alliance’."'
+Verifying Claim: "After Donald Trump won the US presidential election in 2024, NATO Secretary General Mark Rutte said that ‘If Trump surrenders Ukraine to Putin, he will personally expel the United States from the alliance’."
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Mark Rutte Trump Ukraine NATO')
+Got 3 new web source(s):
+	1. July 15, 2025 https://www.nato.int/cps/en/natohq/news_237031.htm
+	2. August 10, 2025 https://abcnews.go.com/Politics/nato-secretary-general-rutte-trump-putin-summit-testing/story?id=124520882
+	3. August 18, 2025 https://www.reuters.com/world/europe/rutte-says-article-5-type-deal-considered-ukraine-nato-membership-not-discussed-2025-08-19/
+Useful result: From [Source](https://www.nato.int/cps/en/natohq/news_237031.htm): 
+Content: NATO Secretary General Mark Rutte met with President Donald Trump at the White House on July 14, 2025, to discuss support for Ukraine. Rutte highlighted the recent NATO Summit in The Hague. The article mentions that NATO is working on military equipment packages for Ukraine.
+
+Useful result: From [Source](https://abcnews.go.com/Politics/nato-secretary-general-rutte-trump-putin-summit-testing/story?id=124520882): 
+Content: ABC News published an article on August 10, 2025, reporting on NATO Secretary General Mark Rutte's comments regarding a summit between Donald Trump and Vladimir Putin. Rutte stated that the summit would be an important test in ending the war in Ukraine. <image:9479> The article does not contain the quote from the claim.
+
+Useful result: From [Source](https://www.reuters.com/world/europe/rutte-says-article-5-type-deal-considered-ukraine-nato-membership-not-discussed-2025-08-19/): 
+Content: Reuters published an article on August 19, 2025, reporting that NATO Secretary General Mark Rutte said NATO membership for Ukraine was not under discussion. Rutte mentioned discussions about "Article 5" type security guarantees for Ukraine. The article also mentions a meeting between Trump, Zelenskiy, and European leaders. <image:9488>
+
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Mark Rutte statement on Trump and Ukraine NATO')
+Got 1 new web source(s):
+	1. August 19, 2025 https://www.nato.int/cps/en/natohq/opinions_237212.htm
+Useful result: From [Source](https://www.nato.int/cps/en/natohq/opinions_237212.htm): 
+Content: On August 18, 2025, NATO Secretary General Mark Rutte made remarks at a meeting hosted by Donald J. Trump with Volodymyr Zelenskyy and other European leaders in Washington, D.C. Rutte thanked Trump for starting a dialogue with Putin and expressed excitement about ending the war in Ukraine. He also thanked Trump for his leadership and willingness to participate in security guarantees.
+
+The claim 'After Donald Trump won the US presidential election in 2024, NATO Secretary General Mark Rutte said that ‘If Trump surrenders Ukraine to Putin, he will personally expel the United States from the alliance’.' is false.
+Justification: The claim is false. While Mark Rutte, as NATO Secretary General, discussed Ukraine with Donald Trump, there is no evidence from sources like [NATO](https://www.nato.int/cps/en/natohq/news_237031.htm) and news reports to support the statement that Rutte would expel the United States from the alliance if Trump surrendered Ukraine to Putin.
+
+So, the overall veracity is: false
+Fact-check took 0:51 min.

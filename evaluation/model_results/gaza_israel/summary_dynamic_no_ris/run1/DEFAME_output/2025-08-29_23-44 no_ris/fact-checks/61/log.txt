@@ -1,0 +1,26 @@
+Extracting claims from Content: <image:36> This image shows a Palestinian woman using an Israeli tank to dry clothes in Gaza in July 2024.
+'Claim: "<image:36> This image shows a Palestinian woman using an Israeli tank to dry clothes in Gaza in July 2024."'
+Verifying Claim: "<image:36> This image shows a Palestinian woman using an Israeli tank to dry clothes in Gaza in July 2024."
+Not enough information yet. Continuing fact-check...
+Most likely location: Palestine
+Top 10 locations: Palestine, Tunisia, Jordan, United Arab Emirates, Israel, Pakistan, China, Albania, Andorra, Argentina
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Palestinian woman tank drying clothes Gaza')
+Skipping fact-checking website: https://www.misbar.com/en/factcheck/2024/07/15/photo-of-a-woman-from-south-lebanon-shared-in-relation-to-gaza
+Got 3 new web source(s):
+	1. July 06, 2024 https://www.wsls.com/news/world/2024/07/06/gazas-biggest-soccer-stadium-is-now-a-shelter-for-thousands-of-displaced-palestinians/
+	2. July 05, 2024 https://www.usnews.com/news/world/articles/2024-07-05/gazas-biggest-soccer-stadium-is-now-a-shelter-for-thousands-of-displaced-palestinians
+	3. March 28, 2024 https://www.reuters.com/world/middle-east/israeli-soldiers-play-with-gaza-womens-underwear-online-posts-2024-03-28/
+Useful result: From [Source](https://www.wsls.com/news/world/2024/07/06/gazas-biggest-soccer-stadium-is-now-a-shelter-for-thousands-of-displaced-palestinians/): 
+Content: The search result from WSLS.com, published on July 5, 2024, shows an image of a woman drying clothes in Gaza City, Gaza Strip, on July 5, 2024. <image:k>. The image is from video and was taken by the Associated Press. The article discusses the Yarmouk Sports Stadium sheltering displaced Palestinians.
+
+Useful result: From [Source](https://www.usnews.com/news/world/articles/2024-07-05/gazas-biggest-soccer-stadium-is-now-a-shelter-for-thousands-of-displaced-palestinians): 
+Content: U.S. News & World Report published an article on July 5, 2024, about displaced Palestinians seeking refuge in a soccer stadium in Gaza. <image:k> The article includes an image from video showing a woman drying clothes in Gaza City, Gaza Strip, on July 5, 2024. (AP Photo)
+
+Useful result: From [Source](https://www.reuters.com/world/middle-east/israeli-soldiers-play-with-gaza-womens-underwear-online-posts-2024-03-28/): 
+Content: The Reuters article, published on March 28, 2024, discusses Israeli soldiers posting photos and videos of themselves with lingerie found in Palestinian homes in Gaza. <image:8757> The article mentions that the IDF investigates incidents that deviate from the orders and expected values of IDF soldiers.
+
+The claim '<image:36> This image shows a Palestinian woman using an Israeli tank to dry clothes in Gaza in July 2024.' is false.
+Justification: The image depicts a Palestinian woman drying clothes on a tank in Gaza City, Gaza Strip, on July 5, 2024, as reported by [WSLS.com](https://www.wsls.com/news/world/2024/07/06/gazas-biggest-soccer-stadium-is-now-a-shelter-for-thousands-of-displaced-palestinians/) and [U.S. News & World Report](https://www.usnews.com/news/world/articles/2024-07-05/gazas-biggest-soccer-stadium-is-now-a-shelter-for-thousands-of-displaced-palestinians/). The evidence confirms the location and date. However, the evidence does not specify the tank's origin.
+
+So, the overall veracity is: false
+Fact-check took 1:45 min.

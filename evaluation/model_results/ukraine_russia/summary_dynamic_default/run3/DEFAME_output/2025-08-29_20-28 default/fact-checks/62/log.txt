@@ -1,0 +1,35 @@
+Extracting claims from Content: <image:20> This image shows a US drone which was shot down in March 2025 by the Houthis using Russian missiles.
+'Claim: "<image:20> This image shows a US drone which was shot down in March 2025 by the Houthis using Russian missiles."'
+Verifying Claim: "<image:20> This image shows a US drone which was shot down in March 2025 by the Houthis using Russian missiles."
+Not enough information yet. Continuing fact-check...
+Got 3 new web source(s):
+	1. https://www.fswc.ca/news/fswc-calls-for-canadians-to-stand-with-israel
+	2. https://turdef.com/country/israel-news?page=5
+	3. https://www.timesofisrael.com/the-daily-edition/2023-10-07/
+Useful result: From [Source](https://www.fswc.ca/news/fswc-calls-for-canadians-to-stand-with-israel): Found exact image on website with title: FSWC Calls for Canadians to Stand with Israel
+Content: The image <image:20> is found on the website of Friends of Simon Wiesenthal Center (FSWC). The article is dated October 7, 2023, and is titled "FSWC Calls for Canadians to Stand with Israel". The article discusses the attacks on Israel by Hamas terrorists. <image:1348>
+
+Useful result: From [Source](https://turdef.com/country/israel-news?page=5): Found exact image on website with title: Israel Defence News - TURDEF
+Content: The search result from TURDEF contains the exact image <image:20> and is titled "Second Yom Kippur War in Israel". The article states that Hamas attacked Israel on the 50th anniversary of the Yom Kippur War, which started on October 6, 1973. The article was published on October 7, 2023.
+
+Useful result: From [Source](https://www.timesofisrael.com/the-daily-edition/2023-10-07/): Found exact image on website with title: The Daily Edition | The Times of Israel
+Content: The Times of Israel published an article on October 7, 2023, about the Hamas attack on Israel. The article includes the image in the claim, showing a scene of destruction with burning vehicles. <image:20> The article does not mention a US drone or Russian missiles.
+
+Got 3 new web source(s):
+	1. February 26, 2025 https://www.atlanticcouncil.org/blogs/menasource/houthi-strikes-on-us-mq9-reaper-drones/
+	2. April 25, 2025 https://www.npr.org/2025/04/25/nx-s1-5377192/houthis-reaper-drones-us-military-yemen
+	3. April 25, 2025 https://www.cnn.com/2025/04/25/politics/houthis-target-drones-hampering-trump-mission
+Useful result: From [Source](https://www.atlanticcouncil.org/blogs/menasource/houthi-strikes-on-us-mq9-reaper-drones/): 
+Content: The Atlantic Council published an article discussing Houthi strikes on US MQ-9 Reaper drones. The article mentions that the Houthis shot down a US MQ-9 Reaper over Yemen on December 28, 2024, and another in the Marib governorate, marking the first Houthi strike of an MQ-9 Reaper in 2025. The article also mentions that the Houthis have claimed responsibility for downing fourteen MQ-9 Reaper drones since November 2023. The article also mentions that Iran mediated talks between Russia and the Houthis that led to Moscow supplying Russian-made advanced anti-ship cruise missiles to the group.
+
+Useful result: From [Source](https://www.npr.org/2025/04/25/nx-s1-5377192/houthis-reaper-drones-us-military-yemen): 
+Content: NPR reports that Houthi rebels shot down seven U.S. Reaper drones in recent weeks. The article mentions that the U.S. has been launching daily strikes since March 15, 2025. The article was published on April 25, 2025, and was written by The Associated Press. <image:i>
+
+Useful result: From [Source](https://www.cnn.com/2025/04/25/politics/houthis-target-drones-hampering-trump-mission): 
+Content: CNN, on April 25, 2025, reports that the Houthis have successfully shot down at least seven American drones, hindering the US's military campaign. <image:i>. The article mentions that the US launched a major military campaign targeting the Houthi rebel group in Yemen in March 2025. The US has hit over 700 targets and launched more than 300 airstrikes since the campaign began on March 15.
+
+The claim '<image:20> This image shows a US drone which was shot down in March 2025 by the Houthis using Russian missiles.' is false.
+Justification: The claim is partially supported. While the Houthis did shoot down US drones in March 2025, as reported by the [Atlantic Council](https://www.atlanticcouncil.org/blogs/menasource/houthi-strikes-on-us-mq9-reaper-drones/), [NPR](https://www.npr.org/2025/04/25/nx-s1-5377192/houthis-reaper-drones-us-military-yemen), and [CNN](https://www.cnn.com/2025/04/25/politics/houthis-target-drones-hampering-trump-mission), the evidence does not verify that the image depicts a US drone or that Russian missiles were used.
+
+So, the overall veracity is: false
+Fact-check took 0:27 min.

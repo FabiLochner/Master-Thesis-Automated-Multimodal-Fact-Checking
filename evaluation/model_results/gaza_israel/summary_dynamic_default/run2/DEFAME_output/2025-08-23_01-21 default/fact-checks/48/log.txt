@@ -1,0 +1,36 @@
+Extracting claims from Content: In a phone call with Benjamin Netanyahu on August 14, 2024, Donald Trump told the Israeli prime minister to stop a Gaza ceasefire deal because it would help Vice President Kamala Harris' 2024 presidential campaign.
+'Claim: "In a phone call with Benjamin Netanyahu on August 14, 2024, Donald Trump told the Israeli prime minister to stop a Gaza ceasefire deal because it would help Vice President Kamala Harris' 2024 presidential campaign."'
+Verifying Claim: "In a phone call with Benjamin Netanyahu on August 14, 2024, Donald Trump told the Israeli prime minister to stop a Gaza ceasefire deal because it would help Vice President Kamala Harris' 2024 presidential campaign."
+Not enough information yet. Continuing fact-check...
+Got 3 new web source(s):
+	1. August 15, 2024 https://www.reuters.com/world/trump-netanyahu-speak-about-gaza-hostage-ceasefire-deal-axios-reports-2024-08-15/
+	2. August 21, 2024 https://www.newsweek.com/donald-trump-accused-crime-benjamin-netanyahu-call-ceasefire-hamas-1942248
+	3. August 14, 2024 https://www.npr.org/2024/08/14/g-s1-16958/gaza-ceasefire-talks-israel-hamas
+Useful result: From [Source](https://www.reuters.com/world/trump-netanyahu-speak-about-gaza-hostage-ceasefire-deal-axios-reports-2024-08-15/): 
+Content: Reuters reports that Donald Trump spoke with Benjamin Netanyahu on August 14, 2024, and discussed the Gaza ceasefire and hostage release deal. <image:4075> The article mentions that one source told Axios that Trump's call was intended to encourage Netanyahu to take the deal, but it does not mention the reason why. The article was published on August 15, 2024.
+
+Useful result: From [Source](https://www.newsweek.com/donald-trump-accused-crime-benjamin-netanyahu-call-ceasefire-hamas-1942248): 
+Content: Newsweek published an article stating that Donald Trump was accused of violating federal law by the American Muckrackers PAC for allegedly calling Benjamin Netanyahu to discuss a ceasefire deal. The article mentions that the call was reported by PBS host Judy Woodruff, who said that Trump urged Netanyahu not to make a deal because it would help the Kamala Harris campaign. Both Netanyahu's office and Trump denied the call took place. The article was written by Jordan King and updated on August 22, 2024. <image:4080>
+
+Useful result: From [Source](https://www.npr.org/2024/08/14/g-s1-16958/gaza-ceasefire-talks-israel-hamas): 
+Content: NPR published an article on August 14, 2024, discussing the resumption of Gaza cease-fire talks. <image:4091>, <image:4092>, <image:4093>. The talks are based on a three-phase proposal that President Biden laid out in May. The article mentions that Netanyahu has been inflexible in recent talks.
+
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Donald Trump told Netanyahu stop Gaza ceasefire Kamala Harris 2024')
+Got 3 new web source(s):
+	1. October 30, 2024 https://www.timesofisrael.com/trump-told-netanyahu-he-wants-gaza-war-over-by-time-he-enters-office-sources/
+	2. August 15, 2024 https://www.reuters.com/world/netanyahu-denies-report-he-spoke-trump-about-gaza-talks-2024-08-15/
+	3. July 26, 2024 https://www.bbc.com/news/articles/czq6v9jx939o
+Useful result: From [Source](https://www.timesofisrael.com/trump-told-netanyahu-he-wants-gaza-war-over-by-time-he-enters-office-sources/): 
+Content: The Times of Israel reports that Donald Trump told Benjamin Netanyahu he wants the war in Gaza to end before he returns to office if he wins the election. This message was first conveyed in July at Mar-a-Lago. The article does not mention a phone call on August 14, 2024, nor does it mention Kamala Harris's 2024 presidential campaign. <image:5314>, <image:5315>
+
+Useful result: From [Source](https://www.reuters.com/world/netanyahu-denies-report-he-spoke-trump-about-gaza-talks-2024-08-15/): 
+Content: Reuters reports that Donald Trump, on August 15, 2024, criticized calls for a ceasefire in Gaza by Biden and Harris. Trump said that Harris "has worked to tie Israel's hand behind its back, demanding an immediate ceasefire." Trump also said that he would give Israel the support it needs to win. Trump and Netanyahu denied an Axios report that they spoke about a Gaza ceasefire the previous day. <image:5317>
+
+Useful result: From [Source](https://www.bbc.com/news/articles/czq6v9jx939o): 
+Content: The BBC reports that on July 26, 2024, Benjamin Netanyahu visited Donald Trump at Mar-a-Lago. Trump criticized Kamala Harris's comments on the Israel-Gaza conflict as "disrespectful." Netanyahu stated that Israel would send negotiators to Rome for ceasefire talks. The article does not mention a phone call on August 14, 2024, or Trump telling Netanyahu to stop a Gaza ceasefire deal.
+
+The claim 'In a phone call with Benjamin Netanyahu on August 14, 2024, Donald Trump told the Israeli prime minister to stop a Gaza ceasefire deal because it would help Vice President Kamala Harris' 2024 presidential campaign.' is false.
+Justification: The claim is not supported by the evidence. While there was a phone call between Donald Trump and Benjamin Netanyahu on August 14, 2024, discussing a Gaza ceasefire, both Trump and Netanyahu denied the report that Trump told Netanyahu to stop a Gaza ceasefire deal because it would help Kamala Harris' 2024 presidential campaign, as reported by [Newsweek](https://www.newsweek.com/donald-trump-accused-crime-benjamin-netanyahu-call-ceasefire-hamas-1942248).
+
+So, the overall veracity is: false
+Fact-check took 0:45 min.

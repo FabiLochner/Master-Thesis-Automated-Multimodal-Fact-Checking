@@ -1,0 +1,27 @@
+Extracting claims from Content: <image:22> This is an authentic image of Bono and Bob Geldof holding the Israeli flag outside the Israeli embassy in Dublin.
+'Claim: "<image:22> This is an authentic image of Bono and Bob Geldof holding the Israeli flag outside the Israeli embassy in Dublin."'
+Verifying Claim: "<image:22> This is an authentic image of Bono and Bob Geldof holding the Israeli flag outside the Israeli embassy in Dublin."
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Bono Bob Geldof Israeli Embassy Dublin')
+Skipping fact-checking website: https://www.reuters.com/fact-check/image-bono-bob-geldof-holding-israeli-flag-is-ai-generated-2024-12-24/
+Skipping unsupported website: https://x.com/Shayan86/status/1869557216438899144
+Skipping unsupported website: https://www.facebook.com/photo.php?fbid=1686871317999952&id=137576076262825&set=a.231815490172216
+Skipping fact-checking website: https://www.misbar.com/en/factcheck/2024/12/22/this-photo-of-bono-and-bob-geldof-is-ai-generated
+Got 3 new web source(s):
+	1. https://www.thejournal.ie/ai-generated-photo-of-bono-and-bob-geldof-with-israeli-flags-is-it-real-6577454-Dec2024/
+	2. https://news.abplive.com/fact-check/fact-check-irish-rockstars-bono-bob-geldof-israel-flag-ai-1739811
+	3. https://stablediffusionweb.com/image/25919157-bono-and-bob-geldof-with-israeli-flags
+Useful result: From [Source](https://www.thejournal.ie/ai-generated-photo-of-bono-and-bob-geldof-with-israeli-flags-is-it-real-6577454-Dec2024/): 
+Content: The Journal.ie published an article about an AI-generated photo of Bono and Bob Geldof with Israeli flags. <image:7517>
+
+Useful result: From [Source](https://news.abplive.com/fact-check/fact-check-irish-rockstars-bono-bob-geldof-israel-flag-ai-1739811): 
+Content: The search result from ABP Live states that the image is fake. <image:7518>
+
+Useful result: From [Source](https://stablediffusionweb.com/image/25919157-bono-and-bob-geldof-with-israeli-flags): 
+Content: The search result contains an image of Bono and Bob Geldof holding Israeli flags. <image:7519>
+
+The claim '<image:22> This is an authentic image of Bono and Bob Geldof holding the Israeli flag outside the Israeli embassy in Dublin.' is false.
+Justification: The claim is false. Evidence from image searches reveals that the image of Bono and Bob Geldof holding Israeli flags is AI-generated or fake, as reported by sources like The Journal.ie and ABP Live.
+
+So, the overall veracity is: false
+Fact-check took 0:39 min.

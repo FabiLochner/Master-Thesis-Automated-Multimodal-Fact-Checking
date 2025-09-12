@@ -1,0 +1,33 @@
+Extracting claims from Content: In March 2025, U.S. Immigration and Customs Enforcement (ICE) agents arrested and detained Palestinian activist Mahmoud Khalil, a lawful permanent resident of the U.S.
+'Claim: "In March 2025, U.S. Immigration and Customs Enforcement (ICE) agents arrested and detained Palestinian activist Mahmoud Khalil, a lawful permanent resident of the U.S."'
+Verifying Claim: "In March 2025, U.S. Immigration and Customs Enforcement (ICE) agents arrested and detained Palestinian activist Mahmoud Khalil, a lawful permanent resident of the U.S."
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Mahmoud Khalil ICE arrest March 2025')
+Got 3 new web source(s):
+	1. https://en.wikipedia.org/wiki/Detention_of_Mahmoud_Khalil
+	2. May 19, 2025 https://www.aclu.org/press-releases/new-footage-confirms-ice-lied-and-had-no-reason-to-detain-mahmoud-khalil
+	3. July 11, 2025 https://www.cnn.com/2025/07/11/world/mahmoud-khalil-ice-detention-amanpour-interview-intl-hnk
+Useful result: From [Source](https://en.wikipedia.org/wiki/Detention_of_Mahmoud_Khalil): 
+Content: The Wikipedia article discusses the arrest and detention of Mahmoud Khalil by ICE agents on March 8, 2025. The article mentions that Khalil is a Palestinian activist and a lawful permanent resident of the U.S. It also mentions an online campaign against Khalil before his arrest. The article also includes reactions from various groups and individuals, including elected officials, and organizations.
+
+Useful result: From [Source](https://www.aclu.org/press-releases/new-footage-confirms-ice-lied-and-had-no-reason-to-detain-mahmoud-khalil): 
+Content: The ACLU published a press release stating that ICE arrested Mahmoud Khalil in March 2025. The press release also mentions that Khalil's legal team stated that ICE arrested Khalil in retaliation for his advocacy for Palestinian rights. The ACLU also published press releases about the case in May and July 2025. <image:1503>
+
+Useful result: From [Source](https://www.cnn.com/2025/07/11/world/mahmoud-khalil-ice-detention-amanpour-interview-intl-hnk): 
+Content: CNN reports that Mahmoud Khalil, a Palestinian activist and green card holder, was arrested in March. <image:1>, <image:2>, <image:3>. Khalil was detained for over 100 days without charge by ICE. The article was published on July 11, 2025, and written by Hira Humayun and Ross Adkin.
+
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='ICE arrests Palestinian activist March 2025')
+Got 2 new web source(s):
+	1. March 10, 2025 https://www.npr.org/2025/03/10/g-s1-52923/immigration-agents-arrest-palestinian-activist-columbia-protests
+	2. June 20, 2025 https://newjerseymonitor.com/2025/06/20/judge-orders-release-of-columbia-university-activist-facing-deportation/
+Useful result: From [Source](https://www.npr.org/2025/03/10/g-s1-52923/immigration-agents-arrest-palestinian-activist-columbia-protests): 
+Content: NPR published an article on March 10, 2025, stating that ICE arrested Palestinian activist Mahmoud Khalil on Saturday. Khalil was arrested in his university-owned apartment. The article mentions that Khalil was a graduate student at Columbia University and played a prominent role in the university's protests against Israel. <image:1507>, <image:1508>. The article also mentions that the Trump administration pledged to detain and deport student activists. The Associated Press wrote the article.
+
+Useful result: From [Source](https://newjerseymonitor.com/2025/06/20/judge-orders-release-of-columbia-university-activist-facing-deportation/): 
+Content: The New Jersey Monitor published an article on June 20, 2025, stating that Mahmoud Khalil, a pro-Palestinian activist, was released from a Louisiana detention center after being detained since March 8, 2025. <image:1510>, <image:1512>. The article mentions that Khalil was arrested by federal authorities near his New York City apartment. The article was written by Sophie Nieto-Munoz.
+
+The claim 'In March 2025, U.S. Immigration and Customs Enforcement (ICE) agents arrested and detained Palestinian activist Mahmoud Khalil, a lawful permanent resident of the U.S.' is true.
+Justification: Multiple sources, including a [Wikipedia article](https://en.wikipedia.org/wiki/Detention_of_Mahmoud_Khalil), [CNN](https://www.cnn.com/2025/07/11/world/mahmoud-khalil-ice-detention-amanpour-interview-intl-hnk), and [NPR](https://www.npr.org/2025/03/10/g-s1-52923/immigration-agents-arrest-palestinian-activist-columbia-protests), confirm that U.S. Immigration and Customs Enforcement (ICE) agents arrested Mahmoud Khalil, a Palestinian activist and lawful permanent resident of the U.S., in March 2025.
+
+So, the overall veracity is: true
+Fact-check took 3:22 min.

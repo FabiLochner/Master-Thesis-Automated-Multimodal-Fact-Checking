@@ -1,0 +1,41 @@
+Extracting claims from Content: <image:1> This image shows General John Pagri, Commander of the Special Tasks Battalion in the U.S. Army, which has died in the Gaza Strip in April 2025.
+'Claim: "<image:1> This image shows General John Pagri, Commander of the Special Tasks Battalion in the U.S. Army, which has died in the Gaza Strip in April 2025."'
+Verifying Claim: "<image:1> This image shows General John Pagri, Commander of the Special Tasks Battalion in the U.S. Army, which has died in the Gaza Strip in April 2025."
+Not enough information yet. Continuing fact-check...
+Got 3 new web source(s):
+	1. https://www.af.mil/About-Us/Biographies/Display/Article/107918/brigadier-general-john-i-pray-jr/
+	2. March 25, 2010 https://www.army.mil/article/36339/sikh_soldiers_allowed_to_serve_retain_their_articles_of_faith
+	3. https://dc.ng.mil/News/Biographies/Article/1512717/brigadier-general-john-j-campo/
+Useful result: From [Source](https://www.af.mil/About-Us/Biographies/Display/Article/107918/brigadier-general-john-i-pray-jr/): 
+Content: The search result is a biography of Brigadier General John I. Pray Jr. It mentions his education, including a Bachelor of Science degree in aeronautical engineering and a Master of Science degree in aeronautical science. It also lists his command positions and his role as Director of the White House Situation Room.
+
+Useful result: From [Source](https://www.army.mil/article/36339/sikh_soldiers_allowed_to_serve_retain_their_articles_of_faith): 
+Content: The U.S. Army published an article on March 25, 2010, discussing the allowance of Sikh soldiers to retain their articles of faith. The article includes several images of Sikh soldiers. <image:5817>, <image:5818>, <image:5819>, <image:5822>, <image:5823>.
+
+Useful result: From [Source](https://dc.ng.mil/News/Biographies/Article/1512717/brigadier-general-john-j-campo/): 
+Content: The search result is a biography of Brigadier General John J. Campo, who enlisted in the US Army in 1991 and was commissioned in 1992. The biography includes his flight information, major awards and decorations, and effective dates of promotion. The website is an official website of the United States government.
+
+Got 1 new web source(s):
+	1. April 15, 2025 https://uk.news.yahoo.com/photo-us-army-general-killed-110919596.html
+Useful result: From [Source](https://uk.news.yahoo.com/photo-us-army-general-killed-110919596.html): 
+Content: The image is old and was taken in Iraq. The image does not show General John Pagri. The uniform in the image was retired in 2019. There are no credible reports of a US army general being killed in the Gaza Strip recently. <image:3407>, <image:3408>, <image:3409>
+
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='General John Pagri')
+Failed to download or open image: cannot identify image file <_io.BytesIO object at 0x7ffed9f24ef0>
+Skipping unsupported website: https://x.com/SilentlySirs/status/1909016684540657786
+Got 2 new web source(s):
+	1. https://www.dvidshub.net/image/8891278/army-major-general-john-r-pippy-sworn-pennsylvanias-55th-adjutant-general-assumes-command-pennsylvania-national-guard
+	2. https://www.military.com/daily-news/2024/07/09/commander-of-new-hampshire-air-national-guard-killed-hit-and-run-incident-near-his-home.html
+Useful result: From [Source](https://www.dvidshub.net/image/8891278/army-major-general-john-r-pippy-sworn-pennsylvanias-55th-adjutant-general-assumes-command-pennsylvania-national-guard): 
+Content: The search result contains an image of Major General John R. Pippy. <image:9107>
+
+Useful result: From [Source](https://www.military.com/daily-news/2024/07/09/commander-of-new-hampshire-air-national-guard-killed-hit-and-run-incident-near-his-home.html): 
+Content: Military.com reports that the Commander of the New Hampshire Air National Guard was killed in a hit-and-run incident. <image:9108>
+
+Most likely location: Peru
+Top 10 locations: Peru, Pakistan, Tunisia, United States, Jordan, Russia, United Arab Emirates, Argentina, Bangladesh, Belgium
+The claim '<image:1> This image shows General John Pagri, Commander of the Special Tasks Battalion in the U.S. Army, which has died in the Gaza Strip in April 2025.' is false.
+Justification: The claim is demonstrably false. The image is old, taken in Iraq, and does not depict General John Pagri. Furthermore, the uniform in the image was retired in 2019, and there are no credible reports of a U.S. Army general being killed in the Gaza Strip recently ([Source](https://uk.news.yahoo.com/photo-us-army-general-killed-110919596.html)).
+
+So, the overall veracity is: false
+Fact-check took 0:40 min.

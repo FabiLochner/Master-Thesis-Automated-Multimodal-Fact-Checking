@@ -1,0 +1,43 @@
+Extracting claims from Content: <image:1> This image shows General John Pagri, Commander of the Special Tasks Battalion in the U.S. Army, which has died in the Gaza Strip in April 2025.
+'Claim: "<image:1> This image shows General John Pagri, Commander of the Special Tasks Battalion in the U.S. Army, which has died in the Gaza Strip in April 2025."'
+Verifying Claim: "<image:1> This image shows General John Pagri, Commander of the Special Tasks Battalion in the U.S. Army, which has died in the Gaza Strip in April 2025."
+Not enough information yet. Continuing fact-check...
+Got 1 new web source(s):
+	1. https://en.wikipedia.org/wiki/File:Two_19th_Group_Special_Forces_Soldiers_in_Babil_Province_Iraq.jpg
+Useful result: From [Source](https://en.wikipedia.org/wiki/File:Two_19th_Group_Special_Forces_Soldiers_in_Babil_Province_Iraq.jpg): Found exact image on website with title: File:Two 19th Group Special Forces Soldiers in Babil Province Iraq.jpg
+Content: The image is from Wikimedia Commons and is titled "Two 19th Group Special Forces Soldiers in Babil Province Iraq.jpg". The image shows two soldiers in Babil Province Iraq in 2007. The file was uploaded on June 21, 2011, and the author is the United States Army. <image:1>
+
+Got 3 new web source(s):
+	1. https://www.af.mil/About-Us/Biographies/Display/Article/107918/brigadier-general-john-i-pray-jr/
+	2. March 25, 2010 https://www.army.mil/article/36339/sikh_soldiers_allowed_to_serve_retain_their_articles_of_faith
+	3. https://dc.ng.mil/News/Biographies/Article/1512717/brigadier-general-john-j-campo/
+Useful result: From [Source](https://www.af.mil/About-Us/Biographies/Display/Article/107918/brigadier-general-john-i-pray-jr/): 
+Content: The search result is a biography of Brigadier General John I. Pray Jr. It mentions his education, command experience, and current position as Director of the White House Situation Room.
+
+Useful result: From [Source](https://www.army.mil/article/36339/sikh_soldiers_allowed_to_serve_retain_their_articles_of_faith): 
+Content: The U.S. Army published an article on March 25, 2010, about Sikh soldiers being allowed to serve while retaining their articles of faith. The article includes several images of Sikh soldiers. <image:5817>, <image:5818>, <image:5819>, <image:5822>, <image:5823>.
+
+Useful result: From [Source](https://dc.ng.mil/News/Biographies/Article/1512717/brigadier-general-john-j-campo/): 
+Content: The search result is a biography of Brigadier General John J. Campo, who enlisted in the US Army in 1991 and was commissioned in 1992. The biography includes his flight information, major awards and decorations, and effective dates of promotion. The website is an official website of the United States government.
+
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='General John Pagri death Gaza April 2025')
+Skipping fact-checking website: https://factcheck.afp.com/doc.afp.com.42JE3T2
+Skipping fact-checking website: https://fullfact.org/online/picture-us-army-general-gaza-iraq/
+Skipping unsupported website: https://x.com/SilentlySirs/status/1909016684540657786?lang=en
+Skipping unsupported website: https://www.facebook.com/groups/700077678660409/posts/1030062882328552/
+Skipping unsupported website: https://www.instagram.com/p/DITyF9htGL7/
+Skipping unsupported website: https://www.tiktok.com/@rehankashmiri310/video/7490164454840290578
+Got 2 new web source(s):
+	1. April 15, 2025 https://uk.news.yahoo.com/photo-us-army-general-killed-110919596.html
+	2. https://mvau.lt/media/0232313c-939e-4f03-bb63-06ec12e05878
+Useful result: From [Source](https://uk.news.yahoo.com/photo-us-army-general-killed-110919596.html): 
+Content: The search result from Yahoo News states that the image is old and was taken in Iraq, not in Gaza. The image does not show General John Pagri. The uniform in the photo was retired in 2019. The Office of the Secretary of Defense confirmed that the posts are false and that there are no US service members in Gaza. <image:12476>, <image:12477>, <image:12478>.
+
+Useful result: From [Source](https://mvau.lt/media/0232313c-939e-4f03-bb63-06ec12e05878): 
+Content: The search result is a tweet from SilencedSirs◼️, published on April 6, 2025, reporting the death of General John Pagri, Commander of the Special Tasks Battalion in the U.S. Army, in the Gaza Strip.
+
+The claim '<image:1> This image shows General John Pagri, Commander of the Special Tasks Battalion in the U.S. Army, which has died in the Gaza Strip in April 2025.' is false.
+Justification: The claim is false. The image used in the claim is from Iraq, not Gaza, and the uniform is outdated. The Office of the Secretary of Defense confirmed that the claim is false and that there are no US service members in Gaza ([https://uk.news.yahoo.com/photo-us-army-general-killed-110919596.html](https://uk.news.yahoo.com/photo-us-army-general-killed-110919596.html)).
+
+So, the overall veracity is: false
+Fact-check took 1:39 min.

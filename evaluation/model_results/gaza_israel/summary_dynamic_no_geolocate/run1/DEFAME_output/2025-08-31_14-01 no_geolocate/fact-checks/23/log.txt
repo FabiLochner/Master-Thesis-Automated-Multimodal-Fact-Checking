@@ -1,0 +1,28 @@
+Extracting claims from Content: The Guardian published an article with the headline: 'Gaza will rise from the ashes to become a city of the future to rival Bradford.'
+'Claim: "The Guardian published an article with the headline: 'Gaza will rise from the ashes to become a city of the future to rival Bradford.'"'
+Verifying Claim: "The Guardian published an article with the headline: 'Gaza will rise from the ashes to become a city of the future to rival Bradford.'"
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Guardian Gaza city of the future')
+Got 1 new web source(s):
+	1. August 20, 2025 https://www.theguardian.com/commentisfree/2025/aug/20/the-guardian-view-on-gazas-future-israel-should-end-the-killing-its-allies-must-not-remain-complicit
+Useful result: From [Source](https://www.theguardian.com/commentisfree/2025/aug/20/the-guardian-view-on-gazas-future-israel-should-end-the-killing-its-allies-must-not-remain-complicit): 
+Content: The Guardian published an article on August 20, 2025, discussing the future of Gaza. The article mentions the Israel-Gaza war and the suffering of Palestinians. It also refers to a plan for Gaza City and includes a photograph. <image:k>
+
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Guardian Gaza rise from ashes Bradford')
+Skipping fact-checking website: https://www.reuters.com/fact-check/guardian-headline-gaza-becoming-city-rivalling-bradford-is-fake-2024-11-27/
+Skipping fact-checking website: https://fullfact.org/online/fake-guardian-article-gaza-bradford/
+Got 2 new web source(s):
+	1. October 13, 2023 https://www.theguardian.com/world/2023/oct/12/the-buildings-are-now-ashes-gazans-feel-nowhere-is-safe-from-israeli-bombs
+	2. July 11, 2024 https://www.bbc.com/news/articles/cyx0w9d74ylo
+Useful result: From [Source](https://www.theguardian.com/world/2023/oct/12/the-buildings-are-now-ashes-gazans-feel-nowhere-is-safe-from-israeli-bombs): 
+Content: The Guardian published an article on October 12, 2023, discussing the impact of Israeli airstrikes on Gaza. The article's headline is "‘The buildings are now ashes’: nowhere feels safe from Israeli bombs in Gaza". The article includes photographs of the destruction in Gaza <image:12599>, <image:12602>, <image:12598>. The article does not mention Bradford.
+
+Useful result: From [Source](https://www.bbc.com/news/articles/cyx0w9d74ylo): 
+Content: The BBC published an article on July 11, 2024, about a heated debate in Bradford Council regarding a motion calling for a ceasefire in Gaza. The article includes images of Bradford Town Hall <image:12604>. The article does not mention the headline "Gaza will rise from the ashes to become a city of the future to rival Bradford."
+
+The claim 'The Guardian published an article with the headline: 'Gaza will rise from the ashes to become a city of the future to rival Bradford.'' is false.
+Justification: The Guardian published articles about Gaza, including one with the headline "‘The buildings are now ashes’: nowhere feels safe from Israeli bombs in Gaza" ([https://www.theguardian.com/world/2023/oct/12/the-buildings-are-now-ashes-gazans-feel-nowhere-is-safe-from-israeli-bombs](https://www.theguardian.com/world/2023/oct/12/the-buildings-are-now-ashes-gazans-feel-nowhere-is-safe-from-israeli-bombs)), but none with the headline "Gaza will rise from the ashes to become a city of the future to rival Bradford." Therefore, the claim is not supported by the evidence.
+
+So, the overall veracity is: false
+Fact-check took 0:30 min.

@@ -1,0 +1,37 @@
+Extracting claims from Content: Ethiopia has expelled Israel's ambassador in April 2025.
+'Claim: "Ethiopia has expelled Israel's ambassador in April 2025."'
+Verifying Claim: "Ethiopia has expelled Israel's ambassador in April 2025."
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Ethiopia Israel ambassador expelled')
+Skipping fact-checking website: https://www.reuters.com/fact-check/israeli-ambassador-ethiopia-remains-post-says-israel-foreign-ministry-2025-04-22/
+Skipping unsupported website: https://www.youtube.com/watch?v=Neb8mVnySPQ
+Got 3 new web source(s):
+	1. April 07, 2025 https://www.timesofisrael.com/liveblog_entry/israeli-ambassador-to-ethiopia-expelled-from-conference-on-rwandan-genocide/
+	2. April 07, 2025 https://www.aa.com.tr/en/africa/israeli-ambassador-to-ethiopia-expelled-from-rwanda-genocide-conference/3530926
+	3. April 07, 2025 https://www.tasnimnews.com/en/news/2025/04/07/3286985/israeli-ambassador-removed-from-african-union-meeting
+Useful result: From [Source](https://www.timesofisrael.com/liveblog_entry/israeli-ambassador-to-ethiopia-expelled-from-conference-on-rwandan-genocide/): 
+Content: The Times of Israel reports that the Israeli Ambassador to Ethiopia, Avraham Neguise, was removed from an African Union conference in Addis Ababa. Neguise has served as ambassador since August 2024. <image:4997> <image:i>.
+
+Useful result: From [Source](https://www.aa.com.tr/en/africa/israeli-ambassador-to-ethiopia-expelled-from-rwanda-genocide-conference/3530926): 
+Content: The Anadolu Agency published an article on April 7, 2025, stating that Israel’s ambassador to Ethiopia, Avraham Neguise, was expelled from a conference in Addis Ababa. <image:0>. The article mentions that Neguise has been Israel’s ambassador to Ethiopia since August 2024.
+
+Useful result: From [Source](https://www.tasnimnews.com/en/news/2025/04/07/3286985/israeli-ambassador-removed-from-african-union-meeting): 
+Content: The Tasnim News Agency published an article on April 7, 2025, stating that the Israeli ambassador was removed from an African Union meeting. <image:5020> The article mentions that the removal occurred during an annual session focused on the Rwandan genocide.
+
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Ethiopia Israel relations April 2025')
+Got 3 new web source(s):
+	1. https://www.ena.et/web/eng/w/eng_6302848
+	2. April 03, 2025 https://www.fanamc.com/english/israel-seeks-stronger-economic-people-ties-with-ethiopia-ambassador/
+	3. https://en.wikipedia.org/wiki/Ethiopia%E2%80%93Israel_relations
+Useful result: From [Source](https://www.ena.et/web/eng/w/eng_6302848): 
+Content: The Ethiopian News Agency (ENA) published an article on April 2, 2025, where the Israeli Ambassador to Ethiopia, Abraham Negussie, stated Israel's commitment to strengthening economic and social ties with Ethiopia. <image:42142/0/ISrael.png/d0c3184a-06c2-cc12-01ea-e163231db132?version=1.0&t=1743591156522&download=true>
+
+Useful result: From [Source](https://www.fanamc.com/english/israel-seeks-stronger-economic-people-ties-with-ethiopia-ambassador/): 
+Content: Fana Media Corporation published an article on April 3, 2025, stating that Israel is committed to strengthening economic and social ties with Ethiopia, according to Ambassador Abraham Negussie. <image:5051>
+
+The claim 'Ethiopia has expelled Israel's ambassador in April 2025.' is false.
+Justification: The claim is false. While the Israeli ambassador to Ethiopia was removed from an African Union conference in April 2025, as reported by the [Anadolu Agency](https://www.aa.com.tr/en), [Tasnim News Agency](https://www.tasnimnews.com/en), and The Times of Israel, he was also actively engaged in diplomatic efforts around the same time, as reported by the [Ethiopian News Agency](https://www.ena.et/web/eng/w/eng_6302848) and Fana Media Corporation. This suggests that the removal from the conference did not constitute a full expulsion.
+
+So, the overall veracity is: false
+Fact-check took 1:58 min.

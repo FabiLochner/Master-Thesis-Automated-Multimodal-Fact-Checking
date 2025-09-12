@@ -1,0 +1,50 @@
+Extracting claims from Content: <image:34> This image shows an Israeli tank unit near Jabalia camp in northern Gaza that was successfully ambushed by Hamas fighters, destroying multiple vehicles and injuring or killing their crews in October 2024.
+'Claim: "<image:34> This image shows an Israeli tank unit near Jabalia camp in northern Gaza that was successfully ambushed by Hamas fighters, destroying multiple vehicles and injuring or killing their crews in October 2024."'
+Verifying Claim: "<image:34> This image shows an Israeli tank unit near Jabalia camp in northern Gaza that was successfully ambushed by Hamas fighters, destroying multiple vehicles and injuring or killing their crews in October 2024."
+Not enough information yet. Continuing fact-check...
+Got 3 new web source(s):
+	1. October 06, 2024 https://www.aljazeera.com/news/2024/10/6/israel-launches-ground-offensive-on-jabalia-again-killing-17
+	2. December 18, 2024 https://www.theguardian.com/global-development/2024/dec/18/jabaliya-refugee-camp-gaza-destruction-idf
+	3. https://en.wikipedia.org/wiki/Siege_of_North_Gaza
+Useful result: From [Source](https://www.aljazeera.com/news/2024/10/6/israel-launches-ground-offensive-on-jabalia-again-killing-17): 
+Content: Al Jazeera published an article on October 6, 2024, reporting on an Israeli ground offensive on Jabalia, resulting in at least 17 deaths. <image:1> The article mentions intense bombardment, tank deployment, and evacuation orders. The Palestinian Islamic Jihad targeted an Israeli command and control room in Jabalia.
+
+Useful result: From [Source](https://www.theguardian.com/global-development/2024/dec/18/jabaliya-refugee-camp-gaza-destruction-idf): 
+Content: The Guardian published an article on December 18, 2024, discussing the destruction of the Jabaliya refugee camp in Gaza by Israeli forces. The article mentions three offensives, with the third one starting on October 5, 2024. The article includes satellite images and videos showing the destruction of buildings and infrastructure in the camp. <image:1>, <image:2>, <image:3>, <image:4>, <image:5>, <image:6>. The article also mentions that the IDF said it was targeting military objectives.
+
+Useful result: From [Source](https://en.wikipedia.org/wiki/Siege_of_North_Gaza): 
+Content: The Wikipedia article discusses the Siege of North Gaza, which took place from October 5, 2024, to January 19, 2025, as part of the Israeli invasion of the Gaza Strip. The article mentions the involvement of Israeli forces and Hamas fighters, with the location being the North Gaza Governorate and the Gaza Strip. The article details the events in Jabalia, Beit Lahia, and Beit Hanoun, including the attacks on civilians, hospitals, and healthcare facilities. The article also mentions the "generals' plan" to force Palestinians out of northern Gaza. The article states that on October 10, Hamas organized an ambush which destroyed an IDF mechanized infantry company of 12 vehicles east of the Jabalia camp.
+
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Israeli tank destroyed Jabalia Gaza')
+Got 3 new web source(s):
+	1. https://www.aljazeera.com/news/2024/6/28/battles-rage-in-north-gaza-as-palestinian-fighters-ambush-israeli-troops
+	2. https://www.pbs.org/newshour/politics/israeli-airstrikes-flatten-apartments-in-gazas-jabaliya-refugee-camp-israel-says-attack-targeted-hamas
+	3. https://www.bbc.com/news/world-middle-east-69019655
+Useful result: From [Source](https://www.aljazeera.com/news/2024/6/28/battles-rage-in-north-gaza-as-palestinian-fighters-ambush-israeli-troops): 
+Content: Al Jazeera reports on battles in northern Gaza, mentioning Palestinian fighters ambushing Israeli troops. <image:6423>
+
+Useful result: From [Source](https://www.pbs.org/newshour/politics/israeli-airstrikes-flatten-apartments-in-gazas-jabaliya-refugee-camp-israel-says-attack-targeted-hamas): 
+Content: PBS NewsHour published an article about Israeli airstrikes in the Jabalia refugee camp in Gaza. <image:6424>
+
+Useful result: From [Source](https://www.bbc.com/news/world-middle-east-69019655): 
+Content: The BBC News website contains an image of an Israeli tank. <image:6425>
+
+Not enough information yet. Continuing fact-check...
+Got 3 new web source(s):
+	1. https://9jaflaver.com/israel-declares-state-of-war-after-hamas-militants-launch-surprise-attack-from-gaza-videos/
+	2. https://www.nairaland.com/7868168/israel-declares-war-readiness-hamas
+	3. https://dawahilallah.com/forum/%E0%A6%B8%E0%A6%82%E0%A6%AC%E0%A6%BE%E0%A6%A6/%E0%A6%9C%E0%A6%BF%E0%A6%B9%E0%A6%BE%E0%A6%A6-%E0%A6%B8%E0%A6%82%E0%A6%AC%E0%A6%BE%E0%A6%A6/209455-%E0%A6%AE%E0%A7%81%E0%A6%9C%E0%A6%BE%E0%A6%B9%E0%A6%BF%E0%A6%A6%E0%A7%80%E0%A6%A8-%E0%A6%A8%E0%A6%BF%E0%A6%89%E0%A6%9C-%E0%A7%A7%E0%A7%AF-%E0%A6%B8%E0%A6%AB%E0%A6%B0-%E0%A7%A7%E0%A7%AA%E0%A7%AA%E0%A7%AD-%E0%A6%B9%E0%A6%BF%E0%A6%9C%E0%A6%B0%E0%A7%80-%E0%A7%A7%E0%A7%AA-%E0%A6%86%E0%A6%97%E0%A6%B8%E0%A7%8D%E0%A6%9F-%E0%A7%A8%E0%A7%A6%E0%A7%A8%E0%A7%AB-%E0%A6%88%E0%A6%B8%E0%A6%BE%E0%A7%9F%E0%A7%80%E2%80%8B%E2%80%8B
+Useful result: From [Source](https://9jaflaver.com/israel-declares-state-of-war-after-hamas-militants-launch-surprise-attack-from-gaza-videos/): Found exact image on website with title: Israel declares 'state of war' after Hamas militants launch surprise ...
+Content: The article from 9jaflaver.com, published on October 7, 2023, discusses the surprise attack by Hamas on Israel. The article includes images of the aftermath of the attacks, including destroyed vehicles and buildings <image:4201>. The article also mentions that Hamas launched a surprise attack on October 7, 2023, and that Israel declared a state of war. The article includes a video of a destroyed Israeli tank. The article also includes several advertisements.
+
+Useful result: From [Source](https://www.nairaland.com/7868168/israel-declares-war-readiness-hamas): Found exact image on website with title: Israel declares war readiness as Hamas springs surprise multiple ...
+Content: The image appears on Nairaland, a Nigerian forum, in a thread discussing the October 7, 2023, Hamas attacks on Israel. The thread, created on October 7, 2023, includes reports from various news sources about the attacks and Israel's declaration of war readiness. The image is included in a post from October 7, 2023.
+
+Useful result: From [Source](https://dawahilallah.com/forum/%E0%A6%B8%E0%A6%82%E0%A6%AC%E0%A6%BE%E0%A6%A6/%E0%A6%9C%E0%A6%BF%E0%A6%B9%E0%A6%BE%E0%A6%A6-%E0%A6%B8%E0%A6%82%E0%A6%AC%E0%A6%BE%E0%A6%A6/209455-%E0%A6%AE%E0%A7%81%E0%A6%9C%E0%A6%BE%E0%A6%B9%E0%A6%BF%E0%A6%A6%E0%A7%80%E0%A6%A8-%E0%A6%A8%E0%A6%BF%E0%A6%89%E0%A6%9C-%E0%A7%A7%E0%A7%AF-%E0%A6%B8%E0%A6%AB%E0%A6%B0-%E0%A7%A7%E0%A7%AA%E0%A7%AA%E0%A7%AD-%E0%A6%B9%E0%A6%BF%E0%A6%9C%E0%A6%B0%E0%A7%80-%E0%A7%A7%E0%A7%AA-%E0%A6%86%E0%A6%97%E0%A6%B8%E0%A7%8D%E0%A6%9F-%E0%A7%A8%E0%A7%A6%E0%A7%A8%E0%A7%AB-%E0%A6%88%E0%A6%B8%E0%A6%BE%E0%A7%9F%E0%A7%80%E2%80%8B%E2%80%8B): Found exact image on website with title: মুজাহিদীন নিউজ || ১৯ সফর, ১৪৪৭ হিজরী || ১৪ আগস্ট, ২০২৫ ঈসায়ী
+Content: The website dawahilallah.com published an article on August 14, 2025, discussing the destruction of two Israeli tanks by Al-Qassam Brigades in Khan Yunis, using Yassin-105 shells and a side IED. <image:4221>. The article also mentions an attack by JNIM (Jama'at Nusrat al-Islam wal Muslimin) in Burkina Faso on a military base, resulting in the death of 20 soldiers. <image:4234>. The website also discusses the four-year achievements of the Islamic Emirate in Afghanistan, and a trade agreement between Kyrgyzstan and the Islamic Emirate. <image:4223>, <image:4231>. The website also mentions a statement by the IEA spokesperson regarding the US human rights report on Afghanistan. <image:4228>.
+
+The claim '<image:34> This image shows an Israeli tank unit near Jabalia camp in northern Gaza that was successfully ambushed by Hamas fighters, destroying multiple vehicles and injuring or killing their crews in October 2024.' is false.
+Justification: The claim is false. While there was an Israeli ground offensive in Jabalia in October 2024, and Hamas fighters were active in the area, a reverse image search of the provided image revealed that it was used in articles discussing the 2023 Hamas attacks on Israel and an attack by Al-Qassam Brigades in Khan Yunis, indicating the image is not from October 2024.
+
+So, the overall veracity is: false
+Fact-check took 1:05 min.

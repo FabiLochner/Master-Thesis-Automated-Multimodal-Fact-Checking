@@ -1,0 +1,33 @@
+Extracting claims from Content: <image:30> This image shows Jet Blue Airlines' in-flight map where Israel's borders were inaccurate and the area was shown under the label 'Palestinian Territories'. The indicent occured in September 2024.
+'Claim: "<image:30> This image shows Jet Blue Airlines' in-flight map where Israel's borders were inaccurate and the area was shown under the label 'Palestinian Territories'. The indicent occured in September 2024."'
+Verifying Claim: "<image:30> This image shows Jet Blue Airlines' in-flight map where Israel's borders were inaccurate and the area was shown under the label 'Palestinian Territories'. The indicent occured in September 2024."
+Not enough information yet. Continuing fact-check...
+Got 3 new web source(s):
+	1. September 04, 2024 https://www.jpost.com/diaspora/article-818656
+	2. March 11, 2025 https://www.timesofisrael.com/liveblog_entry/air-canada-blames-display-issue-after-in-flight-map-of-israel-relabeled-as-palestinian-territories/
+	3. September 09, 2024 https://www.paddleyourownkanoo.com/2024/09/09/jetblue-forced-to-change-inflight-maps-after-palestinian-territories-controversy/
+Useful result: From [Source](https://www.jpost.com/diaspora/article-818656): 
+Content: The Jerusalem Post reported that JetBlue Airways changed Israel's borders and name to "Palestinian Territories" on its in-flight map. The incident sparked outrage. The article was published on September 4, 2024. <image:1>.
+
+Useful result: From [Source](https://www.timesofisrael.com/liveblog_entry/air-canada-blames-display-issue-after-in-flight-map-of-israel-relabeled-as-palestinian-territories/): 
+Content: The Times of Israel reports that in September, passengers noticed a similar change had been made to the interactive maps aboard a JetBlue flight, where Israel was relabeled as the Palestinian Territories. The airline said the map had been provided by a third party company.
+
+Useful result: From [Source](https://www.paddleyourownkanoo.com/2024/09/09/jetblue-forced-to-change-inflight-maps-after-palestinian-territories-controversy/): 
+Content: The article from paddleyourownkanoo.com, published on September 9, 2024, discusses JetBlue's in-flight map controversy where Israel was labeled as "Palestinian Territories." <image:5309> JetBlue was forced to change its inflight maps and switch map vendors. The article also mentions JetBlue's ban on "Free Palestine" pin badges and related incidents with other airlines.
+
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='JetBlue in-flight map Israel Palestinian Territories')
+Skipping fact-checking website: https://www.snopes.com/fact-check/jetblue-map-israel-palestine/
+Skipping unsupported website: https://x.com/canarymission/status/1834253132798603570
+Skipping unsupported website: https://www.instagram.com/p/C_hDKHqpDDM/
+Failed to download or open image: cannot identify image file <_io.BytesIO object at 0x7ffed14f1580>
+Failed to download or open image: cannot identify image file <_io.BytesIO object at 0x7ffed14f35b0>
+Got 1 new web source(s):
+	1. https://www.ynetnews.com/travel/article/skawilphc
+Useful result: From [Source](https://www.ynetnews.com/travel/article/skawilphc): 
+Content: Ynetnews.com published an article with an image of a JetBlue in-flight map. The map inaccurately labels the area as "Palestinian Territories" and misrepresents Israel's borders. <image:13142>
+
+The claim '<image:30> This image shows Jet Blue Airlines' in-flight map where Israel's borders were inaccurate and the area was shown under the label 'Palestinian Territories'. The indicent occured in September 2024.' is true.
+Justification: JetBlue Airways' in-flight map inaccurately labeled the area as "Palestinian Territories" instead of Israel, as reported by sources like *The Jerusalem Post* and *The Times of Israel* in September 2024. The airline later changed its maps and switched map vendors after the incident, as reported by paddleyourownkanoo.com.
+
+So, the overall veracity is: true
+Fact-check took 0:17 min.

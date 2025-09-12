@@ -1,0 +1,41 @@
+Extracting claims from Content: Majority Leader John Thune blocked Senator Adam Schiff's committee assignments because of his past work in the Russia investigation over Donald Trump.
+'Claim: "Majority Leader John Thune blocked Senator Adam Schiff's committee assignments because of his past work in the Russia investigation over Donald Trump."'
+Verifying Claim: "Majority Leader John Thune blocked Senator Adam Schiff's committee assignments because of his past work in the Russia investigation over Donald Trump."
+Not enough information yet. Continuing fact-check...
+Got 3 new web source(s):
+	1. January 06, 2025 https://www.acec.org/news/last-word-blog/post/senate-leaders-finalize-committee-assignments-for-the-119th-congress/
+	2. https://torreydc.com/wp-content/uploads/2025/01/Senate-Committee-Assignments_119-Congress_Printable.pdf
+	3. https://www.hklaw.com/-/media/files/insights/eyes/2023/02/118thcongresscommitteeassignments.pdf
+Useful result: From [Source](https://www.acec.org/news/last-word-blog/post/senate-leaders-finalize-committee-assignments-for-the-119th-congress/): 
+Content: The article from ACEC.org discusses the Senate committee assignments for the 119th Congress. It mentions that Adam Schiff (D-CA) was assigned to the Finance Committee. <image:2574> and <image:1>. The article also provides links to the full lists of Republican and Democrat appointments.
+
+Useful result: From [Source](https://torreydc.com/wp-content/uploads/2025/01/Senate-Committee-Assignments_119-Congress_Printable.pdf): 
+Content: The document lists the Senate Committee Assignments for the 119th Congress. John Thune is listed as a member of the Agriculture, Nutrition and Forestry Committee, the Commerce, Science, and Transportation Committee, and the Finance Committee. Adam Schiff is listed as a member of the Agriculture, Nutrition and Forestry Committee, the Environment and Public Works Committee, the Judiciary Committee, and the Small Business and Entrepreneurship Committee.
+
+Useful result: From [Source](https://www.hklaw.com/-/media/files/insights/eyes/2023/02/118thcongresscommitteeassignments.pdf): 
+Content: The document lists the committee assignments for the House of Representatives and the Senate for the 118th Congress. The document was published by Holland & Knight LLP in 2023. The House Committee on the Judiciary includes Adam Schiff (CA) and Jim Jordan (OH). The Senate Committee on Commerce, Science and Transportation includes John Thune (SD).
+
+Got 0 new web source(s):
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='John Thune blocked Adam Schiff committee assignments')
+Skipping fact-checking website: https://www.usatoday.com/story/news/factcheck/2025/01/16/adam-schiff-senate-committees-fact-check/77718124007/
+Skipping unsupported website: https://twitter.com/i/grok/share/otBNghSaeMgmNm6kvk7wVmXuv
+Skipping unsupported website: https://www.facebook.com/ChristinaAguayoNews/posts/news-news-sen-john-thune-continues-to-block-trump-from-making-any-appointments-d/1285499182948359/
+Skipping unsupported website: https://x.com/ChristinaNewstv/status/1958605026189803686
+Skipping unsupported website: https://www.senate.gov/general/committee_assignments/assignments.htm
+Skipping unsupported website: https://www.congress.gov/bill/118th-congress/house-resolution/521/text
+Got 0 new web source(s):
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Adam Schiff committee assignments 2023')
+Skipping unsupported website: https://www.schiff.senate.gov/about/committee-assignments/
+Skipping unsupported website: https://www.congress.gov/member/adam-schiff/S001150
+Skipping unsupported website: https://www.govtrack.us/congress/members/adam_schiff/400361
+Got 1 new web source(s):
+	1. https://en.wikipedia.org/wiki/Adam_Schiff
+Useful result: From [Source](https://en.wikipedia.org/wiki/Adam_Schiff): 
+Content: The Wikipedia article on Adam Schiff states that he was removed from the House Intelligence Committee by Republican House speaker Kevin McCarthy. The article also mentions that Schiff served as the chair of the House Intelligence Committee from 2019 to 2023. <image:0>
+
+The claim 'Majority Leader John Thune blocked Senator Adam Schiff's committee assignments because of his past work in the Russia investigation over Donald Trump.' is false.
+Justification: The claim is false. Evidence indicates that Adam Schiff was removed from the House Intelligence Committee by Kevin McCarthy, not John Thune. The search results do not provide any information about John Thune blocking Adam Schiff's committee assignments.
+
+So, the overall veracity is: false
+Fact-check took 3:03 min.

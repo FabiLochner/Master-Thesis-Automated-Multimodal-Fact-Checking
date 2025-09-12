@@ -1,0 +1,38 @@
+Extracting claims from Content: <image:29> This is an authentic image of Greta Thunberg from November 2024 holding a sign reading, 'Fuck Israel'.
+'Claim: "<image:29> This is an authentic image of Greta Thunberg from November 2024 holding a sign reading, 'Fuck Israel'."'
+Verifying Claim: "<image:29> This is an authentic image of Greta Thunberg from November 2024 holding a sign reading, 'Fuck Israel'."
+Not enough information yet. Continuing fact-check...
+Got 7 new web source(s):
+	1. https://www.ndtv.com/world-news/victims-of-hamas-massacre-could-have-been-your-friends-israel-on-greta-thunbergs-support-for-gaza-4502156
+	2. https://www.ynetnews.com/environment/article/s1n8qjyt1x
+	3. https://theecologist.org/2023/nov/03/greta-stands-gaza
+	4. https://annebonnypirate.org/2023/10/31/palestine-and-climate-change-greta-stands-with-gaza/
+	5. https://www.thesun.co.uk/news/24499139/greta-thunberg-removed-israeli-curriculum-support-gaza/
+	6. https://www.foxnews.com/world/israel-responds-sharply-greta-thunberg-stand-gaza-post
+	7. https://www.the-sun.com/news/9398031/greta-thunberg-removed-israeli-curriculum-support-gaza/
+Useful result: From [Source](https://www.ndtv.com/world-news/victims-of-hamas-massacre-could-have-been-your-friends-israel-on-greta-thunbergs-support-for-gaza-4502156): Found exact image on website with title: "Hamas Doesn't...": Israel Responds To Greta Thunberg's Post On ...
+Content: The search result from NDTV.com, published on October 21, 2023, discusses Greta Thunberg's support for Gaza. The article includes an image of Thunberg holding a sign that reads "Stand with Gaza". <image:29> The article also mentions Israel's response to Thunberg's post.
+
+Useful result: From [Source](https://www.ynetnews.com/environment/article/s1n8qjyt1x): Found exact image on website with title: Greta Thunberg — from climate warrior to Israel hater - Ynetnews
+Content: The article from Ynetnews discusses Greta Thunberg's shift from climate activism to anti-Israel activism. It mentions her participation in protests, including one in Malmo, Sweden, and her use of social media to share anti-Israel messages. The article includes images of Thunberg with Palestinian flags and protest signs. The article was written by Yaron Drukman and Yogev Israeli.
+
+Useful result: From [Source](https://theecologist.org/2023/nov/03/greta-stands-gaza): Found exact image on website with title: Greta stands with Gaza - The Ecologist
+Content: The Ecologist published an article on November 3, 2023, discussing Greta Thunberg's support for Gaza. The article includes an image of Thunberg holding a sign that says "Stand With Gaza". <image:29> The article mentions that the photo was taken during climate and peace protests in London.
+
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Greta Thunberg sign justice now')
+Skipping unsupported website: https://x.com/GretaThunberg/status/1755921904119021998
+Skipping unsupported website: https://www.facebook.com/photo.php?fbid=1036733971142631&id=100044181126640&set=a.449591089856925
+Got 2 new web source(s):
+	1. https://www.nationalobserver.com/2024/03/11/news/greta-thunberg-activists-block-entrance-swedish-parliament
+	2. https://www.foxnews.com/world/greta-thunberg-posts-deletes-free-palestine-post-pushback-completely-unaware
+Useful result: From [Source](https://www.nationalobserver.com/2024/03/11/news/greta-thunberg-activists-block-entrance-swedish-parliament): 
+Content: The National Observer published an article about Greta Thunberg and other activists blocking the entrance to the Swedish Parliament. The article includes an image of the activists holding a banner that reads "Climate Justice Now". <image:14195>
+
+Useful result: From [Source](https://www.foxnews.com/world/greta-thunberg-posts-deletes-free-palestine-post-pushback-completely-unaware): 
+Content: Fox News published an article about Greta Thunberg. The article includes an image of Greta Thunberg holding a sign that says "Stand with..." <image:14196>.
+
+The claim '<image:29> This is an authentic image of Greta Thunberg from November 2024 holding a sign reading, 'Fuck Israel'.' is false.
+Justification: The image of Greta Thunberg holding the sign is authentic and has been used in articles discussing her activism, as evidenced by articles from sources like [NDTV.com](https://www.ndtv.com/) and [The Ecologist](https://www.theecologist.org/). However, the claim that the image is from November 2024 is not supported by the evidence, as the articles featuring the image were published in October and November 2023.
+
+So, the overall veracity is: false
+Fact-check took 0:25 min.

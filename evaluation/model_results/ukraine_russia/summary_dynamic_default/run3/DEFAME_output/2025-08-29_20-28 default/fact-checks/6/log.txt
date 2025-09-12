@@ -1,0 +1,36 @@
+Extracting claims from Content: <image:5> This image shows a US F-16 fighter jet which was shot down in August 2024 in airspace over the Black Sea after refusing to obey Russian orders.
+'Claim: "<image:5> This image shows a US F-16 fighter jet which was shot down in August 2024 in airspace over the Black Sea after refusing to obey Russian orders."'
+Verifying Claim: "<image:5> This image shows a US F-16 fighter jet which was shot down in August 2024 in airspace over the Black Sea after refusing to obey Russian orders."
+Not enough information yet. Continuing fact-check...
+Got 3 new web source(s):
+	1. August 29, 2024 https://www.defensenews.com/global/europe/2024/08/29/ukraine-f-16-jet-crashes-during-russian-attack-killing-pilot/
+	2. June 09, 2025 https://www.twz.com/air/claims-swirl-around-russian-su-35s-flanker-shootdown
+	3. August 27, 2024 https://www.theguardian.com/world/article/2024/aug/28/ukraine-war-briefing-zelenskiy-says-f16s-shooting-down-russian-missiles
+Useful result: From [Source](https://www.defensenews.com/global/europe/2024/08/29/ukraine-f-16-jet-crashes-during-russian-attack-killing-pilot/): 
+Content: Defense News, published on August 29, 2024, reports that a Ukrainian F-16 jet crashed during a Russian attack, killing the pilot. <image:2853>, <image:2852>. The crash occurred on Monday during a major missile and drone barrage. The article mentions that the F-16s were provided by Western partners to help fight Russia's invasion.
+
+Useful result: From [Source](https://www.twz.com/air/claims-swirl-around-russian-su-35s-flanker-shootdown): 
+Content: The search result from The War Zone discusses claims about a Ukrainian F-16 shooting down a Russian Su-35S Flanker. It mentions that in August 2024, an F-16 pilot named Oleksiy Mes died during a Russian aerial barrage. The article also includes images of an F-16 <image:2865> and a downed Su-35 <image:2862>.
+
+Useful result: From [Source](https://www.theguardian.com/world/article/2024/aug/28/ukraine-war-briefing-zelenskiy-says-f16s-shooting-down-russian-missiles): 
+Content: The Guardian published an article on August 28, 2024, discussing the Ukraine war. The article mentions that Volodymyr Zelenskiy said F-16s were used to shoot down Russian missiles. <image:2868> shows Ukrainian F-16 fighter planes.
+
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='F-16 fighter jet crash Black Sea')
+Got 3 new web source(s):
+	1. https://www.npr.org/2024/08/30/g-s1-20234/ukraine-f16-warplane-crash
+	2. https://www.gpb.org/news/2023/03/16/the-us-military-releases-footage-of-black-sea-drone-crash-russian-jet
+	3. https://www.theguardian.com/world/2022/jan/11/taiwan-f-16-jet-crashes-sea-fleet-suspended
+Useful result: From [Source](https://www.npr.org/2024/08/30/g-s1-20234/ukraine-f16-warplane-crash): 
+Content: NPR reports on a Ukrainian F-16 warplane crash. <image:5582>
+
+Useful result: From [Source](https://www.gpb.org/news/2023/03/16/the-us-military-releases-footage-of-black-sea-drone-crash-russian-jet): 
+Content: The US military released footage of a drone crash in the Black Sea. <image:5583>
+
+Useful result: From [Source](https://www.theguardian.com/world/2022/jan/11/taiwan-f-16-jet-crashes-sea-fleet-suspended): 
+Content: The Guardian reports on a Taiwan F-16 jet crash. <image:5584>
+
+The claim '<image:5> This image shows a US F-16 fighter jet which was shot down in August 2024 in airspace over the Black Sea after refusing to obey Russian orders.' is false.
+Justification: The claim is not supported by the evidence. While there are reports of Ukrainian F-16s crashing in August 2024, there is no evidence to support the claim that a US F-16 was shot down in the Black Sea after refusing Russian orders. The provided image lacks sufficient context to verify the claim.
+
+So, the overall veracity is: false
+Fact-check took 0:30 min.

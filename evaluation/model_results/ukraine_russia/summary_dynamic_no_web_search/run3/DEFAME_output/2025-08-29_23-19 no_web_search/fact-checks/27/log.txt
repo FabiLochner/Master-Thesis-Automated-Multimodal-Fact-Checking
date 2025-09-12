@@ -1,0 +1,52 @@
+Extracting claims from Content: Ukrainian President Volodymyr Zelenskyy owns 15 homes including a $35 million home in Florida, has $1.2 billion in an overseas bank account, owns 15 homes, three private planes and has a monthly income of $11 million.
+'Claim: "Ukrainian President Volodymyr Zelenskyy owns 15 homes including a $35 million home in Florida, has $1.2 billion in an overseas bank account, owns 15 homes, three private planes and has a monthly income of $11 million."'
+Verifying Claim: "Ukrainian President Volodymyr Zelenskyy owns 15 homes including a $35 million home in Florida, has $1.2 billion in an overseas bank account, owns 15 homes, three private planes and has a monthly income of $11 million."
+Not enough information yet. Continuing fact-check...
+Got 3 new web source(s):
+	1. https://www.businesswire.com/news/home/20240219354828/en/Florida-Oceanfront-Mansion-Not-Purchased-by-Ukraines-Zelenskyy-Heads-to-Luxury-Auction
+	2. https://www.reuters.com/article/world/exclusive-wife-of-ukraine-president-elect-got-penthouse-bargain-from-tycoon-idUSKCN1S81TE/
+	3. https://www.yahoo.com/lifestyle/oceanfront-florida-mansion-whose-ownership-184443105.html
+Useful result: From [Source](https://www.reuters.com/article/world/exclusive-wife-of-ukraine-president-elect-got-penthouse-bargain-from-tycoon-idUSKCN1S81TE/): 
+Content: The search result contains an image of a building. <image:6751>
+
+Useful result: From [Source](https://www.yahoo.com/lifestyle/oceanfront-florida-mansion-whose-ownership-184443105.html): 
+Content: The search result from Yahoo shows an oceanfront Florida mansion. <image:6752>
+
+Got 3 new web source(s):
+	1. https://www.aljazeera.com/news/2021/10/4/pandora-papers-ukraine-leader-seeks-to-justify-offshore-accounts
+	2. https://www.npr.org/2025/02/26/nx-s1-5309488/us-ukraine-critical-minerals-deal-trump-zelenskyy
+	3. https://www.cfr.org/expert-brief/zelenskyys-victory-plan-ukraine-makes-sense-it-has-little-chance-being-implemented
+Useful result: From [Source](https://www.aljazeera.com/news/2021/10/4/pandora-papers-ukraine-leader-seeks-to-justify-offshore-accounts): 
+Content: Al Jazeera published an article about Volodymyr Zelenskyy and offshore accounts. <image:6755>
+
+Useful result: From [Source](https://www.npr.org/2025/02/26/nx-s1-5309488/us-ukraine-critical-minerals-deal-trump-zelenskyy): 
+Content: The search result from NPR contains an image of Volodymyr Zelenskyy. <image:6756>
+
+Got 3 new web source(s):
+	1. https://abcnews.go.com/Politics/zelenskyys-trip-washington-treated-mini-state-visit-sources/story?id=95658338
+	2. https://www.abc.net.au/news/2023-05-14/ukraine-zelenskyy-makes-surprise-paris-visit-talks-with-macron/102344976
+	3. https://news.sky.com/video/volodymyr-zelenskyys-plane-lands-in-uk-ahead-of-major-summit-in-london-13319190
+Useful result: From [Source](https://abcnews.go.com/Politics/zelenskyys-trip-washington-treated-mini-state-visit-sources/story?id=95658338): 
+Content: The search result from ABC News includes an image of Volodymyr Zelenskyy. <image:6761>
+
+Useful result: From [Source](https://www.abc.net.au/news/2023-05-14/ukraine-zelenskyy-makes-surprise-paris-visit-talks-with-macron/102344976): 
+Content: The search result from ABC News Australia contains an image of Volodymyr Zelenskyy. <image:6762>
+
+Useful result: From [Source](https://news.sky.com/video/volodymyr-zelenskyys-plane-lands-in-uk-ahead-of-major-summit-in-london-13319190): 
+Content: The Sky News search result contains an image of a plane. <image:6763>
+
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Volodymyr Zelenskyy income')
+Failed to download or open image: HTTPSConnectionPool(host='cdnuploads.aa.com.tr', port=443): Read timed out. (read timeout=10)
+Failed to download or open image: cannot identify image file <_io.BytesIO object at 0x7ffed17b9b20>
+Got 3 new web source(s):
+	1. https://www.aa.com.tr/en/asia-pacific/ukrainian-president-zelenskyy-makes-public-2-year-income/3121869
+	2. https://www.reuters.com/world/europe/ukraines-zelenskiy-publishes-income-part-transparency-drive-2024-01-28/
+	3. https://en.wikipedia.org/wiki/Volodymyr_Zelenskyy
+Useful result: From [Source](https://www.reuters.com/world/europe/ukraines-zelenskiy-publishes-income-part-transparency-drive-2024-01-28/): 
+Content: Reuters published an article on January 28, 2024, about Volodymyr Zelenskyy publishing his income as part of a transparency drive. <image:7137>
+
+The claim 'Ukrainian President Volodymyr Zelenskyy owns 15 homes including a $35 million home in Florida, has $1.2 billion in an overseas bank account, owns 15 homes, three private planes and has a monthly income of $11 million.' is false.
+Justification: The claim is false. Evidence indicates that Zelenskyy did not purchase a Florida mansion, contradicting the claim ([https://www.businesswire.com/news/home/20240219354828/en/Florida-Oceanfront-Mansion-Not-Purchased-by-Ukraines-Zelenskyy-Heads-to-Luxury-Auction](https://www.businesswire.com/news/home/20240219354828/en/Florida-Oceanfront-Mansion-Not-Purchased-by-Ukraines-Zelenskyy-Heads-to-Luxury-Auction)). While Zelenskyy's income has been published ([https://www.reuters.com/world/europe/ukraines-zelenskiy-publishes-income-part-transparency-drive-2024-01-28/](https://www.reuters.com/world/europe/ukraines-zelenskiy-publishes-income-part-transparency-drive-2024-01-28/)), the other details in the claim, such as the number of homes, bank account details, and monthly income, are not supported by the provided evidence.
+
+So, the overall veracity is: false
+Fact-check took 0:47 min.

@@ -1,0 +1,24 @@
+Extracting claims from Content: U.S. Vice President JD Vance's cousin Nate Vance fought in Ukraine for three years during its war with Russia.
+'Claim: "U.S. Vice President JD Vance's cousin Nate Vance fought in Ukraine for three years during its war with Russia."'
+Verifying Claim: "U.S. Vice President JD Vance's cousin Nate Vance fought in Ukraine for three years during its war with Russia."
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='JD Vance Nate Vance Ukraine')
+Skipping unsupported website: https://www.youtube.com/watch?v=1iaBpU8FnlU
+Got 3 new web source(s):
+	1. https://en.wikipedia.org/wiki/Nate_Vance
+	2. March 22, 2025 https://www.scmp.com/magazines/style/entertainment/article/3303271/who-us-vice-president-jd-vances-cousin-nate-former-us-marine-who-fought-ukraine-made-headlines-when
+	3. March 10, 2025 https://www.bbc.com/news/articles/cm2yl5kevrpo
+Useful result: From [Source](https://en.wikipedia.org/wiki/Nate_Vance): 
+Content: The search result from Wikipedia states that Nate Vance, the first cousin of JD Vance, fought in Ukraine from 2022 to 2025. He served in the Ukrainian Armed Forces and was a member of the Da Vinci Wolves unit.
+
+Useful result: From [Source](https://www.scmp.com/magazines/style/entertainment/article/3303271/who-us-vice-president-jd-vances-cousin-nate-former-us-marine-who-fought-ukraine-made-headlines-when): 
+Content: The South China Morning Post, published on March 22, 2025, states that Nate Vance, cousin of U.S. Vice President J.D. Vance, fought in the Russo-Ukrainian war for three years. <image:5658>
+
+Useful result: From [Source](https://www.bbc.com/news/articles/cm2yl5kevrpo): 
+Content: The BBC published an article on March 10, 2025, stating that Nate Vance, cousin of U.S. Vice President JD Vance, criticized his cousin and Donald Trump for "belittling" Volodymyr Zelensky during a White House meeting. Nate Vance said he spent three years volunteering with the Ukrainian military after Russia's full-scale invasion. <image:5660>
+
+The claim 'U.S. Vice President JD Vance's cousin Nate Vance fought in Ukraine for three years during its war with Russia.' is true.
+Justification: Nate Vance, the first cousin of U.S. Vice President J.D. Vance, fought in Ukraine for three years during the Russo-Ukrainian war, as confirmed by the BBC ([https://www.bbc.com/news/articles/cm2yl5kevrpo](https://www.bbc.com/news/articles/cm2yl5kevrpo)) and the South China Morning Post ([https://www.scmp.com/magazines/style/entertainment/article/3303271/who-us-vice-president-jd-vances-cousin-nate-former-us-marine-who-fought-ukraine-made-headlines-when](https://www.scmp.com/magazines/style/entertainment/article/3303271/who-us-vice-president-jd-vances-cousin-nate-former-us-marine-who-fought-ukraine-made-headlines-when)).
+
+So, the overall veracity is: true
+Fact-check took 0:48 min.

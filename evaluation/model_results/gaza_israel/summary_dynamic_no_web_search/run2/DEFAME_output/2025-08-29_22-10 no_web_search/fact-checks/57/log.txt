@@ -1,0 +1,41 @@
+Extracting claims from Content: <image:32> This image shows Palestinian baby Sham Imad Muhareb which did not lose her arm in an Israeli airstrike on the Shejaeya neighborhood, east of Gaza City, in April 2025.
+'Claim: "<image:32> This image shows Palestinian baby Sham Imad Muhareb which did not lose her arm in an Israeli airstrike on the Shejaeya neighborhood, east of Gaza City, in April 2025."'
+Verifying Claim: "<image:32> This image shows Palestinian baby Sham Imad Muhareb which did not lose her arm in an Israeli airstrike on the Shejaeya neighborhood, east of Gaza City, in April 2025."
+Not enough information yet. Continuing fact-check...
+Got 0 new web source(s):
+Not enough information yet. Continuing fact-check...
+INFO: Dropping action 'reverse_search' as it was already performed.
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Palestinian baby Sham Imad Muhareb Israeli airstrike')
+Skipping unsupported website: https://www.facebook.com/imamomarsuleiman/posts/sham-imad-muhareb-who-lost-her-arm-yesterday-in-an-airstrike-has-diedevery-image/1235035921312675/
+Skipping unsupported website: https://www.instagram.com/p/DITsy8ei_oH/
+Skipping unsupported website: https://x.com/QudsNen/status/1910677653855613256
+Got 0 new web source(s):
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Shejaeya neighborhood Gaza City airstrike April 2025')
+Got 3 new web source(s):
+	1. https://www.reuters.com/world/middle-east/israeli-troops-expand-security-zone-northern-gaza-2025-04-04/
+	2. https://www.theguardian.com/world/2025/apr/03/at-least-27-killed-in-israeli-bombing-of-shelter-in-gaza-city-rescuers-say
+	3. https://www.bbc.com/news/articles/cy5rrnzw0kwo
+Useful result: From [Source](https://www.reuters.com/world/middle-east/israeli-troops-expand-security-zone-northern-gaza-2025-04-04/): 
+Content: Reuters published an article on April 4, 2025, about Israeli troops expanding a security zone in northern Gaza. The article includes an image of the destruction in Gaza <image:8102>.
+
+Useful result: From [Source](https://www.theguardian.com/world/2025/apr/03/at-least-27-killed-in-israeli-bombing-of-shelter-in-gaza-city-rescuers-say): 
+Content: The Guardian published an article on April 3, 2025, about an Israeli bombing of a shelter in Gaza City. The article includes a photograph of the aftermath of the bombing. <image:8104>
+
+Useful result: From [Source](https://www.bbc.com/news/articles/cy5rrnzw0kwo): 
+Content: The BBC News website contains an image of the Shejaeya neighborhood in Gaza City. <image:8106>
+
+Not enough information yet. Continuing fact-check...
+INFO: Dropping action 'reverse_search' as it was already performed.
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='images', text='Sham Imad Muhareb Gaza injury')
+Skipping unsupported website: https://www.facebook.com/imamomarsuleiman/posts/sham-imad-muhareb-who-lost-her-arm-yesterday-in-an-airstrike-has-diedevery-image/1235035921312675/
+Skipping unsupported website: https://www.instagram.com/p/DITsy8ei_oH/
+Skipping unsupported website: https://x.com/QudsNen/status/1910677653855613256
+Failed to download or open image: cannot identify image file <_io.BytesIO object at 0x7ffed15b1210>
+Got 2 new web source(s):
+	1. https://jordantimes.com/news/local/jaf-evacuates-injured-jordanian-medic-from-gaza-for-treatment
+	2. https://www.ifj.org/war-in-gaza
+The claim '<image:32> This image shows Palestinian baby Sham Imad Muhareb which did not lose her arm in an Israeli airstrike on the Shejaeya neighborhood, east of Gaza City, in April 2025.' is false.
+Justification: The claim cannot be verified because the search results confirm Israeli airstrikes in Gaza City, including the Shejaeya neighborhood, in April 2025, but do not mention Sham Imad Muhareb or provide details about a baby injured in an airstrike.
+
+So, the overall veracity is: false
+Fact-check took 0:30 min.

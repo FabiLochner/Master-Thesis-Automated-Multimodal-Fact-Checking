@@ -1,0 +1,35 @@
+Extracting claims from Content: <image:6> This image shows the Chinese Communist Party's Red Cross troops in Russia who have changed into winter clothes and set off for the Russian-Ukrainian front to aid Russia in rescuing its occupied territories.
+'Claim: "<image:6> This image shows the Chinese Communist Party's Red Cross troops in Russia who have changed into winter clothes and set off for the Russian-Ukrainian front to aid Russia in rescuing its occupied territories."'
+Verifying Claim: "<image:6> This image shows the Chinese Communist Party's Red Cross troops in Russia who have changed into winter clothes and set off for the Russian-Ukrainian front to aid Russia in rescuing its occupied territories."
+Not enough information yet. Continuing fact-check...
+Got 3 new web source(s):
+	1. https://www.cnn.com/2025/04/16/europe/ukraine-russia-chinese-nationals-intl-latam
+	2. https://www.theguardian.com/weather/2025/may/09/chinese-troops-march-with-russian-forces-as-xi-joins-putin-for-victory-day-parade
+	3. https://www.icrc.org/sites/default/files/document_new/file_list/red_cross_movement_activities_overview_ukraine_2022_3.pdf
+Useful result: From [Source](https://www.cnn.com/2025/04/16/europe/ukraine-russia-chinese-nationals-intl-latam): 
+Content: CNN published an article on April 16, 2025, discussing the capture of Chinese nationals fighting on the Russian side in Ukraine. <image:i>. The article mentions that Ukraine has declared it has information on a further 155 Chinese citizens fighting for Russia. The article also includes a photo of a captured Chinese national.
+
+Useful result: From [Source](https://www.theguardian.com/weather/2025/may/09/chinese-troops-march-with-russian-forces-as-xi-joins-putin-for-victory-day-parade): 
+Content: The Guardian published an article on May 9, 2025, discussing the Victory Day parade in Moscow, where Chinese troops marched with Russian forces. <image:3184>, <image:3185>, <image:3188>. The article mentions that Vladimir Putin used the celebrations to justify the invasion of Ukraine.
+
+Useful result: From [Source](https://www.icrc.org/sites/default/files/document_new/file_list/red_cross_movement_activities_overview_ukraine_2022_3.pdf): 
+Content: The International Federation of Red Cross and Red Crescent Societies and the International Committee of the Red Cross published a report on the Red Cross Red Crescent Movement's response to the Russia-Ukraine international armed conflict. The report mentions the Ukrainian Red Cross Society, the Russian Red Cross Society, and the Red Cross Society of China. The report includes information on financial aid, health interventions, shelter support, and volunteer involvement. The report was published in 2023. <image:1>
+
+Got 3 new web source(s):
+	1. https://en.wikipedia.org/wiki/Airliner
+	2. https://airandspace.si.edu/explore/stories/evolution-commercial-airliner
+	3. https://www.merriam-webster.com/dictionary/airliner
+Useful result: From [Source](https://en.wikipedia.org/wiki/Airliner): Found exact image on website with title: Airliner - Wikipedia
+Content: The Wikipedia article "Airliner" discusses the history, types, and features of airliners. It mentions that airliners are designed for transporting passengers and cargo, and the modern variant is typically a long, tube-shaped, jet-powered aircraft. The article also covers narrow-body, wide-body, regional, and commuter aircraft. It provides information on the engines used, including piston engines and turbine engines (turbofans and turboprops). The article also lists current manufacturers like Airbus, Boeing, and Embraer. The article also includes a section on cabin configurations and features, including seats, overhead bins, passenger service units, cabin pressurization, and baggage holds. <image:k>
+
+Useful result: From [Source](https://airandspace.si.edu/explore/stories/evolution-commercial-airliner): Found exact image on website with title: The Evolution of the Commercial Airliner
+Content: The search result is from the Smithsonian National Air and Space Museum. It discusses the evolution of commercial airliners, including early models, jet airliners, and supersonic aircraft like the Concorde. <image:6> is not present in the search result.
+
+Useful result: From [Source](https://www.merriam-webster.com/dictionary/airliner): Found exact image on website with title: AIRLINER Definition & Meaning - Merriam-Webster
+Content: The search result is from Merriam-Webster and defines "airliner". The image in the claim is present on the website. The last updated date is August 13, 2025.
+
+The claim '<image:6> This image shows the Chinese Communist Party's Red Cross troops in Russia who have changed into winter clothes and set off for the Russian-Ukrainian front to aid Russia in rescuing its occupied territories.' is false.
+Justification: The claim is false. While the search results show that Chinese troops marched with Russian forces and the Red Cross Society of China is involved in the Russia-Ukraine conflict, the image in the claim is of an airliner, and there is no evidence to support the assertion that it depicts Chinese Red Cross troops.
+
+So, the overall veracity is: false
+Fact-check took 0:19 min.

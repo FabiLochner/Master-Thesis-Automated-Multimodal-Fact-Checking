@@ -1,0 +1,440 @@
+PlanPrompt - QUERY:
+
+# Instructions
+The available knowledge is insufficient to assess the Claim. Therefore, **propose a set of actions** to retrieve new and helpful evidence. Adhere to the following rules:
+* The actions available are listed under Valid Actions, including a short description for each action. No other actions are possible at this moment. 
+* For each action, use the formatting as specified in Valid Actions.
+* Include all actions in a single Markdown code block at the end of your answer.
+* Propose as few actions as possible, but as much as needed. Do not propose similar or previously used actions.
+
+
+
+## Valid Actions
+* `reverse_search`
+   * Description: Performs a reverse image search to find similar images on the web.
+   * How to use: Provide an image and the model will perform a reverse search to find similar images.
+   * Format: reverse_search(<image:k>), where `k` is the image's ID
+
+* `image_search`
+   * Description: Run an image search on Google to retrieve related images for a given query.
+   * How to use: This is a helpful tool for fact-checking images. Use this to retrieve images associated with a specific keyword or phrase. Ensure that the query is clear and specific to improve search accuracy. If no relevant images are found, refine the query or use more descriptive terms.
+   * Format: image_search("your image search query goes here")
+
+* `geolocate`
+   * Description: Performs geolocation to determine the country where an image was taken.
+   * How to use: Provide an image and the model will determine the most likely countries where it was taken.
+   * Format: geolocate(<image:k>), where `k` is the image's ID
+
+# Example: reverse_search()
+
+## Claim
+Text: "<image:k> shows a rare event of a solar eclipse with a double ring."
+
+...
+
+## Actions
+```
+reverse_search(<image:k>)
+```
+
+# Example: image_search()
+
+## Claim
+Text: "Chinese officials in white protective hazmat suits carried people down a hallway to be quarantined for having COVID-19 in November 2022."
+
+...
+
+ACTIONS:
+```
+image_search("China officials white suits carry people")
+image_search("China officials carry people COVID quarantine 2022")
+```
+
+# Example: geolocate()
+
+## Claim
+Text: "<image:k> shows a nuclear weapons facility in Usbekistan."
+
+...
+
+## Actions
+```
+geolocate(<image:k>)
+```
+
+# Record
+## Claim
+Claim: "<image:25> This image shows a military parade of Poland's army on August 14, 2024, preparing for war with Russia."
+
+# Your Actions
+
+
+
+===== > RESPONSE:  < =====
+```
+reverse_search(<image:25>)
+image_search("Poland army parade tanks")
+```
+_________________________
+
+
+
+SummarizeResultPrompt - QUERY:
+
+# Instructions
+In order to find evidence that helps your fact-check, you just ran a web search which yielded a Search Result. **Your task right now is to summarize the Search Result.** What to include:
+* information that might be useful for the fact-check (see Record)
+* relevant images (refer to images by inserting their reference <image:k>)
+* if available: the release date as well as the author or the publisher (e.g. the media company) of the search result.
+
+Do NOT include:
+* advertisements
+* any other information not related to the Record or the Claim
+
+Additional rules:
+* Do not add any additional information besides the information in the Search Result.
+* If the Search Result doesn't contain any relevant information for the fact-checking work, simply print one word in capital letters: "NONE".
+* Keep your writing style like in the Examples 1, 2 and 3 provided to you.
+* Try to filter out relevant information even if the search result is in a different language.
+
+# Example 1
+The search result from America Today provides several photographs of the Notre-Dame Cathedral fire on April 15, 2019. <image:i>, <image:j>, <image:k>. None of the images show the Eiffel Tower in the background. 
+
+# Example 2
+NONE
+
+# Example 3
+The Guardian discusses a report blaming the Syrian government for a toxic gas attack and condemning their use of chemical weapons. The Guardian mentions the Chemical Weapons Convention and the responsibilities of Syria under the convention. According to The Guardian, The White House condemned the Assad regime for defying the norm against chemical weapons use.
+
+# Record
+## Claim
+Claim: "<image:25> This image shows a military parade of Poland's army on August 14, 2024, preparing for war with Russia."
+
+## Actions
+```
+reverse_search(<image:25>)
+image_search("Poland army parade tanks")
+```
+
+# Search Result
+From [Source](https://www.cnn.com/2023/08/15/europe/poland-military-parade-europe-clout-intl): 
+Content: "
+<image:7358>"
+
+# Your Summary
+
+
+
+===== > RESPONSE:  < =====
+CNN published an article about a military parade in Poland. The article contains an image of tanks. <image:7358>
+
+_________________________
+
+
+
+SummarizeResultPrompt - QUERY:
+
+# Instructions
+In order to find evidence that helps your fact-check, you just ran a web search which yielded a Search Result. **Your task right now is to summarize the Search Result.** What to include:
+* information that might be useful for the fact-check (see Record)
+* relevant images (refer to images by inserting their reference <image:k>)
+* if available: the release date as well as the author or the publisher (e.g. the media company) of the search result.
+
+Do NOT include:
+* advertisements
+* any other information not related to the Record or the Claim
+
+Additional rules:
+* Do not add any additional information besides the information in the Search Result.
+* If the Search Result doesn't contain any relevant information for the fact-checking work, simply print one word in capital letters: "NONE".
+* Keep your writing style like in the Examples 1, 2 and 3 provided to you.
+* Try to filter out relevant information even if the search result is in a different language.
+
+# Example 1
+The search result from America Today provides several photographs of the Notre-Dame Cathedral fire on April 15, 2019. <image:i>, <image:j>, <image:k>. None of the images show the Eiffel Tower in the background. 
+
+# Example 2
+NONE
+
+# Example 3
+The Guardian discusses a report blaming the Syrian government for a toxic gas attack and condemning their use of chemical weapons. The Guardian mentions the Chemical Weapons Convention and the responsibilities of Syria under the convention. According to The Guardian, The White House condemned the Assad regime for defying the norm against chemical weapons use.
+
+# Record
+## Claim
+Claim: "<image:25> This image shows a military parade of Poland's army on August 14, 2024, preparing for war with Russia."
+
+## Actions
+```
+reverse_search(<image:25>)
+image_search("Poland army parade tanks")
+```
+
+# Search Result
+From [Source](https://www.gettyimages.com.mx/editorial-images/news/event/polands-national-armed-forces-day-military-parade/776370069?editorialproducts=all): 
+Content: "
+<image:7359>"
+
+# Your Summary
+
+
+
+===== > RESPONSE:  < =====
+Getty Images shows a military parade in Poland. <image:7359>
+
+_________________________
+
+
+
+SummarizeResultPrompt - QUERY:
+
+# Instructions
+In order to find evidence that helps your fact-check, you just ran a web search which yielded a Search Result. **Your task right now is to summarize the Search Result.** What to include:
+* information that might be useful for the fact-check (see Record)
+* relevant images (refer to images by inserting their reference <image:k>)
+* if available: the release date as well as the author or the publisher (e.g. the media company) of the search result.
+
+Do NOT include:
+* advertisements
+* any other information not related to the Record or the Claim
+
+Additional rules:
+* Do not add any additional information besides the information in the Search Result.
+* If the Search Result doesn't contain any relevant information for the fact-checking work, simply print one word in capital letters: "NONE".
+* Keep your writing style like in the Examples 1, 2 and 3 provided to you.
+* Try to filter out relevant information even if the search result is in a different language.
+
+# Example 1
+The search result from America Today provides several photographs of the Notre-Dame Cathedral fire on April 15, 2019. <image:i>, <image:j>, <image:k>. None of the images show the Eiffel Tower in the background. 
+
+# Example 2
+NONE
+
+# Example 3
+The Guardian discusses a report blaming the Syrian government for a toxic gas attack and condemning their use of chemical weapons. The Guardian mentions the Chemical Weapons Convention and the responsibilities of Syria under the convention. According to The Guardian, The White House condemned the Assad regime for defying the norm against chemical weapons use.
+
+# Record
+## Claim
+Claim: "<image:25> This image shows a military parade of Poland's army on August 14, 2024, preparing for war with Russia."
+
+## Actions
+```
+reverse_search(<image:25>)
+image_search("Poland army parade tanks")
+```
+
+# Search Result
+From [Source](https://www.aljazeera.com/news/2023/8/16/poland-holds-huge-military-parade-as-war-rages-in-neighbouring-ukraine): 
+Content: "
+<image:7360>"
+
+# Your Summary
+
+
+
+===== > RESPONSE:  < =====
+Al Jazeera reports that Poland held a military parade. <image:7360> The parade took place as the war in Ukraine was ongoing. The article was published on August 16, 2023.
+
+_________________________
+
+
+
+SummarizeSummariesPrompt - QUERY:
+
+# Instructions
+You just retrieved web sources, each one summarized under "Web Sources". **Your task right now is to summarize the web source summaries.**
+
+Always adhere to the following rules:
+* Write only one to two paragraphs.
+* Include all URLs from the listed sources. Format them as Markdown hyperlinks.
+* Do not add any additional information besides the information in the summaries.
+* Include references (<image:k>) to all relevant images.
+
+# Record
+## Claim
+Claim: "<image:25> This image shows a military parade of Poland's army on August 14, 2024, preparing for war with Russia."
+
+## Actions
+```
+reverse_search(<image:25>)
+image_search("Poland army parade tanks")
+```
+
+## Web Sources
+**Web Search Result**
+
+From [Source](https://www.cnn.com/2023/08/15/europe/poland-military-parade-europe-clout-intl): 
+Content: CNN published an article about a military parade in Poland. The article contains an image of tanks. <image:7358>
+
+
+From [Source](https://www.gettyimages.com.mx/editorial-images/news/event/polands-national-armed-forces-day-military-parade/776370069?editorialproducts=all): 
+Content: Getty Images shows a military parade in Poland. <image:7359>
+
+
+From [Source](https://www.aljazeera.com/news/2023/8/16/poland-holds-huge-military-parade-as-war-rages-in-neighbouring-ukraine): 
+Content: Al Jazeera reports that Poland held a military parade. <image:7360> The parade took place as the war in Ukraine was ongoing. The article was published on August 16, 2023.
+
+
+## Your Summary
+
+
+
+===== > RESPONSE:  < =====
+CNN published an article about a military parade in Poland, which included an image of tanks (<image:7358>). Getty Images also shows a military parade in Poland (<image:7359>).
+
+Al Jazeera reports that Poland held a military parade as the war in Ukraine was ongoing (<image:7360>).
+The articles were published in August 2023.
+
+_________________________
+
+
+
+DevelopPrompt - QUERY:
+
+# Instructions
+You just retrieved new Evidence. Now, **analyze the Claim's veracity using the evidence**. Always adhere to the following rules:
+* Focus on developing new insights. Do not repeat larger parts from the Record. Do not restate the Claim.
+* Write down your thoughts step-by-step. Whenever necessary, you may elaborate in more detail.
+* Depending on the topic's complexity, invest one to three paragraphs. The fewer, the better.
+* If you find that there is insufficient information to verify the Claim, explicitly state what information is missing.
+* If you cite web sources, always refer to them by including their URL as a Markdown hyperlink.
+* **Use information only from the recorded evidence**: Avoid inserting information that is not implied by the evidence. You may use commonsense knowledge, though.
+
+# Record
+## Claim
+Claim: "<image:25> This image shows a military parade of Poland's army on August 14, 2024, preparing for war with Russia."
+
+## Actions
+```
+reverse_search(<image:25>)
+image_search("Poland army parade tanks")
+```
+
+## Evidence
+### Evidence from `image_search`
+CNN published an article about a military parade in Poland, which included an image of tanks (<image:7358>). Getty Images also shows a military parade in Poland (<image:7359>).
+
+Al Jazeera reports that Poland held a military parade as the war in Ukraine was ongoing (<image:7360>).
+The articles were published in August 2023.
+
+
+# Your Analysis
+
+
+
+===== > RESPONSE:  < =====
+The evidence confirms that Poland held a military parade. However, the provided evidence does not confirm the date of the parade, nor does it mention any preparation for war with Russia. The articles were published in August 2023, not 2024.
+
+The claim that the parade was on August 14, 2024, and that it was preparing for war with Russia is not supported by the evidence.
+
+More information is needed to verify the date and the purpose of the parade.
+
+_________________________
+
+
+
+JudgePrompt - QUERY:
+
+# Instructions
+**Determine the Claim's veracity** by following these steps:
+1. Briefly summarize the key insights from the fact-check (see Record) in at most one paragraph.
+2. Write one paragraph about which one of the Decision Options applies best. Include the most appropriate decision option at the end and enclose it in backticks like `this`.
+
+
+
+
+## Decision Options
+* `false`: The claim is not factually accurate. This is the case if one of the following three conditions is met:(1) The claim is demonstrably false when it is disproven by evidence from multiple and reliable sources,(2) The claim or image is taken out of context, i.e. the origin, content and/or meaning of a statement or an image is misrepresented. For example, an old claim or an old image is mispresented in a new context in a misleading way,(3) There is not enough evidence to verify the claim or the evidence is conflicting or self-contradictory.
+* `true`: The claim is factually accurate when it is confirmed by evidence from multiple and reliable sources.
+* `not enough information`: The fact-check does not contain sufficient information to come to an conclusion. For example,there is substantial lack of evidence or the evidence is inconclusive, conflicting or self-contradictory. In the case of a lack of evidence, state which information exactly is missing. In particular, if no RESULTS or sources are available, pick this decision.
+
+# Record
+## Claim
+Claim: "<image:25> This image shows a military parade of Poland's army on August 14, 2024, preparing for war with Russia."
+
+## Actions
+```
+reverse_search(<image:25>)
+image_search("Poland army parade tanks")
+```
+
+## Evidence
+### Evidence from `image_search`
+CNN published an article about a military parade in Poland, which included an image of tanks (<image:7358>). Getty Images also shows a military parade in Poland (<image:7359>).
+
+Al Jazeera reports that Poland held a military parade as the war in Ukraine was ongoing (<image:7360>).
+The articles were published in August 2023.
+
+
+## Elaboration
+The evidence confirms that Poland held a military parade. However, the provided evidence does not confirm the date of the parade, nor does it mention any preparation for war with Russia. The articles were published in August 2023, not 2024.
+
+The claim that the parade was on August 14, 2024, and that it was preparing for war with Russia is not supported by the evidence.
+
+More information is needed to verify the date and the purpose of the parade.
+
+
+# Your Judgement
+
+
+
+===== > RESPONSE:  < =====
+The evidence confirms that Poland held a military parade, but the provided information does not confirm the date of the parade or its purpose. The articles were published in August 2023, not 2024.
+
+The claim is not supported by the evidence. More information is needed to verify the date and the purpose of the parade. `false`
+
+_________________________
+
+
+
+SummarizeDocPrompt - QUERY:
+
+# Instructions
+You are provided with the record of a fact-check. It contains the Claim to be verified and a documentation of all the fact-checking work along the gathered evidence. Your task is to **summarize the fact-check**. That is, you provide a concise, one-paragraph justification for the final VERDICT based on the knowledge from the Record. Note:
+* Be truthful, brief, do not add any additional information besides the information given in the Record. 
+* Link key sources in your summary. Use Markdown notation for that. You may link them in-line.
+* Don't state the Claim again. Rather focus on the key insights of the fact-check.
+* Simply print just the summary.
+
+# Record
+## Claim
+Claim: "<image:25> This image shows a military parade of Poland's army on August 14, 2024, preparing for war with Russia."
+
+## Actions
+```
+reverse_search(<image:25>)
+image_search("Poland army parade tanks")
+```
+
+## Evidence
+### Evidence from `image_search`
+CNN published an article about a military parade in Poland, which included an image of tanks (<image:7358>). Getty Images also shows a military parade in Poland (<image:7359>).
+
+Al Jazeera reports that Poland held a military parade as the war in Ukraine was ongoing (<image:7360>).
+The articles were published in August 2023.
+
+
+## Elaboration
+The evidence confirms that Poland held a military parade. However, the provided evidence does not confirm the date of the parade, nor does it mention any preparation for war with Russia. The articles were published in August 2023, not 2024.
+
+The claim that the parade was on August 14, 2024, and that it was preparing for war with Russia is not supported by the evidence.
+
+More information is needed to verify the date and the purpose of the parade.
+
+
+## Final Judgement
+The evidence confirms that Poland held a military parade, but the provided information does not confirm the date of the parade or its purpose. The articles were published in August 2023, not 2024.
+
+The claim is not supported by the evidence. More information is needed to verify the date and the purpose of the parade. `false`
+
+
+## Summary
+
+
+
+===== > RESPONSE:  < =====
+The image depicts a military parade in Poland, which was held in August 2023, as reported by sources like [CNN](https://www.cnn.com/) and [Al Jazeera](https://www.aljazeera.com/). However, the claim incorrectly states the date as August 14, 2024, and falsely suggests the parade was preparation for war with Russia, which is not supported by the available evidence.
+
+_________________________
+
+
+

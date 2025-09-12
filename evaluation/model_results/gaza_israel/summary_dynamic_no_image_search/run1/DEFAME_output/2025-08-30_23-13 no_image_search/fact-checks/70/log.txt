@@ -1,0 +1,41 @@
+Extracting claims from Content: The Iron Dome intercepted 90% of ballistic missiles fired at Israel in Iran's attack on October 1, 2024.
+'Claim: "The Iron Dome intercepted 90% of ballistic missiles fired at Israel in Iran's attack on October 1, 2024."'
+Verifying Claim: "The Iron Dome intercepted 90% of ballistic missiles fired at Israel in Iran's attack on October 1, 2024."
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Iron Dome interception rate Iran attack October 1 2024')
+Got 3 new web source(s):
+	1. https://en.wikipedia.org/wiki/October_2024_Iranian_strikes_on_Israel
+	2. October 02, 2024 https://trt.global/world/article/18215314
+	3. October 02, 2024 https://www.pbs.org/newshour/world/israels-air-defense-system-passes-test-in-fending-off-iranian-missile-strike
+Useful result: From [Source](https://en.wikipedia.org/wiki/October_2024_Iranian_strikes_on_Israel): 
+Content: The Wikipedia article discusses the October 1, 2024 Iranian strikes on Israel, codenamed Operation True Promise II. It mentions that Iran launched approximately 200 ballistic missiles at targets in Israel. The article states that Israel said it shot down most of the missiles. It also mentions that the US Navy and Jordan also reported intercepting missiles. The article also notes that Iran said that 90% of its missiles had hit their targets, but the Israeli military disputed this claim, saying that "a large number" of missiles were intercepted. <image:i>
+
+Useful result: From [Source](https://trt.global/world/article/18215314): 
+Content: The article, published on October 2, 2024, by TRT World, discusses the Iran attack on Israel on October 1, 2024. <image:11762> The article mentions that Israel said it intercepted a "majority" of the ballistic missiles, while Iran’s Revolutionary Guards Corps (IRGC) claimed that 90 percent of its missiles hit the intended targets. The article also mentions that the attack proved that Israel’s air defense system is far from impenetrable.
+
+Useful result: From [Source](https://www.pbs.org/newshour/world/israels-air-defense-system-passes-test-in-fending-off-iranian-missile-strike): 
+Content: PBS News, published on October 2, 2024, discusses Iran's missile attack on Israel. The article mentions that Iran fired over 180 missiles. It states that the Iron Dome has a success rate of over 90%. <image:11838>
+
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Iron Dome interception rate October 1 2024 Iran attack')
+Got 0 new web source(s):
+Not enough information yet. Continuing fact-check...
+Searching google with query: TextQuery(limit=3, start_date=None, end_date=None, search_type='search', text='Iron Dome effectiveness October 1 2024 Iranian missile attack')
+Got 3 new web source(s):
+	1. October 02, 2024 https://www.npr.org/2024/10/02/nx-s1-5135646/iran-missile-strike-israel-appears-to-hit-some-targets
+	2. October 11, 2024 https://www.washingtoninstitute.org/policy-analysis/israels-missile-defense-performance-views-gulf
+	3. https://www.aljazeera.com/news/2024/10/1/irans-missile-attack-against-israel-what-we-know-and-what-comes-next
+Useful result: From [Source](https://www.npr.org/2024/10/02/nx-s1-5135646/iran-missile-strike-israel-appears-to-hit-some-targets): 
+Content: NPR reported on October 2, 2024, that the Iranian missile strike on Israel appeared to have hit some targets, and that the attack was more sophisticated than the one in April. <image:11981>, <image:11967>, <image:11980>. The article mentions that the Iron Dome is used to intercept incoming missiles. The article also mentions that the Arrow missile defense system is also used, but has fewer interceptors than Iron Dome. The article does not provide a specific interception rate for the Iron Dome.
+
+Useful result: From [Source](https://www.washingtoninstitute.org/policy-analysis/israels-missile-defense-performance-views-gulf): 
+Content: The Washington Institute published an article on October 11, 2024, discussing the October 1 Iranian attack on Israel. The article states that Iran fired around 200 medium-range ballistic missiles (MRBMs) at Israel. It also mentions that "most of the missiles were destroyed before reaching their target, some did impact and cause minimal damage." The article estimates that around three-quarters of the missiles were intercepted, primarily by Israeli air defenses, with help from the U.S. <image:i>
+
+Useful result: From [Source](https://www.aljazeera.com/news/2024/10/1/irans-missile-attack-against-israel-what-we-know-and-what-comes-next): 
+Content: Al Jazeera reports that Iran launched an unprecedented attack on Israel on October 1, 2024, firing a barrage of missiles. <image:i>. The article states that the US and Israel worked together to shoot down most of the nearly 200 projectiles fired by Iran. The Israeli military said it intercepted "a large number" of the 180 ballistic missiles launched by Iran. The IRGC claimed that 90 percent of the projectiles fired hit their targets. The article was published on October 1, 2024, by Al Jazeera Staff.
+
+The claim 'The Iron Dome intercepted 90% of ballistic missiles fired at Israel in Iran's attack on October 1, 2024.' is false.
+Justification: The claim is not supported by the evidence. While some sources suggest a high interception rate, the evidence indicates conflicting information. The Washington Institute estimates around three-quarters of the missiles were intercepted, and Al Jazeera reports that the Israeli military said it intercepted "a large number" of the missiles, while the IRGC claimed 90 percent of the projectiles hit their targets. ([https://www.washingtoninstitute.org/policy-analysis/israels-missile-defense-performance-views-gulf](https://www.washingtoninstitute.org/policy-analysis/israels-missile-defense-performance-views-gulf), [https://www.aljazeera.com/news/2024/10/1/irans-missile-attack-against-israel-what-we-know-and-what-comes-next](https://www.aljazeera.com/news/2024/10/1/irans-missile-attack-against-israel-what-we-know-and-what-comes-next)).
+
+So, the overall veracity is: false
+Fact-check took 6:03 min.

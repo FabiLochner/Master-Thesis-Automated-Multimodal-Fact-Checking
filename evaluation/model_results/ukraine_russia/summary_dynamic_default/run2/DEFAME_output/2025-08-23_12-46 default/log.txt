@@ -1,0 +1,43 @@
+Configuration summary:
+Available actions: web_search, geolocate, image_search, reverse_search
+llm: gemini-2.0-flash-lite-001
+benchmark_name: ukraine_russia
+tools_config:
+    searcher:
+        limit_per_search: 3
+        search_engine_config:
+            google: null
+            google_vision: null
+    geolocator: null
+experiment_name: default
+fact_checker_kwargs:
+    decompose: false
+    decontextualize: false
+    filter_check_worthy: false
+    interpret: false
+    max_iterations: 3
+    max_result_len: 64000
+    procedure_variant: summary/dynamic
+llm_kwargs:
+    temperature: 0.01
+benchmark_kwargs:
+    variant: dev
+allowed_actions:
+- web_search
+- image_search
+- reverse_search
+- geolocate
+n_samples: null
+sample_ids: null
+random_sampling: false
+print_log_level: info
+continue_experiment_dir: null
+n_workers: 4
+
+Started Worker 0 with PID 277.
+Started Worker 1 with PID 278.
+Started Worker 2 with PID 279.
+Started Worker 3 with PID 280.
+Worker 3 has been terminated gracefully.
+All workers are terminated.
+All outputs saved in /defame/out/ukraine_russia/ukraine_russia/summary/dynamic/gemini-2.0-flash-lite-001/2025-08-23_12-46 default.
