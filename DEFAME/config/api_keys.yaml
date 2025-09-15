@@ -1,21 +1,18 @@
 huggingface_user_access_token: ''
 
-# old key: openai_api_key: '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'
 
+#openai_api_key: ""
 
-openai_api_key: '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' #new api key 28_03_25
-
-# openai_test_api_key: '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'
 
 # anthropic_api_key: ''
 
-deepseek_api_key: 'sk-fcc5b67d0e4941edadcb5ee8565c1d66'
+#deepseek_api_key: ''
 
-google_api_key: 'AIzaSyADGLrS4k3P7NdmtRq7zdlV-bg5NVlkcXM'
+google_api_key: ''
 
-google_fact_check_tools_api_key: 'AIzaSyAEwjM2jGJLMMuOhH2qE4RoLtX1fdVxqRI'
+google_fact_check_tools_api_key: ''
 
-serper_api_key: '7d232bce77409b1b5d79da9af94471cdfbe9a90b'  # for Google Search
+serper_api_key: ''  # for Google Search
 
 # x_bearer_token: ''
 # x_api_key: ''  # same as "consumer key"
