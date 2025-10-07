@@ -2,10 +2,10 @@
 
 <table>
 <tr>
-<td width="40%">
+<td width="50%">
   <img src="resources/DEFAME.png" alt="Concept" width="100%">
 </td>
-<td width="60%">
+<td width="50%">
   <img src="resources/Datasets.png" alt="Datasets" width="100%">
 </td>
 </tr>
