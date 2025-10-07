@@ -1,9 +1,17 @@
 # Master Thesis: Automated Multimodal Fact-Checking with an MLLM-Based Agentic System Evaluated on Two New Datasets: The Gaza and Ukraine Wars
 
-|![Concept.png](resources%2FDEFAME.png) | ![Datasets.png](resources%2FDatasets.png)|
-|---|---|
+<table>
+<tr>
+<td width="40%">
+  <img src="resources/DEFAME.png" alt="Concept" width="100%">
+</td>
+<td width="60%">
+  <img src="resources/Datasets.png" alt="Datasets" width="100%">
+</td>
+</tr>
+</table>
 
-This master thesis evaluated the MLLM-based agentic system **DEFAME (Dynamic Evidence-based FAct-checking with Multimodal Experts)** [📄 Paper](https://arxiv.org/abs/2412.10510) on two new datasets, which, in contrast to existing datasets, focus on high-stake contexts where much misinformation is existent, were sourced after the knowledge cutoff of the used MLLM (Gemini 2.0-Flash-Lite; [June 2024](https://storage.googleapis.com/model-cards/documents/gemini-2-flash.pdf)) and contain two new claim types: claims with AI-generated and altered images. 
+This master thesis evaluated the MLLM-based agentic system **DEFAME (Dynamic Evidence-based FAct-checking with Multimodal Experts)** [📄 Paper](https://arxiv.org/abs/2412.10510) on two new datasets, which, in contrast to existing datasets, (a) focus on high-stake contexts where much misinformation is existent, (b) were sourced after the knowledge cutoff of the used MLLM (Gemini 2.0-Flash-Lite; [June 2024](https://storage.googleapis.com/model-cards/documents/gemini-2-flash.pdf)) and (c) contain two new claim types: claims with AI-generated and altered images. 
 
 The thesis contributes to the literature of automated multimodal fact-checking by: 
 1. creating the Gaza-Israel dataset and Ukraine-Russia dataset that cover four claim 
@@ -121,7 +129,7 @@ You will need the [Gemini API](https://ai.google.dev/gemini-api/docs) if you wan
 The [Serper API](https://serper.dev) serves standard Google Web Search and Google Image Search. The API provides 2.500 free queries. To avoid API costs, one can create multiple accounts with different e-mail addresses. 
 
 ##### Google Vision API
-The [Google Cloud Vision API](https://console.cloud.google.com/marketplace/) is required to perform Reverse Image Search. Follow these steps, to set it up:
+The [Google Cloud Vision API](https://console.cloud.google.com/marketplace/product/google/vision.googleapis.com) is required to perform Reverse Image Search. Follow these steps, to set it up:
 1. In the [Google Cloud Console](https://console.cloud.google.com), create a new Project.
 2. Go to the [Service Account](https://console.cloud.google.com/iam-admin/serviceaccounts) overview and add a new Service Account.
 3. Open the new Service Account, go to "Keys" and generate a new JSON key file.
