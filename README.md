@@ -28,7 +28,6 @@ and claims with altered images) and recent claims from July 2024 - April 2025
     - [Usage](#usage)
 - [Datasets: Gaza-Israel & Ukraine-Russia](#datasets-gaza-israel--ukraine-russia)
 - [Evaluation](#evaluation)
-- [Future Work](#future-work)
 - [License](#license)
 
 
@@ -197,7 +196,39 @@ gaza_ukraine_datasets/
 
 ## Evaluation
 
-## Future Work
+The `evaluation` folder has the following structure: 
 
+```plaintext
+evaluation/
+├── analysis/
+│   ├── gaza_israel/
+│   │   ├── ...
+│   │   ├── gaza_israel_quantitative_qualitative_analysis.ipynb
+│   ├── ukraine_russia/
+│   │   ├── ...
+│   │   ├── ukraine_russia_quantitative_qualitative_analysis.ipynb
+├── gt_label_check/
+│   ├── gaza_israel/
+│   ├── ukraine_russia/
+├── model_results/
+│   ├── gaza_israel/
+│   │   ├── preliminary_experiment/
+│   │   ├── summary_dynamic_default/
+│   │   ├── summary_dynamic_no_geolocate/
+│   │   ├── summary_dynamic_no_image_search/
+│   │   ├── summary_dynamic_no_ris/
+│   │   ├── summary_dynamic_no_web_search/
+│   ├── ukraine_russia/
+│   │   ├── preliminary_experiment/
+│   │   ├── summary_dynamic_default/
+│   │   ├── summary_dynamic_no_geolocate/
+│   │   ├── summary_dynamic_no_image_search/
+│   │   ├── summary_dynamic_no_ris/
+│   │   ├── summary_dynamic_no_web_search/
+```
+
+It contains the quantitative and qualitative analysis (`evaluation/analysis`), a manual ground truth label check (`evaluation/gt_label_check`) and the DEFAME output/ results for preliminary experiments with the four orignal labels and the five tested DEFAME variants with the final two labels (`evaluation/model_results`). 
+
+To reproduce the results of the quantitative (and qualitative) analysis you simply need to run the `evaluation/analysis/gaza_israel/gaza_israel_quantitative_qualitative_analysis.ipynb` script for the Gaza-Israel dataset and the `evaluation/analysis/ukraine_russia/ukraine_russia_quantitative_qualitative_analysis.ipynb` script.
 
 ## License
