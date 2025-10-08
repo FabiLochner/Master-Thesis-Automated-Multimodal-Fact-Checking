@@ -11,7 +11,7 @@
 </tr>
 </table>
 
-This master thesis evaluated the MLLM-based agentic system **DEFAME (Dynamic Evidence-based FAct-checking with Multimodal Experts)** [📄 Paper](https://arxiv.org/abs/2412.10510) on two new datasets, which, in contrast to existing datasets, (a) focus on high-stake contexts where much misinformation is existent, (b) were sourced after the knowledge cutoff of the used MLLM (Gemini 2.0-Flash-Lite; [June 2024](https://storage.googleapis.com/model-cards/documents/gemini-2-flash.pdf)) and (c) contain two new claim types: claims with AI-generated and altered images. 
+This master thesis evaluated the MLLM-based agentic system **DEFAME (Dynamic Evidence-based FAct-checking with Multimodal Experts)** [GitHub Repo](https://github.com/multimodal-ai-lab/DEFAME) [📄 Paper](https://arxiv.org/abs/2412.10510) on two new datasets, which, in contrast to existing datasets, (a) focus on high-stake contexts where much misinformation is existent, (b) were sourced after the knowledge cutoff of the used MLLM (Gemini 2.0-Flash-Lite; [June 2024](https://cloud.google.com/vertex-ai/generative-ai/docs/models/gemini/2-0-flash-lite)) and (c) contain two new claim types: claims with AI-generated and altered images. 
 
 The thesis contributes to the literature of automated multimodal fact-checking by: 
 1. creating the Gaza-Israel dataset and Ukraine-Russia dataset that cover four claim 
@@ -26,7 +26,7 @@ and claims with altered images) and recent claims from July 2024 - April 2025
 - [DEFAME](#defame)
     - [Installation](#installation)
     - [Usage](#usage)
-- [Datasets: Gaza-Israel & Ukraine-Russia](#datasets)
+- [Datasets: Gaza-Israel & Ukraine-Russia](#datasets-gaza-israel--ukraine-russia)
 - [Evaluation](#evaluation)
 - [License](#license)
 
@@ -93,7 +93,7 @@ Follow these steps:
 
 2. Due to reliability problems in the ground truth labels from the fact-checking websites used to create the Gaza-Israel and Ukraine-Russia datasets, the original four final labels (True, False, Misleading, Not Enough Information) were aggregated to two labels (True, False). Thus, the `gaza_israel_dataset_combined_010724_300425_final_binary.csv` and `ukraine_russia_dataset_combined_010724_300425_final_binary.csv` were used for the DEFAME evaluation. For more details on the label aggregation, please see the `lochner_master_thesis.pdf`file. 
 
-3. The path to the datasets is already provided in the `data_root_dir` variable inside `config/globals.py`. DEFAME will automatically locate and process the datasets with `gaza_israel` and `ukraine_russia`. To avoid overwriting the results of a dataset evaluation, you need to adjust the path in the `result_base_dir` inside `config/globals.py`, which is currently set to result_base_dir = working_dir / "out/gaza_israel". 
+3. The path to the datasets is already provided in the `data_root_dir` variable inside `config/globals.py`. DEFAME will automatically locate and process the datasets with `gaza_israel` and `ukraine_russia`. To avoid overwriting the results of a dataset evaluation, you need to adjust the path in the `result_base_dir` inside `config/globals.py`, which is currently set to `result_base_dir = working_dir / "out/gaza_israel"`. 
 
 #### Run a Dataset Evaluation
 All execution scripts are located in (subfolders of) `scripts/`.
@@ -109,6 +109,8 @@ Dataset evaluations were run with the use of YAML configuration files (as recomm
 ```bash
 python -m scripts.run_config
 ```
+
+Note: In the yaml files in `config/gaza_israel` and `config/ukraine_russia`, the number of workers can be set with the paramter `n_workers`. To avoid workers dieing, please set this parameter and the memory limit in the docker desktop app according to your available RAM. 
 
 #### APIs
 
@@ -136,5 +138,34 @@ The [Google Cloud Vision API](https://console.cloud.google.com/marketplace/produ
 4. Save the downloaded key file at the path `config/google_service_account_key.json`.
 
 
+## Datasets: Gaza-Israel & Ukraine-Russia
 
+The figure below gives a high-level overview of the data collection pipeline to create the Gaza-Israel and Ukraine-Russia dataset that cover four claim types from July 2024 - April 2025. The database symbol represents a dataset, the diamond symbol the data collection type and the rectangular form represents one step in the pipeline. The blue color denotes a manual step, the orange color a computational step and the purple color a hybrid step with manual and computational parts. The green color denotes a dataset. 
+
+![Datasets.jpg](resources%2FDatasets.jpg)
+
+The coding files are within the `gaza_ukraine_datasets` folder which has the following file structure:
+
+```plaintext
+gaza_ukraine_datasets/
+├── claims_pre_and_post_processing/
+│   ├── ...
+│   ├── claims_postprocessing_claim_reformulation.ipynb
+│   ├── claims_postprocessing_label_aggregation.ipynb
+│   ├── claims_postprocessing_remove_whitespace_label.ipynb
+│   ├── claims_preprocessing_api_datasets_sampling.ipynb
+│   ├── claims_preprocessing_embedding_LLM.ipynb
+│   ├── claims_preprocessing.ipynb
+│   └── ...
+├── gaza_israel/
+│   ├── API_data_collection/
+│   ├── Combined_datasets/
+│   └── Manual_data_collection/
+├── label_aggregation_binary/
+├── scrape_images/
+└── ukraine_russia/
+    ├── API_data_collection/
+    ├── Combined_datasets/
+    └── Manual_data_collection/
+```
 
