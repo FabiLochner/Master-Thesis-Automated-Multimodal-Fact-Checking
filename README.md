@@ -174,25 +174,25 @@ gaza_ukraine_datasets/
     └── Manual_data_collection/
 ```
 
-1. All files for the manual data collection are stored in the folders `{gaza_israel, ukraine_russia}/Manual_data_collection`. 
+- 1. All files for the manual data collection are stored in the folders `{gaza_israel, ukraine_russia}/Manual_data_collection`. 
 
-2. The API data collection uses [Google's Fact Check Claim Search API](https://developers.google.com/fact-check/tools/api/). It was implemented in Docker with the `DEFAME/scripts/scrape_claims.py` file and used the queries: *Gaza*, *Israel*, *Ukraine*, *Russia*. The resulting json files were copied to the folders `{gaza_israel, ukraine_russia}/API_data_collection`.
+- 2. The API data collection uses [Google's Fact Check Claim Search API](https://developers.google.com/fact-check/tools/api/). It was implemented in Docker with the `DEFAME/scripts/scrape_claims.py` file and used the queries: *Gaza*, *Israel*, *Ukraine*, *Russia*. The resulting json files were copied to the folders `{gaza_israel, ukraine_russia}/API_data_collection`.
 
-3. The `claims_pre_and_post_processing` folder contains all the scripts which applied the pre- and post-processing pipelines illustrated in the figure above. 
+- 3. The `claims_pre_and_post_processing` folder contains all the scripts which applied the pre- and post-processing pipelines illustrated in the figure above. 
 
-  1. The `claims_preprocessing.ipynb` script contains all steps of the pre-processing pipeline except for the last step: filtering out non-exact duplicative claims. 
+  - 3.1. The `claims_preprocessing.ipynb` script contains all steps of the pre-processing pipeline except for the last step: filtering out non-exact duplicative claims. 
 
-  2. For this, different text-embedding models with different thresholds were tested/used in the `claims_preprocessin_embedding.ipynb` script and the results were manually verified. 
+  - 3.2. For this, different text-embedding models with different thresholds were tested/used in the `claims_preprocessin_embedding.ipynb` script and the results were manually verified. 
 
-  3. Next, for the API claims additonal data was manually collected from the fact-checking articles in the `claims_preprocessing_api_datasets_sampling.ipynb` script. This data was not returned by the API, was also collected during the manual data collection and is necessary for running and evaluating DEFAME: the URL of images, the context/label explanation given by the fact-checking websites and information about the type of a claim: a text-only claim, a claim with a normal image, a claim with an AI-generated image or a claim with an altered image.
+  - 3.3. Next, for the API claims additonal data was manually collected from the fact-checking articles in the `claims_preprocessing_api_datasets_sampling.ipynb` script. This data was not returned by the API, was also collected during the manual data collection and is necessary for running and evaluating DEFAME: the URL of images, the context/label explanation given by the fact-checking websites and information about the type of a claim: a text-only claim, a claim with a normal image, a claim with an AI-generated image or a claim with an altered image.
 
-  4. After the manual and API claims were concatenated, the labels were aggregated into four labels in the `claims_postprocessing_label_aggregation.ipynb` script: *True*, *False*, *Misleading*, *Not Enough Information*. The number and type of the labels was inspired by existing multimodal fact-checking datasets such as [MOCHEG](https://github.com/PLUM-Lab/Mocheg), [VERITE](https://github.com/stevejpapad/image-text-verification) and [CLAIMREVIEW2024+](https://huggingface.co/datasets/MAI-Lab/ClaimReview2024plus).
+  - 3.4. After the manual and API claims were concatenated, the labels were aggregated into four labels in the `claims_postprocessing_label_aggregation.ipynb` script: *True*, *False*, *Misleading*, *Not Enough Information*. The number and type of the labels was inspired by existing multimodal fact-checking datasets such as [MOCHEG](https://github.com/PLUM-Lab/Mocheg), [VERITE](https://github.com/stevejpapad/image-text-verification) and [CLAIMREVIEW2024+](https://huggingface.co/datasets/MAI-Lab/ClaimReview2024plus).
 
-  5. Next, the claims were reformulated into a consistent format that contains all relevant information for a fact-check (e.g., names of official persons, time and place of a referenced event) and makes the claims less ambigious. See the script `claims_postprocessing_claim_reformulation.ipynb`.  
+  - 3.5. Next, the claims were reformulated into a consistent format that contains all relevant information for a fact-check (e.g., names of official persons, time and place of a referenced event) and makes the claims less ambigious. See the script `claims_postprocessing_claim_reformulation.ipynb`.  
 
-  6. Finally, for all claims with a normal, AI-generated or altered image, the image was scraped in the script `scrape_images/scrape_images.ipynb`. 
+  - 3.6. Finally, for all claims with a normal, AI-generated or altered image, the image was scraped in the script `scrape_images/scrape_images.ipynb`. 
 
-4. Since preliminary experiments with DEFAME revealed reliability problems with the ground-truth labels used by the fact-checking websites, the sub-labels *False*, *Misleading* and *Not Enough Information* were aggregated into one label *False* (see `label_aggreation_binary/label_aggregation_binary.ipynb`). This was done, because across and within the used fact-checking websites, these three labels were not used consistently and reliably. For more details see `evaluation/gt_label_check/{gaza_israel, ukraine_russia}`.
+- 4. Since preliminary experiments with DEFAME revealed reliability problems with the ground-truth labels used by the fact-checking websites, the sub-labels *False*, *Misleading* and *Not Enough Information* were aggregated into one label *False* (see `label_aggreation_binary/label_aggregation_binary.ipynb`). This was done, because across and within the used fact-checking websites, these three labels were not used consistently and reliably. For more details see `evaluation/gt_label_check/{gaza_israel, ukraine_russia}`.
 
 
 ## Evaluation
