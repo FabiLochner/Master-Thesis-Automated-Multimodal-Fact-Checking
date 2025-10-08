@@ -142,7 +142,13 @@ The [Google Cloud Vision API](https://console.cloud.google.com/marketplace/produ
 
 The figure below gives a high-level overview of the data collection pipeline to create the Gaza-Israel and Ukraine-Russia dataset that cover four claim types from July 2024 - April 2025. The database symbol represents a dataset, the diamond symbol the data collection type and the rectangular form represents one step in the pipeline. The blue color denotes a manual step, the orange color a computational step and the purple color a hybrid step with manual and computational parts. The green color denotes a dataset. 
 
-<img src="resources/Datasets.png" alt="Datasets" width="100%">
+<table>
+<tr>
+<td width="100%">
+  <img src="resources/Datasets.png" alt="Datasets" width="100%">
+</td>
+</tr>
+</table>
 
 
 The coding files are within the `gaza_ukraine_datasets` folder which has the following file structure:
