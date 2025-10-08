@@ -11,7 +11,7 @@
 </tr>
 </table>
 
-This master thesis evaluated the MLLM-based agentic system **DEFAME (Dynamic Evidence-based FAct-checking with Multimodal Experts)** [GitHub Repo](https://github.com/multimodal-ai-lab/DEFAME) [📄 Paper](https://arxiv.org/abs/2412.10510) on two new datasets, which, in contrast to existing datasets, (a) focus on high-stake contexts where much misinformation is existent, (b) were sourced after the knowledge cutoff of the used MLLM (Gemini 2.0-Flash-Lite; [June 2024](https://cloud.google.com/vertex-ai/generative-ai/docs/models/gemini/2-0-flash-lite)) and (c) contain two new claim types: claims with AI-generated and altered images. 
+This master thesis evaluated the MLLM-based agentic system **DEFAME (Dynamic Evidence-based FAct-checking with Multimodal Experts)** [GitHub Repository](https://github.com/multimodal-ai-lab/DEFAME) [📄 Paper](https://arxiv.org/abs/2412.10510) on two new datasets, which, in contrast to existing datasets, (a) focus on high-stake contexts where much misinformation is existent, (b) were sourced after the knowledge cutoff of the used MLLM (Gemini 2.0-Flash-Lite; [June 2024](https://cloud.google.com/vertex-ai/generative-ai/docs/models/gemini/2-0-flash-lite)) and (c) contain two new claim types: claims with AI-generated and altered images. 
 
 The thesis contributes to the literature of automated multimodal fact-checking by: 
 1. creating the Gaza-Israel dataset and Ukraine-Russia dataset that cover four claim 
@@ -32,6 +32,8 @@ and claims with altered images) and recent claims from July 2024 - April 2025
 
 
 ## DEFAME
+
+For the default installation of DEFAME please have a look at the [DEFAME GitHub Repository](https://github.com/multimodal-ai-lab/DEFAME). The installation below adjusts the general DEFAME installation, so the code runs in my local folder structure and with my two new datasets.
 
 ### Installation
 
@@ -137,6 +139,9 @@ The [Google Cloud Vision API](https://console.cloud.google.com/marketplace/produ
 3. Open the new Service Account, go to "Keys" and generate a new JSON key file.
 4. Save the downloaded key file at the path `config/google_service_account_key.json`.
 
+##### Firecrawl API
+DEFAME uses **Firecrawl** as the default web scraping service. It falls back to a simple **BeautifulSoup** implementation if Firecrawl is not running. Firecrawl runs automatically if you used `docker compose` to install DEFAME.
+
 
 ## Datasets: Gaza-Israel & Ukraine-Russia
 
@@ -227,8 +232,12 @@ evaluation/
 │   │   ├── summary_dynamic_no_web_search/
 ```
 
-It contains the quantitative and qualitative analysis (`evaluation/analysis`), a manual ground truth label check (`evaluation/gt_label_check`) and the DEFAME output/ results for preliminary experiments with the four orignal labels and the five tested DEFAME variants with the final two labels (`evaluation/model_results`). 
+It contains the quantitative and qualitative analysis (`evaluation/analysis`), a manual ground truth label check (`evaluation/gt_label_check`) and the DEFAME output for a preliminary experiment with the four original labels and for the five tested DEFAME variants with the final two labels (`evaluation/model_results/{gaza_israel/ukraine_russia}`). 
 
-To reproduce the results of the quantitative (and qualitative) analysis you simply need to run the `evaluation/analysis/gaza_israel/gaza_israel_quantitative_qualitative_analysis.ipynb` script for the Gaza-Israel dataset and the `evaluation/analysis/ukraine_russia/ukraine_russia_quantitative_qualitative_analysis.ipynb` script.
+To reproduce the results of the quantitative (and qualitative) analysis you simply need to run the `evaluation/analysis/gaza_israel/gaza_israel_quantitative_qualitative_analysis.ipynb` script for the Gaza-Israel dataset and the `evaluation/analysis/ukraine_russia/ukraine_russia_quantitative_qualitative_analysis.ipynb` script for the Ukraine-Russia dataset.
 
 ## License
+
+For the license and citation of DEFAME please have a look at the [DEFAME GitHub Repository](https://github.com/multimodal-ai-lab/DEFAME). 
+
+The created Gaza-Israel and Ukraine-Russia datasets contain reformulated claims that are based on original users' claims from social media platforms and image URLs that are either from the web archive, fact-checking websites or social media platforms. The original content remains subject to the rights and terms of service of the respective websites. The datasets are provided for research purposes only, and users should verify their own rights and permissions before any use.
